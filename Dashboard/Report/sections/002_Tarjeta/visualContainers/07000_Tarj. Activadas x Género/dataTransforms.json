@@ -46,16 +46,16 @@
       0
     ],
     "Category": [
-      2
+      1
     ],
     "Tooltips": [
-      1
+      2
     ]
   },
   "projectionActiveItems": {
     "Category": [
       {
-        "queryRef": "usuario.Genero Filtrado",
+        "queryRef": "usuario.genero",
         "suppressConcat": false
       }
     ]
@@ -68,14 +68,14 @@
         "Type": 3
       },
       {
+        "Restatement": "Genero",
+        "Name": "usuario.genero",
+        "Type": 2048
+      },
+      {
         "Restatement": "Cant. Usuarios",
         "Name": "CountNonNull(usuario.idusuario)",
         "Type": 3
-      },
-      {
-        "Restatement": "Genero Filtrado",
-        "Name": "usuario.Genero Filtrado",
-        "Type": 2048
       }
     ],
     "Filters": [
@@ -104,12 +104,12 @@
         },
         {
           "Name": "Category",
-          "Projection": 2,
+          "Projection": 1,
           "isActive": true
         },
         {
           "Name": "Tooltips",
-          "Projection": 1,
+          "Projection": 2,
           "isActive": false
         }
       ]
@@ -145,6 +145,27 @@
       }
     },
     {
+      "displayName": "Genero",
+      "queryName": "usuario.genero",
+      "roles": {
+        "Category": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "usuario"
+            }
+          },
+          "Property": "genero"
+        }
+      }
+    },
+    {
       "displayName": "Cant. Usuarios",
       "queryName": "CountNonNull(usuario.idusuario)",
       "roles": {
@@ -167,27 +188,6 @@
             }
           },
           "Function": 5
-        }
-      }
-    },
-    {
-      "displayName": "Genero Filtrado",
-      "queryName": "usuario.Genero Filtrado",
-      "roles": {
-        "Category": true
-      },
-      "type": {
-        "category": null,
-        "underlyingType": 1
-      },
-      "expr": {
-        "Column": {
-          "Expression": {
-            "SourceRef": {
-              "Entity": "usuario"
-            }
-          },
-          "Property": "Genero Filtrado"
         }
       }
     }

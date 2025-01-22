@@ -1,15 +1,15 @@
 {
-  "name": "a01b88020471d1c9d7b5",
+  "name": "54a8a6e50920b14e1a2b",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "x": 899.17808219178085,
-        "y": 203.83561643835617,
-        "z": 11000,
-        "width": 294.2465753424658,
-        "height": 46.027397260273979,
-        "tabOrder": 11000
+        "x": 495.28794305845133,
+        "y": 13.251851319289669,
+        "z": 12001,
+        "width": 286.57128477963909,
+        "height": 74.541663671004386,
+        "tabOrder": 12001
       }
     }
   ],
@@ -24,10 +24,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "Saldo De Tarjetas",
+                    "value": "Dashboard",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "16pt"
+                      "fontSize": "32pt"
                     }
                   }
                 ],

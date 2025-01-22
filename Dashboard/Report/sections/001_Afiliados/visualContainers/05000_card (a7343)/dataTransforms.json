@@ -1,0 +1,55 @@
+{
+  "projectionOrdering": {
+    "Values": [
+      0
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Suma de monto",
+        "Name": "Sum(adqtarjeta.monto)",
+        "Type": 1
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Suma de monto",
+      "queryName": "Sum(adqtarjeta.monto)",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "adqtarjeta"
+                }
+              },
+              "Property": "monto"
+            }
+          },
+          "Function": 0
+        }
+      }
+    }
+  ]
+}

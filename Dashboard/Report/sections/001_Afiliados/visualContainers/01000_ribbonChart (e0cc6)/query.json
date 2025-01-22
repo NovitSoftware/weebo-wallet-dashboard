@@ -1,0 +1,98 @@
+{
+  "Commands": [
+    {
+      "SemanticQueryDataShapeCommand": {
+        "Query": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "t",
+              "Entity": "tarjeta",
+              "Type": 0
+            },
+            {
+              "Name": "a",
+              "Entity": "afiliacion",
+              "Type": 0
+            }
+          ],
+          "Select": [
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "t"
+                      }
+                    },
+                    "Property": "PromedioTarjetas"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(tarjeta.PromedioTarjetas)",
+              "NativeReferenceName": "Sum of PromedioTarjetas"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "t"
+                  }
+                },
+                "Property": "fecactivo"
+              },
+              "Name": "tarjeta.fecactivo",
+              "NativeReferenceName": "fecactivo"
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 2,
+                  "Left": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "a"
+                        }
+                      },
+                      "Property": "fecin"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "datetime'2019-09-09T00:00:00'"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "Binding": {
+          "Primary": {
+            "Groupings": [
+              {
+                "Projections": [
+                  0,
+                  1
+                ]
+              }
+            ]
+          },
+          "DataReduction": {
+            "DataVolume": 4,
+            "Primary": {
+              "Sample": {}
+            }
+          },
+          "Version": 1
+        },
+        "ExecutionMetricsKind": 1
+      }
+    }
+  ]
+}

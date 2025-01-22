@@ -68,7 +68,7 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Estado",
+        "Restatement": "Estado Usuario",
         "Name": "usuario.Estado Usuario",
         "Type": 2048
       }
@@ -87,7 +87,7 @@
   ],
   "selects": [
     {
-      "displayName": "Estado",
+      "displayName": "Estado Usuario",
       "queryName": "usuario.Estado Usuario",
       "roles": {
         "Values": true

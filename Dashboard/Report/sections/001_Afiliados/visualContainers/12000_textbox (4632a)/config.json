@@ -24,10 +24,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "Afiliados",
+                    "value": "Tarjetas Activas",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontFamily": "Arial",
                       "fontSize": "16pt"
                     }
                   }

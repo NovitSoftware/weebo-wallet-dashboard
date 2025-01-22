@@ -61,7 +61,7 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Genero",
+        "Restatement": "Genero Filtrado",
         "Name": "usuario.Genero Filtrado",
         "Type": 2048
       }
@@ -80,7 +80,7 @@
   ],
   "selects": [
     {
-      "displayName": "Genero",
+      "displayName": "Genero Filtrado",
       "queryName": "usuario.Genero Filtrado",
       "roles": {
         "Values": true
