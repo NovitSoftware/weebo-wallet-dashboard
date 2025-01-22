@@ -6,8 +6,7 @@
       "boundSection": "a34663e38a75dcabdade",
       "config": "{}",
       "id": 82454463,
-      "name": "c74c0748ec480c2c6b85",
-      "objectId": "a7546abe-59ad-4043-86ce-c0eb7220820e"
+      "name": "c74c0748ec480c2c6b85"
     }
   ],
   "publicCustomVisuals": [
@@ -37,7 +36,6 @@
           }
         ],
         "name": "SharedResources",
-        "reportId": 6625718,
         "type": 2
       }
     }
