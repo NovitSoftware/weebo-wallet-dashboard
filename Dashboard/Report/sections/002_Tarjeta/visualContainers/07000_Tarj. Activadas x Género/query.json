@@ -35,6 +35,18 @@
               "NativeReferenceName": "Tarj. Activas"
             },
             {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "u"
+                  }
+                },
+                "Property": "genero"
+              },
+              "Name": "usuario.genero",
+              "NativeReferenceName": "Genero"
+            },
+            {
               "Aggregation": {
                 "Expression": {
                   "Column": {
@@ -50,18 +62,6 @@
               },
               "Name": "CountNonNull(usuario.idusuario)",
               "NativeReferenceName": "Cant. Usuarios"
-            },
-            {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Source": "u"
-                  }
-                },
-                "Property": "Genero Filtrado"
-              },
-              "Name": "usuario.Genero Filtrado",
-              "NativeReferenceName": "Genero Filtrado"
             }
           ],
           "Where": [
@@ -179,7 +179,7 @@
             }
           },
           "SuppressedJoinPredicates": [
-            1
+            2
           ],
           "Version": 1
         },

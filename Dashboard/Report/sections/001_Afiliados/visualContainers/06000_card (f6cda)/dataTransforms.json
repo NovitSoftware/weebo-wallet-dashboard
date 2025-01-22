@@ -1,0 +1,55 @@
+{
+  "projectionOrdering": {
+    "Values": [
+      0
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Variance of VariacionSaldosTarjeta",
+        "Name": "Sum(adqtarjeta.VariacionSaldosTarjeta)",
+        "Type": 1
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Variance of VariacionSaldosTarjeta",
+      "queryName": "Sum(adqtarjeta.VariacionSaldosTarjeta)",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "adqtarjeta"
+                }
+              },
+              "Property": "VariacionSaldosTarjeta"
+            }
+          },
+          "Function": 8
+        }
+      }
+    }
+  ]
+}

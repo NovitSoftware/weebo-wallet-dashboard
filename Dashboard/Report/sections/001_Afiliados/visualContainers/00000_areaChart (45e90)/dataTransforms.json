@@ -1,0 +1,324 @@
+{
+  "objects": {
+    "scalarKey": [
+      {
+        "properties": {
+          "min": {
+            "expr": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "LocalDateTable_9e3cdf89-5f9e-4fbd-bbce-898d4cfa7d20"
+                      }
+                    },
+                    "Property": "Date"
+                  }
+                },
+                "Function": 3
+              }
+            }
+          }
+        },
+        "selector": {
+          "data": [
+            {
+              "roles": [
+                "Category"
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "projectionOrdering": {
+    "Y": [
+      0
+    ],
+    "Category": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "projectionActiveItems": {
+    "Category": [
+      {
+        "queryRef": "afiliacion.fecin.Variation.Date Hierarchy.Year",
+        "suppressConcat": false
+      },
+      {
+        "queryRef": "afiliacion.fecin.Variation.Date Hierarchy.Quarter",
+        "suppressConcat": false
+      },
+      {
+        "queryRef": "afiliacion.fecin.Variation.Date Hierarchy.Month",
+        "suppressConcat": false
+      },
+      {
+        "queryRef": "afiliacion.fecin.Variation.Date Hierarchy.Day",
+        "suppressConcat": false
+      }
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Suma de PromedioNuevosAfiliados",
+        "Name": "Sum(afiliacion.PromedioNuevosAfiliados)",
+        "Type": 1
+      },
+      {
+        "Restatement": "Year",
+        "Name": "afiliacion.fecin.Variation.Date Hierarchy.Year",
+        "Type": 3
+      },
+      {
+        "Restatement": "Quarter",
+        "Name": "afiliacion.fecin.Variation.Date Hierarchy.Quarter",
+        "Type": 2048
+      },
+      {
+        "Restatement": "Month",
+        "Name": "afiliacion.fecin.Variation.Date Hierarchy.Month",
+        "Type": 2048
+      },
+      {
+        "Restatement": "Day",
+        "Name": "afiliacion.fecin.Variation.Date Hierarchy.Day",
+        "Type": 3
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Y",
+          "Projection": 0,
+          "isActive": false
+        },
+        {
+          "Name": "Category",
+          "Projection": 1,
+          "isActive": true
+        },
+        {
+          "Name": "Category",
+          "Projection": 2,
+          "isActive": true
+        },
+        {
+          "Name": "Category",
+          "Projection": 3,
+          "isActive": true
+        },
+        {
+          "Name": "Category",
+          "Projection": 4,
+          "isActive": true
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Suma de PromedioNuevosAfiliados",
+      "queryName": "Sum(afiliacion.PromedioNuevosAfiliados)",
+      "roles": {
+        "Y": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "afiliacion"
+                }
+              },
+              "Property": "PromedioNuevosAfiliados"
+            }
+          },
+          "Function": 0
+        }
+      }
+    },
+    {
+      "displayName": "Year",
+      "queryName": "afiliacion.fecin.Variation.Date Hierarchy.Year",
+      "roles": {
+        "Category": true
+      },
+      "type": {
+        "category": "Years",
+        "underlyingType": 66308
+      },
+      "expr": {
+        "HierarchyLevel": {
+          "Expression": {
+            "Hierarchy": {
+              "Expression": {
+                "PropertyVariationSource": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "afiliacion"
+                    }
+                  },
+                  "Name": "Variation",
+                  "Property": "fecin"
+                }
+              },
+              "Hierarchy": "Date Hierarchy"
+            }
+          },
+          "Level": "Year"
+        }
+      }
+    },
+    {
+      "displayName": "Quarter",
+      "queryName": "afiliacion.fecin.Variation.Date Hierarchy.Quarter",
+      "roles": {
+        "Category": true
+      },
+      "type": {
+        "category": "Quarters",
+        "underlyingType": 262657
+      },
+      "expr": {
+        "HierarchyLevel": {
+          "Expression": {
+            "Hierarchy": {
+              "Expression": {
+                "PropertyVariationSource": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "afiliacion"
+                    }
+                  },
+                  "Name": "Variation",
+                  "Property": "fecin"
+                }
+              },
+              "Hierarchy": "Date Hierarchy"
+            }
+          },
+          "Level": "Quarter"
+        }
+      }
+    },
+    {
+      "displayName": "Month",
+      "queryName": "afiliacion.fecin.Variation.Date Hierarchy.Month",
+      "roles": {
+        "Category": true
+      },
+      "type": {
+        "category": "Months",
+        "underlyingType": 131585
+      },
+      "expr": {
+        "HierarchyLevel": {
+          "Expression": {
+            "Hierarchy": {
+              "Expression": {
+                "PropertyVariationSource": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "afiliacion"
+                    }
+                  },
+                  "Name": "Variation",
+                  "Property": "fecin"
+                }
+              },
+              "Hierarchy": "Date Hierarchy"
+            }
+          },
+          "Level": "Month"
+        }
+      }
+    },
+    {
+      "displayName": "Day",
+      "queryName": "afiliacion.fecin.Variation.Date Hierarchy.Day",
+      "roles": {
+        "Category": true
+      },
+      "type": {
+        "category": "DayOfMonth",
+        "underlyingType": 328452
+      },
+      "expr": {
+        "HierarchyLevel": {
+          "Expression": {
+            "Hierarchy": {
+              "Expression": {
+                "PropertyVariationSource": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "afiliacion"
+                    }
+                  },
+                  "Name": "Variation",
+                  "Property": "fecin"
+                }
+              },
+              "Hierarchy": "Date Hierarchy"
+            }
+          },
+          "Level": "Day"
+        }
+      }
+    },
+    {
+      "displayName": "Primera fecha: Date",
+      "queryName": "Min(LocalDateTable_9e3cdf89-5f9e-4fbd-bbce-898d4cfa7d20.Date)",
+      "roles": {},
+      "type": {
+        "category": "PaddedDateTableDates",
+        "underlyingType": 197127
+      },
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "LocalDateTable_9e3cdf89-5f9e-4fbd-bbce-898d4cfa7d20"
+                }
+              },
+              "Property": "Date"
+            }
+          },
+          "Function": 3
+        }
+      },
+      "relatedObjects": {
+        "scalarKey": {
+          "min": [
+            {
+              "data": [
+                {
+                  "kind": 0,
+                  "_roles": [
+                    "Category"
+                  ],
+                  "_key": {}
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

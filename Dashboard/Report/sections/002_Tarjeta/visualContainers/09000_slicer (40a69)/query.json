@@ -27,7 +27,7 @@
                 "Property": "Genero Filtrado"
               },
               "Name": "usuario.Genero Filtrado",
-              "NativeReferenceName": "Genero"
+              "NativeReferenceName": "Genero Filtrado"
             }
           ],
           "Where": [

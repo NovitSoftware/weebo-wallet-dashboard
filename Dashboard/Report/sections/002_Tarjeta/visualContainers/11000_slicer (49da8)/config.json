@@ -11,17 +11,6 @@
         "height": 72.885182256093174,
         "tabOrder": 11000
       }
-    },
-    {
-      "id": 1,
-      "position": {
-        "x": 166.00005123210497,
-        "y": 282.66668701171875,
-        "z": 10000,
-        "width": 158,
-        "height": 60,
-        "tabOrder": 11000
-      }
     }
   ],
   "singleVisual": {
@@ -54,15 +43,12 @@
             "Property": "Estado Usuario"
           },
           "Name": "usuario.Estado Usuario",
-          "NativeReferenceName": "Estado"
+          "NativeReferenceName": "Estado Usuario"
         }
       ]
     },
     "columnProperties": {
       "usuario.activo": {
-        "displayName": "Estado"
-      },
-      "usuario.Estado Usuario": {
         "displayName": "Estado"
       }
     },

@@ -1,0 +1,55 @@
+{
+  "projectionOrdering": {
+    "Values": [
+      0
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Varianza de VariacionNuevosAfiliados",
+        "Name": "CountNonNull(afiliacion.VariacionNuevosAfiliados)",
+        "Type": 1
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Varianza de VariacionNuevosAfiliados",
+      "queryName": "CountNonNull(afiliacion.VariacionNuevosAfiliados)",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "afiliacion"
+                }
+              },
+              "Property": "VariacionNuevosAfiliados"
+            }
+          },
+          "Function": 8
+        }
+      }
+    }
+  ]
+}

@@ -22,7 +22,7 @@
                 "Property": "Conteo Activo"
               },
               "Name": "tarjeta.Conteo Activo",
-              "NativeReferenceName": "."
+              "NativeReferenceName": "Conteo Activo"
             }
           ],
           "Where": [

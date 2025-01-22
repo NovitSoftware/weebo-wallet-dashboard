@@ -11,17 +11,6 @@
         "height": 95,
         "tabOrder": 3000
       }
-    },
-    {
-      "id": 1,
-      "position": {
-        "x": 166,
-        "y": 99,
-        "z": 0,
-        "width": 158,
-        "height": 95,
-        "tabOrder": 3000
-      }
     }
   ],
   "singleVisual": {
@@ -53,7 +42,7 @@
             "Property": "Conteo Activo"
           },
           "Name": "tarjeta.Conteo Activo",
-          "NativeReferenceName": "."
+          "NativeReferenceName": "Conteo Activo"
         }
       ],
       "OrderBy": [
@@ -74,9 +63,6 @@
     },
     "columnProperties": {
       "CountNonNull(tarjeta.activo)": {
-        "displayName": "."
-      },
-      "tarjeta.Conteo Activo": {
         "displayName": "."
       }
     },

@@ -277,7 +277,7 @@
 			IF(
 			    'usuario'[genero] = "Femenino" || 'usuario'[genero] = "Masculino", 
 			    'usuario'[genero], 
-			    "?"
+			    BLANK()
 			)
 			
 			```
