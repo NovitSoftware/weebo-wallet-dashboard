@@ -1,0 +1,48 @@
+﻿table distrito
+
+	column iddistrito
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: iddistrito
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkregion
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: fkregion
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkprovincia
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: fkprovincia
+
+		annotation SummarizationSetBy = Automatic
+
+	column distrito
+		dataType: string
+		sourceProviderType: nvarchar(100)
+		summarizeBy: none
+		sourceColumn: distrito
+
+		annotation SummarizationSetBy = Automatic
+
+	partition distrito = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    Apployalty = Source{[Name="Apployalty"]}[Data],
+				    dbo_distrito = Apployalty{[Schema="dbo",Item="distrito"]}[Data]
+				in
+				    dbo_distrito
+

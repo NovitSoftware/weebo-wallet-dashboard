@@ -1,0 +1,43 @@
+{
+  "name": "be2bb559e7633bebdab5",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 98.63013698630138,
+        "y": 193.97260273972606,
+        "z": 10000,
+        "width": 264.65753424657538,
+        "height": 46.027397260273979,
+        "tabOrder": 10000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "textbox",
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Afiliados",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Arial",
+                      "fontSize": "16pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

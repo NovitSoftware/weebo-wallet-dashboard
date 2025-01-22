@@ -1,0 +1,50 @@
+﻿table sysdiagrams
+
+	column name
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(128)
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column principal_id
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: principal_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column diagram_id
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: diagram_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column version
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: version
+
+		annotation SummarizationSetBy = Automatic
+
+	partition sysdiagrams = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    Apployalty = Source{[Name="Apployalty"]}[Data],
+				    dbo_sysdiagrams = Apployalty{[Schema="dbo",Item="sysdiagrams"]}[Data]
+				in
+				    dbo_sysdiagrams
+

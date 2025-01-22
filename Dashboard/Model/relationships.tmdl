@@ -1,0 +1,183 @@
+﻿relationship c4988a09-80ee-9c9e-428f-9bf971d47a32
+	fromColumn: tarjeta.fkusuario
+	toColumn: usuario.idusuario
+
+relationship 89aaafe5-7dee-42c0-8562-d3ecf25bb9e2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Calendario.Date
+	toColumn: LocalDateTable_7a67aab9-fdcf-48b9-b284-eb9e2a6fc8c0.Date
+
+relationship 44c24212-b7f6-3f4e-14a3-8f3d24533ef6
+	fromColumn: tarjeta.fecactivo
+	toColumn: Calendario.Date
+
+relationship 433915f3-bfd5-4c94-ae94-21af78a8923d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: admin.fecreg
+	toColumn: LocalDateTable_5577e142-ebf7-4e57-a193-0704fb8e8237.Date
+
+relationship f81ab0b4-913d-446a-ae28-50299841a6ec
+	joinOnDateBehavior: datePartOnly
+	fromColumn: admin.fecact
+	toColumn: LocalDateTable_0a4d191d-56eb-43d7-817d-9d9076f88a12.Date
+
+relationship e175c37f-6fae-41b5-aeeb-1b1a8c442527
+	joinOnDateBehavior: datePartOnly
+	fromColumn: adqtarjeta.fecadq
+	toColumn: LocalDateTable_a2b7fc0b-240d-441b-9172-72531ad7891d.Date
+
+relationship 94bf30f7-a0d1-47d7-adb4-c5ee9c1431ed
+	joinOnDateBehavior: datePartOnly
+	fromColumn: afiliacion.fecin
+	toColumn: LocalDateTable_9e3cdf89-5f9e-4fbd-bbce-898d4cfa7d20.Date
+
+relationship af912721-d8e5-4efd-bc5e-fc8309c19878
+	joinOnDateBehavior: datePartOnly
+	fromColumn: afiliacion.fecout
+	toColumn: LocalDateTable_21d4017a-4d17-447b-afb3-8d606731f1d4.Date
+
+relationship 754d6673-6cb9-415a-9c74-07d05b96147f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: campania.feccreacion
+	toColumn: LocalDateTable_698459a0-0f6b-4c53-924a-e2698b07add5.Date
+
+relationship 8e4276bb-b23b-4b37-bfcd-a7d0d8c08d66
+	joinOnDateBehavior: datePartOnly
+	fromColumn: campania.fecact
+	toColumn: LocalDateTable_a9f047b8-f31b-4069-9660-fac61131fbc6.Date
+
+relationship 02555c90-f806-4777-becf-e151405e89b5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: cliente.fecreg
+	toColumn: LocalDateTable_edafacb7-ed36-4b3e-a071-a86909b97551.Date
+
+relationship 3f5c2103-54de-4c20-9bef-20204c26792e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: cliplan.fecreg
+	toColumn: LocalDateTable_cb50ae68-dd87-48ff-94f0-a74aab4125a0.Date
+
+relationship 12478de8-df32-4718-a63e-f2d5dd47bbd0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: cupon.feccreacion
+	toColumn: LocalDateTable_a6922533-6b3d-48ed-9862-edc65ad6158a.Date
+
+relationship 0105a9ce-4a54-4cdc-907c-e90b414f8797
+	joinOnDateBehavior: datePartOnly
+	fromColumn: cupon.fechauso
+	toColumn: LocalDateTable_87a8294d-d78f-4106-a952-1f536bbcd882.Date
+
+relationship 47ebe53c-a1b1-4309-873c-7a54153229d3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: cuponpromo.feccreacion
+	toColumn: LocalDateTable_f3f6fc83-9826-4ef4-9bd9-1ac29a1c90dd.Date
+
+relationship ddd805fc-2f0f-411f-8fd6-333b57bd3e73
+	joinOnDateBehavior: datePartOnly
+	fromColumn: cuponpromo.fechauso
+	toColumn: LocalDateTable_d559f9f4-66fd-47b2-a650-3cae8bd24bed.Date
+
+relationship 2f2245f8-2509-4dab-8506-50ba81ea3c33
+	joinOnDateBehavior: datePartOnly
+	fromColumn: mensaje.fecenvio
+	toColumn: LocalDateTable_7193564c-9b65-4ca3-9d0b-2dddcb1a80d6.Date
+
+relationship ac60e9e5-88f6-4bc7-a943-f7d44af0fdaa
+	joinOnDateBehavior: datePartOnly
+	fromColumn: novedad.fecini
+	toColumn: LocalDateTable_29058546-95ed-4048-a8e8-259c963353ee.Date
+
+relationship 9298ba72-b74c-472f-abce-f3f34814d04a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: novedad.fecfin
+	toColumn: LocalDateTable_84c3bc6e-4e03-4ec8-a4fe-785ed0872d20.Date
+
+relationship 2921bee4-ee93-4e08-a766-ade3b98ead98
+	joinOnDateBehavior: datePartOnly
+	fromColumn: promocion.fecini
+	toColumn: LocalDateTable_80e68c8d-2490-4d5d-b971-e064e90e10ee.Date
+
+relationship 1ec684bf-4705-44b2-9c1b-7c5167c128e4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: promocion.fecfin
+	toColumn: LocalDateTable_3381340c-1bcf-46e6-9059-e826e6b249bc.Date
+
+relationship e8349f62-331e-485b-8c39-f476fad28ee1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: pushnot.fechaing
+	toColumn: LocalDateTable_d2079a95-f611-4679-a158-bfa34d494345.Date
+
+relationship 5c2af341-6d75-420c-96f3-3796e0e66747
+	joinOnDateBehavior: datePartOnly
+	fromColumn: pushnot.fechoraenv
+	toColumn: LocalDateTable_6050f303-0b90-4cd5-9c81-b04dded25957.Date
+
+relationship 0d566f89-f98d-4372-8a56-2d3418332879
+	joinOnDateBehavior: datePartOnly
+	fromColumn: sesion.fecini
+	toColumn: LocalDateTable_7bf5b4d7-fd00-4396-be91-37225f53ea89.Date
+
+relationship 554803a1-2856-4967-a62c-187228a2f680
+	joinOnDateBehavior: datePartOnly
+	fromColumn: smsnot.fechaing
+	toColumn: LocalDateTable_a4d1bbf8-66d2-406f-ac9f-c6f8a22b87a8.Date
+
+relationship d26bbec4-855d-4cf6-926b-1c29a8f379bb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: smsnot.fechoraenv
+	toColumn: LocalDateTable_f3d664db-6fae-40ea-b553-3a7bd30aecf7.Date
+
+relationship 2f33a84a-601e-4b02-8e15-2c1dff41715a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: sticker.fecha
+	toColumn: LocalDateTable_8035d952-da92-4a87-b3e4-50d149bf7670.Date
+
+relationship b0e28d3b-f3d7-42fc-aaab-0b1771bb7999
+	joinOnDateBehavior: datePartOnly
+	fromColumn: sticker.ultvis
+	toColumn: LocalDateTable_37aeb087-d9df-4777-8087-31a23f2bb8a6.Date
+
+relationship 65b42661-b65c-4579-884c-cfba9a9912b3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: tarjeta.feccreacion
+	toColumn: LocalDateTable_69854cb2-12bb-42fe-a3ce-379ee8b82d0b.Date
+
+relationship 3ca0e152-2856-4e92-8305-f6bedec3ad76
+	joinOnDateBehavior: datePartOnly
+	fromColumn: tienda.fecin
+	toColumn: LocalDateTable_53065729-2240-43ef-8de4-273dd0171067.Date
+
+relationship 8a9b943b-3cd3-44a5-ba87-fb075e30a5aa
+	joinOnDateBehavior: datePartOnly
+	fromColumn: tracking_stickers.fecha
+	toColumn: LocalDateTable_fdcbeae9-95ad-4b44-b523-f807ee3c4412.Date
+
+relationship a7fbf875-116a-499a-8d84-f2e089c57241
+	joinOnDateBehavior: datePartOnly
+	fromColumn: transaccion.fecha
+	toColumn: LocalDateTable_41fe76cb-204d-45ef-9e30-30825d137fdd.Date
+
+relationship 44e10f56-6e47-4180-ada9-1b39c11fa510
+	joinOnDateBehavior: datePartOnly
+	fromColumn: usuario.fecnac
+	toColumn: LocalDateTable_c6c0a4ce-bb3b-412f-a178-e3e814d6a61a.Date
+
+relationship 0eba0e9b-e3fe-445a-ba21-bac51469bd20
+	joinOnDateBehavior: datePartOnly
+	fromColumn: usuario.fecreg
+	toColumn: LocalDateTable_c111922e-03fa-4a9d-86c5-64f09f36203a.Date
+
+relationship 77f1f410-776c-41f6-9237-65c52c1a3493
+	joinOnDateBehavior: datePartOnly
+	fromColumn: usuario.fecdes
+	toColumn: LocalDateTable_891825be-d977-4fbb-aa54-aaffce97bba6.Date
+
+relationship cde5d8cc-d783-4428-8c5e-8e8523eb2080
+	joinOnDateBehavior: datePartOnly
+	fromColumn: usuario.fecnuevo
+	toColumn: LocalDateTable_f5deaa01-6cfe-458c-b390-0874c1bde1fe.Date
+
+relationship 5a5c9754-36d9-4fe5-a3b0-eced1cb8c166
+	joinOnDateBehavior: datePartOnly
+	fromColumn: validar.fecha
+	toColumn: LocalDateTable_2b82745f-5620-4c73-a2c5-2cdfa743b507.Date
+

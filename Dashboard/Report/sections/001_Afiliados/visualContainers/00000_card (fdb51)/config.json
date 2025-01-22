@@ -1,0 +1,77 @@
+{
+  "name": "fdb512068172b02ca059",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 113.15076854131003,
+        "y": 548.41079244220555,
+        "z": 9000,
+        "width": 139.72602739726028,
+        "height": 113.42465753424659,
+        "tabOrder": 9000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "card",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "CountNonNull(afiliacion.VariacionNuevosAfiliados)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "a",
+          "Entity": "afiliacion",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "a"
+                  }
+                },
+                "Property": "VariacionNuevosAfiliados"
+              }
+            },
+            "Function": 8
+          },
+          "Name": "CountNonNull(afiliacion.VariacionNuevosAfiliados)",
+          "NativeReferenceName": "Variance of VariacionNuevosAfiliados"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "a"
+                    }
+                  },
+                  "Property": "VariacionNuevosAfiliados"
+                }
+              },
+              "Function": 8
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true
+  }
+}

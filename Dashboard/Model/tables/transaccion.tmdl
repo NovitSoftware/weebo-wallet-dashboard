@@ -1,0 +1,125 @@
+﻿table transaccion
+
+	column idtrans
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: idtrans
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkadmin
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: fkadmin
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkusuario
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: fkusuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkcamp
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: fkcamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column fktienda
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: fktienda
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkprom
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: fkprom
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkcliente
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: fkcliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column fktarjeta
+		dataType: string
+		sourceProviderType: nvarchar(10)
+		summarizeBy: none
+		sourceColumn: fktarjeta
+
+		annotation SummarizationSetBy = Automatic
+
+	column monto
+		dataType: double
+		sourceProviderType: decimal(12, 2)
+		summarizeBy: sum
+		sourceColumn: monto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column fecha
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime
+		summarizeBy: none
+		sourceColumn: fecha
+
+		variation Variation
+			isDefault
+			relationship: a7fbf875-116a-499a-8d84-f2e089c57241
+			defaultHierarchy: LocalDateTable_41fe76cb-204d-45ef-9e30-30825d137fdd.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column sticker
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: sticker
+
+		annotation SummarizationSetBy = Automatic
+
+	column idconsumo
+		dataType: string
+		sourceProviderType: nvarchar(100)
+		summarizeBy: none
+		sourceColumn: idconsumo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition transaccion = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    Apployalty = Source{[Name="Apployalty"]}[Data],
+				    dbo_transaccion = Apployalty{[Schema="dbo",Item="transaccion"]}[Data]
+				in
+				    dbo_transaccion
+

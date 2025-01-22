@@ -1,0 +1,39 @@
+﻿table email_config
+
+	column idemailconfig
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: idemailconfig
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkcliente
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: fkcliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column audience_id
+		dataType: string
+		sourceProviderType: varchar(100)
+		summarizeBy: none
+		sourceColumn: audience_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition email_config = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    Apployalty = Source{[Name="Apployalty"]}[Data],
+				    dbo_email_config = Apployalty{[Schema="dbo",Item="email_config"]}[Data]
+				in
+				    dbo_email_config
+

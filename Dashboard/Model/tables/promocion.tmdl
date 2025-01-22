@@ -1,0 +1,112 @@
+﻿table promocion
+
+	column idpromo
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: idpromo
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkcliente
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: fkcliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column nompromo
+		dataType: string
+		sourceProviderType: nvarchar(100)
+		summarizeBy: none
+		sourceColumn: nompromo
+
+		annotation SummarizationSetBy = Automatic
+
+	column descpromo
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		summarizeBy: none
+		sourceColumn: descpromo
+
+		annotation SummarizationSetBy = Automatic
+
+	column stpromo
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: stpromo
+
+		annotation SummarizationSetBy = Automatic
+
+	column imgpromo
+		dataType: string
+		sourceProviderType: nvarchar(100)
+		summarizeBy: none
+		sourceColumn: imgpromo
+
+		annotation SummarizationSetBy = Automatic
+
+	column prombanner
+		dataType: string
+		sourceProviderType: nvarchar(100)
+		summarizeBy: none
+		sourceColumn: prombanner
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecini
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		summarizeBy: none
+		sourceColumn: fecini
+
+		variation Variation
+			isDefault
+			relationship: 2921bee4-ee93-4e08-a766-ade3b98ead98
+			defaultHierarchy: LocalDateTable_80e68c8d-2490-4d5d-b971-e064e90e10ee.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fecfin
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		summarizeBy: none
+		sourceColumn: fecfin
+
+		variation Variation
+			isDefault
+			relationship: 1ec684bf-4705-44b2-9c1b-7c5167c128e4
+			defaultHierarchy: LocalDateTable_3381340c-1bcf-46e6-9059-e826e6b249bc.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column activo
+		dataType: string
+		sourceProviderType: nvarchar(1)
+		summarizeBy: none
+		sourceColumn: activo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition promocion = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    Apployalty = Source{[Name="Apployalty"]}[Data],
+				    dbo_promocion = Apployalty{[Schema="dbo",Item="promocion"]}[Data]
+				in
+				    dbo_promocion
+

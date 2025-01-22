@@ -1,0 +1,77 @@
+{
+  "name": "a734396d4c5d1ca9a403",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 1038.9041095890411,
+        "y": 535.5340466695169,
+        "z": 5000,
+        "width": 170.95890410958904,
+        "height": 116.7123287671233,
+        "tabOrder": 5000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "card",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "Sum(adqtarjeta.monto)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "a",
+          "Entity": "adqtarjeta",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "a"
+                  }
+                },
+                "Property": "monto"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(adqtarjeta.monto)",
+          "NativeReferenceName": "Sum of monto"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "a"
+                    }
+                  },
+                  "Property": "monto"
+                }
+              },
+              "Function": 0
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true
+  }
+}

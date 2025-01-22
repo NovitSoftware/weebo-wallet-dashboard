@@ -1,0 +1,62 @@
+﻿table Calendario
+
+	measure 'Conteo Activos' = ```
+			CALCULATE(COUNTROWS(Tarjeta), Tarjeta[activo] = "s")
+			
+			```
+		formatString: 0
+
+	column Date
+		formatString: Short Date
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: 89aaafe5-7dee-42c0-8562-d3ecf25bb9e2
+			defaultHierarchy: LocalDateTable_7a67aab9-fdcf-48b9-b284-eb9e2a6fc8c0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Año = ```
+			YEAR(Calendario[Date])
+			
+			```
+		formatString: 0
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes = ```
+			FORMAT(Calendario[Date], "MMMM")
+			
+			```
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Semana = ```
+			WEEKNUM(Calendario[Date], 2)  // El "2" hace que la semana empiece el lunes
+			
+			```
+		formatString: 0
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Día = ```
+			DAY(Calendario[Date])
+			
+			```
+		formatString: 0
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendario = calculated
+		mode: import
+		source = CALENDAR(MIN(Tarjeta[fecactivo]), MAX(Tarjeta[fecactivo]))
+
+	annotation PBI_Id = e43f14d3018d474eba9dcead9c980577
+

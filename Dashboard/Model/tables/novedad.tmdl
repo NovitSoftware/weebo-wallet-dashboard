@@ -1,0 +1,95 @@
+﻿table novedad
+
+	column idnov
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: idnov
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkcliente
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: fkcliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column nomnov
+		dataType: string
+		sourceProviderType: nvarchar(100)
+		summarizeBy: none
+		sourceColumn: nomnov
+
+		annotation SummarizationSetBy = Automatic
+
+	column descnov
+		dataType: string
+		sourceProviderType: nvarchar(500)
+		summarizeBy: none
+		sourceColumn: descnov
+
+		annotation SummarizationSetBy = Automatic
+
+	column imgnov
+		dataType: string
+		sourceProviderType: nvarchar(20)
+		summarizeBy: none
+		sourceColumn: imgnov
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecini
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		summarizeBy: none
+		sourceColumn: fecini
+
+		variation Variation
+			isDefault
+			relationship: ac60e9e5-88f6-4bc7-a943-f7d44af0fdaa
+			defaultHierarchy: LocalDateTable_29058546-95ed-4048-a8e8-259c963353ee.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fecfin
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		summarizeBy: none
+		sourceColumn: fecfin
+
+		variation Variation
+			isDefault
+			relationship: 9298ba72-b74c-472f-abce-f3f34814d04a
+			defaultHierarchy: LocalDateTable_84c3bc6e-4e03-4ec8-a4fe-785ed0872d20.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column activo
+		dataType: string
+		sourceProviderType: nvarchar(1)
+		summarizeBy: none
+		sourceColumn: activo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition novedad = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    Apployalty = Source{[Name="Apployalty"]}[Data],
+				    dbo_novedad = Apployalty{[Schema="dbo",Item="novedad"]}[Data]
+				in
+				    dbo_novedad
+

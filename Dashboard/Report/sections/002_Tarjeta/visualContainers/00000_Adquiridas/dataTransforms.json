@@ -1,0 +1,58 @@
+{
+  "objects": {},
+  "projectionOrdering": {
+    "Values": [
+      0
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": ".",
+        "Name": "Sum(adqtarjeta.cant)",
+        "Type": 3,
+        "Format": "0"
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": ".",
+      "format": "0",
+      "queryName": "Sum(adqtarjeta.cant)",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 260
+      },
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "adqtarjeta"
+                }
+              },
+              "Property": "cant"
+            }
+          },
+          "Function": 0
+        }
+      }
+    }
+  ]
+}

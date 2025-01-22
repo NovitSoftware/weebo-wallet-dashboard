@@ -1,0 +1,46 @@
+﻿table sesion
+
+	column idsesion
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: idsesion
+
+		annotation SummarizationSetBy = Automatic
+
+	column token
+		dataType: string
+		sourceProviderType: nvarchar(20)
+		summarizeBy: none
+		sourceColumn: token
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecini
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		summarizeBy: none
+		sourceColumn: fecini
+
+		variation Variation
+			isDefault
+			relationship: 0d566f89-f98d-4372-8a56-2d3418332879
+			defaultHierarchy: LocalDateTable_7bf5b4d7-fd00-4396-be91-37225f53ea89.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition sesion = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    Apployalty = Source{[Name="Apployalty"]}[Data],
+				    dbo_sesion = Apployalty{[Schema="dbo",Item="sesion"]}[Data]
+				in
+				    dbo_sesion
+

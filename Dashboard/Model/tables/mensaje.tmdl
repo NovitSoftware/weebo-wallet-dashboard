@@ -1,0 +1,97 @@
+﻿table mensaje
+
+	column idmensaje
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: idmensaje
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkcliente
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: fkcliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkusuario
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: fkusuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column titulo
+		dataType: string
+		sourceProviderType: nvarchar(500)
+		summarizeBy: none
+		sourceColumn: titulo
+
+		annotation SummarizationSetBy = Automatic
+
+	column contenido
+		dataType: string
+		sourceProviderType: nvarchar(1000)
+		summarizeBy: none
+		sourceColumn: contenido
+
+		annotation SummarizationSetBy = Automatic
+
+	column imagen
+		dataType: string
+		sourceProviderType: nvarchar(45)
+		summarizeBy: none
+		sourceColumn: imagen
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecenvio
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		summarizeBy: none
+		sourceColumn: fecenvio
+
+		variation Variation
+			isDefault
+			relationship: 2f2245f8-2509-4dab-8506-50ba81ea3c33
+			defaultHierarchy: LocalDateTable_7193564c-9b65-4ca3-9d0b-2dddcb1a80d6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column numafiliados
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: numafiliados
+
+		annotation SummarizationSetBy = Automatic
+
+	column leido
+		dataType: string
+		sourceProviderType: nvarchar(1)
+		summarizeBy: none
+		sourceColumn: leido
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mensaje = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    Apployalty = Source{[Name="Apployalty"]}[Data],
+				    dbo_mensaje = Apployalty{[Schema="dbo",Item="mensaje"]}[Data]
+				in
+				    dbo_mensaje
+

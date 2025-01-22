@@ -1,0 +1,71 @@
+﻿table notificacion_push
+
+	column idnotificacion
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: idnotificacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkcliente
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: fkcliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column titulo
+		dataType: string
+		sourceProviderType: nvarchar(150)
+		summarizeBy: none
+		sourceColumn: titulo
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo
+		dataType: string
+		sourceProviderType: nvarchar(20)
+		summarizeBy: none
+		sourceColumn: tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column mensaje
+		dataType: string
+		sourceProviderType: nvarchar(300)
+		summarizeBy: none
+		sourceColumn: mensaje
+
+		annotation SummarizationSetBy = Automatic
+
+	column horario
+		dataType: string
+		sourceProviderType: text
+		summarizeBy: none
+		sourceColumn: horario
+
+		annotation SummarizationSetBy = Automatic
+
+	column imagen
+		dataType: string
+		sourceProviderType: nvarchar(100)
+		summarizeBy: none
+		sourceColumn: imagen
+
+		annotation SummarizationSetBy = Automatic
+
+	partition notificacion_push = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    Apployalty = Source{[Name="Apployalty"]}[Data],
+				    dbo_notificacion_push = Apployalty{[Schema="dbo",Item="notificacion_push"]}[Data]
+				in
+				    dbo_notificacion_push
+

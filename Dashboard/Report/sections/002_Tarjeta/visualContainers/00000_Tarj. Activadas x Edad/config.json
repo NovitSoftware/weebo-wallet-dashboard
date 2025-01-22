@@ -1,0 +1,237 @@
+{
+  "name": "b1734d935c12cd05d44a",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 490,
+        "y": 220,
+        "z": 3000,
+        "width": 281.66666666666669,
+        "height": 233.33333333333334,
+        "tabOrder": 6000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "pieChart",
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "CountNonNull(tarjeta.activo)"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "usuario.RangoEdad",
+          "active": true
+        }
+      ],
+      "Tooltips": [
+        {
+          "queryRef": "CountNonNull(usuario.idusuario)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "t",
+          "Entity": "tarjeta",
+          "Type": 0
+        },
+        {
+          "Name": "u",
+          "Entity": "usuario",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "t"
+                  }
+                },
+                "Property": "activo"
+              }
+            },
+            "Function": 5
+          },
+          "Name": "CountNonNull(tarjeta.activo)",
+          "NativeReferenceName": "Tarj. Activas"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "u"
+              }
+            },
+            "Property": "RangoEdad"
+          },
+          "Name": "usuario.RangoEdad",
+          "NativeReferenceName": "Edad"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "u"
+                  }
+                },
+                "Property": "idusuario"
+              }
+            },
+            "Function": 5
+          },
+          "Name": "CountNonNull(usuario.idusuario)",
+          "NativeReferenceName": "Cant. Usuarios"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "t"
+                    }
+                  },
+                  "Property": "activo"
+                }
+              },
+              "Function": 5
+            }
+          }
+        }
+      ]
+    },
+    "columnProperties": {
+      "CountNonNull(tarjeta.activo)": {
+        "displayName": "Tarj. Activas"
+      },
+      "usuario.RangoEdad": {
+        "displayName": "Edad"
+      },
+      "CountNonNull(usuario.idusuario)": {
+        "displayName": "Cant. Usuarios"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BottomCenter'"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "slices": [
+        {
+          "properties": {
+            "startAngle": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "labelStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Data'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "title": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tarj. Activadas x Edad'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

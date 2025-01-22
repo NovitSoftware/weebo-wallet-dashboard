@@ -1,0 +1,88 @@
+﻿model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-AR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.140.7525.1 (Main)+f63a344f9e090b82fbceba81dbe5d0be83564d27
+
+annotation PBI_QueryOrder = ["admin","adqtarjeta","afiliacion","campania","categoria","cliente","cliplan","cupon","cuponpromo","discup","distar","distrito","email_config","email_template","mensaje","notificacion_push","novedad","promocion","provincia","pushnot","region","sesion","smsnot","sticker","sysdiagrams","tarjeta","tienda","tipodoc","tracking_stickers","transaccion","usuario","validar"]
+
+annotation PBI_ProTooling = ["WebModelingEdit"]
+
+ref table admin
+ref table adqtarjeta
+ref table afiliacion
+ref table campania
+ref table categoria
+ref table cliente
+ref table cliplan
+ref table cupon
+ref table cuponpromo
+ref table discup
+ref table distar
+ref table distrito
+ref table email_config
+ref table email_template
+ref table mensaje
+ref table notificacion_push
+ref table novedad
+ref table promocion
+ref table provincia
+ref table pushnot
+ref table region
+ref table sesion
+ref table smsnot
+ref table sticker
+ref table sysdiagrams
+ref table tarjeta
+ref table tienda
+ref table tipodoc
+ref table tracking_stickers
+ref table transaccion
+ref table usuario
+ref table validar
+ref table Calendario
+ref table DateTableTemplate_86a3a036-7090-434d-9cac-94b2cde535c5
+ref table LocalDateTable_7a67aab9-fdcf-48b9-b284-eb9e2a6fc8c0
+ref table LocalDateTable_5577e142-ebf7-4e57-a193-0704fb8e8237
+ref table LocalDateTable_0a4d191d-56eb-43d7-817d-9d9076f88a12
+ref table LocalDateTable_a2b7fc0b-240d-441b-9172-72531ad7891d
+ref table LocalDateTable_9e3cdf89-5f9e-4fbd-bbce-898d4cfa7d20
+ref table LocalDateTable_21d4017a-4d17-447b-afb3-8d606731f1d4
+ref table LocalDateTable_698459a0-0f6b-4c53-924a-e2698b07add5
+ref table LocalDateTable_a9f047b8-f31b-4069-9660-fac61131fbc6
+ref table LocalDateTable_edafacb7-ed36-4b3e-a071-a86909b97551
+ref table LocalDateTable_cb50ae68-dd87-48ff-94f0-a74aab4125a0
+ref table LocalDateTable_a6922533-6b3d-48ed-9862-edc65ad6158a
+ref table LocalDateTable_87a8294d-d78f-4106-a952-1f536bbcd882
+ref table LocalDateTable_f3f6fc83-9826-4ef4-9bd9-1ac29a1c90dd
+ref table LocalDateTable_d559f9f4-66fd-47b2-a650-3cae8bd24bed
+ref table LocalDateTable_7193564c-9b65-4ca3-9d0b-2dddcb1a80d6
+ref table LocalDateTable_29058546-95ed-4048-a8e8-259c963353ee
+ref table LocalDateTable_84c3bc6e-4e03-4ec8-a4fe-785ed0872d20
+ref table LocalDateTable_80e68c8d-2490-4d5d-b971-e064e90e10ee
+ref table LocalDateTable_3381340c-1bcf-46e6-9059-e826e6b249bc
+ref table LocalDateTable_d2079a95-f611-4679-a158-bfa34d494345
+ref table LocalDateTable_6050f303-0b90-4cd5-9c81-b04dded25957
+ref table LocalDateTable_7bf5b4d7-fd00-4396-be91-37225f53ea89
+ref table LocalDateTable_a4d1bbf8-66d2-406f-ac9f-c6f8a22b87a8
+ref table LocalDateTable_f3d664db-6fae-40ea-b553-3a7bd30aecf7
+ref table LocalDateTable_8035d952-da92-4a87-b3e4-50d149bf7670
+ref table LocalDateTable_37aeb087-d9df-4777-8087-31a23f2bb8a6
+ref table LocalDateTable_69854cb2-12bb-42fe-a3ce-379ee8b82d0b
+ref table LocalDateTable_53065729-2240-43ef-8de4-273dd0171067
+ref table LocalDateTable_fdcbeae9-95ad-4b44-b523-f807ee3c4412
+ref table LocalDateTable_41fe76cb-204d-45ef-9e30-30825d137fdd
+ref table LocalDateTable_c6c0a4ce-bb3b-412f-a178-e3e814d6a61a
+ref table LocalDateTable_c111922e-03fa-4a9d-86c5-64f09f36203a
+ref table LocalDateTable_891825be-d977-4fbb-aa54-aaffce97bba6
+ref table LocalDateTable_f5deaa01-6cfe-458c-b390-0874c1bde1fe
+ref table LocalDateTable_2b82745f-5620-4c73-a2c5-2cdfa743b507
+
+ref cultureInfo en-US
+

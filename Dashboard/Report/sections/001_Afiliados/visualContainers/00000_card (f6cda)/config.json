@@ -1,0 +1,77 @@
+{
+  "name": "f6cdae22a0421070be46",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 898.76715673159254,
+        "y": 539.50661596532177,
+        "z": 6000,
+        "width": 139.72602739726028,
+        "height": 113.42465753424659,
+        "tabOrder": 6000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "card",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "Sum(adqtarjeta.VariacionSaldosTarjeta)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "a",
+          "Entity": "adqtarjeta",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "a"
+                  }
+                },
+                "Property": "VariacionSaldosTarjeta"
+              }
+            },
+            "Function": 8
+          },
+          "Name": "Sum(adqtarjeta.VariacionSaldosTarjeta)",
+          "NativeReferenceName": "Variance of VariacionSaldosTarjeta"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "a"
+                    }
+                  },
+                  "Property": "VariacionSaldosTarjeta"
+                }
+              },
+              "Function": 8
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "projectionOrdering": {
+    "Y": [
+      0
+    ],
+    "Category": [
+      4,
+      3,
+      2,
+      1
+    ]
+  },
+  "projectionActiveItems": {
+    "Category": [
+      {
+        "queryRef": "Calendario.Año",
+        "suppressConcat": false
+      }
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Tarj. Activas",
+        "Name": "Calendario.Conteo Activos",
+        "Type": 3,
+        "Format": "0"
+      },
+      {
+        "Restatement": "Día",
+        "Name": "Calendario.Día",
+        "Type": 3,
+        "Format": "0"
+      },
+      {
+        "Restatement": "Semana",
+        "Name": "Calendario.Semana",
+        "Type": 3,
+        "Format": "0"
+      },
+      {
+        "Restatement": "Mes",
+        "Name": "Calendario.Mes",
+        "Type": 2048
+      },
+      {
+        "Restatement": "Año",
+        "Name": "Calendario.Año",
+        "Type": 3,
+        "Format": "0"
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Y",
+          "Projection": 0,
+          "isActive": false
+        },
+        {
+          "Name": "Category",
+          "Projection": 4,
+          "isActive": true
+        },
+        {
+          "Name": "Category",
+          "Projection": 3,
+          "isActive": false
+        },
+        {
+          "Name": "Category",
+          "Projection": 2,
+          "isActive": false
+        },
+        {
+          "Name": "Category",
+          "Projection": 1,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Tarj. Activas",
+      "format": "0",
+      "queryName": "Calendario.Conteo Activos",
+      "roles": {
+        "Y": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 260
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Calendario"
+            }
+          },
+          "Property": "Conteo Activos"
+        }
+      }
+    },
+    {
+      "displayName": "Día",
+      "format": "0",
+      "queryName": "Calendario.Día",
+      "roles": {
+        "Category": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 260
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Calendario"
+            }
+          },
+          "Property": "Día"
+        }
+      }
+    },
+    {
+      "displayName": "Semana",
+      "format": "0",
+      "queryName": "Calendario.Semana",
+      "roles": {
+        "Category": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 260
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Calendario"
+            }
+          },
+          "Property": "Semana"
+        }
+      }
+    },
+    {
+      "displayName": "Mes",
+      "queryName": "Calendario.Mes",
+      "roles": {
+        "Category": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Calendario"
+            }
+          },
+          "Property": "Mes"
+        }
+      }
+    },
+    {
+      "displayName": "Año",
+      "format": "0",
+      "queryName": "Calendario.Año",
+      "roles": {
+        "Category": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 260
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Calendario"
+            }
+          },
+          "Property": "Año"
+        }
+      }
+    }
+  ]
+}

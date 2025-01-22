@@ -1,0 +1,46 @@
+{
+  "id": 17347790,
+  "layoutOptimization": 1,
+  "pods": [
+    {
+      "boundSection": "a34663e38a75dcabdade",
+      "config": "{}",
+      "id": 82454463,
+      "name": "c74c0748ec480c2c6b85",
+      "objectId": "a7546abe-59ad-4043-86ce-c0eb7220820e"
+    }
+  ],
+  "publicCustomVisuals": [
+    "calendarVisual5E37BB8CB2CB427ABE4F9EAAE66C5223",
+    "CalendarVisualA45056645E4E428B9D26EF971839A6B5"
+  ],
+  "reportId": 6625718,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "id": 17050164,
+        "items": [
+          {
+            "id": 128329154,
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "resourcePackageId": 17050164,
+            "type": 202
+          },
+          {
+            "id": 128329155,
+            "name": "AccessibleTidal",
+            "path": "BuiltInThemes/AccessibleTidal.json",
+            "resourcePackageId": 17050164,
+            "type": 201
+          }
+        ],
+        "name": "SharedResources",
+        "reportId": 6625718,
+        "type": 2
+      }
+    }
+  ],
+  "theme": "AccessibleTidal"
+}

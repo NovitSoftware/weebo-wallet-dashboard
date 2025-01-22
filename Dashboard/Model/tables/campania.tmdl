@@ -1,0 +1,141 @@
+﻿table campania
+
+	column idcamp
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: idcamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkcliente
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: fkcliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column feccreacion
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		summarizeBy: none
+		sourceColumn: feccreacion
+
+		variation Variation
+			isDefault
+			relationship: 754d6673-6cb9-415a-9c74-07d05b96147f
+			defaultHierarchy: LocalDateTable_698459a0-0f6b-4c53-924a-e2698b07add5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fecact
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		summarizeBy: none
+		sourceColumn: fecact
+
+		variation Variation
+			isDefault
+			relationship: 8e4276bb-b23b-4b37-bfcd-a7d0d8c08d66
+			defaultHierarchy: LocalDateTable_a9f047b8-f31b-4069-9660-fac61131fbc6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column nomprograma
+		dataType: string
+		sourceProviderType: nvarchar(100)
+		summarizeBy: none
+		sourceColumn: nomprograma
+
+		annotation SummarizationSetBy = Automatic
+
+	column descripcion
+		dataType: string
+		sourceProviderType: nvarchar(2000)
+		summarizeBy: none
+		sourceColumn: descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_st
+		dataType: double
+		sourceProviderType: float
+		summarizeBy: sum
+		sourceColumn: valor_st
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column stickers
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: stickers
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_premio
+		dataType: string
+		sourceProviderType: nvarchar(2)
+		summarizeBy: none
+		sourceColumn: tipo_premio
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_premio
+		dataType: double
+		sourceProviderType: float
+		summarizeBy: sum
+		sourceColumn: valor_premio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column activo
+		dataType: string
+		sourceProviderType: nvarchar(1)
+		summarizeBy: none
+		sourceColumn: activo
+
+		annotation SummarizationSetBy = Automatic
+
+	column vigencia
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: vigencia
+
+		annotation SummarizationSetBy = Automatic
+
+	column imgcupon
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		summarizeBy: none
+		sourceColumn: imgcupon
+
+		annotation SummarizationSetBy = Automatic
+
+	partition campania = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    Apployalty = Source{[Name="Apployalty"]}[Data],
+				    dbo_campania = Apployalty{[Schema="dbo",Item="campania"]}[Data]
+				in
+				    dbo_campania
+

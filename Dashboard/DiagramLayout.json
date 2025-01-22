@@ -1,0 +1,450 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 283.5679012345679,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "admin",
+          "nodeLineageTag": "dd26b1e6-4e50-42a7-9c58-4a3985ed1aed",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 284,
+            "y": 38
+          },
+          "nodeIndex": "adqtarjeta",
+          "nodeLineageTag": "586c9487-bfc8-46cd-a90c-a567ee512d0c",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 568,
+            "y": 26
+          },
+          "nodeIndex": "afiliacion",
+          "nodeLineageTag": "f72fd641-1daf-452d-9472-243a9b3a883c",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 852,
+            "y": 0
+          },
+          "nodeIndex": "campania",
+          "nodeLineageTag": "be29a852-e17a-4ef4-be3c-b3bae564bc28",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1136,
+            "y": 62
+          },
+          "nodeIndex": "categoria",
+          "nodeLineageTag": "81cb0346-48f7-4311-b6d0-92f3d4dc5354",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 1420,
+            "y": 0
+          },
+          "nodeIndex": "cliente",
+          "nodeLineageTag": "45b646fc-34bc-4f2b-8241-2ec5fd6feea8",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1704,
+            "y": 26
+          },
+          "nodeIndex": "cliplan",
+          "nodeLineageTag": "2f4fd878-d9ef-450d-b460-f1779708548f",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 1988,
+            "y": 0
+          },
+          "nodeIndex": "cupon",
+          "nodeLineageTag": "b968290f-c5d1-4061-8330-e30e71b3ecdc",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 2272,
+            "y": 0
+          },
+          "nodeIndex": "cuponpromo",
+          "nodeLineageTag": "e16b257f-29a1-41ba-8fc6-aef5e2df080f",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 2556,
+            "y": 14
+          },
+          "nodeIndex": "discup",
+          "nodeLineageTag": "b7790260-088a-4a7f-81f7-ff902c920fe7",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 2840,
+            "y": 0
+          },
+          "nodeIndex": "distar",
+          "nodeLineageTag": "dcce47e3-a07f-4d4c-892e-94969543daa6",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 3124,
+            "y": 62
+          },
+          "nodeIndex": "distrito",
+          "nodeLineageTag": "5bf0fef8-b7a0-48eb-8ccd-6481869664bd",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 3408,
+            "y": 74
+          },
+          "nodeIndex": "email_config",
+          "nodeLineageTag": "c02e9a63-a6a3-4906-95a5-cc5a86221e75",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 14
+        },
+        {
+          "location": {
+            "x": 3692,
+            "y": 38
+          },
+          "nodeIndex": "email_template",
+          "nodeLineageTag": "d29a4d0b-f90c-4b83-a970-5c35798b0a8e",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 15
+        },
+        {
+          "location": {
+            "x": 3976,
+            "y": 2
+          },
+          "nodeIndex": "mensaje",
+          "nodeLineageTag": "9840617b-3111-4a9a-b255-e0ba0cea8408",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 16
+        },
+        {
+          "location": {
+            "x": 4260,
+            "y": 26
+          },
+          "nodeIndex": "notificacion_push",
+          "nodeLineageTag": "0a63abaa-ab3f-4204-aaa5-e8ac1f4579b9",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 17
+        },
+        {
+          "location": {
+            "x": 4544,
+            "y": 14
+          },
+          "nodeIndex": "novedad",
+          "nodeLineageTag": "ef46ec6b-9c3c-413c-b66d-d501f6fc4c5a",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 18
+        },
+        {
+          "location": {
+            "x": 4828,
+            "y": 0
+          },
+          "nodeIndex": "promocion",
+          "nodeLineageTag": "4da595d8-19eb-4c84-abea-c1d6200f13bf",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 19
+        },
+        {
+          "location": {
+            "x": 5112,
+            "y": 74
+          },
+          "nodeIndex": "provincia",
+          "nodeLineageTag": "9abf648b-119f-4d83-bc07-f06590608e52",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 20
+        },
+        {
+          "location": {
+            "x": 5396,
+            "y": 26
+          },
+          "nodeIndex": "pushnot",
+          "nodeLineageTag": "e0db1e04-4f59-405c-8ae8-a4b7f2db8ce2",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 21
+        },
+        {
+          "location": {
+            "x": 5680,
+            "y": 86
+          },
+          "nodeIndex": "region",
+          "nodeLineageTag": "480a2f86-e749-4d75-a874-7e5dc617c8f0",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 22
+        },
+        {
+          "location": {
+            "x": 5964,
+            "y": 74
+          },
+          "nodeIndex": "sesion",
+          "nodeLineageTag": "4af2ed8f-2bc5-40ba-be65-634c540ebfb9",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 23
+        },
+        {
+          "location": {
+            "x": 6248,
+            "y": 26
+          },
+          "nodeIndex": "smsnot",
+          "nodeLineageTag": "303c76c7-c2d9-4585-b3a2-e3723ed8c452",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 24
+        },
+        {
+          "location": {
+            "x": 6532,
+            "y": 14
+          },
+          "nodeIndex": "sticker",
+          "nodeLineageTag": "1aaadb55-68ce-4111-9405-243b595f0503",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 25
+        },
+        {
+          "location": {
+            "x": 6816,
+            "y": 62
+          },
+          "nodeIndex": "sysdiagrams",
+          "nodeLineageTag": "e2fc9a53-75c1-47f2-bef0-899bdbf12026",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 33
+        },
+        {
+          "location": {
+            "x": 7100,
+            "y": 2
+          },
+          "nodeIndex": "tarjeta",
+          "nodeLineageTag": "32df0737-0f68-4ef8-a97c-09148a9c0d0f",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 32
+        },
+        {
+          "location": {
+            "x": 7384,
+            "y": 0
+          },
+          "nodeIndex": "tienda",
+          "nodeLineageTag": "b193365a-3712-4b83-803c-4634c8b080c1",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 26
+        },
+        {
+          "location": {
+            "x": 7668,
+            "y": 74
+          },
+          "nodeIndex": "tipodoc",
+          "nodeLineageTag": "62006994-ce97-4a2f-8dd9-d63b584dae3e",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 27
+        },
+        {
+          "location": {
+            "x": 7952,
+            "y": 26
+          },
+          "nodeIndex": "tracking_stickers",
+          "nodeLineageTag": "188310f0-7cdc-4d6c-92ed-2f4e96553895",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 28
+        },
+        {
+          "location": {
+            "x": 8236,
+            "y": 0
+          },
+          "nodeIndex": "transaccion",
+          "nodeLineageTag": "4f40bfbf-86b9-421d-83fd-d59550f8df85",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 29
+        },
+        {
+          "location": {
+            "x": 8520,
+            "y": 0
+          },
+          "nodeIndex": "usuario",
+          "nodeLineageTag": "ce60f020-7264-418b-9539-a1520e1dcb38",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 31
+        },
+        {
+          "location": {
+            "x": 8804,
+            "y": 50
+          },
+          "nodeIndex": "validar",
+          "nodeLineageTag": "cd7718b7-fb88-48d9-a26b-23e49528ffbf",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 30
+        },
+        {
+          "location": {
+            "x": 9088,
+            "y": 50
+          },
+          "nodeIndex": "Calendario",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 1
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 72.6457399103139,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

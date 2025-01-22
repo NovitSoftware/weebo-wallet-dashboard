@@ -1,0 +1,95 @@
+﻿table distar
+
+	column iddistar
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: iddistar
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkcliente
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: fkcliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column logo
+		dataType: string
+		sourceProviderType: nvarchar(45)
+		summarizeBy: none
+		sourceColumn: logo
+
+		annotation SummarizationSetBy = Automatic
+
+	column sticker
+		dataType: string
+		sourceProviderType: nvarchar(45)
+		summarizeBy: none
+		sourceColumn: sticker
+
+		annotation SummarizationSetBy = Automatic
+
+	column cfvista
+		dataType: string
+		sourceProviderType: nvarchar(15)
+		summarizeBy: none
+		sourceColumn: cfvista
+
+		annotation SummarizationSetBy = Automatic
+
+	column cftarjeta
+		dataType: string
+		sourceProviderType: nvarchar(15)
+		summarizeBy: none
+		sourceColumn: cftarjeta
+
+		annotation SummarizationSetBy = Automatic
+
+	column txtbienv
+		dataType: string
+		sourceProviderType: nvarchar(250)
+		summarizeBy: none
+		sourceColumn: txtbienv
+
+		annotation SummarizationSetBy = Automatic
+
+	column txttarjeta
+		dataType: string
+		sourceProviderType: nvarchar(250)
+		summarizeBy: none
+		sourceColumn: txttarjeta
+
+		annotation SummarizationSetBy = Automatic
+
+	column ctbienv
+		dataType: string
+		sourceProviderType: nvarchar(15)
+		summarizeBy: none
+		sourceColumn: ctbienv
+
+		annotation SummarizationSetBy = Automatic
+
+	column cttarjeta
+		dataType: string
+		sourceProviderType: nvarchar(15)
+		summarizeBy: none
+		sourceColumn: cttarjeta
+
+		annotation SummarizationSetBy = Automatic
+
+	partition distar = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    Apployalty = Source{[Name="Apployalty"]}[Data],
+				    dbo_distar = Apployalty{[Schema="dbo",Item="distar"]}[Data]
+				in
+				    dbo_distar
+
