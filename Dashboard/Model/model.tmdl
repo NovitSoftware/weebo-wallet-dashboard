@@ -8,7 +8,7 @@
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBIDesktopVersion = 2.138.1452.0 (24.11)
+annotation PBIDesktopVersion = 2.139.1678.0 (24.12)+2a034ab280bddf891eb7bb9ebfe6996f9c3a3196
 
 annotation PBI_QueryOrder = ["admin","adqtarjeta","afiliacion","campania","categoria","cliente","cliplan","cupon","cuponpromo","discup","distar","distrito","email_config","email_template","mensaje","notificacion_push","novedad","promocion","provincia","pushnot","region","sesion","smsnot","sticker","sysdiagrams","tarjeta","tienda","tipodoc","tracking_stickers","transaccion","usuario","validar"]
 

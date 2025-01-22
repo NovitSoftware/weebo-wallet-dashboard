@@ -14,11 +14,6 @@
               "Name": "t",
               "Entity": "tarjeta",
               "Type": 0
-            },
-            {
-              "Name": "u",
-              "Entity": "usuario",
-              "Type": 0
             }
           ],
           "Select": [
@@ -84,60 +79,6 @@
                       }
                     }
                   }
-                }
-              }
-            },
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "u"
-                          }
-                        },
-                        "Property": "RangoEdad"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'19-25'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            },
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "t"
-                          }
-                        },
-                        "Property": "activo"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'s'"
-                        }
-                      }
-                    ]
-                  ]
                 }
               }
             }
