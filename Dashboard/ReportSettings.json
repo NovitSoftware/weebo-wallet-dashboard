@@ -1,9 +1,7 @@
 {
   "Version": 4,
   "ReportSettings": {
-    "IsQnaEnabledForLiveConnect": true,
-    "IsQnaEnabledForThisFile": true,
-    "QnaLsdlSharingPermission": 0
+    "IsQnaEnabledForLiveConnect": true
   },
   "QueriesSettings": {
     "TypeDetectionEnabled": true,

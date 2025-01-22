@@ -1,0 +1,143 @@
+{
+  "name": "56e375aa0b97d7739739",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 664.2490473793946,
+        "y": 100,
+        "z": 9000,
+        "width": 192.15184412970018,
+        "height": 71.228700841181961,
+        "tabOrder": 10000
+      }
+    },
+    {
+      "id": 1,
+      "position": {
+        "x": 5.1232104965492908E-05,
+        "y": 282.66668701171875,
+        "z": 9000,
+        "width": 158,
+        "height": 60,
+        "tabOrder": 10000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "slicer",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "usuario.distrito",
+          "active": true
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "u",
+          "Entity": "usuario",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "u"
+              }
+            },
+            "Property": "distrito"
+          },
+          "Name": "usuario.distrito",
+          "NativeReferenceName": "Distrito"
+        }
+      ]
+    },
+    "columnProperties": {
+      "usuario.distrito": {
+        "displayName": "Distrito"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "selection": [
+        {
+          "properties": {
+            "selectAllCheckboxEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "singleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "vcObjects": {
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
