@@ -20,7 +20,7 @@ jobs:
         Expand-Archive -Path pbi-tools.zip -DestinationPath pbi-tools
 
     - name: Add pbi-tools to PATH
-      run: echo "::add-path::$(pwd)/pbi-tools"
+      run: echo "pbi-tools" >> $env:GITHUB_PATH
 
     - name: Generate PBIX file
       run: pbi-tools compile Dashboard/ PBIT PBIT
