@@ -7,9 +7,10 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Variance of VariacionSaldosTarjeta",
-        "Name": "Sum(adqtarjeta.VariacionSaldosTarjeta)",
-        "Type": 1
+        "Restatement": "VariacionSaldoTarjetas_Absoluta",
+        "Name": "adqtarjeta.VariacionSaldoTarjetas",
+        "Type": 1,
+        "Format": "0.00"
       }
     ]
   },
@@ -26,8 +27,9 @@
   ],
   "selects": [
     {
-      "displayName": "Variance of VariacionSaldosTarjeta",
-      "queryName": "Sum(adqtarjeta.VariacionSaldosTarjeta)",
+      "displayName": "VariacionSaldoTarjetas_Absoluta",
+      "format": "0.00",
+      "queryName": "adqtarjeta.VariacionSaldoTarjetas",
       "roles": {
         "Values": true
       },
@@ -36,18 +38,13 @@
         "underlyingType": 259
       },
       "expr": {
-        "Aggregation": {
+        "Measure": {
           "Expression": {
-            "Column": {
-              "Expression": {
-                "SourceRef": {
-                  "Entity": "adqtarjeta"
-                }
-              },
-              "Property": "VariacionSaldosTarjeta"
+            "SourceRef": {
+              "Entity": "adqtarjeta"
             }
           },
-          "Function": 8
+          "Property": "VariacionSaldoTarjetas_Absoluta"
         }
       }
     }

@@ -7,9 +7,10 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Variance of VariacionAnterior",
-        "Name": "Sum(tarjeta.VariacionAnterior)",
-        "Type": 1
+        "Restatement": "VariacionAnterior",
+        "Name": "tarjeta.VariacionAnterior",
+        "Type": 1,
+        "Format": "0.00"
       }
     ]
   },
@@ -26,8 +27,9 @@
   ],
   "selects": [
     {
-      "displayName": "Variance of VariacionAnterior",
-      "queryName": "Sum(tarjeta.VariacionAnterior)",
+      "displayName": "VariacionAnterior",
+      "format": "0.00",
+      "queryName": "tarjeta.VariacionAnterior",
       "roles": {
         "Values": true
       },
@@ -36,18 +38,13 @@
         "underlyingType": 259
       },
       "expr": {
-        "Aggregation": {
+        "Measure": {
           "Expression": {
-            "Column": {
-              "Expression": {
-                "SourceRef": {
-                  "Entity": "tarjeta"
-                }
-              },
-              "Property": "VariacionAnterior"
+            "SourceRef": {
+              "Entity": "tarjeta"
             }
           },
-          "Function": 8
+          "Property": "VariacionAnterior"
         }
       }
     }

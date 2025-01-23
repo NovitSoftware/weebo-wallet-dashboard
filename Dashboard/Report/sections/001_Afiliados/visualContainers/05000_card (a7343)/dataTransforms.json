@@ -7,8 +7,8 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Suma de monto",
-        "Name": "Sum(adqtarjeta.monto)",
+        "Restatement": "Suma de NuevosSaldos",
+        "Name": "Sum(adqtarjeta.NuevosSaldos)",
         "Type": 1
       }
     ]
@@ -26,8 +26,8 @@
   ],
   "selects": [
     {
-      "displayName": "Suma de monto",
-      "queryName": "Sum(adqtarjeta.monto)",
+      "displayName": "Suma de NuevosSaldos",
+      "queryName": "Sum(adqtarjeta.NuevosSaldos)",
       "roles": {
         "Values": true
       },
@@ -44,7 +44,7 @@
                   "Entity": "adqtarjeta"
                 }
               },
-              "Property": "monto"
+              "Property": "NuevosSaldos"
             }
           },
           "Function": 0

@@ -27,7 +27,7 @@
       ],
       "Y": [
         {
-          "queryRef": "Sum(adqtarjeta.PromedioSaldoTarjeta)"
+          "queryRef": "adqtarjeta.PromedioSaldoTarjeta"
         }
       ]
     },
@@ -88,21 +88,16 @@
           "NativeReferenceName": "fecadq Month"
         },
         {
-          "Aggregation": {
+          "Measure": {
             "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Source": "a"
-                  }
-                },
-                "Property": "PromedioSaldoTarjeta"
+              "SourceRef": {
+                "Source": "a"
               }
             },
-            "Function": 0
+            "Property": "PromedioSaldoTarjeta"
           },
-          "Name": "Sum(adqtarjeta.PromedioSaldoTarjeta)",
-          "NativeReferenceName": "Sum of PromedioSaldoTarjeta"
+          "Name": "adqtarjeta.PromedioSaldoTarjeta",
+          "NativeReferenceName": "PromedioSaldoTarjeta"
         }
       ]
     },

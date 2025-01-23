@@ -39,9 +39,7 @@
     ],
     "Category": [
       1,
-      2,
-      3,
-      4
+      2
     ]
   },
   "projectionActiveItems": {
@@ -52,14 +50,6 @@
       },
       {
         "queryRef": "afiliacion.fecin.Variation.Date Hierarchy.Quarter",
-        "suppressConcat": false
-      },
-      {
-        "queryRef": "afiliacion.fecin.Variation.Date Hierarchy.Month",
-        "suppressConcat": false
-      },
-      {
-        "queryRef": "afiliacion.fecin.Variation.Date Hierarchy.Day",
         "suppressConcat": false
       }
     ]
@@ -80,16 +70,6 @@
         "Restatement": "Quarter",
         "Name": "afiliacion.fecin.Variation.Date Hierarchy.Quarter",
         "Type": 2048
-      },
-      {
-        "Restatement": "Month",
-        "Name": "afiliacion.fecin.Variation.Date Hierarchy.Month",
-        "Type": 2048
-      },
-      {
-        "Restatement": "Day",
-        "Name": "afiliacion.fecin.Variation.Date Hierarchy.Day",
-        "Type": 3
       }
     ]
   },
@@ -109,16 +89,6 @@
         {
           "Name": "Category",
           "Projection": 2,
-          "isActive": true
-        },
-        {
-          "Name": "Category",
-          "Projection": 3,
-          "isActive": true
-        },
-        {
-          "Name": "Category",
-          "Projection": 4,
           "isActive": true
         }
       ]
@@ -212,70 +182,6 @@
             }
           },
           "Level": "Quarter"
-        }
-      }
-    },
-    {
-      "displayName": "Month",
-      "queryName": "afiliacion.fecin.Variation.Date Hierarchy.Month",
-      "roles": {
-        "Category": true
-      },
-      "type": {
-        "category": "Months",
-        "underlyingType": 131585
-      },
-      "expr": {
-        "HierarchyLevel": {
-          "Expression": {
-            "Hierarchy": {
-              "Expression": {
-                "PropertyVariationSource": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "afiliacion"
-                    }
-                  },
-                  "Name": "Variation",
-                  "Property": "fecin"
-                }
-              },
-              "Hierarchy": "Date Hierarchy"
-            }
-          },
-          "Level": "Month"
-        }
-      }
-    },
-    {
-      "displayName": "Day",
-      "queryName": "afiliacion.fecin.Variation.Date Hierarchy.Day",
-      "roles": {
-        "Category": true
-      },
-      "type": {
-        "category": "DayOfMonth",
-        "underlyingType": 328452
-      },
-      "expr": {
-        "HierarchyLevel": {
-          "Expression": {
-            "Hierarchy": {
-              "Expression": {
-                "PropertyVariationSource": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "afiliacion"
-                    }
-                  },
-                  "Name": "Variation",
-                  "Property": "fecin"
-                }
-              },
-              "Hierarchy": "Date Hierarchy"
-            }
-          },
-          "Level": "Day"
         }
       }
     },

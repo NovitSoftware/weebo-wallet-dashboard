@@ -8,7 +8,7 @@
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBIDesktopVersion = 2.139.1576.0 (24.12)+cf7e324bca3ba1dbdfd6f0ddf9a53321538e996d
+annotation PBIDesktopVersion = 2.139.1678.0 (24.12)+2a034ab280bddf891eb7bb9ebfe6996f9c3a3196
 
 annotation PBI_QueryOrder = ["admin","adqtarjeta","afiliacion","campania","categoria","cliente","cliplan","cupon","cuponpromo","discup","distar","distrito","email_config","email_template","mensaje","notificacion_push","novedad","promocion","provincia","pushnot","region","sesion","smsnot","sticker","sysdiagrams","tarjeta","tienda","tipodoc","tracking_stickers","transaccion","usuario","validar"]
 
@@ -83,6 +83,8 @@ ref table LocalDateTable_c111922e-03fa-4a9d-86c5-64f09f36203a
 ref table LocalDateTable_891825be-d977-4fbb-aa54-aaffce97bba6
 ref table LocalDateTable_f5deaa01-6cfe-458c-b390-0874c1bde1fe
 ref table LocalDateTable_2b82745f-5620-4c73-a2c5-2cdfa743b507
+ref table CuponesCombinados
+ref table LocalDateTable_a9d0d91a-a847-4850-9612-65eb6d654f84
 
 ref cultureInfo en-US
 

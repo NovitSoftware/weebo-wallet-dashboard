@@ -18,7 +18,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "Sum(adqtarjeta.monto)"
+          "queryRef": "Sum(adqtarjeta.NuevosSaldos)"
         }
       ]
     },
@@ -41,13 +41,13 @@
                     "Source": "a"
                   }
                 },
-                "Property": "monto"
+                "Property": "NuevosSaldos"
               }
             },
             "Function": 0
           },
-          "Name": "Sum(adqtarjeta.monto)",
-          "NativeReferenceName": "Sum of monto"
+          "Name": "Sum(adqtarjeta.NuevosSaldos)",
+          "NativeReferenceName": "Suma de NuevosSaldos"
         }
       ],
       "OrderBy": [
@@ -62,7 +62,7 @@
                       "Source": "a"
                     }
                   },
-                  "Property": "monto"
+                  "Property": "NuevosSaldos"
                 }
               },
               "Function": 0

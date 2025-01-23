@@ -1,5 +1,51 @@
 ﻿table cupon
 
+	measure PromedioCuponesRedimidos = ```
+			
+			AVERAGEX(
+			    VALUES(CuponesCombinados[FechaUso]), 
+			    [TotalCuponesRedimidos]
+			)
+			
+			```
+
+	measure TotalCuponesRedimidos = ```
+			
+			COUNTROWS(
+			    FILTER(
+			        CuponesCombinados, 
+			        NOT(ISBLANK(CuponesCombinados[FechaUso]))
+			    )
+			)
+			
+			
+			```
+
+	measure VariacionCuponesRedimidos = ```
+			
+			DIVIDE(
+			    [CuponesRedimidos] - CALCULATE([CuponesRedimidos], DATEADD(Calendario[Date], -1, MONTH)),
+			    CALCULATE([CuponesRedimidos], DATEADD(Calendario[Date], -1, MONTH)),
+			    0
+			)
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure CuponesRedimidos = ```
+			
+			SUMX(
+			    UNION(
+			        SELECTCOLUMNS(cuponpromo, "FechaUso", cuponpromo[fechauso]),
+			        SELECTCOLUMNS(cupon, "FechaUso", cupon[fechauso])
+			    ),
+			    1
+			)
+			
+			```
+		formatString: 0
+
 	column idcupon
 		dataType: int64
 		isNullable: false

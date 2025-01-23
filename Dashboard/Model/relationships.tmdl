@@ -181,3 +181,8 @@ relationship 5a5c9754-36d9-4fe5-a3b0-eced1cb8c166
 	fromColumn: validar.fecha
 	toColumn: LocalDateTable_2b82745f-5620-4c73-a2c5-2cdfa743b507.Date
 
+relationship b273ccc4-9685-4504-ac54-112027880300
+	joinOnDateBehavior: datePartOnly
+	fromColumn: CuponesCombinados.FechaUso
+	toColumn: LocalDateTable_a9d0d91a-a847-4850-9612-65eb6d654f84.Date
+

@@ -1,5 +1,28 @@
 ﻿table sticker
 
+	measure PromedioStickersActivos = ```
+			AVERAGEX(VALUES(sticker[fecha]), [TotalStickersActivos])
+			
+			```
+
+	measure TotalStickersActivos = ```
+			SUM(sticker[actuales])
+			
+			```
+		formatString: 0
+
+	measure VariacionStickersActivos = ```
+			
+			    DIVIDE(
+			        [TotalStickersActivos] - CALCULATE([TotalStickersActivos], DATEADD(sticker[fecha], -1, YEAR)),
+			        CALCULATE([TotalStickersActivos], DATEADD(sticker[fecha], -1, YEAR)),
+			        0
+			    )
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column idsticker
 		dataType: int64
 		isNullable: false

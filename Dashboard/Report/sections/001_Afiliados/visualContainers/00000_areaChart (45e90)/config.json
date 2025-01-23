@@ -29,14 +29,6 @@
         {
           "queryRef": "afiliacion.fecin.Variation.Date Hierarchy.Quarter",
           "active": true
-        },
-        {
-          "queryRef": "afiliacion.fecin.Variation.Date Hierarchy.Month",
-          "active": true
-        },
-        {
-          "queryRef": "afiliacion.fecin.Variation.Date Hierarchy.Day",
-          "active": true
         }
       ]
     },
@@ -65,7 +57,7 @@
             "Function": 0
           },
           "Name": "Sum(afiliacion.PromedioNuevosAfiliados)",
-          "NativeReferenceName": "Sum of PromedioNuevosAfiliados"
+          "NativeReferenceName": "Suma de PromedioNuevosAfiliados"
         },
         {
           "HierarchyLevel": {
@@ -112,52 +104,6 @@
           },
           "Name": "afiliacion.fecin.Variation.Date Hierarchy.Quarter",
           "NativeReferenceName": "fecin Quarter"
-        },
-        {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Source": "a"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "fecin"
-                  }
-                },
-                "Hierarchy": "Date Hierarchy"
-              }
-            },
-            "Level": "Month"
-          },
-          "Name": "afiliacion.fecin.Variation.Date Hierarchy.Month",
-          "NativeReferenceName": "fecin Month"
-        },
-        {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Source": "a"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "fecin"
-                  }
-                },
-                "Hierarchy": "Date Hierarchy"
-              }
-            },
-            "Level": "Day"
-          },
-          "Name": "afiliacion.fecin.Variation.Date Hierarchy.Day",
-          "NativeReferenceName": "fecin Day"
         }
       ]
     },
