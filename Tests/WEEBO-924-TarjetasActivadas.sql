@@ -2,4 +2,4 @@
 -- Gráfica: Sin chart. 
 select count(t.activo) as 'tarjetas activas' from dbo.usuario as u
 inner join dbo.tarjeta t on u.idusuario = t.fkusuario
-where t.activo = 's';
+where t.activo = 's' and u.activo = 's';

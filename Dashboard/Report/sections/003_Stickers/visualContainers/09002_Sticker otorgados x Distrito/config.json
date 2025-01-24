@@ -1,35 +1,35 @@
 {
-  "name": "ed1b0e8d61cda6dd6aa8",
+  "name": "c659bbca3435d300edbb",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "x": 266.66666666666669,
-        "y": 220,
-        "z": 4000,
-        "width": 206.66666666666669,
-        "height": 233.33333333333334,
-        "tabOrder": 7000
+        "x": 783.51570925300166,
+        "y": 220.31202818319073,
+        "z": 9002,
+        "width": 482.03609173916169,
+        "height": 233.5638795024804,
+        "tabOrder": 9002
       }
     },
     {
       "id": 1,
       "position": {
         "x": 0,
-        "y": 721,
-        "z": 4000,
+        "y": 1299,
+        "z": 1010,
         "width": 324,
-        "height": 267,
-        "tabOrder": 7000
+        "height": 327
       }
     }
   ],
   "singleVisual": {
     "visualType": "pieChart",
     "projections": {
-      "Y": [
+      "Category": [
         {
-          "queryRef": "CountNonNull(tarjeta.activo)"
+          "queryRef": "usuario.distrito",
+          "active": true
         }
       ],
       "Tooltips": [
@@ -37,10 +37,9 @@
           "queryRef": "CountNonNull(usuario.idusuario)"
         }
       ],
-      "Category": [
+      "Y": [
         {
-          "queryRef": "usuario.Genero Filtrado",
-          "active": true
+          "queryRef": "Sum(sticker.totales)"
         }
       ]
     },
@@ -48,33 +47,28 @@
       "Version": 2,
       "From": [
         {
-          "Name": "t",
-          "Entity": "tarjeta",
+          "Name": "u",
+          "Entity": "usuario",
           "Type": 0
         },
         {
-          "Name": "u",
-          "Entity": "usuario",
+          "Name": "s",
+          "Entity": "sticker",
           "Type": 0
         }
       ],
       "Select": [
         {
-          "Aggregation": {
+          "Column": {
             "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Source": "t"
-                  }
-                },
-                "Property": "activo"
+              "SourceRef": {
+                "Source": "u"
               }
             },
-            "Function": 5
+            "Property": "distrito"
           },
-          "Name": "CountNonNull(tarjeta.activo)",
-          "NativeReferenceName": "Tarj. Activas"
+          "Name": "usuario.distrito",
+          "NativeReferenceName": "Distrito"
         },
         {
           "Aggregation": {
@@ -94,16 +88,21 @@
           "NativeReferenceName": "Cant. Usuarios"
         },
         {
-          "Column": {
+          "Aggregation": {
             "Expression": {
-              "SourceRef": {
-                "Source": "u"
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s"
+                  }
+                },
+                "Property": "totales"
               }
             },
-            "Property": "Genero Filtrado"
+            "Function": 0
           },
-          "Name": "usuario.Genero Filtrado",
-          "NativeReferenceName": "Genero Filtrado"
+          "Name": "Sum(sticker.totales)",
+          "NativeReferenceName": "Sum of totales"
         }
       ],
       "OrderBy": [
@@ -115,24 +114,24 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Source": "t"
+                      "Source": "s"
                     }
                   },
-                  "Property": "activo"
+                  "Property": "totales"
                 }
               },
-              "Function": 5
+              "Function": 0
             }
           }
         }
       ]
     },
     "columnProperties": {
-      "CountNonNull(tarjeta.activo)": {
-        "displayName": "Tarj. Activas"
-      },
       "CountNonNull(usuario.idusuario)": {
         "displayName": "Cant. Usuarios"
+      },
+      "usuario.distrito": {
+        "displayName": "Distrito"
       }
     },
     "drillFilterOtherVisuals": true,
@@ -144,7 +143,7 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'BottomCenter'"
+                  "Value": "'RightCenter'"
                 }
               }
             },
@@ -161,17 +160,17 @@
       "labels": [
         {
           "properties": {
-            "labelStyle": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Data'"
-                }
-              }
-            },
             "fontSize": {
               "expr": {
                 "Literal": {
                   "Value": "14D"
+                }
+              }
+            },
+            "labelStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Data'"
                 }
               }
             }
@@ -206,7 +205,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Tarj. Activadas x Género'"
+                  "Value": "'Sticker otorgados x Distrito'"
                 }
               }
             }
