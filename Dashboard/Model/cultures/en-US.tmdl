@@ -5186,6 +5186,9 @@
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "fkusuario": {
@@ -15143,9 +15146,96 @@
 			          }
 			        }
 			      ]
+			    },
+			    "ranking_por_distrito_filtrado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Ranking_por_Distrito_Filtrado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ranking por distrito filtrado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Ranking_por_Distrito_Filtrado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "ranking_por_distrito_filtrado.distrito": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Ranking_por_Distrito_Filtrado",
+			          "ConceptualProperty": "distrito"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "distrito": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "ranking_por_distrito_filtrado.totale": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Ranking_por_Distrito_Filtrado",
+			          "ConceptualProperty": "Totales"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "totale": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "calendario_date_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario.date.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "calendario.date.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario.date.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_quarters"
+			        }
+			      ]
+			    },
 			    "calendario_date_variation_date_hierarchy_has_year": {
 			      "Binding": {
 			        "ConceptualEntity": "Calendario"
@@ -20914,6 +21004,118 @@
 			        }
 			      ]
 			    },
+			    "sticker_has_usuario": {
+			      "Binding": {
+			        "ConceptualEntity": "sticker"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sticker": {
+			          "Target": {
+			            "Entity": "sticker"
+			          }
+			        },
+			        "usuario": {
+			          "Target": {
+			            "Entity": "usuario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sticker"
+			            },
+			            "Object": {
+			              "Role": "usuario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stickers_have_usuarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "usuario"
+			            },
+			            "Object": {
+			              "Role": "sticker"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "usuarios_have_stickers"
+			        }
+			      ]
+			    },
+			    "ranking_por_distrito_filtrado_has_totale": {
+			      "Binding": {
+			        "ConceptualEntity": "Ranking_por_Distrito_Filtrado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ranking_por_distrito_filtrado": {
+			          "Target": {
+			            "Entity": "ranking_por_distrito_filtrado"
+			          }
+			        },
+			        "ranking_por_distrito_filtrado.totale": {
+			          "Target": {
+			            "Entity": "ranking_por_distrito_filtrado.totale"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ranking_por_distrito_filtrado"
+			            },
+			            "Object": {
+			              "Role": "ranking_por_distrito_filtrado.totale"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ranking_por_distrito_filtrados_have_totales"
+			        }
+			      ]
+			    },
+			    "ranking_por_distrito_filtrado_has_distrito": {
+			      "Binding": {
+			        "ConceptualEntity": "Ranking_por_Distrito_Filtrado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ranking_por_distrito_filtrado": {
+			          "Target": {
+			            "Entity": "ranking_por_distrito_filtrado"
+			          }
+			        },
+			        "ranking_por_distrito_filtrado.distrito": {
+			          "Target": {
+			            "Entity": "ranking_por_distrito_filtrado.distrito"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ranking_por_distrito_filtrado"
+			            },
+			            "Object": {
+			              "Role": "ranking_por_distrito_filtrado.distrito"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ranking_por_distrito_filtrados_have_distrito"
+			        }
+			      ]
+			    },
 			    "sticker_has_promedio_otorgados_por_tarjetas_activas": {
 			      "Binding": {
 			        "ConceptualEntity": "sticker"
@@ -24686,39 +24888,6 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "stickers_have_fktarjetas"
-			        }
-			      ]
-			    },
-			    "sticker_has_fkusuario": {
-			      "Binding": {
-			        "ConceptualEntity": "sticker"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "sticker": {
-			          "Target": {
-			            "Entity": "sticker"
-			          }
-			        },
-			        "sticker.fkusuario": {
-			          "Target": {
-			            "Entity": "sticker.fkusuario"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "sticker"
-			            },
-			            "Object": {
-			              "Role": "sticker.fkusuario"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "stickers_have_fkusuarios"
 			        }
 			      ]
 			    },
@@ -31204,39 +31373,6 @@
 			          "State": "Generated",
 			          "Weight": 0.75,
 			          "ID": "stickers_stick"
-			        }
-			      ]
-			    },
-			    "calendario_date_variation_date_hierarchy_has_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "Calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario.date.variation.date_hierarchy.quarter": {
-			          "Target": {
-			            "Entity": "calendario.date.variation.date_hierarchy.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario.date.variation.date_hierarchy.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_quarters"
 			        }
 			      ]
 			    },
