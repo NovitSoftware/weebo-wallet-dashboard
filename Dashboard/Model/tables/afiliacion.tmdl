@@ -1,5 +1,21 @@
 ﻿table afiliacion
 
+	measure VariacionNuevosAfiliados_Absoluta = ```
+			
+			CALCULATE(
+			    COUNTROWS(afiliacion),
+			    DATESBETWEEN(Calendario[Date], MIN(Calendario[Date]), MAX(Calendario[Date]))
+			) - 
+			CALCULATE(
+			    COUNTROWS(afiliacion),
+			    DATESBETWEEN(Calendario[Date], DATEADD(Calendario[Date], -1, YEAR), MIN(Calendario[Date]))
+			)
+			
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column idaf
 		dataType: int64
 		isNullable: false
@@ -79,11 +95,8 @@
 	column PromedioNuevosAfiliados = ```
 			
 			AVERAGEX(
-			    ADDCOLUMNS(
-			        VALUES(afiliacion[fecin]),
-			        "FechaAjustada", afiliacion[fecin] + 1
-			    ),
-			    CALCULATE(COUNTROWS(afiliacion))
+			    VALUES(Calendario[Date]), 
+			    COUNTROWS(FILTER(afiliacion, afiliacion[fecin] = Calendario[Date]))
 			)
 			
 			```
@@ -93,37 +106,14 @@
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column NuevosAfiliados = COUNTROWS(afiliacion)
+	column NuevosAfiliados = ```
+			COUNTROWS(afiliacion)
+			
+			```
 		formatString: 0
 		summarizeBy: sum
 
 		annotation SummarizationSetBy = Automatic
-
-	column VariacionNuevosAfiliados = ```
-			
-			DIVIDE(
-			    [NuevosAfiliados] - [NuevosAfiliadosPeriodoAnterior],
-			    [NuevosAfiliadosPeriodoAnterior],
-			    0
-			)
-			
-			```
-		summarizeBy: none
-
-		annotation SummarizationSetBy = Automatic
-
-	column NuevosAfiliadosPeriodoAnterior
-		type: calculated
-		summarizeBy: sum
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":"\nCALCULATE(\n    COUNTROWS(afiliacion),\n    DATEADD(afiliacion[fecin], -1, YEAR)\n)\n"}
-
-		annotation 277cc1b9-af89-4597-8e15-cacc25c0886b = ```
-				A circular dependency was detected: afiliacion[Column], afiliacion[PromedioNuevosAfiliados], afiliacion[Column].
-				
-				```
 
 	partition afiliacion = m
 		mode: import

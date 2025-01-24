@@ -11,8 +11,8 @@
               "Type": 0
             },
             {
-              "Name": "a1",
-              "Entity": "afiliacion",
+              "Name": "l",
+              "Entity": "LocalDateTable_9e3cdf89-5f9e-4fbd-bbce-898d4cfa7d20",
               "Type": 0
             }
           ],
@@ -26,35 +26,55 @@
                         "Source": "a"
                       }
                     },
-                    "Property": "monto"
+                    "Property": "NuevosSaldos"
                   }
                 },
                 "Function": 0
               },
-              "Name": "Sum(adqtarjeta.monto)",
-              "NativeReferenceName": "Sum of monto"
+              "Name": "Sum(adqtarjeta.NuevosSaldos)",
+              "NativeReferenceName": "Suma de NuevosSaldos"
             }
           ],
           "Where": [
             {
               "Condition": {
-                "Comparison": {
-                  "ComparisonKind": 2,
-                  "Left": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Source": "a1"
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "l"
+                          }
+                        },
+                        "Property": "Year"
+                      }
+                    },
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "l"
+                          }
+                        },
+                        "Property": "Quarter"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "2020L"
                         }
                       },
-                      "Property": "fecin"
-                    }
-                  },
-                  "Right": {
-                    "Literal": {
-                      "Value": "datetime'2019-09-09T00:00:00'"
-                    }
-                  }
+                      {
+                        "Literal": {
+                          "Value": "'Qtr 4'"
+                        }
+                      }
+                    ]
+                  ]
                 }
               }
             }

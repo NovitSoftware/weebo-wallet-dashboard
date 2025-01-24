@@ -4,11 +4,11 @@
     {
       "id": 0,
       "position": {
-        "x": 113.15076854131003,
-        "y": 548.41079244220555,
+        "x": 94.419440649938878,
+        "y": 546.63886692069877,
         "z": 9000,
-        "width": 139.72602739726028,
-        "height": 113.42465753424659,
+        "width": 159.02221583147602,
+        "height": 106.01481055431735,
         "tabOrder": 9000
       }
     }
@@ -18,7 +18,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "CountNonNull(afiliacion.VariacionNuevosAfiliados)"
+          "queryRef": "afiliacion.VariacionAfiliados"
         }
       ]
     },
@@ -33,45 +33,50 @@
       ],
       "Select": [
         {
-          "Aggregation": {
+          "Measure": {
             "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Source": "a"
-                  }
-                },
-                "Property": "VariacionNuevosAfiliados"
+              "SourceRef": {
+                "Source": "a"
               }
             },
-            "Function": 8
+            "Property": "VariacionNuevosAfiliados_Absoluta"
           },
-          "Name": "CountNonNull(afiliacion.VariacionNuevosAfiliados)",
-          "NativeReferenceName": "Variance of VariacionNuevosAfiliados"
+          "Name": "afiliacion.VariacionAfiliados",
+          "NativeReferenceName": "VariacionNuevosAfiliados_Absoluta"
         }
       ],
       "OrderBy": [
         {
           "Direction": 2,
           "Expression": {
-            "Aggregation": {
+            "Measure": {
               "Expression": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Source": "a"
-                    }
-                  },
-                  "Property": "VariacionNuevosAfiliados"
+                "SourceRef": {
+                  "Source": "a"
                 }
               },
-              "Function": 8
+              "Property": "VariacionNuevosAfiliados_Absoluta"
             }
           }
         }
       ]
     },
     "drillFilterOtherVisuals": true,
-    "hasDefaultSort": true
+    "hasDefaultSort": true,
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
   }
 }

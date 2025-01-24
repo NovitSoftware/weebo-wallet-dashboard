@@ -42,6 +42,32 @@
 			```
 		formatString: 0
 
+	measure tarjetasactivas = ```
+			
+			COUNTAX(
+			    FILTER(
+			        tarjeta, 
+			        tarjeta[activo] = "s"
+			    ), 
+			    tarjeta[idtarjeta]
+			)
+			
+			```
+		formatString: 0
+
+	measure VariacionAnterior = ```
+			
+			    DIVIDE(
+			        [tarjetasactivas] - CALCULATE([tarjetasactivas], DATEADD(Calendario[Date], -1, YEAR)),
+			        CALCULATE([tarjetasactivas], DATEADD(Calendario[Date], -1, YEAR)),
+			        0
+			    )
+			
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column idtarjeta
 		dataType: int64
 		isNullable: false
@@ -133,7 +159,18 @@
 		annotation UnderlyingDateTimeDataType = Date
 
 	column PromedioTarjetas = ```
-			AVERAGEX(VALUES(tarjeta[fecactivo]), [Conteo Activo] )
+			
+			AVERAGEX(
+			    VALUES(Tarjeta[fecactivo]), 
+			    CALCULATE(
+			        COUNTROWS(
+			            FILTER(
+			                Tarjeta, 
+			                Tarjeta[activo] = "s"
+			            )
+			        )
+			    )
+			)
 			
 			```
 		summarizeBy: sum
@@ -141,19 +178,6 @@
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column VariacionAnterior
-		type: calculated
-		summarizeBy: sum
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":"\n    DIVIDE(\n        [Conteo Activo] - CALCULATE(tarjeta[Conteo Activo], DATEADD(tarjeta[fecactivo], -1, MONTH)),\n        CALCULATE(tarjeta[Conteo Activo], DATEADD(tarjeta[fecactivo], -1, MONTH)),\n        0\n    )"}
-
-		annotation 277cc1b9-af89-4597-8e15-cacc25c0886b = ```
-				A circular dependency was detected: tarjeta[VariacionAnterior], tarjeta[PromedioTarjetas], tarjeta[VariacionAnterior].
-				
-				```
 
 	partition tarjeta = m
 		mode: import

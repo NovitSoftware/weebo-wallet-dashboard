@@ -32,7 +32,7 @@
                 "Function": 0
               },
               "Name": "Sum(afiliacion.PromedioNuevosAfiliados)",
-              "NativeReferenceName": "Sum of PromedioNuevosAfiliados"
+              "NativeReferenceName": "Suma de PromedioNuevosAfiliados"
             },
             {
               "HierarchyLevel": {
@@ -81,52 +81,6 @@
               "NativeReferenceName": "fecin Quarter"
             },
             {
-              "HierarchyLevel": {
-                "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "PropertyVariationSource": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "a"
-                          }
-                        },
-                        "Name": "Variation",
-                        "Property": "fecin"
-                      }
-                    },
-                    "Hierarchy": "Date Hierarchy"
-                  }
-                },
-                "Level": "Month"
-              },
-              "Name": "afiliacion.fecin.Variation.Date Hierarchy.Month",
-              "NativeReferenceName": "fecin Month"
-            },
-            {
-              "HierarchyLevel": {
-                "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "PropertyVariationSource": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "a"
-                          }
-                        },
-                        "Name": "Variation",
-                        "Property": "fecin"
-                      }
-                    },
-                    "Hierarchy": "Date Hierarchy"
-                  }
-                },
-                "Level": "Day"
-              },
-              "Name": "afiliacion.fecin.Variation.Date Hierarchy.Day",
-              "NativeReferenceName": "fecin Day"
-            },
-            {
               "Aggregation": {
                 "Expression": {
                   "Column": {
@@ -142,30 +96,6 @@
               },
               "Name": "Min(LocalDateTable_9e3cdf89-5f9e-4fbd-bbce-898d4cfa7d20.Date)"
             }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Comparison": {
-                  "ComparisonKind": 2,
-                  "Left": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Source": "a"
-                        }
-                      },
-                      "Property": "fecin"
-                    }
-                  },
-                  "Right": {
-                    "Literal": {
-                      "Value": "datetime'2019-09-09T00:00:00'"
-                    }
-                  }
-                }
-              }
-            }
           ]
         },
         "Binding": {
@@ -176,9 +106,7 @@
                   0,
                   1,
                   2,
-                  3,
-                  4,
-                  5
+                  3
                 ]
               }
             ]
@@ -187,12 +115,12 @@
             "DataVolume": 4,
             "Primary": {
               "BinnedLineSample": {
-                "PrimaryScalarKey": 5
+                "PrimaryScalarKey": 3
               }
             }
           },
           "SuppressedJoinPredicates": [
-            5
+            3
           ],
           "Version": 1
         },

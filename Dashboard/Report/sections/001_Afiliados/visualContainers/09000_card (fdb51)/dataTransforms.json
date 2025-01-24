@@ -1,4 +1,19 @@
 {
+  "objects": {
+    "categoryLabels": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
   "projectionOrdering": {
     "Values": [
       0
@@ -7,9 +22,24 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Varianza de VariacionNuevosAfiliados",
-        "Name": "CountNonNull(afiliacion.VariacionNuevosAfiliados)",
-        "Type": 1
+        "Restatement": "VariacionNuevosAfiliados_Absoluta",
+        "Name": "afiliacion.VariacionAfiliados",
+        "Type": 3
+      }
+    ],
+    "Filters": [
+      {
+        "type": 2,
+        "expression": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "afiliacion"
+              }
+            },
+            "Property": "VariacionNuevosAfiliados_Absoluta"
+          }
+        }
       }
     ]
   },
@@ -26,28 +56,23 @@
   ],
   "selects": [
     {
-      "displayName": "Varianza de VariacionNuevosAfiliados",
-      "queryName": "CountNonNull(afiliacion.VariacionNuevosAfiliados)",
+      "displayName": "VariacionNuevosAfiliados_Absoluta",
+      "queryName": "afiliacion.VariacionAfiliados",
       "roles": {
         "Values": true
       },
       "type": {
         "category": null,
-        "underlyingType": 259
+        "underlyingType": 260
       },
       "expr": {
-        "Aggregation": {
+        "Measure": {
           "Expression": {
-            "Column": {
-              "Expression": {
-                "SourceRef": {
-                  "Entity": "afiliacion"
-                }
-              },
-              "Property": "VariacionNuevosAfiliados"
+            "SourceRef": {
+              "Entity": "afiliacion"
             }
           },
-          "Function": 8
+          "Property": "VariacionNuevosAfiliados_Absoluta"
         }
       }
     }

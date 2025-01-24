@@ -1,5 +1,31 @@
 ﻿table tracking_stickers
 
+	measure PromedioStickersEntregados = ```
+			
+			AVERAGEX(
+			    VALUES(tracking_stickers[fecha]), 
+			    [TotalStickersEntregados]
+			)
+			```
+
+	measure TotalStickersEntregados = ```
+			SUM(tracking_stickers[stickers])
+			
+			```
+		formatString: 0
+
+	measure VariacionStickersEntregados = ```
+			
+			    DIVIDE(
+			        [TotalStickersEntregados] - CALCULATE([TotalStickersEntregados], DATEADD(Calendario[Date], -1, YEAR)),
+			        CALCULATE([TotalStickersEntregados], DATEADD(Calendario[Date], -1, YEAR)),
+			        0
+			    )
+			
+			
+			```
+		formatString: 0
+
 	column idtracking
 		dataType: int64
 		isNullable: false

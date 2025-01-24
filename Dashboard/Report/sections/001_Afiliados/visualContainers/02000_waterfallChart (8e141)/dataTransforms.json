@@ -57,9 +57,9 @@
         "Type": 2048
       },
       {
-        "Restatement": "Sum of PromedioSaldoTarjeta",
-        "Name": "Sum(adqtarjeta.PromedioSaldoTarjeta)",
-        "Type": 3
+        "Restatement": "PromedioSaldoTarjeta",
+        "Name": "adqtarjeta.PromedioSaldoTarjeta",
+        "Type": 1
       }
     ]
   },
@@ -150,28 +150,23 @@
       }
     },
     {
-      "displayName": "Sum of PromedioSaldoTarjeta",
-      "queryName": "Sum(adqtarjeta.PromedioSaldoTarjeta)",
+      "displayName": "PromedioSaldoTarjeta",
+      "queryName": "adqtarjeta.PromedioSaldoTarjeta",
       "roles": {
         "Y": true
       },
       "type": {
         "category": null,
-        "underlyingType": 260
+        "underlyingType": 259
       },
       "expr": {
-        "Aggregation": {
+        "Measure": {
           "Expression": {
-            "Column": {
-              "Expression": {
-                "SourceRef": {
-                  "Entity": "adqtarjeta"
-                }
-              },
-              "Property": "PromedioSaldoTarjeta"
+            "SourceRef": {
+              "Entity": "adqtarjeta"
             }
           },
-          "Function": 0
+          "Property": "PromedioSaldoTarjeta"
         }
       }
     }

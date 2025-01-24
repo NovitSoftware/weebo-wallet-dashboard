@@ -9,11 +9,6 @@
               "Name": "t",
               "Entity": "tarjeta",
               "Type": 0
-            },
-            {
-              "Name": "a",
-              "Entity": "afiliacion",
-              "Type": 0
             }
           ],
           "Select": [
@@ -46,30 +41,6 @@
               "Name": "tarjeta.fecactivo",
               "NativeReferenceName": "fecactivo"
             }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Comparison": {
-                  "ComparisonKind": 2,
-                  "Left": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Source": "a"
-                        }
-                      },
-                      "Property": "fecin"
-                    }
-                  },
-                  "Right": {
-                    "Literal": {
-                      "Value": "datetime'2019-09-09T00:00:00'"
-                    }
-                  }
-                }
-              }
-            }
           ]
         },
         "Binding": {
@@ -89,7 +60,63 @@
               "Sample": {}
             }
           },
-          "Version": 1
+          "Version": 1,
+          "Highlights": [
+            {
+              "Version": 2,
+              "From": [
+                {
+                  "Name": "l",
+                  "Entity": "LocalDateTable_9e3cdf89-5f9e-4fbd-bbce-898d4cfa7d20",
+                  "Type": 0
+                }
+              ],
+              "Where": [
+                {
+                  "Condition": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "l"
+                              }
+                            },
+                            "Property": "Year"
+                          }
+                        },
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "l"
+                              }
+                            },
+                            "Property": "Quarter"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "2020L"
+                            }
+                          },
+                          {
+                            "Literal": {
+                              "Value": "'Qtr 4'"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
         },
         "ExecutionMetricsKind": 1
       }

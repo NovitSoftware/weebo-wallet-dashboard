@@ -6,8 +6,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "a",
-              "Entity": "afiliacion",
+              "Name": "c",
+              "Entity": "Calendario",
               "Type": 0
             }
           ],
@@ -16,13 +16,13 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Source": "a"
+                    "Source": "c"
                   }
                 },
-                "Property": "fecin"
+                "Property": "Date"
               },
-              "Name": "afiliacion.fecin",
-              "NativeReferenceName": "fecin"
+              "Name": "Calendario.Date",
+              "NativeReferenceName": "Date"
             },
             {
               "Aggregation": {
@@ -30,15 +30,15 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Source": "a"
+                        "Source": "c"
                       }
                     },
-                    "Property": "fecin"
+                    "Property": "Date"
                   }
                 },
                 "Function": 3
               },
-              "Name": "Min(afiliacion.fecin)"
+              "Name": "Min(Calendario.Date)"
             },
             {
               "Aggregation": {
@@ -46,15 +46,15 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Source": "a"
+                        "Source": "c"
                       }
                     },
-                    "Property": "fecin"
+                    "Property": "Date"
                   }
                 },
                 "Function": 4
               },
-              "Name": "Max(afiliacion.fecin)"
+              "Name": "Max(Calendario.Date)"
             }
           ]
         },

@@ -6,7 +6,14 @@
           "startDate": {
             "expr": {
               "Literal": {
-                "Value": "datetime'2019-09-09T00:00:00'"
+                "Value": "datetime'2019-09-04T00:00:00'"
+              }
+            }
+          },
+          "endDate": {
+            "expr": {
+              "Literal": {
+                "Value": "datetime'2023-11-30T00:00:00'"
               }
             }
           },
@@ -35,44 +42,7 @@
     ],
     "general": [
       {
-        "properties": {
-          "filter": {
-            "filter": {
-              "Version": 2,
-              "From": [
-                {
-                  "Name": "a",
-                  "Entity": "afiliacion",
-                  "Type": 0
-                }
-              ],
-              "Where": [
-                {
-                  "Condition": {
-                    "Comparison": {
-                      "ComparisonKind": 2,
-                      "Left": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "a"
-                            }
-                          },
-                          "Property": "fecin"
-                        }
-                      },
-                      "Right": {
-                        "Literal": {
-                          "Value": "datetime'2019-09-09T00:00:00'"
-                        }
-                      }
-                    }
-                  }
-                }
-              ]
-            }
-          }
-        }
+        "properties": {}
       }
     ]
   },
@@ -84,7 +54,7 @@
   "projectionActiveItems": {
     "Values": [
       {
-        "queryRef": "afiliacion.fecin",
+        "queryRef": "Calendario.Date",
         "suppressConcat": false
       }
     ]
@@ -92,10 +62,10 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "fecin",
-        "Name": "afiliacion.fecin",
+        "Restatement": "Date",
+        "Name": "Calendario.Date",
         "Type": 4,
-        "Format": "D"
+        "Format": "d"
       }
     ]
   },
@@ -112,9 +82,9 @@
   ],
   "selects": [
     {
-      "displayName": "fecin",
-      "format": "D",
-      "queryName": "afiliacion.fecin",
+      "displayName": "Date",
+      "format": "d",
+      "queryName": "Calendario.Date",
       "roles": {
         "Values": true
       },
@@ -126,10 +96,10 @@
         "Column": {
           "Expression": {
             "SourceRef": {
-              "Entity": "afiliacion"
+              "Entity": "Calendario"
             }
           },
-          "Property": "fecin"
+          "Property": "Date"
         }
       },
       "aggregateSources": {
@@ -143,17 +113,17 @@
     },
     {
       "displayName": "",
-      "queryName": "Min(afiliacion.fecin)",
+      "queryName": "Min(Calendario.Date)",
       "expr": {
         "Aggregation": {
           "Expression": {
             "Column": {
               "Expression": {
                 "SourceRef": {
-                  "Entity": "afiliacion"
+                  "Entity": "Calendario"
                 }
               },
-              "Property": "fecin"
+              "Property": "Date"
             }
           },
           "Function": 3
@@ -162,17 +132,17 @@
     },
     {
       "displayName": "",
-      "queryName": "Max(afiliacion.fecin)",
+      "queryName": "Max(Calendario.Date)",
       "expr": {
         "Aggregation": {
           "Expression": {
             "Column": {
               "Expression": {
                 "SourceRef": {
-                  "Entity": "afiliacion"
+                  "Entity": "Calendario"
                 }
               },
-              "Property": "fecin"
+              "Property": "Date"
             }
           },
           "Function": 4

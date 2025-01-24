@@ -72,6 +72,21 @@
       ]
     },
     "drillFilterOtherVisuals": true,
-    "hasDefaultSort": true
+    "hasDefaultSort": true,
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
   }
 }

@@ -1,5 +1,31 @@
 ﻿table adqtarjeta
 
+	measure PromedioSaldoTarjeta = ```
+			
+			AVERAGEX(
+			    VALUES(Calendario[Date]), 
+			    CALCULATE(SUM(adqtarjeta[monto]))
+			)
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure VariacionSaldoTarjetas_Absoluta = ```
+			
+			CALCULATE(
+			    SUM(adqtarjeta[monto]),
+			    DATESBETWEEN(Calendario[Date], MIN(Calendario[Date]), MAX(Calendario[Date]))
+			) - 
+			CALCULATE(
+			    SUM(adqtarjeta[monto]),
+			    DATESBETWEEN(Calendario[Date], DATEADD(Calendario[Date], -1, YEAR), MIN(Calendario[Date]))
+			)
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column idadqtarjeta
 		dataType: int64
 		isNullable: false
@@ -81,32 +107,6 @@
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column PromedioSaldoTarjeta
-		type: calculated
-		summarizeBy: sum
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":"\nAVERAGEX(\n    ADDCOLUMNS(\n        VALUES(adqtarjeta[fecadq]),\n        \"FechaAjustada\", adqtarjeta[fecadq] + 1\n    ),\n    CALCULATE(SUM(adqtarjeta[monto]))\n)\n"}
-
-		annotation 277cc1b9-af89-4597-8e15-cacc25c0886b = ```
-				A circular dependency was detected: adqtarjeta[Column], adqtarjeta[NuevosSaldosPeriodoAnterior], adqtarjeta[Column].
-				
-				```
-
-	column VariacionSaldosTarjeta
-		type: calculated
-		summarizeBy: sum
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":"\nDIVIDE(\n    [NuevosSaldos] - [NuevosSaldosPeriodoAnterior],\n    [NuevosSaldosPeriodoAnterior],\n    0\n)\n"}
-
-		annotation 277cc1b9-af89-4597-8e15-cacc25c0886b = ```
-				A circular dependency was detected: adqtarjeta[NuevosSaldosPeriodoAnterior], adqtarjeta[Column], adqtarjeta[NuevosSaldosPeriodoAnterior].
-				
-				```
 
 	partition adqtarjeta = m
 		mode: import

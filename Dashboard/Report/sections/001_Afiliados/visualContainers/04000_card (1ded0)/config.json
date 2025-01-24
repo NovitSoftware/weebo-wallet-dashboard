@@ -18,7 +18,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "Sum(tarjeta.VariacionAnterior)"
+          "queryRef": "tarjeta.VariacionAnterior"
         }
       ]
     },
@@ -33,43 +33,38 @@
       ],
       "Select": [
         {
-          "Aggregation": {
+          "Measure": {
             "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Source": "t"
-                  }
-                },
-                "Property": "VariacionAnterior"
+              "SourceRef": {
+                "Source": "t"
               }
             },
-            "Function": 8
+            "Property": "VariacionAnterior"
           },
-          "Name": "Sum(tarjeta.VariacionAnterior)",
-          "NativeReferenceName": "Variance of VariacionAnterior"
+          "Name": "tarjeta.VariacionAnterior",
+          "NativeReferenceName": "VariacionAnterior"
         }
       ],
       "OrderBy": [
         {
           "Direction": 2,
           "Expression": {
-            "Aggregation": {
+            "Measure": {
               "Expression": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Source": "t"
-                    }
-                  },
-                  "Property": "VariacionAnterior"
+                "SourceRef": {
+                  "Source": "t"
                 }
               },
-              "Function": 8
+              "Property": "VariacionAnterior"
             }
           }
         }
       ]
+    },
+    "columnProperties": {
+      "tarjeta.VariacionAnterior": {
+        "formatString": "0.00"
+      }
     },
     "drillFilterOtherVisuals": true,
     "hasDefaultSort": true

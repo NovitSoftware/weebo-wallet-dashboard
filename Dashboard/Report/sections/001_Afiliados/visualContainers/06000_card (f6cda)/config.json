@@ -18,7 +18,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "Sum(adqtarjeta.VariacionSaldosTarjeta)"
+          "queryRef": "adqtarjeta.VariacionSaldoTarjetas"
         }
       ]
     },
@@ -33,43 +33,38 @@
       ],
       "Select": [
         {
-          "Aggregation": {
+          "Measure": {
             "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Source": "a"
-                  }
-                },
-                "Property": "VariacionSaldosTarjeta"
+              "SourceRef": {
+                "Source": "a"
               }
             },
-            "Function": 8
+            "Property": "VariacionSaldoTarjetas_Absoluta"
           },
-          "Name": "Sum(adqtarjeta.VariacionSaldosTarjeta)",
-          "NativeReferenceName": "Variance of VariacionSaldosTarjeta"
+          "Name": "adqtarjeta.VariacionSaldoTarjetas",
+          "NativeReferenceName": "VariacionSaldoTarjetas"
         }
       ],
       "OrderBy": [
         {
           "Direction": 2,
           "Expression": {
-            "Aggregation": {
+            "Measure": {
               "Expression": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Source": "a"
-                    }
-                  },
-                  "Property": "VariacionSaldosTarjeta"
+                "SourceRef": {
+                  "Source": "a"
                 }
               },
-              "Function": 8
+              "Property": "VariacionSaldoTarjetas_Absoluta"
             }
           }
         }
       ]
+    },
+    "columnProperties": {
+      "adqtarjeta.VariacionSaldoTarjetas": {
+        "formatString": "0.00"
+      }
     },
     "drillFilterOtherVisuals": true,
     "hasDefaultSort": true
