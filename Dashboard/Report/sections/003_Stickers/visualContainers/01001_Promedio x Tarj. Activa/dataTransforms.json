@@ -1,0 +1,66 @@
+{
+  "objects": {},
+  "projectionOrdering": {
+    "Values": [
+      0
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": ".",
+        "Name": "sticker.PromedioOtorgadosPorTarjetasActivas",
+        "Type": 1
+      }
+    ],
+    "Filters": [
+      {
+        "type": 0,
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "tarjeta"
+              }
+            },
+            "Property": "activo"
+          }
+        }
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": ".",
+      "queryName": "sticker.PromedioOtorgadosPorTarjetasActivas",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "sticker"
+            }
+          },
+          "Property": "PromedioOtorgadosPorTarjetasActivas"
+        }
+      }
+    }
+  ]
+}

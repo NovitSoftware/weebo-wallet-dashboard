@@ -23,6 +23,17 @@
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure PromedioOtorgadosPorTarjetasActivas = ```
+			
+			CALCULATE(
+			    AVERAGE('sticker'[totales]),
+			    'tarjeta'[activo] = "s"
+			)
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column idsticker
 		dataType: int64
 		isNullable: false

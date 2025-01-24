@@ -1,0 +1,143 @@
+{
+  "name": "77456a4562a335d6c4ae",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 156.63157894736841,
+        "y": 99.368421052631575,
+        "z": 1001,
+        "width": 256,
+        "height": 96,
+        "tabOrder": 1001
+      }
+    },
+    {
+      "id": 1,
+      "position": {
+        "x": 125,
+        "y": 98,
+        "z": 1001,
+        "width": 199,
+        "height": 120,
+        "tabOrder": 1001
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "card",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "sticker.PromedioOtorgadosPorTarjetasActivas"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "s",
+          "Entity": "sticker",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "PromedioOtorgadosPorTarjetasActivas"
+          },
+          "Name": "sticker.PromedioOtorgadosPorTarjetasActivas",
+          "NativeReferenceName": "."
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "s"
+                }
+              },
+              "Property": "PromedioOtorgadosPorTarjetasActivas"
+            }
+          }
+        }
+      ]
+    },
+    "columnProperties": {
+      "CountNonNull(tarjeta.activo)": {
+        "displayName": "."
+      },
+      "sticker.PromedioOtorgadosPorTarjetasActivas": {
+        "displayName": "."
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {},
+    "vcObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Promedio x Tarj. Activa'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "18D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
