@@ -71,8 +71,7 @@
           },
           "IncludeEmptyGroups": true,
           "Version": 1
-        },
-        "ExecutionMetricsKind": 1
+        }
       }
     }
   ]

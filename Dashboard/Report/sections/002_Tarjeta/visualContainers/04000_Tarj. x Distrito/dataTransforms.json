@@ -1,0 +1,121 @@
+{
+  "objects": {
+    "card": [
+      {
+        "properties": {
+          "outlineStyle": {
+            "expr": {
+              "Literal": {
+                "Value": "4D"
+              }
+            }
+          },
+          "cardPadding": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "categoryLabels": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "projectionOrdering": {
+    "Values": [
+      0,
+      1
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Distrito",
+        "Name": "usuario.distrito",
+        "Type": 2048
+      },
+      {
+        "Restatement": "Tarj. Activas",
+        "Name": "tarjeta.Top 3 Distrito",
+        "Type": 3,
+        "Format": "0"
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        },
+        {
+          "Name": "Values",
+          "Projection": 1,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Distrito",
+      "queryName": "usuario.distrito",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "usuario"
+            }
+          },
+          "Property": "distrito"
+        }
+      }
+    },
+    {
+      "displayName": "Tarj. Activas",
+      "format": "0",
+      "queryName": "tarjeta.Top 3 Distrito",
+      "roles": {
+        "Values": true
+      },
+      "sort": 2,
+      "sortOrder": 0,
+      "type": {
+        "category": null,
+        "underlyingType": 260
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "tarjeta"
+            }
+          },
+          "Property": "Top 3 Distrito"
+        }
+      }
+    }
+  ]
+}

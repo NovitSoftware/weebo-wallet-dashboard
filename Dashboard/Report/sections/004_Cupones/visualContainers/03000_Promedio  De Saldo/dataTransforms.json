@@ -1,0 +1,182 @@
+{
+  "objects": {
+    "valueAxis": [
+      {
+        "properties": {
+          "totalsEnabled": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          },
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "showAxisTitle": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "legend": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "labels": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "categoryAxis": [
+      {
+        "properties": {
+          "showAxisTitle": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "sentimentColors": [
+      {
+        "properties": {
+          "increaseFill": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 2,
+                    "Percent": 0.2
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "projectionOrdering": {
+    "Category": [
+      0
+    ],
+    "Y": [
+      1
+    ]
+  },
+  "projectionActiveItems": {
+    "Category": [
+      {
+        "queryRef": "cupon.fechauso",
+        "suppressConcat": false
+      }
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "fechauso",
+        "Name": "cupon.fechauso",
+        "Type": 4,
+        "Format": "D"
+      },
+      {
+        "Restatement": "PromedioCuponesRedimidos",
+        "Name": "cupon.PromedioCuponesRedimidos",
+        "Type": 1
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Category",
+          "Projection": 0,
+          "isActive": true
+        },
+        {
+          "Name": "Y",
+          "Projection": 1,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "fechauso",
+      "format": "D",
+      "queryName": "cupon.fechauso",
+      "roles": {
+        "Category": true
+      },
+      "sort": 1,
+      "sortOrder": 0,
+      "type": {
+        "category": null,
+        "underlyingType": 519
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "cupon"
+            }
+          },
+          "Property": "fechauso"
+        }
+      }
+    },
+    {
+      "displayName": "PromedioCuponesRedimidos",
+      "queryName": "cupon.PromedioCuponesRedimidos",
+      "roles": {
+        "Y": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "cupon"
+            }
+          },
+          "Property": "PromedioCuponesRedimidos"
+        }
+      }
+    }
+  ]
+}

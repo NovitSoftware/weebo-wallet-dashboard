@@ -26,21 +26,6 @@
         "Name": "afiliacion.VariacionAfiliados",
         "Type": 3
       }
-    ],
-    "Filters": [
-      {
-        "type": 2,
-        "expression": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "afiliacion"
-              }
-            },
-            "Property": "VariacionNuevosAfiliados_Absoluta"
-          }
-        }
-      }
     ]
   },
   "visualElements": [

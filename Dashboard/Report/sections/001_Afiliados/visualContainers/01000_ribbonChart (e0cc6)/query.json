@@ -60,65 +60,8 @@
               "Sample": {}
             }
           },
-          "Version": 1,
-          "Highlights": [
-            {
-              "Version": 2,
-              "From": [
-                {
-                  "Name": "l",
-                  "Entity": "LocalDateTable_9e3cdf89-5f9e-4fbd-bbce-898d4cfa7d20",
-                  "Type": 0
-                }
-              ],
-              "Where": [
-                {
-                  "Condition": {
-                    "In": {
-                      "Expressions": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "l"
-                              }
-                            },
-                            "Property": "Year"
-                          }
-                        },
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "l"
-                              }
-                            },
-                            "Property": "Quarter"
-                          }
-                        }
-                      ],
-                      "Values": [
-                        [
-                          {
-                            "Literal": {
-                              "Value": "2020L"
-                            }
-                          },
-                          {
-                            "Literal": {
-                              "Value": "'Qtr 4'"
-                            }
-                          }
-                        ]
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        "ExecutionMetricsKind": 1
+          "Version": 1
+        }
       }
     }
   ]
