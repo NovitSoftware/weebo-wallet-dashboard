@@ -1,26 +1,26 @@
 {
-  "name": "0b6e44e76701e556a980",
+  "name": "9291b59348e81aa9c826",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "x": 727.578947368421,
-        "y": 97.6842105263158,
-        "z": 1004,
-        "width": 158.31578947368422,
+        "x": 427.78947368421052,
+        "y": 101.05263157894737,
+        "z": 3000,
+        "width": 143.15789473684211,
         "height": 72.421052631578945,
-        "tabOrder": 1005
+        "tabOrder": 3000
       }
     },
     {
       "id": 1,
       "position": {
         "x": 3.0517578068156581E-05,
-        "y": 326.00003051757813,
-        "z": 1004,
+        "y": 238.00003051757813,
+        "z": 1002,
         "width": 158,
-        "height": 72.276595744680847,
-        "tabOrder": 1005
+        "height": 72,
+        "tabOrder": 1002
       }
     }
   ],
@@ -29,7 +29,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "usuario.distrito",
+          "queryRef": "usuario.RangoEdad",
           "active": true
         }
       ]
@@ -51,20 +51,33 @@
                 "Source": "u"
               }
             },
-            "Property": "distrito"
+            "Property": "RangoEdad"
           },
-          "Name": "usuario.distrito",
-          "NativeReferenceName": "Distrito"
+          "Name": "usuario.RangoEdad",
+          "NativeReferenceName": "RangoEdad"
         }
       ]
     },
     "columnProperties": {
-      "usuario.distrito": {
-        "displayName": "Distrito"
+      "usuario.RangoEdad": {
+        "displayName": "Edad"
       }
     },
     "drillFilterOtherVisuals": true,
     "objects": {
+      "general": [
+        {
+          "properties": {
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
       "data": [
         {
           "properties": {
@@ -81,7 +94,7 @@
       "selection": [
         {
           "properties": {
-            "selectAllCheckboxEnabled": {
+            "strictSingleSelect": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -96,11 +109,6 @@
               }
             }
           }
-        }
-      ],
-      "general": [
-        {
-          "properties": {}
         }
       ]
     },

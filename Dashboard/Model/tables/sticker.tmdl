@@ -48,7 +48,7 @@
 		dataType: int64
 		formatString: 0
 		sourceProviderType: int
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: fkusuario
 
 		annotation SummarizationSetBy = Automatic
