@@ -1,0 +1,38 @@
+﻿table Ranking_por_Distrito_Filtrado
+
+	column distrito
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: usuario[distrito]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Totales
+		formatString: 0
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Totales]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Ranking_por_Distrito_Filtrado = calculated
+		mode: import
+		source = ```
+				
+				TOPN(
+				    3,
+				    FILTER(
+				        SUMMARIZE(
+				            'sticker',
+				            'usuario'[distrito],
+				            "Totales", SUM('sticker'[totales])
+				        ),
+				        NOT(ISBLANK('usuario'[distrito]))
+				    ),
+				    [Totales], DESC
+				)
+				
+				```
+
+	annotation PBI_Id = 2e07d5693ce74ac3848f0d8e6f303ceb
+

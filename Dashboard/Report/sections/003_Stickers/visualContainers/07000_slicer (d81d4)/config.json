@@ -1,26 +1,26 @@
 {
-  "name": "47aec5cdca8d3e6eda20",
+  "name": "d81d4397a8d240e376dd",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "x": 570.9473684210526,
-        "y": 97.6842105263158,
-        "z": 1003,
-        "width": 156.63157894736841,
-        "height": 72.421052631578945,
-        "tabOrder": 1004
+        "x": 885.89473684210532,
+        "y": 99.368421052631575,
+        "z": 6000,
+        "width": 163.36842105263159,
+        "height": 74.10526315789474,
+        "tabOrder": 7000
       }
     },
     {
       "id": 1,
       "position": {
         "x": 166.00003051757807,
-        "y": 238.00003051757813,
-        "z": 1003,
+        "y": 326.00003051757813,
+        "z": 1005,
         "width": 158,
-        "height": 72,
-        "tabOrder": 1004
+        "height": 71.6701030927835,
+        "tabOrder": 1006
       }
     }
   ],
@@ -29,7 +29,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "usuario.Genero Filtrado",
+          "queryRef": "usuario.Estado Usuario",
           "active": true
         }
       ]
@@ -51,20 +51,19 @@
                 "Source": "u"
               }
             },
-            "Property": "Genero Filtrado"
+            "Property": "Estado Usuario"
           },
-          "Name": "usuario.Genero Filtrado",
-          "NativeReferenceName": "Genero"
+          "Name": "usuario.Estado Usuario",
+          "NativeReferenceName": "Estado"
         }
       ]
     },
     "columnProperties": {
-      "usuario.genero": {
-        "displayName": "Genero",
-        "formatString": null
+      "usuario.activo": {
+        "displayName": "Estado"
       },
-      "usuario.Genero Filtrado": {
-        "displayName": "Genero"
+      "usuario.Estado Usuario": {
+        "displayName": "Estado"
       }
     },
     "drillFilterOtherVisuals": true,
@@ -87,13 +86,13 @@
           "properties": {}
         }
       ],
-      "items": [
+      "header": [
         {
           "properties": {
-            "outlineStyle": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "true"
                 }
               }
             }
@@ -103,6 +102,13 @@
       "selection": [
         {
           "properties": {
+            "strictSingleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
             "singleSelect": {
               "expr": {
                 "Literal": {
@@ -115,6 +121,19 @@
       ]
     },
     "vcObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Condensed'"
+                }
+              }
+            }
+          }
+        }
+      ],
       "background": [
         {
           "properties": {
@@ -142,6 +161,19 @@
               "expr": {
                 "Literal": {
                   "Value": "15D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
                 }
               }
             }

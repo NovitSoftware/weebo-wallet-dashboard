@@ -85,6 +85,7 @@ ref table LocalDateTable_f5deaa01-6cfe-458c-b390-0874c1bde1fe
 ref table LocalDateTable_2b82745f-5620-4c73-a2c5-2cdfa743b507
 ref table CuponesCombinados
 ref table LocalDateTable_a9d0d91a-a847-4850-9612-65eb6d654f84
+ref table Ranking_por_Distrito_Filtrado
 
 ref cultureInfo en-US
 

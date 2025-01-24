@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 283.5679012345679,
+        "x": 8956.7037037037044,
         "y": 0
       },
       "nodes": [
@@ -442,6 +442,18 @@
             "y": 50
           },
           "nodeIndex": "CuponesCombinados",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 9656,
+            "y": 50
+          },
+          "nodeIndex": "Ranking_por_Distrito_Filtrado",
           "size": {
             "height": 200,
             "width": 234
