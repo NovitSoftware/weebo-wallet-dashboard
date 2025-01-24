@@ -1,0 +1,116 @@
+{
+  "Commands": [
+    {
+      "SemanticQueryDataShapeCommand": {
+        "Query": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "s",
+              "Entity": "sticker",
+              "Type": 0
+            },
+            {
+              "Name": "a",
+              "Entity": "afiliacion",
+              "Type": 0
+            }
+          ],
+          "Select": [
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s"
+                  }
+                },
+                "Property": "PromedioStickersActivos"
+              },
+              "Name": "sticker.PromedioStickersActivos",
+              "NativeReferenceName": "PromedioStickersActivos"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s"
+                  }
+                },
+                "Property": "fecha"
+              },
+              "Name": "sticker.fecha",
+              "NativeReferenceName": "fecha"
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "And": {
+                  "Left": {
+                    "Comparison": {
+                      "ComparisonKind": 2,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "a"
+                            }
+                          },
+                          "Property": "fecin"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "datetime'2019-09-09T00:00:00'"
+                        }
+                      }
+                    }
+                  },
+                  "Right": {
+                    "Comparison": {
+                      "ComparisonKind": 3,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "a"
+                            }
+                          },
+                          "Property": "fecin"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "datetime'2023-12-01T00:00:00'"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "Binding": {
+          "Primary": {
+            "Groupings": [
+              {
+                "Projections": [
+                  0,
+                  1
+                ]
+              }
+            ]
+          },
+          "DataReduction": {
+            "DataVolume": 4,
+            "Primary": {
+              "Sample": {}
+            }
+          },
+          "Version": 1
+        }
+      }
+    }
+  ]
+}

@@ -11,6 +11,17 @@
         "height": 71.228700841181961,
         "tabOrder": 9000
       }
+    },
+    {
+      "id": 1,
+      "position": {
+        "x": 166,
+        "y": 218,
+        "z": 8000,
+        "width": 158,
+        "height": 60,
+        "tabOrder": 9000
+      }
     }
   ],
   "singleVisual": {
@@ -43,7 +54,7 @@
             "Property": "Genero Filtrado"
           },
           "Name": "usuario.Genero Filtrado",
-          "NativeReferenceName": "Genero Filtrado"
+          "NativeReferenceName": "Genero"
         }
       ]
     },
@@ -51,6 +62,9 @@
       "usuario.genero": {
         "displayName": "Genero",
         "formatString": null
+      },
+      "usuario.Genero Filtrado": {
+        "displayName": "Genero"
       }
     },
     "drillFilterOtherVisuals": true,

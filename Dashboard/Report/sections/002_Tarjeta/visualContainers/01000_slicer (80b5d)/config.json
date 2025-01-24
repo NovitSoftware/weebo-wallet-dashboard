@@ -11,6 +11,17 @@
         "height": 71.228700841181961,
         "tabOrder": 1000
       }
+    },
+    {
+      "id": 1,
+      "position": {
+        "x": 0,
+        "y": 218,
+        "z": 7000,
+        "width": 158,
+        "height": 60,
+        "tabOrder": 1000
+      }
     }
   ],
   "singleVisual": {
