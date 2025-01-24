@@ -1,0 +1,247 @@
+{
+  "objects": {
+    "data": [
+      {
+        "properties": {
+          "startDate": {
+            "expr": {
+              "Literal": {
+                "Value": "datetime'2019-09-04T00:00:00'"
+              }
+            }
+          },
+          "endDate": {
+            "expr": {
+              "Literal": {
+                "Value": "datetime'2023-11-30T00:00:00'"
+              }
+            }
+          },
+          "mode": {
+            "expr": {
+              "Literal": {
+                "Value": "'Between'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "general": [
+      {
+        "properties": {
+          "filter": {
+            "filter": {
+              "Version": 2,
+              "From": [
+                {
+                  "Name": "t",
+                  "Entity": "tarjeta",
+                  "Type": 0
+                }
+              ],
+              "Where": [
+                {
+                  "Condition": {
+                    "And": {
+                      "Left": {
+                        "Comparison": {
+                          "ComparisonKind": 2,
+                          "Left": {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "t"
+                                }
+                              },
+                              "Property": "fecactivo"
+                            }
+                          },
+                          "Right": {
+                            "Literal": {
+                              "Value": "datetime'2019-09-04T00:00:00'"
+                            }
+                          }
+                        }
+                      },
+                      "Right": {
+                        "Comparison": {
+                          "ComparisonKind": 3,
+                          "Left": {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "t"
+                                }
+                              },
+                              "Property": "fecactivo"
+                            }
+                          },
+                          "Right": {
+                            "Literal": {
+                              "Value": "datetime'2023-12-01T00:00:00'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "responsive": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "header": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "slider": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "date": [
+      {
+        "properties": {
+          "textSize": {
+            "expr": {
+              "Literal": {
+                "Value": "9D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "projectionOrdering": {
+    "Values": [
+      0
+    ]
+  },
+  "projectionActiveItems": {
+    "Values": [
+      {
+        "queryRef": "tarjeta.fecactivo",
+        "suppressConcat": false
+      }
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Fechas",
+        "Name": "tarjeta.fecactivo",
+        "Type": 4,
+        "Format": "d"
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": true
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Fechas",
+      "format": "d",
+      "queryName": "tarjeta.fecactivo",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 519
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "tarjeta"
+            }
+          },
+          "Property": "fecactivo"
+        }
+      },
+      "aggregateSources": {
+        "min": {
+          "index": 1
+        },
+        "max": {
+          "index": 2
+        }
+      }
+    },
+    {
+      "displayName": "",
+      "queryName": "Min(tarjeta.fecactivo)",
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "tarjeta"
+                }
+              },
+              "Property": "fecactivo"
+            }
+          },
+          "Function": 3
+        }
+      }
+    },
+    {
+      "displayName": "",
+      "queryName": "Max(tarjeta.fecactivo)",
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "tarjeta"
+                }
+              },
+              "Property": "fecactivo"
+            }
+          },
+          "Function": 4
+        }
+      }
+    }
+  ]
+}

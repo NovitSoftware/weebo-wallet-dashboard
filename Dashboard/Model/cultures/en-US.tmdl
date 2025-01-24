@@ -15110,42 +15110,42 @@
 			        }
 			      ],
 			      "SemanticType": "Time"
+			    },
+			    "sticker.promedio_otorgados_por_tarjetas_activas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "sticker",
+			          "ConceptualProperty": "PromedioOtorgadosPorTarjetasActivas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "promedio otorgados por tarjetas activas": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PromedioOtorgadosPorTarjetasActivas": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          ".": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "calendario_date_variation_date_hierarchy_has_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "Calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario.date.variation.date_hierarchy.quarter": {
-			          "Target": {
-			            "Entity": "calendario.date.variation.date_hierarchy.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario.date.variation.date_hierarchy.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_quarters"
-			        }
-			      ]
-			    },
 			    "calendario_date_variation_date_hierarchy_has_year": {
 			      "Binding": {
 			        "ConceptualEntity": "Calendario"
@@ -20911,6 +20911,39 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "usuarios_have_tarjetas"
+			        }
+			      ]
+			    },
+			    "sticker_has_promedio_otorgados_por_tarjetas_activas": {
+			      "Binding": {
+			        "ConceptualEntity": "sticker"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sticker": {
+			          "Target": {
+			            "Entity": "sticker"
+			          }
+			        },
+			        "sticker.promedio_otorgados_por_tarjetas_activas": {
+			          "Target": {
+			            "Entity": "sticker.promedio_otorgados_por_tarjetas_activas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sticker"
+			            },
+			            "Object": {
+			              "Role": "sticker.promedio_otorgados_por_tarjetas_activas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stickers_have_promedio_otorgados_por_tarjetas_activas"
 			        }
 			      ]
 			    },
@@ -31171,6 +31204,39 @@
 			          "State": "Generated",
 			          "Weight": 0.75,
 			          "ID": "stickers_stick"
+			        }
+			      ]
+			    },
+			    "calendario_date_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario.date.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "calendario.date.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario.date.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_quarters"
 			        }
 			      ]
 			    },
