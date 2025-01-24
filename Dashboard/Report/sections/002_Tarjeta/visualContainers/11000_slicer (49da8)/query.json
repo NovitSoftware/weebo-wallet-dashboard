@@ -27,7 +27,7 @@
                 "Property": "Estado Usuario"
               },
               "Name": "usuario.Estado Usuario",
-              "NativeReferenceName": "Estado Usuario"
+              "NativeReferenceName": "Estado"
             }
           ],
           "Where": [
@@ -97,8 +97,7 @@
           },
           "IncludeEmptyGroups": true,
           "Version": 1
-        },
-        "ExecutionMetricsKind": 1
+        }
       }
     }
   ]

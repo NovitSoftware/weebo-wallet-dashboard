@@ -27,7 +27,7 @@
                 "Property": "Genero Filtrado"
               },
               "Name": "usuario.Genero Filtrado",
-              "NativeReferenceName": "Genero Filtrado"
+              "NativeReferenceName": "Genero"
             }
           ],
           "Where": [
@@ -97,8 +97,7 @@
           },
           "IncludeEmptyGroups": true,
           "Version": 1
-        },
-        "ExecutionMetricsKind": 1
+        }
       }
     }
   ]

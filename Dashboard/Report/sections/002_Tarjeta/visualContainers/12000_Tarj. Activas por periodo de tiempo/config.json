@@ -11,6 +11,17 @@
         "height": 234.86146095717882,
         "tabOrder": 12000
       }
+    },
+    {
+      "id": 1,
+      "position": {
+        "x": 0,
+        "y": 1638,
+        "z": 12000,
+        "width": 324,
+        "height": 232,
+        "tabOrder": 12000
+      }
     }
   ],
   "singleVisual": {
@@ -131,6 +142,21 @@
     },
     "drillFilterOtherVisuals": true,
     "hasDefaultSort": true,
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "vcObjects": {
       "title": [
         {

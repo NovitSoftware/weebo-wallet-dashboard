@@ -1,4 +1,5 @@
 {
+  "objects": {},
   "projectionOrdering": {
     "Values": [
       0
@@ -7,9 +8,10 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Variance of VariacionNuevosAfiliados",
-        "Name": "CountNonNull(afiliacion.VariacionNuevosAfiliados)",
-        "Type": 1
+        "Restatement": ".",
+        "Name": "Sum(sticker.totales)",
+        "Type": 3,
+        "Format": "0"
       }
     ]
   },
@@ -26,14 +28,15 @@
   ],
   "selects": [
     {
-      "displayName": "Variance of VariacionNuevosAfiliados",
-      "queryName": "CountNonNull(afiliacion.VariacionNuevosAfiliados)",
+      "displayName": ".",
+      "format": "0",
+      "queryName": "Sum(sticker.totales)",
       "roles": {
         "Values": true
       },
       "type": {
         "category": null,
-        "underlyingType": 259
+        "underlyingType": 260
       },
       "expr": {
         "Aggregation": {
@@ -41,13 +44,13 @@
             "Column": {
               "Expression": {
                 "SourceRef": {
-                  "Entity": "afiliacion"
+                  "Entity": "sticker"
                 }
               },
-              "Property": "VariacionNuevosAfiliados"
+              "Property": "totales"
             }
           },
-          "Function": 8
+          "Function": 0
         }
       }
     }

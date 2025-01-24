@@ -18,7 +18,7 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Suma de PromedioTarjetas",
+        "Restatement": "Sum of PromedioTarjetas",
         "Name": "Sum(tarjeta.PromedioTarjetas)",
         "Type": 1
       },
@@ -48,7 +48,7 @@
   ],
   "selects": [
     {
-      "displayName": "Suma de PromedioTarjetas",
+      "displayName": "Sum of PromedioTarjetas",
       "queryName": "Sum(tarjeta.PromedioTarjetas)",
       "roles": {
         "Y": true

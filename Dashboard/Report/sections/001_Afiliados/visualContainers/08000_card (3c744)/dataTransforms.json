@@ -7,7 +7,7 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Recuento de NuevosAfiliados",
+        "Restatement": "Count of NuevosAfiliados",
         "Name": "Sum(afiliacion.NuevosAfiliados)",
         "Type": 3
       }
@@ -26,7 +26,7 @@
   ],
   "selects": [
     {
-      "displayName": "Recuento de NuevosAfiliados",
+      "displayName": "Count of NuevosAfiliados",
       "queryName": "Sum(afiliacion.NuevosAfiliados)",
       "roles": {
         "Values": true

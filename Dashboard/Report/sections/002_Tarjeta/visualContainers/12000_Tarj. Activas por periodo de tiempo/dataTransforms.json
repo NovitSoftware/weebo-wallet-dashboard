@@ -1,4 +1,19 @@
 {
+  "objects": {
+    "categoryAxis": [
+      {
+        "properties": {
+          "axisType": {
+            "expr": {
+              "Literal": {
+                "Value": "'Categorical'"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
   "projectionOrdering": {
     "Y": [
       0
@@ -90,6 +105,8 @@
       "roles": {
         "Y": true
       },
+      "sort": 2,
+      "sortOrder": 0,
       "type": {
         "category": null,
         "underlyingType": 260

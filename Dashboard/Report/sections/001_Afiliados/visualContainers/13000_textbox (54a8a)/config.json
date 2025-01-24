@@ -1,0 +1,42 @@
+{
+  "name": "54a8a6e50920b14e1a2b",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 495.28794305845133,
+        "y": 13.251851319289669,
+        "z": 13000,
+        "width": 286.57128477963909,
+        "height": 74.541663671004386,
+        "tabOrder": 13000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "textbox",
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Dashboard",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "32pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

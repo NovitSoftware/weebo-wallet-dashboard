@@ -67,7 +67,7 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Suma de PromedioNuevosAfiliados",
+        "Restatement": "Sum of PromedioNuevosAfiliados",
         "Name": "Sum(afiliacion.PromedioNuevosAfiliados)",
         "Type": 1
       },
@@ -126,7 +126,7 @@
   ],
   "selects": [
     {
-      "displayName": "Suma de PromedioNuevosAfiliados",
+      "displayName": "Sum of PromedioNuevosAfiliados",
       "queryName": "Sum(afiliacion.PromedioNuevosAfiliados)",
       "roles": {
         "Y": true
@@ -280,7 +280,7 @@
       }
     },
     {
-      "displayName": "Primera fecha: Date",
+      "displayName": "Earliest Date",
       "queryName": "Min(LocalDateTable_9e3cdf89-5f9e-4fbd-bbce-898d4cfa7d20.Date)",
       "roles": {},
       "type": {

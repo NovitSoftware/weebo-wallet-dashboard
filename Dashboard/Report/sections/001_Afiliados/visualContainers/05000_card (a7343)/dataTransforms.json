@@ -7,7 +7,7 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Suma de monto",
+        "Restatement": "Sum of monto",
         "Name": "Sum(adqtarjeta.monto)",
         "Type": 1
       }
@@ -26,7 +26,7 @@
   ],
   "selects": [
     {
-      "displayName": "Suma de monto",
+      "displayName": "Sum of monto",
       "queryName": "Sum(adqtarjeta.monto)",
       "roles": {
         "Values": true

@@ -11,6 +11,17 @@
         "height": 95,
         "tabOrder": 3000
       }
+    },
+    {
+      "id": 1,
+      "position": {
+        "x": 166,
+        "y": 93,
+        "z": 0,
+        "width": 158,
+        "height": 95,
+        "tabOrder": 3000
+      }
     }
   ],
   "singleVisual": {

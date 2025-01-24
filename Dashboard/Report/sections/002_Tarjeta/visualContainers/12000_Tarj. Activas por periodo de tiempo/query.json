@@ -125,6 +125,21 @@
                 }
               }
             }
+          ],
+          "OrderBy": [
+            {
+              "Direction": 2,
+              "Expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "c"
+                    }
+                  },
+                  "Property": "Conteo Activos"
+                }
+              }
+            }
           ]
         },
         "Binding": {
@@ -141,12 +156,13 @@
           "DataReduction": {
             "DataVolume": 4,
             "Primary": {
-              "Sample": {}
+              "Window": {
+                "Count": 1000
+              }
             }
           },
           "Version": 1
-        },
-        "ExecutionMetricsKind": 1
+        }
       }
     }
   ]
