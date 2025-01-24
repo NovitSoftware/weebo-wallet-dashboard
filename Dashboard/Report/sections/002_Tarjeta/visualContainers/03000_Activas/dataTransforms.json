@@ -8,10 +8,9 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Conteo Activo",
-        "Name": "tarjeta.Conteo Activo",
-        "Type": 3,
-        "Format": "0"
+        "Restatement": "Count of tarjetas_activadas",
+        "Name": "CountNonNull(tarjeta.tarjetas_activadas)",
+        "Type": 3
       }
     ],
     "Filters": [
@@ -43,9 +42,8 @@
   ],
   "selects": [
     {
-      "displayName": "Conteo Activo",
-      "format": "0",
-      "queryName": "tarjeta.Conteo Activo",
+      "displayName": "Count of tarjetas_activadas",
+      "queryName": "CountNonNull(tarjeta.tarjetas_activadas)",
       "roles": {
         "Values": true
       },
@@ -54,13 +52,18 @@
         "underlyingType": 260
       },
       "expr": {
-        "Measure": {
+        "Aggregation": {
           "Expression": {
-            "SourceRef": {
-              "Entity": "tarjeta"
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "tarjeta"
+                }
+              },
+              "Property": "tarjetas_activadas"
             }
           },
-          "Property": "Conteo Activo"
+          "Function": 5
         }
       }
     }

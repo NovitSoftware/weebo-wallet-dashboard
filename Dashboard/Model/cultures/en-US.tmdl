@@ -12818,22 +12818,6 @@
 			        }
 			      ]
 			    },
-			    "tarjeta.conteo_activo": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "tarjeta",
-			          "ConceptualProperty": "Conteo Activo"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "conteo activo": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "tarjeta.tarjetasactivas": {
 			      "Definition": {
 			        "Binding": {
@@ -15197,6 +15181,36 @@
 			        {
 			          "totale": {
 			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tarjeta.tarjetas_activada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "tarjeta",
+			          "ConceptualProperty": "tarjetas_activadas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tarjetas activada": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tarjeta activada": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "tarjetas_activadas": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
 			          }
 			        }
 			      ]
@@ -21050,6 +21064,39 @@
 			        }
 			      ]
 			    },
+			    "tarjeta_has_tarjetas_activada": {
+			      "Binding": {
+			        "ConceptualEntity": "tarjeta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tarjeta": {
+			          "Target": {
+			            "Entity": "tarjeta"
+			          }
+			        },
+			        "tarjeta.tarjetas_activada": {
+			          "Target": {
+			            "Entity": "tarjeta.tarjetas_activada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tarjeta"
+			            },
+			            "Object": {
+			              "Role": "tarjeta.tarjetas_activada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tarjetas_have_tarjetas_activadas"
+			        }
+			      ]
+			    },
 			    "ranking_por_distrito_filtrado_has_totale": {
 			      "Binding": {
 			        "ConceptualEntity": "Ranking_por_Distrito_Filtrado"
@@ -21575,39 +21622,6 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "tarjetas_have_tarjetasactivas"
-			        }
-			      ]
-			    },
-			    "tarjeta_has_conteo_activo": {
-			      "Binding": {
-			        "ConceptualEntity": "tarjeta"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "tarjeta": {
-			          "Target": {
-			            "Entity": "tarjeta"
-			          }
-			        },
-			        "tarjeta.conteo_activo": {
-			          "Target": {
-			            "Entity": "tarjeta.conteo_activo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tarjeta"
-			            },
-			            "Object": {
-			              "Role": "tarjeta.conteo_activo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "tarjetas_have_conteo_activo"
 			        }
 			      ]
 			    },

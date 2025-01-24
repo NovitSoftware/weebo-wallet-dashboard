@@ -13,16 +13,21 @@
           ],
           "Select": [
             {
-              "Measure": {
+              "Aggregation": {
                 "Expression": {
-                  "SourceRef": {
-                    "Source": "t"
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "t"
+                      }
+                    },
+                    "Property": "tarjetas_activadas"
                   }
                 },
-                "Property": "Conteo Activo"
+                "Function": 5
               },
-              "Name": "tarjeta.Conteo Activo",
-              "NativeReferenceName": "Conteo Activo"
+              "Name": "CountNonNull(tarjeta.tarjetas_activadas)",
+              "NativeReferenceName": "Count of tarjetas_activadas"
             }
           ],
           "Where": [

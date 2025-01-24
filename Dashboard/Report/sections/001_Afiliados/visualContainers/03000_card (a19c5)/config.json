@@ -39,7 +39,7 @@
                 "Source": "t"
               }
             },
-            "Property": "Conteo Activo"
+            "Property": "tarjetas_activadas"
           },
           "Name": "tarjeta.Conteo Activo",
           "NativeReferenceName": "Conteo Activo"
@@ -55,7 +55,7 @@
                   "Source": "t"
                 }
               },
-              "Property": "Conteo Activo"
+              "Property": "tarjetas_activadas"
             }
           }
         }

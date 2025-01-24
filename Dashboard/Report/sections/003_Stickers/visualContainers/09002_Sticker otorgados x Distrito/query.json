@@ -6,33 +6,33 @@
           "Version": 2,
           "From": [
             {
-              "Name": "t",
-              "Entity": "tarjeta",
+              "Name": "u",
+              "Entity": "usuario",
               "Type": 0
             },
             {
-              "Name": "u",
-              "Entity": "usuario",
+              "Name": "s",
+              "Entity": "sticker",
+              "Type": 0
+            },
+            {
+              "Name": "t",
+              "Entity": "tarjeta",
               "Type": 0
             }
           ],
           "Select": [
             {
-              "Aggregation": {
+              "Column": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Source": "t"
-                      }
-                    },
-                    "Property": "activo"
+                  "SourceRef": {
+                    "Source": "u"
                   }
                 },
-                "Function": 5
+                "Property": "distrito"
               },
-              "Name": "CountNonNull(tarjeta.activo)",
-              "NativeReferenceName": "Tarj. Activas"
+              "Name": "usuario.distrito",
+              "NativeReferenceName": "Distrito"
             },
             {
               "Aggregation": {
@@ -52,16 +52,21 @@
               "NativeReferenceName": "Cant. Usuarios"
             },
             {
-              "Column": {
+              "Aggregation": {
                 "Expression": {
-                  "SourceRef": {
-                    "Source": "u"
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "s"
+                      }
+                    },
+                    "Property": "totales"
                   }
                 },
-                "Property": "Genero Filtrado"
+                "Function": 0
               },
-              "Name": "usuario.Genero Filtrado",
-              "NativeReferenceName": "Genero Filtrado"
+              "Name": "Sum(sticker.totales)",
+              "NativeReferenceName": "Sum of totales"
             }
           ],
           "Where": [
@@ -148,13 +153,13 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Source": "t"
+                          "Source": "s"
                         }
                       },
-                      "Property": "activo"
+                      "Property": "totales"
                     }
                   },
-                  "Function": 5
+                  "Function": 0
                 }
               }
             }

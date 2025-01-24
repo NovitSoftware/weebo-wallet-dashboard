@@ -1,35 +1,35 @@
 {
-  "name": "ed1b0e8d61cda6dd6aa8",
+  "name": "f4935764731a10aeaa89",
   "layouts": [
     {
       "id": 0,
       "position": {
         "x": 266.66666666666669,
         "y": 220,
-        "z": 4000,
+        "z": 9001,
         "width": 206.66666666666669,
         "height": 233.33333333333334,
-        "tabOrder": 7000
+        "tabOrder": 9001
       }
     },
     {
       "id": 1,
       "position": {
         "x": 0,
-        "y": 721,
-        "z": 4000,
+        "y": 1015,
+        "z": 1009,
         "width": 324,
-        "height": 267,
-        "tabOrder": 7000
+        "height": 266
       }
     }
   ],
   "singleVisual": {
     "visualType": "pieChart",
     "projections": {
-      "Y": [
+      "Category": [
         {
-          "queryRef": "CountNonNull(tarjeta.activo)"
+          "queryRef": "usuario.Genero Filtrado",
+          "active": true
         }
       ],
       "Tooltips": [
@@ -37,10 +37,9 @@
           "queryRef": "CountNonNull(usuario.idusuario)"
         }
       ],
-      "Category": [
+      "Y": [
         {
-          "queryRef": "usuario.Genero Filtrado",
-          "active": true
+          "queryRef": "Sum(sticker.totales)"
         }
       ]
     },
@@ -48,34 +47,17 @@
       "Version": 2,
       "From": [
         {
-          "Name": "t",
-          "Entity": "tarjeta",
+          "Name": "u",
+          "Entity": "usuario",
           "Type": 0
         },
         {
-          "Name": "u",
-          "Entity": "usuario",
+          "Name": "s",
+          "Entity": "sticker",
           "Type": 0
         }
       ],
       "Select": [
-        {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Source": "t"
-                  }
-                },
-                "Property": "activo"
-              }
-            },
-            "Function": 5
-          },
-          "Name": "CountNonNull(tarjeta.activo)",
-          "NativeReferenceName": "Tarj. Activas"
-        },
         {
           "Aggregation": {
             "Expression": {
@@ -92,6 +74,23 @@
           },
           "Name": "CountNonNull(usuario.idusuario)",
           "NativeReferenceName": "Cant. Usuarios"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s"
+                  }
+                },
+                "Property": "totales"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(sticker.totales)",
+          "NativeReferenceName": "Sticker otorgados"
         },
         {
           "Column": {
@@ -115,24 +114,27 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Source": "t"
+                      "Source": "s"
                     }
                   },
-                  "Property": "activo"
+                  "Property": "totales"
                 }
               },
-              "Function": 5
+              "Function": 0
             }
           }
         }
       ]
     },
     "columnProperties": {
-      "CountNonNull(tarjeta.activo)": {
-        "displayName": "Tarj. Activas"
-      },
       "CountNonNull(usuario.idusuario)": {
         "displayName": "Cant. Usuarios"
+      },
+      "usuario.genero": {
+        "displayName": "Genero"
+      },
+      "Sum(sticker.totales)": {
+        "displayName": "Sticker otorgados"
       }
     },
     "drillFilterOtherVisuals": true,
@@ -206,7 +208,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Tarj. Activadas x Género'"
+                  "Value": "'Stick. otorgados x Género'"
                 }
               }
             }

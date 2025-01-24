@@ -6,34 +6,22 @@
           "Version": 2,
           "From": [
             {
-              "Name": "t",
-              "Entity": "tarjeta",
+              "Name": "u",
+              "Entity": "usuario",
               "Type": 0
             },
             {
-              "Name": "u",
-              "Entity": "usuario",
+              "Name": "s",
+              "Entity": "sticker",
+              "Type": 0
+            },
+            {
+              "Name": "t",
+              "Entity": "tarjeta",
               "Type": 0
             }
           ],
           "Select": [
-            {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Source": "t"
-                      }
-                    },
-                    "Property": "activo"
-                  }
-                },
-                "Function": 5
-              },
-              "Name": "CountNonNull(tarjeta.activo)",
-              "NativeReferenceName": "Tarj. Activas"
-            },
             {
               "Aggregation": {
                 "Expression": {
@@ -50,6 +38,23 @@
               },
               "Name": "CountNonNull(usuario.idusuario)",
               "NativeReferenceName": "Cant. Usuarios"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "s"
+                      }
+                    },
+                    "Property": "totales"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(sticker.totales)",
+              "NativeReferenceName": "Sticker otorgados"
             },
             {
               "Column": {
@@ -148,13 +153,13 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Source": "t"
+                          "Source": "s"
                         }
                       },
-                      "Property": "activo"
+                      "Property": "totales"
                     }
                   },
-                  "Function": 5
+                  "Function": 0
                 }
               }
             }
@@ -179,7 +184,7 @@
             }
           },
           "SuppressedJoinPredicates": [
-            1
+            0
           ],
           "Version": 1
         },
