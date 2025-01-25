@@ -1,0 +1,126 @@
+{
+  "objects": {
+    "card": [
+      {
+        "properties": {
+          "outlineStyle": {
+            "expr": {
+              "Literal": {
+                "Value": "4D"
+              }
+            }
+          },
+          "cardPadding": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "categoryLabels": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "projectionOrdering": {
+    "Values": [
+      0,
+      1
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "distrito",
+        "Name": "Ranking_por_Distrito_Filtrado.distrito",
+        "Type": 2048
+      },
+      {
+        "Restatement": "Sum of Totales",
+        "Name": "Sum(Ranking_por_Distrito_Filtrado.Totales)",
+        "Type": 3,
+        "Format": "G"
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        },
+        {
+          "Name": "Values",
+          "Projection": 1,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "distrito",
+      "queryName": "Ranking_por_Distrito_Filtrado.distrito",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Ranking_por_Distrito_Filtrado"
+            }
+          },
+          "Property": "distrito"
+        }
+      }
+    },
+    {
+      "displayName": "Sum of Totales",
+      "format": "G",
+      "queryName": "Sum(Ranking_por_Distrito_Filtrado.Totales)",
+      "roles": {
+        "Values": true
+      },
+      "sort": 2,
+      "sortOrder": 0,
+      "type": {
+        "category": null,
+        "underlyingType": 260
+      },
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Ranking_por_Distrito_Filtrado"
+                }
+              },
+              "Property": "Totales"
+            }
+          },
+          "Function": 0
+        }
+      }
+    }
+  ]
+}

@@ -4,10 +4,21 @@
     {
       "id": 0,
       "position": {
-        "x": 150,
-        "y": 100,
+        "x": 149.89473684210526,
+        "y": 99.368421052631575,
         "z": 0,
-        "width": 116.66666666666667,
+        "width": 116.21052631578948,
+        "height": 96,
+        "tabOrder": 3000
+      }
+    },
+    {
+      "id": 1,
+      "position": {
+        "x": 166,
+        "y": 89,
+        "z": 0,
+        "width": 158,
         "height": 95,
         "tabOrder": 3000
       }
@@ -18,7 +29,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "tarjeta.Conteo Activo"
+          "queryRef": "CountNonNull(tarjeta.tarjetas_activadas)"
         }
       ]
     },
@@ -33,29 +44,39 @@
       ],
       "Select": [
         {
-          "Measure": {
+          "Aggregation": {
             "Expression": {
-              "SourceRef": {
-                "Source": "t"
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "t"
+                  }
+                },
+                "Property": "tarjetas_activadas"
               }
             },
-            "Property": "Conteo Activo"
+            "Function": 5
           },
-          "Name": "tarjeta.Conteo Activo",
-          "NativeReferenceName": "Conteo Activo"
+          "Name": "CountNonNull(tarjeta.tarjetas_activadas)",
+          "NativeReferenceName": "Count of tarjetas_activadas"
         }
       ],
       "OrderBy": [
         {
           "Direction": 2,
           "Expression": {
-            "Measure": {
+            "Aggregation": {
               "Expression": {
-                "SourceRef": {
-                  "Source": "t"
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "t"
+                    }
+                  },
+                  "Property": "tarjetas_activadas"
                 }
               },
-              "Property": "Conteo Activo"
+              "Function": 5
             }
           }
         }

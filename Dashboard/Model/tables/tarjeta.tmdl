@@ -19,29 +19,6 @@
 			```
 		formatString: 0
 
-	measure 'Conteo Activo' = ```
-			
-			IF(
-			    COUNTAX(
-			        FILTER(
-			            'tarjeta', 
-			            'tarjeta'[activo] = "s"
-			        ), 
-			        'tarjeta'[activo]
-			    ) > 0, 
-			    COUNTAX(
-			        FILTER(
-			            'tarjeta', 
-			            'tarjeta'[activo] = "s"
-			        ), 
-			        'tarjeta'[activo]
-			    ), 
-			    0
-			)
-			
-			```
-		formatString: 0
-
 	measure tarjetasactivas = ```
 			
 			COUNTAX(
@@ -178,6 +155,22 @@
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column tarjetas_activadas = ```
+			
+			COUNTAX(
+			    FILTER(
+			        tarjeta, 
+			        tarjeta[activo] = "s" && RELATED(usuario[activo]) = "s"
+			    ), 
+			    tarjeta[idtarjeta]
+			)
+			
+			```
+		formatString: 0
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
 
 	partition tarjeta = m
 		mode: import

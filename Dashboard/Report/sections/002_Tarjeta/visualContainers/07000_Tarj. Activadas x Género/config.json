@@ -11,6 +11,17 @@
         "height": 233.33333333333334,
         "tabOrder": 7000
       }
+    },
+    {
+      "id": 1,
+      "position": {
+        "x": 0,
+        "y": 721,
+        "z": 4000,
+        "width": 324,
+        "height": 267,
+        "tabOrder": 7000
+      }
     }
   ],
   "singleVisual": {
@@ -21,15 +32,15 @@
           "queryRef": "CountNonNull(tarjeta.activo)"
         }
       ],
-      "Category": [
-        {
-          "queryRef": "usuario.genero",
-          "active": true
-        }
-      ],
       "Tooltips": [
         {
           "queryRef": "CountNonNull(usuario.idusuario)"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "usuario.Genero Filtrado",
+          "active": true
         }
       ]
     },
@@ -66,18 +77,6 @@
           "NativeReferenceName": "Tarj. Activas"
         },
         {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Source": "u"
-              }
-            },
-            "Property": "genero"
-          },
-          "Name": "usuario.genero",
-          "NativeReferenceName": "Genero"
-        },
-        {
           "Aggregation": {
             "Expression": {
               "Column": {
@@ -93,6 +92,18 @@
           },
           "Name": "CountNonNull(usuario.idusuario)",
           "NativeReferenceName": "Cant. Usuarios"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "u"
+              }
+            },
+            "Property": "Genero Filtrado"
+          },
+          "Name": "usuario.Genero Filtrado",
+          "NativeReferenceName": "Genero Filtrado"
         }
       ],
       "OrderBy": [
@@ -122,9 +133,6 @@
       },
       "CountNonNull(usuario.idusuario)": {
         "displayName": "Cant. Usuarios"
-      },
-      "usuario.genero": {
-        "displayName": "Genero"
       }
     },
     "drillFilterOtherVisuals": true,

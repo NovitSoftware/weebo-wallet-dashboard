@@ -7,6 +7,11 @@
       "config": "{}",
       "id": 82454463,
       "name": "c74c0748ec480c2c6b85"
+    },
+    {
+      "boundSection": "35a2b62f3799d404d69b",
+      "config": "{\"acceptsFilterContext\":1}",
+      "name": "ac16149031111d6a920b"
     }
   ],
   "publicCustomVisuals": [

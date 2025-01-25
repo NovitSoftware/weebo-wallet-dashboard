@@ -186,3 +186,7 @@ relationship b273ccc4-9685-4504-ac54-112027880300
 	fromColumn: CuponesCombinados.FechaUso
 	toColumn: LocalDateTable_a9d0d91a-a847-4850-9612-65eb6d654f84.Date
 
+relationship 55531e61-53af-fbbd-2a54-07d7e9682eab
+	fromColumn: sticker.fkusuario
+	toColumn: usuario.idusuario
+
