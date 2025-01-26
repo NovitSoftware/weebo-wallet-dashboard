@@ -1,0 +1,193 @@
+{
+  "name": "377655e0900370a0bcb0",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 16.842105263157894,
+        "y": 464.84210526315792,
+        "z": 12000,
+        "width": 1248,
+        "height": 235.78947368421052,
+        "tabOrder": 12000
+      }
+    },
+    {
+      "id": 1,
+      "position": {
+        "x": 0,
+        "y": 1645,
+        "z": 1011,
+        "width": 324,
+        "height": 239
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "columnChart",
+    "projections": {
+      "Category": [
+        {
+          "queryRef": "sticker.fecha.Variation.Date Hierarchy.Year"
+        },
+        {
+          "queryRef": "sticker.fecha.Variation.Date Hierarchy.Quarter"
+        },
+        {
+          "queryRef": "sticker.fecha.Variation.Date Hierarchy.Month"
+        },
+        {
+          "queryRef": "sticker.fecha.Variation.Date Hierarchy.Day",
+          "active": true
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "Sum(sticker.totales)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "s",
+          "Entity": "sticker",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "s"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "fecha"
+                  }
+                },
+                "Hierarchy": "Date Hierarchy"
+              }
+            },
+            "Level": "Year"
+          },
+          "Name": "sticker.fecha.Variation.Date Hierarchy.Year",
+          "NativeReferenceName": "fecha Year"
+        },
+        {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "s"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "fecha"
+                  }
+                },
+                "Hierarchy": "Date Hierarchy"
+              }
+            },
+            "Level": "Quarter"
+          },
+          "Name": "sticker.fecha.Variation.Date Hierarchy.Quarter",
+          "NativeReferenceName": "fecha Quarter"
+        },
+        {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "s"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "fecha"
+                  }
+                },
+                "Hierarchy": "Date Hierarchy"
+              }
+            },
+            "Level": "Month"
+          },
+          "Name": "sticker.fecha.Variation.Date Hierarchy.Month",
+          "NativeReferenceName": "fecha Month"
+        },
+        {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "s"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "fecha"
+                  }
+                },
+                "Hierarchy": "Date Hierarchy"
+              }
+            },
+            "Level": "Day"
+          },
+          "Name": "sticker.fecha.Variation.Date Hierarchy.Day",
+          "NativeReferenceName": "fecha Day"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s"
+                  }
+                },
+                "Property": "totales"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(sticker.totales)",
+          "NativeReferenceName": "Sticker otorgados"
+        }
+      ]
+    },
+    "columnProperties": {
+      "Sum(sticker.totales)": {
+        "displayName": "Sticker otorgados"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

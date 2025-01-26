@@ -3,23 +3,42 @@
 	measure PromedioSaldoTarjeta = ```
 			
 			AVERAGEX(
-			    VALUES(Calendario[Date]), 
-			    CALCULATE(SUM(adqtarjeta[monto]))
+			    'adqtarjeta',
+			    'adqtarjeta'[monto]
 			)
 			
 			```
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure VariacionSaldoTarjetas_Absoluta = ```
+	measure VariacionSaldoTarjetas = ```
+			
+			VAR TotalActual = 
+			    CALCULATE(
+			        SUM('adqtarjeta'[monto]),
+			        'adqtarjeta'[fecadq] >= MIN(Calendario[Date]) && 'adqtarjeta'[fecadq] <= MAX(Calendario[Date]),
+			        ALL('adqtarjeta')
+			    )
+			VAR TotalAnterior = 
+			    CALCULATE(
+			        SUM('adqtarjeta'[monto])
+			    )
+			RETURN 
+			    TotalActual - TotalAnterior
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure NumeroTotalSaldoTarjetas = ```
 			
 			CALCULATE(
-			    SUM(adqtarjeta[monto]),
-			    DATESBETWEEN(Calendario[Date], MIN(Calendario[Date]), MAX(Calendario[Date]))
-			) - 
-			CALCULATE(
-			    SUM(adqtarjeta[monto]),
-			    DATESBETWEEN(Calendario[Date], DATEADD(Calendario[Date], -1, YEAR), MIN(Calendario[Date]))
+			    SUM('adqtarjeta'[monto]),
+			    DATESBETWEEN(
+			        Calendario[Date], 
+			        MIN(Calendario[Date]), 
+			        MAX(Calendario[Date])
+			    )
 			)
 			
 			```
@@ -84,13 +103,6 @@
 		sourceProviderType: float
 		summarizeBy: sum
 		sourceColumn: monto
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column NuevosSaldos = SUM(adqtarjeta[monto])
-		summarizeBy: sum
 
 		annotation SummarizationSetBy = Automatic
 

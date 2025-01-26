@@ -8150,36 +8150,6 @@
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "adqtarjeta.nuevos_saldo": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "adqtarjeta",
-			          "ConceptualProperty": "NuevosSaldos"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "nuevos saldo": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "nuevo saldo": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.78
-			          }
-			        },
-			        {
-			          "NuevosSaldos": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
 			    "adqtarjeta.nuevos_saldos_periodo_anterior": {
 			      "Definition": {
 			        "Binding": {
@@ -8237,7 +8207,7 @@
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "adqtarjeta",
-			          "ConceptualProperty": "VariacionSaldoTarjetas_Absoluta"
+			          "ConceptualProperty": "VariacionSaldoTarjetas"
 			        }
 			      },
 			      "State": "Generated",
@@ -8630,7 +8600,7 @@
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "afiliacion",
-			          "ConceptualProperty": "PromedioNuevosAfiliados"
+			          "ConceptualProperty": "PromedioAfiliados"
 			        }
 			      },
 			      "State": "Generated",
@@ -12838,7 +12808,7 @@
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "tarjeta",
-			          "ConceptualProperty": "VariacionAnterior"
+			          "ConceptualProperty": "VariacionTarjetas"
 			        }
 			      },
 			      "State": "Generated",

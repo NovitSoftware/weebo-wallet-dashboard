@@ -1,0 +1,127 @@
+{
+  "name": "f6cdae22a0421070be46",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 112.64073621396217,
+        "width": 172.27406715076569,
+        "x": 0,
+        "y": 0,
+        "z": 6000,
+        "tabOrder": 0
+      }
+    },
+    {
+      "id": 1,
+      "position": {
+        "x": 0,
+        "y": 802,
+        "z": 16,
+        "width": 170,
+        "height": 120
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "card",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "adqtarjeta.VariacionSaldoTarjetas"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "a",
+          "Entity": "adqtarjeta",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "a"
+              }
+            },
+            "Property": "VariacionSaldoTarjetas"
+          },
+          "Name": "adqtarjeta.VariacionSaldoTarjetas",
+          "NativeReferenceName": "VariacionSaldoTarjetas"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "a"
+                }
+              },
+              "Property": "VariacionSaldoTarjetas"
+            }
+          }
+        }
+      ]
+    },
+    "columnProperties": {
+      "adqtarjeta.VariacionSaldoTarjetas": {
+        "formatString": "0.00"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Variacion'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "3192623de0e999158b02"
+}

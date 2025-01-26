@@ -1,0 +1,217 @@
+{
+  "name": "c659bbca3435d300edbb",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 783.51570925300166,
+        "y": 220.31202818319073,
+        "z": 11000,
+        "width": 482.03609173916169,
+        "height": 233.5638795024804,
+        "tabOrder": 11000
+      }
+    },
+    {
+      "id": 1,
+      "position": {
+        "x": 0,
+        "y": 1299,
+        "z": 1010,
+        "width": 324,
+        "height": 327
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "pieChart",
+    "projections": {
+      "Category": [
+        {
+          "queryRef": "usuario.distrito",
+          "active": true
+        }
+      ],
+      "Tooltips": [
+        {
+          "queryRef": "CountNonNull(usuario.idusuario)"
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "Sum(sticker.totales)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "u",
+          "Entity": "usuario",
+          "Type": 0
+        },
+        {
+          "Name": "s",
+          "Entity": "sticker",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "u"
+              }
+            },
+            "Property": "distrito"
+          },
+          "Name": "usuario.distrito",
+          "NativeReferenceName": "Distrito"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "u"
+                  }
+                },
+                "Property": "idusuario"
+              }
+            },
+            "Function": 5
+          },
+          "Name": "CountNonNull(usuario.idusuario)",
+          "NativeReferenceName": "Cant. Usuarios"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s"
+                  }
+                },
+                "Property": "totales"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(sticker.totales)",
+          "NativeReferenceName": "Sum of totales"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "s"
+                    }
+                  },
+                  "Property": "totales"
+                }
+              },
+              "Function": 0
+            }
+          }
+        }
+      ]
+    },
+    "columnProperties": {
+      "CountNonNull(usuario.idusuario)": {
+        "displayName": "Cant. Usuarios"
+      },
+      "usuario.distrito": {
+        "displayName": "Distrito"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'RightCenter'"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "labelStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Data'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sticker otorgados x Distrito'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

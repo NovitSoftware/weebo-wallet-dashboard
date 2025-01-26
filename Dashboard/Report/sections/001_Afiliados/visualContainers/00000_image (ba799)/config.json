@@ -1,0 +1,49 @@
+{
+  "name": "ba799fed0c80deccb6d7",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 72.4850004883048,
+        "width": 158.70210609484519,
+        "x": 128.46696696685547,
+        "y": 49.180766650242262,
+        "z": 1000,
+        "tabOrder": 0
+      }
+    },
+    {
+      "id": 1,
+      "position": {
+        "x": 253,
+        "y": 212,
+        "z": 5,
+        "width": 47,
+        "height": 53
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "image",
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "imageUrl": {
+              "expr": {
+                "ResourcePackageItem": {
+                  "PackageName": "RegisteredResources",
+                  "PackageType": 1,
+                  "ItemName": "person_24dp_999999_FILL0_wght47625682343254481.png"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "290de1d67c75e96c55b4",
+  "howCreated": "InsertVisualButton"
+}

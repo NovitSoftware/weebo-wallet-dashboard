@@ -1,20 +1,29 @@
 ﻿table afiliacion
 
-	measure VariacionNuevosAfiliados_Absoluta = ```
+	measure VariacionNuevosAfiliados_Absoluta
+		isHidden
+
+		changedProperty = IsHidden
+
+	measure CantidadTotalAfiliados = ```
 			
 			CALCULATE(
 			    COUNTROWS(afiliacion),
-			    DATESBETWEEN(Calendario[Date], MIN(Calendario[Date]), MAX(Calendario[Date]))
-			) - 
-			CALCULATE(
-			    COUNTROWS(afiliacion),
-			    DATESBETWEEN(Calendario[Date], DATEADD(Calendario[Date], -1, YEAR), MIN(Calendario[Date]))
+			    ALL(afiliacion) -- Elimina todos los filtros aplicados
 			)
 			
+			```
+		formatString: 0
+		isHidden
+
+		changedProperty = IsHidden
+
+	measure VariacionNuevosAfiliados = ```
+			
+			CALCULATE(COUNTROWS(afiliacion)) - CALCULATE(COUNTROWS(ALL(afiliacion)))
 			
 			```
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		formatString: #,0.00
 
 	column idaf
 		dataType: int64
@@ -92,12 +101,17 @@
 
 		annotation SummarizationSetBy = Automatic
 
-	column PromedioNuevosAfiliados = ```
+	column PromedioAfiliados = ```
 			
 			AVERAGEX(
-			    VALUES(Calendario[Date]), 
-			    COUNTROWS(FILTER(afiliacion, afiliacion[fecin] = Calendario[Date]))
+			    SUMMARIZE(
+			        Afiliacion, 
+			        Afiliacion[fecin], 
+			        "Nuevos Afiliados", COUNT(Afiliacion[idaf])
+			    ), 
+			    [Nuevos Afiliados]
 			)
+			
 			
 			```
 		summarizeBy: sum

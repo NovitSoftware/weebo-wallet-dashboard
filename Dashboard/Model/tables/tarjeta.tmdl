@@ -32,13 +32,31 @@
 			```
 		formatString: 0
 
-	measure VariacionAnterior = ```
+	measure VariacionTarjetas = ```
 			
-			    DIVIDE(
-			        [tarjetasactivas] - CALCULATE([tarjetasactivas], DATEADD(Calendario[Date], -1, YEAR)),
-			        CALCULATE([tarjetasactivas], DATEADD(Calendario[Date], -1, YEAR)),
-			        0
+			VAR TotalTarjetasActual = tarjeta[tarjetasactivas]
+			VAR TotalTarjetasAnterior = 
+			    CALCULATE(
+			        tarjeta[tarjetasactivas],
+			        DATEADD(Calendario[Date], -1, MONTH)  -- Cambio de periodo (1 mes anterior)
 			    )
+			RETURN
+			    TotalTarjetasActual - TotalTarjetasAnterior
+			
+			```
+		formatString: 0
+
+	measure PromedioTarjetasActivas = ```
+			
+			VAR TotalTarjetasActivas = 
+			    CALCULATE(
+			        COUNT(Tarjeta[idtarjeta]), 
+			        Tarjeta[activo] = "s"
+			    )
+			VAR FechaInicio = MIN(Tarjeta[feccreacion])
+			VAR FechaFin = MAX(Tarjeta[feccreacion])
+			RETURN 
+			    TotalTarjetasActivas / DATEDIFF(FechaInicio, FechaFin, DAY)
 			
 			
 			```
