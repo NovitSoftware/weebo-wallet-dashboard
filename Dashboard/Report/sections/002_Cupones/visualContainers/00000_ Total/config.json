@@ -1,25 +1,14 @@
 {
-  "name": "8e1417f615da59e16532",
+  "name": "8d1d94ad60aa8009a410",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "x": 0,
-        "y": 54.614819876127434,
-        "z": 2000,
-        "width": 175.58702998058811,
-        "height": 110.98425479905097,
-        "tabOrder": 0
-      }
-    },
-    {
-      "id": 1,
-      "position": {
-        "x": 0,
-        "y": 709,
-        "z": 15,
-        "width": 324,
-        "height": 93
+        "height": 124.54545454545453,
+        "width": 156.36363636363635,
+        "x": 175.09271576303996,
+        "y": 0,
+        "z": 4000
       }
     }
   ],
@@ -28,7 +17,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "adqtarjeta.PromedioSaldoTarjeta"
+          "queryRef": "sticker.TotalStickersActivos"
         }
       ]
     },
@@ -36,8 +25,8 @@
       "Version": 2,
       "From": [
         {
-          "Name": "a",
-          "Entity": "adqtarjeta",
+          "Name": "s",
+          "Entity": "sticker",
           "Type": 0
         }
       ],
@@ -46,13 +35,13 @@
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Source": "a"
+                "Source": "s"
               }
             },
-            "Property": "PromedioSaldoTarjeta"
+            "Property": "TotalStickersActivos"
           },
-          "Name": "adqtarjeta.PromedioSaldoTarjeta",
-          "NativeReferenceName": "PromedioSaldoTarjeta"
+          "Name": "sticker.TotalStickersActivos",
+          "NativeReferenceName": "TotalStickersActivos"
         }
       ],
       "OrderBy": [
@@ -62,10 +51,10 @@
             "Measure": {
               "Expression": {
                 "SourceRef": {
-                  "Source": "a"
+                  "Source": "s"
                 }
               },
-              "Property": "PromedioSaldoTarjeta"
+              "Property": "TotalStickersActivos"
             }
           }
         }
@@ -102,7 +91,47 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Promedio'"
+                  "Value": "' Total '"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -111,5 +140,5 @@
       ]
     }
   },
-  "parentGroupName": "6ee501528095ca79c810"
+  "parentGroupName": "1620edb66d517008a69a"
 }

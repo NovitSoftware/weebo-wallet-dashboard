@@ -49,35 +49,6 @@
         "name": "SharedResources",
         "type": 2
       }
-    },
-    {
-      "resourcePackage": {
-        "disabled": false,
-        "items": [
-          {
-            "name": "person_24dp_999999_FILL0_wght47625682343254481.png",
-            "path": "person_24dp_999999_FILL0_wght47625682343254481.png",
-            "type": 100
-          },
-          {
-            "name": "group_24dp_999999_FILL0_wght4034644715853289054.png",
-            "path": "group_24dp_999999_FILL0_wght4034644715853289054.png",
-            "type": 100
-          },
-          {
-            "name": "credit_card_24dp_999999_FILL0_2808738266903761.png",
-            "path": "credit_card_24dp_999999_FILL0_2808738266903761.png",
-            "type": 100
-          },
-          {
-            "name": "payments_24dp_999999_FILL0_wgh6743973591366068.png",
-            "path": "payments_24dp_999999_FILL0_wgh6743973591366068.png",
-            "type": 100
-          }
-        ],
-        "name": "RegisteredResources",
-        "type": 1
-      }
     }
   ],
   "theme": "AccessibleTidal"
