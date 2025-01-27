@@ -1,0 +1,51 @@
+{
+  "objects": {},
+  "projectionOrdering": {
+    "Values": [
+      0
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "PromedioStickersEntregados",
+        "Name": "tracking_stickers.PromedioStickersEntregados",
+        "Type": 1
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "PromedioStickersEntregados",
+      "queryName": "tracking_stickers.PromedioStickersEntregados",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "tracking_stickers"
+            }
+          },
+          "Property": "PromedioStickersEntregados"
+        }
+      }
+    }
+  ]
+}

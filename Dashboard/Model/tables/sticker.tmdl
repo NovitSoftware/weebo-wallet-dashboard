@@ -1,23 +1,39 @@
 ﻿table sticker
 
 	measure PromedioStickersActivos = ```
-			AVERAGEX(VALUES(sticker[fecha]), [TotalStickersActivos])
+			
+			AVERAGEX(
+			    VALUES('tarjeta'[fecactivo]), 
+			    CALCULATE(COUNTROWS('tarjeta'), 'tarjeta'[activo] = "s")
+			)
 			
 			```
 
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	measure TotalStickersActivos = ```
-			SUM(sticker[actuales])
+			
+			CALCULATE(
+			    COUNTROWS('tarjeta'),
+			    'tarjeta'[fecactivo] >= MIN(Calendario[Date]) && 'tarjeta'[fecactivo] <= MAX(Calendario[Date]),
+			    'tarjeta'[activo] = "s"
+			)
+			
 			
 			```
 		formatString: 0
 
 	measure VariacionStickersActivos = ```
 			
-			    DIVIDE(
-			        [TotalStickersActivos] - CALCULATE([TotalStickersActivos], DATEADD(sticker[fecha], -1, YEAR)),
-			        CALCULATE([TotalStickersActivos], DATEADD(sticker[fecha], -1, YEAR)),
-			        0
+			VAR TotalActual = [TotalStickersActivos]
+			VAR TotalAnterior = 
+			    CALCULATE(
+			        [TotalStickersActivos],
+			        SAMEPERIODLASTYEAR(Calendario[Date])
 			    )
+			RETURN 
+			    DIVIDE(TotalActual - TotalAnterior, TotalAnterior, 0)
+			
 			
 			```
 
