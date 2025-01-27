@@ -1,0 +1,132 @@
+{
+  "name": "a19c50c0d2c0c68108cb",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 113.42465753424659,
+        "width": 139.72602739726028,
+        "x": 139.72602739725994,
+        "y": 0,
+        "z": 3000,
+        "tabOrder": 1000
+      }
+    },
+    {
+      "id": 1,
+      "position": {
+        "x": 170,
+        "y": 547,
+        "z": 10,
+        "width": 154,
+        "height": 110
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "card",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "CountNonNull(tarjeta.tarjetas_activadas)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "t",
+          "Entity": "tarjeta",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "t"
+                  }
+                },
+                "Property": "tarjetas_activadas"
+              }
+            },
+            "Function": 5
+          },
+          "Name": "CountNonNull(tarjeta.tarjetas_activadas)",
+          "NativeReferenceName": "Count of tarjetas_activadas"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "t"
+                    }
+                  },
+                  "Property": "tarjetas_activadas"
+                }
+              },
+              "Function": 5
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Total'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "c6a999527d19601241ae"
+}

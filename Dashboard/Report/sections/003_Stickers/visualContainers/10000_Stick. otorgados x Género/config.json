@@ -1,0 +1,220 @@
+{
+  "name": "f4935764731a10aeaa89",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 266.66666666666669,
+        "y": 220,
+        "z": 10000,
+        "width": 206.66666666666669,
+        "height": 233.33333333333334,
+        "tabOrder": 10000
+      }
+    },
+    {
+      "id": 1,
+      "position": {
+        "x": 0,
+        "y": 1015,
+        "z": 1009,
+        "width": 324,
+        "height": 266
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "pieChart",
+    "projections": {
+      "Category": [
+        {
+          "queryRef": "usuario.Genero Filtrado",
+          "active": true
+        }
+      ],
+      "Tooltips": [
+        {
+          "queryRef": "CountNonNull(usuario.idusuario)"
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "Sum(sticker.totales)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "u",
+          "Entity": "usuario",
+          "Type": 0
+        },
+        {
+          "Name": "s",
+          "Entity": "sticker",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "u"
+                  }
+                },
+                "Property": "idusuario"
+              }
+            },
+            "Function": 5
+          },
+          "Name": "CountNonNull(usuario.idusuario)",
+          "NativeReferenceName": "Cant. Usuarios"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s"
+                  }
+                },
+                "Property": "totales"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(sticker.totales)",
+          "NativeReferenceName": "Sticker otorgados"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "u"
+              }
+            },
+            "Property": "Genero Filtrado"
+          },
+          "Name": "usuario.Genero Filtrado",
+          "NativeReferenceName": "Genero Filtrado"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "s"
+                    }
+                  },
+                  "Property": "totales"
+                }
+              },
+              "Function": 0
+            }
+          }
+        }
+      ]
+    },
+    "columnProperties": {
+      "CountNonNull(usuario.idusuario)": {
+        "displayName": "Cant. Usuarios"
+      },
+      "usuario.genero": {
+        "displayName": "Genero"
+      },
+      "Sum(sticker.totales)": {
+        "displayName": "Sticker otorgados"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BottomCenter'"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "labelStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Data'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Stick. otorgados x Género'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

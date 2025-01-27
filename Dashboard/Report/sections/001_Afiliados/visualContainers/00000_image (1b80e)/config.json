@@ -1,0 +1,49 @@
+{
+  "name": "1b80ee740705336d22bd",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 51.095983950772236,
+        "width": 94.229375493814331,
+        "x": 207.60428317794785,
+        "y": 55.111590043310656,
+        "z": 8000,
+        "tabOrder": 0
+      }
+    },
+    {
+      "id": 1,
+      "position": {
+        "x": 231,
+        "y": 214,
+        "z": 4,
+        "width": 46,
+        "height": 51
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "image",
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "imageUrl": {
+              "expr": {
+                "ResourcePackageItem": {
+                  "PackageName": "RegisteredResources",
+                  "PackageType": 1,
+                  "ItemName": "group_24dp_999999_FILL0_wght4034644715853289054.png"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "33b0f7b0bed32c73e2dc",
+  "howCreated": "InsertVisualButton"
+}

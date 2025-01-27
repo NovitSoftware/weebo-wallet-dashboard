@@ -1,0 +1,127 @@
+{
+  "name": "1ded02b3ca576323c9d2",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 113.42465753424659,
+        "width": 139.72602739726028,
+        "x": 0,
+        "y": 0,
+        "z": 4000,
+        "tabOrder": 0
+      }
+    },
+    {
+      "id": 1,
+      "position": {
+        "x": 0,
+        "y": 547,
+        "z": 9,
+        "width": 170,
+        "height": 111
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "card",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "tarjeta.VariacionAnterior"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "t",
+          "Entity": "tarjeta",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "t"
+              }
+            },
+            "Property": "VariacionTarjetas"
+          },
+          "Name": "tarjeta.VariacionAnterior",
+          "NativeReferenceName": "VariacionAnterior"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "t"
+                }
+              },
+              "Property": "VariacionTarjetas"
+            }
+          }
+        }
+      ]
+    },
+    "columnProperties": {
+      "tarjeta.VariacionAnterior": {
+        "formatString": "0.00"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Variacion'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "c6a999527d19601241ae"
+}

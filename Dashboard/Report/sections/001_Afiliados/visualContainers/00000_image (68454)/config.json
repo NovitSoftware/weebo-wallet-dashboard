@@ -1,0 +1,49 @@
+{
+  "name": "68454055ab798510b4e0",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 48.9845218409457,
+        "width": 81.631404126824336,
+        "x": 45.917664821338704,
+        "y": 0,
+        "z": 1000,
+        "tabOrder": 0
+      }
+    },
+    {
+      "id": 1,
+      "position": {
+        "x": 245,
+        "y": 760,
+        "z": 19,
+        "width": 48,
+        "height": 54
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "image",
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "imageUrl": {
+              "expr": {
+                "ResourcePackageItem": {
+                  "PackageName": "RegisteredResources",
+                  "PackageType": 1,
+                  "ItemName": "payments_24dp_999999_FILL0_wgh6743973591366068.png"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "6811f3b6ee604d91d062",
+  "howCreated": "InsertVisualButton"
+}
