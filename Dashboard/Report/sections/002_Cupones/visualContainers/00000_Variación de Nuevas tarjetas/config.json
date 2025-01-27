@@ -1,25 +1,14 @@
 {
-  "name": "8e1417f615da59e16532",
+  "name": "3b4389aaa44ab5ba7150",
   "layouts": [
     {
       "id": 0,
       "position": {
+        "height": 104.46406199567703,
+        "width": 200.32284183475772,
         "x": 0,
-        "y": 54.614819876127434,
-        "z": 2000,
-        "width": 175.58702998058811,
-        "height": 110.98425479905097,
-        "tabOrder": 0
-      }
-    },
-    {
-      "id": 1,
-      "position": {
-        "x": 0,
-        "y": 709,
-        "z": 15,
-        "width": 324,
-        "height": 93
+        "y": 0.66964142304928786,
+        "z": 2000
       }
     }
   ],
@@ -28,7 +17,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "adqtarjeta.PromedioSaldoTarjeta"
+          "queryRef": "cupon.VariacionCuponesRedimidos"
         }
       ]
     },
@@ -36,8 +25,8 @@
       "Version": 2,
       "From": [
         {
-          "Name": "a",
-          "Entity": "adqtarjeta",
+          "Name": "c",
+          "Entity": "cupon",
           "Type": 0
         }
       ],
@@ -46,13 +35,13 @@
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Source": "a"
+                "Source": "c"
               }
             },
-            "Property": "PromedioSaldoTarjeta"
+            "Property": "VariacionCuponesRedimidos"
           },
-          "Name": "adqtarjeta.PromedioSaldoTarjeta",
-          "NativeReferenceName": "PromedioSaldoTarjeta"
+          "Name": "cupon.VariacionCuponesRedimidos",
+          "NativeReferenceName": "VariacionCuponesRedimidos"
         }
       ],
       "OrderBy": [
@@ -62,10 +51,10 @@
             "Measure": {
               "Expression": {
                 "SourceRef": {
-                  "Source": "a"
+                  "Source": "c"
                 }
               },
-              "Property": "PromedioSaldoTarjeta"
+              "Property": "VariacionCuponesRedimidos"
             }
           }
         }
@@ -102,7 +91,47 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Promedio'"
+                  "Value": "'Variación de Nuevas tarjetas'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
                 }
               }
             }
@@ -111,5 +140,5 @@
       ]
     }
   },
-  "parentGroupName": "6ee501528095ca79c810"
+  "parentGroupName": "dc812505bd32b6e1831e"
 }

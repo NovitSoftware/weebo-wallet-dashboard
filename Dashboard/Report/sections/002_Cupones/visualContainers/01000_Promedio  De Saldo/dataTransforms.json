@@ -1,0 +1,70 @@
+{
+  "objects": {
+    "labels": [
+      {
+        "properties": {}
+      }
+    ],
+    "categoryLabels": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "projectionOrdering": {
+    "Values": [
+      0
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "PromedioCuponesRedimidos",
+        "Name": "cupon.PromedioCuponesRedimidos",
+        "Type": 1
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "PromedioCuponesRedimidos",
+      "queryName": "cupon.PromedioCuponesRedimidos",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "cupon"
+            }
+          },
+          "Property": "PromedioCuponesRedimidos"
+        }
+      }
+    }
+  ]
+}

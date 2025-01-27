@@ -1,14 +1,14 @@
 {
-  "name": "8e1417f615da59e16532",
+  "name": "45e90fe3b44712206a8a",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "x": 0,
-        "y": 54.614819876127434,
-        "z": 2000,
-        "width": 175.58702998058811,
-        "height": 110.98425479905097,
+        "x": 1.3953938964616266,
+        "y": 50.387186458096672,
+        "z": 0,
+        "width": 160.67869724638723,
+        "height": 86.137033575382844,
         "tabOrder": 0
       }
     },
@@ -16,10 +16,10 @@
       "id": 1,
       "position": {
         "x": 0,
-        "y": 709,
-        "z": 15,
+        "y": 173,
+        "z": 3,
         "width": 324,
-        "height": 93
+        "height": 100
       }
     }
   ],
@@ -28,7 +28,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "adqtarjeta.PromedioSaldoTarjeta"
+          "queryRef": "Sum(afiliacion.PromedioAfiliados)"
         }
       ]
     },
@@ -37,35 +37,45 @@
       "From": [
         {
           "Name": "a",
-          "Entity": "adqtarjeta",
+          "Entity": "afiliacion",
           "Type": 0
         }
       ],
       "Select": [
         {
-          "Measure": {
+          "Aggregation": {
             "Expression": {
-              "SourceRef": {
-                "Source": "a"
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "a"
+                  }
+                },
+                "Property": "PromedioAfiliados"
               }
             },
-            "Property": "PromedioSaldoTarjeta"
+            "Function": 1
           },
-          "Name": "adqtarjeta.PromedioSaldoTarjeta",
-          "NativeReferenceName": "PromedioSaldoTarjeta"
+          "Name": "Sum(afiliacion.PromedioAfiliados)",
+          "NativeReferenceName": "Average of PromedioAfiliados"
         }
       ],
       "OrderBy": [
         {
           "Direction": 2,
           "Expression": {
-            "Measure": {
+            "Aggregation": {
               "Expression": {
-                "SourceRef": {
-                  "Source": "a"
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "a"
+                    }
+                  },
+                  "Property": "PromedioAfiliados"
                 }
               },
-              "Property": "PromedioSaldoTarjeta"
+              "Function": 1
             }
           }
         }
@@ -111,5 +121,5 @@
       ]
     }
   },
-  "parentGroupName": "6ee501528095ca79c810"
+  "parentGroupName": "9abb899e3a0820aac229"
 }
