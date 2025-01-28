@@ -1,0 +1,154 @@
+﻿table 'stage StgFactPromociones'
+
+	column KeyFechaCorte
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: KeyFechaCorte
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyAfiliado
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyAfiliado
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyRangoEdad
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyRangoEdad
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyEmpresa
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyEmpresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyCuponPromocional
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyCuponPromocional
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyPromocion
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyPromocion
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaCreacion
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaCreacion
+
+		variation Variation
+			isDefault
+			relationship: b94cd85b-664e-4f67-b8fe-a59bd0705b59
+			defaultHierarchy: LocalDateTable_790ca190-7629-41ad-beea-c82f55a1ff1b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaUso
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaUso
+
+		variation Variation
+			isDefault
+			relationship: 6e91d4ce-51bc-4639-9d78-93ad0bc1ac13
+			defaultHierarchy: LocalDateTable_fd654e55-22fb-4816-80e3-c4c8e72c233b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FlagPromocionActiva
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FlagPromocionActiva
+
+		annotation SummarizationSetBy = Automatic
+
+	column FlagPromocionActivaAcumulado
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FlagPromocionActivaAcumulado
+
+		annotation SummarizationSetBy = Automatic
+
+	column FlagPromocionRedimida
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FlagPromocionRedimida
+
+		annotation SummarizationSetBy = Automatic
+
+	column FlagPromocionRedimidaAcumulado
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FlagPromocionRedimidaAcumulado
+
+		annotation SummarizationSetBy = Automatic
+
+	column FlagCuponVencido
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FlagCuponVencido
+
+		annotation SummarizationSetBy = Automatic
+
+	column FlagCuponVencidoAcumulado
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FlagCuponVencidoAcumulado
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiasHastaActivarPromocion
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: DiasHastaActivarPromocion
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiasHastaRedimirPromocion
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: DiasHastaRedimirPromocion
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'stage StgFactPromociones' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    stage_StgFactPromociones = ApployaltyDWH{[Schema="stage",Item="StgFactPromociones"]}[Data]
+				in
+				    stage_StgFactPromociones
+

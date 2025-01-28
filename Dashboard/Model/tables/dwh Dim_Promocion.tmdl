@@ -1,0 +1,65 @@
+﻿table 'dwh Dim_Promocion'
+
+	column KeyPromocion
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyPromocion
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyPromocionAlt
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: KeyPromocionAlt
+
+		annotation SummarizationSetBy = Automatic
+
+	column Promocion
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Promocion
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaInicio
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaInicio
+
+		variation Variation
+			isDefault
+			relationship: 5bfcb04a-d631-45d0-8504-8819d5793e72
+			defaultHierarchy: LocalDateTable_ac570e5f-3d3f-4aff-9458-1567fdc1e871.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaFin
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaFin
+
+		variation Variation
+			isDefault
+			relationship: 7c278ed9-93ed-4e56-8fac-78e138ddf76f
+			defaultHierarchy: LocalDateTable_0c71f312-5d50-4253-9cf6-19b09782b930.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'dwh Dim_Promocion' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    dwh_Dim_Promocion = ApployaltyDWH{[Schema="dwh",Item="Dim_Promocion"]}[Data]
+				in
+				    dwh_Dim_Promocion
+

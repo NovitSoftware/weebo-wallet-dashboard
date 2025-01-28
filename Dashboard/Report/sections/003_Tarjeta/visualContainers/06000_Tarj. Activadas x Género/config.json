@@ -1,0 +1,193 @@
+{
+  "name": "ed1b0e8d61cda6dd6aa8",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 266.66666666666669,
+        "y": 220,
+        "z": 3000,
+        "width": 206.66666666666669,
+        "height": 233.33333333333334,
+        "tabOrder": 6000
+      }
+    },
+    {
+      "id": 1,
+      "position": {
+        "x": 0,
+        "y": 721,
+        "z": 4000,
+        "width": 324,
+        "height": 267,
+        "tabOrder": 7000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "pieChart",
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "CountNonNull(tarjeta.activo)"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "usuario.Genero Filtrado",
+          "active": true
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "t",
+          "Entity": "tarjeta",
+          "Type": 0
+        },
+        {
+          "Name": "u",
+          "Entity": "usuario",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "t"
+                  }
+                },
+                "Property": "activo"
+              }
+            },
+            "Function": 5
+          },
+          "Name": "CountNonNull(tarjeta.activo)",
+          "NativeReferenceName": "Tarj. Activas"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "u"
+              }
+            },
+            "Property": "Genero Filtrado"
+          },
+          "Name": "usuario.Genero Filtrado",
+          "NativeReferenceName": "Genero Filtrado"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "t"
+                    }
+                  },
+                  "Property": "activo"
+                }
+              },
+              "Function": 5
+            }
+          }
+        }
+      ]
+    },
+    "columnProperties": {
+      "CountNonNull(tarjeta.activo)": {
+        "displayName": "Tarj. Activas"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BottomCenter'"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "labelStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Data'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tarj. Activadas x Género'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

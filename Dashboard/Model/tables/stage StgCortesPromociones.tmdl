@@ -1,0 +1,96 @@
+﻿table 'stage StgCortesPromociones'
+
+	column FechaCorte
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaCorte
+
+		variation Variation
+			isDefault
+			relationship: 411e708a-1cc4-40a0-875d-f4dfc1e5474f
+			defaultHierarchy: LocalDateTable_28ab5ae6-e6fd-496b-8fcb-d13fca7018e7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column idcuponpromo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: idcuponpromo
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo
+		dataType: string
+		summarizeBy: none
+		sourceColumn: codigo
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkcliente
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: fkcliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkusuario
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: fkusuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkpromo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: fkpromo
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaCreacion2
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaCreacion2
+
+		variation Variation
+			isDefault
+			relationship: b87a7b47-f07a-4ec0-93a0-7352e2f1992a
+			defaultHierarchy: LocalDateTable_cbabcc04-161c-436f-8d71-3cf258bfb06c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaUso2
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaUso2
+
+		variation Variation
+			isDefault
+			relationship: 25f5835e-1cc7-40dc-8e7b-70bcb10821d3
+			defaultHierarchy: LocalDateTable_7d8a7b27-8fe5-42f3-9505-7947ca25d975.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'stage StgCortesPromociones' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    stage_StgCortesPromociones = ApployaltyDWH{[Schema="stage",Item="StgCortesPromociones"]}[Data]
+				in
+				    stage_StgCortesPromociones
+

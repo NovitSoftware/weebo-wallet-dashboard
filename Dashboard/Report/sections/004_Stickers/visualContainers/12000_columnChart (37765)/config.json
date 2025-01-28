@@ -28,16 +28,7 @@
     "projections": {
       "Category": [
         {
-          "queryRef": "sticker.fecha.Variation.Date Hierarchy.Year"
-        },
-        {
-          "queryRef": "sticker.fecha.Variation.Date Hierarchy.Quarter"
-        },
-        {
-          "queryRef": "sticker.fecha.Variation.Date Hierarchy.Month"
-        },
-        {
-          "queryRef": "sticker.fecha.Variation.Date Hierarchy.Day",
+          "queryRef": "sticker.fecha.Variation.Date Hierarchy.Year",
           "active": true
         }
       ],
@@ -58,96 +49,16 @@
       ],
       "Select": [
         {
-          "HierarchyLevel": {
+          "Column": {
             "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Source": "s"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "fecha"
-                  }
-                },
-                "Hierarchy": "Date Hierarchy"
+              "SourceRef": {
+                "Source": "s"
               }
             },
-            "Level": "Year"
+            "Property": "fecha"
           },
           "Name": "sticker.fecha.Variation.Date Hierarchy.Year",
           "NativeReferenceName": "fecha Year"
-        },
-        {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Source": "s"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "fecha"
-                  }
-                },
-                "Hierarchy": "Date Hierarchy"
-              }
-            },
-            "Level": "Quarter"
-          },
-          "Name": "sticker.fecha.Variation.Date Hierarchy.Quarter",
-          "NativeReferenceName": "fecha Quarter"
-        },
-        {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Source": "s"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "fecha"
-                  }
-                },
-                "Hierarchy": "Date Hierarchy"
-              }
-            },
-            "Level": "Month"
-          },
-          "Name": "sticker.fecha.Variation.Date Hierarchy.Month",
-          "NativeReferenceName": "fecha Month"
-        },
-        {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Source": "s"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "fecha"
-                  }
-                },
-                "Hierarchy": "Date Hierarchy"
-              }
-            },
-            "Level": "Day"
-          },
-          "Name": "sticker.fecha.Variation.Date Hierarchy.Day",
-          "NativeReferenceName": "fecha Day"
         },
         {
           "Aggregation": {

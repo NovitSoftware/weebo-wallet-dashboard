@@ -1,0 +1,98 @@
+﻿table 'stage StgFactAfiliacionWebo'
+
+	column KeyFechaCorte
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: KeyFechaCorte
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyAfiliado
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyAfiliado
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyRangoEdad
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyRangoEdad
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaActivo
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaActivo
+
+		variation Variation
+			isDefault
+			relationship: 281ab438-568c-4738-9e63-fb714e9e6873
+			defaultHierarchy: LocalDateTable_fa6cd8bc-eca4-488d-ab14-e5349b84487b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaUltimoConsumo
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaUltimoConsumo
+
+		variation Variation
+			isDefault
+			relationship: b7a613f1-34e1-4a92-8f5d-373b47d016d3
+			defaultHierarchy: LocalDateTable_f795e24d-a35d-4710-8c9e-e3cadb09c2de.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FlagActivo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FlagActivo
+
+		annotation SummarizationSetBy = Automatic
+
+	column FlagDesafiliadoWebo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FlagDesafiliadoWebo
+
+		annotation SummarizationSetBy = Automatic
+
+	column FlagNuevo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FlagNuevo
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiasDesdeUltimoConsumo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: DiasDesdeUltimoConsumo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'stage StgFactAfiliacionWebo' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    stage_StgFactAfiliacionWebo = ApployaltyDWH{[Schema="stage",Item="StgFactAfiliacionWebo"]}[Data]
+				in
+				    stage_StgFactAfiliacionWebo
+

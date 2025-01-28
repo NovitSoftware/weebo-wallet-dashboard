@@ -1,0 +1,201 @@
+﻿table 'stage StgFactCupon'
+
+	column KeyFechaCorte
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: KeyFechaCorte
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyAfiliado
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyAfiliado
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyRangoEdad
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyRangoEdad
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyEmpresa
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyEmpresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyTarjeta
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyTarjeta
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyCupon
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyCupon
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaCreacion
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaCreacion
+
+		variation Variation
+			isDefault
+			relationship: 2af8b517-698e-4e07-8b46-e564aee9f587
+			defaultHierarchy: LocalDateTable_fd4cd53d-e2cf-4c92-a0d7-8b7630de4bbe.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaUso
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaUso
+
+		variation Variation
+			isDefault
+			relationship: b876e72d-7483-47f5-ad8b-2320c1b76bad
+			defaultHierarchy: LocalDateTable_ba95ad58-a0d0-44bf-b25e-abbfe2666d1f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaActivacion
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaActivacion
+
+		variation Variation
+			isDefault
+			relationship: 8d789734-031c-46b8-98f5-c4827a854f72
+			defaultHierarchy: LocalDateTable_f6dea298-4183-4408-b86c-6e5d23ac73c4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column TarjetasEntregadas
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: TarjetasEntregadas
+
+		annotation SummarizationSetBy = Automatic
+
+	column FlagCuponRedimido
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FlagCuponRedimido
+
+		annotation SummarizationSetBy = Automatic
+
+	column FlagCuponRedimidoAcumulado
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FlagCuponRedimidoAcumulado
+
+		annotation SummarizationSetBy = Automatic
+
+	column FlagCuponVencido
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FlagCuponVencido
+
+		annotation SummarizationSetBy = Automatic
+
+	column FlagCuponVencidoAcumulado
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FlagCuponVencidoAcumulado
+
+		annotation SummarizationSetBy = Automatic
+
+	column FlagCuponVigente
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FlagCuponVigente
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiasHastaObtenerCupon
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: DiasHastaObtenerCupon
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiasHastaRedimirCupon
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: DiasHastaRedimirCupon
+
+		annotation SummarizationSetBy = Automatic
+
+	column StickersActivos
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: StickersActivos
+
+		annotation SummarizationSetBy = Automatic
+
+	column StickersActivosAcumulado
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: StickersActivosAcumulado
+
+		annotation SummarizationSetBy = Automatic
+
+	column StickersEntregados
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: StickersEntregados
+
+		annotation SummarizationSetBy = Automatic
+
+	column StickersEntregadosAcumulado
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: StickersEntregadosAcumulado
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'stage StgFactCupon' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    stage_StgFactCupon = ApployaltyDWH{[Schema="stage",Item="StgFactCupon"]}[Data]
+				in
+				    stage_StgFactCupon
+

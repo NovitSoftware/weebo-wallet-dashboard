@@ -1,0 +1,101 @@
+﻿table 'stage StgPromocion'
+
+	column idpromo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: idpromo
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkcliente
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: fkcliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column nompromo
+		dataType: string
+		summarizeBy: none
+		sourceColumn: nompromo
+
+		annotation SummarizationSetBy = Automatic
+
+	column descpromo
+		dataType: string
+		summarizeBy: none
+		sourceColumn: descpromo
+
+		annotation SummarizationSetBy = Automatic
+
+	column stpromo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: stpromo
+
+		annotation SummarizationSetBy = Automatic
+
+	column imgpromo
+		dataType: string
+		summarizeBy: none
+		sourceColumn: imgpromo
+
+		annotation SummarizationSetBy = Automatic
+
+	column prombanner
+		dataType: string
+		summarizeBy: none
+		sourceColumn: prombanner
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecini
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: fecini
+
+		variation Variation
+			isDefault
+			relationship: 8f6a7439-cf67-4815-81ed-dba6b288a8a3
+			defaultHierarchy: LocalDateTable_f4b20d5c-fd1a-4a05-b827-305fda7d1d2a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fecfin
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: fecfin
+
+		variation Variation
+			isDefault
+			relationship: d89e6577-f9f8-4234-a1a6-703494b01851
+			defaultHierarchy: LocalDateTable_52b8723b-ef78-49f0-a12e-2b4af0e62630.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column activo
+		dataType: string
+		summarizeBy: none
+		sourceColumn: activo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'stage StgPromocion' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    stage_StgPromocion = ApployaltyDWH{[Schema="stage",Item="StgPromocion"]}[Data]
+				in
+				    stage_StgPromocion
+

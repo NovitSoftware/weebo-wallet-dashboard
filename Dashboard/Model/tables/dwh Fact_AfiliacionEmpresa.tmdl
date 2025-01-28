@@ -1,0 +1,235 @@
+﻿table 'dwh Fact_AfiliacionEmpresa'
+
+	measure Tarjetas_Activadas_Clientes_Activos = ```
+			
+			CALCULATE(
+			    SUM('dwh Fact_Planes'[TarjetasActivadas]),
+			    FILTER(
+			        'dwh Fact_AfiliacionEmpresa',
+			        'dwh Fact_AfiliacionEmpresa'[FlagActivo] = 1
+			    )
+			)
+			
+			```
+		formatString: 0
+
+	column KeyFactAfiliacionEmpresa
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: KeyFactAfiliacionEmpresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyFechaCorte
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: KeyFechaCorte
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyAfiliado
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyAfiliado
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyRangoEdad
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyRangoEdad
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyEmpresa
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyEmpresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaRegistro
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaRegistro
+
+		variation Variation
+			isDefault
+			relationship: 1c8e6114-8d5d-44dd-8004-b9974eb4fca9
+			defaultHierarchy: LocalDateTable_0d0b0e06-c489-4071-a2fd-05897ae5ab2b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaBaja
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaBaja
+
+		variation Variation
+			isDefault
+			relationship: 4d58a27b-6f31-4696-bfb0-5c91258d0b3c
+			defaultHierarchy: LocalDateTable_7f10cd51-dbbb-47ad-aa06-39b9903bad03.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaActivo
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaActivo
+
+		variation Variation
+			isDefault
+			relationship: 496b1526-18eb-4efa-bd30-ee1e22357496
+			defaultHierarchy: LocalDateTable_823649f6-7edc-4fd3-93d1-2d0b65ff83e3.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaUltimoConsumo
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaUltimoConsumo
+
+		variation Variation
+			isDefault
+			relationship: bfff47e0-3790-4e0f-be96-4698d44b2e99
+			defaultHierarchy: LocalDateTable_b5372a83-e6da-4043-b573-d5482746ce40.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FlagActivo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FlagActivo
+
+		annotation SummarizationSetBy = Automatic
+
+	column FlagEnRiesgo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FlagEnRiesgo
+
+		annotation SummarizationSetBy = Automatic
+
+	column FlagPerdido
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FlagPerdido
+
+		annotation SummarizationSetBy = Automatic
+
+	column FlagDesafiliado
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FlagDesafiliado
+
+		annotation SummarizationSetBy = Automatic
+
+	column FlagNuevo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FlagNuevo
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiasDesdeUltimoConsumo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: DiasDesdeUltimoConsumo
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaPerdido
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaPerdido
+
+		variation Variation
+			isDefault
+			relationship: b715f961-87f3-4547-873f-62f50bb92dbe
+			defaultHierarchy: LocalDateTable_e5fd9282-be07-4aa1-a626-a5643cac1451.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column EstadoCliente = ```
+			
+			SWITCH(
+			    TRUE(),
+			    
+			    -- Si el cliente es Nuevo: FlagNuevo = 1 y FlagActivo = 0
+			    'dwh Fact_AfiliacionEmpresa'[FlagNuevo] = 1 && 'dwh Fact_AfiliacionEmpresa'[FlagActivo] = 0, "Nuevo", 
+			    
+			    -- Estado 'Activo': FlagActivo = 1
+			    'dwh Fact_AfiliacionEmpresa'[FlagActivo] = 1, "Activo", 
+			    
+			    -- Estado 'En Riesgo': FlagEnRiesgo = 1
+			    'dwh Fact_AfiliacionEmpresa'[FlagEnRiesgo] = 1, "En Riesgo", 
+			    
+			    -- Estado 'Perdido': FlagPerdido = 1
+			    'dwh Fact_AfiliacionEmpresa'[FlagPerdido] = 1, "Perdido", 
+			    
+			    -- Si el cliente está desafiliado: FlagDesafiliado = 1
+			    'dwh Fact_AfiliacionEmpresa'[FlagDesafiliado] = 1, "Desafiliado", 
+			    
+			    -- Si no se cumple ninguna condición, marcar como 'Desconocido'
+			    "Desconocido"
+			)
+			
+			```
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Top3Distritos = ```
+			
+			TOPN(
+			    3, 
+			    SUMMARIZE(
+			        'dwh Dim_Afiliado', 
+			        'dwh Dim_Afiliado'[Distrito], 
+			        "Ranking", 
+			        SUM('dwh Fact_Planes'[TarjetasActivadas])
+			    ), 
+			    [Ranking], 
+			    DESC
+			)
+			```
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'dwh Fact_AfiliacionEmpresa' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    dwh_Fact_AfiliacionEmpresa = ApployaltyDWH{[Schema="dwh",Item="Fact_AfiliacionEmpresa"]}[Data]
+				in
+				    dwh_Fact_AfiliacionEmpresa
+

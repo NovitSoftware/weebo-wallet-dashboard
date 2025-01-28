@@ -1,0 +1,84 @@
+﻿table 'stage StgFactPlanes'
+
+	column KeyFechaCorte
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: KeyFechaCorte
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyEmpresa
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyEmpresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column TarjetasAdquiridasAcumulado
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: TarjetasAdquiridasAcumulado
+
+		annotation SummarizationSetBy = Automatic
+
+	column TarjetasActivadasAcumulado
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: TarjetasActivadasAcumulado
+
+		annotation SummarizationSetBy = Automatic
+
+	column TarjetasAdquiridas
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: TarjetasAdquiridas
+
+		annotation SummarizationSetBy = Automatic
+
+	column TarjetasActivadas
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: TarjetasActivadas
+
+		annotation SummarizationSetBy = Automatic
+
+	column SaldoTarjetasAdquiridas
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: SaldoTarjetasAdquiridas
+
+		annotation SummarizationSetBy = Automatic
+
+	column StickersEntregadosAcumulado
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: StickersEntregadosAcumulado
+
+		annotation SummarizationSetBy = Automatic
+
+	column StickersEntregados
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: StickersEntregados
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'stage StgFactPlanes' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    stage_StgFactPlanes = ApployaltyDWH{[Schema="stage",Item="StgFactPlanes"]}[Data]
+				in
+				    stage_StgFactPlanes
+

@@ -1,8 +1,7 @@
--- 2.3 Ranking por Distrito: Los 3 primeros distritos que tiene más trajetas activadas.
--- Gráfica: Sin chart.
-select top 3 u.distrito, count(t.activo) as 'cantidad de tarjetas activo'
-from dbo.usuario u
-inner join dbo.tarjeta t on u.idusuario = t.fkusuario
-where t.activo = 's'
-group by u.distrito 
-order by 'cantidad activo' desc;
+SELECT top 3 da.Distrito, SUM(fp.TarjetasActivadas) AS 'Ranking'
+FROM dwh.Fact_AfiliacionEmpresa fae
+INNER JOIN dwh.Fact_Planes fp ON fp.KeyEmpresa = fae.KeyEmpresa
+INNER JOIN dwh.Dim_Afiliado da ON fae.KeyAfiliado = da.keyAfiliado
+WHERE fae.FlagActivo = 1
+GROUP BY da.Distrito
+ORDER BY 'Ranking' DESC ;

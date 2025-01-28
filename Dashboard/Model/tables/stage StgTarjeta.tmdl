@@ -1,0 +1,95 @@
+﻿table 'stage StgTarjeta'
+
+	column idtarjeta
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: idtarjeta
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo
+		dataType: string
+		summarizeBy: none
+		sourceColumn: codigo
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkusuario
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: fkusuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkcliente
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: fkcliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkcamp
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: fkcamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column feccreacion
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: feccreacion
+
+		variation Variation
+			isDefault
+			relationship: f779b1fe-d163-40d8-87d4-20691193ceaf
+			defaultHierarchy: LocalDateTable_a578a377-6b8e-4086-be0c-2963177bd67a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column completo
+		dataType: string
+		summarizeBy: none
+		sourceColumn: completo
+
+		annotation SummarizationSetBy = Automatic
+
+	column activo
+		dataType: string
+		summarizeBy: none
+		sourceColumn: activo
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecactivo
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: fecactivo
+
+		variation Variation
+			isDefault
+			relationship: 6a62b46a-d8f9-491d-a033-b91d45264cdb
+			defaultHierarchy: LocalDateTable_d236e980-8e63-4668-bae9-5a92abd25f45.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'stage StgTarjeta' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    stage_StgTarjeta = ApployaltyDWH{[Schema="stage",Item="StgTarjeta"]}[Data]
+				in
+				    stage_StgTarjeta
+

@@ -1,192 +1,673 @@
-﻿relationship c4988a09-80ee-9c9e-428f-9bf971d47a32
-	fromColumn: tarjeta.fkusuario
-	toColumn: usuario.idusuario
-
-relationship 89aaafe5-7dee-42c0-8562-d3ecf25bb9e2
+﻿relationship b7d73598-2f16-4954-9fbe-584f11ddb162
 	joinOnDateBehavior: datePartOnly
-	fromColumn: Calendario.Date
-	toColumn: LocalDateTable_7a67aab9-fdcf-48b9-b284-eb9e2a6fc8c0.Date
+	fromColumn: 'dwh Dim_Afiliado'.FechaNacimiento
+	toColumn: LocalDateTable_b16079f4-ce23-481b-8d85-f0a903773442.Date
 
-relationship 44c24212-b7f6-3f4e-14a3-8f3d24533ef6
-	fromColumn: tarjeta.fecactivo
-	toColumn: Calendario.Date
-
-relationship 433915f3-bfd5-4c94-ae94-21af78a8923d
+relationship e3cf362d-f712-42ed-8b2d-d87e044d1e1b
 	joinOnDateBehavior: datePartOnly
-	fromColumn: admin.fecreg
-	toColumn: LocalDateTable_5577e142-ebf7-4e57-a193-0704fb8e8237.Date
+	fromColumn: 'dwh Dim_Afiliado'.FechaRegistroWebo
+	toColumn: LocalDateTable_f1bbd821-8bff-4fb9-8e1e-3abd95b52f67.Date
 
-relationship f81ab0b4-913d-446a-ae28-50299841a6ec
+relationship ad3edfbe-2842-4bbe-83db-57dadf411806
 	joinOnDateBehavior: datePartOnly
-	fromColumn: admin.fecact
-	toColumn: LocalDateTable_0a4d191d-56eb-43d7-817d-9d9076f88a12.Date
+	fromColumn: 'dwh Dim_Afiliado'.FechaNuevoWebo
+	toColumn: LocalDateTable_92ed296d-b486-42d1-a42a-f05a05c7b035.Date
 
-relationship e175c37f-6fae-41b5-aeeb-1b1a8c442527
+relationship ea7d57c7-0ff1-4916-b89d-f7f1d89050b7
 	joinOnDateBehavior: datePartOnly
-	fromColumn: adqtarjeta.fecadq
-	toColumn: LocalDateTable_a2b7fc0b-240d-441b-9172-72531ad7891d.Date
+	fromColumn: 'dwh Dim_Afiliado'.FechaBajaWebo
+	toColumn: LocalDateTable_e0591019-551d-4aec-9e7d-289b0dfcccf2.Date
 
-relationship 94bf30f7-a0d1-47d7-adb4-c5ee9c1431ed
+relationship 24f8c997-c4e2-4db1-a166-71b3a048bce2
 	joinOnDateBehavior: datePartOnly
-	fromColumn: afiliacion.fecin
-	toColumn: LocalDateTable_9e3cdf89-5f9e-4fbd-bbce-898d4cfa7d20.Date
+	fromColumn: 'dwh Dim_Afiliado'.FechaActivoWebo
+	toColumn: LocalDateTable_606fc6db-dabe-49a3-a207-26d299bcbaf9.Date
 
-relationship af912721-d8e5-4efd-bc5e-fc8309c19878
+relationship 4e3367e5-5457-4d50-ac7a-17bd97c895b9
 	joinOnDateBehavior: datePartOnly
-	fromColumn: afiliacion.fecout
-	toColumn: LocalDateTable_21d4017a-4d17-447b-afb3-8d606731f1d4.Date
+	fromColumn: 'dwh Dim_Afiliado'.FechaUltimoConsumoWebo
+	toColumn: LocalDateTable_7e07d987-b4ee-472e-b071-3059a8e15cfd.Date
 
-relationship 754d6673-6cb9-415a-9c74-07d05b96147f
+relationship 204f0d57-efd2-4811-8835-c94de00f7dc2
 	joinOnDateBehavior: datePartOnly
-	fromColumn: campania.feccreacion
-	toColumn: LocalDateTable_698459a0-0f6b-4c53-924a-e2698b07add5.Date
+	fromColumn: 'dwh Dim_Cupon'.FechaActivacion
+	toColumn: LocalDateTable_71432346-d4f9-4a80-87b3-d611168f8da4.Date
 
-relationship 8e4276bb-b23b-4b37-bfcd-a7d0d8c08d66
+relationship 9a2aff1f-e8de-4f5c-82c1-c174e03248e6
 	joinOnDateBehavior: datePartOnly
-	fromColumn: campania.fecact
-	toColumn: LocalDateTable_a9f047b8-f31b-4069-9660-fac61131fbc6.Date
+	fromColumn: 'dwh Dim_Cupon'.FechaUso
+	toColumn: LocalDateTable_8de66995-9a14-4118-b13d-76298415b6d0.Date
 
-relationship 02555c90-f806-4777-becf-e151405e89b5
+relationship 3c17c15d-83bc-4d4f-bc96-fdf11d793795
 	joinOnDateBehavior: datePartOnly
-	fromColumn: cliente.fecreg
-	toColumn: LocalDateTable_edafacb7-ed36-4b3e-a071-a86909b97551.Date
+	fromColumn: 'dwh Dim_CuponPromocional'.FechaCreacion
+	toColumn: LocalDateTable_5e27b92a-03fb-4fae-b683-58b58fa6a631.Date
 
-relationship 3f5c2103-54de-4c20-9bef-20204c26792e
+relationship a626e269-8a6c-4153-a77b-e3422230d526
 	joinOnDateBehavior: datePartOnly
-	fromColumn: cliplan.fecreg
-	toColumn: LocalDateTable_cb50ae68-dd87-48ff-94f0-a74aab4125a0.Date
+	fromColumn: 'dwh Dim_CuponPromocional'.FechaUso
+	toColumn: LocalDateTable_19a6f2a5-4f81-4296-85bc-b6f1e48237ec.Date
 
-relationship 12478de8-df32-4718-a63e-f2d5dd47bbd0
+relationship 5aa1f64a-9eb3-4eef-b12a-318cecd9b9d1
 	joinOnDateBehavior: datePartOnly
-	fromColumn: cupon.feccreacion
-	toColumn: LocalDateTable_a6922533-6b3d-48ed-9862-edc65ad6158a.Date
+	fromColumn: 'dwh Dim_Programa'.FechaCreacion
+	toColumn: LocalDateTable_81c5a064-b774-4bd7-85fb-d1c11104ed78.Date
 
-relationship 0105a9ce-4a54-4cdc-907c-e90b414f8797
+relationship 5bfcb04a-d631-45d0-8504-8819d5793e72
 	joinOnDateBehavior: datePartOnly
-	fromColumn: cupon.fechauso
-	toColumn: LocalDateTable_87a8294d-d78f-4106-a952-1f536bbcd882.Date
+	fromColumn: 'dwh Dim_Promocion'.FechaInicio
+	toColumn: LocalDateTable_ac570e5f-3d3f-4aff-9458-1567fdc1e871.Date
 
-relationship 47ebe53c-a1b1-4309-873c-7a54153229d3
+relationship 7c278ed9-93ed-4e56-8fac-78e138ddf76f
 	joinOnDateBehavior: datePartOnly
-	fromColumn: cuponpromo.feccreacion
-	toColumn: LocalDateTable_f3f6fc83-9826-4ef4-9bd9-1ac29a1c90dd.Date
+	fromColumn: 'dwh Dim_Promocion'.FechaFin
+	toColumn: LocalDateTable_0c71f312-5d50-4253-9cf6-19b09782b930.Date
 
-relationship ddd805fc-2f0f-411f-8fd6-333b57bd3e73
+relationship 147bdb58-d5bc-47af-8e17-24c5b42cff28
 	joinOnDateBehavior: datePartOnly
-	fromColumn: cuponpromo.fechauso
-	toColumn: LocalDateTable_d559f9f4-66fd-47b2-a650-3cae8bd24bed.Date
+	fromColumn: 'dwh Dim_Tarjeta'.FechaCreacion
+	toColumn: LocalDateTable_d0f81d21-32c4-440b-92bd-b255d882f733.Date
 
-relationship 2f2245f8-2509-4dab-8506-50ba81ea3c33
+relationship 8d96097c-2685-48b2-b90c-b3b5e9bf1496
 	joinOnDateBehavior: datePartOnly
-	fromColumn: mensaje.fecenvio
-	toColumn: LocalDateTable_7193564c-9b65-4ca3-9d0b-2dddcb1a80d6.Date
+	fromColumn: 'dwh Dim_Tarjeta'.FechaActivo
+	toColumn: LocalDateTable_1ade2857-01bd-49f9-8176-08e476f004c9.Date
 
-relationship ac60e9e5-88f6-4bc7-a943-f7d44af0fdaa
+relationship 4bf1c8d9-2baa-4ef6-8f30-e1ffc5bd4d13
 	joinOnDateBehavior: datePartOnly
-	fromColumn: novedad.fecini
-	toColumn: LocalDateTable_29058546-95ed-4048-a8e8-259c963353ee.Date
+	fromColumn: 'dwh Dim_Tiempo'.Fecha
+	toColumn: LocalDateTable_f94d1f0f-749b-483d-9f62-707571ef4651.Date
 
-relationship 9298ba72-b74c-472f-abce-f3f34814d04a
+relationship 259d77cc-f57e-4479-af30-b7319154057b
 	joinOnDateBehavior: datePartOnly
-	fromColumn: novedad.fecfin
-	toColumn: LocalDateTable_84c3bc6e-4e03-4ec8-a4fe-785ed0872d20.Date
+	fromColumn: 'dwh Dim_Tienda'.FechaInicio
+	toColumn: LocalDateTable_236fa5cd-3b21-4f5d-80dc-7399d5ecd4ef.Date
 
-relationship 2921bee4-ee93-4e08-a766-ade3b98ead98
+relationship 1c8e6114-8d5d-44dd-8004-b9974eb4fca9
 	joinOnDateBehavior: datePartOnly
-	fromColumn: promocion.fecini
-	toColumn: LocalDateTable_80e68c8d-2490-4d5d-b971-e064e90e10ee.Date
+	fromColumn: 'dwh Fact_AfiliacionEmpresa'.FechaRegistro
+	toColumn: LocalDateTable_0d0b0e06-c489-4071-a2fd-05897ae5ab2b.Date
 
-relationship 1ec684bf-4705-44b2-9c1b-7c5167c128e4
+relationship 4d58a27b-6f31-4696-bfb0-5c91258d0b3c
 	joinOnDateBehavior: datePartOnly
-	fromColumn: promocion.fecfin
-	toColumn: LocalDateTable_3381340c-1bcf-46e6-9059-e826e6b249bc.Date
+	fromColumn: 'dwh Fact_AfiliacionEmpresa'.FechaBaja
+	toColumn: LocalDateTable_7f10cd51-dbbb-47ad-aa06-39b9903bad03.Date
 
-relationship e8349f62-331e-485b-8c39-f476fad28ee1
+relationship 496b1526-18eb-4efa-bd30-ee1e22357496
 	joinOnDateBehavior: datePartOnly
-	fromColumn: pushnot.fechaing
-	toColumn: LocalDateTable_d2079a95-f611-4679-a158-bfa34d494345.Date
+	fromColumn: 'dwh Fact_AfiliacionEmpresa'.FechaActivo
+	toColumn: LocalDateTable_823649f6-7edc-4fd3-93d1-2d0b65ff83e3.Date
 
-relationship 5c2af341-6d75-420c-96f3-3796e0e66747
+relationship bfff47e0-3790-4e0f-be96-4698d44b2e99
 	joinOnDateBehavior: datePartOnly
-	fromColumn: pushnot.fechoraenv
-	toColumn: LocalDateTable_6050f303-0b90-4cd5-9c81-b04dded25957.Date
+	fromColumn: 'dwh Fact_AfiliacionEmpresa'.FechaUltimoConsumo
+	toColumn: LocalDateTable_b5372a83-e6da-4043-b573-d5482746ce40.Date
 
-relationship 0d566f89-f98d-4372-8a56-2d3418332879
+relationship b715f961-87f3-4547-873f-62f50bb92dbe
 	joinOnDateBehavior: datePartOnly
-	fromColumn: sesion.fecini
-	toColumn: LocalDateTable_7bf5b4d7-fd00-4396-be91-37225f53ea89.Date
+	fromColumn: 'dwh Fact_AfiliacionEmpresa'.FechaPerdido
+	toColumn: LocalDateTable_e5fd9282-be07-4aa1-a626-a5643cac1451.Date
 
-relationship 554803a1-2856-4967-a62c-187228a2f680
+relationship 4bd07c61-1d2c-4eae-a8da-5f430f10f56a
 	joinOnDateBehavior: datePartOnly
-	fromColumn: smsnot.fechaing
-	toColumn: LocalDateTable_a4d1bbf8-66d2-406f-ac9f-c6f8a22b87a8.Date
+	fromColumn: 'dwh Fact_AfiliacionWebo'.FechaActivo
+	toColumn: LocalDateTable_08572ed4-491e-4376-a213-08b4bbf9bddf.Date
 
-relationship d26bbec4-855d-4cf6-926b-1c29a8f379bb
+relationship d46c527a-2068-43ad-8784-5000d87815ee
 	joinOnDateBehavior: datePartOnly
-	fromColumn: smsnot.fechoraenv
-	toColumn: LocalDateTable_f3d664db-6fae-40ea-b553-3a7bd30aecf7.Date
+	fromColumn: 'dwh Fact_AfiliacionWebo'.FechaUltimoConsumo
+	toColumn: LocalDateTable_b6c4582b-02d1-4507-8e2b-3cf690eb27e9.Date
 
-relationship 2f33a84a-601e-4b02-8e15-2c1dff41715a
+relationship 6e80a370-a190-4ee7-be5b-8361f320bcd4
 	joinOnDateBehavior: datePartOnly
-	fromColumn: sticker.fecha
-	toColumn: LocalDateTable_8035d952-da92-4a87-b3e4-50d149bf7670.Date
+	fromColumn: 'dwh Fact_Cupon'.FechaCreacion
+	toColumn: LocalDateTable_7890a3ce-bcc2-43c1-8a93-bb606cae985d.Date
 
-relationship b0e28d3b-f3d7-42fc-aaab-0b1771bb7999
+relationship 9e178f90-5bf2-4642-915e-198d358273b6
 	joinOnDateBehavior: datePartOnly
-	fromColumn: sticker.ultvis
-	toColumn: LocalDateTable_37aeb087-d9df-4777-8087-31a23f2bb8a6.Date
+	fromColumn: 'dwh Fact_Cupon'.FechaUso
+	toColumn: LocalDateTable_f3ebc67f-fcd8-4fdd-87ee-7defd885046c.Date
 
-relationship 65b42661-b65c-4579-884c-cfba9a9912b3
+relationship 8d534bd9-01ee-4c65-8df4-98007da70965
 	joinOnDateBehavior: datePartOnly
-	fromColumn: tarjeta.feccreacion
-	toColumn: LocalDateTable_69854cb2-12bb-42fe-a3ce-379ee8b82d0b.Date
+	fromColumn: 'dwh Fact_Cupon'.FechaActivacion
+	toColumn: LocalDateTable_b6b5a36c-377b-4033-9506-fe5d43f4f960.Date
 
-relationship 3ca0e152-2856-4e92-8305-f6bedec3ad76
+relationship e6d1375c-82ca-4873-bbad-2fff50fa0a5d
 	joinOnDateBehavior: datePartOnly
-	fromColumn: tienda.fecin
-	toColumn: LocalDateTable_53065729-2240-43ef-8de4-273dd0171067.Date
+	fromColumn: 'dwh Fact_Promociones'.FechaCreacion
+	toColumn: LocalDateTable_8344b2c1-39ef-4c2d-a4e9-f966fd4fa649.Date
 
-relationship 8a9b943b-3cd3-44a5-ba87-fb075e30a5aa
+relationship bafefc67-904d-4dec-bb4c-e544667b110d
 	joinOnDateBehavior: datePartOnly
-	fromColumn: tracking_stickers.fecha
-	toColumn: LocalDateTable_fdcbeae9-95ad-4b44-b523-f807ee3c4412.Date
+	fromColumn: 'dwh Fact_Promociones'.FechaUso
+	toColumn: LocalDateTable_95866b5e-6ad7-40fe-af8b-b8b28a5fa3dc.Date
 
-relationship a7fbf875-116a-499a-8d84-f2e089c57241
+relationship 987c67aa-4b00-4b13-9567-f8c0a3870f75
 	joinOnDateBehavior: datePartOnly
-	fromColumn: transaccion.fecha
-	toColumn: LocalDateTable_41fe76cb-204d-45ef-9e30-30825d137fdd.Date
+	fromColumn: 'stage StgAfiliacion'.fecin
+	toColumn: LocalDateTable_4b9f833d-7c4c-4c43-a50b-2a94af05c133.Date
 
-relationship 44e10f56-6e47-4180-ada9-1b39c11fa510
+relationship b8215461-4ae2-4c1b-b368-6b534664dc57
 	joinOnDateBehavior: datePartOnly
-	fromColumn: usuario.fecnac
-	toColumn: LocalDateTable_c6c0a4ce-bb3b-412f-a178-e3e814d6a61a.Date
+	fromColumn: 'stage StgAfiliacion'.fecout
+	toColumn: LocalDateTable_ef8012a5-c822-4162-97bb-588e13b782a1.Date
 
-relationship 0eba0e9b-e3fe-445a-ba21-bac51469bd20
+relationship 856b5052-4d3e-4da2-8a86-026ba4fe56bf
 	joinOnDateBehavior: datePartOnly
-	fromColumn: usuario.fecreg
-	toColumn: LocalDateTable_c111922e-03fa-4a9d-86c5-64f09f36203a.Date
+	fromColumn: 'stage StgCortesAfiliadosEmpresa'.FechaRegistro
+	toColumn: LocalDateTable_59e141d3-6a18-4c20-b2f2-7310a72c9451.Date
 
-relationship 77f1f410-776c-41f6-9237-65c52c1a3493
+relationship 5af34a6f-7a16-4819-83f5-113be38e6b4e
 	joinOnDateBehavior: datePartOnly
-	fromColumn: usuario.fecdes
-	toColumn: LocalDateTable_891825be-d977-4fbb-aa54-aaffce97bba6.Date
+	fromColumn: 'stage StgCortesAfiliadosEmpresa'.FechaBaja
+	toColumn: LocalDateTable_69460373-c62d-412f-8f59-66916f22ac5c.Date
 
-relationship cde5d8cc-d783-4428-8c5e-8e8523eb2080
+relationship 2458dab4-566e-48bd-baab-b050c273e71c
 	joinOnDateBehavior: datePartOnly
-	fromColumn: usuario.fecnuevo
-	toColumn: LocalDateTable_f5deaa01-6cfe-458c-b390-0874c1bde1fe.Date
+	fromColumn: 'stage StgCortesAfiliadosEmpresa'.FechaActivo
+	toColumn: LocalDateTable_acc254f6-f330-4eab-a9a9-de5452d7b70c.Date
 
-relationship 5a5c9754-36d9-4fe5-a3b0-eced1cb8c166
+relationship f63b7655-088e-49bb-afa5-6664a756b4b9
 	joinOnDateBehavior: datePartOnly
-	fromColumn: validar.fecha
-	toColumn: LocalDateTable_2b82745f-5620-4c73-a2c5-2cdfa743b507.Date
+	fromColumn: 'stage StgCortesAfiliadosEmpresa'.FechaUltimoConsumo
+	toColumn: LocalDateTable_6a6a8671-0f99-4394-9dc4-59601cf45aad.Date
 
-relationship b273ccc4-9685-4504-ac54-112027880300
+relationship 59058462-bca8-4662-8900-9a5b8aa29f17
 	joinOnDateBehavior: datePartOnly
-	fromColumn: CuponesCombinados.FechaUso
-	toColumn: LocalDateTable_a9d0d91a-a847-4850-9612-65eb6d654f84.Date
+	fromColumn: 'stage StgCortesAfiliadosEmpresa'.FechaRegistro2
+	toColumn: LocalDateTable_03df451d-ff68-4124-86fa-1e7a3b0f1eb1.Date
 
-relationship 55531e61-53af-fbbd-2a54-07d7e9682eab
-	fromColumn: sticker.fkusuario
-	toColumn: usuario.idusuario
+relationship d6bb2ac8-a651-4dca-b0b5-c8b65cc0c94b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCortesAfiliadosEmpresa'.FechaBaja2
+	toColumn: LocalDateTable_7526b854-6cde-4f28-a7b8-a3a0b8536ba0.Date
+
+relationship 8e765b83-297c-46d6-baf8-fe6cf5b18cec
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCortesAfiliadosEmpresa'.FechaPerdido
+	toColumn: LocalDateTable_c6d9d589-6121-44ae-85ac-8bdc3580ca6a.Date
+
+relationship b6bb65c8-6012-4090-86ef-45d7c2b8f848
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCortesAfiliadosWebo'.FechaCorte
+	toColumn: LocalDateTable_5cb56f33-1598-4ac1-aa33-5305b9f6aa12.Date
+
+relationship 73304c3a-50de-47ef-be21-b28280d4b838
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCortesAfiliadosWebo'.FechaRegistroWebo
+	toColumn: LocalDateTable_b06a6a2a-6473-412f-b868-3e615d40ff69.Date
+
+relationship 55630f02-85a0-4e22-ace1-dcec7b3e3945
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCortesAfiliadosWebo'.FechaNuevoWebo
+	toColumn: LocalDateTable_207316a1-c0d8-4d2f-9f8f-dbaa25cfba48.Date
+
+relationship 61c94c5f-219c-4fe9-b9ae-5e1e2c7ae3b8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCortesAfiliadosWebo'.FechaBajaWebo
+	toColumn: LocalDateTable_5bb8bd1c-7a27-4c7f-8749-2810a92b4a72.Date
+
+relationship b7481f34-eaf7-4e95-b060-a66db1246add
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCortesAfiliadosWebo'.FechaActivo
+	toColumn: LocalDateTable_97e23106-1ce0-42ba-8c8f-312ee46d0974.Date
+
+relationship e1df1d00-5c0c-4872-877f-7aa53a670ee6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCortesAfiliadosWebo'.FechaUltimoConsumo
+	toColumn: LocalDateTable_7530b417-cc0a-415c-85ed-3f0b0b38e1d6.Date
+
+relationship 16401676-6629-43c8-acd2-b2f8a292bfbf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCortesAfiliadosWebo'.FechaNuevo2
+	toColumn: LocalDateTable_cb1a18c5-e005-4b38-a572-0665d7af4923.Date
+
+relationship 1f20801e-d299-452f-90e7-f3d0b24f9661
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCortesAfiliadosWebo'.FechaBaja2
+	toColumn: LocalDateTable_4a85ffde-078d-48dc-ad9a-9273b14fe555.Date
+
+relationship 07336957-8c87-47f8-ad44-9907de2b74a0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCortesCupon'.FechaCorte
+	toColumn: LocalDateTable_d6696c0f-9131-45d6-b987-ca68bea52f1e.Date
+
+relationship 02a7e20e-3747-4609-906f-818ab705c991
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCortesCupon'.FechaCreacion
+	toColumn: LocalDateTable_29237ad0-80aa-489a-aeeb-abe2f976e86a.Date
+
+relationship 827ea060-ef17-4e35-86f3-cb52fbde0ed3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCortesCupon'.FechaActivacion
+	toColumn: LocalDateTable_5aa3290b-15ac-469d-93d3-9f997d987ea9.Date
+
+relationship 30d2fb3e-c245-44b1-bac6-f087cde24628
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCortesCupon'.FechaUso
+	toColumn: LocalDateTable_ca5bf185-b7bb-4629-ae24-ae79e25e190d.Date
+
+relationship d7398b3c-1c43-47a3-a7ea-969d69aefa7e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCortesCupon'.FechaAct2
+	toColumn: LocalDateTable_5095f11d-a2fd-447c-bb14-6c07343341d0.Date
+
+relationship 03b4f1b9-93b2-4a20-9078-ed12ffe8c334
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCortesCupon'.FechaUso2
+	toColumn: LocalDateTable_578ae09c-87b4-42b5-80d4-2037e92edcd0.Date
+
+relationship a5eb4ede-e67d-424e-9f5e-5a348ecc2d38
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCortesPlanes'.FechaCorte
+	toColumn: LocalDateTable_ca9d4f75-87b9-489d-92fb-24ca7b59a358.Date
+
+relationship 411e708a-1cc4-40a0-875d-f4dfc1e5474f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCortesPromociones'.FechaCorte
+	toColumn: LocalDateTable_28ab5ae6-e6fd-496b-8fcb-d13fca7018e7.Date
+
+relationship b87a7b47-f07a-4ec0-93a0-7352e2f1992a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCortesPromociones'.FechaCreacion2
+	toColumn: LocalDateTable_cbabcc04-161c-436f-8d71-3cf258bfb06c.Date
+
+relationship 25f5835e-1cc7-40dc-8e7b-70bcb10821d3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCortesPromociones'.FechaUso2
+	toColumn: LocalDateTable_7d8a7b27-8fe5-42f3-9505-7947ca25d975.Date
+
+relationship d7495e5d-733e-4041-9194-2227b1c0e33b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCupon'.feccreacion
+	toColumn: LocalDateTable_b756d1fd-db26-4709-8510-79da0cbe7ea4.Date
+
+relationship 57bbe58e-d2a2-411b-b68a-d062b7bf51b9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCupon'.fechauso
+	toColumn: LocalDateTable_c74da274-e7f7-4d38-8f4c-4d90c6384bd2.Date
+
+relationship d37b9b02-662c-4639-9997-05f5783bae57
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCuponPromocional'.feccreacion
+	toColumn: LocalDateTable_a5d837b1-7632-4bc2-90d1-e264478a839b.Date
+
+relationship 8d997279-507f-4a95-aa83-76116ee53781
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgCuponPromocional'.fechauso
+	toColumn: LocalDateTable_5b812350-1001-4131-a95f-e514f6d50599.Date
+
+relationship 7c40cf3b-d2f9-4bd6-80d4-7b1841535eca
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgFactAfiliacionEmpresa'.FechaRegistro
+	toColumn: LocalDateTable_5c2a2ff7-9224-4eb4-9a7b-106a5404b698.Date
+
+relationship 887e9f6e-a6a9-4389-86ca-b56a6570d0af
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgFactAfiliacionEmpresa'.FechaBaja
+	toColumn: LocalDateTable_1fb757da-9b31-4dcd-b4f8-447353308f17.Date
+
+relationship e21141d8-a43d-4c41-aa8c-fcae9e34d86f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgFactAfiliacionEmpresa'.FechaActivo
+	toColumn: LocalDateTable_00a19f50-8711-414b-ae4d-886ae1abdcfa.Date
+
+relationship 642b9ea7-2118-4083-9f47-c5569ac478bd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgFactAfiliacionEmpresa'.FechaUltimoConsumo
+	toColumn: LocalDateTable_5d51fbba-626c-4c4e-aa22-e7c8e5271db5.Date
+
+relationship 58e79022-0c18-47c3-9b51-19cae4a58673
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgFactAfiliacionEmpresa'.FechaPerdido
+	toColumn: LocalDateTable_23552a55-18e3-466c-955a-585a83155cba.Date
+
+relationship 281ab438-568c-4738-9e63-fb714e9e6873
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgFactAfiliacionWebo'.FechaActivo
+	toColumn: LocalDateTable_fa6cd8bc-eca4-488d-ab14-e5349b84487b.Date
+
+relationship b7a613f1-34e1-4a92-8f5d-373b47d016d3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgFactAfiliacionWebo'.FechaUltimoConsumo
+	toColumn: LocalDateTable_f795e24d-a35d-4710-8c9e-e3cadb09c2de.Date
+
+relationship 2af8b517-698e-4e07-8b46-e564aee9f587
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgFactCupon'.FechaCreacion
+	toColumn: LocalDateTable_fd4cd53d-e2cf-4c92-a0d7-8b7630de4bbe.Date
+
+relationship b876e72d-7483-47f5-ad8b-2320c1b76bad
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgFactCupon'.FechaUso
+	toColumn: LocalDateTable_ba95ad58-a0d0-44bf-b25e-abbfe2666d1f.Date
+
+relationship 8d789734-031c-46b8-98f5-c4827a854f72
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgFactCupon'.FechaActivacion
+	toColumn: LocalDateTable_f6dea298-4183-4408-b86c-6e5d23ac73c4.Date
+
+relationship b94cd85b-664e-4f67-b8fe-a59bd0705b59
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgFactPromociones'.FechaCreacion
+	toColumn: LocalDateTable_790ca190-7629-41ad-beea-c82f55a1ff1b.Date
+
+relationship 6e91d4ce-51bc-4639-9d78-93ad0bc1ac13
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgFactPromociones'.FechaUso
+	toColumn: LocalDateTable_fd654e55-22fb-4816-80e3-c4c8e72c233b.Date
+
+relationship e41a33c9-6cd2-4c6f-a7c4-d426d0b7f143
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgLog'.FechaInicio
+	toColumn: LocalDateTable_dd96166c-af6a-4795-b8fc-2ae0101c84f8.Date
+
+relationship 48c88257-6ea9-4d89-9d5b-d344d0d20dac
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgLog'.FechaFin
+	toColumn: LocalDateTable_23c14dfe-0d04-4db4-acb9-d1e65e685505.Date
+
+relationship 7d6e017e-60fb-4a9e-ba0a-6027069713a4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgPrograma'.feccreacion
+	toColumn: LocalDateTable_9a536c28-8634-4a19-a5c3-c2c53fec5972.Date
+
+relationship 615bceb9-0463-427d-91e8-6a3833a4cae9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgPrograma'.fecact
+	toColumn: LocalDateTable_3c7e7bda-6593-4932-a2ff-d9dd3e8e50bb.Date
+
+relationship 8f6a7439-cf67-4815-81ed-dba6b288a8a3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgPromocion'.fecini
+	toColumn: LocalDateTable_f4b20d5c-fd1a-4a05-b827-305fda7d1d2a.Date
+
+relationship d89e6577-f9f8-4234-a1a6-703494b01851
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgPromocion'.fecfin
+	toColumn: LocalDateTable_52b8723b-ef78-49f0-a12e-2b4af0e62630.Date
+
+relationship f779b1fe-d163-40d8-87d4-20691193ceaf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgTarjeta'.feccreacion
+	toColumn: LocalDateTable_a578a377-6b8e-4086-be0c-2963177bd67a.Date
+
+relationship 6a62b46a-d8f9-491d-a033-b91d45264cdb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgTarjeta'.fecactivo
+	toColumn: LocalDateTable_d236e980-8e63-4668-bae9-5a92abd25f45.Date
+
+relationship 810333b3-b8f6-433d-a546-d8543705b0b2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgTienda'.fecin
+	toColumn: LocalDateTable_d60d6d30-ef39-4770-9fd0-f811188c1e14.Date
+
+relationship 3e16f1f8-be1e-4ba9-962b-3eeba06f99a5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgTrackingStickers'.fecha
+	toColumn: LocalDateTable_d84e4e37-b42c-409e-a24d-345433cf5ceb.Date
+
+relationship 7df8fbc6-6dfc-4537-895f-6c14fb18425a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'stage StgTransaccion'.fecha
+	toColumn: LocalDateTable_8847a136-b086-45ca-b5b1-51d12c944c0b.Date
+
+relationship AutoDetected_3a8f7c32-3124-4d7e-9de7-602a10535fa8
+	fromColumn: 'dwh Fact_AfiliacionEmpresa'.KeyAfiliado
+	toColumn: 'dwh Dim_Afiliado'.KeyAfiliado
+
+relationship AutoDetected_7aed477f-59b6-4e5e-8809-9445799a8b6b
+	fromColumn: 'dwh Fact_AfiliacionWebo'.KeyAfiliado
+	toColumn: 'dwh Dim_Afiliado'.KeyAfiliado
+
+relationship AutoDetected_0d573bff-0567-4a69-a295-881d26c51c37
+	fromColumn: 'dwh Fact_Cupon'.KeyAfiliado
+	toColumn: 'dwh Dim_Afiliado'.KeyAfiliado
+
+relationship AutoDetected_59b895ec-af91-4adc-8e9c-7af84d08de19
+	fromColumn: 'dwh Fact_Facturacion'.KeyAfiliado
+	toColumn: 'dwh Dim_Afiliado'.KeyAfiliado
+
+relationship AutoDetected_04053a47-0ef1-4257-859b-9d2ddcb8cf1a
+	fromColumn: 'dwh Fact_Promociones'.KeyAfiliado
+	toColumn: 'dwh Dim_Afiliado'.KeyAfiliado
+
+relationship AutoDetected_ba51440f-43a2-4f8e-ad03-9c56d4003159
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'stage StgCortesAfiliadosWebo'.KeyAfiliado
+	toColumn: 'dwh Dim_Afiliado'.KeyAfiliado
+
+relationship AutoDetected_03631d78-d1a2-4363-8b09-59913c600d81
+	fromColumn: 'stage StgFactAfiliacionEmpresa'.KeyAfiliado
+	toColumn: 'dwh Dim_Afiliado'.KeyAfiliado
+
+relationship AutoDetected_affb9b48-d1a9-41f8-9693-49a341ad1df0
+	fromColumn: 'stage StgFactAfiliacionWebo'.KeyAfiliado
+	toColumn: 'dwh Dim_Afiliado'.KeyAfiliado
+
+relationship AutoDetected_951e8a67-85d4-42c6-bcb4-27f7230aae51
+	fromColumn: 'stage StgFactCupon'.KeyAfiliado
+	toColumn: 'dwh Dim_Afiliado'.KeyAfiliado
+
+relationship AutoDetected_9d7c7f61-87ee-4db3-914a-9235bb56fbf1
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'stage StgFactFacturacion'.KeyAfiliado
+	toColumn: 'dwh Dim_Afiliado'.KeyAfiliado
+
+relationship AutoDetected_5cc46d7a-fc2f-48c2-b38c-a3e61d42ab83
+	fromColumn: 'stage StgFactPromociones'.KeyAfiliado
+	toColumn: 'dwh Dim_Afiliado'.KeyAfiliado
+
+relationship AutoDetected_e15ec7d5-6e81-4ad8-9bb0-2a76a8f587af
+	fromColumn: 'dwh Fact_Cupon'.KeyCupon
+	toColumn: 'dwh Dim_Cupon'.KeyCupon
+
+relationship AutoDetected_6c3be3bc-907f-4874-80cf-68378e0fb59f
+	fromColumn: 'stage StgFactCupon'.KeyCupon
+	toColumn: 'dwh Dim_Cupon'.KeyCupon
+
+relationship AutoDetected_b7e231b7-414c-41bf-b4fe-7ad369045db9
+	fromColumn: 'dwh Fact_Promociones'.KeyCuponPromocional
+	toColumn: 'dwh Dim_CuponPromocional'.KeyCuponPromocional
+
+relationship AutoDetected_0e6b3285-563e-4bbd-9271-12a3d78f1873
+	fromColumn: 'stage StgFactPromociones'.KeyCuponPromocional
+	toColumn: 'dwh Dim_CuponPromocional'.KeyCuponPromocional
+
+relationship AutoDetected_5e66191d-6857-4598-b393-ffa5c27b31bd
+	fromColumn: 'dwh Fact_AfiliacionEmpresa'.KeyEmpresa
+	toColumn: 'dwh Dim_Empresa'.KeyEmpresa
+
+relationship AutoDetected_53f935d7-3210-4b96-8469-2499f4fa9d73
+	fromColumn: 'dwh Fact_Cupon'.KeyEmpresa
+	toColumn: 'dwh Dim_Empresa'.KeyEmpresa
+
+relationship AutoDetected_9791b2b5-49e8-443b-acfc-7f726f786961
+	fromColumn: 'dwh Fact_Facturacion'.KeyEmpresa
+	toColumn: 'dwh Dim_Empresa'.KeyEmpresa
+
+relationship AutoDetected_c34d22e3-ee4a-41fc-8f19-a9a89f682f0d
+	fromColumn: 'dwh Fact_Planes'.KeyEmpresa
+	toColumn: 'dwh Dim_Empresa'.KeyEmpresa
+
+relationship AutoDetected_ad43bf57-ec0b-46c1-9f49-0773dad40646
+	fromColumn: 'dwh Fact_Promociones'.KeyEmpresa
+	toColumn: 'dwh Dim_Empresa'.KeyEmpresa
+
+relationship AutoDetected_973968df-c89c-4d6f-b46c-daa41321d601
+	fromColumn: 'stage StgFactAfiliacionEmpresa'.KeyEmpresa
+	toColumn: 'dwh Dim_Empresa'.KeyEmpresa
+
+relationship AutoDetected_0323a7a3-09b0-4f80-b4cb-cf5399cb621f
+	fromColumn: 'stage StgFactCupon'.KeyEmpresa
+	toColumn: 'dwh Dim_Empresa'.KeyEmpresa
+
+relationship AutoDetected_620d5bb5-c03b-4e57-9211-78eeab63e871
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'stage StgFactFacturacion'.KeyEmpresa
+	toColumn: 'dwh Dim_Empresa'.KeyEmpresa
+
+relationship AutoDetected_c348db51-76e5-472c-80fd-cca40b22c4b0
+	fromColumn: 'stage StgFactPlanes'.KeyEmpresa
+	toColumn: 'dwh Dim_Empresa'.KeyEmpresa
+
+relationship AutoDetected_382ac5dc-d185-438e-b8fe-f992283a7e7b
+	fromColumn: 'stage StgFactPromociones'.KeyEmpresa
+	toColumn: 'dwh Dim_Empresa'.KeyEmpresa
+
+relationship AutoDetected_67d7d324-cf15-4654-8203-f8c45d1e013c
+	fromColumn: 'dwh Dim_Tienda'.KeyEmpresaAlt
+	toColumn: 'dwh Dim_Empresa'.KeyEmpresaAlt
+
+relationship AutoDetected_049cd32d-d6ba-4d88-8cbc-5a1c6ee2dbb1
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'stage StgEmpresa'.empresa
+	toColumn: 'dwh Dim_Empresa'.Empresa
+
+relationship AutoDetected_58a06717-eb2f-4b0b-bb52-0c6dc6c0ac92
+	fromColumn: 'dwh Fact_Facturacion'.KeyPrograma
+	toColumn: 'dwh Dim_Programa'.KeyPrograma
+
+relationship AutoDetected_f1af99b6-76a4-4fde-9853-8bc073c70b5d
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'stage StgFactFacturacion'.KeyPrograma
+	toColumn: 'dwh Dim_Programa'.KeyPrograma
+
+relationship AutoDetected_d978d48e-78f0-42a4-a744-457c731908d5
+	fromColumn: 'dwh Fact_Facturacion'.KeyPromocion
+	toColumn: 'dwh Dim_Promocion'.KeyPromocion
+
+relationship AutoDetected_6983359e-a514-46c9-b612-b86b3f79599a
+	fromColumn: 'dwh Fact_Promociones'.KeyPromocion
+	toColumn: 'dwh Dim_Promocion'.KeyPromocion
+
+relationship AutoDetected_e8caecb5-a8d9-448d-81a9-c02a2a93d5a7
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'stage StgFactFacturacion'.KeyPromocion
+	toColumn: 'dwh Dim_Promocion'.KeyPromocion
+
+relationship AutoDetected_3c98597d-a7b2-479b-90c1-689b34560416
+	fromColumn: 'stage StgFactPromociones'.KeyPromocion
+	toColumn: 'dwh Dim_Promocion'.KeyPromocion
+
+relationship AutoDetected_19eddb8c-b5bc-4385-8176-020010ec8f73
+	fromColumn: 'dwh Fact_AfiliacionEmpresa'.KeyRangoEdad
+	toColumn: 'dwh Dim_RangoEdad'.KeyRangoEdad
+
+relationship AutoDetected_ffa72a0d-7087-4ace-942e-bc084e05cf87
+	fromColumn: 'dwh Fact_AfiliacionWebo'.KeyRangoEdad
+	toColumn: 'dwh Dim_RangoEdad'.KeyRangoEdad
+
+relationship AutoDetected_b0781e02-a88c-4a40-963d-25fe11f3a02d
+	fromColumn: 'dwh Fact_Cupon'.KeyRangoEdad
+	toColumn: 'dwh Dim_RangoEdad'.KeyRangoEdad
+
+relationship AutoDetected_9f289d9d-e6e8-4b9d-8074-ee85bb44b541
+	fromColumn: 'dwh Fact_Facturacion'.KeyRangoEdad
+	toColumn: 'dwh Dim_RangoEdad'.KeyRangoEdad
+
+relationship AutoDetected_3cd41dc7-a69c-40f0-a855-7b2d174e0e4b
+	fromColumn: 'dwh Fact_Promociones'.KeyRangoEdad
+	toColumn: 'dwh Dim_RangoEdad'.KeyRangoEdad
+
+relationship AutoDetected_a42c10c7-610e-41e2-9e27-6c574e5e9bfe
+	fromColumn: 'stage StgFactAfiliacionEmpresa'.KeyRangoEdad
+	toColumn: 'dwh Dim_RangoEdad'.KeyRangoEdad
+
+relationship AutoDetected_fc691bb3-5ffa-4dc3-8b86-8b8926aa496f
+	fromColumn: 'stage StgFactAfiliacionWebo'.KeyRangoEdad
+	toColumn: 'dwh Dim_RangoEdad'.KeyRangoEdad
+
+relationship AutoDetected_70ded9ea-04da-484a-91dc-945182973c1c
+	fromColumn: 'stage StgFactCupon'.KeyRangoEdad
+	toColumn: 'dwh Dim_RangoEdad'.KeyRangoEdad
+
+relationship AutoDetected_68fdfad1-0f51-46f2-bef2-9588528aaa8d
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'stage StgFactFacturacion'.KeyRangoEdad
+	toColumn: 'dwh Dim_RangoEdad'.KeyRangoEdad
+
+relationship AutoDetected_1ed83967-b868-4bf1-883d-201959fcaf9b
+	fromColumn: 'stage StgFactPromociones'.KeyRangoEdad
+	toColumn: 'dwh Dim_RangoEdad'.KeyRangoEdad
+
+relationship AutoDetected_9b29215d-4e30-482e-8b1e-27a1c4add88d
+	fromColumn: 'dwh Fact_Cupon'.KeyTarjeta
+	toColumn: 'dwh Dim_Tarjeta'.KeyTarjeta
+
+relationship AutoDetected_974afeea-b611-4569-ab4a-bf44a8c1316e
+	fromColumn: 'dwh Fact_Facturacion'.KeyTarjeta
+	toColumn: 'dwh Dim_Tarjeta'.KeyTarjeta
+
+relationship AutoDetected_f9e3cb70-801d-4452-9afb-730a11cd48c6
+	fromColumn: 'stage StgFactCupon'.KeyTarjeta
+	toColumn: 'dwh Dim_Tarjeta'.KeyTarjeta
+
+relationship AutoDetected_cbf0851a-edb5-454a-995b-b9c041ea390e
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'stage StgFactFacturacion'.KeyTarjeta
+	toColumn: 'dwh Dim_Tarjeta'.KeyTarjeta
+
+relationship AutoDetected_089b8e91-5129-4951-8c03-a0eba174b3c1
+	isActive: false
+	fromColumn: 'dwh Fact_Facturacion'.KeyTienda
+	toColumn: 'dwh Dim_Tienda'.KeyTienda
+
+relationship AutoDetected_acc7353e-bf6e-405a-b02b-de5c56c8fc82
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'dwh Dim_Tienda'.KeyTienda
+	toColumn: 'stage StgFactFacturacion'.KeyTienda
+
+relationship AutoDetected_fb1c90e8-d957-4abe-b520-0553c7be5b8b
+	fromColumn: 'stage StgAfiliacion'.fkcliente
+	toColumn: 'stage StgPrograma'.fkcliente
+
+relationship AutoDetected_18bf1cad-6f01-4603-b31e-a7a2962c37b3
+	fromColumn: 'stage StgCupon'.fkcliente
+	toColumn: 'stage StgPrograma'.fkcliente
+
+relationship AutoDetected_4a56698a-1b34-4740-8abc-9217e5f45e70
+	fromColumn: 'stage StgCuponPromocional'.fkcliente
+	toColumn: 'stage StgPrograma'.fkcliente
+
+relationship AutoDetected_8a984ab4-a0e7-4c68-bafe-645b42ecb47c
+	fromColumn: 'stage StgPromocion'.fkcliente
+	toColumn: 'stage StgPrograma'.fkcliente
+
+relationship AutoDetected_31b3b76f-f55f-46c9-99be-43c8e6946bc4
+	fromColumn: 'stage StgTarjeta'.fkcliente
+	toColumn: 'stage StgPrograma'.fkcliente
+
+relationship AutoDetected_b929a7ab-fad9-4bad-bc45-c262ab28361c
+	fromColumn: 'stage StgTienda'.fkcliente
+	toColumn: 'stage StgPrograma'.fkcliente
+
+relationship AutoDetected_5e3c4032-a58a-4f44-be9a-5b2e77e6a94f
+	fromColumn: 'stage StgTrackingStickers'.fkcliente
+	toColumn: 'stage StgPrograma'.fkcliente
+
+relationship AutoDetected_877c94db-a7ef-46df-afac-272c40a01e58
+	fromColumn: 'stage StgTransaccion'.fkcliente
+	toColumn: 'stage StgPrograma'.fkcliente
+
+relationship AutoDetected_6652cdf5-dbdc-4eda-a240-1cd12aa17dda
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'stage StgCupon'.codigo
+	toColumn: 'stage StgTarjeta'.codigo
 

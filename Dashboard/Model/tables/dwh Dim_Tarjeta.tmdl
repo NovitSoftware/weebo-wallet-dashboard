@@ -1,0 +1,65 @@
+﻿table 'dwh Dim_Tarjeta'
+
+	column KeyTarjeta
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyTarjeta
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyTarjetaAlt
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: KeyTarjetaAlt
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tarjeta
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Tarjeta
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaCreacion
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaCreacion
+
+		variation Variation
+			isDefault
+			relationship: 147bdb58-d5bc-47af-8e17-24c5b42cff28
+			defaultHierarchy: LocalDateTable_d0f81d21-32c4-440b-92bd-b255d882f733.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaActivo
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaActivo
+
+		variation Variation
+			isDefault
+			relationship: 8d96097c-2685-48b2-b90c-b3b5e9bf1496
+			defaultHierarchy: LocalDateTable_1ade2857-01bd-49f9-8176-08e476f004c9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'dwh Dim_Tarjeta' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    dwh_Dim_Tarjeta = ApployaltyDWH{[Schema="dwh",Item="Dim_Tarjeta"]}[Data]
+				in
+				    dwh_Dim_Tarjeta
+

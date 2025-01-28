@@ -1,0 +1,112 @@
+﻿table 'stage StgTransaccion'
+
+	column idtrans
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: idtrans
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkadmin
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: fkadmin
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkusuario
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: fkusuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkcamp
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: fkcamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column fktienda
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: fktienda
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkprom
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: fkprom
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkcliente
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: fkcliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column fktarjeta
+		dataType: string
+		summarizeBy: none
+		sourceColumn: fktarjeta
+
+		annotation SummarizationSetBy = Automatic
+
+	column monto
+		dataType: double
+		summarizeBy: sum
+		sourceColumn: monto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column fecha
+		dataType: dateTime
+		formatString: General Date
+		summarizeBy: none
+		sourceColumn: fecha
+
+		variation Variation
+			isDefault
+			relationship: 7df8fbc6-6dfc-4537-895f-6c14fb18425a
+			defaultHierarchy: LocalDateTable_8847a136-b086-45ca-b5b1-51d12c944c0b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column sticker
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: sticker
+
+		annotation SummarizationSetBy = Automatic
+
+	column idconsumo
+		dataType: string
+		summarizeBy: none
+		sourceColumn: idconsumo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'stage StgTransaccion' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    stage_StgTransaccion = ApployaltyDWH{[Schema="stage",Item="StgTransaccion"]}[Data]
+				in
+				    stage_StgTransaccion
+

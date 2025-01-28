@@ -1,0 +1,165 @@
+﻿table 'stage StgCortesCupon'
+
+	column FechaCorte
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaCorte
+
+		variation Variation
+			isDefault
+			relationship: 07336957-8c87-47f8-ad44-9907de2b74a0
+			defaultHierarchy: LocalDateTable_d6696c0f-9131-45d6-b987-ca68bea52f1e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column IdTarjeta
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: IdTarjeta
+
+		annotation SummarizationSetBy = Automatic
+
+	column Codigo
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Codigo
+
+		annotation SummarizationSetBy = Automatic
+
+	column FkUsuario
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FkUsuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column FkCliente
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FkCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaCreacion
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaCreacion
+
+		variation Variation
+			isDefault
+			relationship: 02a7e20e-3747-4609-906f-818ab705c991
+			defaultHierarchy: LocalDateTable_29237ad0-80aa-489a-aeeb-abe2f976e86a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaActivacion
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaActivacion
+
+		variation Variation
+			isDefault
+			relationship: 827ea060-ef17-4e35-86f3-cb52fbde0ed3
+			defaultHierarchy: LocalDateTable_5aa3290b-15ac-469d-93d3-9f997d987ea9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaUso
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaUso
+
+		variation Variation
+			isDefault
+			relationship: 30d2fb3e-c245-44b1-bac6-f087cde24628
+			defaultHierarchy: LocalDateTable_ca5bf185-b7bb-4629-ae24-ae79e25e190d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column IdCupon
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: IdCupon
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vigencia
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: Vigencia
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaAct2
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaAct2
+
+		variation Variation
+			isDefault
+			relationship: d7398b3c-1c43-47a3-a7ea-969d69aefa7e
+			defaultHierarchy: LocalDateTable_5095f11d-a2fd-447c-bb14-6c07343341d0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaUso2
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaUso2
+
+		variation Variation
+			isDefault
+			relationship: 03b4f1b9-93b2-4a20-9078-ed12ffe8c334
+			defaultHierarchy: LocalDateTable_578ae09c-87b4-42b5-80d4-2037e92edcd0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column StickersEntregadosAcumulado
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: StickersEntregadosAcumulado
+
+		annotation SummarizationSetBy = Automatic
+
+	column StickersEntregados
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: StickersEntregados
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'stage StgCortesCupon' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    stage_StgCortesCupon = ApployaltyDWH{[Schema="stage",Item="StgCortesCupon"]}[Data]
+				in
+				    stage_StgCortesCupon
+

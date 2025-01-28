@@ -1,0 +1,156 @@
+﻿table 'stage StgCortesAfiliadosWebo'
+
+	column FechaCorte
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaCorte
+
+		variation Variation
+			isDefault
+			relationship: b6bb65c8-6012-4090-86ef-45d7c2b8f848
+			defaultHierarchy: LocalDateTable_5cb56f33-1598-4ac1-aa33-5305b9f6aa12.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column KeyAfiliado
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyAfiliado
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyAfiliadoAlt
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: KeyAfiliadoAlt
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaRegistroWebo
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaRegistroWebo
+
+		variation Variation
+			isDefault
+			relationship: 73304c3a-50de-47ef-be21-b28280d4b838
+			defaultHierarchy: LocalDateTable_b06a6a2a-6473-412f-b868-3e615d40ff69.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaNuevoWebo
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaNuevoWebo
+
+		variation Variation
+			isDefault
+			relationship: 55630f02-85a0-4e22-ace1-dcec7b3e3945
+			defaultHierarchy: LocalDateTable_207316a1-c0d8-4d2f-9f8f-dbaa25cfba48.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaBajaWebo
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaBajaWebo
+
+		variation Variation
+			isDefault
+			relationship: 61c94c5f-219c-4fe9-b9ae-5e1e2c7ae3b8
+			defaultHierarchy: LocalDateTable_5bb8bd1c-7a27-4c7f-8749-2810a92b4a72.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaActivo
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaActivo
+
+		variation Variation
+			isDefault
+			relationship: b7481f34-eaf7-4e95-b060-a66db1246add
+			defaultHierarchy: LocalDateTable_97e23106-1ce0-42ba-8c8f-312ee46d0974.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaUltimoConsumo
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaUltimoConsumo
+
+		variation Variation
+			isDefault
+			relationship: e1df1d00-5c0c-4872-877f-7aa53a670ee6
+			defaultHierarchy: LocalDateTable_7530b417-cc0a-415c-85ed-3f0b0b38e1d6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaNuevo2
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaNuevo2
+
+		variation Variation
+			isDefault
+			relationship: 16401676-6629-43c8-acd2-b2f8a292bfbf
+			defaultHierarchy: LocalDateTable_cb1a18c5-e005-4b38-a572-0665d7af4923.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaBaja2
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaBaja2
+
+		variation Variation
+			isDefault
+			relationship: 1f20801e-d299-452f-90e7-f3d0b24f9661
+			defaultHierarchy: LocalDateTable_4a85ffde-078d-48dc-ad9a-9273b14fe555.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DiasDesdeUltimoConsumo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: DiasDesdeUltimoConsumo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'stage StgCortesAfiliadosWebo' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    stage_StgCortesAfiliadosWebo = ApployaltyDWH{[Schema="stage",Item="StgCortesAfiliadosWebo"]}[Data]
+				in
+				    stage_StgCortesAfiliadosWebo
+
