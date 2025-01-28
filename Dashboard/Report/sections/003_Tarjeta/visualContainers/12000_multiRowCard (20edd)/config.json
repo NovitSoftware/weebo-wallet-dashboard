@@ -1,0 +1,145 @@
+{
+  "name": "20edd7a9a55155241460",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 18.888888888888889,
+        "y": 220,
+        "z": 12000,
+        "width": 235.55555555555554,
+        "height": 233.33333333333331,
+        "tabOrder": 12000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "multiRowCard",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "RankingDistritos.Distrito"
+        },
+        {
+          "queryRef": "Sum(RankingDistritos.TotalTarjetasActivadas)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "r",
+          "Entity": "Top3Ranking",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "r"
+              }
+            },
+            "Property": "Distrito"
+          },
+          "Name": "RankingDistritos.Distrito",
+          "NativeReferenceName": "Distrito"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "r"
+                  }
+                },
+                "Property": "TotalTarjetasActivadas"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(RankingDistritos.TotalTarjetasActivadas)",
+          "NativeReferenceName": "."
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "r"
+                    }
+                  },
+                  "Property": "TotalTarjetasActivadas"
+                }
+              },
+              "Function": 0
+            }
+          }
+        }
+      ]
+    },
+    "columnProperties": {
+      "Sum(RankingDistritos.TotalTarjetasActivadas)": {
+        "displayName": "."
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "card": [
+        {
+          "properties": {
+            "barShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
+            "outlineWeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "cardPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

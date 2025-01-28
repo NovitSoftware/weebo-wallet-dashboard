@@ -6,7 +6,7 @@
       "position": {
         "x": 283.25832194981666,
         "y": 100,
-        "z": 7000,
+        "z": 6000,
         "width": 190.49536271478897,
         "height": 71.228700841181961,
         "tabOrder": 1000
@@ -29,7 +29,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "usuario.RangoEdad",
+          "queryRef": "dwh Dim_RangoEdad.RangoEdad",
           "active": true
         }
       ]
@@ -38,8 +38,8 @@
       "Version": 2,
       "From": [
         {
-          "Name": "u",
-          "Entity": "usuario",
+          "Name": "d1",
+          "Entity": "dwh Dim_RangoEdad",
           "Type": 0
         }
       ],
@@ -48,20 +48,15 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Source": "u"
+                "Source": "d1"
               }
             },
             "Property": "RangoEdad"
           },
-          "Name": "usuario.RangoEdad",
+          "Name": "dwh Dim_RangoEdad.RangoEdad",
           "NativeReferenceName": "RangoEdad"
         }
       ]
-    },
-    "columnProperties": {
-      "usuario.RangoEdad": {
-        "displayName": "Edad"
-      }
     },
     "drillFilterOtherVisuals": true,
     "objects": {
@@ -105,6 +100,19 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Edad'"
                 }
               }
             }

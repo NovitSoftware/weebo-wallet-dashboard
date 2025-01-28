@@ -1,0 +1,50 @@
+﻿table 'dwh Dim_Programa'
+
+	column KeyPrograma
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyPrograma
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyProgramaAlt
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: KeyProgramaAlt
+
+		annotation SummarizationSetBy = Automatic
+
+	column Programa
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Programa
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaCreacion
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaCreacion
+
+		variation Variation
+			isDefault
+			relationship: 5aa1f64a-9eb3-4eef-b12a-318cecd9b9d1
+			defaultHierarchy: LocalDateTable_81c5a064-b774-4bd7-85fb-d1c11104ed78.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'dwh Dim_Programa' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    dwh_Dim_Programa = ApployaltyDWH{[Schema="dwh",Item="Dim_Programa"]}[Data]
+				in
+				    dwh_Dim_Programa
+

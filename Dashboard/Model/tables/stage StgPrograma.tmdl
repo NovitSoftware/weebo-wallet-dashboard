@@ -1,0 +1,120 @@
+﻿table 'stage StgPrograma'
+
+	column idcamp
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: idcamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkcliente
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: fkcliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column feccreacion
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: feccreacion
+
+		variation Variation
+			isDefault
+			relationship: 7d6e017e-60fb-4a9e-ba0a-6027069713a4
+			defaultHierarchy: LocalDateTable_9a536c28-8634-4a19-a5c3-c2c53fec5972.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fecact
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: fecact
+
+		variation Variation
+			isDefault
+			relationship: 615bceb9-0463-427d-91e8-6a3833a4cae9
+			defaultHierarchy: LocalDateTable_3c7e7bda-6593-4932-a2ff-d9dd3e8e50bb.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column nomprograma
+		dataType: string
+		summarizeBy: none
+		sourceColumn: nomprograma
+
+		annotation SummarizationSetBy = Automatic
+
+	column descripcion
+		dataType: string
+		summarizeBy: none
+		sourceColumn: descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_st
+		dataType: double
+		summarizeBy: sum
+		sourceColumn: valor_st
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column stickers
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: stickers
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_premio
+		dataType: string
+		summarizeBy: none
+		sourceColumn: tipo_premio
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_premio
+		dataType: double
+		summarizeBy: sum
+		sourceColumn: valor_premio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column activo
+		dataType: string
+		summarizeBy: none
+		sourceColumn: activo
+
+		annotation SummarizationSetBy = Automatic
+
+	column vigencia
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: vigencia
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'stage StgPrograma' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    stage_StgPrograma = ApployaltyDWH{[Schema="stage",Item="StgPrograma"]}[Data]
+				in
+				    stage_StgPrograma
+

@@ -1,14 +1,15 @@
 {
-  "name": "8d1d94ad60aa8009a410",
+  "name": "5d87ffea9b56d8c00407",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "height": 124.54545454545453,
-        "width": 156.36363636363635,
-        "x": 175.09271576303996,
-        "y": 0,
-        "z": 4000
+        "height": 124.45931325532322,
+        "width": 155.88843276424325,
+        "x": 172.25398740909964,
+        "y": 1.0948014578937091,
+        "z": 2000,
+        "tabOrder": 0
       }
     }
   ],
@@ -17,7 +18,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "sticker.TotalStickersActivos"
+          "queryRef": "tracking_stickers.TotalStickersEntregados"
         }
       ]
     },
@@ -25,8 +26,8 @@
       "Version": 2,
       "From": [
         {
-          "Name": "s",
-          "Entity": "sticker",
+          "Name": "t",
+          "Entity": "tracking_stickers",
           "Type": 0
         }
       ],
@@ -35,13 +36,13 @@
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Source": "s"
+                "Source": "t"
               }
             },
-            "Property": "TotalStickersActivos"
+            "Property": "TotalStickersEntregados"
           },
-          "Name": "sticker.TotalStickersActivos",
-          "NativeReferenceName": "TotalStickersActivos"
+          "Name": "tracking_stickers.TotalStickersEntregados",
+          "NativeReferenceName": "TotalStickersEntregados"
         }
       ],
       "OrderBy": [
@@ -51,10 +52,10 @@
             "Measure": {
               "Expression": {
                 "SourceRef": {
-                  "Source": "s"
+                  "Source": "t"
                 }
               },
-              "Property": "TotalStickersActivos"
+              "Property": "TotalStickersEntregados"
             }
           }
         }
@@ -140,5 +141,5 @@
       ]
     }
   },
-  "parentGroupName": "1620edb66d517008a69a"
+  "parentGroupName": "3b9b6b1590cd2000bbe6"
 }

@@ -1,0 +1,75 @@
+﻿table 'dwh Dim_Tiempo'
+
+	column KeyTiempo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: KeyTiempo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		variation Variation
+			isDefault
+			relationship: 4bf1c8d9-2baa-4ef6-8f30-e1ffc5bd4d13
+			defaultHierarchy: LocalDateTable_f94d1f0f-749b-483d-9f62-707571ef4651.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Año
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: Año
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: Dia
+
+		annotation SummarizationSetBy = Automatic
+
+	column Semana
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: Semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column Periodo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: Periodo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'dwh Dim_Tiempo' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    dwh_Dim_Tiempo = ApployaltyDWH{[Schema="dwh",Item="Dim_Tiempo"]}[Data]
+				in
+				    dwh_Dim_Tiempo
+

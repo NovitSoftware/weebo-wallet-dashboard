@@ -1,0 +1,80 @@
+﻿table 'stage StgAfiliacion'
+
+	column idaf
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: idaf
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkcliente
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: fkcliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkusuario
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: fkusuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecin
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: fecin
+
+		variation Variation
+			isDefault
+			relationship: 987c67aa-4b00-4b13-9567-f8c0a3870f75
+			defaultHierarchy: LocalDateTable_4b9f833d-7c4c-4c43-a50b-2a94af05c133.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fecout
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: fecout
+
+		variation Variation
+			isDefault
+			relationship: b8215461-4ae2-4c1b-b368-6b534664dc57
+			defaultHierarchy: LocalDateTable_ef8012a5-c822-4162-97bb-588e13b782a1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column notif
+		dataType: string
+		summarizeBy: none
+		sourceColumn: notif
+
+		annotation SummarizationSetBy = Automatic
+
+	column activo
+		dataType: string
+		summarizeBy: none
+		sourceColumn: activo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'stage StgAfiliacion' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    stage_StgAfiliacion = ApployaltyDWH{[Schema="stage",Item="StgAfiliacion"]}[Data]
+				in
+				    stage_StgAfiliacion
+

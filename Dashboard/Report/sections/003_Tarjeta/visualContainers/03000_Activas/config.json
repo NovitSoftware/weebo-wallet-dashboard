@@ -4,11 +4,11 @@
     {
       "id": 0,
       "position": {
-        "x": 149.89473684210526,
-        "y": 99.368421052631575,
+        "x": 140,
+        "y": 100,
         "z": 0,
-        "width": 116.21052631578948,
-        "height": 96,
+        "width": 143.33333333333334,
+        "height": 96.666666666666657,
         "tabOrder": 3000
       }
     },
@@ -29,7 +29,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "CountNonNull(tarjeta.tarjetas_activadas)"
+          "queryRef": "Sum(dwh Fact_AfiliacionEmpresa.TotalTarjetasActivadas)"
         }
       ]
     },
@@ -37,8 +37,8 @@
       "Version": 2,
       "From": [
         {
-          "Name": "t",
-          "Entity": "tarjeta",
+          "Name": "d",
+          "Entity": "dwh Fact_AfiliacionEmpresa",
           "Type": 0
         }
       ],
@@ -49,16 +49,16 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Source": "t"
+                    "Source": "d"
                   }
                 },
-                "Property": "tarjetas_activadas"
+                "Property": "Top3Distritos"
               }
             },
-            "Function": 5
+            "Function": 0
           },
-          "Name": "CountNonNull(tarjeta.tarjetas_activadas)",
-          "NativeReferenceName": "Count of tarjetas_activadas"
+          "Name": "Sum(dwh Fact_AfiliacionEmpresa.TotalTarjetasActivadas)",
+          "NativeReferenceName": "Sum of Top3Distritos"
         }
       ],
       "OrderBy": [
@@ -70,13 +70,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Source": "t"
+                      "Source": "d"
                     }
                   },
-                  "Property": "tarjetas_activadas"
+                  "Property": "Top3Distritos"
                 }
               },
-              "Function": 5
+              "Function": 0
             }
           }
         }
@@ -84,6 +84,9 @@
     },
     "columnProperties": {
       "CountNonNull(tarjeta.activo)": {
+        "displayName": "."
+      },
+      "dwh Fact_AfiliacionEmpresa.Tarjetas_Activadas_Clientes_Activos": {
         "displayName": "."
       }
     },

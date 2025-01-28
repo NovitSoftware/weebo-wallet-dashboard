@@ -1,0 +1,64 @@
+﻿table 'stage StgEmpresa'
+
+	column idcliente
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: idcliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkcategoria
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: fkcategoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column empresa
+		dataType: string
+		summarizeBy: none
+		sourceColumn: empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column descripcion
+		dataType: string
+		summarizeBy: none
+		sourceColumn: descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column activo
+		dataType: string
+		summarizeBy: none
+		sourceColumn: activo
+
+		annotation SummarizationSetBy = Automatic
+
+	column categoria
+		dataType: string
+		summarizeBy: none
+		sourceColumn: categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column rangoactivo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: rangoactivo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'stage StgEmpresa' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    stage_StgEmpresa = ApployaltyDWH{[Schema="stage",Item="StgEmpresa"]}[Data]
+				in
+				    stage_StgEmpresa
+

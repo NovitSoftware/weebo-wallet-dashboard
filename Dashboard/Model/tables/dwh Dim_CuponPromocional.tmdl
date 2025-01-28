@@ -1,0 +1,73 @@
+﻿table 'dwh Dim_CuponPromocional'
+
+	column KeyCuponPromocional
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyCuponPromocional
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyCuponPromocionalAlt
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: KeyCuponPromocionalAlt
+
+		annotation SummarizationSetBy = Automatic
+
+	column CuponPromocional
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CuponPromocional
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaCreacion
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaCreacion
+
+		variation Variation
+			isDefault
+			relationship: 3c17c15d-83bc-4d4f-bc96-fdf11d793795
+			defaultHierarchy: LocalDateTable_5e27b92a-03fb-4fae-b683-58b58fa6a631.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaUso
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaUso
+
+		variation Variation
+			isDefault
+			relationship: a626e269-8a6c-4153-a77b-e3422230d526
+			defaultHierarchy: LocalDateTable_19a6f2a5-4f81-4296-85bc-b6f1e48237ec.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Vigencia
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: Vigencia
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'dwh Dim_CuponPromocional' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    dwh_Dim_CuponPromocional = ApployaltyDWH{[Schema="dwh",Item="Dim_CuponPromocional"]}[Data]
+				in
+				    dwh_Dim_CuponPromocional
+
