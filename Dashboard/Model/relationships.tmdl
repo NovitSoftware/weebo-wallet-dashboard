@@ -671,3 +671,7 @@ relationship AutoDetected_6652cdf5-dbdc-4eda-a240-1cd12aa17dda
 	fromColumn: 'stage StgCupon'.codigo
 	toColumn: 'stage StgTarjeta'.codigo
 
+relationship af0ee045-bdaa-3e12-ee83-d0c99fb1b8c1
+	fromColumn: 'dwh Fact_Planes'.KeyFechaCorte
+	toColumn: 'dwh Dim_Tiempo'.KeyTiempo
+

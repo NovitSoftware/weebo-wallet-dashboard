@@ -11,7 +11,7 @@
 	column KeyFechaCorte
 		dataType: int64
 		formatString: 0
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: KeyFechaCorte
 
 		annotation SummarizationSetBy = Automatic
