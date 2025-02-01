@@ -3,7 +3,7 @@
 	column KeyTiempo
 		dataType: int64
 		formatString: 0
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: KeyTiempo
 
 		annotation SummarizationSetBy = Automatic

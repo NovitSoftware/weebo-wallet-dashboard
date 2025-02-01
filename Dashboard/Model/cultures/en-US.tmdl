@@ -8551,9 +8551,6 @@
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
 			          "key fecha corte": {
@@ -26247,6 +26244,16 @@
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          ".": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -26348,127 +26355,15 @@
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "top 3 ranking": {
+			          "ranking distrito": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Top3Ranking": {
+			          "RankingDistritos": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "ranking": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "3 ranking": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "best 3 ranking": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "first 3 ranking": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "leading 3 ranking": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "maximum 3 ranking": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "peak 3 ranking": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "upper 3 ranking": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "top 3 status": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "top 3 classification": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "3 status": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "3 classification": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
 			          }
 			        }
 			      ]
@@ -26483,25 +26378,26 @@
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "top 3 distrito": {
+			          "total tarjetas activada": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Top3Distritos": {
+			          "total tarjeta activada": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "TotalTarjetasActivadas": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "3 distrito": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "best 3 distrito": {
+			          "aggregate tarjeta activada": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -26511,47 +26407,7 @@
 			          }
 			        },
 			        {
-			          "first 3 distrito": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "leading 3 distrito": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "maximum 3 distrito": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "peak 3 distrito": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "upper 3 distrito": {
+			          "overall tarjeta activada": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -26711,105 +26567,6 @@
 			    }
 			  },
 			  "Relationships": {
-			    "stage_StgTransaccion_fecha_variation_date_hierarchy_has_month": {
-			      "Binding": {
-			        "ConceptualEntity": "stage StgTransaccion"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "stage_StgTransaccion.fecha.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy"
-			          }
-			        },
-			        "stage_StgTransaccion.fecha.variation.date_hierarchy.month": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_months"
-			        }
-			      ]
-			    },
-			    "stage_StgTransaccion_fecha_variation_date_hierarchy_has_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "stage StgTransaccion"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "stage_StgTransaccion.fecha.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy"
-			          }
-			        },
-			        "stage_StgTransaccion.fecha.variation.date_hierarchy.quarter": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_quarters"
-			        }
-			      ]
-			    },
-			    "stage_StgTransaccion_fecha_variation_date_hierarchy_has_year": {
-			      "Binding": {
-			        "ConceptualEntity": "stage StgTransaccion"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "stage_StgTransaccion.fecha.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy"
-			          }
-			        },
-			        "stage_StgTransaccion.fecha.variation.date_hierarchy.year": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_years"
-			        }
-			      ]
-			    },
 			    "stage_StgTransaccion_fecha_has_variation_date_hierarchy": {
 			      "Binding": {
 			        "ConceptualEntity": "stage StgTransaccion"
@@ -26905,7 +26662,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_months1"
+			          "ID": "fecha_date_hierarchies_have_fecha_months"
 			        }
 			      ]
 			    },
@@ -26938,7 +26695,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_quarters1"
+			          "ID": "fecha_date_hierarchies_have_fecha_quarters"
 			        }
 			      ]
 			    },
@@ -26971,7 +26728,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_years1"
+			          "ID": "fecha_date_hierarchies_have_fecha_years"
 			        }
 			      ]
 			    },
@@ -37795,7 +37552,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_months2"
+			          "ID": "fecha_date_hierarchies_have_fecha_months1"
 			        }
 			      ]
 			    },
@@ -37828,7 +37585,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_quarters2"
+			          "ID": "fecha_date_hierarchies_have_fecha_quarters1"
 			        }
 			      ]
 			    },
@@ -37861,7 +37618,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_years2"
+			          "ID": "fecha_date_hierarchies_have_fecha_years1"
 			        }
 			      ]
 			    },
@@ -41806,59 +41563,6 @@
 			        }
 			      ]
 			    },
-			    "dwh_Fact_Plane_has_dwh_Dim_Tiempo": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Fact_Planes"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Fact_Plane": {
-			          "Target": {
-			            "Entity": "dwh_Fact_Plane"
-			          }
-			        },
-			        "dwh_Dim_Tiempo": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Tiempo"
-			          },
-			          "Nouns": [
-			            {
-			              "key fecha corte": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Fact_Plane"
-			            },
-			            "Object": {
-			              "Role": "dwh_Dim_Tiempo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Fact_Planes_have_dwh_Dim_Tiempos"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Dim_Tiempo"
-			            },
-			            "Object": {
-			              "Role": "dwh_Fact_Plane"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Dim_Tiempos_have_dwh_Fact_Planes"
-			        }
-			      ]
-			    },
 			    "dwh_Fact_Plane_has_dwh_Dim_Empresa": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh Fact_Planes"
@@ -42868,7 +42572,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dwh_Fact_AfiliacionEmpresas_have_top_3_distrito"
+			          "ID": "dwh_Fact_AfiliacionEmpresas_have_total_tarjetas_activadas"
 			        }
 			      ]
 			    },
@@ -42901,7 +42605,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "top_3_ranking_have_distrito"
+			          "ID": "ranking_distrito_have_distrito"
 			        }
 			      ]
 			    },
@@ -42934,7 +42638,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "top_3_ranking_have_total_tarjetas_activadas"
+			          "ID": "ranking_distrito_have_total_tarjetas_activadas"
 			        }
 			      ]
 			    },
@@ -50871,6 +50575,39 @@
 			        }
 			      ]
 			    },
+			    "dwh_Fact_Plane_has_key_fecha_corte": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Planes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Plane": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Plane"
+			          }
+			        },
+			        "dwh_Fact_Plane.key_fecha_corte": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Plane.key_fecha_corte"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Plane"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Plane.key_fecha_corte"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Planes_have_key_fecha_cortes"
+			        }
+			      ]
+			    },
 			    "dwh_Fact_Plane_has_key_fact_plan": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh Fact_Planes"
@@ -54498,6 +54235,105 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_Dim_Afiliados_have_key_afiliados"
+			        }
+			      ]
+			    },
+			    "stage_StgTransaccion_fecha_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTransaccion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTransaccion.fecha.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy"
+			          }
+			        },
+			        "stage_StgTransaccion.fecha.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_years2"
+			        }
+			      ]
+			    },
+			    "stage_StgTransaccion_fecha_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTransaccion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTransaccion.fecha.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy"
+			          }
+			        },
+			        "stage_StgTransaccion.fecha.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_quarters2"
+			        }
+			      ]
+			    },
+			    "stage_StgTransaccion_fecha_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTransaccion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTransaccion.fecha.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy"
+			          }
+			        },
+			        "stage_StgTransaccion.fecha.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_months2"
 			        }
 			      ]
 			    },

@@ -1,5 +1,46 @@
 ﻿table 'dwh Fact_Planes'
 
+	measure TotalSaldoTarjetas = ```
+			
+			SUM('dwh Fact_Planes'[SaldoTarjetasAdquiridas])
+			
+			```
+		formatString: 0
+
+	measure PromedioSaldoTarjetas = ```
+			
+			AVERAGE('dwh Fact_Planes'[SaldoTarjetasAdquiridas])
+			
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure VariacionSaldoTarjeta = ```
+			
+			VAR FechaRaiz = MIN('dwh Dim_Tiempo'[Fecha]) -- Fecha mínima según el filtro de segmentación
+			VAR FechaFin = MAX('dwh Dim_Tiempo'[Fecha])  -- Fecha máxima según el filtro de segmentación
+			
+			-- Saldo acumulado hasta la FechaRaiz
+			VAR SaldoHastaInicio = 
+			    CALCULATE(
+			        SUM('dwh Fact_Planes'[SaldoTarjetasAdquiridas]),
+			        'dwh Fact_Planes'[KeyFechaCorte] <= FechaRaiz
+			    )
+			
+			-- Saldo acumulado hasta la FechaFin
+			VAR SaldoHastaFin = 
+			    CALCULATE(
+			        SUM('dwh Fact_Planes'[SaldoTarjetasAdquiridas]),
+			        'dwh Fact_Planes'[KeyFechaCorte] <= FechaFin
+			    )
+			
+			-- Variación entre los dos períodos
+			RETURN SaldoHastaFin - SaldoHastaInicio
+			
+			```
+		formatString: 0
+
 	column KeyFactPlan
 		dataType: int64
 		formatString: 0
@@ -11,7 +52,7 @@
 	column KeyFechaCorte
 		dataType: int64
 		formatString: 0
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: KeyFechaCorte
 
 		annotation SummarizationSetBy = Automatic

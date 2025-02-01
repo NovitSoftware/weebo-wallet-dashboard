@@ -1,5 +1,72 @@
 ﻿table 'dwh Dim_Afiliado'
 
+	measure PromedioAfiliados = ```
+			
+			AVERAGEX(
+			    VALUES('CalendarioAfiliado'[Date]),
+			    'dwh Dim_Afiliado'[TotalNuevosAfiliados]
+			)
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure TotalNuevosAfiliados = ```
+			
+			CALCULATE(
+			    COUNT('dwh Dim_Afiliado'[KeyAfiliado]),
+			    FILTER(
+			        'dwh Dim_Afiliado',
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] >= MIN(CalendarioAfiliado[Date]) &&
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= MAX(CalendarioAfiliado[Date])
+			    )
+			)
+			
+			```
+
+	measure 'Total Afiliados Sin Filtros' = ```
+			
+			CALCULATE(
+			    COUNTROWS('dwh Dim_Afiliado'),
+			    REMOVEFILTERS('dwh Dim_Afiliado'),
+			    REMOVEFILTERS('CalendarioGeneral')
+			)
+			
+			```
+		formatString: 0
+
+	measure 'Total Afiliados Con Filtros' = ```
+			
+			COUNTROWS('dwh Dim_Afiliado')
+			
+			```
+		formatString: 0
+
+	measure VariacionAfiliados = ```
+			
+			VAR FechaRaiz = MIN('CalendarioGeneral'[Date]) -- La fecha más baja seleccionada en el filtro de segmentación
+			VAR FechaFin = MAX('CalendarioGeneral'[Date])  -- La fecha más alta seleccionada en el filtro de segmentación
+			
+			-- Afiliados acumulados hasta la FechaRaiz
+			VAR AfiliadosHastaInicio = 
+			    CALCULATE(
+			        COUNT('dwh Dim_Afiliado'[KeyAfiliado]),
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= FechaRaiz
+			    )
+			
+			-- Afiliados acumulados hasta la FechaFin
+			VAR AfiliadosHastaFin = 
+			    CALCULATE(
+			        COUNT('dwh Dim_Afiliado'[KeyAfiliado]),
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= FechaFin
+			    )
+			
+			-- Variación entre los dos períodos
+			RETURN AfiliadosHastaFin - AfiliadosHastaInicio
+			
+			```
+		formatString: 0
+
 	column KeyAfiliado
 		dataType: int64
 		formatString: 0
