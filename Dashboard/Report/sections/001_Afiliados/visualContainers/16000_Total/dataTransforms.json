@@ -1,5 +1,31 @@
 {
   "objects": {
+    "wordWrap": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "labels": [
+      {
+        "properties": {
+          "preserveWhitespace": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ],
     "categoryLabels": [
       {
         "properties": {
@@ -22,8 +48,8 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "TotalTarjetasActivadas",
-        "Name": "dwh Dim_Tarjeta.TotalTarjetasActivadas",
+        "Restatement": "TotalSaldoTarjetas",
+        "Name": "dwh Fact_Planes.TotalSaldoTarjetas",
         "Type": 3,
         "Format": "0"
       }
@@ -42,9 +68,9 @@
   ],
   "selects": [
     {
-      "displayName": "TotalTarjetasActivadas",
+      "displayName": "TotalSaldoTarjetas",
       "format": "0",
-      "queryName": "dwh Dim_Tarjeta.TotalTarjetasActivadas",
+      "queryName": "dwh Fact_Planes.TotalSaldoTarjetas",
       "roles": {
         "Values": true
       },
@@ -56,10 +82,10 @@
         "Measure": {
           "Expression": {
             "SourceRef": {
-              "Entity": "dwh Dim_Tarjeta"
+              "Entity": "dwh Fact_Planes"
             }
           },
-          "Property": "TotalTarjetasActivadas"
+          "Property": "TotalSaldoTarjetas"
         }
       }
     }

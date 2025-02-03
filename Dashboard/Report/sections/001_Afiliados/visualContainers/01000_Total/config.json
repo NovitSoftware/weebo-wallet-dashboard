@@ -1,14 +1,14 @@
 {
-  "name": "4a7fd1012d5b049cd000",
+  "name": "8f298b8f30e140d64b58",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "height": 94.845360824742272,
-        "width": 254.60605307829258,
-        "x": 0,
-        "y": 0.015120421005107835,
-        "z": 12000,
+        "height": 91.274684114453692,
+        "width": 110.69482967072042,
+        "x": 501.03975535168195,
+        "y": 293.24419789962781,
+        "z": 13000,
         "tabOrder": 1000
       }
     }
@@ -18,7 +18,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "dwh Fact_Planes.TotalSaldoTarjetas"
+          "queryRef": "dwh Dim_Afiliado.TotalNuevosAfiliados"
         }
       ]
     },
@@ -27,7 +27,7 @@
       "From": [
         {
           "Name": "d",
-          "Entity": "dwh Fact_Planes",
+          "Entity": "dwh Dim_Afiliado",
           "Type": 0
         }
       ],
@@ -39,10 +39,10 @@
                 "Source": "d"
               }
             },
-            "Property": "TotalSaldoTarjetas"
+            "Property": "TotalNuevosAfiliados"
           },
-          "Name": "dwh Fact_Planes.TotalSaldoTarjetas",
-          "NativeReferenceName": "TotalSaldoTarjetas"
+          "Name": "dwh Dim_Afiliado.TotalNuevosAfiliados",
+          "NativeReferenceName": "TotalNuevosAfiliados"
         }
       ],
       "OrderBy": [
@@ -55,16 +55,11 @@
                   "Source": "d"
                 }
               },
-              "Property": "TotalSaldoTarjetas"
+              "Property": "TotalNuevosAfiliados"
             }
           }
         }
       ]
-    },
-    "columnProperties": {
-      "dwh Fact_Planes.TotalSaldoTarjetas": {
-        "formatString": "0"
-      }
     },
     "drillFilterOtherVisuals": true,
     "hasDefaultSort": true,
@@ -94,17 +89,24 @@
                 }
               }
             },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "16D"
-                }
-              }
-            },
             "text": {
               "expr": {
                 "Literal": {
                   "Value": "'Total'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
                 }
               }
             }
@@ -117,7 +119,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "100D"
                 }
               }
             }
@@ -125,6 +127,5 @@
         }
       ]
     }
-  },
-  "parentGroupName": "f5bc3d6a86e4b9b52ab9"
+  }
 }

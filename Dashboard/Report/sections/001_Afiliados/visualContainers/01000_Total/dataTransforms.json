@@ -22,10 +22,9 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "TotalSaldoTarjetas",
-        "Name": "dwh Fact_Planes.TotalSaldoTarjetas",
-        "Type": 3,
-        "Format": "0"
+        "Restatement": "TotalNuevosAfiliados",
+        "Name": "dwh Dim_Afiliado.TotalNuevosAfiliados",
+        "Type": 3
       }
     ]
   },
@@ -42,9 +41,8 @@
   ],
   "selects": [
     {
-      "displayName": "TotalSaldoTarjetas",
-      "format": "0",
-      "queryName": "dwh Fact_Planes.TotalSaldoTarjetas",
+      "displayName": "TotalNuevosAfiliados",
+      "queryName": "dwh Dim_Afiliado.TotalNuevosAfiliados",
       "roles": {
         "Values": true
       },
@@ -56,10 +54,10 @@
         "Measure": {
           "Expression": {
             "SourceRef": {
-              "Entity": "dwh Fact_Planes"
+              "Entity": "dwh Dim_Afiliado"
             }
           },
-          "Property": "TotalSaldoTarjetas"
+          "Property": "TotalNuevosAfiliados"
         }
       }
     }

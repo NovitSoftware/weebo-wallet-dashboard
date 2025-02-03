@@ -1,25 +1,6 @@
 {
   "id": 17347790,
-  "layoutOptimization": 1,
-  "pods": [
-    {
-      "boundSection": "a34663e38a75dcabdade",
-      "config": "{}",
-      "id": 82454463,
-      "name": "c74c0748ec480c2c6b85"
-    },
-    {
-      "boundSection": "35a2b62f3799d404d69b",
-      "config": "{\"acceptsFilterContext\":1}",
-      "name": "ac16149031111d6a920b"
-    },
-    {
-      "boundSection": "f263e565a07c091ee04e",
-      "config": "{}",
-      "name": "838f553c4d09ae103720",
-      "referenceScope": 1
-    }
-  ],
+  "layoutOptimization": 0,
   "publicCustomVisuals": [
     "calendarVisual5E37BB8CB2CB427ABE4F9EAAE66C5223",
     "CalendarVisualA45056645E4E428B9D26EF971839A6B5",
@@ -58,6 +39,41 @@
           {
             "name": "logointro5312883634361378.png",
             "path": "logointro5312883634361378.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-casa-326986673263476235.png",
+            "path": "icons8-casa-326986673263476235.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-casa-32428379609556478.png",
+            "path": "icons8-casa-32428379609556478.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-conference-foreground-s293025960681377.png",
+            "path": "icons8-conference-foreground-s293025960681377.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-cup_n-para-recortar-328358640628828045.png",
+            "path": "icons8-cup_n-para-recortar-328358640628828045.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-loyalty-card-327213857117737803.png",
+            "path": "icons8-loyalty-card-327213857117737803.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-voucher-328132493894738722.png",
+            "path": "icons8-voucher-328132493894738722.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-voucher-3208245201736146623.png",
+            "path": "icons8-voucher-3208245201736146623.png",
             "type": 100
           }
         ],

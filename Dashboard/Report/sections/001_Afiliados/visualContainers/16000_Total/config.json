@@ -1,14 +1,14 @@
 {
-  "name": "37e000ae0b9c49ad0140",
+  "name": "17a97892513b00240e78",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "height": 79.173082474440719,
-        "width": 239.17525773195877,
-        "x": 326.59793813849541,
-        "y": 192.60845064317428,
-        "z": 16000,
+        "x": 76.657812122675679,
+        "y": 446.34629316590195,
+        "z": 15000,
+        "width": 151.46099975851243,
+        "height": 89.640183530548171,
         "tabOrder": 16000
       }
     }
@@ -18,7 +18,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "dwh Dim_Tarjeta.TotalTarjetasActivadas"
+          "queryRef": "dwh Fact_Planes.TotalSaldoTarjetas"
         }
       ]
     },
@@ -27,7 +27,7 @@
       "From": [
         {
           "Name": "d",
-          "Entity": "dwh Dim_Tarjeta",
+          "Entity": "dwh Fact_Planes",
           "Type": 0
         }
       ],
@@ -39,10 +39,10 @@
                 "Source": "d"
               }
             },
-            "Property": "TotalTarjetasActivadas"
+            "Property": "TotalSaldoTarjetas"
           },
-          "Name": "dwh Dim_Tarjeta.TotalTarjetasActivadas",
-          "NativeReferenceName": "TotalTarjetasActivadas"
+          "Name": "dwh Fact_Planes.TotalSaldoTarjetas",
+          "NativeReferenceName": "TotalSaldoTarjetas"
         }
       ],
       "OrderBy": [
@@ -55,7 +55,7 @@
                   "Source": "d"
                 }
               },
-              "Property": "TotalTarjetasActivadas"
+              "Property": "TotalSaldoTarjetas"
             }
           }
         }
@@ -64,6 +64,32 @@
     "drillFilterOtherVisuals": true,
     "hasDefaultSort": true,
     "objects": {
+      "wordWrap": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "preserveWhitespace": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
       "categoryLabels": [
         {
           "properties": {
@@ -79,6 +105,19 @@
       ]
     },
     "vcObjects": {
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
       "title": [
         {
           "properties": {
@@ -89,17 +128,31 @@
                 }
               }
             },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "16D"
-                }
-              }
-            },
             "text": {
               "expr": {
                 "Literal": {
                   "Value": "'Total'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
                 }
               }
             }
@@ -107,6 +160,5 @@
         }
       ]
     }
-  },
-  "parentGroupName": "72e068c04a6b1c7a2036"
+  }
 }

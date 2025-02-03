@@ -7,7 +7,7 @@
           "From": [
             {
               "Name": "d",
-              "Entity": "dwh Fact_Planes",
+              "Entity": "dwh Dim_Afiliado",
               "Type": 0
             },
             {
@@ -24,10 +24,10 @@
                     "Source": "d"
                   }
                 },
-                "Property": "TotalSaldoTarjetas"
+                "Property": "TotalNuevosAfiliados"
               },
-              "Name": "dwh Fact_Planes.TotalSaldoTarjetas",
-              "NativeReferenceName": "TotalSaldoTarjetas"
+              "Name": "dwh Dim_Afiliado.TotalNuevosAfiliados",
+              "NativeReferenceName": "TotalNuevosAfiliados"
             }
           ],
           "Where": [
