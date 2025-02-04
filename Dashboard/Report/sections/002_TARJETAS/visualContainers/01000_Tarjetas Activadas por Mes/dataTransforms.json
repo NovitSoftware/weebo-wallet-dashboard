@@ -19,7 +19,6 @@
       0
     ],
     "Category": [
-      4,
       2,
       1,
       3,
@@ -29,7 +28,7 @@
   "projectionActiveItems": {
     "Category": [
       {
-        "queryRef": "dwh Dim_Tiempo.Mes",
+        "queryRef": "dwh Dim_Tiempo.Año",
         "suppressConcat": false
       }
     ]
@@ -78,11 +77,6 @@
         },
         {
           "Name": "Category",
-          "Projection": 4,
-          "isActive": false
-        },
-        {
-          "Name": "Category",
           "Projection": 2,
           "isActive": false
         },
@@ -94,12 +88,12 @@
         {
           "Name": "Category",
           "Projection": 3,
-          "isActive": true
+          "isActive": false
         },
         {
           "Name": "Category",
           "Projection": 4,
-          "isActive": false
+          "isActive": true
         }
       ]
     }

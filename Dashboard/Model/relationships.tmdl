@@ -686,3 +686,7 @@ relationship 4f052d2c-467b-47ed-b773-f28022bc9138
 	fromColumn: CalendarioGeneral.'Inicio Mes'
 	toColumn: LocalDateTable_47a02d7f-fca7-4457-bd14-3aa15ee423f0.Date
 
+relationship 4ca72d18-67f6-1e1d-c604-02c837ef5848
+	fromColumn: 'dwh Fact_Planes'.KeyFechaCorte
+	toColumn: 'dwh Dim_Tiempo'.KeyTiempo
+
