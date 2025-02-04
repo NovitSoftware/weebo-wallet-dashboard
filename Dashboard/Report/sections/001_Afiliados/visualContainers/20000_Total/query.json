@@ -11,8 +11,8 @@
               "Type": 0
             },
             {
-              "Name": "c",
-              "Entity": "CalendarioGeneral",
+              "Name": "f",
+              "Entity": "FiltrosTiempo",
               "Type": 0
             }
           ],
@@ -39,10 +39,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "c"
+                            "Source": "f"
                           }
                         },
-                        "Property": "Month"
+                        "Property": "Filtro"
                       }
                     }
                   ],
@@ -50,61 +50,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "3L"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            },
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "c"
-                          }
-                        },
-                        "Property": "Día del Mes"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "3L"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            },
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "c"
-                          }
-                        },
-                        "Property": "Quincena"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Primera Quincena'"
+                          "Value": "'Último día'"
                         }
                       }
                     ]
