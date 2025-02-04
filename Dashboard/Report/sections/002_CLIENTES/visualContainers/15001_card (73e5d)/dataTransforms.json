@@ -1,0 +1,52 @@
+{
+  "projectionOrdering": {
+    "Values": [
+      0
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Total",
+        "Name": "dwh Fact_AfiliacionWebo.TotalClientesEnRiesgo",
+        "Type": 3,
+        "Format": "0"
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Total",
+      "format": "0",
+      "queryName": "dwh Fact_AfiliacionWebo.TotalClientesEnRiesgo",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 260
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Fact_AfiliacionWebo"
+            }
+          },
+          "Property": "TotalClientesEnRiesgo"
+        }
+      }
+    }
+  ]
+}
