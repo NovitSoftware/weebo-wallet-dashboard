@@ -1,5 +1,3 @@
-AVERAGE('dwh Fact_Planes'[SaldoTarjetasAdquiridas]) calcula el promedio del campo SaldoTarjetasAdquiridas para cada fila de la tabla, dividiendo la suma de los valores por la cantidad de filas.
-
 DECLARE @FechaInicio DATE = '2019-04-09'; 
 DECLARE @FechaFin DATE = '2024-11-30'; 
 
@@ -36,3 +34,4 @@ SELECT
     AVG(SaldoTarjetasAdquiridas) AS PromedioSaldoTarjetas
 FROM 
     [ApployaltyDWH].[dwh].[Fact_Planes];
+
