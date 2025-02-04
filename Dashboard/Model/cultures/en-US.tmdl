@@ -29761,6 +29761,92 @@
 			          }
 			        }
 			      ]
+			    },
+			    "dwh_Fact_AfiliacionWebo.total_clientes_perdidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_AfiliacionWebo",
+			          "ConceptualProperty": "TotalClientesPerdidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total clientes perdidos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TotalClientesPerdidos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate cliente perdido": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall cliente perdido": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionWebo.promedio_clientes_perdidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_AfiliacionWebo",
+			          "ConceptualProperty": "PromedioClientesPerdidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "promedio clientes perdidos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PromedioClientesPerdidos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Promedio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -46351,6 +46437,72 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_Dim_Afiliados_have_stage_StgCortesAfiliadosWebos"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionWebo_has_promedio_clientes_perdidos": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_AfiliacionWebo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_AfiliacionWebo": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionWebo"
+			          }
+			        },
+			        "dwh_Fact_AfiliacionWebo.promedio_clientes_perdidos": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionWebo.promedio_clientes_perdidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_AfiliacionWebo"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_AfiliacionWebo.promedio_clientes_perdidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_AfiliacionWebos_have_promedio_clientes_perdidos"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionWebo_has_total_clientes_perdidos": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_AfiliacionWebo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_AfiliacionWebo": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionWebo"
+			          }
+			        },
+			        "dwh_Fact_AfiliacionWebo.total_clientes_perdidos": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionWebo.total_clientes_perdidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_AfiliacionWebo"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_AfiliacionWebo.total_clientes_perdidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_AfiliacionWebos_have_total_clientes_perdidos"
 			        }
 			      ]
 			    },

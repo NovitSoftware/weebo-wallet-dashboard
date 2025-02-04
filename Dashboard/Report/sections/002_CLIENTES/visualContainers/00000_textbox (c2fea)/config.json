@@ -1,5 +1,5 @@
 {
-  "name": "653834940dcae6be2292",
+  "name": "c2fea347e9dae9166108",
   "layouts": [
     {
       "id": 0,
@@ -24,7 +24,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Clientes en riesgos (90 días)",
+                    "value": "Clientes en perdidos (90 días)",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "12pt"
@@ -54,5 +54,5 @@
       ]
     }
   },
-  "parentGroupName": "35d2730b2cc8708c93b0"
+  "parentGroupName": "0140de0c7dced4852705"
 }
