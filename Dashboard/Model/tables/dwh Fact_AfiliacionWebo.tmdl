@@ -1,5 +1,35 @@
 ﻿table 'dwh Fact_AfiliacionWebo'
 
+	measure ClientesActivos = ```
+			
+			COALESCE(
+			    CALCULATE(
+			        DISTINCTCOUNT('dwh Dim_Afiliado'[KeyAfiliado]),
+			        FILTER(
+			            'dwh Fact_AfiliacionWebo',
+			            'dwh Fact_AfiliacionWebo'[FechaActivo] >= TODAY() - 90
+			        )
+			    ),
+			    0
+			)
+			
+			```
+		formatString: 0
+
+	measure PromedioClientesActivos =
+			
+			COALESCE(
+			CALCULATE (
+			    AVERAGE ( 'dwh Dim_Afiliado'[KeyAfiliado] ),
+			    FILTER (
+			        'dwh Fact_AfiliacionWebo',
+			        'dwh Fact_AfiliacionWebo'[FechaActivo] >= TODAY() - 90
+			    )
+			)
+			,0)
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column KeyFactAfiliacionWebo
 		dataType: int64
 		formatString: 0

@@ -1,0 +1,128 @@
+{
+  "name": "ec03ff15310206eee0ac",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 72.9445296568367,
+        "width": 190.77508275261491,
+        "x": 378.26093994052957,
+        "y": 0,
+        "z": 20000,
+        "tabOrder": 3000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "slicer",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "dwh Dim_Afiliado.Distrito",
+          "active": true
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d",
+          "Entity": "dwh Dim_Afiliado",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "Distrito"
+          },
+          "Name": "dwh Dim_Afiliado.Distrito",
+          "NativeReferenceName": "Distrito1"
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "selection": [
+        {
+          "properties": {
+            "selectAllCheckboxEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "singleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "vcObjects": {
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "a7a94e887d4c7e6a90c7"
+}
