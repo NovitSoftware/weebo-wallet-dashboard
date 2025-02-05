@@ -41,6 +41,20 @@
 			```
 		formatString: 0
 
+	measure PromedioStickers = ```
+			
+			AVERAGEX(
+			    FILTER(
+			        'dwh Fact_Planes', 
+			        NOT(ISBLANK('dwh Fact_Planes'[StickersEntregados]))
+			    ),
+			    'dwh Fact_Planes'[StickersEntregados]
+			)
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column KeyFactPlan
 		dataType: int64
 		formatString: 0

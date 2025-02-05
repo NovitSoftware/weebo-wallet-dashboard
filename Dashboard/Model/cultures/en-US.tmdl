@@ -29657,6 +29657,16 @@
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Clientes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -29864,9 +29874,211 @@
 			          }
 			        }
 			      ]
+			    },
+			    "dwh_Fact_Plane.promedio_stickers": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Planes",
+			          "ConceptualProperty": "PromedioStickers"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "promedio stickers": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PromedioStickers": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "promedio marker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "promedio label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "promedio sign": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "promedio transfer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "promedio decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "Promedio de Stickers": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "dwh_Dim_Tienda_has_dwh_Dim_Empresa1": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tienda"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tienda": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tienda"
+			          }
+			        },
+			        "dwh_Dim_Empresa": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Empresa"
+			          },
+			          "Nouns": [
+			            {
+			              "key empresa alt": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tienda"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Tiendas_have_dwh_Dim_Empresas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Empresa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tienda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Empresas_have_dwh_Dim_Tiendas"
+			        }
+			      ]
+			    },
+			    "calendario_afiliado_date_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioAfiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_afiliado.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_afiliado.date.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_days"
+			        }
+			      ]
+			    },
+			    "calendario_afiliado_date_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioAfiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_afiliado.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_afiliado.date.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_months"
+			        }
+			      ]
+			    },
 			    "calendario_afiliado_date_variation_date_hierarchy_has_quarter": {
 			      "Binding": {
 			        "ConceptualEntity": "CalendarioAfiliado"
@@ -30160,7 +30372,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_days"
+			          "ID": "date_hierarchies_have_days1"
 			        }
 			      ]
 			    },
@@ -30193,7 +30405,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_months"
+			          "ID": "date_hierarchies_have_months1"
 			        }
 			      ]
 			    },
@@ -46305,59 +46517,6 @@
 			        }
 			      ]
 			    },
-			    "dwh_Dim_Tienda_has_dwh_Dim_Empresa": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Dim_Tienda"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Dim_Tienda": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Tienda"
-			          }
-			        },
-			        "dwh_Dim_Empresa": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Empresa"
-			          },
-			          "Nouns": [
-			            {
-			              "key empresa alt": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Dim_Tienda"
-			            },
-			            "Object": {
-			              "Role": "dwh_Dim_Empresa"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Dim_Tiendas_have_dwh_Dim_Empresas"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Dim_Empresa"
-			            },
-			            "Object": {
-			              "Role": "dwh_Dim_Tienda"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Dim_Empresas_have_dwh_Dim_Tiendas"
-			        }
-			      ]
-			    },
 			    "dwh_Dim_Empresa_has_stage_StgEmpresa": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh Dim_Empresa"
@@ -46454,6 +46613,39 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_Dim_Afiliados_have_stage_StgCortesAfiliadosWebos"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Plane_has_promedio_stickers": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Planes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Plane": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Plane"
+			          }
+			        },
+			        "dwh_Fact_Plane.promedio_stickers": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Plane.promedio_stickers"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Plane"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Plane.promedio_stickers"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Planes_have_promedio_stickers"
 			        }
 			      ]
 			    },
@@ -46589,15 +46781,15 @@
 			        }
 			      ]
 			    },
-			    "dwh_Dim_Empresa_has_dwh_Fact_AfiliacionEmpresa_promedio_clientes_activos": {
+			    "dwh_Fact_AfiliacionEmpresa_has_promedio_clientes_activos": {
 			      "Binding": {
-			        "ConceptualEntity": "dwh Dim_Empresa"
+			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "dwh_Dim_Empresa": {
+			        "dwh_Fact_AfiliacionEmpresa": {
 			          "Target": {
-			            "Entity": "dwh_Dim_Empresa"
+			            "Entity": "dwh_Fact_AfiliacionEmpresa"
 			          }
 			        },
 			        "dwh_Fact_AfiliacionEmpresa.promedio_clientes_activos": {
@@ -46610,7 +46802,7 @@
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dwh_Dim_Empresa"
+			              "Role": "dwh_Fact_AfiliacionEmpresa"
 			            },
 			            "Object": {
 			              "Role": "dwh_Fact_AfiliacionEmpresa.promedio_clientes_activos"
@@ -46618,7 +46810,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dwh_Dim_Empresas_have_promedio_clientes_activos"
+			          "ID": "dwh_Fact_AfiliacionEmpresas_have_promedio_clientes_activos"
 			        }
 			      ]
 			    },
@@ -60328,72 +60520,6 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_calendario_generals_are_weekend_calendario_generals"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_date_variation_date_hierarchy_has_month": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_afiliado.date.variation.date_hierarchy.month": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_months1"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_date_variation_date_hierarchy_has_day": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_afiliado.date.variation.date_hierarchy.day": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_days1"
 			        }
 			      ]
 			    }
