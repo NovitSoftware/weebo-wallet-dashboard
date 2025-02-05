@@ -2,9 +2,8 @@
   "id": 17347790,
   "layoutOptimization": 0,
   "publicCustomVisuals": [
-    "calendarVisual5E37BB8CB2CB427ABE4F9EAAE66C5223",
-    "CalendarVisualA45056645E4E428B9D26EF971839A6B5",
-    "simpleImageEBC4593F96F1425FB3D84C5BF02B5075"
+    "simpleImageEBC4593F96F1425FB3D84C5BF02B5075",
+    "eaTachometer6616D82ED23A4C048E1D3CD4604742ED"
   ],
   "reportId": 6625718,
   "resourcePackages": [

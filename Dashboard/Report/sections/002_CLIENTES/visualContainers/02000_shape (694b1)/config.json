@@ -4,8 +4,8 @@
     {
       "id": 0,
       "position": {
-        "x": 64,
-        "y": 567.578947368421,
+        "x": 0,
+        "y": 0,
         "z": 2000,
         "width": 599.578947368421,
         "height": 139.78947368421052,
@@ -86,5 +86,6 @@
       ]
     }
   },
+  "parentGroupName": "85d7bd7163ab54bc73e5",
   "howCreated": "InsertVisualButton"
 }
