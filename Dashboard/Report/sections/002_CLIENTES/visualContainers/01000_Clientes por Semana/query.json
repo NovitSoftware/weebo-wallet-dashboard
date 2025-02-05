@@ -6,13 +6,13 @@
           "Version": 2,
           "From": [
             {
-              "Name": "t",
-              "Entity": "TablaSemanalClientes",
+              "Name": "d",
+              "Entity": "dwh Dim_Tiempo",
               "Type": 0
             },
             {
-              "Name": "d",
-              "Entity": "dwh Dim_Tiempo",
+              "Name": "d1",
+              "Entity": "dwh Fact_AfiliacionEmpresa",
               "Type": 0
             },
             {
@@ -22,23 +22,6 @@
             }
           ],
           "Select": [
-            {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Source": "t"
-                      }
-                    },
-                    "Property": "Clientes"
-                  }
-                },
-                "Function": 0
-              },
-              "Name": "CountNonNull(TablaSemanalClientes.Clientes)",
-              "NativeReferenceName": "Clientes"
-            },
             {
               "Column": {
                 "Expression": {
@@ -50,6 +33,18 @@
               },
               "Name": "dwh Dim_Tiempo.Semana",
               "NativeReferenceName": "Semana"
+            },
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d1"
+                  }
+                },
+                "Property": "TotalClientesActivos"
+              },
+              "Name": "dwh Fact_AfiliacionEmpresa.TotalClientesActivos",
+              "NativeReferenceName": "Clientes"
             }
           ],
           "Where": [
@@ -85,18 +80,13 @@
             {
               "Direction": 2,
               "Expression": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Source": "t"
-                        }
-                      },
-                      "Property": "Clientes"
+                    "SourceRef": {
+                      "Source": "d1"
                     }
                   },
-                  "Function": 0
+                  "Property": "TotalClientesActivos"
                 }
               }
             }

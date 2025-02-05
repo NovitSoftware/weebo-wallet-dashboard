@@ -1,14 +1,15 @@
 {
-  "name": "694b13377062d5d9b048",
+  "name": "f2f53a4b0ad0d25069b9",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "height": 138.04025805022565,
-        "width": 599.28548282786107,
-        "x": 0.29346454056003535,
+        "height": 140,
+        "width": 591.62521130161792,
+        "x": 0.79206307683312593,
         "y": 0,
-        "z": 2000
+        "z": 4000,
+        "tabOrder": 1000
       }
     }
   ],
@@ -83,8 +84,30 @@
           }
         }
       ]
+    },
+    "vcObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
+            }
+          }
+        }
+      ]
     }
   },
-  "parentGroupName": "c1a4c44f3bc60959b17e",
+  "parentGroupName": "35d2730b2cc8708c93b0",
   "howCreated": "InsertVisualButton"
 }

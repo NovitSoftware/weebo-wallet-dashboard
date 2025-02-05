@@ -16,10 +16,10 @@
   },
   "projectionOrdering": {
     "Y": [
-      0
+      1
     ],
     "Category": [
-      1
+      0
     ]
   },
   "projectionActiveItems": {
@@ -33,14 +33,14 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Clientes",
-        "Name": "CountNonNull(TablaSemanalClientes.Clientes)",
+        "Restatement": "Semana",
+        "Name": "dwh Dim_Tiempo.Semana",
         "Type": 3,
         "Format": "0"
       },
       {
-        "Restatement": "Semana",
-        "Name": "dwh Dim_Tiempo.Semana",
+        "Restatement": "Clientes",
+        "Name": "dwh Fact_AfiliacionEmpresa.TotalClientesActivos",
         "Type": 3,
         "Format": "0"
       }
@@ -51,47 +51,18 @@
       "DataRoles": [
         {
           "Name": "Y",
-          "Projection": 0,
+          "Projection": 1,
           "isActive": false
         },
         {
           "Name": "Category",
-          "Projection": 1,
+          "Projection": 0,
           "isActive": true
         }
       ]
     }
   ],
   "selects": [
-    {
-      "displayName": "Clientes",
-      "format": "0",
-      "queryName": "CountNonNull(TablaSemanalClientes.Clientes)",
-      "roles": {
-        "Y": true
-      },
-      "sort": 2,
-      "sortOrder": 0,
-      "type": {
-        "category": null,
-        "underlyingType": 260
-      },
-      "expr": {
-        "Aggregation": {
-          "Expression": {
-            "Column": {
-              "Expression": {
-                "SourceRef": {
-                  "Entity": "TablaSemanalClientes"
-                }
-              },
-              "Property": "Clientes"
-            }
-          },
-          "Function": 0
-        }
-      }
-    },
     {
       "displayName": "Semana",
       "format": "0",
@@ -111,6 +82,30 @@
             }
           },
           "Property": "Semana"
+        }
+      }
+    },
+    {
+      "displayName": "Clientes",
+      "format": "0",
+      "queryName": "dwh Fact_AfiliacionEmpresa.TotalClientesActivos",
+      "roles": {
+        "Y": true
+      },
+      "sort": 2,
+      "sortOrder": 0,
+      "type": {
+        "category": null,
+        "underlyingType": 260
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Fact_AfiliacionEmpresa"
+            }
+          },
+          "Property": "TotalClientesActivos"
         }
       }
     }
