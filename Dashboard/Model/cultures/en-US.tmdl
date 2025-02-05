@@ -26473,95 +26473,6 @@
 			        }
 			      ]
 			    },
-			    "dwh_Fact_AfiliacionEmpresa.total_tarjetas_activada": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "dwh Fact_AfiliacionEmpresa",
-			          "ConceptualProperty": "Top3Distritos"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "top 3 distrito": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Top3Distritos": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "3 distrito": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "best 3 distrito": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "first 3 distrito": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "leading 3 distrito": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "maximum 3 distrito": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "peak 3 distrito": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "upper 3 distrito": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        }
-			      ]
-			    },
 			    "dwh_Dim_Tarjeta.variacion_tarjetas_activas": {
 			      "Definition": {
 			        "Binding": {
@@ -26808,125 +26719,6 @@
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "dwh_Fact_AfiliacionWebo.clientes_activos": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "dwh Fact_AfiliacionWebo",
-			          "ConceptualProperty": "ClientesActivos"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "clientes activos": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "ClientesActivos": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "Total": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "dwh_Fact_AfiliacionWebo.promedio_clientes_activos": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "dwh Fact_AfiliacionWebo",
-			          "ConceptualProperty": "PromedioClientesActivos"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "promedio clientes activos": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "PromedioClientesActivos": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "Promedio": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "dwh_Fact_AfiliacionWebo.total_clientes_en_riesgo": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "dwh Fact_AfiliacionWebo",
-			          "ConceptualProperty": "TotalClientesEnRiesgo"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "total clientes en riesgo": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "TotalClientesEnRiesgo": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "aggregate cliente en riesgo": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "overall cliente en riesgo": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "Total": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -29729,10 +29521,63 @@
 			        }
 			      ]
 			    },
-			    "dwh_Fact_AfiliacionWebo.promedio_clientes_en_riesgo": {
+			    "dwh_Fact_AfiliacionEmpresa.total_clientes_en_riesgo": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dwh Fact_AfiliacionWebo",
+			          "ConceptualEntity": "dwh Fact_AfiliacionEmpresa",
+			          "ConceptualProperty": "TotalClientesEnRiesgo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total clientes en riesgo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TotalClientesEnRiesgo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate cliente en riesgo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "overall cliente en riesgo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionEmpresa.promedio_clientes_en_riesgo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_AfiliacionEmpresa",
 			          "ConceptualProperty": "PromedioClientesEnRiesgo"
 			        }
 			      },
@@ -29762,10 +29607,129 @@
 			        }
 			      ]
 			    },
-			    "dwh_Fact_AfiliacionWebo.total_clientes_perdidos": {
+			    "dwh_Fact_AfiliacionEmpresa.total_clientes_activos": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dwh Fact_AfiliacionWebo",
+			          "ConceptualEntity": "dwh Fact_AfiliacionEmpresa",
+			          "ConceptualProperty": "TotalClientesActivos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total clientes activos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TotalClientesActivos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate cliente activo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall cliente activo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionEmpresa.promedio_clientes_activos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_AfiliacionEmpresa",
+			          "ConceptualProperty": "PromedioClientesActivos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "promedio clientes activos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PromedioClientesActivos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Promedio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionEmpresa.promedio_clientes_perdidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_AfiliacionEmpresa",
+			          "ConceptualProperty": "PromedioClientesPerdidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "promedio clientes perdidos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PromedioClientesPerdidos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Promedio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionEmpresa.total_clientes_perdidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_AfiliacionEmpresa",
 			          "ConceptualProperty": "TotalClientesPerdidos"
 			        }
 			      },
@@ -29815,22 +29779,75 @@
 			        }
 			      ]
 			    },
-			    "dwh_Fact_AfiliacionWebo.promedio_clientes_perdidos": {
+			    "dwh_Fact_AfiliacionEmpresa.total_clientes_desafiliados": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dwh Fact_AfiliacionWebo",
-			          "ConceptualProperty": "PromedioClientesPerdidos"
+			          "ConceptualEntity": "dwh Fact_AfiliacionEmpresa",
+			          "ConceptualProperty": "TotalClientesDesafiliados"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "promedio clientes perdidos": {
+			          "total clientes desafiliados": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "PromedioClientesPerdidos": {
+			          "TotalClientesDesafiliados": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate cliente desafiliado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall cliente desafiliado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionEmpresa.promedio_clientes_desafiliados": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_AfiliacionEmpresa",
+			          "ConceptualProperty": "PromedioClientesDesafiliados"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "promedio clientes desafiliados": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PromedioClientesDesafiliados": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -46440,20 +46457,20 @@
 			        }
 			      ]
 			    },
-			    "dwh_Fact_AfiliacionWebo_has_promedio_clientes_perdidos": {
+			    "dwh_Fact_AfiliacionEmpresa_has_promedio_clientes_desafiliados": {
 			      "Binding": {
-			        "ConceptualEntity": "dwh Fact_AfiliacionWebo"
+			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "dwh_Fact_AfiliacionWebo": {
+			        "dwh_Fact_AfiliacionEmpresa": {
 			          "Target": {
-			            "Entity": "dwh_Fact_AfiliacionWebo"
+			            "Entity": "dwh_Fact_AfiliacionEmpresa"
 			          }
 			        },
-			        "dwh_Fact_AfiliacionWebo.promedio_clientes_perdidos": {
+			        "dwh_Fact_AfiliacionEmpresa.promedio_clientes_desafiliados": {
 			          "Target": {
-			            "Entity": "dwh_Fact_AfiliacionWebo.promedio_clientes_perdidos"
+			            "Entity": "dwh_Fact_AfiliacionEmpresa.promedio_clientes_desafiliados"
 			          }
 			        }
 			      },
@@ -46461,32 +46478,32 @@
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dwh_Fact_AfiliacionWebo"
+			              "Role": "dwh_Fact_AfiliacionEmpresa"
 			            },
 			            "Object": {
-			              "Role": "dwh_Fact_AfiliacionWebo.promedio_clientes_perdidos"
+			              "Role": "dwh_Fact_AfiliacionEmpresa.promedio_clientes_desafiliados"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dwh_Fact_AfiliacionWebos_have_promedio_clientes_perdidos"
+			          "ID": "dwh_Fact_AfiliacionEmpresas_have_promedio_clientes_desafiliados"
 			        }
 			      ]
 			    },
-			    "dwh_Fact_AfiliacionWebo_has_total_clientes_perdidos": {
+			    "dwh_Fact_AfiliacionEmpresa_has_total_clientes_desafiliados": {
 			      "Binding": {
-			        "ConceptualEntity": "dwh Fact_AfiliacionWebo"
+			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "dwh_Fact_AfiliacionWebo": {
+			        "dwh_Fact_AfiliacionEmpresa": {
 			          "Target": {
-			            "Entity": "dwh_Fact_AfiliacionWebo"
+			            "Entity": "dwh_Fact_AfiliacionEmpresa"
 			          }
 			        },
-			        "dwh_Fact_AfiliacionWebo.total_clientes_perdidos": {
+			        "dwh_Fact_AfiliacionEmpresa.total_clientes_desafiliados": {
 			          "Target": {
-			            "Entity": "dwh_Fact_AfiliacionWebo.total_clientes_perdidos"
+			            "Entity": "dwh_Fact_AfiliacionEmpresa.total_clientes_desafiliados"
 			          }
 			        }
 			      },
@@ -46494,32 +46511,32 @@
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dwh_Fact_AfiliacionWebo"
+			              "Role": "dwh_Fact_AfiliacionEmpresa"
 			            },
 			            "Object": {
-			              "Role": "dwh_Fact_AfiliacionWebo.total_clientes_perdidos"
+			              "Role": "dwh_Fact_AfiliacionEmpresa.total_clientes_desafiliados"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dwh_Fact_AfiliacionWebos_have_total_clientes_perdidos"
+			          "ID": "dwh_Fact_AfiliacionEmpresas_have_total_clientes_desafiliados"
 			        }
 			      ]
 			    },
-			    "dwh_Fact_AfiliacionWebo_has_promedio_clientes_en_riesgo": {
+			    "dwh_Fact_AfiliacionEmpresa_has_total_clientes_perdidos": {
 			      "Binding": {
-			        "ConceptualEntity": "dwh Fact_AfiliacionWebo"
+			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "dwh_Fact_AfiliacionWebo": {
+			        "dwh_Fact_AfiliacionEmpresa": {
 			          "Target": {
-			            "Entity": "dwh_Fact_AfiliacionWebo"
+			            "Entity": "dwh_Fact_AfiliacionEmpresa"
 			          }
 			        },
-			        "dwh_Fact_AfiliacionWebo.promedio_clientes_en_riesgo": {
+			        "dwh_Fact_AfiliacionEmpresa.total_clientes_perdidos": {
 			          "Target": {
-			            "Entity": "dwh_Fact_AfiliacionWebo.promedio_clientes_en_riesgo"
+			            "Entity": "dwh_Fact_AfiliacionEmpresa.total_clientes_perdidos"
 			          }
 			        }
 			      },
@@ -46527,15 +46544,180 @@
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dwh_Fact_AfiliacionWebo"
+			              "Role": "dwh_Fact_AfiliacionEmpresa"
 			            },
 			            "Object": {
-			              "Role": "dwh_Fact_AfiliacionWebo.promedio_clientes_en_riesgo"
+			              "Role": "dwh_Fact_AfiliacionEmpresa.total_clientes_perdidos"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dwh_Fact_AfiliacionWebos_have_promedio_clientes_en_riesgo"
+			          "ID": "dwh_Fact_AfiliacionEmpresas_have_total_clientes_perdidos"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionEmpresa_has_promedio_clientes_perdidos": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_AfiliacionEmpresa": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionEmpresa"
+			          }
+			        },
+			        "dwh_Fact_AfiliacionEmpresa.promedio_clientes_perdidos": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionEmpresa.promedio_clientes_perdidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa.promedio_clientes_perdidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_AfiliacionEmpresas_have_promedio_clientes_perdidos"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Empresa_has_dwh_Fact_AfiliacionEmpresa_promedio_clientes_activos": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Empresa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Empresa": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Empresa"
+			          }
+			        },
+			        "dwh_Fact_AfiliacionEmpresa.promedio_clientes_activos": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionEmpresa.promedio_clientes_activos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Empresa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa.promedio_clientes_activos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Empresas_have_promedio_clientes_activos"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Empresa_has_dwh_Fact_AfiliacionEmpresa_total_clientes_activos": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Empresa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Empresa": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Empresa"
+			          }
+			        },
+			        "dwh_Fact_AfiliacionEmpresa.total_clientes_activos": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionEmpresa.total_clientes_activos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Empresa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa.total_clientes_activos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Empresas_have_total_clientes_activos"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionEmpresa_has_promedio_clientes_en_riesgo": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_AfiliacionEmpresa": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionEmpresa"
+			          }
+			        },
+			        "dwh_Fact_AfiliacionEmpresa.promedio_clientes_en_riesgo": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionEmpresa.promedio_clientes_en_riesgo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa.promedio_clientes_en_riesgo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_AfiliacionEmpresas_have_promedio_clientes_en_riesgo"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionEmpresa_has_total_clientes_en_riesgo": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_AfiliacionEmpresa": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionEmpresa"
+			          }
+			        },
+			        "dwh_Fact_AfiliacionEmpresa.total_clientes_en_riesgo": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionEmpresa.total_clientes_en_riesgo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa.total_clientes_en_riesgo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_AfiliacionEmpresas_have_total_clientes_en_riesgo"
 			        }
 			      ]
 			    },
@@ -48123,105 +48305,6 @@
 			        }
 			      ]
 			    },
-			    "dwh_Fact_AfiliacionWebo_has_total_clientes_en_riesgo": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Fact_AfiliacionWebo"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Fact_AfiliacionWebo": {
-			          "Target": {
-			            "Entity": "dwh_Fact_AfiliacionWebo"
-			          }
-			        },
-			        "dwh_Fact_AfiliacionWebo.total_clientes_en_riesgo": {
-			          "Target": {
-			            "Entity": "dwh_Fact_AfiliacionWebo.total_clientes_en_riesgo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Fact_AfiliacionWebo"
-			            },
-			            "Object": {
-			              "Role": "dwh_Fact_AfiliacionWebo.total_clientes_en_riesgo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Fact_AfiliacionWebos_have_total_clientes_en_riesgo"
-			        }
-			      ]
-			    },
-			    "dwh_Dim_Afiliado_has_dwh_Fact_AfiliacionWebo_promedio_clientes_activos": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Dim_Afiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Dim_Afiliado": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Afiliado"
-			          }
-			        },
-			        "dwh_Fact_AfiliacionWebo.promedio_clientes_activos": {
-			          "Target": {
-			            "Entity": "dwh_Fact_AfiliacionWebo.promedio_clientes_activos"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Dim_Afiliado"
-			            },
-			            "Object": {
-			              "Role": "dwh_Fact_AfiliacionWebo.promedio_clientes_activos"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Dim_Afiliados_have_promedio_clientes_activos"
-			        }
-			      ]
-			    },
-			    "dwh_Dim_Afiliado_has_dwh_Fact_AfiliacionWebo_clientes_activos": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Dim_Afiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Dim_Afiliado": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Afiliado"
-			          }
-			        },
-			        "dwh_Fact_AfiliacionWebo.clientes_activos": {
-			          "Target": {
-			            "Entity": "dwh_Fact_AfiliacionWebo.clientes_activos"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Dim_Afiliado"
-			            },
-			            "Object": {
-			              "Role": "dwh_Fact_AfiliacionWebo.clientes_activos"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Dim_Afiliados_have_clientes_activos"
-			        }
-			      ]
-			    },
 			    "dwh_Dim_Tarjeta_has_promedio_tarjetas_activadas_por_dia": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh Dim_Tarjeta"
@@ -48516,39 +48599,6 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_Dim_Tarjetas_have_variacion_tarjetas_activas"
-			        }
-			      ]
-			    },
-			    "dwh_Fact_AfiliacionEmpresa_has_total_tarjetas_activada": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Fact_AfiliacionEmpresa": {
-			          "Target": {
-			            "Entity": "dwh_Fact_AfiliacionEmpresa"
-			          }
-			        },
-			        "dwh_Fact_AfiliacionEmpresa.total_tarjetas_activada": {
-			          "Target": {
-			            "Entity": "dwh_Fact_AfiliacionEmpresa.total_tarjetas_activada"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Fact_AfiliacionEmpresa"
-			            },
-			            "Object": {
-			              "Role": "dwh_Fact_AfiliacionEmpresa.total_tarjetas_activada"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Fact_AfiliacionEmpresas_have_top_3_distrito"
 			        }
 			      ]
 			    },

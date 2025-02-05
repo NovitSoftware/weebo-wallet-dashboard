@@ -13,6 +13,131 @@
 			```
 		formatString: 0
 
+	measure TotalClientesEnRiesgo = ```
+			
+			COALESCE(
+			    CALCULATE(
+			        DISTINCTCOUNT('dwh Fact_AfiliacionEmpresa'[KeyEmpresa]),
+			        DATEDIFF('dwh Fact_AfiliacionEmpresa'[FechaActivo], TODAY(), DAY) >= 75,
+			        DATEDIFF('dwh Fact_AfiliacionEmpresa'[FechaActivo], TODAY(), DAY) <= 90
+			    )
+			    ,
+			    0
+			)
+			
+			```
+		formatString: 0
+
+	measure PromedioClientesEnRiesgo = ```
+			
+			COALESCE(
+			    CALCULATE(
+			        AVERAGEX(
+			            DISTINCT('dwh Fact_AfiliacionEmpresa'[KeyEmpresa]),
+			            'dwh Fact_AfiliacionEmpresa'[KeyEmpresa]
+			        ),
+			        TODAY() - 'dwh Fact_AfiliacionEmpresa'[FechaActivo] >= 75 &&
+			        TODAY() - 'dwh Fact_AfiliacionEmpresa'[FechaActivo] <= 90
+			    ),
+			    0
+			)
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure TotalClientesActivos = ```
+			
+			COALESCE(
+			    CALCULATE(
+			        DISTINCTCOUNT('dwh Dim_Empresa'[KeyEmpresa]),
+			        FILTER(
+			            'dwh Fact_AfiliacionEmpresa',
+			            'dwh Fact_AfiliacionEmpresa'[FechaActivo] >= TODAY() - 90
+			        )
+			    ),
+			    0
+			)
+			
+			```
+		formatString: 0
+
+	measure PromedioClientesActivos = ```
+			
+			COALESCE(
+			    CALCULATE(
+			        AVERAGEX(
+			            DISTINCT('dwh Fact_AfiliacionEmpresa'[KeyEmpresa]),
+			            'dwh Fact_AfiliacionEmpresa'[KeyEmpresa]
+			        ),
+			        TODAY() - 'dwh Fact_AfiliacionEmpresa'[FechaActivo] <= 90
+			    ),
+			    0
+			)
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure PromedioClientesPerdidos = ```
+			
+			COALESCE(
+			    CALCULATE(
+			        AVERAGEX(
+			            DISTINCT('dwh Fact_AfiliacionEmpresa'[KeyEmpresa]),
+			            'dwh Fact_AfiliacionEmpresa'[KeyEmpresa]
+			        ),
+			        TODAY() - 'dwh Fact_AfiliacionEmpresa'[FechaActivo] > 90
+			    ),
+			    0
+			)
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure TotalClientesPerdidos = ```
+			
+			COALESCE(
+			    CALCULATE(
+			        DISTINCTCOUNT('dwh Fact_AfiliacionEmpresa'[KeyEmpresa]),
+			        DATEDIFF('dwh Fact_AfiliacionEmpresa'[FechaActivo], TODAY(), DAY) > 90
+			    )
+			    ,
+			    0
+			)
+			
+			```
+		formatString: 0
+
+	measure TotalClientesDesafiliados = ```
+			
+			COALESCE(
+			CALCULATE(
+			    DISTINCTCOUNT('dwh Fact_AfiliacionEmpresa'[KeyEmpresa]),
+			    'dwh Fact_AfiliacionEmpresa'[FlagDesafiliado] = 1
+			),0)
+			
+			```
+		formatString: 0
+
+	measure PromedioClientesDesafiliados = ```
+			
+			COALESCE(
+			    CALCULATE(
+			        AVERAGEX(
+			            DISTINCT('dwh Fact_AfiliacionEmpresa'[KeyEmpresa]),
+			            'dwh Fact_AfiliacionEmpresa'[KeyEmpresa]
+			        ),
+			        'dwh Fact_AfiliacionEmpresa'[FlagDesafiliado] = 1
+			    ),
+			    0
+			)
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column KeyFactAfiliacionEmpresa
 		dataType: int64
 		formatString: 0
@@ -200,24 +325,6 @@
 			    "Desconocido"
 			)
 			
-			```
-		summarizeBy: none
-
-		annotation SummarizationSetBy = Automatic
-
-	column Top3Distritos = ```
-			
-			TOPN(
-			    3, 
-			    SUMMARIZE(
-			        'dwh Dim_Afiliado', 
-			        'dwh Dim_Afiliado'[Distrito], 
-			        "Ranking", 
-			        SUM('dwh Fact_Planes'[TarjetasActivadas])
-			    ), 
-			    [Ranking], 
-			    DESC
-			)
 			```
 		summarizeBy: none
 

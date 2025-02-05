@@ -7,7 +7,7 @@
           "From": [
             {
               "Name": "d",
-              "Entity": "dwh Fact_AfiliacionWebo",
+              "Entity": "dwh Fact_AfiliacionEmpresa",
               "Type": 0
             },
             {
@@ -26,7 +26,7 @@
                 },
                 "Property": "PromedioClientesEnRiesgo"
               },
-              "Name": "dwh Fact_AfiliacionWebo.PromedioClientesEnRiesgo",
+              "Name": "dwh Fact_AfiliacionEmpresa.PromedioClientesEnRiesgo",
               "NativeReferenceName": "Promedio"
             }
           ],
