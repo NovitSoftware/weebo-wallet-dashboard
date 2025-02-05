@@ -8,7 +8,7 @@
     "Select": [
       {
         "Restatement": "Promedio",
-        "Name": "dwh Fact_AfiliacionWebo.PromedioClientesPerdidos",
+        "Name": "dwh Fact_AfiliacionEmpresa.PromedioClientesPerdidos",
         "Type": 1
       }
     ]
@@ -27,7 +27,7 @@
   "selects": [
     {
       "displayName": "Promedio",
-      "queryName": "dwh Fact_AfiliacionWebo.PromedioClientesPerdidos",
+      "queryName": "dwh Fact_AfiliacionEmpresa.PromedioClientesPerdidos",
       "roles": {
         "Values": true
       },
@@ -39,7 +39,7 @@
         "Measure": {
           "Expression": {
             "SourceRef": {
-              "Entity": "dwh Fact_AfiliacionWebo"
+              "Entity": "dwh Fact_AfiliacionEmpresa"
             }
           },
           "Property": "PromedioClientesPerdidos"

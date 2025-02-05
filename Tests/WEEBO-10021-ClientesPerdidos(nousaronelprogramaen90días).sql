@@ -2,12 +2,12 @@
 -- Gráfica: Sin chart.
 
 -- total
-SELECT COUNT(DISTINCT aw.KeyAfiliado) AS TotalClientesPerdidos
-FROM dwh.Fact_AfiliacionWebo aw
-WHERE DATEDIFF(DAY, aw.FechaActivo, GETDATE()) > 90;
+SELECT COUNT(DISTINCT ae.KeyEmpresa) AS TotalClientesPerdidos
+FROM dwh.Fact_AfiliacionEmpresa ae
+WHERE DATEDIFF(DAY, ae.FechaActivo, GETDATE()) > 90;
 
 
 -- promedio
-SELECT avg(DISTINCT aw.KeyAfiliado) AS TotalClientesPerdidos
-FROM dwh.Fact_AfiliacionWebo aw
-WHERE DATEDIFF(DAY, aw.FechaActivo, GETDATE()) > 90;
+SELECT avg(DISTINCT ae.KeyEmpresa) AS PromedioClientesPerdidos
+FROM dwh.Fact_AfiliacionEmpresa ae
+WHERE DATEDIFF(DAY, ae.FechaActivo, GETDATE()) > 90;

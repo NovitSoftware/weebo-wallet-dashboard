@@ -18,7 +18,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "dwh Fact_AfiliacionWebo.PromedioClientesActivos"
+          "queryRef": "dwh Fact_AfiliacionEmpresa.PromedioClientesActivos"
         }
       ]
     },
@@ -27,7 +27,7 @@
       "From": [
         {
           "Name": "d",
-          "Entity": "dwh Fact_AfiliacionWebo",
+          "Entity": "dwh Fact_AfiliacionEmpresa",
           "Type": 0
         }
       ],
@@ -41,7 +41,7 @@
             },
             "Property": "PromedioClientesActivos"
           },
-          "Name": "dwh Fact_AfiliacionWebo.PromedioClientesActivos",
+          "Name": "dwh Fact_AfiliacionEmpresa.PromedioClientesActivos",
           "NativeReferenceName": "Promedio"
         }
       ],
@@ -62,7 +62,7 @@
       ]
     },
     "columnProperties": {
-      "dwh Fact_AfiliacionWebo.PromedioClientesActivos": {
+      "dwh Fact_AfiliacionEmpresa.PromedioClientesActivos": {
         "displayName": "Promedio"
       }
     },

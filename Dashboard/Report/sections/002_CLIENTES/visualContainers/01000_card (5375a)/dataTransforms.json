@@ -8,7 +8,7 @@
     "Select": [
       {
         "Restatement": "Total",
-        "Name": "dwh Fact_AfiliacionWebo.TotalClientesPerdidos",
+        "Name": "dwh Fact_AfiliacionEmpresa.TotalClientesPerdidos",
         "Type": 3,
         "Format": "0"
       }
@@ -29,7 +29,7 @@
     {
       "displayName": "Total",
       "format": "0",
-      "queryName": "dwh Fact_AfiliacionWebo.TotalClientesPerdidos",
+      "queryName": "dwh Fact_AfiliacionEmpresa.TotalClientesPerdidos",
       "roles": {
         "Values": true
       },
@@ -41,7 +41,7 @@
         "Measure": {
           "Expression": {
             "SourceRef": {
-              "Entity": "dwh Fact_AfiliacionWebo"
+              "Entity": "dwh Fact_AfiliacionEmpresa"
             }
           },
           "Property": "TotalClientesPerdidos"

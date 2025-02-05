@@ -18,7 +18,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "dwh Fact_AfiliacionWebo.TotalClientesEnRiesgo"
+          "queryRef": "dwh Fact_AfiliacionEmpresa.TotalClientesEnRiesgo"
         }
       ]
     },
@@ -27,7 +27,7 @@
       "From": [
         {
           "Name": "d",
-          "Entity": "dwh Fact_AfiliacionWebo",
+          "Entity": "dwh Fact_AfiliacionEmpresa",
           "Type": 0
         }
       ],
@@ -41,7 +41,7 @@
             },
             "Property": "TotalClientesEnRiesgo"
           },
-          "Name": "dwh Fact_AfiliacionWebo.TotalClientesEnRiesgo",
+          "Name": "dwh Fact_AfiliacionEmpresa.TotalClientesEnRiesgo",
           "NativeReferenceName": "Total"
         }
       ],
@@ -62,7 +62,7 @@
       ]
     },
     "columnProperties": {
-      "dwh Fact_AfiliacionWebo.TotalClientesEnRiesgo": {
+      "dwh Fact_AfiliacionEmpresa.TotalClientesEnRiesgo": {
         "displayName": "Total"
       }
     },

@@ -7,7 +7,7 @@
           "From": [
             {
               "Name": "d",
-              "Entity": "dwh Fact_AfiliacionWebo",
+              "Entity": "dwh Fact_AfiliacionEmpresa",
               "Type": 0
             },
             {
@@ -24,9 +24,9 @@
                     "Source": "d"
                   }
                 },
-                "Property": "ClientesActivos"
+                "Property": "TotalClientesActivos"
               },
-              "Name": "dwh Fact_AfiliacionWebo.ClientesActivos",
+              "Name": "dwh Fact_AfiliacionEmpresa.TotalClientesActivos",
               "NativeReferenceName": "Total"
             }
           ],

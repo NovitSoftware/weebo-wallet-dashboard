@@ -8,7 +8,7 @@
     "Select": [
       {
         "Restatement": "Total",
-        "Name": "dwh Fact_AfiliacionWebo.ClientesActivos",
+        "Name": "dwh Fact_AfiliacionEmpresa.TotalClientesActivos",
         "Type": 3,
         "Format": "0"
       }
@@ -29,7 +29,7 @@
     {
       "displayName": "Total",
       "format": "0",
-      "queryName": "dwh Fact_AfiliacionWebo.ClientesActivos",
+      "queryName": "dwh Fact_AfiliacionEmpresa.TotalClientesActivos",
       "roles": {
         "Values": true
       },
@@ -41,10 +41,10 @@
         "Measure": {
           "Expression": {
             "SourceRef": {
-              "Entity": "dwh Fact_AfiliacionWebo"
+              "Entity": "dwh Fact_AfiliacionEmpresa"
             }
           },
-          "Property": "ClientesActivos"
+          "Property": "TotalClientesActivos"
         }
       }
     }
