@@ -144,6 +144,7 @@ ref table CalendarioAfiliado
 ref table LocalDateTable_1e15fe5c-8910-4572-b49e-ef2ec5c8f6c7
 ref table LocalDateTable_47a02d7f-fca7-4457-bd14-3aa15ee423f0
 ref table FiltrosTiempo
+ref table TablaSemanalClientes
 
 ref cultureInfo en-US
 

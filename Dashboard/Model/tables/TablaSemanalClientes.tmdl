@@ -1,0 +1,35 @@
+﻿table TablaSemanalClientes
+
+	column Semana
+		formatString: 0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: dwh Dim_Tiempo[Semana]
+
+		annotation SummarizationSetBy = User
+
+	column Clientes
+		formatString: 0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Clientes]
+
+		annotation SummarizationSetBy = User
+
+	partition TablaSemanalClientes = calculated
+		mode: import
+		source = ```
+				
+				SUMMARIZE(
+				    FILTER(
+				        'dwh Dim_Tiempo',
+				        'dwh Dim_Tiempo'[Fecha] >= TODAY() - 90 && 'dwh Dim_Tiempo'[Fecha] <= TODAY()
+				    ),
+				    'dwh Dim_Tiempo'[Semana],
+				    "Clientes", DISTINCTCOUNT('dwh Fact_AfiliacionEmpresa'[KeyEmpresa])
+				)
+				
+				```
+
+	annotation PBI_Id = 2b848553f0f44069b9096221a10ca4f1
+

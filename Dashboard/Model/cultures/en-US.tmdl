@@ -29864,42 +29864,63 @@
 			          }
 			        }
 			      ]
-			    }
-			  },
-			  "Relationships": {
-			    "calendario_afiliado_date_variation_date_hierarchy_has_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_afiliado.date.variation.date_hierarchy.quarter": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.quarter"
-			          }
+			    },
+			    "tabla_semanal_cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "TablaSemanalClientes"
 			        }
 			      },
-			      "Phrasings": [
+			      "State": "Generated",
+			      "Terms": [
 			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_quarters"
+			          "tabla semanal cliente": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TablaSemanalClientes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
 			        }
 			      ]
 			    },
+			    "tabla_semanal_cliente.semana": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "TablaSemanalClientes",
+			          "ConceptualProperty": "Semana"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "semana": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_semanal_cliente.cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "TablaSemanalClientes",
+			          "ConceptualProperty": "Clientes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cliente": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
 			    "calendario_afiliado_date_variation_date_hierarchy_has_year": {
 			      "Binding": {
 			        "ConceptualEntity": "CalendarioAfiliado"
@@ -30226,7 +30247,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_quarters1"
+			          "ID": "date_hierarchies_have_quarters"
 			        }
 			      ]
 			    },
@@ -46457,6 +46478,72 @@
 			        }
 			      ]
 			    },
+			    "tabla_semanal_cliente_has_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "TablaSemanalClientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_semanal_cliente": {
+			          "Target": {
+			            "Entity": "tabla_semanal_cliente"
+			          }
+			        },
+			        "tabla_semanal_cliente.cliente": {
+			          "Target": {
+			            "Entity": "tabla_semanal_cliente.cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_semanal_cliente"
+			            },
+			            "Object": {
+			              "Role": "tabla_semanal_cliente.cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_semanal_clientes_have_clientes"
+			        }
+			      ]
+			    },
+			    "tabla_semanal_cliente_has_semana": {
+			      "Binding": {
+			        "ConceptualEntity": "TablaSemanalClientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_semanal_cliente": {
+			          "Target": {
+			            "Entity": "tabla_semanal_cliente"
+			          }
+			        },
+			        "tabla_semanal_cliente.semana": {
+			          "Target": {
+			            "Entity": "tabla_semanal_cliente.semana"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_semanal_cliente"
+			            },
+			            "Object": {
+			              "Role": "tabla_semanal_cliente.semana"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_semanal_clientes_have_semanas"
+			        }
+			      ]
+			    },
 			    "dwh_Fact_AfiliacionEmpresa_has_promedio_clientes_desafiliados": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
@@ -46589,15 +46676,15 @@
 			        }
 			      ]
 			    },
-			    "dwh_Dim_Empresa_has_dwh_Fact_AfiliacionEmpresa_promedio_clientes_activos": {
+			    "dwh_Fact_AfiliacionEmpresa_has_promedio_clientes_activos": {
 			      "Binding": {
-			        "ConceptualEntity": "dwh Dim_Empresa"
+			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "dwh_Dim_Empresa": {
+			        "dwh_Fact_AfiliacionEmpresa": {
 			          "Target": {
-			            "Entity": "dwh_Dim_Empresa"
+			            "Entity": "dwh_Fact_AfiliacionEmpresa"
 			          }
 			        },
 			        "dwh_Fact_AfiliacionEmpresa.promedio_clientes_activos": {
@@ -46610,7 +46697,7 @@
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dwh_Dim_Empresa"
+			              "Role": "dwh_Fact_AfiliacionEmpresa"
 			            },
 			            "Object": {
 			              "Role": "dwh_Fact_AfiliacionEmpresa.promedio_clientes_activos"
@@ -46618,7 +46705,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dwh_Dim_Empresas_have_promedio_clientes_activos"
+			          "ID": "dwh_Fact_AfiliacionEmpresas_have_promedio_clientes_activos"
 			        }
 			      ]
 			    },
@@ -60328,6 +60415,39 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_calendario_generals_are_weekend_calendario_generals"
+			        }
+			      ]
+			    },
+			    "calendario_afiliado_date_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioAfiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_afiliado.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_afiliado.date.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_quarters1"
 			        }
 			      ]
 			    },
