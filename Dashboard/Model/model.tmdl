@@ -137,7 +137,7 @@ ref table LocalDateTable_d84e4e37-b42c-409e-a24d-345433cf5ceb
 ref table 'stage StgTransaccion'
 ref table LocalDateTable_8847a136-b086-45ca-b5b1-51d12c944c0b
 ref table sysdiagrams
-ref table Top3Ranking
+ref table Top3Distritos
 ref table CalendarioGeneral
 ref table LocalDateTable_97f101e4-a3d5-4138-9aed-f35b25f07606
 ref table CalendarioAfiliado
