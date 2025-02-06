@@ -2,8 +2,6 @@
 
 	column name
 		dataType: string
-		isNullable: false
-		sourceProviderType: nvarchar(128)
 		summarizeBy: none
 		sourceColumn: name
 
@@ -11,9 +9,7 @@
 
 	column principal_id
 		dataType: int64
-		isNullable: false
 		formatString: 0
-		sourceProviderType: int
 		summarizeBy: sum
 		sourceColumn: principal_id
 
@@ -21,9 +17,7 @@
 
 	column diagram_id
 		dataType: int64
-		isNullable: false
 		formatString: 0
-		sourceProviderType: int
 		summarizeBy: sum
 		sourceColumn: diagram_id
 
@@ -32,7 +26,6 @@
 	column version
 		dataType: int64
 		formatString: 0
-		sourceProviderType: int
 		summarizeBy: sum
 		sourceColumn: version
 
@@ -43,8 +36,8 @@
 		source =
 				let
 				    Source = Sql.Databases("40.79.18.177"),
-				    Apployalty = Source{[Name="Apployalty"]}[Data],
-				    dbo_sysdiagrams = Apployalty{[Schema="dbo",Item="sysdiagrams"]}[Data]
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    dbo_sysdiagrams = ApployaltyDWH{[Schema="dbo",Item="sysdiagrams"]}[Data]
 				in
 				    dbo_sysdiagrams
 

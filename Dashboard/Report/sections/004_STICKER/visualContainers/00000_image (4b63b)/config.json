@@ -1,0 +1,38 @@
+{
+  "name": "4b63b129c110a57265a7",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 6.1820816227964253,
+        "y": 6.8002897850760684,
+        "z": 1000,
+        "width": 171.86186911374062,
+        "height": 43.892779521854621,
+        "tabOrder": 0
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "image",
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "imageUrl": {
+              "expr": {
+                "ResourcePackageItem": {
+                  "PackageName": "RegisteredResources",
+                  "PackageType": 1,
+                  "ItemName": "logointro5312883634361378.png"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "howCreated": "InsertVisualButton"
+}

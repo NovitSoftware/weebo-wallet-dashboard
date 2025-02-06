@@ -1,4 +1,5 @@
 -- 3.1 Stickers Otorgados: Número total de stickers otorgados.
 -- Gráfica: Sin chart. 
 
-select sum(s.totales) as 'Suma total' from dbo.sticker as s;
+SELECT SUM(fp.StickersEntregados) AS TotalStickersOtorgados
+FROM dwh.Fact_Planes fp;

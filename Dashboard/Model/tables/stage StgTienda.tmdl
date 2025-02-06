@@ -1,0 +1,108 @@
+﻿table 'stage StgTienda'
+
+	column idtienda
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: idtienda
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkcliente
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: fkcliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column nomtienda
+		dataType: string
+		summarizeBy: none
+		sourceColumn: nomtienda
+
+		annotation SummarizationSetBy = Automatic
+
+	column direccion
+		dataType: string
+		summarizeBy: none
+		sourceColumn: direccion
+
+		annotation SummarizationSetBy = Automatic
+
+	column interior
+		dataType: string
+		summarizeBy: none
+		sourceColumn: interior
+
+		annotation SummarizationSetBy = Automatic
+
+	column telefono
+		dataType: string
+		summarizeBy: none
+		sourceColumn: telefono
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	column lon
+		dataType: double
+		summarizeBy: sum
+		sourceColumn: lon
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column lat
+		dataType: double
+		summarizeBy: sum
+		sourceColumn: lat
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column fecin
+		dataType: dateTime
+		formatString: General Date
+		summarizeBy: none
+		sourceColumn: fecin
+
+		variation Variation
+			isDefault
+			relationship: 810333b3-b8f6-433d-a546-d8543705b0b2
+			defaultHierarchy: LocalDateTable_d60d6d30-ef39-4770-9fd0-f811188c1e14.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column horatt
+		dataType: string
+		summarizeBy: none
+		sourceColumn: horatt
+
+		annotation SummarizationSetBy = Automatic
+
+	column activo
+		dataType: string
+		summarizeBy: none
+		sourceColumn: activo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'stage StgTienda' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    stage_StgTienda = ApployaltyDWH{[Schema="stage",Item="StgTienda"]}[Data]
+				in
+				    stage_StgTienda
+

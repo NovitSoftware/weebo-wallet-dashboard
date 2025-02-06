@@ -1,0 +1,91 @@
+﻿table 'stage StgCortesPlanes'
+
+	column FechaCorte
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaCorte
+
+		variation Variation
+			isDefault
+			relationship: a5eb4ede-e67d-424e-9f5e-5a348ecc2d38
+			defaultHierarchy: LocalDateTable_ca9d4f75-87b9-489d-92fb-24ca7b59a358.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FkCliente
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FkCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column TarjetasAdquiridasAcumulado
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: TarjetasAdquiridasAcumulado
+
+		annotation SummarizationSetBy = Automatic
+
+	column TarjetasActivadasAcumulado
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: TarjetasActivadasAcumulado
+
+		annotation SummarizationSetBy = Automatic
+
+	column TarjetasAdquiridas
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: TarjetasAdquiridas
+
+		annotation SummarizationSetBy = Automatic
+
+	column TarjetasActivadas
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: TarjetasActivadas
+
+		annotation SummarizationSetBy = Automatic
+
+	column Saldo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: Saldo
+
+		annotation SummarizationSetBy = Automatic
+
+	column StickersEntregadosAcumulado
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: StickersEntregadosAcumulado
+
+		annotation SummarizationSetBy = Automatic
+
+	column StickersEntregados
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: StickersEntregados
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'stage StgCortesPlanes' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    stage_StgCortesPlanes = ApployaltyDWH{[Schema="stage",Item="StgCortesPlanes"]}[Data]
+				in
+				    stage_StgCortesPlanes
+

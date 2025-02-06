@@ -1,0 +1,249 @@
+﻿table 'dwh Dim_Afiliado'
+
+	measure PromedioAfiliados = ```
+			
+			AVERAGEX(
+			    VALUES('CalendarioAfiliado'[Date]),
+			    'dwh Dim_Afiliado'[TotalNuevosAfiliados]
+			)
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure TotalNuevosAfiliados = ```
+			
+			CALCULATE(
+			    COUNT('dwh Dim_Afiliado'[KeyAfiliado]),
+			    FILTER(
+			        'dwh Dim_Afiliado',
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] >= MIN(CalendarioAfiliado[Date]) &&
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= MAX(CalendarioAfiliado[Date])
+			    )
+			)
+			
+			```
+
+	measure 'Total Afiliados Sin Filtros' = ```
+			
+			CALCULATE(
+			    COUNTROWS('dwh Dim_Afiliado'),
+			    REMOVEFILTERS('dwh Dim_Afiliado'),
+			    REMOVEFILTERS('CalendarioGeneral')
+			)
+			
+			```
+		formatString: 0
+
+	measure 'Total Afiliados Con Filtros' = ```
+			
+			COUNTROWS('dwh Dim_Afiliado')
+			
+			```
+		formatString: 0
+
+	measure VariacionAfiliados = ```
+			
+			VAR FechaRaiz = MIN('CalendarioGeneral'[Date]) -- La fecha más baja seleccionada en el filtro de segmentación
+			VAR FechaFin = MAX('CalendarioGeneral'[Date])  -- La fecha más alta seleccionada en el filtro de segmentación
+			
+			-- Afiliados acumulados hasta la FechaRaiz
+			VAR AfiliadosHastaInicio = 
+			    CALCULATE(
+			        COUNT('dwh Dim_Afiliado'[KeyAfiliado]),
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= FechaRaiz
+			    )
+			
+			-- Afiliados acumulados hasta la FechaFin
+			VAR AfiliadosHastaFin = 
+			    CALCULATE(
+			        COUNT('dwh Dim_Afiliado'[KeyAfiliado]),
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= FechaFin
+			    )
+			
+			-- Variación entre los dos períodos
+			RETURN AfiliadosHastaFin - AfiliadosHastaInicio
+			
+			```
+		formatString: 0
+
+	column KeyAfiliado
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyAfiliado
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyAfiliadoAlt
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: KeyAfiliadoAlt
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nombres
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Nombres
+
+		annotation SummarizationSetBy = Automatic
+
+	column Apellidos
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Apellidos
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cliente
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Genero
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Genero
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaNacimiento
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaNacimiento
+
+		variation Variation
+			isDefault
+			relationship: b7d73598-2f16-4954-9fbe-584f11ddb162
+			defaultHierarchy: LocalDateTable_b16079f4-ce23-481b-8d85-f0a903773442.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Edad
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: Edad
+
+		annotation SummarizationSetBy = Automatic
+
+	column TipoDocumento
+		dataType: string
+		summarizeBy: none
+		sourceColumn: TipoDocumento
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumeroDocumento
+		dataType: string
+		summarizeBy: none
+		sourceColumn: NumeroDocumento
+
+		annotation SummarizationSetBy = Automatic
+
+	column Email
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Email
+
+		annotation SummarizationSetBy = Automatic
+
+	column Distrito
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Distrito
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaRegistroWebo
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaRegistroWebo
+
+		variation Variation
+			isDefault
+			relationship: e3cf362d-f712-42ed-8b2d-d87e044d1e1b
+			defaultHierarchy: LocalDateTable_f1bbd821-8bff-4fb9-8e1e-3abd95b52f67.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaNuevoWebo
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaNuevoWebo
+
+		variation Variation
+			isDefault
+			relationship: ad3edfbe-2842-4bbe-83db-57dadf411806
+			defaultHierarchy: LocalDateTable_92ed296d-b486-42d1-a42a-f05a05c7b035.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaBajaWebo
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaBajaWebo
+
+		variation Variation
+			isDefault
+			relationship: ea7d57c7-0ff1-4916-b89d-f7f1d89050b7
+			defaultHierarchy: LocalDateTable_e0591019-551d-4aec-9e7d-289b0dfcccf2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaActivoWebo
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaActivoWebo
+
+		variation Variation
+			isDefault
+			relationship: 24f8c997-c4e2-4db1-a166-71b3a048bce2
+			defaultHierarchy: LocalDateTable_606fc6db-dabe-49a3-a207-26d299bcbaf9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaUltimoConsumoWebo
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaUltimoConsumoWebo
+
+		variation Variation
+			isDefault
+			relationship: 4e3367e5-5457-4d50-ac7a-17bd97c895b9
+			defaultHierarchy: LocalDateTable_7e07d987-b4ee-472e-b071-3059a8e15cfd.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'dwh Dim_Afiliado' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    dwh_Dim_Afiliado = ApployaltyDWH{[Schema="dwh",Item="Dim_Afiliado"]}[Data]
+				in
+				    dwh_Dim_Afiliado
+

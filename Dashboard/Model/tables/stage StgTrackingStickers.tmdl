@@ -1,0 +1,74 @@
+﻿table 'stage StgTrackingStickers'
+
+	column idtracking
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: idtracking
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkcliente
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: fkcliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column fktienda
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: fktienda
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkusuario
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: fkusuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column fktarjeta
+		dataType: string
+		summarizeBy: none
+		sourceColumn: fktarjeta
+
+		annotation SummarizationSetBy = Automatic
+
+	column stickers
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: stickers
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: fecha
+
+		variation Variation
+			isDefault
+			relationship: 3e16f1f8-be1e-4ba9-962b-3eeba06f99a5
+			defaultHierarchy: LocalDateTable_d84e4e37-b42c-409e-a24d-345433cf5ceb.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'stage StgTrackingStickers' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    stage_StgTrackingStickers = ApployaltyDWH{[Schema="stage",Item="StgTrackingStickers"]}[Data]
+				in
+				    stage_StgTrackingStickers
+
