@@ -1,27 +1,30 @@
 {
-  "name": "d70d5d38b630ee4e584c",
+  "name": "81410cf92bbe8dc0dd7b",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "height": 184.5220827384897,
-        "width": 312.01018143751833,
-        "x": 1.2529764572184912,
-        "y": 0.7410751562471436,
+        "height": 183.5948360915626,
+        "width": 242.36505165235795,
+        "x": 0.97329421230364921,
+        "y": 0.73735116048710769,
         "z": 13000,
         "tabOrder": 0
       }
     }
   ],
   "singleVisual": {
-    "visualType": "multiRowCard",
+    "visualType": "pieChart",
     "projections": {
-      "Values": [
+      "Y": [
         {
-          "queryRef": "Top3Distritos.Distrito"
-        },
+          "queryRef": "Sum(dwh Fact_Cupon.StickersEntregados)"
+        }
+      ],
+      "Category": [
         {
-          "queryRef": "Sum(Top3Distritos.TotalStickersOtorgados)"
+          "queryRef": "dwh Dim_RangoEdad.RangoEdad",
+          "active": true
         }
       ]
     },
@@ -29,40 +32,45 @@
       "Version": 2,
       "From": [
         {
-          "Name": "t",
-          "Entity": "Top3Distritos",
+          "Name": "d",
+          "Entity": "dwh Fact_Cupon",
+          "Type": 0
+        },
+        {
+          "Name": "d1",
+          "Entity": "dwh Dim_RangoEdad",
           "Type": 0
         }
       ],
       "Select": [
-        {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Source": "t"
-              }
-            },
-            "Property": "Distrito"
-          },
-          "Name": "Top3Distritos.Distrito",
-          "NativeReferenceName": "Distrito"
-        },
         {
           "Aggregation": {
             "Expression": {
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Source": "t"
+                    "Source": "d"
                   }
                 },
-                "Property": "TotalStickersOtorgados"
+                "Property": "StickersEntregados"
               }
             },
             "Function": 0
           },
-          "Name": "Sum(Top3Distritos.TotalStickersOtorgados)",
-          "NativeReferenceName": "Sum of TotalStickersOtorgados"
+          "Name": "Sum(dwh Fact_Cupon.StickersEntregados)",
+          "NativeReferenceName": "Stickers Entregados"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d1"
+              }
+            },
+            "Property": "RangoEdad"
+          },
+          "Name": "dwh Dim_RangoEdad.RangoEdad",
+          "NativeReferenceName": "Edad"
         }
       ],
       "OrderBy": [
@@ -74,10 +82,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Source": "t"
+                      "Source": "d"
                     }
                   },
-                  "Property": "TotalStickersOtorgados"
+                  "Property": "StickersEntregados"
                 }
               },
               "Function": 0
@@ -86,35 +94,37 @@
         }
       ]
     },
+    "columnProperties": {
+      "dwh Dim_RangoEdad.RangoEdad": {
+        "displayName": "Edad"
+      },
+      "Sum(dwh Fact_Cupon.StickersEntregados)": {
+        "displayName": "Stickers Entregados"
+      }
+    },
     "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
     "objects": {
-      "categoryLabels": [
+      "legend": [
         {
           "properties": {
-            "show": {
+            "position": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "'BottomCenter'"
                 }
               }
             }
           }
         }
       ],
-      "card": [
+      "labels": [
         {
           "properties": {
-            "outlineStyle": {
+            "labelStyle": {
               "expr": {
                 "Literal": {
-                  "Value": "5D"
-                }
-              }
-            },
-            "cardPadding": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
+                  "Value": "'Data'"
                 }
               }
             }
@@ -138,5 +148,5 @@
       ]
     }
   },
-  "parentGroupName": "4f62c3181c9c21457a5c"
+  "parentGroupName": "f8dbe5a149c59c21e9d0"
 }
