@@ -1,15 +1,14 @@
 {
-  "name": "81410cf92bbe8dc0dd7b",
+  "name": "8c66561a009baa90004d",
   "layouts": [
     {
       "id": 0,
       "position": {
         "height": 183.5948360915626,
-        "width": 242.36505165235795,
-        "x": 0.97329421230364921,
+        "width": 345.4398437343952,
+        "x": 1.387223934777615,
         "y": 0.73735116048710769,
-        "z": 13000,
-        "tabOrder": 0
+        "z": 13000
       }
     }
   ],
@@ -23,7 +22,7 @@
       ],
       "Category": [
         {
-          "queryRef": "dwh Dim_RangoEdad.RangoEdad",
+          "queryRef": "dwh Dim_Afiliado.Distrito",
           "active": true
         }
       ]
@@ -38,7 +37,7 @@
         },
         {
           "Name": "d1",
-          "Entity": "dwh Dim_RangoEdad",
+          "Entity": "dwh Dim_Afiliado",
           "Type": 0
         }
       ],
@@ -67,10 +66,10 @@
                 "Source": "d1"
               }
             },
-            "Property": "RangoEdad"
+            "Property": "Distrito"
           },
-          "Name": "dwh Dim_RangoEdad.RangoEdad",
-          "NativeReferenceName": "Edad"
+          "Name": "dwh Dim_Afiliado.Distrito",
+          "NativeReferenceName": "Distrito"
         }
       ],
       "OrderBy": [
@@ -95,9 +94,6 @@
       ]
     },
     "columnProperties": {
-      "dwh Dim_RangoEdad.RangoEdad": {
-        "displayName": "Edad"
-      },
       "Sum(dwh Fact_Cupon.StickersEntregados)": {
         "displayName": "Stickers Entregados"
       }
@@ -111,7 +107,7 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'BottomCenter'"
+                  "Value": "'RightCenter'"
                 }
               }
             }
@@ -148,5 +144,5 @@
       ]
     }
   },
-  "parentGroupName": "f8dbe5a149c59c21e9d0"
+  "parentGroupName": "6bfc573965436e089b10"
 }
