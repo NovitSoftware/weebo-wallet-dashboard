@@ -1,0 +1,141 @@
+{
+  "name": "d70d5d38b630ee4e584c",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 184.5220827384897,
+        "width": 312.01018143751833,
+        "x": 1.2529764572184912,
+        "y": 0.7410751562471436,
+        "z": 13000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "multiRowCard",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "Top3Distritos.Distrito"
+        },
+        {
+          "queryRef": "Sum(Top3Distritos.TotalStickersOtorgados)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "t",
+          "Entity": "Top3Distritos",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "t"
+              }
+            },
+            "Property": "Distrito"
+          },
+          "Name": "Top3Distritos.Distrito",
+          "NativeReferenceName": "Distrito"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "t"
+                  }
+                },
+                "Property": "TotalStickersOtorgados"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(Top3Distritos.TotalStickersOtorgados)",
+          "NativeReferenceName": "Sum of TotalStickersOtorgados"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "t"
+                    }
+                  },
+                  "Property": "TotalStickersOtorgados"
+                }
+              },
+              "Function": 0
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "card": [
+        {
+          "properties": {
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            },
+            "cardPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "4f62c3181c9c21457a5c"
+}

@@ -1,8 +1,11 @@
 -- 3.3 Ranking por Distrito: Los 3 primeros distritos que tienen más stickers otorgados.
--- Gráfica: Sin chart.
+-- Gráfica: Sin chart. 
 
-select top 3 u.distrito, sum(s.totales) 'Totales'
-from dbo.sticker as s
-inner join dbo.usuario as u on u.idusuario = s.fkusuario
-group by u.distrito
-order by sum(s.totales) desc;
+SELECT TOP 3 
+    a.Distrito,
+    SUM(COALESCE(fc.StickersEntregados, 0)) AS TotalStickersOtorgados
+FROM dwh.Fact_Cupon fc
+JOIN dwh.Dim_Afiliado a
+  ON fc.KeyAfiliado = a.KeyAfiliado
+GROUP BY a.Distrito
+ORDER BY TotalStickersOtorgados DESC;

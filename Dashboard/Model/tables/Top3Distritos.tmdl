@@ -1,0 +1,40 @@
+﻿table Top3Distritos
+
+	column Distrito
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: dwh Dim_Afiliado[Distrito]
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalStickersOtorgados
+		formatString: 0
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [TotalStickersOtorgados]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Top3Distritos = calculated
+		mode: import
+		source = ```
+				
+				TOPN(
+				    3, 
+				    SUMMARIZE(
+				        'dwh Dim_Afiliado', 
+				        'dwh Dim_Afiliado'[Distrito], 
+				        "TotalStickersOtorgados", 
+				SUMX(
+				    'dwh Fact_Cupon', 
+				    COALESCE('dwh Fact_Cupon'[StickersEntregados], 0))
+				
+				    ),
+				    [TotalStickersOtorgados], 
+				    DESC
+				)
+				
+				```
+
+	annotation PBI_Id = 6b3c907e4b2f4e549dcb7359c3d59ef8
+
