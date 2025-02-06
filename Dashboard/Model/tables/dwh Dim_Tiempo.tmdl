@@ -42,10 +42,10 @@
 	column Dia
 		dataType: int64
 		formatString: 0
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Dia
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column Semana
 		dataType: int64

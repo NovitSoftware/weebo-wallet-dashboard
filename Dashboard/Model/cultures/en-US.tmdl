@@ -3670,6 +3670,16 @@
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Edad": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -7006,6 +7016,9 @@
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "key fecha corte": {
@@ -8073,6 +8086,16 @@
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Stickers Entregados": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -26298,31 +26321,25 @@
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "top 3 ranking": {
+			          "top 3 distrito": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Top3Ranking": {
+			          "Top3Distritos": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "ranking": {
+			          "3 distrito": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "3 ranking": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "best 3 ranking": {
+			          "best 3 distrito": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -26332,7 +26349,7 @@
 			          }
 			        },
 			        {
-			          "first 3 ranking": {
+			          "first 3 distrito": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -26342,7 +26359,7 @@
 			          }
 			        },
 			        {
-			          "leading 3 ranking": {
+			          "leading 3 distrito": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -26352,7 +26369,7 @@
 			          }
 			        },
 			        {
-			          "maximum 3 ranking": {
+			          "maximum 3 distrito": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -26362,7 +26379,7 @@
 			          }
 			        },
 			        {
-			          "peak 3 ranking": {
+			          "peak 3 distrito": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -26372,53 +26389,13 @@
 			          }
 			        },
 			        {
-			          "upper 3 ranking": {
+			          "upper 3 distrito": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "top 3 status": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "top 3 classification": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "3 status": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "3 classification": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
 			          }
 			        }
 			      ]
@@ -29599,7 +29576,7 @@
 			          }
 			        },
 			        {
-			          "Total": {
+			          "Clientes": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -29609,7 +29586,7 @@
 			          }
 			        },
 			        {
-			          "Clientes": {
+			          "Total": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -29940,9 +29917,92 @@
 			          }
 			        }
 			      ]
+			    },
+			    "ranking_distrito.total_stickers_otorgado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Top3Distritos",
+			          "ConceptualProperty": "TotalStickersOtorgados"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total stickers otorgado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total sticker otorgado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "TotalStickersOtorgados": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate sticker otorgado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall sticker otorgado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "calendario_afiliado_date_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioAfiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_afiliado.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_afiliado.date.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_months"
+			        }
+			      ]
+			    },
 			    "calendario_afiliado_date_variation_date_hierarchy_has_quarter": {
 			      "Binding": {
 			        "ConceptualEntity": "CalendarioAfiliado"
@@ -30269,7 +30329,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_months"
+			          "ID": "date_hierarchies_have_months1"
 			        }
 			      ]
 			    },
@@ -45875,6 +45935,59 @@
 			        }
 			      ]
 			    },
+			    "dwh_Fact_Cupon_has_dwh_Dim_Tiempo": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Dim_Tiempo": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo"
+			          },
+			          "Nouns": [
+			            {
+			              "key fecha corte": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tiempo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_dwh_Dim_Tiempos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tiempo"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Tiempos_have_dwh_Fact_Cupons"
+			        }
+			      ]
+			    },
 			    "dwh_Fact_Cupon_has_dwh_Dim_Tarjeta": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh Fact_Cupon"
@@ -46530,6 +46643,39 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_Dim_Afiliados_have_stage_StgCortesAfiliadosWebos"
+			        }
+			      ]
+			    },
+			    "ranking_distrito_has_total_stickers_otorgado": {
+			      "Binding": {
+			        "ConceptualEntity": "Top3Distritos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ranking_distrito": {
+			          "Target": {
+			            "Entity": "ranking_distrito"
+			          }
+			        },
+			        "ranking_distrito.total_stickers_otorgado": {
+			          "Target": {
+			            "Entity": "ranking_distrito.total_stickers_otorgado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ranking_distrito"
+			            },
+			            "Object": {
+			              "Role": "ranking_distrito.total_stickers_otorgado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "top_3_distrito_have_total_stickers_otorgados"
 			        }
 			      ]
 			    },
@@ -48773,40 +48919,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "top_3_ranking_have_distrito"
-			        }
-			      ]
-			    },
-			    "ranking_distrito_has_total_tarjetas_activada": {
-			      "Binding": {
-			        "ConceptualEntity": "Top3Distritos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "ranking_distrito": {
-			          "Target": {
-			            "Entity": "ranking_distrito"
-			          }
-			        },
-			        "ranking_distrito.total_tarjetas_activada": {
-			          "Target": {
-			            "Entity": "ranking_distrito.total_tarjetas_activada"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "ranking_distrito"
-			            },
-			            "Object": {
-			              "Role": "ranking_distrito.total_tarjetas_activada"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "top_3_ranking_have_total_tarjetas_activadas"
+			          "ID": "top_3_distrito_have_distrito"
 			        }
 			      ]
 			    },
@@ -57436,39 +57549,6 @@
 			        }
 			      ]
 			    },
-			    "dwh_Fact_Cupon_has_key_fecha_corte": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Fact_Cupon"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Fact_Cupon": {
-			          "Target": {
-			            "Entity": "dwh_Fact_Cupon"
-			          }
-			        },
-			        "dwh_Fact_Cupon.key_fecha_corte": {
-			          "Target": {
-			            "Entity": "dwh_Fact_Cupon.key_fecha_corte"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Fact_Cupon"
-			            },
-			            "Object": {
-			              "Role": "dwh_Fact_Cupon.key_fecha_corte"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Fact_Cupons_have_key_fecha_cortes"
-			        }
-			      ]
-			    },
 			    "dwh_Fact_Cupon_has_key_fact_cupon": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh Fact_Cupon"
@@ -60470,39 +60550,6 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_calendario_generals_are_weekend_calendario_generals"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_date_variation_date_hierarchy_has_month": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_afiliado.date.variation.date_hierarchy.month": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_months1"
 			        }
 			      ]
 			    },
