@@ -1,6 +1,5 @@
 {
   "objects": {
-<<<<<<<< HEAD:Dashboard/Report/sections/004_STICKER/visualContainers/06000_slicer (7ad52)/dataTransforms.json
     "general": [
       {
         "properties": {
@@ -34,61 +33,6 @@
             "expr": {
               "Literal": {
                 "Value": "'Dropdown'"
-========
-    "axis": [
-      {
-        "properties": {
-          "startValue": {
-            "expr": {
-              "Literal": {
-                "Value": "0D"
-              }
-            }
-          },
-          "endValue": {
-            "expr": {
-              "Literal": {
-                "Value": "10D"
-              }
-            }
-          }
-        }
-      }
-    ],
-    "range4": [
-      {
-        "properties": {
-          "startValue": {
-            "expr": {
-              "Literal": {
-                "Value": "7D"
-              }
-            }
-          }
-        }
-      }
-    ],
-    "range3": [
-      {
-        "properties": {
-          "startValue": {
-            "expr": {
-              "Literal": {
-                "Value": "3D"
-              }
-            }
-          }
-        }
-      }
-    ],
-    "calloutPercent": [
-      {
-        "properties": {
-          "show": {
-            "expr": {
-              "Literal": {
-                "Value": "true"
->>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41:Dashboard/Report/sections/002_CLIENTES/visualContainers/12002_eaTachometer6616D82ED23A4C048E1D3CD4604742ED (6d6ea)/dataTransforms.json
               }
             }
           }
@@ -97,11 +41,10 @@
     ]
   },
   "projectionOrdering": {
-    "Y": [
+    "Values": [
       0
     ]
   },
-<<<<<<<< HEAD:Dashboard/Report/sections/004_STICKER/visualContainers/06000_slicer (7ad52)/dataTransforms.json
   "projectionActiveItems": {
     "Values": [
       {
@@ -116,14 +59,6 @@
         "Restatement": "Filtro",
         "Name": "FiltrosTiempo.Filtro",
         "Type": 2048
-========
-  "queryMetadata": {
-    "Select": [
-      {
-        "Restatement": "Promedio de Stickers",
-        "Name": "dwh Fact_Planes.PromedioStickers",
-        "Type": 1
->>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41:Dashboard/Report/sections/002_CLIENTES/visualContainers/12002_eaTachometer6616D82ED23A4C048E1D3CD4604742ED (6d6ea)/dataTransforms.json
       }
     ]
   },
@@ -131,44 +66,32 @@
     {
       "DataRoles": [
         {
-          "Name": "Y",
+          "Name": "Values",
           "Projection": 0,
-          "isActive": false
+          "isActive": true
         }
       ]
     }
   ],
   "selects": [
     {
-<<<<<<<< HEAD:Dashboard/Report/sections/004_STICKER/visualContainers/06000_slicer (7ad52)/dataTransforms.json
       "displayName": "Filtro",
       "queryName": "FiltrosTiempo.Filtro",
-========
-      "displayName": "Promedio de Stickers",
-      "queryName": "dwh Fact_Planes.PromedioStickers",
->>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41:Dashboard/Report/sections/002_CLIENTES/visualContainers/12002_eaTachometer6616D82ED23A4C048E1D3CD4604742ED (6d6ea)/dataTransforms.json
       "roles": {
-        "Y": true
+        "Values": true
       },
       "type": {
         "category": null,
-        "underlyingType": 259
+        "underlyingType": 1
       },
       "expr": {
-        "Measure": {
+        "Column": {
           "Expression": {
             "SourceRef": {
-<<<<<<<< HEAD:Dashboard/Report/sections/004_STICKER/visualContainers/06000_slicer (7ad52)/dataTransforms.json
               "Entity": "FiltrosTiempo"
             }
           },
           "Property": "Filtro"
-========
-              "Entity": "dwh Fact_Planes"
-            }
-          },
-          "Property": "PromedioStickers"
->>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41:Dashboard/Report/sections/002_CLIENTES/visualContainers/12002_eaTachometer6616D82ED23A4C048E1D3CD4604742ED (6d6ea)/dataTransforms.json
         }
       }
     }

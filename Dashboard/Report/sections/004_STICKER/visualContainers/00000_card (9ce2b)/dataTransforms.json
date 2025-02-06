@@ -7,13 +7,8 @@
   "queryMetadata": {
     "Select": [
       {
-<<<<<<<< HEAD:Dashboard/Report/sections/004_STICKER/visualContainers/00000_card (9ce2b)/dataTransforms.json
         "Restatement": "Promedio x tarjetas",
         "Name": "dwh Fact_Planes.PromedioStickersPorTarjeta",
-========
-        "Restatement": "Promedio",
-        "Name": "dwh Fact_AfiliacionEmpresa.PromedioClientesActivos",
->>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41:Dashboard/Report/sections/002_CLIENTES/visualContainers/01000_card (e674c)/dataTransforms.json
         "Type": 1
       }
     ]
@@ -31,13 +26,8 @@
   ],
   "selects": [
     {
-<<<<<<<< HEAD:Dashboard/Report/sections/004_STICKER/visualContainers/00000_card (9ce2b)/dataTransforms.json
       "displayName": "Promedio x tarjetas",
       "queryName": "dwh Fact_Planes.PromedioStickersPorTarjeta",
-========
-      "displayName": "Promedio",
-      "queryName": "dwh Fact_AfiliacionEmpresa.PromedioClientesActivos",
->>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41:Dashboard/Report/sections/002_CLIENTES/visualContainers/01000_card (e674c)/dataTransforms.json
       "roles": {
         "Values": true
       },
@@ -49,17 +39,10 @@
         "Measure": {
           "Expression": {
             "SourceRef": {
-<<<<<<<< HEAD:Dashboard/Report/sections/004_STICKER/visualContainers/00000_card (9ce2b)/dataTransforms.json
               "Entity": "dwh Fact_Planes"
             }
           },
           "Property": "PromedioStickersPorTarjeta"
-========
-              "Entity": "dwh Fact_AfiliacionEmpresa"
-            }
-          },
-          "Property": "PromedioClientesActivos"
->>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41:Dashboard/Report/sections/002_CLIENTES/visualContainers/01000_card (e674c)/dataTransforms.json
         }
       }
     }

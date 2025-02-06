@@ -6,22 +6,16 @@
           "Version": 2,
           "From": [
             {
-<<<<<<<< HEAD:Dashboard/Report/sections/004_STICKER/visualContainers/00000_card (9ce2b)/query.json
               "Name": "d",
               "Entity": "dwh Fact_Planes",
-========
-              "Name": "f",
-              "Entity": "FiltrosTiempo",
->>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41:Dashboard/Report/sections/002_CLIENTES/visualContainers/06000_slicer (65035)/query.json
               "Type": 0
             }
           ],
           "Select": [
             {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-<<<<<<<< HEAD:Dashboard/Report/sections/004_STICKER/visualContainers/00000_card (9ce2b)/query.json
                     "Source": "d"
                   }
                 },
@@ -29,15 +23,6 @@
               },
               "Name": "dwh Fact_Planes.PromedioStickersPorTarjeta",
               "NativeReferenceName": "Promedio x tarjetas"
-========
-                    "Source": "f"
-                  }
-                },
-                "Property": "Filtro"
-              },
-              "Name": "FiltrosTiempo.Filtro",
-              "NativeReferenceName": "Filtro"
->>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41:Dashboard/Report/sections/002_CLIENTES/visualContainers/06000_slicer (65035)/query.json
             }
           ]
         },
@@ -54,10 +39,9 @@
           "DataReduction": {
             "DataVolume": 3,
             "Primary": {
-              "Window": {}
+              "Top": {}
             }
           },
-          "IncludeEmptyGroups": true,
           "Version": 1
         },
         "ExecutionMetricsKind": 1

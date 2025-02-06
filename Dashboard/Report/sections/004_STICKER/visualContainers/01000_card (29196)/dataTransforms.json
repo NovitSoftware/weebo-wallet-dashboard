@@ -7,13 +7,8 @@
   "queryMetadata": {
     "Select": [
       {
-<<<<<<<< HEAD:Dashboard/Report/sections/004_STICKER/visualContainers/01000_card (29196)/dataTransforms.json
         "Restatement": "Sticker otorgados",
         "Name": "Sum(dwh Fact_Planes.StickersEntregados)",
-========
-        "Restatement": "Total",
-        "Name": "dwh Fact_AfiliacionEmpresa.TotalClientesEnRiesgo",
->>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41:Dashboard/Report/sections/002_CLIENTES/visualContainers/01000_card (73e5d)/dataTransforms.json
         "Type": 3,
         "Format": "0"
       }
@@ -32,15 +27,9 @@
   ],
   "selects": [
     {
-<<<<<<<< HEAD:Dashboard/Report/sections/004_STICKER/visualContainers/01000_card (29196)/dataTransforms.json
       "displayName": "Sticker otorgados",
       "format": "0",
       "queryName": "Sum(dwh Fact_Planes.StickersEntregados)",
-========
-      "displayName": "Total",
-      "format": "0",
-      "queryName": "dwh Fact_AfiliacionEmpresa.TotalClientesEnRiesgo",
->>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41:Dashboard/Report/sections/002_CLIENTES/visualContainers/01000_card (73e5d)/dataTransforms.json
       "roles": {
         "Values": true
       },
@@ -49,9 +38,8 @@
         "underlyingType": 260
       },
       "expr": {
-        "Measure": {
+        "Aggregation": {
           "Expression": {
-<<<<<<<< HEAD:Dashboard/Report/sections/004_STICKER/visualContainers/01000_card (29196)/dataTransforms.json
             "Column": {
               "Expression": {
                 "SourceRef": {
@@ -59,13 +47,9 @@
                 }
               },
               "Property": "StickersEntregados"
-========
-            "SourceRef": {
-              "Entity": "dwh Fact_AfiliacionEmpresa"
->>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41:Dashboard/Report/sections/002_CLIENTES/visualContainers/01000_card (73e5d)/dataTransforms.json
             }
           },
-          "Property": "TotalClientesEnRiesgo"
+          "Function": 0
         }
       }
     }
