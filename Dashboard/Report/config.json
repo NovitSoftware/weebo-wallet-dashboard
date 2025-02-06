@@ -12,7 +12,11 @@
       "type": 2
     }
   },
+<<<<<<< HEAD
   "activeSectionIndex": 4,
+=======
+  "activeSectionIndex": 2,
+>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41
   "defaultDrillFilterOtherVisuals": true,
   "linguisticSchemaSyncVersion": 2,
   "settings": {

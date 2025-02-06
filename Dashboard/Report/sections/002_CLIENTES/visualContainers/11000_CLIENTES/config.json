@@ -1,25 +1,39 @@
 {
+<<<<<<<< HEAD:Dashboard/Report/sections/002_CLIENTES/visualContainers/11000_CLIENTES/config.json
   "name": "11065cb84054c240cb32",
+========
+  "name": "668cf016ed03b47b7629",
+>>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41:Dashboard/Report/sections/002_CLIENTES/visualContainers/02000_shape (668cf)/config.json
   "layouts": [
     {
       "id": 0,
       "position": {
+<<<<<<<< HEAD:Dashboard/Report/sections/002_CLIENTES/visualContainers/11000_CLIENTES/config.json
         "x": 516.20381550350157,
         "y": 17.928036706109634,
         "z": 9000,
         "width": 247.90147307413667,
         "height": 21.637285679787489,
         "tabOrder": 11000
+========
+        "x": 0,
+        "y": 0,
+        "z": 1000,
+        "width": 1202.2857142857142,
+        "height": 146.28571428571428,
+        "tabOrder": 2000
+>>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41:Dashboard/Report/sections/002_CLIENTES/visualContainers/02000_shape (668cf)/config.json
       }
     }
   ],
   "singleVisual": {
-    "visualType": "textbox",
+    "visualType": "shape",
     "drillFilterOtherVisuals": true,
     "objects": {
-      "general": [
+      "shape": [
         {
           "properties": {
+<<<<<<<< HEAD:Dashboard/Report/sections/002_CLIENTES/visualContainers/11000_CLIENTES/config.json
             "paragraphs": [
               {
                 "textRuns": [
@@ -44,6 +58,42 @@
         {
           "properties": {
             "color": {
+========
+            "tileShape": {
+              "expr": {
+                "Literal": {
+                  "Value": "'rectangleRounded'"
+                }
+              }
+            },
+            "rectangleRoundedCurve": {
+              "expr": {
+                "Literal": {
+                  "Value": "5L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rotation": [
+        {
+          "properties": {
+            "shapeAngle": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "fill": [
+        {
+          "properties": {
+            "fillColor": {
+>>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41:Dashboard/Report/sections/002_CLIENTES/visualContainers/02000_shape (668cf)/config.json
               "solid": {
                 "color": {
                   "expr": {
@@ -62,15 +112,23 @@
                 }
               }
             }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ],
+<<<<<<<< HEAD:Dashboard/Report/sections/002_CLIENTES/visualContainers/11000_CLIENTES/config.json
       "title": [
+========
+      "outline": [
+>>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41:Dashboard/Report/sections/002_CLIENTES/visualContainers/02000_shape (668cf)/config.json
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
+<<<<<<<< HEAD:Dashboard/Report/sections/002_CLIENTES/visualContainers/11000_CLIENTES/config.json
                   "Value": "true"
                 }
               }
@@ -86,6 +144,9 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+========
+                  "Value": "false"
+>>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41:Dashboard/Report/sections/002_CLIENTES/visualContainers/02000_shape (668cf)/config.json
                 }
               }
             },
@@ -114,5 +175,7 @@
         }
       ]
     }
-  }
+  },
+  "parentGroupName": "cf5678c21c40bc197329",
+  "howCreated": "InsertVisualButton"
 }

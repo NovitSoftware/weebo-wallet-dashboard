@@ -29957,6 +29957,7 @@
 			          }
 			        }
 			      ]
+<<<<<<< HEAD
 			    },
 			    "dwh_Fact_Plane.promedio_stickers_por_tarjeta": {
 			      "Definition": {
@@ -30007,6 +30008,78 @@
 			        "calendario_afiliado.date.variation.date_hierarchy.quarter": {
 			          "Target": {
 			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.quarter"
+=======
+			    }
+			  },
+			  "Relationships": {
+			    "dwh_Dim_Tienda_has_dwh_Dim_Empresa1": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tienda"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tienda": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tienda"
+			          }
+			        },
+			        "dwh_Dim_Empresa": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Empresa"
+			          },
+			          "Nouns": [
+			            {
+			              "key empresa alt": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tienda"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Tiendas_have_dwh_Dim_Empresas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Empresa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tienda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Empresas_have_dwh_Dim_Tiendas"
+			        }
+			      ]
+			    },
+			    "calendario_afiliado_date_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioAfiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_afiliado.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_afiliado.date.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.day"
+>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41
 			          }
 			        }
 			      },
@@ -30017,6 +30090,75 @@
 			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
 			            },
 			            "Object": {
+<<<<<<< HEAD
+=======
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_days"
+			        }
+			      ]
+			    },
+			    "calendario_afiliado_date_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioAfiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_afiliado.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_afiliado.date.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_months"
+			        }
+			      ]
+			    },
+			    "calendario_afiliado_date_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioAfiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_afiliado.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_afiliado.date.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41
 			              "Role": "calendario_afiliado.date.variation.date_hierarchy.quarter"
 			            }
 			          },
@@ -30286,7 +30428,11 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
+<<<<<<< HEAD
 			          "ID": "date_hierarchies_have_days"
+=======
+			          "ID": "date_hierarchies_have_days1"
+>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41
 			        }
 			      ]
 			    },
@@ -30319,7 +30465,11 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
+<<<<<<< HEAD
 			          "ID": "date_hierarchies_have_months"
+=======
+			          "ID": "date_hierarchies_have_months1"
+>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41
 			        }
 			      ]
 			    },
@@ -41202,6 +41352,7 @@
 			          "Attribute": {
 			            "Subject": {
 			              "Role": "dwh_Fact_AfiliacionEmpresa.fecha_registro.variation.date_hierarchy"
+<<<<<<< HEAD
 			            },
 			            "Object": {
 			              "Role": "dwh_Fact_AfiliacionEmpresa.fecha_registro.variation.date_hierarchy.month"
@@ -46476,10 +46627,16 @@
 			            },
 			            "Object": {
 			              "Role": "dwh_Dim_Tienda"
+=======
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa.fecha_registro.variation.date_hierarchy.month"
+>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
+<<<<<<< HEAD
 			          "ID": "dwh_Dim_Empresas_have_dwh_Dim_Tiendas"
 			        }
 			      ]
@@ -46498,6 +46655,26 @@
 			        "stage_StgEmpresa": {
 			          "Target": {
 			            "Entity": "stage_StgEmpresa"
+=======
+			          "ID": "fecha_registro_date_hierarchies_have_fecha_registro_months2"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionEmpresa_fecha_registro_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_AfiliacionEmpresa.fecha_registro.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionEmpresa.fecha_registro.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Fact_AfiliacionEmpresa.fecha_registro.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionEmpresa.fecha_registro.variation.date_hierarchy.quarter"
+>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41
 			          }
 			        }
 			      },
@@ -46505,14 +46682,5207 @@
 			        {
 			          "Attribute": {
 			            "Subject": {
+<<<<<<< HEAD
 			              "Role": "dwh_Dim_Empresa"
 			            },
 			            "Object": {
 			              "Role": "stage_StgEmpresa"
+=======
+			              "Role": "dwh_Fact_AfiliacionEmpresa.fecha_registro.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa.fecha_registro.variation.date_hierarchy.quarter"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
+			          "ID": "fecha_registro_date_hierarchies_have_fecha_registro_quarters2"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionEmpresa_fecha_registro_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_AfiliacionEmpresa.fecha_registro.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionEmpresa.fecha_registro.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Fact_AfiliacionEmpresa.fecha_registro.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionEmpresa.fecha_registro.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa.fecha_registro.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa.fecha_registro.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_registro_date_hierarchies_have_fecha_registro_years2"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionEmpresa_fecha_registro_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_AfiliacionEmpresa.fecha_registro": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionEmpresa.fecha_registro"
+			          }
+			        },
+			        "dwh_Fact_AfiliacionEmpresa.fecha_registro.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionEmpresa.fecha_registro.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa.fecha_registro"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa.fecha_registro.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_registros_have_fecha_registro_date_hierarchies2"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tienda_fecha_inicio_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tienda"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_inicio_date_hierarchies_have_fecha_inicio_days1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tienda_fecha_inicio_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tienda"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_inicio_date_hierarchies_have_fecha_inicio_months1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tienda_fecha_inicio_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tienda"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_inicio_date_hierarchies_have_fecha_inicio_quarters1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tienda_fecha_inicio_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tienda"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_inicio_date_hierarchies_have_fecha_inicio_years1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tienda_fecha_inicio_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tienda"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tienda.fecha_inicio": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tienda.fecha_inicio"
+			          }
+			        },
+			        "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tienda.fecha_inicio"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tienda.fecha_inicio.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_inicios_have_fecha_inicio_date_hierarchies1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tiempo_fecha_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tiempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tiempo.fecha.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo.fecha.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Tiempo.fecha.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo.fecha.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tiempo.fecha.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tiempo.fecha.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_days2"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tiempo_fecha_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tiempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tiempo.fecha.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo.fecha.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Tiempo.fecha.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo.fecha.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tiempo.fecha.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tiempo.fecha.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_months2"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tiempo_fecha_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tiempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tiempo.fecha.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo.fecha.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Tiempo.fecha.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo.fecha.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tiempo.fecha.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tiempo.fecha.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_quarters2"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tiempo_fecha_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tiempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tiempo.fecha.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo.fecha.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Tiempo.fecha.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo.fecha.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tiempo.fecha.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tiempo.fecha.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_years2"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tiempo_fecha_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tiempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tiempo.fecha": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo.fecha"
+			          }
+			        },
+			        "dwh_Dim_Tiempo.fecha.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo.fecha.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tiempo.fecha"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tiempo.fecha.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fechas_have_fecha_date_hierarchies2"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tarjeta_fecha_activo_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tarjeta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_activo_date_hierarchies_have_fecha_activo_days6"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tarjeta_fecha_activo_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tarjeta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_activo_date_hierarchies_have_fecha_activo_months6"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tarjeta_fecha_activo_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tarjeta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_activo_date_hierarchies_have_fecha_activo_quarters6"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tarjeta_fecha_activo_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tarjeta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_activo_date_hierarchies_have_fecha_activo_years6"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tarjeta_fecha_activo_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tarjeta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tarjeta.fecha_activo": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta.fecha_activo"
+			          }
+			        },
+			        "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tarjeta.fecha_activo"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tarjeta.fecha_activo.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_activos_have_fecha_activo_date_hierarchies6"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tarjeta_fecha_creacion_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tarjeta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_creacion_date_hierarchies_have_fecha_creacion_days5"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tarjeta_fecha_creacion_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tarjeta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_creacion_date_hierarchies_have_fecha_creacion_months5"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tarjeta_fecha_creacion_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tarjeta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_creacion_date_hierarchies_have_fecha_creacion_quarters5"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tarjeta_fecha_creacion_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tarjeta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_creacion_date_hierarchies_have_fecha_creacion_years5"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tarjeta_fecha_creacion_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tarjeta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tarjeta.fecha_creacion": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta.fecha_creacion"
+			          }
+			        },
+			        "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tarjeta.fecha_creacion"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tarjeta.fecha_creacion.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_creacions_have_fecha_creacion_date_hierarchies5"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Promocion_fecha_fin_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Promocion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_fin_date_hierarchies_have_fecha_fin_days1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Promocion_fecha_fin_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Promocion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_fin_date_hierarchies_have_fecha_fin_months1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Promocion_fecha_fin_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Promocion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_fin_date_hierarchies_have_fecha_fin_quarters1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Promocion_fecha_fin_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Promocion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_fin_date_hierarchies_have_fecha_fin_years1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Promocion_fecha_fin_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Promocion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Promocion.fecha_fin": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion.fecha_fin"
+			          }
+			        },
+			        "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Promocion.fecha_fin"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Promocion.fecha_fin.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_fins_have_fecha_fin_date_hierarchies1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Promocion_fecha_inicio_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Promocion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_inicio_date_hierarchies_have_fecha_inicio_days2"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Promocion_fecha_inicio_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Promocion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_inicio_date_hierarchies_have_fecha_inicio_months2"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Promocion_fecha_inicio_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Promocion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_inicio_date_hierarchies_have_fecha_inicio_quarters2"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Promocion_fecha_inicio_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Promocion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_inicio_date_hierarchies_have_fecha_inicio_years2"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Promocion_fecha_inicio_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Promocion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Promocion.fecha_inicio": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion.fecha_inicio"
+			          }
+			        },
+			        "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Promocion.fecha_inicio"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Promocion.fecha_inicio.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_inicios_have_fecha_inicio_date_hierarchies2"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Programa_fecha_creacion_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Programa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_creacion_date_hierarchies_have_fecha_creacion_days6"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Programa_fecha_creacion_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Programa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_creacion_date_hierarchies_have_fecha_creacion_months6"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Programa_fecha_creacion_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Programa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_creacion_date_hierarchies_have_fecha_creacion_quarters6"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Programa_fecha_creacion_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Programa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_creacion_date_hierarchies_have_fecha_creacion_years6"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Programa_fecha_creacion_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Programa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Programa.fecha_creacion": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Programa.fecha_creacion"
+			          }
+			        },
+			        "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Programa.fecha_creacion"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Programa.fecha_creacion.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_creacions_have_fecha_creacion_date_hierarchies6"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_CuponPromocional_fecha_uso_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_CuponPromocional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_uso_date_hierarchies_have_fecha_uso_days5"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_CuponPromocional_fecha_uso_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_CuponPromocional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_uso_date_hierarchies_have_fecha_uso_months5"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_CuponPromocional_fecha_uso_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_CuponPromocional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_uso_date_hierarchies_have_fecha_uso_quarters5"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_CuponPromocional_fecha_uso_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_CuponPromocional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_uso_date_hierarchies_have_fecha_uso_years5"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_CuponPromocional_fecha_uso_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_CuponPromocional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_CuponPromocional.fecha_uso": {
+			          "Target": {
+			            "Entity": "dwh_Dim_CuponPromocional.fecha_uso"
+			          }
+			        },
+			        "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_CuponPromocional.fecha_uso"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_CuponPromocional.fecha_uso.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_usos_have_fecha_uso_date_hierarchies5"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_CuponPromocional_fecha_creacion_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_CuponPromocional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_creacion_date_hierarchies_have_fecha_creacion_days7"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_CuponPromocional_fecha_creacion_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_CuponPromocional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_creacion_date_hierarchies_have_fecha_creacion_months7"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_CuponPromocional_fecha_creacion_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_CuponPromocional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_creacion_date_hierarchies_have_fecha_creacion_quarters7"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_CuponPromocional_fecha_creacion_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_CuponPromocional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_creacion_date_hierarchies_have_fecha_creacion_years7"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_CuponPromocional_fecha_creacion_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_CuponPromocional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_CuponPromocional.fecha_creacion": {
+			          "Target": {
+			            "Entity": "dwh_Dim_CuponPromocional.fecha_creacion"
+			          }
+			        },
+			        "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_CuponPromocional.fecha_creacion"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_CuponPromocional.fecha_creacion.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_creacions_have_fecha_creacion_date_hierarchies7"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Cupon_fecha_uso_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_uso_date_hierarchies_have_fecha_uso_days6"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Cupon_fecha_uso_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_uso_date_hierarchies_have_fecha_uso_months6"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Cupon_fecha_uso_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_uso_date_hierarchies_have_fecha_uso_quarters6"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Cupon_fecha_uso_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_uso_date_hierarchies_have_fecha_uso_years6"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Cupon_fecha_uso_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Cupon.fecha_uso": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Cupon.fecha_uso"
+			          }
+			        },
+			        "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Cupon.fecha_uso"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Cupon.fecha_uso.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_usos_have_fecha_uso_date_hierarchies6"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Cupon_fecha_activacion_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_activacion_date_hierarchies_have_fecha_activacion_days3"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Cupon_fecha_activacion_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_activacion_date_hierarchies_have_fecha_activacion_months3"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Cupon_fecha_activacion_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_activacion_date_hierarchies_have_fecha_activacion_quarters3"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Cupon_fecha_activacion_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_activacion_date_hierarchies_have_fecha_activacion_years3"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Cupon_fecha_activacion_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Cupon.fecha_activacion": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Cupon.fecha_activacion"
+			          }
+			        },
+			        "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Cupon.fecha_activacion"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Cupon.fecha_activacion.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_activacions_have_fecha_activacion_date_hierarchies3"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_ultimo_consumo_webo_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_ultimo_consumo_webo_date_hierarchies_have_fecha_ultimo_consumo_webo_days"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_ultimo_consumo_webo_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_ultimo_consumo_webo_date_hierarchies_have_fecha_ultimo_consumo_webo_months"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_ultimo_consumo_webo_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_ultimo_consumo_webo_date_hierarchies_have_fecha_ultimo_consumo_webo_quarters"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_ultimo_consumo_webo_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_ultimo_consumo_webo_date_hierarchies_have_fecha_ultimo_consumo_webo_years"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_ultimo_consumo_webo_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_ultimo_consumo_webo.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_ultimo_consumo_webos_have_fecha_ultimo_consumo_webo_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_activo_webo_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_activo_webo_date_hierarchies_have_fecha_activo_webo_days"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_activo_webo_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_activo_webo_date_hierarchies_have_fecha_activo_webo_months"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_activo_webo_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_activo_webo_date_hierarchies_have_fecha_activo_webo_quarters"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_activo_webo_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_activo_webo_date_hierarchies_have_fecha_activo_webo_years"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_activo_webo_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_activo_webo": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_activo_webo"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_activo_webo"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_activo_webo.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_activo_webos_have_fecha_activo_webo_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_baja_webo_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_baja_webo_date_hierarchies_have_fecha_baja_webo_days1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_baja_webo_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_baja_webo_date_hierarchies_have_fecha_baja_webo_months1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_baja_webo_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_baja_webo_date_hierarchies_have_fecha_baja_webo_quarters1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_baja_webo_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_baja_webo_date_hierarchies_have_fecha_baja_webo_years1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_baja_webo_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_baja_webo": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_baja_webo"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_baja_webo"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_baja_webo.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_baja_webos_have_fecha_baja_webo_date_hierarchies1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_nuevo_webo_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_nuevo_webo_date_hierarchies_have_fecha_nuevo_webo_days1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_nuevo_webo_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_nuevo_webo_date_hierarchies_have_fecha_nuevo_webo_months1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_nuevo_webo_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_nuevo_webo_date_hierarchies_have_fecha_nuevo_webo_quarters1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_nuevo_webo_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_nuevo_webo_date_hierarchies_have_fecha_nuevo_webo_years1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_nuevo_webo_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_nuevo_webo": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_nuevo_webo"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_nuevo_webo"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_nuevo_webo.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_nuevo_webos_have_fecha_nuevo_webo_date_hierarchies1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_registro_webo_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_registro_webo_date_hierarchies_have_fecha_registro_webo_days1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_registro_webo_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_registro_webo_date_hierarchies_have_fecha_registro_webo_months1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_registro_webo_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_registro_webo_date_hierarchies_have_fecha_registro_webo_quarters1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_registro_webo_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_registro_webo_date_hierarchies_have_fecha_registro_webo_years1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_registro_webo_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_registro_webo": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_registro_webo"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_registro_webo"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_registro_webo.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_registro_webos_have_fecha_registro_webo_date_hierarchies1"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_nacimiento_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_nacimiento_date_hierarchies_have_fecha_nacimiento_days"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_nacimiento_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_nacimiento_date_hierarchies_have_fecha_nacimiento_months"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_nacimiento_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_nacimiento_date_hierarchies_have_fecha_nacimiento_quarters"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_nacimiento_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_nacimiento_date_hierarchies_have_fecha_nacimiento_years"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_fecha_nacimiento_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado.fecha_nacimiento": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_nacimiento"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado.fecha_nacimiento"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_nacimiento.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_nacimientos_have_fecha_nacimiento_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "stage_StgTransaccion_has_stage_StgPrograma": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTransaccion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTransaccion": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion"
+			          }
+			        },
+			        "stage_StgPrograma": {
+			          "Target": {
+			            "Entity": "stage_StgPrograma"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTransaccion"
+			            },
+			            "Object": {
+			              "Role": "stage_StgPrograma"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgTransaccions_have_stage_StgProgramas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgPrograma"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTransaccion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgProgramas_have_stage_StgTransaccions"
+			        }
+			      ]
+			    },
+			    "stage_StgTrackingSticker_has_stage_StgPrograma": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTrackingStickers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTrackingSticker": {
+			          "Target": {
+			            "Entity": "stage_StgTrackingSticker"
+			          }
+			        },
+			        "stage_StgPrograma": {
+			          "Target": {
+			            "Entity": "stage_StgPrograma"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTrackingSticker"
+			            },
+			            "Object": {
+			              "Role": "stage_StgPrograma"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgTrackingStickers_have_stage_StgProgramas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgPrograma"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTrackingSticker"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgProgramas_have_stage_StgTrackingStickers"
+			        }
+			      ]
+			    },
+			    "stage_StgTienda_has_stage_StgPrograma": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTienda"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTienda": {
+			          "Target": {
+			            "Entity": "stage_StgTienda"
+			          }
+			        },
+			        "stage_StgPrograma": {
+			          "Target": {
+			            "Entity": "stage_StgPrograma"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTienda"
+			            },
+			            "Object": {
+			              "Role": "stage_StgPrograma"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgTiendas_have_stage_StgProgramas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgPrograma"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTienda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgProgramas_have_stage_StgTiendas"
+			        }
+			      ]
+			    },
+			    "stage_StgTarjeta_has_stage_StgPrograma": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTarjeta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTarjeta": {
+			          "Target": {
+			            "Entity": "stage_StgTarjeta"
+			          }
+			        },
+			        "stage_StgPrograma": {
+			          "Target": {
+			            "Entity": "stage_StgPrograma"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTarjeta"
+			            },
+			            "Object": {
+			              "Role": "stage_StgPrograma"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgTarjetas_have_stage_StgProgramas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgPrograma"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTarjeta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgProgramas_have_stage_StgTarjetas"
+			        }
+			      ]
+			    },
+			    "stage_StgPromocion_has_stage_StgPrograma": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgPromocion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgPromocion": {
+			          "Target": {
+			            "Entity": "stage_StgPromocion"
+			          }
+			        },
+			        "stage_StgPrograma": {
+			          "Target": {
+			            "Entity": "stage_StgPrograma"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgPromocion"
+			            },
+			            "Object": {
+			              "Role": "stage_StgPrograma"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgPromocions_have_stage_StgProgramas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgPrograma"
+			            },
+			            "Object": {
+			              "Role": "stage_StgPromocion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgProgramas_have_stage_StgPromocions"
+			        }
+			      ]
+			    },
+			    "stage_StgFactPromocione_has_dwh_Dim_RangoEdad": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgFactPromociones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgFactPromocione": {
+			          "Target": {
+			            "Entity": "stage_StgFactPromocione"
+			          }
+			        },
+			        "dwh_Dim_RangoEdad": {
+			          "Target": {
+			            "Entity": "dwh_Dim_RangoEdad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgFactPromocione"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_RangoEdad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgFactPromociones_have_dwh_Dim_RangoEdads"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_RangoEdad"
+			            },
+			            "Object": {
+			              "Role": "stage_StgFactPromocione"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_RangoEdads_have_stage_StgFactPromociones"
+			        }
+			      ]
+			    },
+			    "stage_StgFactPromocione_has_dwh_Dim_Promocion": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgFactPromociones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgFactPromocione": {
+			          "Target": {
+			            "Entity": "stage_StgFactPromocione"
+			          }
+			        },
+			        "dwh_Dim_Promocion": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgFactPromocione"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Promocion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgFactPromociones_have_dwh_Dim_Promocions"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Promocion"
+			            },
+			            "Object": {
+			              "Role": "stage_StgFactPromocione"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Promocions_have_stage_StgFactPromociones"
+			        }
+			      ]
+			    },
+			    "stage_StgFactPromocione_has_dwh_Dim_Empresa": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgFactPromociones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgFactPromocione": {
+			          "Target": {
+			            "Entity": "stage_StgFactPromocione"
+			          }
+			        },
+			        "dwh_Dim_Empresa": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Empresa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgFactPromocione"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgFactPromociones_have_dwh_Dim_Empresas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Empresa"
+			            },
+			            "Object": {
+			              "Role": "stage_StgFactPromocione"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Empresas_have_stage_StgFactPromociones"
+			        }
+			      ]
+			    },
+			    "stage_StgFactPromocione_has_dwh_Dim_CuponPromocional": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgFactPromociones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgFactPromocione": {
+			          "Target": {
+			            "Entity": "stage_StgFactPromocione"
+			          }
+			        },
+			        "dwh_Dim_CuponPromocional": {
+			          "Target": {
+			            "Entity": "dwh_Dim_CuponPromocional"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgFactPromocione"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_CuponPromocional"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgFactPromociones_have_dwh_Dim_CuponPromocionals"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_CuponPromocional"
+			            },
+			            "Object": {
+			              "Role": "stage_StgFactPromocione"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_CuponPromocionals_have_stage_StgFactPromociones"
+			        }
+			      ]
+			    },
+			    "stage_StgFactPromocione_has_dwh_Dim_Afiliado": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgFactPromociones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgFactPromocione": {
+			          "Target": {
+			            "Entity": "stage_StgFactPromocione"
+			          }
+			        },
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgFactPromocione"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgFactPromociones_have_dwh_Dim_Afiliados"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "stage_StgFactPromocione"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_stage_StgFactPromociones"
+			        }
+			      ]
+			    },
+			    "stage_StgFactPlane_has_dwh_Dim_Empresa": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgFactPlanes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgFactPlane": {
+			          "Target": {
+			            "Entity": "stage_StgFactPlane"
+			          }
+			        },
+			        "dwh_Dim_Empresa": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Empresa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgFactPlane"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgFactPlanes_have_dwh_Dim_Empresas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Empresa"
+			            },
+			            "Object": {
+			              "Role": "stage_StgFactPlane"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Empresas_have_stage_StgFactPlanes"
+			        }
+			      ]
+			    },
+			    "stage_StgFactFacturacion_has_dwh_Dim_Afiliado": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgFactFacturacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgFactFacturacion": {
+			          "Target": {
+			            "Entity": "stage_StgFactFacturacion"
+			          }
+			        },
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgFactFacturacion"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgFactFacturacions_have_dwh_Dim_Afiliados"
+			        }
+			      ]
+			    },
+			    "stage_StgFactCupon_has_dwh_Dim_Tarjeta": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgFactCupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgFactCupon": {
+			          "Target": {
+			            "Entity": "stage_StgFactCupon"
+			          }
+			        },
+			        "dwh_Dim_Tarjeta": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgFactCupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tarjeta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgFactCupons_have_dwh_Dim_Tarjetas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tarjeta"
+			            },
+			            "Object": {
+			              "Role": "stage_StgFactCupon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Tarjetas_have_stage_StgFactCupons"
+			        }
+			      ]
+			    },
+			    "stage_StgFactCupon_has_dwh_Dim_RangoEdad": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgFactCupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgFactCupon": {
+			          "Target": {
+			            "Entity": "stage_StgFactCupon"
+			          }
+			        },
+			        "dwh_Dim_RangoEdad": {
+			          "Target": {
+			            "Entity": "dwh_Dim_RangoEdad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgFactCupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_RangoEdad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgFactCupons_have_dwh_Dim_RangoEdads"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_RangoEdad"
+			            },
+			            "Object": {
+			              "Role": "stage_StgFactCupon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_RangoEdads_have_stage_StgFactCupons"
+			        }
+			      ]
+			    },
+			    "stage_StgFactCupon_has_dwh_Dim_Empresa": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgFactCupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgFactCupon": {
+			          "Target": {
+			            "Entity": "stage_StgFactCupon"
+			          }
+			        },
+			        "dwh_Dim_Empresa": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Empresa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgFactCupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgFactCupons_have_dwh_Dim_Empresas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Empresa"
+			            },
+			            "Object": {
+			              "Role": "stage_StgFactCupon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Empresas_have_stage_StgFactCupons"
+			        }
+			      ]
+			    },
+			    "stage_StgFactCupon_has_dwh_Dim_Cupon": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgFactCupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgFactCupon": {
+			          "Target": {
+			            "Entity": "stage_StgFactCupon"
+			          }
+			        },
+			        "dwh_Dim_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Cupon"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgFactCupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Cupon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgFactCupons_have_dwh_Dim_Cupons"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Cupon"
+			            },
+			            "Object": {
+			              "Role": "stage_StgFactCupon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Cupons_have_stage_StgFactCupons"
+			        }
+			      ]
+			    },
+			    "stage_StgFactCupon_has_dwh_Dim_Afiliado": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgFactCupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgFactCupon": {
+			          "Target": {
+			            "Entity": "stage_StgFactCupon"
+			          }
+			        },
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgFactCupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgFactCupons_have_dwh_Dim_Afiliados"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "stage_StgFactCupon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_stage_StgFactCupons"
+			        }
+			      ]
+			    },
+			    "stage_StgFactAfiliacionWebo_has_dwh_Dim_RangoEdad": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgFactAfiliacionWebo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgFactAfiliacionWebo": {
+			          "Target": {
+			            "Entity": "stage_StgFactAfiliacionWebo"
+			          }
+			        },
+			        "dwh_Dim_RangoEdad": {
+			          "Target": {
+			            "Entity": "dwh_Dim_RangoEdad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgFactAfiliacionWebo"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_RangoEdad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgFactAfiliacionWebos_have_dwh_Dim_RangoEdads"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_RangoEdad"
+			            },
+			            "Object": {
+			              "Role": "stage_StgFactAfiliacionWebo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_RangoEdads_have_stage_StgFactAfiliacionWebos"
+			        }
+			      ]
+			    },
+			    "stage_StgFactAfiliacionWebo_has_dwh_Dim_Afiliado": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgFactAfiliacionWebo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgFactAfiliacionWebo": {
+			          "Target": {
+			            "Entity": "stage_StgFactAfiliacionWebo"
+			          }
+			        },
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgFactAfiliacionWebo"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgFactAfiliacionWebos_have_dwh_Dim_Afiliados"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "stage_StgFactAfiliacionWebo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_stage_StgFactAfiliacionWebos"
+			        }
+			      ]
+			    },
+			    "stage_StgFactAfiliacionEmpresa_has_dwh_Dim_RangoEdad": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgFactAfiliacionEmpresa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgFactAfiliacionEmpresa": {
+			          "Target": {
+			            "Entity": "stage_StgFactAfiliacionEmpresa"
+			          }
+			        },
+			        "dwh_Dim_RangoEdad": {
+			          "Target": {
+			            "Entity": "dwh_Dim_RangoEdad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgFactAfiliacionEmpresa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_RangoEdad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgFactAfiliacionEmpresas_have_dwh_Dim_RangoEdads"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_RangoEdad"
+			            },
+			            "Object": {
+			              "Role": "stage_StgFactAfiliacionEmpresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_RangoEdads_have_stage_StgFactAfiliacionEmpresas"
+			        }
+			      ]
+			    },
+			    "stage_StgFactAfiliacionEmpresa_has_dwh_Dim_Empresa": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgFactAfiliacionEmpresa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgFactAfiliacionEmpresa": {
+			          "Target": {
+			            "Entity": "stage_StgFactAfiliacionEmpresa"
+			          }
+			        },
+			        "dwh_Dim_Empresa": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Empresa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgFactAfiliacionEmpresa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgFactAfiliacionEmpresas_have_dwh_Dim_Empresas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Empresa"
+			            },
+			            "Object": {
+			              "Role": "stage_StgFactAfiliacionEmpresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Empresas_have_stage_StgFactAfiliacionEmpresas"
+			        }
+			      ]
+			    },
+			    "stage_StgFactAfiliacionEmpresa_has_dwh_Dim_Afiliado": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgFactAfiliacionEmpresa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgFactAfiliacionEmpresa": {
+			          "Target": {
+			            "Entity": "stage_StgFactAfiliacionEmpresa"
+			          }
+			        },
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgFactAfiliacionEmpresa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgFactAfiliacionEmpresas_have_dwh_Dim_Afiliados"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "stage_StgFactAfiliacionEmpresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_stage_StgFactAfiliacionEmpresas"
+			        }
+			      ]
+			    },
+			    "stage_StgEmpresa_has_dwh_Dim_Empresa": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgEmpresa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgEmpresa": {
+			          "Target": {
+			            "Entity": "stage_StgEmpresa"
+			          }
+			        },
+			        "dwh_Dim_Empresa": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Empresa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgEmpresa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgEmpresas_have_dwh_Dim_Empresas"
+			        }
+			      ]
+			    },
+			    "stage_StgCuponPromocional_has_stage_StgPrograma": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgCuponPromocional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgCuponPromocional": {
+			          "Target": {
+			            "Entity": "stage_StgCuponPromocional"
+			          }
+			        },
+			        "stage_StgPrograma": {
+			          "Target": {
+			            "Entity": "stage_StgPrograma"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgCuponPromocional"
+			            },
+			            "Object": {
+			              "Role": "stage_StgPrograma"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgCuponPromocionals_have_stage_StgProgramas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgPrograma"
+			            },
+			            "Object": {
+			              "Role": "stage_StgCuponPromocional"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgProgramas_have_stage_StgCuponPromocionals"
+			        }
+			      ]
+			    },
+			    "stage_StgCupon_has_stage_StgPrograma": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgCupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgCupon": {
+			          "Target": {
+			            "Entity": "stage_StgCupon"
+			          }
+			        },
+			        "stage_StgPrograma": {
+			          "Target": {
+			            "Entity": "stage_StgPrograma"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgCupon"
+			            },
+			            "Object": {
+			              "Role": "stage_StgPrograma"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgCupons_have_stage_StgProgramas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgPrograma"
+			            },
+			            "Object": {
+			              "Role": "stage_StgCupon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgProgramas_have_stage_StgCupons"
+			        }
+			      ]
+			    },
+			    "stage_StgCortesAfiliadosWebo_has_dwh_Dim_Afiliado": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgCortesAfiliadosWebo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgCortesAfiliadosWebo": {
+			          "Target": {
+			            "Entity": "stage_StgCortesAfiliadosWebo"
+			          }
+			        },
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgCortesAfiliadosWebo"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgCortesAfiliadosWebos_have_dwh_Dim_Afiliados"
+			        }
+			      ]
+			    },
+			    "stage_StgAfiliacion_has_stage_StgPrograma": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgAfiliacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgAfiliacion": {
+			          "Target": {
+			            "Entity": "stage_StgAfiliacion"
+			          }
+			        },
+			        "stage_StgPrograma": {
+			          "Target": {
+			            "Entity": "stage_StgPrograma"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgAfiliacion"
+			            },
+			            "Object": {
+			              "Role": "stage_StgPrograma"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgAfiliacions_have_stage_StgProgramas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgPrograma"
+			            },
+			            "Object": {
+			              "Role": "stage_StgAfiliacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgProgramas_have_stage_StgAfiliacions"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Promocione_has_dwh_Dim_RangoEdad": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Promociones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Promocione": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Promocione"
+			          }
+			        },
+			        "dwh_Dim_RangoEdad": {
+			          "Target": {
+			            "Entity": "dwh_Dim_RangoEdad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Promocione"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_RangoEdad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Promociones_have_dwh_Dim_RangoEdads"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_RangoEdad"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Promocione"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_RangoEdads_have_dwh_Fact_Promociones"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Promocione_has_dwh_Dim_Promocion": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Promociones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Promocione": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Promocione"
+			          }
+			        },
+			        "dwh_Dim_Promocion": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Promocione"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Promocion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Promociones_have_dwh_Dim_Promocions"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Promocion"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Promocione"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Promocions_have_dwh_Fact_Promociones"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Promocione_has_dwh_Dim_Empresa": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Promociones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Promocione": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Promocione"
+			          }
+			        },
+			        "dwh_Dim_Empresa": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Empresa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Promocione"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Promociones_have_dwh_Dim_Empresas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Empresa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Promocione"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Empresas_have_dwh_Fact_Promociones"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Promocione_has_dwh_Dim_CuponPromocional": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Promociones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Promocione": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Promocione"
+			          }
+			        },
+			        "dwh_Dim_CuponPromocional": {
+			          "Target": {
+			            "Entity": "dwh_Dim_CuponPromocional"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Promocione"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_CuponPromocional"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Promociones_have_dwh_Dim_CuponPromocionals"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_CuponPromocional"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Promocione"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_CuponPromocionals_have_dwh_Fact_Promociones"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Promocione_has_dwh_Dim_Afiliado": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Promociones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Promocione": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Promocione"
+			          }
+			        },
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Promocione"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Promociones_have_dwh_Dim_Afiliados"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Promocione"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_dwh_Fact_Promociones"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Plane_has_dwh_Dim_Tiempo": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Planes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Plane": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Plane"
+			          }
+			        },
+			        "dwh_Dim_Tiempo": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo"
+			          },
+			          "Nouns": [
+			            {
+			              "key fecha corte": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Plane"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tiempo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Planes_have_dwh_Dim_Tiempos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tiempo"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Plane"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Tiempos_have_dwh_Fact_Planes"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Plane_has_dwh_Dim_Empresa": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Planes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Plane": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Plane"
+			          }
+			        },
+			        "dwh_Dim_Empresa": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Empresa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Plane"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Planes_have_dwh_Dim_Empresas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Empresa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Plane"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Empresas_have_dwh_Fact_Planes"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Facturacion_has_dwh_Dim_Tarjeta": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Facturacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Facturacion": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Facturacion"
+			          }
+			        },
+			        "dwh_Dim_Tarjeta": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Facturacion"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tarjeta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Facturacions_have_dwh_Dim_Tarjetas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tarjeta"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Facturacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Tarjetas_have_dwh_Fact_Facturacions"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Facturacion_has_dwh_Dim_RangoEdad": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Facturacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Facturacion": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Facturacion"
+			          }
+			        },
+			        "dwh_Dim_RangoEdad": {
+			          "Target": {
+			            "Entity": "dwh_Dim_RangoEdad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Facturacion"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_RangoEdad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Facturacions_have_dwh_Dim_RangoEdads"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_RangoEdad"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Facturacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_RangoEdads_have_dwh_Fact_Facturacions"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Facturacion_has_dwh_Dim_Promocion": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Facturacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Facturacion": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Facturacion"
+			          }
+			        },
+			        "dwh_Dim_Promocion": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Promocion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Facturacion"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Promocion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Facturacions_have_dwh_Dim_Promocions"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Promocion"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Facturacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Promocions_have_dwh_Fact_Facturacions"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Facturacion_has_dwh_Dim_Programa": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Facturacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Facturacion": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Facturacion"
+			          }
+			        },
+			        "dwh_Dim_Programa": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Programa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Facturacion"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Programa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Facturacions_have_dwh_Dim_Programas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Programa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Facturacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Programas_have_dwh_Fact_Facturacions"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Facturacion_has_dwh_Dim_Empresa": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Facturacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Facturacion": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Facturacion"
+			          }
+			        },
+			        "dwh_Dim_Empresa": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Empresa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Facturacion"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Facturacions_have_dwh_Dim_Empresas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Empresa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Facturacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Empresas_have_dwh_Fact_Facturacions"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Facturacion_has_dwh_Dim_Afiliado": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Facturacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Facturacion": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Facturacion"
+			          }
+			        },
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Facturacion"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Facturacions_have_dwh_Dim_Afiliados"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Facturacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_dwh_Fact_Facturacions"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon_has_dwh_Dim_Tarjeta": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Dim_Tarjeta": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tarjeta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tarjeta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_dwh_Dim_Tarjetas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tarjeta"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Tarjetas_have_dwh_Fact_Cupons"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon_has_dwh_Dim_RangoEdad": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Dim_RangoEdad": {
+			          "Target": {
+			            "Entity": "dwh_Dim_RangoEdad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_RangoEdad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_dwh_Dim_RangoEdads"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_RangoEdad"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_RangoEdads_have_dwh_Fact_Cupons"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon_has_dwh_Dim_Empresa": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Dim_Empresa": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Empresa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_dwh_Dim_Empresas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Empresa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Empresas_have_dwh_Fact_Cupons"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon_has_dwh_Dim_Cupon": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Dim_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Cupon"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Cupon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_dwh_Dim_Cupons"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Cupons_have_dwh_Fact_Cupons"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon_has_dwh_Dim_Afiliado": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_dwh_Dim_Afiliados"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_dwh_Fact_Cupons"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionWebo_has_dwh_Dim_RangoEdad": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_AfiliacionWebo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_AfiliacionWebo": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionWebo"
+			          }
+			        },
+			        "dwh_Dim_RangoEdad": {
+			          "Target": {
+			            "Entity": "dwh_Dim_RangoEdad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_AfiliacionWebo"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_RangoEdad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_AfiliacionWebos_have_dwh_Dim_RangoEdads"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_RangoEdad"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_AfiliacionWebo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_RangoEdads_have_dwh_Fact_AfiliacionWebos"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionWebo_has_dwh_Dim_Afiliado": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_AfiliacionWebo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_AfiliacionWebo": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionWebo"
+			          }
+			        },
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_AfiliacionWebo"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_AfiliacionWebos_have_dwh_Dim_Afiliados"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_AfiliacionWebo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_dwh_Fact_AfiliacionWebos"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionEmpresa_has_dwh_Dim_RangoEdad": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_AfiliacionEmpresa": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionEmpresa"
+			          }
+			        },
+			        "dwh_Dim_RangoEdad": {
+			          "Target": {
+			            "Entity": "dwh_Dim_RangoEdad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_RangoEdad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_AfiliacionEmpresas_have_dwh_Dim_RangoEdads"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_RangoEdad"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_RangoEdads_have_dwh_Fact_AfiliacionEmpresas"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionEmpresa_has_dwh_Dim_Empresa": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_AfiliacionEmpresa": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionEmpresa"
+			          }
+			        },
+			        "dwh_Dim_Empresa": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Empresa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_AfiliacionEmpresas_have_dwh_Dim_Empresas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Empresa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Empresas_have_dwh_Fact_AfiliacionEmpresas"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionEmpresa_has_dwh_Dim_Afiliado": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_AfiliacionEmpresa": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionEmpresa"
+			          }
+			        },
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_AfiliacionEmpresas_have_dwh_Dim_Afiliados"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_dwh_Fact_AfiliacionEmpresas"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tienda_has_stage_StgFactFacturacion": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tienda"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tienda": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tienda"
+			          }
+			        },
+			        "stage_StgFactFacturacion": {
+			          "Target": {
+			            "Entity": "stage_StgFactFacturacion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tienda"
+			            },
+			            "Object": {
+			              "Role": "stage_StgFactFacturacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Tiendas_have_stage_StgFactFacturacions"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgFactFacturacion"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tienda"
+>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+<<<<<<< HEAD
 			          "ID": "dwh_Dim_Empresas_have_stage_StgEmpresas"
 			        }
 			      ]
@@ -46531,6 +51901,26 @@
 			        "stage_StgFactFacturacion": {
 			          "Target": {
 			            "Entity": "stage_StgFactFacturacion"
+=======
+			          "ID": "stage_StgFactFacturacions_have_dwh_Dim_Tiendas"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Empresa_has_stage_StgEmpresa": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Empresa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Empresa": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Empresa"
+			          }
+			        },
+			        "stage_StgEmpresa": {
+			          "Target": {
+			            "Entity": "stage_StgEmpresa"
+>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41
 			          }
 			        }
 			      },
@@ -46538,19 +51928,34 @@
 			        {
 			          "Attribute": {
 			            "Subject": {
+<<<<<<< HEAD
 			              "Role": "dwh_Dim_Afiliado"
 			            },
 			            "Object": {
 			              "Role": "stage_StgFactFacturacion"
+=======
+			              "Role": "dwh_Dim_Empresa"
+			            },
+			            "Object": {
+			              "Role": "stage_StgEmpresa"
+>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
+<<<<<<< HEAD
 			          "ID": "dwh_Dim_Afiliados_have_stage_StgFactFacturacions"
 			        }
 			      ]
 			    },
 			    "dwh_Dim_Afiliado_has_stage_StgCortesAfiliadosWebo": {
+=======
+			          "ID": "dwh_Dim_Empresas_have_stage_StgEmpresas"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_has_stage_StgFactFacturacion": {
+>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41
 			      "Binding": {
 			        "ConceptualEntity": "dwh Dim_Afiliado"
 			      },
@@ -46561,9 +51966,15 @@
 			            "Entity": "dwh_Dim_Afiliado"
 			          }
 			        },
+<<<<<<< HEAD
 			        "stage_StgCortesAfiliadosWebo": {
 			          "Target": {
 			            "Entity": "stage_StgCortesAfiliadosWebo"
+=======
+			        "stage_StgFactFacturacion": {
+			          "Target": {
+			            "Entity": "stage_StgFactFacturacion"
+>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41
 			          }
 			        }
 			      },
@@ -46574,11 +51985,16 @@
 			              "Role": "dwh_Dim_Afiliado"
 			            },
 			            "Object": {
+<<<<<<< HEAD
 			              "Role": "stage_StgCortesAfiliadosWebo"
+=======
+			              "Role": "stage_StgFactFacturacion"
+>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
+<<<<<<< HEAD
 			          "ID": "dwh_Dim_Afiliados_have_stage_StgCortesAfiliadosWebos"
 			        }
 			      ]
@@ -46597,6 +52013,26 @@
 			        "dwh_Fact_Plane.promedio_stickers_por_tarjeta": {
 			          "Target": {
 			            "Entity": "dwh_Fact_Plane.promedio_stickers_por_tarjeta"
+=======
+			          "ID": "dwh_Dim_Afiliados_have_stage_StgFactFacturacions"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_has_stage_StgCortesAfiliadosWebo": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        },
+			        "stage_StgCortesAfiliadosWebo": {
+			          "Target": {
+			            "Entity": "stage_StgCortesAfiliadosWebo"
+>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41
 			          }
 			        }
 			      },
@@ -46604,15 +52040,26 @@
 			        {
 			          "Attribute": {
 			            "Subject": {
+<<<<<<< HEAD
 			              "Role": "dwh_Fact_Plane"
 			            },
 			            "Object": {
 			              "Role": "dwh_Fact_Plane.promedio_stickers_por_tarjeta"
+=======
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "stage_StgCortesAfiliadosWebo"
+>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
+<<<<<<< HEAD
 			          "ID": "dwh_Fact_Planes_have_promedio_stickers_por_tarjeta"
+=======
+			          "ID": "dwh_Dim_Afiliados_have_stage_StgCortesAfiliadosWebos"
+>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41
 			        }
 			      ]
 			    },
@@ -60487,6 +65934,7 @@
 			        "calendario_general.is_weekend": {
 			          "Target": {
 			            "Entity": "calendario_general.is_weekend"
+<<<<<<< HEAD
 			          }
 			        }
 			      },
@@ -60537,13 +65985,29 @@
 			        "calendario_afiliado.date.variation.date_hierarchy.month": {
 			          "Target": {
 			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.month"
+=======
+>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41
 			          }
 			        }
 			      },
+			      "Conditions": [
+			        {
+			          "Target": {
+			            "Role": "calendario_general.is_weekend"
+			          },
+			          "Operator": "Equals",
+			          "Value": {
+			            "Boolean": [
+			              true
+			            ]
+			          }
+			        }
+			      ],
 			      "Phrasings": [
 			        {
-			          "Attribute": {
+			          "Adjective": {
 			            "Subject": {
+<<<<<<< HEAD
 			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
 			            },
 			            "Object": {
@@ -60586,6 +66050,21 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "date_hierarchies_have_days1"
+=======
+			              "Role": "calendario_general"
+			            },
+			            "Adjectives": [
+			              {
+			                "weekend": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ]
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "some_calendario_generals_are_weekend_calendario_generals"
+>>>>>>> 5004bbb15a2341a651a76195bf0014506650cc41
 			        }
 			      ]
 			    }
