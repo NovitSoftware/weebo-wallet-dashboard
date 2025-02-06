@@ -1,5 +1,5 @@
 -- 3.3 Ranking por Distrito: Los 3 primeros distritos que tienen más stickers otorgados.
--- Gráfica: Sin chart.
+-- Gráfica: Sin chart. 
 
 SELECT TOP 3 
     a.Distrito,
