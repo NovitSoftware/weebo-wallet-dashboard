@@ -26273,60 +26273,10 @@
 			        }
 			      ]
 			    },
-			    "ranking_distrito.total_tarjetas_activada": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Top3Ranking",
-			          "ConceptualProperty": "TotalTarjetasActivadas"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "total tarjetas activadas": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "total tarjeta activada": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.78
-			          }
-			        },
-			        {
-			          "TotalTarjetasActivadas": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "aggregate tarjeta activada": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "overall tarjeta activada": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        }
-			      ]
-			    },
 			    "ranking_distrito.distrito": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Top3Ranking",
+			          "ConceptualEntity": "Top3Distritos",
 			          "ConceptualProperty": "Distrito"
 			        }
 			      },
@@ -26342,7 +26292,7 @@
 			    "ranking_distrito": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Top3Ranking"
+			          "ConceptualEntity": "Top3Distritos"
 			        }
 			      },
 			      "State": "Generated",
@@ -48796,7 +48746,7 @@
 			    },
 			    "ranking_distrito_has_distrito": {
 			      "Binding": {
-			        "ConceptualEntity": "Top3Ranking"
+			        "ConceptualEntity": "Top3Distritos"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -48829,7 +48779,7 @@
 			    },
 			    "ranking_distrito_has_total_tarjetas_activada": {
 			      "Binding": {
-			        "ConceptualEntity": "Top3Ranking"
+			        "ConceptualEntity": "Top3Distritos"
 			      },
 			      "State": "Generated",
 			      "Roles": {
