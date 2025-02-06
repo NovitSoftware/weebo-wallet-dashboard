@@ -1,0 +1,106 @@
+﻿table 'dwh Fact_AfiliacionWebo'
+
+	column KeyFactAfiliacionWebo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: KeyFactAfiliacionWebo
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyFechaCorte
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: KeyFechaCorte
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyAfiliado
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyAfiliado
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyRangoEdad
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyRangoEdad
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaActivo
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaActivo
+
+		variation Variation
+			isDefault
+			relationship: 4bd07c61-1d2c-4eae-a8da-5f430f10f56a
+			defaultHierarchy: LocalDateTable_08572ed4-491e-4376-a213-08b4bbf9bddf.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaUltimoConsumo
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaUltimoConsumo
+
+		variation Variation
+			isDefault
+			relationship: d46c527a-2068-43ad-8784-5000d87815ee
+			defaultHierarchy: LocalDateTable_b6c4582b-02d1-4507-8e2b-3cf690eb27e9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FlagActivo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FlagActivo
+
+		annotation SummarizationSetBy = Automatic
+
+	column FlagDesafiliadoWebo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FlagDesafiliadoWebo
+
+		annotation SummarizationSetBy = Automatic
+
+	column FlagNuevoWebo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: FlagNuevoWebo
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiasDesdeUltimoConsumo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: DiasDesdeUltimoConsumo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'dwh Fact_AfiliacionWebo' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    dwh_Fact_AfiliacionWebo = ApployaltyDWH{[Schema="dwh",Item="Fact_AfiliacionWebo"]}[Data]
+				in
+				    dwh_Fact_AfiliacionWebo
+

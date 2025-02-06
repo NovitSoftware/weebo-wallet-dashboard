@@ -1,0 +1,119 @@
+﻿table 'stage StgCuponPromocional'
+
+	column idcuponpromo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: idcuponpromo
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo
+		dataType: string
+		summarizeBy: none
+		sourceColumn: codigo
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkcliente
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: fkcliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column fktienda
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: fktienda
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkadmin
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: fkadmin
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkusuario
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: fkusuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkpromo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: fkpromo
+
+		annotation SummarizationSetBy = Automatic
+
+	column feccreacion
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: feccreacion
+
+		variation Variation
+			isDefault
+			relationship: d37b9b02-662c-4639-9997-05f5783bae57
+			defaultHierarchy: LocalDateTable_a5d837b1-7632-4bc2-90d1-e264478a839b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fechauso
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: fechauso
+
+		variation Variation
+			isDefault
+			relationship: 8d997279-507f-4a95-aa83-76116ee53781
+			defaultHierarchy: LocalDateTable_5b812350-1001-4131-a95f-e514f6d50599.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column vigencia
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: vigencia
+
+		annotation SummarizationSetBy = Automatic
+
+	column visto
+		dataType: string
+		summarizeBy: none
+		sourceColumn: visto
+
+		annotation SummarizationSetBy = Automatic
+
+	column activo
+		dataType: string
+		summarizeBy: none
+		sourceColumn: activo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'stage StgCuponPromocional' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    stage_StgCuponPromocional = ApployaltyDWH{[Schema="stage",Item="StgCuponPromocional"]}[Data]
+				in
+				    stage_StgCuponPromocional
+

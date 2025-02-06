@@ -1,0 +1,50 @@
+﻿table 'dwh Dim_Empresa'
+
+	column KeyEmpresa
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyEmpresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyEmpresaAlt
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyEmpresaAlt
+
+		annotation SummarizationSetBy = Automatic
+
+	column Empresa
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Categoria
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column RangoActivo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: RangoActivo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'dwh Dim_Empresa' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    dwh_Dim_Empresa = ApployaltyDWH{[Schema="dwh",Item="Dim_Empresa"]}[Data]
+				in
+				    dwh_Dim_Empresa
+

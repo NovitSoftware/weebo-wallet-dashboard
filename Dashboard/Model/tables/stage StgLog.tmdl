@@ -1,0 +1,68 @@
+﻿table 'stage StgLog'
+
+	column keyLog
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: keyLog
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fuente
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Fuente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tabla
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Tabla
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cantidad
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: Cantidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaInicio
+		dataType: dateTime
+		formatString: General Date
+		summarizeBy: none
+		sourceColumn: FechaInicio
+
+		variation Variation
+			isDefault
+			relationship: e41a33c9-6cd2-4c6f-a7c4-d426d0b7f143
+			defaultHierarchy: LocalDateTable_dd96166c-af6a-4795-b8fc-2ae0101c84f8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaFin
+		dataType: dateTime
+		formatString: General Date
+		summarizeBy: none
+		sourceColumn: FechaFin
+
+		variation Variation
+			isDefault
+			relationship: 48c88257-6ea9-4d89-9d5b-d344d0d20dac
+			defaultHierarchy: LocalDateTable_23c14dfe-0d04-4db4-acb9-d1e65e685505.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'stage StgLog' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    stage_StgLog = ApployaltyDWH{[Schema="stage",Item="StgLog"]}[Data]
+				in
+				    stage_StgLog
+

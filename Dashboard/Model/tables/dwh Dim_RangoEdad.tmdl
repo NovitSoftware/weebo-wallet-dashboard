@@ -1,0 +1,43 @@
+﻿table 'dwh Dim_RangoEdad'
+
+	column KeyRangoEdad
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyRangoEdad
+
+		annotation SummarizationSetBy = Automatic
+
+	column RangoEdad
+		dataType: string
+		summarizeBy: none
+		sourceColumn: RangoEdad
+
+		annotation SummarizationSetBy = Automatic
+
+	column LimiteInferior
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: LimiteInferior
+
+		annotation SummarizationSetBy = Automatic
+
+	column LimiteSuperior
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: LimiteSuperior
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'dwh Dim_RangoEdad' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    dwh_Dim_RangoEdad = ApployaltyDWH{[Schema="dwh",Item="Dim_RangoEdad"]}[Data]
+				in
+				    dwh_Dim_RangoEdad
+

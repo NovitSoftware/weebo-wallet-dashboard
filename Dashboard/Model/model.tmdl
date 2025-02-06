@@ -10,81 +10,140 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBIDesktopVersion = 2.138.1452.0 (24.11)
 
-annotation PBI_QueryOrder = ["admin","adqtarjeta","afiliacion","campania","categoria","cliente","cliplan","cupon","cuponpromo","discup","distar","distrito","email_config","email_template","mensaje","notificacion_push","novedad","promocion","provincia","pushnot","region","sesion","smsnot","sticker","sysdiagrams","tarjeta","tienda","tipodoc","tracking_stickers","transaccion","usuario","validar"]
+annotation PBI_QueryOrder = ["dwh Dim_Afiliado","dwh Dim_Cupon","dwh Dim_CuponPromocional","dwh Dim_Empresa","dwh Dim_Programa","dwh Dim_Promocion","dwh Dim_RangoEdad","dwh Dim_Tarjeta","dwh Dim_Tiempo","dwh Dim_Tienda","dwh Fact_AfiliacionEmpresa","dwh Fact_AfiliacionWebo","dwh Fact_Cupon","dwh Fact_Facturacion","dwh Fact_Planes","dwh Fact_Promociones","stage StgAfiliacion","stage StgCortesAfiliadosEmpresa","stage StgCortesAfiliadosWebo","stage StgCortesCupon","stage StgCortesPlanes","stage StgCortesPromociones","stage StgCupon","stage StgCuponPromocional","stage StgEmpresa","stage StgFactAfiliacionEmpresa","stage StgFactAfiliacionWebo","stage StgFactCupon","stage StgFactFacturacion","stage StgFactPlanes","stage StgFactPromociones","stage StgLog","stage StgPrograma","stage StgPromocion","stage StgTarjeta","stage StgTienda","stage StgTrackingStickers","stage StgTransaccion","sysdiagrams"]
 
 annotation PBI_ProTooling = ["WebModelingEdit"]
 
-ref table admin
-ref table adqtarjeta
-ref table afiliacion
-ref table campania
-ref table categoria
-ref table cliente
-ref table cliplan
-ref table cupon
-ref table cuponpromo
-ref table discup
-ref table distar
-ref table distrito
-ref table email_config
-ref table email_template
-ref table mensaje
-ref table notificacion_push
-ref table novedad
-ref table promocion
-ref table provincia
-ref table pushnot
-ref table region
-ref table sesion
-ref table smsnot
-ref table sticker
+ref table 'dwh Dim_Afiliado'
+ref table DateTableTemplate_0eb668bf-3082-4a1c-8d71-d80004446374
+ref table LocalDateTable_b16079f4-ce23-481b-8d85-f0a903773442
+ref table LocalDateTable_f1bbd821-8bff-4fb9-8e1e-3abd95b52f67
+ref table LocalDateTable_92ed296d-b486-42d1-a42a-f05a05c7b035
+ref table LocalDateTable_e0591019-551d-4aec-9e7d-289b0dfcccf2
+ref table LocalDateTable_606fc6db-dabe-49a3-a207-26d299bcbaf9
+ref table LocalDateTable_7e07d987-b4ee-472e-b071-3059a8e15cfd
+ref table 'dwh Dim_Cupon'
+ref table LocalDateTable_71432346-d4f9-4a80-87b3-d611168f8da4
+ref table LocalDateTable_8de66995-9a14-4118-b13d-76298415b6d0
+ref table 'dwh Dim_CuponPromocional'
+ref table LocalDateTable_5e27b92a-03fb-4fae-b683-58b58fa6a631
+ref table LocalDateTable_19a6f2a5-4f81-4296-85bc-b6f1e48237ec
+ref table 'dwh Dim_Empresa'
+ref table 'dwh Dim_Programa'
+ref table LocalDateTable_81c5a064-b774-4bd7-85fb-d1c11104ed78
+ref table 'dwh Dim_Promocion'
+ref table LocalDateTable_ac570e5f-3d3f-4aff-9458-1567fdc1e871
+ref table LocalDateTable_0c71f312-5d50-4253-9cf6-19b09782b930
+ref table 'dwh Dim_RangoEdad'
+ref table 'dwh Dim_Tarjeta'
+ref table LocalDateTable_d0f81d21-32c4-440b-92bd-b255d882f733
+ref table LocalDateTable_1ade2857-01bd-49f9-8176-08e476f004c9
+ref table 'dwh Dim_Tiempo'
+ref table LocalDateTable_f94d1f0f-749b-483d-9f62-707571ef4651
+ref table 'dwh Dim_Tienda'
+ref table LocalDateTable_236fa5cd-3b21-4f5d-80dc-7399d5ecd4ef
+ref table 'dwh Fact_AfiliacionEmpresa'
+ref table LocalDateTable_0d0b0e06-c489-4071-a2fd-05897ae5ab2b
+ref table LocalDateTable_7f10cd51-dbbb-47ad-aa06-39b9903bad03
+ref table LocalDateTable_823649f6-7edc-4fd3-93d1-2d0b65ff83e3
+ref table LocalDateTable_b5372a83-e6da-4043-b573-d5482746ce40
+ref table LocalDateTable_e5fd9282-be07-4aa1-a626-a5643cac1451
+ref table 'dwh Fact_AfiliacionWebo'
+ref table LocalDateTable_08572ed4-491e-4376-a213-08b4bbf9bddf
+ref table LocalDateTable_b6c4582b-02d1-4507-8e2b-3cf690eb27e9
+ref table 'dwh Fact_Cupon'
+ref table LocalDateTable_7890a3ce-bcc2-43c1-8a93-bb606cae985d
+ref table LocalDateTable_f3ebc67f-fcd8-4fdd-87ee-7defd885046c
+ref table LocalDateTable_b6b5a36c-377b-4033-9506-fe5d43f4f960
+ref table 'dwh Fact_Facturacion'
+ref table 'dwh Fact_Planes'
+ref table 'dwh Fact_Promociones'
+ref table LocalDateTable_8344b2c1-39ef-4c2d-a4e9-f966fd4fa649
+ref table LocalDateTable_95866b5e-6ad7-40fe-af8b-b8b28a5fa3dc
+ref table 'stage StgAfiliacion'
+ref table LocalDateTable_4b9f833d-7c4c-4c43-a50b-2a94af05c133
+ref table LocalDateTable_ef8012a5-c822-4162-97bb-588e13b782a1
+ref table 'stage StgCortesAfiliadosEmpresa'
+ref table LocalDateTable_59e141d3-6a18-4c20-b2f2-7310a72c9451
+ref table LocalDateTable_69460373-c62d-412f-8f59-66916f22ac5c
+ref table LocalDateTable_acc254f6-f330-4eab-a9a9-de5452d7b70c
+ref table LocalDateTable_6a6a8671-0f99-4394-9dc4-59601cf45aad
+ref table LocalDateTable_03df451d-ff68-4124-86fa-1e7a3b0f1eb1
+ref table LocalDateTable_7526b854-6cde-4f28-a7b8-a3a0b8536ba0
+ref table LocalDateTable_c6d9d589-6121-44ae-85ac-8bdc3580ca6a
+ref table 'stage StgCortesAfiliadosWebo'
+ref table LocalDateTable_5cb56f33-1598-4ac1-aa33-5305b9f6aa12
+ref table LocalDateTable_b06a6a2a-6473-412f-b868-3e615d40ff69
+ref table LocalDateTable_207316a1-c0d8-4d2f-9f8f-dbaa25cfba48
+ref table LocalDateTable_5bb8bd1c-7a27-4c7f-8749-2810a92b4a72
+ref table LocalDateTable_97e23106-1ce0-42ba-8c8f-312ee46d0974
+ref table LocalDateTable_7530b417-cc0a-415c-85ed-3f0b0b38e1d6
+ref table LocalDateTable_cb1a18c5-e005-4b38-a572-0665d7af4923
+ref table LocalDateTable_4a85ffde-078d-48dc-ad9a-9273b14fe555
+ref table 'stage StgCortesCupon'
+ref table LocalDateTable_d6696c0f-9131-45d6-b987-ca68bea52f1e
+ref table LocalDateTable_29237ad0-80aa-489a-aeeb-abe2f976e86a
+ref table LocalDateTable_5aa3290b-15ac-469d-93d3-9f997d987ea9
+ref table LocalDateTable_ca5bf185-b7bb-4629-ae24-ae79e25e190d
+ref table LocalDateTable_5095f11d-a2fd-447c-bb14-6c07343341d0
+ref table LocalDateTable_578ae09c-87b4-42b5-80d4-2037e92edcd0
+ref table 'stage StgCortesPlanes'
+ref table LocalDateTable_ca9d4f75-87b9-489d-92fb-24ca7b59a358
+ref table 'stage StgCortesPromociones'
+ref table LocalDateTable_28ab5ae6-e6fd-496b-8fcb-d13fca7018e7
+ref table LocalDateTable_cbabcc04-161c-436f-8d71-3cf258bfb06c
+ref table LocalDateTable_7d8a7b27-8fe5-42f3-9505-7947ca25d975
+ref table 'stage StgCupon'
+ref table LocalDateTable_b756d1fd-db26-4709-8510-79da0cbe7ea4
+ref table LocalDateTable_c74da274-e7f7-4d38-8f4c-4d90c6384bd2
+ref table 'stage StgCuponPromocional'
+ref table LocalDateTable_a5d837b1-7632-4bc2-90d1-e264478a839b
+ref table LocalDateTable_5b812350-1001-4131-a95f-e514f6d50599
+ref table 'stage StgEmpresa'
+ref table 'stage StgFactAfiliacionEmpresa'
+ref table LocalDateTable_5c2a2ff7-9224-4eb4-9a7b-106a5404b698
+ref table LocalDateTable_1fb757da-9b31-4dcd-b4f8-447353308f17
+ref table LocalDateTable_00a19f50-8711-414b-ae4d-886ae1abdcfa
+ref table LocalDateTable_5d51fbba-626c-4c4e-aa22-e7c8e5271db5
+ref table LocalDateTable_23552a55-18e3-466c-955a-585a83155cba
+ref table 'stage StgFactAfiliacionWebo'
+ref table LocalDateTable_fa6cd8bc-eca4-488d-ab14-e5349b84487b
+ref table LocalDateTable_f795e24d-a35d-4710-8c9e-e3cadb09c2de
+ref table 'stage StgFactCupon'
+ref table LocalDateTable_fd4cd53d-e2cf-4c92-a0d7-8b7630de4bbe
+ref table LocalDateTable_ba95ad58-a0d0-44bf-b25e-abbfe2666d1f
+ref table LocalDateTable_f6dea298-4183-4408-b86c-6e5d23ac73c4
+ref table 'stage StgFactFacturacion'
+ref table 'stage StgFactPlanes'
+ref table 'stage StgFactPromociones'
+ref table LocalDateTable_790ca190-7629-41ad-beea-c82f55a1ff1b
+ref table LocalDateTable_fd654e55-22fb-4816-80e3-c4c8e72c233b
+ref table 'stage StgLog'
+ref table LocalDateTable_dd96166c-af6a-4795-b8fc-2ae0101c84f8
+ref table LocalDateTable_23c14dfe-0d04-4db4-acb9-d1e65e685505
+ref table 'stage StgPrograma'
+ref table LocalDateTable_9a536c28-8634-4a19-a5c3-c2c53fec5972
+ref table LocalDateTable_3c7e7bda-6593-4932-a2ff-d9dd3e8e50bb
+ref table 'stage StgPromocion'
+ref table LocalDateTable_f4b20d5c-fd1a-4a05-b827-305fda7d1d2a
+ref table LocalDateTable_52b8723b-ef78-49f0-a12e-2b4af0e62630
+ref table 'stage StgTarjeta'
+ref table LocalDateTable_a578a377-6b8e-4086-be0c-2963177bd67a
+ref table LocalDateTable_d236e980-8e63-4668-bae9-5a92abd25f45
+ref table 'stage StgTienda'
+ref table LocalDateTable_d60d6d30-ef39-4770-9fd0-f811188c1e14
+ref table 'stage StgTrackingStickers'
+ref table LocalDateTable_d84e4e37-b42c-409e-a24d-345433cf5ceb
+ref table 'stage StgTransaccion'
+ref table LocalDateTable_8847a136-b086-45ca-b5b1-51d12c944c0b
 ref table sysdiagrams
-ref table tarjeta
-ref table tienda
-ref table tipodoc
-ref table tracking_stickers
-ref table transaccion
-ref table usuario
-ref table validar
-ref table Calendario
-ref table DateTableTemplate_86a3a036-7090-434d-9cac-94b2cde535c5
-ref table LocalDateTable_7a67aab9-fdcf-48b9-b284-eb9e2a6fc8c0
-ref table LocalDateTable_5577e142-ebf7-4e57-a193-0704fb8e8237
-ref table LocalDateTable_0a4d191d-56eb-43d7-817d-9d9076f88a12
-ref table LocalDateTable_a2b7fc0b-240d-441b-9172-72531ad7891d
-ref table LocalDateTable_9e3cdf89-5f9e-4fbd-bbce-898d4cfa7d20
-ref table LocalDateTable_21d4017a-4d17-447b-afb3-8d606731f1d4
-ref table LocalDateTable_698459a0-0f6b-4c53-924a-e2698b07add5
-ref table LocalDateTable_a9f047b8-f31b-4069-9660-fac61131fbc6
-ref table LocalDateTable_edafacb7-ed36-4b3e-a071-a86909b97551
-ref table LocalDateTable_cb50ae68-dd87-48ff-94f0-a74aab4125a0
-ref table LocalDateTable_a6922533-6b3d-48ed-9862-edc65ad6158a
-ref table LocalDateTable_87a8294d-d78f-4106-a952-1f536bbcd882
-ref table LocalDateTable_f3f6fc83-9826-4ef4-9bd9-1ac29a1c90dd
-ref table LocalDateTable_d559f9f4-66fd-47b2-a650-3cae8bd24bed
-ref table LocalDateTable_7193564c-9b65-4ca3-9d0b-2dddcb1a80d6
-ref table LocalDateTable_29058546-95ed-4048-a8e8-259c963353ee
-ref table LocalDateTable_84c3bc6e-4e03-4ec8-a4fe-785ed0872d20
-ref table LocalDateTable_80e68c8d-2490-4d5d-b971-e064e90e10ee
-ref table LocalDateTable_3381340c-1bcf-46e6-9059-e826e6b249bc
-ref table LocalDateTable_d2079a95-f611-4679-a158-bfa34d494345
-ref table LocalDateTable_6050f303-0b90-4cd5-9c81-b04dded25957
-ref table LocalDateTable_7bf5b4d7-fd00-4396-be91-37225f53ea89
-ref table LocalDateTable_a4d1bbf8-66d2-406f-ac9f-c6f8a22b87a8
-ref table LocalDateTable_f3d664db-6fae-40ea-b553-3a7bd30aecf7
-ref table LocalDateTable_8035d952-da92-4a87-b3e4-50d149bf7670
-ref table LocalDateTable_37aeb087-d9df-4777-8087-31a23f2bb8a6
-ref table LocalDateTable_69854cb2-12bb-42fe-a3ce-379ee8b82d0b
-ref table LocalDateTable_53065729-2240-43ef-8de4-273dd0171067
-ref table LocalDateTable_fdcbeae9-95ad-4b44-b523-f807ee3c4412
-ref table LocalDateTable_41fe76cb-204d-45ef-9e30-30825d137fdd
-ref table LocalDateTable_c6c0a4ce-bb3b-412f-a178-e3e814d6a61a
-ref table LocalDateTable_c111922e-03fa-4a9d-86c5-64f09f36203a
-ref table LocalDateTable_891825be-d977-4fbb-aa54-aaffce97bba6
-ref table LocalDateTable_f5deaa01-6cfe-458c-b390-0874c1bde1fe
-ref table LocalDateTable_2b82745f-5620-4c73-a2c5-2cdfa743b507
-ref table CuponesCombinados
-ref table LocalDateTable_a9d0d91a-a847-4850-9612-65eb6d654f84
+ref table Top3Ranking
+ref table CalendarioGeneral
+ref table LocalDateTable_97f101e4-a3d5-4138-9aed-f35b25f07606
+ref table CalendarioAfiliado
+ref table LocalDateTable_1e15fe5c-8910-4572-b49e-ef2ec5c8f6c7
+ref table LocalDateTable_47a02d7f-fca7-4457-bd14-3aa15ee423f0
+ref table FiltrosTiempo
 
 ref cultureInfo en-US
 

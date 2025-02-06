@@ -1,0 +1,60 @@
+﻿table FiltrosTiempo
+
+	measure FechaFiltrada = ```
+			
+			VAR SeleccionFiltro = SELECTEDVALUE(FiltrosTiempo[Filtro])
+			VAR Hoy = TODAY()
+			VAR Ayer = Hoy - 1
+			VAR FechaMaxima = MAX('dwh Dim_Tiempo'[Fecha])
+			
+			-- Cálculo para la semana pasada
+			VAR InicioSemanaPasada = Hoy - WEEKDAY(Hoy, 2) - 6  -- El primer día de la semana pasada (lunes)
+			VAR FinSemanaPasada = Hoy - WEEKDAY(Hoy, 2) - 1  -- El último día de la semana pasada (domingo)
+			
+			-- Cálculo para la quincena pasada
+			VAR InicioQuincenaPasada = Hoy - 16  -- El primer día de la quincena pasada
+			VAR FinQuincenaPasada = Hoy - 1  -- El último día de la quincena pasada
+			
+			-- Cálculos para el primer y último día del mes pasado
+			VAR PrimerDiaMesAnterior = DATE(YEAR(Hoy), MONTH(Hoy) - 1, 1)
+			VAR UltimoDiaMesAnterior = EOMONTH(Hoy, -1)
+			
+			RETURN 
+			    SWITCH(
+			        SeleccionFiltro,
+			        "Último día", 
+			            IF(FechaMaxima = Ayer, 1, 0),
+			        "Última semana", 
+			            IF(FechaMaxima >= InicioSemanaPasada && FechaMaxima <= FinSemanaPasada, 1, 0),
+			        "Última quincena", 
+			            IF(FechaMaxima >= InicioQuincenaPasada && FechaMaxima <= FinQuincenaPasada, 1, 0),
+			        "Último mes", 
+			            IF(FechaMaxima >= PrimerDiaMesAnterior && FechaMaxima <= UltimoDiaMesAnterior, 1, 0),
+			        0
+			    )
+			
+			```
+		formatString: 0
+
+	column Filtro
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Filtro]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FiltrosTiempo = calculated
+		mode: import
+		source = ```
+				
+				DATATABLE("Filtro", STRING, { 
+				    {"Último día"},
+				    {"Última semana"},
+				    {"Última quincena"},
+				    {"Último mes"}
+				})
+				
+				```
+
+	annotation PBI_Id = c4e76c595cfa45fbbf8c0f9296ce38a5
+

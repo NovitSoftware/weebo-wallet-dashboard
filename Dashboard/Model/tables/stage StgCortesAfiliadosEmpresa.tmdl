@@ -1,0 +1,148 @@
+﻿table 'stage StgCortesAfiliadosEmpresa'
+
+	column FechaCorte
+		dataType: string
+		summarizeBy: none
+		sourceColumn: FechaCorte
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkusuario
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: fkusuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column fkcliente
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: fkcliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaRegistro
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaRegistro
+
+		variation Variation
+			isDefault
+			relationship: 856b5052-4d3e-4da2-8a86-026ba4fe56bf
+			defaultHierarchy: LocalDateTable_59e141d3-6a18-4c20-b2f2-7310a72c9451.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaBaja
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaBaja
+
+		variation Variation
+			isDefault
+			relationship: 5af34a6f-7a16-4819-83f5-113be38e6b4e
+			defaultHierarchy: LocalDateTable_69460373-c62d-412f-8f59-66916f22ac5c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaActivo
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaActivo
+
+		variation Variation
+			isDefault
+			relationship: 2458dab4-566e-48bd-baab-b050c273e71c
+			defaultHierarchy: LocalDateTable_acc254f6-f330-4eab-a9a9-de5452d7b70c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaUltimoConsumo
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaUltimoConsumo
+
+		variation Variation
+			isDefault
+			relationship: f63b7655-088e-49bb-afa5-6664a756b4b9
+			defaultHierarchy: LocalDateTable_6a6a8671-0f99-4394-9dc4-59601cf45aad.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaRegistro2
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaRegistro2
+
+		variation Variation
+			isDefault
+			relationship: 59058462-bca8-4662-8900-9a5b8aa29f17
+			defaultHierarchy: LocalDateTable_03df451d-ff68-4124-86fa-1e7a3b0f1eb1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FechaBaja2
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaBaja2
+
+		variation Variation
+			isDefault
+			relationship: d6bb2ac8-a651-4dca-b0b5-c8b65cc0c94b
+			defaultHierarchy: LocalDateTable_7526b854-6cde-4f28-a7b8-a3a0b8536ba0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DiasDesdeUltimoConsumo
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: DiasDesdeUltimoConsumo
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaPerdido
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: FechaPerdido
+
+		variation Variation
+			isDefault
+			relationship: 8e765b83-297c-46d6-baf8-fe6cf5b18cec
+			defaultHierarchy: LocalDateTable_c6d9d589-6121-44ae-85ac-8bdc3580ca6a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'stage StgCortesAfiliadosEmpresa' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    stage_StgCortesAfiliadosEmpresa = ApployaltyDWH{[Schema="stage",Item="StgCortesAfiliadosEmpresa"]}[Data]
+				in
+				    stage_StgCortesAfiliadosEmpresa
+

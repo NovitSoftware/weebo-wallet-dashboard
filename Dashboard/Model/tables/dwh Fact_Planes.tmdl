@@ -1,0 +1,159 @@
+﻿table 'dwh Fact_Planes'
+
+	measure TotalSaldoTarjetas = ```
+			
+			SUM('dwh Fact_Planes'[SaldoTarjetasAdquiridas])
+			
+			```
+		formatString: 0
+
+	measure PromedioSaldoTarjetas = ```
+			
+			AVERAGE('dwh Fact_Planes'[SaldoTarjetasAdquiridas])
+			
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure VariacionSaldoTarjeta = ```
+			
+			VAR FechaRaiz = MIN('dwh Dim_Tiempo'[Fecha]) -- Fecha mínima según el filtro de segmentación
+			VAR FechaFin = MAX('dwh Dim_Tiempo'[Fecha])  -- Fecha máxima según el filtro de segmentación
+			
+			-- Saldo acumulado hasta la FechaRaiz
+			VAR SaldoHastaInicio = 
+			    CALCULATE(
+			        SUM('dwh Fact_Planes'[SaldoTarjetasAdquiridas]),
+			        'dwh Fact_Planes'[KeyFechaCorte] <= FechaRaiz
+			    )
+			
+			-- Saldo acumulado hasta la FechaFin
+			VAR SaldoHastaFin = 
+			    CALCULATE(
+			        SUM('dwh Fact_Planes'[SaldoTarjetasAdquiridas]),
+			        'dwh Fact_Planes'[KeyFechaCorte] <= FechaFin
+			    )
+			
+			-- Variación entre los dos períodos
+			RETURN SaldoHastaFin - SaldoHastaInicio
+			
+			```
+		formatString: 0
+
+	measure PromedioStickers = ```
+			
+			AVERAGEX(
+			    FILTER(
+			        'dwh Fact_Planes', 
+			        NOT(ISBLANK('dwh Fact_Planes'[StickersEntregados]))
+			    ),
+			    'dwh Fact_Planes'[StickersEntregados]
+			)
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure PromedioStickersPorTarjeta = ```
+			
+			DIVIDE(
+			    SUMX('dwh Fact_Planes', COALESCE('dwh Fact_Planes'[StickersEntregados], 0)),
+			    SUM('dwh Fact_Planes'[TarjetasActivadas]),
+			    0
+			)
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column KeyFactPlan
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: KeyFactPlan
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyFechaCorte
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyFechaCorte
+
+		annotation SummarizationSetBy = Automatic
+
+	column KeyEmpresa
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: KeyEmpresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column TarjetasAdquiridasAcumulado
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: TarjetasAdquiridasAcumulado
+
+		annotation SummarizationSetBy = Automatic
+
+	column TarjetasActivadasAcumulado
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: TarjetasActivadasAcumulado
+
+		annotation SummarizationSetBy = Automatic
+
+	column TarjetasAdquiridas
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: TarjetasAdquiridas
+
+		annotation SummarizationSetBy = Automatic
+
+	column TarjetasActivadas
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: TarjetasActivadas
+
+		annotation SummarizationSetBy = Automatic
+
+	column SaldoTarjetasAdquiridas
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: SaldoTarjetasAdquiridas
+
+		annotation SummarizationSetBy = Automatic
+
+	column StickersEntregadosAcumulado
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: StickersEntregadosAcumulado
+
+		annotation SummarizationSetBy = Automatic
+
+	column StickersEntregados
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: StickersEntregados
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'dwh Fact_Planes' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    dwh_Fact_Planes = ApployaltyDWH{[Schema="dwh",Item="Fact_Planes"]}[Data]
+				in
+				    dwh_Fact_Planes
+
