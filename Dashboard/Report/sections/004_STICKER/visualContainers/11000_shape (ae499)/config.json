@@ -1,15 +1,15 @@
 {
-  "name": "2442a3ca070622c20bea",
+  "name": "ae499a773250893536d8",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "x": 0,
-        "y": 55.02052644288819,
-        "z": 1000,
-        "width": 1280.3091040811398,
-        "height": 12.364163245592851,
-        "tabOrder": 1000
+        "x": 837.0526315789474,
+        "y": 554.10526315789468,
+        "z": 10000,
+        "width": 442.94736842105266,
+        "height": 166.73684210526315,
+        "tabOrder": 11000
       }
     }
   ],
@@ -23,7 +23,14 @@
             "tileShape": {
               "expr": {
                 "Literal": {
-                  "Value": "'line'"
+                  "Value": "'rectangleRounded'"
+                }
+              }
+            },
+            "rectangleRoundedCurve": {
+              "expr": {
+                "Literal": {
+                  "Value": "5L"
                 }
               }
             }
@@ -70,28 +77,10 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
-          }
-        },
-        {
-          "properties": {
-            "lineColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#ABBBE2'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
           }
         }
       ]

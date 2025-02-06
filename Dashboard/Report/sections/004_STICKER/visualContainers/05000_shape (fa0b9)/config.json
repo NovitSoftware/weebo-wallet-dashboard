@@ -1,15 +1,15 @@
 {
-  "name": "2442a3ca070622c20bea",
+  "name": "fa0b9f49ee395d5d7ae9",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "x": 0,
-        "y": 55.02052644288819,
-        "z": 1000,
-        "width": 1280.3091040811398,
-        "height": 12.364163245592851,
-        "tabOrder": 1000
+        "height": 71.68623063003264,
+        "width": 979.59723381851143,
+        "x": 11.546094069888355,
+        "y": 12.686173960848592,
+        "z": 0,
+        "tabOrder": 5000
       }
     }
   ],
@@ -23,7 +23,14 @@
             "tileShape": {
               "expr": {
                 "Literal": {
-                  "Value": "'line'"
+                  "Value": "'rectangleRounded'"
+                }
+              }
+            },
+            "rectangleRoundedCurve": {
+              "expr": {
+                "Literal": {
+                  "Value": "5L"
                 }
               }
             }
@@ -70,32 +77,15 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
-          }
-        },
-        {
-          "properties": {
-            "lineColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#ABBBE2'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
           }
         }
       ]
     }
   },
+  "parentGroupName": "3f7157c587d201103cb0",
   "howCreated": "InsertVisualButton"
 }

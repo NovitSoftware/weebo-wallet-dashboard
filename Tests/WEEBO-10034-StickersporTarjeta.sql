@@ -1,6 +1,8 @@
 -- 3.2 Stickers por Tarjeta: Promedio de stickers otorgados por el total de tarjetas activas.
 -- Gráfica: Sin chart. 
 
-select avg(s.totales) as 'Promedio otorgados por tajetas activas' from dbo.tarjeta as t
-inner join dbo.sticker as s on s.fktarjeta = t.codigo
-where t.activo = 's';
+SELECT 
+    SUM(COALESCE(fp.StickersEntregados, 0)) * 1.0 / NULLIF(SUM(fp.TarjetasActivadas), 0) AS PromedioStickersPorTarjeta
+FROM dwh.Fact_Planes fp;
+
+
