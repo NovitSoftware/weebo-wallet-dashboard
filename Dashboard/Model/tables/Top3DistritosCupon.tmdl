@@ -1,0 +1,36 @@
+﻿table Top3DistritosCupon
+
+	column Distrito
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: dwh Dim_Afiliado[Distrito]
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalCupones
+		formatString: 0
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [TotalCupones]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Top3DistritosCupon = calculated
+		mode: import
+		source = ```
+				
+				    TOPN(
+				        3, 
+				        SUMMARIZE(
+				            'dwh Fact_Cupon', 
+				            'dwh Dim_Afiliado'[Distrito], 
+				            "TotalCupones", COUNTROWS('dwh Fact_Cupon')
+				        ), 
+				        [TotalCupones], 
+				        DESC
+				    )
+				
+				```
+
+	annotation PBI_Id = 44acdb9f25c24633b6fd30d426e31b05
+
