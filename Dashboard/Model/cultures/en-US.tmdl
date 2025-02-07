@@ -7016,6 +7016,9 @@
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "key fecha corte": {
@@ -8083,6 +8086,16 @@
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Stickers Entregados": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -45922,6 +45935,59 @@
 			        }
 			      ]
 			    },
+			    "dwh_Fact_Cupon_has_dwh_Dim_Tiempo": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Dim_Tiempo": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo"
+			          },
+			          "Nouns": [
+			            {
+			              "key fecha corte": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tiempo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_dwh_Dim_Tiempos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tiempo"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Tiempos_have_dwh_Fact_Cupons"
+			        }
+			      ]
+			    },
 			    "dwh_Fact_Cupon_has_dwh_Dim_Tarjeta": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh Fact_Cupon"
@@ -57480,39 +57546,6 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_Fact_Cupons_have_fecha_creacions"
-			        }
-			      ]
-			    },
-			    "dwh_Fact_Cupon_has_key_fecha_corte": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Fact_Cupon"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Fact_Cupon": {
-			          "Target": {
-			            "Entity": "dwh_Fact_Cupon"
-			          }
-			        },
-			        "dwh_Fact_Cupon.key_fecha_corte": {
-			          "Target": {
-			            "Entity": "dwh_Fact_Cupon.key_fecha_corte"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Fact_Cupon"
-			            },
-			            "Object": {
-			              "Role": "dwh_Fact_Cupon.key_fecha_corte"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Fact_Cupons_have_key_fecha_cortes"
 			        }
 			      ]
 			    },
