@@ -131,6 +131,18 @@
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure TasaRedencionCupones = ```
+			
+			    DIVIDE(
+			        SUM('dwh Fact_Cupon'[FlagCuponRedimido]) * 100, 
+			        COUNTROWS('dwh Fact_Cupon'),
+			        0
+			    )
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column KeyFactCupon
 		dataType: int64
 		formatString: 0

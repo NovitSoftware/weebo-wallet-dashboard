@@ -1,0 +1,50 @@
+{
+  "projectionOrdering": {
+    "Values": [
+      0
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "TasaRedencionCupones",
+        "Name": "dwh Fact_Cupon.TasaRedencionCupones",
+        "Type": 1
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "TasaRedencionCupones",
+      "queryName": "dwh Fact_Cupon.TasaRedencionCupones",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Fact_Cupon"
+            }
+          },
+          "Property": "TasaRedencionCupones"
+        }
+      }
+    }
+  ]
+}
