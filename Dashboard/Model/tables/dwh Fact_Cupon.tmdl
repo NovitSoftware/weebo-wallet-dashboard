@@ -134,7 +134,7 @@
 	measure TasaRedencionCupones = ```
 			
 			    DIVIDE(
-			        SUM('dwh Fact_Cupon'[FlagCuponRedimido]) * 100, 
+			        SUM('dwh Fact_Cupon'[FlagCuponRedimido]), 
 			        COUNTROWS('dwh Fact_Cupon'),
 			        0
 			    )

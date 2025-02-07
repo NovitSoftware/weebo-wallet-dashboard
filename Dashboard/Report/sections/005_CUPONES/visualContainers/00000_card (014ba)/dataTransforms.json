@@ -7,9 +7,10 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "TasaRedencionCupones",
+        "Restatement": "Tasa Redencion Cupones",
         "Name": "dwh Fact_Cupon.TasaRedencionCupones",
-        "Type": 1
+        "Type": 1,
+        "Format": "0.00 %;-0.00 %;0.00 %"
       }
     ]
   },
@@ -26,7 +27,8 @@
   ],
   "selects": [
     {
-      "displayName": "TasaRedencionCupones",
+      "displayName": "Tasa Redencion Cupones",
+      "format": "0.00 %;-0.00 %;0.00 %",
       "queryName": "dwh Fact_Cupon.TasaRedencionCupones",
       "roles": {
         "Values": true

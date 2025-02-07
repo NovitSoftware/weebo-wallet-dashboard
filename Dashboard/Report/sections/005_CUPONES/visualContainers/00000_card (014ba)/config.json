@@ -8,7 +8,8 @@
         "width": 250,
         "x": 0,
         "y": 0,
-        "z": 15000
+        "z": 15000,
+        "tabOrder": 0
       }
     }
   ],
@@ -59,6 +60,12 @@
           }
         }
       ]
+    },
+    "columnProperties": {
+      "dwh Fact_Cupon.TasaRedencionCupones": {
+        "displayName": "Tasa Redencion Cupones",
+        "formatString": "0.00 %;-0.00 %;0.00 %"
+      }
     },
     "drillFilterOtherVisuals": true,
     "hasDefaultSort": true,
