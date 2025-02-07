@@ -1,14 +1,14 @@
 {
-  "name": "64e6852341c67333aaa2",
+  "name": "222aabcfa78710939b64",
   "layouts": [
     {
       "id": 0,
       "position": {
         "height": 110,
-        "width": 217.26315789473688,
-        "x": 0.87248954700396286,
-        "y": 0.44178054993404559,
-        "z": 13000
+        "width": 293.33333333333337,
+        "x": 0,
+        "y": 0,
+        "z": 15000
       }
     }
   ],
@@ -17,7 +17,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "Min(dwh Fact_Cupon.FechaActivacion)"
+          "queryRef": "Sum(dwh Fact_Cupon.DiasHastaObtenerCupon)"
         }
       ]
     },
@@ -40,13 +40,13 @@
                     "Source": "d"
                   }
                 },
-                "Property": "FechaActivacion"
+                "Property": "DiasHastaObtenerCupon"
               }
             },
-            "Function": 5
+            "Function": 1
           },
-          "Name": "Min(dwh Fact_Cupon.FechaActivacion)",
-          "NativeReferenceName": "Activos"
+          "Name": "Sum(dwh Fact_Cupon.DiasHastaObtenerCupon)",
+          "NativeReferenceName": "Promedio de dias hasta obtener cupon"
         }
       ],
       "OrderBy": [
@@ -61,18 +61,18 @@
                       "Source": "d"
                     }
                   },
-                  "Property": "FechaActivacion"
+                  "Property": "DiasHastaObtenerCupon"
                 }
               },
-              "Function": 5
+              "Function": 1
             }
           }
         }
       ]
     },
     "columnProperties": {
-      "Min(dwh Fact_Cupon.FechaActivacion)": {
-        "displayName": "Activos"
+      "Sum(dwh Fact_Cupon.DiasHastaObtenerCupon)": {
+        "displayName": "Promedio de dias hasta obtener cupon"
       }
     },
     "drillFilterOtherVisuals": true,
@@ -93,5 +93,5 @@
       ]
     }
   },
-  "parentGroupName": "40cc41c9e20ec9d0eda5"
+  "parentGroupName": "976e6bd3dc954742b508"
 }
