@@ -1,14 +1,14 @@
 {
-  "name": "9adc21abdabc5633b09b",
+  "name": "6e452f69a6105ed6e908",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "height": 109.4658926399907,
-        "width": 139.47773438815713,
+        "height": 110,
+        "width": 140,
         "x": 0,
-        "y": 0.53410736000930659,
-        "z": 13001
+        "y": 0,
+        "z": 15000
       }
     }
   ],
@@ -17,7 +17,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "Sum(dwh Fact_Cupon.FlagCuponRedimido)"
+          "queryRef": "Sum(dwh Fact_Cupon.FlagCuponVencido)"
         }
       ]
     },
@@ -40,13 +40,13 @@
                     "Source": "d"
                   }
                 },
-                "Property": "FlagCuponRedimido"
+                "Property": "FlagCuponVencido"
               }
             },
             "Function": 0
           },
-          "Name": "Sum(dwh Fact_Cupon.FlagCuponRedimido)",
-          "NativeReferenceName": "Redimidos"
+          "Name": "Sum(dwh Fact_Cupon.FlagCuponVencido)",
+          "NativeReferenceName": "Vencidos"
         }
       ],
       "OrderBy": [
@@ -61,7 +61,7 @@
                       "Source": "d"
                     }
                   },
-                  "Property": "FlagCuponRedimido"
+                  "Property": "FlagCuponVencido"
                 }
               },
               "Function": 0
@@ -71,8 +71,8 @@
       ]
     },
     "columnProperties": {
-      "Sum(dwh Fact_Cupon.FlagCuponRedimido)": {
-        "displayName": "Redimidos"
+      "Sum(dwh Fact_Cupon.FlagCuponVencido)": {
+        "displayName": "Vencidos"
       }
     },
     "drillFilterOtherVisuals": true,
@@ -93,5 +93,5 @@
       ]
     }
   },
-  "parentGroupName": "e4337da6b8710b28e4d8"
+  "parentGroupName": "7402775d29e961637dcc"
 }

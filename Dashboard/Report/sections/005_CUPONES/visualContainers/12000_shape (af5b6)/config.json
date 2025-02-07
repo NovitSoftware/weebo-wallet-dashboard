@@ -1,14 +1,15 @@
 {
-  "name": "b861ed91b658ca17200d",
+  "name": "af5b6ffaec6a4087b853",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "height": 109.89171347501299,
-        "width": 139.98681584875212,
-        "x": 0.013184151247912975,
-        "y": 0,
-        "z": 3000
+        "x": 74.29364887708283,
+        "y": 423.58126056508087,
+        "z": 14000,
+        "width": 599.66191741125328,
+        "height": 293.64887708283021,
+        "tabOrder": 12000
       }
     }
   ],
@@ -29,7 +30,7 @@
             "rectangleRoundedCurve": {
               "expr": {
                 "Literal": {
-                  "Value": "10L"
+                  "Value": "5L"
                 }
               }
             }
@@ -85,6 +86,5 @@
       ]
     }
   },
-  "parentGroupName": "e4337da6b8710b28e4d8",
   "howCreated": "InsertVisualButton"
 }
