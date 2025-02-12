@@ -1,0 +1,57 @@
+{
+  "projectionOrdering": {
+    "Values": [
+      0
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Redimidos",
+        "Name": "Sum(dwh Fact_Cupon.FlagCuponRedimido)",
+        "Type": 3,
+        "Format": "0"
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Redimidos",
+      "format": "0",
+      "queryName": "Sum(dwh Fact_Cupon.FlagCuponRedimido)",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 260
+      },
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "dwh Fact_Cupon"
+                }
+              },
+              "Property": "FlagCuponRedimido"
+            }
+          },
+          "Function": 0
+        }
+      }
+    }
+  ]
+}

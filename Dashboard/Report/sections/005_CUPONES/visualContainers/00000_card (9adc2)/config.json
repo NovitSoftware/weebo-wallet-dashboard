@@ -1,14 +1,14 @@
 {
-  "name": "64e6852341c67333aaa2",
+  "name": "9adc21abdabc5633b09b",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "height": 109.47368421052632,
-        "width": 217.26315789473688,
-        "x": 0.87248954700396286,
-        "y": 0.439666767398476,
-        "z": 13000
+        "height": 108.9421323881247,
+        "width": 191.28375001804409,
+        "x": 0,
+        "y": 0.53155182240160648,
+        "z": 13001
       }
     }
   ],
@@ -17,7 +17,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "Min(dwh Fact_Cupon.FechaActivacion)"
+          "queryRef": "Sum(dwh Fact_Cupon.FlagCuponRedimido)"
         }
       ]
     },
@@ -40,13 +40,13 @@
                     "Source": "d"
                   }
                 },
-                "Property": "FechaActivacion"
+                "Property": "FlagCuponRedimido"
               }
             },
-            "Function": 5
+            "Function": 0
           },
-          "Name": "Min(dwh Fact_Cupon.FechaActivacion)",
-          "NativeReferenceName": "Activos"
+          "Name": "Sum(dwh Fact_Cupon.FlagCuponRedimido)",
+          "NativeReferenceName": "Redimidos"
         }
       ],
       "OrderBy": [
@@ -61,18 +61,18 @@
                       "Source": "d"
                     }
                   },
-                  "Property": "FechaActivacion"
+                  "Property": "FlagCuponRedimido"
                 }
               },
-              "Function": 5
+              "Function": 0
             }
           }
         }
       ]
     },
     "columnProperties": {
-      "Min(dwh Fact_Cupon.FechaActivacion)": {
-        "displayName": "Activos"
+      "Sum(dwh Fact_Cupon.FlagCuponRedimido)": {
+        "displayName": "Redimidos"
       }
     },
     "drillFilterOtherVisuals": true,
@@ -93,5 +93,5 @@
       ]
     }
   },
-  "parentGroupName": "40cc41c9e20ec9d0eda5"
+  "parentGroupName": "e4337da6b8710b28e4d8"
 }
