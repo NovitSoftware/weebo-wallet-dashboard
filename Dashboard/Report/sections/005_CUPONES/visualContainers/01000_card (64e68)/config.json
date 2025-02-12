@@ -1,15 +1,15 @@
 {
-  "name": "6e452f69a6105ed6e908",
+  "name": "64e6852341c67333aaa2",
   "layouts": [
     {
       "id": 0,
       "position": {
         "height": 110,
-        "width": 140,
-        "x": 0,
-        "y": 0,
-        "z": 15000,
-        "tabOrder": 0
+        "width": 217.26315789473688,
+        "x": 0.87248954700396286,
+        "y": 0.44178054993404559,
+        "z": 13000,
+        "tabOrder": 1000
       }
     }
   ],
@@ -18,7 +18,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "Sum(dwh Fact_Cupon.FlagCuponVencido)"
+          "queryRef": "Min(dwh Fact_Cupon.FechaActivacion)"
         }
       ]
     },
@@ -41,13 +41,13 @@
                     "Source": "d"
                   }
                 },
-                "Property": "FlagCuponVencido"
+                "Property": "FechaActivacion"
               }
             },
-            "Function": 0
+            "Function": 5
           },
-          "Name": "Sum(dwh Fact_Cupon.FlagCuponVencido)",
-          "NativeReferenceName": "Vencidos"
+          "Name": "Min(dwh Fact_Cupon.FechaActivacion)",
+          "NativeReferenceName": "Activos"
         }
       ],
       "OrderBy": [
@@ -62,18 +62,18 @@
                       "Source": "d"
                     }
                   },
-                  "Property": "FlagCuponVencido"
+                  "Property": "FechaActivacion"
                 }
               },
-              "Function": 0
+              "Function": 5
             }
           }
         }
       ]
     },
     "columnProperties": {
-      "Sum(dwh Fact_Cupon.FlagCuponVencido)": {
-        "displayName": "Vencidos"
+      "Min(dwh Fact_Cupon.FechaActivacion)": {
+        "displayName": "Activos"
       }
     },
     "drillFilterOtherVisuals": true,
@@ -94,5 +94,5 @@
       ]
     }
   },
-  "parentGroupName": "7402775d29e961637dcc"
+  "parentGroupName": "40cc41c9e20ec9d0eda5"
 }
