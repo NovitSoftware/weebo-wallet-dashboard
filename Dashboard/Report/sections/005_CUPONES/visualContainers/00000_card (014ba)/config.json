@@ -1,11 +1,11 @@
 {
-  "name": "6e452f69a6105ed6e908",
+  "name": "014ba7ef85ded492a683",
   "layouts": [
     {
       "id": 0,
       "position": {
         "height": 110,
-        "width": 166.66666666666669,
+        "width": 250,
         "x": 0,
         "y": 0,
         "z": 15000,
@@ -18,7 +18,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "Sum(dwh Fact_Cupon.FlagCuponVencido)"
+          "queryRef": "dwh Fact_Cupon.TasaRedencionCupones"
         }
       ]
     },
@@ -33,47 +33,38 @@
       ],
       "Select": [
         {
-          "Aggregation": {
+          "Measure": {
             "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Source": "d"
-                  }
-                },
-                "Property": "FlagCuponVencido"
+              "SourceRef": {
+                "Source": "d"
               }
             },
-            "Function": 0
+            "Property": "TasaRedencionCupones"
           },
-          "Name": "Sum(dwh Fact_Cupon.FlagCuponVencido)",
-          "NativeReferenceName": "Vencidos"
+          "Name": "dwh Fact_Cupon.TasaRedencionCupones",
+          "NativeReferenceName": "TasaRedencionCupones"
         }
       ],
       "OrderBy": [
         {
           "Direction": 2,
           "Expression": {
-            "Aggregation": {
+            "Measure": {
               "Expression": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Source": "d"
-                    }
-                  },
-                  "Property": "FlagCuponVencido"
+                "SourceRef": {
+                  "Source": "d"
                 }
               },
-              "Function": 0
+              "Property": "TasaRedencionCupones"
             }
           }
         }
       ]
     },
     "columnProperties": {
-      "Sum(dwh Fact_Cupon.FlagCuponVencido)": {
-        "displayName": "Vencidos"
+      "dwh Fact_Cupon.TasaRedencionCupones": {
+        "displayName": "Tasa Redencion Cupones",
+        "formatString": "0.00 %;-0.00 %;0.00 %"
       }
     },
     "drillFilterOtherVisuals": true,
@@ -94,5 +85,5 @@
       ]
     }
   },
-  "parentGroupName": "7402775d29e961637dcc"
+  "parentGroupName": "94df74151000e4c1e892"
 }

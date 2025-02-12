@@ -29957,42 +29957,32 @@
 			          }
 			        }
 			      ]
+			    },
+			    "dwh_Fact_Cupon.tasa_redencion_cupones": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Cupon",
+			          "ConceptualProperty": "TasaRedencionCupones"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tasa redencion cupones": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TasaRedencionCupones": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "calendario_afiliado_date_variation_date_hierarchy_has_month": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_afiliado.date.variation.date_hierarchy.month": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_months"
-			        }
-			      ]
-			    },
 			    "calendario_afiliado_date_variation_date_hierarchy_has_quarter": {
 			      "Binding": {
 			        "ConceptualEntity": "CalendarioAfiliado"
@@ -30319,7 +30309,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_months1"
+			          "ID": "date_hierarchies_have_months"
 			        }
 			      ]
 			    },
@@ -46636,6 +46626,39 @@
 			        }
 			      ]
 			    },
+			    "dwh_Fact_Cupon_has_tasa_redencion_cupones": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Fact_Cupon.tasa_redencion_cupones": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon.tasa_redencion_cupones"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon.tasa_redencion_cupones"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_tasa_redencion_cupones"
+			        }
+			      ]
+			    },
 			    "ranking_distrito_has_total_stickers_otorgado": {
 			      "Binding": {
 			        "ConceptualEntity": "Top3Distritos"
@@ -60540,6 +60563,39 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_calendario_generals_are_weekend_calendario_generals"
+			        }
+			      ]
+			    },
+			    "calendario_afiliado_date_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioAfiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_afiliado.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_afiliado.date.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_months1"
 			        }
 			      ]
 			    },
