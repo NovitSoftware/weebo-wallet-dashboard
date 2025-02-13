@@ -69,19 +69,12 @@
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure TotalStickersActivos = ```
+	measure TotalStickerActivos =
 			
-			SUMX(
-			    SUMMARIZE(
-			        'dwh Fact_Cupon',
-			        'dwh Fact_Cupon'[KeyEmpresa],
-			        'dwh Fact_Cupon'[KeyAfiliado],
-			        "MaxStickers", MAX('dwh Fact_Cupon'[StickersActivos])
-			    ),
-			    [MaxStickers]
+			CALCULATE(
+			    SUM('dwh Fact_Cupon'[StickersEntregados]),
+			    'dwh Fact_Cupon'[FlagCuponVigente] = 1
 			)
-			
-			```
 		formatString: 0
 
 	measure VariacionStickersActivos = ```
@@ -138,6 +131,65 @@
 			        COUNTROWS('dwh Fact_Cupon'),
 			        0
 			    )
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure TotalCuponesActivos = ```
+			
+			CALCULATE(
+			    COUNT('dwh Fact_Cupon'[KeyCupon]),
+			    'dwh Fact_Cupon'[FlagCuponVigente] = 1,
+			    'dwh Fact_Cupon'[FlagCuponVencido] = 0
+			)
+			
+			```
+		formatString: 0
+
+	measure TotalCuponesEnProceso = ```
+			
+			CALCULATE(
+			    COUNT('dwh Fact_Cupon'[KeyCupon]),
+			    'dwh Fact_Cupon'[FlagCuponVigente] = 0,
+			    'dwh Fact_Cupon'[FlagCuponVencido] = 0
+			)
+			
+			```
+		formatString: 0
+
+	measure TotalCuponesVencidos = ```
+			
+			CALCULATE(
+			    COUNT('dwh Fact_Cupon'[KeyCupon]),
+			    'dwh Fact_Cupon'[FlagCuponVencido] = 1
+			)
+			
+			```
+		formatString: 0
+
+	measure TotalStickerVencidos =
+			
+			CALCULATE(
+			    SUM('dwh Fact_Cupon'[StickersEntregados]),
+			    'dwh Fact_Cupon'[FlagCuponVencido] = 1
+			)
+		formatString: 0
+
+	measure 'Promedio Días Hasta Redimir Cupón' = ```
+			
+			VAR TotalDias = 
+			    SUMX(
+			        FILTER( 'dwh Fact_Cupon', 'dwh Fact_Cupon'[FlagCuponRedimido] = 1 ), 
+			        'dwh Fact_Cupon'[DiasHastaRedimirCupon]
+			    )
+			VAR CantidadCupones = 
+			    COUNTROWS( 
+			        FILTER( 'dwh Fact_Cupon', 'dwh Fact_Cupon'[FlagCuponRedimido] = 1 ) 
+			    )
+			
+			RETURN 
+			    DIVIDE(TotalDias, CantidadCupones, 0)
 			
 			```
 
@@ -337,6 +389,20 @@
 		formatString: 0
 		summarizeBy: sum
 		sourceColumn: StickersEntregadosAcumulado
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstadoCupon = ```
+			
+			SWITCH(
+			    TRUE(),
+			    'dwh Fact_Cupon'[FlagCuponVigente] = 1 && 'dwh Fact_Cupon'[FlagCuponVencido] = 0, "Activo",
+			    'dwh Fact_Cupon'[FlagCuponVencido] = 1, "Vencido",
+			    "Proceso"
+			)
+			
+			```
+		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
 

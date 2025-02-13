@@ -1,0 +1,40 @@
+﻿table CuponesPorGenero
+
+	column Genero
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: dwh Dim_Afiliado[Genero]
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalCuponesActivos
+		formatString: 0
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [TotalCuponesActivos]
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalCuponesVencidos
+		formatString: 0
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [TotalCuponesVencidos]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CuponesPorGenero = calculated
+		mode: import
+		source = ```
+				
+				SUMMARIZE(
+				    'dwh Dim_Afiliado',
+				    'dwh Dim_Afiliado'[Genero],
+				    "TotalCuponesActivos", [TotalCuponesActivos],
+				    "TotalCuponesVencidos", [TotalCuponesVencidos]
+				)
+				
+				```
+
+	annotation PBI_Id = 77590091485c4980adf9f437f88cdf67
+

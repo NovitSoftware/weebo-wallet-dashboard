@@ -1,0 +1,29 @@
+﻿table CuponesPorDistrito
+
+	column Distrito
+		isNameInferred
+		sourceColumn: dwh Dim_Afiliado[Distrito]
+
+	column TotalStickersActivos
+		isNameInferred
+		sourceColumn: [TotalStickersActivos]
+
+	column TotalStickersVencidos
+		isNameInferred
+		sourceColumn: [TotalStickersVencidos]
+
+	partition CuponesPorDistrito = calculated
+		mode: import
+		source = ```
+				
+				SUMMARIZE(
+				    'dwh Dim_Afiliado',
+				    'dwh Dim_Afiliado'[Distrito],
+				    "TotalStickersActivos", [TotalStickerActivos],
+				    "TotalStickersVencidos", [TotalStickerVencidos]
+				)
+				
+				```
+
+	annotation PBI_Id = be26443c563c4265a985b776b9b56a88
+

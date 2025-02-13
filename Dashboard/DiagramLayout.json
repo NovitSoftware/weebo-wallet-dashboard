@@ -11,7 +11,7 @@
         {
           "location": {
             "x": 1483.8323253209899,
-            "y": 3553.8652651529192
+            "y": 9462.16161310736
           },
           "nodeIndex": "dwh Dim_Afiliado",
           "nodeLineageTag": "bf55b9a1-187f-441c-b292-2d71489bf4bf",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 1810.6321995784854,
-            "y": 2917.1918715581414
+            "y": 8825.4882195125829
           },
           "nodeIndex": "dwh Dim_Cupon",
           "nodeLineageTag": "754ff341-4506-4d26-8557-576e60355b02",
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 1664.7094234063418,
-            "y": 4903.5810937083579
+            "y": 10811.877441662798
           },
           "nodeIndex": "dwh Dim_CuponPromocional",
           "nodeLineageTag": "9acf3df8-bd19-4da7-988b-904ab0a77f1c",
@@ -50,7 +50,7 @@
         {
           "location": {
             "x": 621.56939966425693,
-            "y": 3891.3443000827842
+            "y": 9799.6406480372243
           },
           "nodeIndex": "dwh Dim_Empresa",
           "nodeLineageTag": "9c75e9a7-b703-4248-957f-cfe8ecbc70eb",
@@ -63,7 +63,7 @@
         {
           "location": {
             "x": 1151.3348172894466,
-            "y": 4958.5219071192341
+            "y": 10866.818255073675
           },
           "nodeIndex": "dwh Dim_Programa",
           "nodeLineageTag": "a1aa45bd-ffb2-4bf0-8588-19dd55dfd3c0",
@@ -76,7 +76,7 @@
         {
           "location": {
             "x": 1017.3017228425666,
-            "y": 4497.0276439826412
+            "y": 10405.323991937083
           },
           "nodeIndex": "dwh Dim_Promocion",
           "nodeLineageTag": "4e168610-33e6-44c8-bc85-286603d2cf5a",
@@ -89,7 +89,7 @@
         {
           "location": {
             "x": 1195.9390078717036,
-            "y": 3697.1676178865273
+            "y": 9605.4639658409687
           },
           "nodeIndex": "dwh Dim_RangoEdad",
           "nodeLineageTag": "4fb9c1ba-2474-4d47-90b0-4ffbe0c9d526",
@@ -102,7 +102,7 @@
         {
           "location": {
             "x": 907.1800154971711,
-            "y": 3768.7231139960541
+            "y": 9677.0194619504946
           },
           "nodeIndex": "dwh Dim_Tarjeta",
           "nodeLineageTag": "793d3ddc-13cb-4528-b68a-960c4c5d0bf5",
@@ -115,7 +115,7 @@
         {
           "location": {
             "x": 3635.329866089789,
-            "y": 3903.962454114966
+            "y": 9812.2588020694075
           },
           "nodeIndex": "dwh Dim_Tiempo",
           "nodeLineageTag": "e75a4dfc-eaa3-4bd6-89ba-c012076fdf11",
@@ -128,7 +128,7 @@
         {
           "location": {
             "x": 270.06523012457046,
-            "y": 4471.7281848623907
+            "y": 10380.024532816831
           },
           "nodeIndex": "dwh Dim_Tienda",
           "nodeLineageTag": "cd93ef90-f7ff-4cba-9c28-83faa76d19c7",
@@ -141,7 +141,7 @@
         {
           "location": {
             "x": 908.93057632101068,
-            "y": 2817.072327375658
+            "y": 8725.368675330099
           },
           "nodeIndex": "dwh Fact_AfiliacionEmpresa",
           "nodeLineageTag": "b70fe518-45ef-4dbe-b093-cc6ba81a6951",
@@ -154,7 +154,7 @@
         {
           "location": {
             "x": 2231.8730701465661,
-            "y": 3336.6301197356997
+            "y": 9244.92646769014
           },
           "nodeIndex": "dwh Fact_AfiliacionWebo",
           "nodeLineageTag": "74381e30-78e2-4391-a624-018a2cb01926",
@@ -167,7 +167,7 @@
         {
           "location": {
             "x": 1618.3688338930647,
-            "y": 3197.752033230483
+            "y": 9106.0483811849244
           },
           "nodeIndex": "dwh Fact_Cupon",
           "nodeLineageTag": "41114d2c-be2f-43e5-a13c-6afa1b4fe682",
@@ -180,7 +180,7 @@
         {
           "location": {
             "x": 221.0064967603559,
-            "y": 4937.6977519929987
+            "y": 10845.994099947438
           },
           "nodeIndex": "dwh Fact_Facturacion",
           "nodeLineageTag": "a5a4c340-032f-425c-a2e0-2de76764368e",
@@ -193,7 +193,7 @@
         {
           "location": {
             "x": 51.957852227800032,
-            "y": 3638.071869603069
+            "y": 9546.36821755751
           },
           "nodeIndex": "dwh Fact_Planes",
           "nodeLineageTag": "7d14cc56-3eef-41ee-9203-8011529f5e2b",
@@ -206,7 +206,7 @@
         {
           "location": {
             "x": 709.85487372183786,
-            "y": 5168.4570810483829
+            "y": 11076.753429002823
           },
           "nodeIndex": "dwh Fact_Promociones",
           "nodeLineageTag": "ea521547-6e79-4506-b480-d683cc6752b7",
@@ -219,7 +219,7 @@
         {
           "location": {
             "x": 2545.7841783271679,
-            "y": 4474.9343138847125
+            "y": 10383.230661839152
           },
           "nodeIndex": "stage StgAfiliacion",
           "nodeLineageTag": "ec702994-cbec-4618-813f-0b5a8d037670",
@@ -232,7 +232,7 @@
         {
           "location": {
             "x": 4203.329866089789,
-            "y": 3877.962454114966
+            "y": 9786.2588020694075
           },
           "nodeIndex": "stage StgCortesAfiliadosEmpresa",
           "nodeLineageTag": "821268bf-d1e2-4e25-b972-9803326d17ec",
@@ -245,7 +245,7 @@
         {
           "location": {
             "x": 2162.0538477239052,
-            "y": 3694.1405932765588
+            "y": 9602.4369412309989
           },
           "nodeIndex": "stage StgCortesAfiliadosWebo",
           "nodeLineageTag": "4e386cb4-0070-46cf-b1dd-30b25996c39a",
@@ -258,7 +258,7 @@
         {
           "location": {
             "x": 4487.329866089789,
-            "y": 3877.962454114966
+            "y": 9786.2588020694075
           },
           "nodeIndex": "stage StgCortesCupon",
           "nodeLineageTag": "c664c5aa-a100-4d4f-94e2-08d04e5f307e",
@@ -271,7 +271,7 @@
         {
           "location": {
             "x": 4771.329866089789,
-            "y": 3879.962454114966
+            "y": 9788.2588020694075
           },
           "nodeIndex": "stage StgCortesPlanes",
           "nodeLineageTag": "91ff1cc7-699a-4c8a-bb66-8b7d3e3dc857",
@@ -284,7 +284,7 @@
         {
           "location": {
             "x": 5055.329866089789,
-            "y": 3891.962454114966
+            "y": 9800.2588020694075
           },
           "nodeIndex": "stage StgCortesPromociones",
           "nodeLineageTag": "6f572199-a64c-4eed-9018-3a08944d2c3b",
@@ -297,7 +297,7 @@
         {
           "location": {
             "x": 3275.9514370160482,
-            "y": 3681.0592669828548
+            "y": 9589.3556149372962
           },
           "nodeIndex": "stage StgCupon",
           "nodeLineageTag": "df70c106-a673-4244-a4a0-3916e39623a0",
@@ -310,7 +310,7 @@
         {
           "location": {
             "x": 2899.6372669878951,
-            "y": 4463.26997744793
+            "y": 10371.566325402371
           },
           "nodeIndex": "stage StgCuponPromocional",
           "nodeLineageTag": "5329c069-009b-493b-bede-dd06e0f7fedd",
@@ -323,7 +323,7 @@
         {
           "location": {
             "x": 54.876627872806239,
-            "y": 2813.5043069659614
+            "y": 8721.8006549204019
           },
           "nodeIndex": "stage StgEmpresa",
           "nodeLineageTag": "bd17b2e0-ca8a-4980-baf2-0aa6875b6a81",
@@ -336,7 +336,7 @@
         {
           "location": {
             "x": 870.4420800999842,
-            "y": 3416.3899915641759
+            "y": 9324.6863395186174
           },
           "nodeIndex": "stage StgFactAfiliacionEmpresa",
           "nodeLineageTag": "7a6ff2ee-8b95-4b36-877e-35c021360e58",
@@ -349,7 +349,7 @@
         {
           "location": {
             "x": 1920.4236886595133,
-            "y": 4355.3951064495122
+            "y": 10263.691454403954
           },
           "nodeIndex": "stage StgFactAfiliacionWebo",
           "nodeLineageTag": "de885885-9a36-4656-9226-14b424b2a60f",
@@ -362,7 +362,7 @@
         {
           "location": {
             "x": 1247.5790587911574,
-            "y": 3078.0560148363584
+            "y": 8986.3523627908
           },
           "nodeIndex": "stage StgFactCupon",
           "nodeLineageTag": "aa9c0f2b-df3e-40bb-810f-7c0be5e946de",
@@ -375,7 +375,7 @@
         {
           "location": {
             "x": 332.97395758071343,
-            "y": 4115.9372350473641
+            "y": 10024.233583001806
           },
           "nodeIndex": "stage StgFactFacturacion",
           "nodeLineageTag": "e958500f-b7be-4c9c-9055-eb8e2e06bf70",
@@ -388,7 +388,7 @@
         {
           "location": {
             "x": 10,
-            "y": 4118.5357126265644
+            "y": 10026.832060581006
           },
           "nodeIndex": "stage StgFactPlanes",
           "nodeLineageTag": "84f53829-0282-4459-9077-ba95fdd6deba",
@@ -401,7 +401,7 @@
         {
           "location": {
             "x": 851.78619087885954,
-            "y": 4143.6716930041193
+            "y": 10051.96804095856
           },
           "nodeIndex": "stage StgFactPromociones",
           "nodeLineageTag": "b288b303-bd56-43c5-a810-2b43f8f793a4",
@@ -414,7 +414,7 @@
         {
           "location": {
             "x": 5339.329866089789,
-            "y": 3915.962454114966
+            "y": 9824.2588020694075
           },
           "nodeIndex": "stage StgLog",
           "nodeLineageTag": "00727ec1-2c7f-481e-b838-e44b176e3325",
@@ -427,7 +427,7 @@
         {
           "location": {
             "x": 2964.7070816937749,
-            "y": 4041.2261178119734
+            "y": 9949.5224657664148
           },
           "nodeIndex": "stage StgPrograma",
           "nodeLineageTag": "2eaf16b3-29bf-4539-8949-58b6d99f3e6f",
@@ -440,7 +440,7 @@
         {
           "location": {
             "x": 2446.0538477239052,
-            "y": 4028.4607868473795
+            "y": 9936.7571348018209
           },
           "nodeIndex": "stage StgPromocion",
           "nodeLineageTag": "54e3e5ac-924e-4be4-a496-676ba78d2bba",
@@ -453,7 +453,7 @@
         {
           "location": {
             "x": 3361.329866089789,
-            "y": 4045.3223869189305
+            "y": 9953.6187348733711
           },
           "nodeIndex": "stage StgTarjeta",
           "nodeLineageTag": "79263e5d-9bac-489a-9329-80642adbea1e",
@@ -466,7 +466,7 @@
         {
           "location": {
             "x": 3023.7244505446324,
-            "y": 3320.5066359350672
+            "y": 9228.8029838895072
           },
           "nodeIndex": "stage StgTienda",
           "nodeLineageTag": "b51048da-c340-479b-bda8-a4d4282a501b",
@@ -479,7 +479,7 @@
         {
           "location": {
             "x": 3482.5119635611131,
-            "y": 4504.6732143565951
+            "y": 10412.969562311035
           },
           "nodeIndex": "stage StgTrackingStickers",
           "nodeLineageTag": "d242cc10-d16d-4ed5-abd1-70898b93b243",
@@ -492,7 +492,7 @@
         {
           "location": {
             "x": 2728.6645129997582,
-            "y": 3671.4954533932341
+            "y": 9579.7918013476756
           },
           "nodeIndex": "stage StgTransaccion",
           "nodeLineageTag": "7c2b2fea-e4ab-4c44-9cf0-043edefe6c2c",
@@ -505,7 +505,7 @@
         {
           "location": {
             "x": 5623.329866089789,
-            "y": 3939.962454114966
+            "y": 9848.2588020694075
           },
           "nodeIndex": "sysdiagrams",
           "nodeLineageTag": "7ce71382-b2d7-4589-911c-7676c0bbc14c",
@@ -518,7 +518,7 @@
         {
           "location": {
             "x": 6719.329866089789,
-            "y": 3792.6825789092836
+            "y": 9700.9789268637251
           },
           "nodeIndex": "CalendarioGeneral",
           "size": {
@@ -530,7 +530,7 @@
         {
           "location": {
             "x": 6993.329866089789,
-            "y": 3668.5335213603394
+            "y": 9576.82986931478
           },
           "nodeIndex": "CalendarioAfiliado",
           "size": {
@@ -542,7 +542,7 @@
         {
           "location": {
             "x": 7267.329866089789,
-            "y": 2783.9714863241115
+            "y": 8692.267834278553
           },
           "nodeIndex": "FiltrosTiempo",
           "size": {
@@ -554,7 +554,7 @@
         {
           "location": {
             "x": 5897.329866089789,
-            "y": 3991.9341527532679
+            "y": 9900.2305007077084
           },
           "nodeIndex": "Top3Distritos",
           "size": {
@@ -566,9 +566,57 @@
         {
           "location": {
             "x": 7541.329866089789,
-            "y": 2170.2332928035062
+            "y": 8078.5296407579463
           },
           "nodeIndex": "Top3DistritosCupon",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 7815.329866089789,
+            "y": 7457.4082420768791
+          },
+          "nodeIndex": "CuponesPorDistrito",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 8089.329866089789,
+            "y": 6682.85229501566
+          },
+          "nodeIndex": "CuponesPorGenero",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 8363.329866089789,
+            "y": 5753.0159982841742
+          },
+          "nodeIndex": "Top3DistritosOtorgados",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 8637.329866089789,
+            "y": 4629.540714787383
+          },
+          "nodeIndex": "Top3DistritosPromociones",
           "size": {
             "height": 200,
             "width": 234

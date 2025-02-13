@@ -39,7 +39,7 @@
                 "Source": "d"
               }
             },
-            "Property": "TotalStickersActivos"
+            "Property": "TotalStickerActivos"
           },
           "Name": "dwh Fact_Cupon.Measure",
           "NativeReferenceName": "TotalStickersActivos1"
@@ -55,7 +55,7 @@
                   "Source": "d"
                 }
               },
-              "Property": "TotalStickersActivos"
+              "Property": "TotalStickerActivos"
             }
           }
         }
