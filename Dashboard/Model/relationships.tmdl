@@ -694,3 +694,13 @@ relationship f728e482-647f-e952-833a-a89ed1043cff
 	fromColumn: 'dwh Fact_Cupon'.KeyFechaCorte
 	toColumn: 'dwh Dim_Tiempo'.KeyTiempo
 
+relationship 2ac6aac3-93fc-ae50-d755-08c345b23eca
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: UltimasFechas.'Fecha Calculada'
+	toColumn: 'dwh Dim_Tiempo'.Fecha
+
+relationship 983d8069-931e-9fca-69d3-e699f044702a
+	fromColumn: 'dwh Fact_Promociones'.KeyFechaCorte
+	toColumn: 'dwh Dim_Tiempo'.KeyTiempo
+

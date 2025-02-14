@@ -3680,6 +3680,16 @@
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Edades": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -8864,6 +8874,9 @@
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "key fecha corte": {
@@ -29978,6 +29991,16 @@
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          ".": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -30870,9 +30893,1182 @@
 			          }
 			        }
 			      ]
+			    },
+			    "dwh_Dim_Afiliado.afiliados_masculinos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Dim_Afiliado",
+			          "ConceptualProperty": "AfiliadosMasculinos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "afiliados masculinos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "AfiliadosMasculinos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado.afiliados_activos_resultado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Dim_Afiliado",
+			          "ConceptualProperty": "AfiliadosActivos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "afiliados activos resultado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "AfiliadosActivos_Resultado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado.afiliados_nuevos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Dim_Afiliado",
+			          "ConceptualProperty": "AfiliadosNuevos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "afiliados nuevos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "AfiliadosNuevos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado.afiliados_perdidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Dim_Afiliado",
+			          "ConceptualProperty": "AfiliadosPerdidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "afiliados perdidos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "AfiliadosPerdidos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado.afiliados_en_riesgo_resultado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Dim_Afiliado",
+			          "ConceptualProperty": "AfiliadosEnRiesgo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "afiliados en riesgo resultado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "AfiliadosEnRiesgo_Resultado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado.afiliados_desafiliados_resultado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Dim_Afiliado",
+			          "ConceptualProperty": "AfiliadosDesafiliados_Resultado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "afiliados desafiliados resultado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "AfiliadosDesafiliados_Resultado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Promocione.total_promociones_activas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Promociones",
+			          "ConceptualProperty": "TotalPromocionesActivas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total promociones activas": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TotalPromocionesActivas": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate promocione activa": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall promocione activa": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Activas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Promocione.total_promociones_redimidas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Promociones",
+			          "ConceptualProperty": "TotalPromocionesRedimidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total promociones redimidas": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TotalPromocionesRedimidas": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate promocione redimida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall promocione redimida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Promocione.total_promociones_vencidas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Promociones",
+			          "ConceptualProperty": "TotalPromocionesVencidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total promociones vencidas": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TotalPromocionesVencidas": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate promocione vencida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall promocione vencida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Vencidas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Promocione.promedio_dias_activacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Promociones",
+			          "ConceptualProperty": "PromedioDiasActivacion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "promedio dias activacion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PromedioDiasActivacion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "top_3_distritos_promocione": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Top3DistritosPromociones"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top 3 distritos promocione": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "top 3 distrito promocione": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "Top3DistritosPromociones": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "best 3 distrito promocione": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "first 3 distrito promocione": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "leading 3 distrito promocione": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "maximum 3 distrito promocione": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "peak 3 distrito promocione": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "upper 3 distrito promocione": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "top_3_distritos_promocione.distrito": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Top3DistritosPromociones",
+			          "ConceptualProperty": "Distrito"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "distrito": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "top_3_distritos_promocione.total_promocione": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Top3DistritosPromociones",
+			          "ConceptualProperty": "TotalPromociones"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total promocione": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TotalPromociones": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate promocione": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall promocione": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "top_3_distritos_promocione.ranking": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Top3DistritosPromociones",
+			          "ConceptualProperty": "Ranking"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ranking": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "status": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "position": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "place": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "grade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "standing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "level": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "ultimas_fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UltimasFechas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ultimas fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ultima fecha": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "UltimasFechas": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "ultimas_fecha.rango": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UltimasFechas",
+			          "ConceptualProperty": "Rango"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rango": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "ultimas_fecha.fecha_calculada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UltimasFechas",
+			          "ConceptualProperty": "Fecha Calculada"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha calculada": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
 			    }
 			  },
 			  "Relationships": {
+			    "calendario_afiliado_date_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioAfiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_afiliado.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_afiliado.date.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_months"
+			        }
+			      ]
+			    },
+			    "calendario_afiliado_date_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioAfiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_afiliado.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_afiliado.date.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_quarters"
+			        }
+			      ]
+			    },
+			    "calendario_afiliado_date_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioAfiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_afiliado.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_afiliado.date.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_years"
+			        }
+			      ]
+			    },
+			    "calendario_afiliado_date_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioAfiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_afiliado.date": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date"
+			          }
+			        },
+			        "calendario_afiliado.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_afiliado.date"
+			            },
+			            "Object": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "calendario_general_inicio_me_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.inicio_me.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_general.inicio_me.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.inicio_me.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.inicio_me.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "inicio_me_date_hierarchy_have_inicio_me_day"
+			        }
+			      ]
+			    },
+			    "calendario_general_inicio_me_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.inicio_me.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_general.inicio_me.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.inicio_me.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.inicio_me.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "inicio_me_date_hierarchy_have_inicio_me_month"
+			        }
+			      ]
+			    },
+			    "calendario_general_inicio_me_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.inicio_me.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_general.inicio_me.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.inicio_me.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.inicio_me.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "inicio_me_date_hierarchy_have_inicio_me_quarter"
+			        }
+			      ]
+			    },
+			    "calendario_general_inicio_me_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.inicio_me.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_general.inicio_me.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.inicio_me.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.inicio_me.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "inicio_me_date_hierarchy_have_inicio_me_year"
+			        }
+			      ]
+			    },
+			    "calendario_general_inicio_me_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.inicio_me": {
+			          "Target": {
+			            "Entity": "calendario_general.inicio_me"
+			          }
+			        },
+			        "calendario_general.inicio_me.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.inicio_me"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.inicio_me.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "inicio_me_have_inicio_me_date_hierarchy"
+			        }
+			      ]
+			    },
+			    "calendario_general_date_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_general.date.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "calendario_general.date.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.date.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_days"
+			        }
+			      ]
+			    },
+			    "calendario_general_date_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_general.date.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "calendario_general.date.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.date.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_months1"
+			        }
+			      ]
+			    },
+			    "calendario_general_date_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_general.date.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "calendario_general.date.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.date.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_quarters1"
+			        }
+			      ]
+			    },
+			    "calendario_general_date_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_general.date.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "calendario_general.date.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.date.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_years1"
+			        }
+			      ]
+			    },
+			    "calendario_general_date_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.date": {
+			          "Target": {
+			            "Entity": "calendario_general.date"
+			          }
+			        },
+			        "calendario_general.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.date.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.date"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.date.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_date_hierarchies1"
+			        }
+			      ]
+			    },
+			    "stage_StgTransaccion_fecha_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTransaccion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTransaccion.fecha.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy"
+			          }
+			        },
+			        "stage_StgTransaccion.fecha.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_days"
+			        }
+			      ]
+			    },
+			    "stage_StgTransaccion_fecha_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTransaccion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTransaccion.fecha.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy"
+			          }
+			        },
+			        "stage_StgTransaccion.fecha.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_months"
+			        }
+			      ]
+			    },
+			    "stage_StgTransaccion_fecha_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTransaccion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTransaccion.fecha.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy"
+			          }
+			        },
+			        "stage_StgTransaccion.fecha.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_quarters"
+			        }
+			      ]
+			    },
 			    "stage_StgTransaccion_fecha_variation_date_hierarchy_has_year": {
 			      "Binding": {
 			        "ConceptualEntity": "stage StgTransaccion"
@@ -30968,7 +32164,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_days"
+			          "ID": "fecha_date_hierarchies_have_fecha_days1"
 			        }
 			      ]
 			    },
@@ -31001,7 +32197,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_months"
+			          "ID": "fecha_date_hierarchies_have_fecha_months1"
 			        }
 			      ]
 			    },
@@ -31034,7 +32230,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_quarters"
+			          "ID": "fecha_date_hierarchies_have_fecha_quarters1"
 			        }
 			      ]
 			    },
@@ -41858,7 +43054,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_days1"
+			          "ID": "fecha_date_hierarchies_have_fecha_days2"
 			        }
 			      ]
 			    },
@@ -41891,7 +43087,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_months1"
+			          "ID": "fecha_date_hierarchies_have_fecha_months2"
 			        }
 			      ]
 			    },
@@ -41924,7 +43120,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_quarters1"
+			          "ID": "fecha_date_hierarchies_have_fecha_quarters2"
 			        }
 			      ]
 			    },
@@ -44469,6 +45665,39 @@
 			        }
 			      ]
 			    },
+			    "ultimas_fecha_has_dwh_Dim_Tiempo": {
+			      "Binding": {
+			        "ConceptualEntity": "UltimasFechas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ultimas_fecha": {
+			          "Target": {
+			            "Entity": "ultimas_fecha"
+			          }
+			        },
+			        "dwh_Dim_Tiempo": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ultimas_fecha"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tiempo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ultimas_fechas_have_dwh_Dim_Tiempos"
+			        }
+			      ]
+			    },
 			    "stage_StgTransaccion_has_stage_StgPrograma": {
 			      "Binding": {
 			        "ConceptualEntity": "stage StgTransaccion"
@@ -45669,6 +46898,59 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "stage_StgProgramas_have_stage_StgAfiliacions"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Promocione_has_dwh_Dim_Tiempo": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Promociones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Promocione": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Promocione"
+			          }
+			        },
+			        "dwh_Dim_Tiempo": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo"
+			          },
+			          "Nouns": [
+			            {
+			              "key fecha corte": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Promocione"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tiempo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Promociones_have_dwh_Dim_Tiempos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tiempo"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Promocione"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Tiempos_have_dwh_Fact_Promociones"
 			        }
 			      ]
 			    },
@@ -46889,6 +48171,39 @@
 			        }
 			      ]
 			    },
+			    "dwh_Dim_Tiempo_has_ultimas_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tiempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tiempo": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo"
+			          }
+			        },
+			        "ultimas_fecha": {
+			          "Target": {
+			            "Entity": "ultimas_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tiempo"
+			            },
+			            "Object": {
+			              "Role": "ultimas_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Tiempos_have_ultimas_fechas"
+			        }
+			      ]
+			    },
 			    "dwh_Dim_Empresa_has_stage_StgEmpresa": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh Dim_Empresa"
@@ -46985,6 +48300,501 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_Dim_Afiliados_have_stage_StgCortesAfiliadosWebos"
+			        }
+			      ]
+			    },
+			    "ultimas_fecha_has_fecha_calculada": {
+			      "Binding": {
+			        "ConceptualEntity": "UltimasFechas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ultimas_fecha": {
+			          "Target": {
+			            "Entity": "ultimas_fecha"
+			          }
+			        },
+			        "ultimas_fecha.fecha_calculada": {
+			          "Target": {
+			            "Entity": "ultimas_fecha.fecha_calculada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ultimas_fecha"
+			            },
+			            "Object": {
+			              "Role": "ultimas_fecha.fecha_calculada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ultimas_fechas_have_fecha_calculadas"
+			        }
+			      ]
+			    },
+			    "ultimas_fecha_has_rango": {
+			      "Binding": {
+			        "ConceptualEntity": "UltimasFechas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ultimas_fecha": {
+			          "Target": {
+			            "Entity": "ultimas_fecha"
+			          }
+			        },
+			        "ultimas_fecha.rango": {
+			          "Target": {
+			            "Entity": "ultimas_fecha.rango"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ultimas_fecha"
+			            },
+			            "Object": {
+			              "Role": "ultimas_fecha.rango"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ultimas_fechas_have_rangos"
+			        }
+			      ]
+			    },
+			    "top_3_distritos_promocione_has_ranking": {
+			      "Binding": {
+			        "ConceptualEntity": "Top3DistritosPromociones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "top_3_distritos_promocione": {
+			          "Target": {
+			            "Entity": "top_3_distritos_promocione"
+			          }
+			        },
+			        "top_3_distritos_promocione.ranking": {
+			          "Target": {
+			            "Entity": "top_3_distritos_promocione.ranking"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "top_3_distritos_promocione"
+			            },
+			            "Object": {
+			              "Role": "top_3_distritos_promocione.ranking"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "top_3_distritos_promociones_have_ranking"
+			        }
+			      ]
+			    },
+			    "top_3_distritos_promocione_has_total_promocione": {
+			      "Binding": {
+			        "ConceptualEntity": "Top3DistritosPromociones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "top_3_distritos_promocione": {
+			          "Target": {
+			            "Entity": "top_3_distritos_promocione"
+			          }
+			        },
+			        "top_3_distritos_promocione.total_promocione": {
+			          "Target": {
+			            "Entity": "top_3_distritos_promocione.total_promocione"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "top_3_distritos_promocione"
+			            },
+			            "Object": {
+			              "Role": "top_3_distritos_promocione.total_promocione"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "top_3_distritos_promociones_have_total_promociones"
+			        }
+			      ]
+			    },
+			    "top_3_distritos_promocione_has_distrito": {
+			      "Binding": {
+			        "ConceptualEntity": "Top3DistritosPromociones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "top_3_distritos_promocione": {
+			          "Target": {
+			            "Entity": "top_3_distritos_promocione"
+			          }
+			        },
+			        "top_3_distritos_promocione.distrito": {
+			          "Target": {
+			            "Entity": "top_3_distritos_promocione.distrito"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "top_3_distritos_promocione"
+			            },
+			            "Object": {
+			              "Role": "top_3_distritos_promocione.distrito"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "top_3_distritos_promociones_have_distrito"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Promocione_has_promedio_dias_activacion": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Promociones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Promocione": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Promocione"
+			          }
+			        },
+			        "dwh_Fact_Promocione.promedio_dias_activacion": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Promocione.promedio_dias_activacion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Promocione"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Promocione.promedio_dias_activacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Promociones_have_promedio_dias_activacion"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Promocione_has_total_promociones_vencidas": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Promociones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Promocione": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Promocione"
+			          }
+			        },
+			        "dwh_Fact_Promocione.total_promociones_vencidas": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Promocione.total_promociones_vencidas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Promocione"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Promocione.total_promociones_vencidas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Promociones_have_total_promociones_vencidas"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Promocione_has_total_promociones_redimidas": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Promociones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Promocione": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Promocione"
+			          }
+			        },
+			        "dwh_Fact_Promocione.total_promociones_redimidas": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Promocione.total_promociones_redimidas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Promocione"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Promocione.total_promociones_redimidas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Promociones_have_total_promociones_redimidas"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Promocione_has_total_promociones_activas": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Promociones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Promocione": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Promocione"
+			          }
+			        },
+			        "dwh_Fact_Promocione.total_promociones_activas": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Promocione.total_promociones_activas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Promocione"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Promocione.total_promociones_activas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Promociones_have_total_promociones_activas"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_has_afiliados_desafiliados_resultado": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.afiliados_desafiliados_resultado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.afiliados_desafiliados_resultado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.afiliados_desafiliados_resultado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_afiliados_desafiliados_resultado"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_has_afiliados_en_riesgo_resultado": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.afiliados_en_riesgo_resultado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.afiliados_en_riesgo_resultado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.afiliados_en_riesgo_resultado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_afiliados_en_riesgo_resultado"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_has_afiliados_perdidos": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.afiliados_perdidos": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.afiliados_perdidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.afiliados_perdidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_afiliados_perdidos"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_has_afiliados_nuevos": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.afiliados_nuevos": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.afiliados_nuevos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.afiliados_nuevos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_afiliados_nuevos"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_has_afiliados_activos_resultado": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.afiliados_activos_resultado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.afiliados_activos_resultado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.afiliados_activos_resultado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_afiliados_activos_resultado"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_has_afiliados_masculinos": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.afiliados_masculinos": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.afiliados_masculinos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.afiliados_masculinos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_afiliados_masculinos"
 			        }
 			      ]
 			    },
@@ -57495,39 +59305,6 @@
 			        }
 			      ]
 			    },
-			    "dwh_Fact_Promocione_has_key_fecha_corte": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Fact_Promociones"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Fact_Promocione": {
-			          "Target": {
-			            "Entity": "dwh_Fact_Promocione"
-			          }
-			        },
-			        "dwh_Fact_Promocione.key_fecha_corte": {
-			          "Target": {
-			            "Entity": "dwh_Fact_Promocione.key_fecha_corte"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Fact_Promocione"
-			            },
-			            "Object": {
-			              "Role": "dwh_Fact_Promocione.key_fecha_corte"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Fact_Promociones_have_key_fecha_cortes"
-			        }
-			      ]
-			    },
 			    "dwh_Fact_Promocione_has_key_fact_promocion": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh Fact_Promociones"
@@ -61486,567 +63263,6 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_calendario_generals_are_weekend_calendario_generals"
-			        }
-			      ]
-			    },
-			    "stage_StgTransaccion_fecha_variation_date_hierarchy_has_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "stage StgTransaccion"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "stage_StgTransaccion.fecha.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy"
-			          }
-			        },
-			        "stage_StgTransaccion.fecha.variation.date_hierarchy.quarter": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_quarters2"
-			        }
-			      ]
-			    },
-			    "stage_StgTransaccion_fecha_variation_date_hierarchy_has_month": {
-			      "Binding": {
-			        "ConceptualEntity": "stage StgTransaccion"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "stage_StgTransaccion.fecha.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy"
-			          }
-			        },
-			        "stage_StgTransaccion.fecha.variation.date_hierarchy.month": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_months2"
-			        }
-			      ]
-			    },
-			    "stage_StgTransaccion_fecha_variation_date_hierarchy_has_day": {
-			      "Binding": {
-			        "ConceptualEntity": "stage StgTransaccion"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "stage_StgTransaccion.fecha.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy"
-			          }
-			        },
-			        "stage_StgTransaccion.fecha.variation.date_hierarchy.day": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_days2"
-			        }
-			      ]
-			    },
-			    "calendario_general_date_has_variation_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general.date": {
-			          "Target": {
-			            "Entity": "calendario_general.date"
-			          }
-			        },
-			        "calendario_general.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_general.date.variation.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general.date"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.date.variation.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dates_have_date_hierarchies"
-			        }
-			      ]
-			    },
-			    "calendario_general_date_variation_date_hierarchy_has_year": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_general.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_general.date.variation.date_hierarchy.year": {
-			          "Target": {
-			            "Entity": "calendario_general.date.variation.date_hierarchy.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.date.variation.date_hierarchy.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_years"
-			        }
-			      ]
-			    },
-			    "calendario_general_date_variation_date_hierarchy_has_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_general.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_general.date.variation.date_hierarchy.quarter": {
-			          "Target": {
-			            "Entity": "calendario_general.date.variation.date_hierarchy.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.date.variation.date_hierarchy.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_quarters"
-			        }
-			      ]
-			    },
-			    "calendario_general_date_variation_date_hierarchy_has_month": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_general.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_general.date.variation.date_hierarchy.month": {
-			          "Target": {
-			            "Entity": "calendario_general.date.variation.date_hierarchy.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.date.variation.date_hierarchy.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_months"
-			        }
-			      ]
-			    },
-			    "calendario_general_date_variation_date_hierarchy_has_day": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_general.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_general.date.variation.date_hierarchy.day": {
-			          "Target": {
-			            "Entity": "calendario_general.date.variation.date_hierarchy.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.date.variation.date_hierarchy.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_days"
-			        }
-			      ]
-			    },
-			    "calendario_general_inicio_me_has_variation_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general.inicio_me": {
-			          "Target": {
-			            "Entity": "calendario_general.inicio_me"
-			          }
-			        },
-			        "calendario_general.inicio_me.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general.inicio_me"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.inicio_me.variation.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "inicio_me_have_inicio_me_date_hierarchy"
-			        }
-			      ]
-			    },
-			    "calendario_general_inicio_me_variation_date_hierarchy_has_year": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general.inicio_me.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_general.inicio_me.variation.date_hierarchy.year": {
-			          "Target": {
-			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general.inicio_me.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.inicio_me.variation.date_hierarchy.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "inicio_me_date_hierarchy_have_inicio_me_year"
-			        }
-			      ]
-			    },
-			    "calendario_general_inicio_me_variation_date_hierarchy_has_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general.inicio_me.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_general.inicio_me.variation.date_hierarchy.quarter": {
-			          "Target": {
-			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general.inicio_me.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.inicio_me.variation.date_hierarchy.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "inicio_me_date_hierarchy_have_inicio_me_quarter"
-			        }
-			      ]
-			    },
-			    "calendario_general_inicio_me_variation_date_hierarchy_has_month": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general.inicio_me.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_general.inicio_me.variation.date_hierarchy.month": {
-			          "Target": {
-			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general.inicio_me.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.inicio_me.variation.date_hierarchy.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "inicio_me_date_hierarchy_have_inicio_me_month"
-			        }
-			      ]
-			    },
-			    "calendario_general_inicio_me_variation_date_hierarchy_has_day": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general.inicio_me.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_general.inicio_me.variation.date_hierarchy.day": {
-			          "Target": {
-			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general.inicio_me.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.inicio_me.variation.date_hierarchy.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "inicio_me_date_hierarchy_have_inicio_me_day"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_date_has_variation_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado.date": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date"
-			          }
-			        },
-			        "calendario_afiliado.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado.date"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dates_have_date_hierarchies1"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_date_variation_date_hierarchy_has_year": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_afiliado.date.variation.date_hierarchy.year": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_years1"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_date_variation_date_hierarchy_has_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_afiliado.date.variation.date_hierarchy.quarter": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_quarters1"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_date_variation_date_hierarchy_has_month": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_afiliado.date.variation.date_hierarchy.month": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_months1"
 			        }
 			      ]
 			    },

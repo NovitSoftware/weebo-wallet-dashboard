@@ -1,16 +1,25 @@
 ﻿table CuponesPorDistrito
 
 	column Distrito
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: dwh Dim_Afiliado[Distrito]
 
+		annotation SummarizationSetBy = Automatic
+
 	column TotalStickersActivos
+		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [TotalStickersActivos]
 
+		annotation SummarizationSetBy = Automatic
+
 	column TotalStickersVencidos
+		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [TotalStickersVencidos]
+
+		annotation SummarizationSetBy = Automatic
 
 	partition CuponesPorDistrito = calculated
 		mode: import

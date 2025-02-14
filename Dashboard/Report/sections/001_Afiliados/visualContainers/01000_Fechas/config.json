@@ -1,14 +1,14 @@
 {
-  "name": "10c6c3bfacb3b69d7303",
+  "name": "9488000e32d9c521d402",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "height": 71.68623063003264,
-        "width": 220.07843259773989,
-        "x": 759.59327515029634,
+        "x": 982.85714285714278,
         "y": 0,
-        "z": 22000,
+        "z": 7000,
+        "width": 220.34285714285716,
+        "height": 71.314285714285717,
         "tabOrder": 1000
       }
     }
@@ -68,20 +68,6 @@
       "data": [
         {
           "properties": {
-            "startDate": {
-              "expr": {
-                "Literal": {
-                  "Value": "datetime'2019-09-04T00:00:00'"
-                }
-              }
-            },
-            "endDate": {
-              "expr": {
-                "Literal": {
-                  "Value": "datetime'2023-11-30T00:00:00'"
-                }
-              }
-            },
             "mode": {
               "expr": {
                 "Literal": {
@@ -208,5 +194,5 @@
       ]
     }
   },
-  "parentGroupName": "a7a94e887d4c7e6a90c7"
+  "parentGroupName": "92355b6d4bd555052afa"
 }

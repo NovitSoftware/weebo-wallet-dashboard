@@ -1,5 +1,5 @@
 {
-  "name": "d5dd355404c7a6906db5",
+  "name": "813925932095bbdbc11d",
   "layouts": [
     {
       "id": 0,
@@ -68,20 +68,6 @@
       "data": [
         {
           "properties": {
-            "startDate": {
-              "expr": {
-                "Literal": {
-                  "Value": "datetime'2019-09-04T00:00:00'"
-                }
-              }
-            },
-            "endDate": {
-              "expr": {
-                "Literal": {
-                  "Value": "datetime'2023-11-30T00:00:00'"
-                }
-              }
-            },
             "mode": {
               "expr": {
                 "Literal": {
@@ -208,5 +194,5 @@
       ]
     }
   },
-  "parentGroupName": "5d8512f826d3c61d79ed"
+  "parentGroupName": "c419ea5a06bbfb1d2601"
 }
