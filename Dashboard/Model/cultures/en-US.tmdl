@@ -26783,18 +26783,18 @@
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "dwh Fact_Cupon",
-			          "ConceptualProperty": "TotalStickersActivos"
+			          "ConceptualProperty": "TotalStickerActivos"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "total stickers activos": {
+			          "total sticker activos": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "TotalStickersActivos": {
+			          "TotalStickerActivos": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -29980,537 +29980,899 @@
 			          }
 			        }
 			      ]
+			    },
+			    "dwh_Fact_Cupon.estado_cupon": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Cupon",
+			          "ConceptualProperty": "EstadoCupon"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estado cupon": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EstadoCupon": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon.total_cupones_activos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Cupon",
+			          "ConceptualProperty": "TotalCuponesActivos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total cupones activos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TotalCuponesActivos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate cupone activo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall cupone activo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon.total_cupones_en_proceso": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Cupon",
+			          "ConceptualProperty": "TotalCuponesEnProceso"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total cupones en proceso": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TotalCuponesEnProceso": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate cupone en proceso": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "overall cupone en proceso": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon.total_cupones_vencidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Cupon",
+			          "ConceptualProperty": "TotalCuponesVencidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total cupones vencidos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TotalCuponesVencidos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate cupone vencido": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall cupone vencido": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon.total_sticker_vencidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Cupon",
+			          "ConceptualProperty": "TotalStickerVencidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total sticker vencidos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TotalStickerVencidos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate sticker vencido": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall sticker vencido": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon.promedio_días_hasta_redimir_cupón": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Cupon",
+			          "ConceptualProperty": "Promedio Días Hasta Redimir Cupón"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "promedio días hasta redimir cupón": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "top_3_distritos_cupon": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Top3DistritosCupon"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top 3 distritos cupon": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "top 3 distrito cupon": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "Top3DistritosCupon": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "best 3 distrito cupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "first 3 distrito cupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "leading 3 distrito cupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "maximum 3 distrito cupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "peak 3 distrito cupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "upper 3 distrito cupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "top_3_distritos_cupon.distrito": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Top3DistritosCupon",
+			          "ConceptualProperty": "Distrito"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "distrito": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "top_3_distritos_cupon.total_cupone": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Top3DistritosCupon",
+			          "ConceptualProperty": "TotalCupones"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total cupone": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TotalCupones": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate cupone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall cupone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "cupones_por_distrito": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CuponesPorDistrito"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cupones por distrito": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cupone por distrito": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "CuponesPorDistrito": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "cupones_por_distrito.distrito": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CuponesPorDistrito",
+			          "ConceptualProperty": "Distrito"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "distrito": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cupones_por_distrito.total_stickers_activo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CuponesPorDistrito",
+			          "ConceptualProperty": "TotalStickersActivos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total stickers activo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total sticker activo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "TotalStickersActivos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate sticker activo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall sticker activo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "cupones_por_distrito.total_stickers_vencido": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CuponesPorDistrito",
+			          "ConceptualProperty": "TotalStickersVencidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total stickers vencido": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total sticker vencido": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "TotalStickersVencidos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate sticker vencido": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall sticker vencido": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "cupones_por_genero": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CuponesPorGenero"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cupones por genero": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cupone por genero": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "CuponesPorGenero": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "cupones_por_genero.genero": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CuponesPorGenero",
+			          "ConceptualProperty": "Genero"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "genero": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cupones_por_genero.total_cupones_activos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CuponesPorGenero",
+			          "ConceptualProperty": "TotalCuponesActivos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total cupones activos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total cupone activo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "TotalCuponesActivos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate cupone activo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall cupone activo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "cupones_por_genero.total_cupones_vencidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CuponesPorGenero",
+			          "ConceptualProperty": "TotalCuponesVencidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total cupones vencidos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total cupone vencido": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "TotalCuponesVencidos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate cupone vencido": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall cupone vencido": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "top_3_distritos_otorgado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Top3DistritosOtorgados"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top 3 distritos otorgado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "top 3 distrito otorgado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "Top3DistritosOtorgados": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "best 3 distrito otorgado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "first 3 distrito otorgado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "leading 3 distrito otorgado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "maximum 3 distrito otorgado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "peak 3 distrito otorgado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "upper 3 distrito otorgado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "top_3_distritos_otorgado.distrito": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Top3DistritosOtorgados",
+			          "ConceptualProperty": "Distrito"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "distrito": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "top_3_distritos_otorgado.total_stickers_otorgado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Top3DistritosOtorgados",
+			          "ConceptualProperty": "TotalStickersOtorgados"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total stickers otorgado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total sticker otorgado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "TotalStickersOtorgados": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate sticker otorgado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall sticker otorgado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "top_3_distritos_otorgado.ranking": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Top3DistritosOtorgados",
+			          "ConceptualProperty": "Ranking"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ranking": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "status": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "position": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "place": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "grade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "standing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "level": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "calendario_afiliado_date_variation_date_hierarchy_has_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_afiliado.date.variation.date_hierarchy.quarter": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_quarters"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_date_variation_date_hierarchy_has_year": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_afiliado.date.variation.date_hierarchy.year": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_years"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_date_has_variation_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado.date": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date"
-			          }
-			        },
-			        "calendario_afiliado.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado.date"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dates_have_date_hierarchies"
-			        }
-			      ]
-			    },
-			    "calendario_general_inicio_me_variation_date_hierarchy_has_day": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general.inicio_me.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_general.inicio_me.variation.date_hierarchy.day": {
-			          "Target": {
-			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general.inicio_me.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.inicio_me.variation.date_hierarchy.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "inicio_me_date_hierarchy_have_inicio_me_day"
-			        }
-			      ]
-			    },
-			    "calendario_general_inicio_me_variation_date_hierarchy_has_month": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general.inicio_me.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_general.inicio_me.variation.date_hierarchy.month": {
-			          "Target": {
-			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general.inicio_me.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.inicio_me.variation.date_hierarchy.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "inicio_me_date_hierarchy_have_inicio_me_month"
-			        }
-			      ]
-			    },
-			    "calendario_general_inicio_me_variation_date_hierarchy_has_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general.inicio_me.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_general.inicio_me.variation.date_hierarchy.quarter": {
-			          "Target": {
-			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general.inicio_me.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.inicio_me.variation.date_hierarchy.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "inicio_me_date_hierarchy_have_inicio_me_quarter"
-			        }
-			      ]
-			    },
-			    "calendario_general_inicio_me_variation_date_hierarchy_has_year": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general.inicio_me.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_general.inicio_me.variation.date_hierarchy.year": {
-			          "Target": {
-			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general.inicio_me.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.inicio_me.variation.date_hierarchy.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "inicio_me_date_hierarchy_have_inicio_me_year"
-			        }
-			      ]
-			    },
-			    "calendario_general_inicio_me_has_variation_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general.inicio_me": {
-			          "Target": {
-			            "Entity": "calendario_general.inicio_me"
-			          }
-			        },
-			        "calendario_general.inicio_me.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general.inicio_me"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.inicio_me.variation.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "inicio_me_have_inicio_me_date_hierarchy"
-			        }
-			      ]
-			    },
-			    "calendario_general_date_variation_date_hierarchy_has_day": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_general.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_general.date.variation.date_hierarchy.day": {
-			          "Target": {
-			            "Entity": "calendario_general.date.variation.date_hierarchy.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.date.variation.date_hierarchy.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_days"
-			        }
-			      ]
-			    },
-			    "calendario_general_date_variation_date_hierarchy_has_month": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_general.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_general.date.variation.date_hierarchy.month": {
-			          "Target": {
-			            "Entity": "calendario_general.date.variation.date_hierarchy.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.date.variation.date_hierarchy.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_months"
-			        }
-			      ]
-			    },
-			    "calendario_general_date_variation_date_hierarchy_has_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_general.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_general.date.variation.date_hierarchy.quarter": {
-			          "Target": {
-			            "Entity": "calendario_general.date.variation.date_hierarchy.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.date.variation.date_hierarchy.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_quarters1"
-			        }
-			      ]
-			    },
-			    "calendario_general_date_variation_date_hierarchy_has_year": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_general.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_general.date.variation.date_hierarchy.year": {
-			          "Target": {
-			            "Entity": "calendario_general.date.variation.date_hierarchy.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.date.variation.date_hierarchy.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_years1"
-			        }
-			      ]
-			    },
-			    "calendario_general_date_has_variation_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general.date": {
-			          "Target": {
-			            "Entity": "calendario_general.date"
-			          }
-			        },
-			        "calendario_general.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_general.date.variation.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general.date"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.date.variation.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dates_have_date_hierarchies1"
-			        }
-			      ]
-			    },
-			    "stage_StgTransaccion_fecha_variation_date_hierarchy_has_day": {
-			      "Binding": {
-			        "ConceptualEntity": "stage StgTransaccion"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "stage_StgTransaccion.fecha.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy"
-			          }
-			        },
-			        "stage_StgTransaccion.fecha.variation.date_hierarchy.day": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_days"
-			        }
-			      ]
-			    },
-			    "stage_StgTransaccion_fecha_variation_date_hierarchy_has_month": {
-			      "Binding": {
-			        "ConceptualEntity": "stage StgTransaccion"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "stage_StgTransaccion.fecha.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy"
-			          }
-			        },
-			        "stage_StgTransaccion.fecha.variation.date_hierarchy.month": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_months"
-			        }
-			      ]
-			    },
-			    "stage_StgTransaccion_fecha_variation_date_hierarchy_has_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "stage StgTransaccion"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "stage_StgTransaccion.fecha.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy"
-			          }
-			        },
-			        "stage_StgTransaccion.fecha.variation.date_hierarchy.quarter": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_quarters"
-			        }
-			      ]
-			    },
 			    "stage_StgTransaccion_fecha_variation_date_hierarchy_has_year": {
 			      "Binding": {
 			        "ConceptualEntity": "stage StgTransaccion"
@@ -30606,7 +30968,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_days1"
+			          "ID": "fecha_date_hierarchies_have_fecha_days"
 			        }
 			      ]
 			    },
@@ -30639,7 +31001,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_months1"
+			          "ID": "fecha_date_hierarchies_have_fecha_months"
 			        }
 			      ]
 			    },
@@ -30672,7 +31034,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_quarters1"
+			          "ID": "fecha_date_hierarchies_have_fecha_quarters"
 			        }
 			      ]
 			    },
@@ -41496,7 +41858,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_days2"
+			          "ID": "fecha_date_hierarchies_have_fecha_days1"
 			        }
 			      ]
 			    },
@@ -41529,7 +41891,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_months2"
+			          "ID": "fecha_date_hierarchies_have_fecha_months1"
 			        }
 			      ]
 			    },
@@ -41562,7 +41924,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_quarters2"
+			          "ID": "fecha_date_hierarchies_have_fecha_quarters1"
 			        }
 			      ]
 			    },
@@ -46626,6 +46988,567 @@
 			        }
 			      ]
 			    },
+			    "top_3_distritos_otorgado_has_ranking": {
+			      "Binding": {
+			        "ConceptualEntity": "Top3DistritosOtorgados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "top_3_distritos_otorgado": {
+			          "Target": {
+			            "Entity": "top_3_distritos_otorgado"
+			          }
+			        },
+			        "top_3_distritos_otorgado.ranking": {
+			          "Target": {
+			            "Entity": "top_3_distritos_otorgado.ranking"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "top_3_distritos_otorgado"
+			            },
+			            "Object": {
+			              "Role": "top_3_distritos_otorgado.ranking"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "top_3_distritos_otorgados_have_ranking"
+			        }
+			      ]
+			    },
+			    "top_3_distritos_otorgado_has_total_stickers_otorgado": {
+			      "Binding": {
+			        "ConceptualEntity": "Top3DistritosOtorgados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "top_3_distritos_otorgado": {
+			          "Target": {
+			            "Entity": "top_3_distritos_otorgado"
+			          }
+			        },
+			        "top_3_distritos_otorgado.total_stickers_otorgado": {
+			          "Target": {
+			            "Entity": "top_3_distritos_otorgado.total_stickers_otorgado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "top_3_distritos_otorgado"
+			            },
+			            "Object": {
+			              "Role": "top_3_distritos_otorgado.total_stickers_otorgado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "top_3_distritos_otorgados_have_total_stickers_otorgados"
+			        }
+			      ]
+			    },
+			    "top_3_distritos_otorgado_has_distrito": {
+			      "Binding": {
+			        "ConceptualEntity": "Top3DistritosOtorgados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "top_3_distritos_otorgado": {
+			          "Target": {
+			            "Entity": "top_3_distritos_otorgado"
+			          }
+			        },
+			        "top_3_distritos_otorgado.distrito": {
+			          "Target": {
+			            "Entity": "top_3_distritos_otorgado.distrito"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "top_3_distritos_otorgado"
+			            },
+			            "Object": {
+			              "Role": "top_3_distritos_otorgado.distrito"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "top_3_distritos_otorgados_have_distrito"
+			        }
+			      ]
+			    },
+			    "cupones_por_genero_has_total_cupones_vencidos": {
+			      "Binding": {
+			        "ConceptualEntity": "CuponesPorGenero"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cupones_por_genero": {
+			          "Target": {
+			            "Entity": "cupones_por_genero"
+			          }
+			        },
+			        "cupones_por_genero.total_cupones_vencidos": {
+			          "Target": {
+			            "Entity": "cupones_por_genero.total_cupones_vencidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cupones_por_genero"
+			            },
+			            "Object": {
+			              "Role": "cupones_por_genero.total_cupones_vencidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cupones_por_generos_have_total_cupones_vencidos"
+			        }
+			      ]
+			    },
+			    "cupones_por_genero_has_total_cupones_activos": {
+			      "Binding": {
+			        "ConceptualEntity": "CuponesPorGenero"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cupones_por_genero": {
+			          "Target": {
+			            "Entity": "cupones_por_genero"
+			          }
+			        },
+			        "cupones_por_genero.total_cupones_activos": {
+			          "Target": {
+			            "Entity": "cupones_por_genero.total_cupones_activos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cupones_por_genero"
+			            },
+			            "Object": {
+			              "Role": "cupones_por_genero.total_cupones_activos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cupones_por_generos_have_total_cupones_activos"
+			        }
+			      ]
+			    },
+			    "cupones_por_genero_has_genero": {
+			      "Binding": {
+			        "ConceptualEntity": "CuponesPorGenero"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cupones_por_genero": {
+			          "Target": {
+			            "Entity": "cupones_por_genero"
+			          }
+			        },
+			        "cupones_por_genero.genero": {
+			          "Target": {
+			            "Entity": "cupones_por_genero.genero"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cupones_por_genero"
+			            },
+			            "Object": {
+			              "Role": "cupones_por_genero.genero"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cupones_por_generos_have_generos"
+			        }
+			      ]
+			    },
+			    "cupones_por_distrito_has_total_stickers_vencido": {
+			      "Binding": {
+			        "ConceptualEntity": "CuponesPorDistrito"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cupones_por_distrito": {
+			          "Target": {
+			            "Entity": "cupones_por_distrito"
+			          }
+			        },
+			        "cupones_por_distrito.total_stickers_vencido": {
+			          "Target": {
+			            "Entity": "cupones_por_distrito.total_stickers_vencido"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cupones_por_distrito"
+			            },
+			            "Object": {
+			              "Role": "cupones_por_distrito.total_stickers_vencido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cupones_por_distrito_have_total_stickers_vencidos"
+			        }
+			      ]
+			    },
+			    "cupones_por_distrito_has_total_stickers_activo": {
+			      "Binding": {
+			        "ConceptualEntity": "CuponesPorDistrito"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cupones_por_distrito": {
+			          "Target": {
+			            "Entity": "cupones_por_distrito"
+			          }
+			        },
+			        "cupones_por_distrito.total_stickers_activo": {
+			          "Target": {
+			            "Entity": "cupones_por_distrito.total_stickers_activo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cupones_por_distrito"
+			            },
+			            "Object": {
+			              "Role": "cupones_por_distrito.total_stickers_activo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cupones_por_distrito_have_total_stickers_activos"
+			        }
+			      ]
+			    },
+			    "cupones_por_distrito_has_distrito": {
+			      "Binding": {
+			        "ConceptualEntity": "CuponesPorDistrito"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cupones_por_distrito": {
+			          "Target": {
+			            "Entity": "cupones_por_distrito"
+			          }
+			        },
+			        "cupones_por_distrito.distrito": {
+			          "Target": {
+			            "Entity": "cupones_por_distrito.distrito"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cupones_por_distrito"
+			            },
+			            "Object": {
+			              "Role": "cupones_por_distrito.distrito"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cupones_por_distrito_have_distrito"
+			        }
+			      ]
+			    },
+			    "top_3_distritos_cupon_has_total_cupone": {
+			      "Binding": {
+			        "ConceptualEntity": "Top3DistritosCupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "top_3_distritos_cupon": {
+			          "Target": {
+			            "Entity": "top_3_distritos_cupon"
+			          }
+			        },
+			        "top_3_distritos_cupon.total_cupone": {
+			          "Target": {
+			            "Entity": "top_3_distritos_cupon.total_cupone"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "top_3_distritos_cupon"
+			            },
+			            "Object": {
+			              "Role": "top_3_distritos_cupon.total_cupone"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "top_3_distritos_cupons_have_total_cupones"
+			        }
+			      ]
+			    },
+			    "top_3_distritos_cupon_has_distrito": {
+			      "Binding": {
+			        "ConceptualEntity": "Top3DistritosCupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "top_3_distritos_cupon": {
+			          "Target": {
+			            "Entity": "top_3_distritos_cupon"
+			          }
+			        },
+			        "top_3_distritos_cupon.distrito": {
+			          "Target": {
+			            "Entity": "top_3_distritos_cupon.distrito"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "top_3_distritos_cupon"
+			            },
+			            "Object": {
+			              "Role": "top_3_distritos_cupon.distrito"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "top_3_distritos_cupons_have_distrito"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon_has_promedio_días_hasta_redimir_cupón": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Fact_Cupon.promedio_días_hasta_redimir_cupón": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon.promedio_días_hasta_redimir_cupón"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon.promedio_días_hasta_redimir_cupón"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_promedio_días_hasta_redimir_cupón"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon_has_total_sticker_vencidos": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Fact_Cupon.total_sticker_vencidos": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon.total_sticker_vencidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon.total_sticker_vencidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_total_sticker_vencidos"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon_has_total_cupones_vencidos": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Fact_Cupon.total_cupones_vencidos": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon.total_cupones_vencidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon.total_cupones_vencidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_total_cupones_vencidos"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon_has_total_cupones_en_proceso": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Fact_Cupon.total_cupones_en_proceso": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon.total_cupones_en_proceso"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon.total_cupones_en_proceso"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_total_cupones_en_proceso"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon_has_total_cupones_activos": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Fact_Cupon.total_cupones_activos": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon.total_cupones_activos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon.total_cupones_activos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_total_cupones_activos"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon_has_estado_cupon": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Fact_Cupon.estado_cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon.estado_cupon"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon.estado_cupon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_estado_cupons"
+			        }
+			      ]
+			    },
 			    "dwh_Fact_Cupon_has_tasa_redencion_cupones": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh Fact_Cupon"
@@ -48503,7 +49426,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dwh_Fact_Cupons_have_total_stickers_activos"
+			          "ID": "dwh_Fact_Cupons_have_total_sticker_activos"
 			        }
 			      ]
 			    },
@@ -60563,6 +61486,534 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_calendario_generals_are_weekend_calendario_generals"
+			        }
+			      ]
+			    },
+			    "stage_StgTransaccion_fecha_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTransaccion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTransaccion.fecha.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy"
+			          }
+			        },
+			        "stage_StgTransaccion.fecha.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_quarters2"
+			        }
+			      ]
+			    },
+			    "stage_StgTransaccion_fecha_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTransaccion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTransaccion.fecha.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy"
+			          }
+			        },
+			        "stage_StgTransaccion.fecha.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_months2"
+			        }
+			      ]
+			    },
+			    "stage_StgTransaccion_fecha_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTransaccion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTransaccion.fecha.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy"
+			          }
+			        },
+			        "stage_StgTransaccion.fecha.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion.fecha.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTransaccion.fecha.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_days2"
+			        }
+			      ]
+			    },
+			    "calendario_general_date_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.date": {
+			          "Target": {
+			            "Entity": "calendario_general.date"
+			          }
+			        },
+			        "calendario_general.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.date.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.date"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.date.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "calendario_general_date_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_general.date.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "calendario_general.date.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.date.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_years"
+			        }
+			      ]
+			    },
+			    "calendario_general_date_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_general.date.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "calendario_general.date.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.date.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_quarters"
+			        }
+			      ]
+			    },
+			    "calendario_general_date_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_general.date.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "calendario_general.date.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.date.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_months"
+			        }
+			      ]
+			    },
+			    "calendario_general_date_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_general.date.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "calendario_general.date.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.date.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_days"
+			        }
+			      ]
+			    },
+			    "calendario_general_inicio_me_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.inicio_me": {
+			          "Target": {
+			            "Entity": "calendario_general.inicio_me"
+			          }
+			        },
+			        "calendario_general.inicio_me.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.inicio_me"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.inicio_me.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "inicio_me_have_inicio_me_date_hierarchy"
+			        }
+			      ]
+			    },
+			    "calendario_general_inicio_me_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.inicio_me.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_general.inicio_me.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.inicio_me.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.inicio_me.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "inicio_me_date_hierarchy_have_inicio_me_year"
+			        }
+			      ]
+			    },
+			    "calendario_general_inicio_me_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.inicio_me.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_general.inicio_me.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.inicio_me.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.inicio_me.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "inicio_me_date_hierarchy_have_inicio_me_quarter"
+			        }
+			      ]
+			    },
+			    "calendario_general_inicio_me_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.inicio_me.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_general.inicio_me.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.inicio_me.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.inicio_me.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "inicio_me_date_hierarchy_have_inicio_me_month"
+			        }
+			      ]
+			    },
+			    "calendario_general_inicio_me_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.inicio_me.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_general.inicio_me.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "calendario_general.inicio_me.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.inicio_me.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.inicio_me.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "inicio_me_date_hierarchy_have_inicio_me_day"
+			        }
+			      ]
+			    },
+			    "calendario_afiliado_date_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioAfiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_afiliado.date": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date"
+			          }
+			        },
+			        "calendario_afiliado.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_afiliado.date"
+			            },
+			            "Object": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_date_hierarchies1"
+			        }
+			      ]
+			    },
+			    "calendario_afiliado_date_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioAfiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_afiliado.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_afiliado.date.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_years1"
+			        }
+			      ]
+			    },
+			    "calendario_afiliado_date_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioAfiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_afiliado.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_afiliado.date.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_afiliado.date.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_quarters1"
 			        }
 			      ]
 			    },

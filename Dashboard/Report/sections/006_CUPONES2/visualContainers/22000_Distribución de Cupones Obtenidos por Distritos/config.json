@@ -1,0 +1,178 @@
+{
+  "name": "2c4b3d63496e02c45dc4",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 364.97297297297297,
+        "y": 413.40540540540542,
+        "z": 21000,
+        "width": 299.24324324324323,
+        "height": 294.05405405405406,
+        "tabOrder": 22000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "pieChart",
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "Sum(CuponesPorDistrito.TotalStickersActivos)"
+        },
+        {
+          "queryRef": "Sum(CuponesPorDistrito.TotalStickersVencidos)"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "CuponesPorDistrito.Distrito",
+          "active": true
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "c",
+          "Entity": "CuponesPorDistrito",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "c"
+                  }
+                },
+                "Property": "TotalStickersActivos"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(CuponesPorDistrito.TotalStickersActivos)",
+          "NativeReferenceName": "Sum of TotalStickersActivos"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "c"
+                  }
+                },
+                "Property": "TotalStickersVencidos"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(CuponesPorDistrito.TotalStickersVencidos)",
+          "NativeReferenceName": "Sum of TotalStickersVencidos"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "c"
+              }
+            },
+            "Property": "Distrito"
+          },
+          "Name": "CuponesPorDistrito.Distrito",
+          "NativeReferenceName": "Distrito"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "c"
+                    }
+                  },
+                  "Property": "TotalStickersActivos"
+                }
+              },
+              "Function": 0
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "labelStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Category, data value, percent of total'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BottomCenter'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Distribución de Cupones Obtenidos por Distritos'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

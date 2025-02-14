@@ -1,5 +1,43 @@
 ﻿table 'dwh Fact_Promociones'
 
+	measure TotalPromocionesActivas = ```
+			
+			CALCULATE(
+			    COUNT('dwh Fact_Promociones'[KeyFactPromocion]),
+			    'dwh Fact_Promociones'[FlagPromocionActiva] = 1
+			)
+			
+			```
+		formatString: 0
+
+	measure TotalPromocionesRedimidas = ```
+			
+			CALCULATE(
+			    COUNT('dwh Fact_Promociones'[KeyFactPromocion]),
+			    'dwh Fact_Promociones'[FlagPromocionRedimida] = 1
+			)
+			
+			```
+		formatString: 0
+
+	measure TotalPromocionesVencidas = ```
+			
+			CALCULATE(
+			    COUNT('dwh Fact_Promociones'[KeyFactPromocion]),
+			    'dwh Fact_Promociones'[FlagCuponVencido] = 1
+			)
+			
+			```
+		formatString: 0
+
+	measure PromedioDiasActivacion = ```
+			
+			AVERAGE('dwh Fact_Promociones'[DiasHastaActivarPromocion])
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column KeyFactPromocion
 		dataType: int64
 		formatString: 0

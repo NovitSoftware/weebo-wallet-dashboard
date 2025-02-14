@@ -1,0 +1,57 @@
+﻿table Top3DistritosPromociones
+
+	column Distrito
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: dwh Dim_Afiliado[Distrito]
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalPromociones
+		formatString: 0
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [TotalPromociones]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ranking
+		formatString: 0
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Ranking]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Top3DistritosPromociones = calculated
+		mode: import
+		source = ```
+				
+				VAR TablaDistritos =
+				    ADDCOLUMNS(
+				        SUMMARIZE(
+				            'dwh Fact_Promociones',
+				            'dwh Dim_Afiliado'[Distrito],
+				            "TotalPromociones", CALCULATE(COUNT('dwh Fact_Promociones'[KeyPromocion]), 'dwh Fact_Promociones'[FlagPromocionActiva] = 1)
+				        ),
+				        "Ranking",
+				        RANKX(
+				            SUMMARIZE(
+				                'dwh Fact_Promociones',
+				                'dwh Dim_Afiliado'[Distrito],
+				                "TotalPromociones", CALCULATE(COUNT('dwh Fact_Promociones'[KeyPromocion]), 'dwh Fact_Promociones'[FlagPromocionActiva] = 1)
+				            ),
+				            [TotalPromociones],
+				            ,
+				            DESC,
+				            DENSE
+				        )
+				    )
+				
+				RETURN 
+				TOPN(3, TablaDistritos, [TotalPromociones], DESC)
+				
+				```
+
+	annotation PBI_Id = def49b386e6545579a53303518987e4a
+

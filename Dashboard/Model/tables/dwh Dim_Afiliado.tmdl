@@ -67,6 +67,99 @@
 			```
 		formatString: 0
 
+	measure AfiliadosMasculinos = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT('dwh Dim_Afiliado'[KeyAfiliado]),
+			    'dwh Dim_Afiliado'[Genero] = "MASCULINO"
+			)
+			
+			```
+		formatString: 0
+
+	measure AfiliadosActivos_Resultado = ```
+			
+			VAR TotalActivos =
+			    CALCULATE(
+			        DISTINCTCOUNT('dwh Dim_Afiliado'[KeyAfiliado]),
+			        FILTER(
+			            'dwh Dim_Afiliado',
+			            'dwh Dim_Afiliado'[FechaUltimoConsumoWebo] >= (TODAY() - 90)
+			        )
+			    )
+			RETURN
+			IF(
+			    ISBLANK(TotalActivos) || TotalActivos = 0,
+			    "0",
+			    FORMAT(TotalActivos, "#,0")
+			)
+			
+			```
+
+	measure AfiliadosNuevos = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT('dwh Dim_Afiliado'[KeyAfiliado]),
+			    FILTER(
+			        'dwh Dim_Afiliado',
+			        ISBLANK('dwh Dim_Afiliado'[FechaActivoWebo])
+			    )
+			)
+			
+			```
+		formatString: 0
+
+	measure AfiliadosPerdidos = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT('dwh Dim_Afiliado'[KeyAfiliado]),
+			    FILTER(
+			        'dwh Dim_Afiliado',
+			        NOT ISBLANK('dwh Dim_Afiliado'[FechaUltimoConsumoWebo]) &&
+			        'dwh Dim_Afiliado'[FechaUltimoConsumoWebo] < (TODAY() - 90)
+			    )
+			)
+			
+			```
+		formatString: 0
+
+	measure AfiliadosEnRiesgo_Resultado = ```
+			
+			VAR TotalEnRiesgo =
+			    CALCULATE(
+			        DISTINCTCOUNT('dwh Dim_Afiliado'[KeyAfiliado]),
+			        FILTER(
+			            'dwh Dim_Afiliado',
+			            NOT(ISBLANK('dwh Dim_Afiliado'[FechaUltimoConsumoWebo])) &&
+			            'dwh Dim_Afiliado'[FechaUltimoConsumoWebo] < (TODAY() - 60) &&
+			            'dwh Dim_Afiliado'[FechaUltimoConsumoWebo] >= (TODAY() - 90)
+			        )
+			    )
+			RETURN
+			IF(
+			    ISBLANK(TotalEnRiesgo) || TotalEnRiesgo = 0,
+			    "0",
+			    FORMAT(TotalEnRiesgo, "#,0")
+			)
+			
+			```
+
+	measure AfiliadosDesafiliados_Resultado = ```
+			
+			VAR TotalDesafiliados =
+			    CALCULATE(
+			        DISTINCTCOUNT('dwh Dim_Afiliado'[KeyAfiliado]),
+			        NOT(ISBLANK('dwh Dim_Afiliado'[FechaBajaWebo]))
+			    )
+			RETURN
+			IF(
+			    ISBLANK(TotalDesafiliados) || TotalDesafiliados = 0,
+			    "0",
+			    FORMAT(TotalDesafiliados, "#,0")
+			)
+			
+			```
+
 	column KeyAfiliado
 		dataType: int64
 		formatString: 0
