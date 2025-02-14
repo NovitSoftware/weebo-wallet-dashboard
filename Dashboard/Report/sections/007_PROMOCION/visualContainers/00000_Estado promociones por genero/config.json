@@ -1,0 +1,196 @@
+{
+  "name": "c9010115c2a3af7983c9",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 199.99999999999997,
+        "width": 291.36842105263156,
+        "x": 0,
+        "y": 0,
+        "z": 15000,
+        "tabOrder": 0
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "pieChart",
+    "projections": {
+      "Category": [
+        {
+          "queryRef": "dwh Dim_Afiliado.Genero",
+          "active": true
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "dwh Fact_Promociones.TotalPromocionesActivas"
+        },
+        {
+          "queryRef": "dwh Fact_Promociones.TotalPromocionesVencidas"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d1",
+          "Entity": "dwh Dim_Afiliado",
+          "Type": 0
+        },
+        {
+          "Name": "d",
+          "Entity": "dwh Fact_Promociones",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d1"
+              }
+            },
+            "Property": "Genero"
+          },
+          "Name": "dwh Dim_Afiliado.Genero",
+          "NativeReferenceName": "Genero"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "TotalPromocionesActivas"
+          },
+          "Name": "dwh Fact_Promociones.TotalPromocionesActivas",
+          "NativeReferenceName": "TotalPromocionesActivas"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "TotalPromocionesVencidas"
+          },
+          "Name": "dwh Fact_Promociones.TotalPromocionesVencidas",
+          "NativeReferenceName": "TotalPromocionesVencidas"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "d"
+                }
+              },
+              "Property": "TotalPromocionesActivas"
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "labelStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Data'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BottomCenter'"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Estado promociones por genero'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "bf2a9b34e3cf04e7d6b7"
+}

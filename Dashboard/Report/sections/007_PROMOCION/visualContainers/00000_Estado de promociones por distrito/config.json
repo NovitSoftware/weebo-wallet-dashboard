@@ -1,0 +1,204 @@
+{
+  "name": "1697e66b9e1bb47558f8",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 200.00000000000003,
+        "width": 324.57142857142856,
+        "x": 0,
+        "y": 0,
+        "z": 16000,
+        "tabOrder": 0
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "pieChart",
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "dwh Fact_Promociones.TotalPromocionesActivas"
+        },
+        {
+          "queryRef": "dwh Fact_Promociones.TotalPromocionesVencidas"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "dwh Dim_Afiliado.Distrito",
+          "active": true
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d",
+          "Entity": "dwh Fact_Promociones",
+          "Type": 0
+        },
+        {
+          "Name": "d1",
+          "Entity": "dwh Dim_Afiliado",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d1"
+              }
+            },
+            "Property": "Distrito"
+          },
+          "Name": "dwh Dim_Afiliado.Distrito",
+          "NativeReferenceName": "Distrito"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "TotalPromocionesActivas"
+          },
+          "Name": "dwh Fact_Promociones.TotalPromocionesActivas",
+          "NativeReferenceName": "Activas"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "TotalPromocionesVencidas"
+          },
+          "Name": "dwh Fact_Promociones.TotalPromocionesVencidas",
+          "NativeReferenceName": "Vencidas"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "d"
+                }
+              },
+              "Property": "TotalPromocionesActivas"
+            }
+          }
+        }
+      ]
+    },
+    "columnProperties": {
+      "dwh Fact_Promociones.TotalPromocionesActivas": {
+        "displayName": "Activas"
+      },
+      "dwh Fact_Promociones.TotalPromocionesVencidas": {
+        "displayName": "Vencidas"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "labelStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Data'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BottomCenter'"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Estado de promociones por distrito'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "a9e49044540469fe8ffe"
+}

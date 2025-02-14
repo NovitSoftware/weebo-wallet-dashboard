@@ -1,0 +1,147 @@
+{
+  "name": "03864a5432041006847c",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 110,
+        "width": 338.33333333333337,
+        "x": 0,
+        "y": 0,
+        "z": 15000,
+        "tabOrder": 5
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "card",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "Sum(dwh Fact_Cupon.DiasHastaObtenerCupon)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d",
+          "Entity": "dwh Fact_Cupon",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "DiasHastaObtenerCupon"
+              }
+            },
+            "Function": 1
+          },
+          "Name": "Sum(dwh Fact_Cupon.DiasHastaObtenerCupon)",
+          "NativeReferenceName": "."
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "d"
+                    }
+                  },
+                  "Property": "DiasHastaObtenerCupon"
+                }
+              },
+              "Function": 1
+            }
+          }
+        }
+      ]
+    },
+    "columnProperties": {
+      "Sum(dwh Fact_Cupon.DiasHastaObtenerCupon)": {
+        "displayName": "."
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Promedio de dias hasta obtener cupon'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "91bd49c86b71f134d0a4"
+}

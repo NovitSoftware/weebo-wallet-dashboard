@@ -1,0 +1,54 @@
+﻿table UltimasFechas
+
+	column Rango
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Rango]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha Calculada'
+		formatString: General Date
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Fecha Calculada]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition UltimasFechas = calculated
+		mode: import
+		source = ```
+				
+				VAR UltimoDia = TODAY() - 1
+				VAR UltimaSemana = TODAY() - WEEKDAY(TODAY(), 2)
+				VAR UltimoMes = EDATE(TODAY(), -1)
+				VAR UltimoAno = DATE(YEAR(TODAY()) - 1, 1, 1)
+				
+				RETURN
+				    UNION(
+				        SELECTCOLUMNS(
+				            { ("Último día", UltimoDia) },
+				            "Rango", [Value1],
+				            "Fecha Calculada", [Value2]
+				        ),
+				        SELECTCOLUMNS(
+				            { ("Última semana", UltimaSemana) },
+				            "Rango", [Value1],
+				            "Fecha Calculada", [Value2]
+				        ),
+				        SELECTCOLUMNS(
+				            { ("Último mes", UltimoMes) },
+				            "Rango", [Value1],
+				            "Fecha Calculada", [Value2]
+				        ),
+				        SELECTCOLUMNS(
+				            { ("Último año", UltimoAno) },
+				            "Rango", [Value1],
+				            "Fecha Calculada", [Value2]
+				        )
+				    )
+				
+				```
+
+	annotation PBI_Id = 42f55272af2747c8a6c54b6a9f438824
+

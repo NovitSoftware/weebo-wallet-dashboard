@@ -77,24 +77,17 @@
 			```
 		formatString: 0
 
-	measure AfiliadosActivos_Resultado = ```
+	measure AfiliadosActivos = ```
 			
-			VAR TotalActivos =
-			    CALCULATE(
-			        DISTINCTCOUNT('dwh Dim_Afiliado'[KeyAfiliado]),
-			        FILTER(
-			            'dwh Dim_Afiliado',
-			            'dwh Dim_Afiliado'[FechaUltimoConsumoWebo] >= (TODAY() - 90)
-			        )
-			    )
-			RETURN
-			IF(
-			    ISBLANK(TotalActivos) || TotalActivos = 0,
-			    "0",
-			    FORMAT(TotalActivos, "#,0")
-			)
+			COALESCE(
+			CALCULATE(
+			    COUNTROWS('dwh Dim_Afiliado'),
+			    DATEDIFF('dwh Dim_Afiliado'[FechaUltimoConsumoWebo], TODAY(), DAY) <= 90,
+			    NOT(ISBLANK('dwh Dim_Afiliado'[FechaUltimoConsumoWebo]))
+			),0)
 			
 			```
+		formatString: 0
 
 	measure AfiliadosNuevos = ```
 			
@@ -111,38 +104,28 @@
 
 	measure AfiliadosPerdidos = ```
 			
+			COALESCE(
 			CALCULATE(
-			    DISTINCTCOUNT('dwh Dim_Afiliado'[KeyAfiliado]),
-			    FILTER(
-			        'dwh Dim_Afiliado',
-			        NOT ISBLANK('dwh Dim_Afiliado'[FechaUltimoConsumoWebo]) &&
-			        'dwh Dim_Afiliado'[FechaUltimoConsumoWebo] < (TODAY() - 90)
-			    )
-			)
+			    COUNTROWS('dwh Dim_Afiliado'),
+			    DATEDIFF('dwh Dim_Afiliado'[FechaUltimoConsumoWebo], TODAY(), DAY) > 90,
+			    NOT(ISBLANK('dwh Dim_Afiliado'[FechaUltimoConsumoWebo]))
+			),0)
 			
 			```
 		formatString: 0
 
-	measure AfiliadosEnRiesgo_Resultado = ```
+	measure AfiliadosEnRiesgo = ```
 			
-			VAR TotalEnRiesgo =
-			    CALCULATE(
-			        DISTINCTCOUNT('dwh Dim_Afiliado'[KeyAfiliado]),
-			        FILTER(
-			            'dwh Dim_Afiliado',
-			            NOT(ISBLANK('dwh Dim_Afiliado'[FechaUltimoConsumoWebo])) &&
-			            'dwh Dim_Afiliado'[FechaUltimoConsumoWebo] < (TODAY() - 60) &&
-			            'dwh Dim_Afiliado'[FechaUltimoConsumoWebo] >= (TODAY() - 90)
-			        )
-			    )
-			RETURN
-			IF(
-			    ISBLANK(TotalEnRiesgo) || TotalEnRiesgo = 0,
-			    "0",
-			    FORMAT(TotalEnRiesgo, "#,0")
-			)
+			COALESCE(
+			CALCULATE(
+			    COUNTROWS('dwh Dim_Afiliado'),
+			    DATEDIFF('dwh Dim_Afiliado'[FechaUltimoConsumoWebo], TODAY(), DAY) > 80 &&
+			    DATEDIFF('dwh Dim_Afiliado'[FechaUltimoConsumoWebo], TODAY(), DAY) <= 90,
+			    NOT(ISBLANK('dwh Dim_Afiliado'[FechaUltimoConsumoWebo]))
+			),0)
 			
 			```
+		formatString: 0
 
 	measure AfiliadosDesafiliados_Resultado = ```
 			
@@ -159,6 +142,71 @@
 			)
 			
 			```
+
+	measure FemeninosAfiliados = ```
+			
+			COALESCE(
+			CALCULATE(
+			    COUNTROWS('dwh Dim_Afiliado'),
+			    'dwh Dim_Afiliado'[Genero] = "femenino"
+			),0)
+			
+			```
+		formatString: 0
+
+	measure AfiliadosActivosPorcentaje = ```
+			
+			VAR TotalAfiliados = 
+			    CALCULATE(
+			        COUNTROWS('dwh Dim_Afiliado'), 
+			        NOT(ISBLANK('dwh Dim_Afiliado'[KeyAfiliado])),
+			        ALL('dwh Dim_Afiliado')
+			    )
+			RETURN
+			    DIVIDE(
+			        [AfiliadosActivos],
+			        COALESCE(TotalAfiliados, 1),
+			        0
+			    )
+			
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+
+	measure AfiliadosEnRiesgoPorcentaje = ```
+			
+			VAR TotalAfiliados = 
+			    CALCULATE(
+			        COUNTROWS('dwh Dim_Afiliado'), 
+			        NOT(ISBLANK('dwh Dim_Afiliado'[KeyAfiliado])),
+			        ALL('dwh Dim_Afiliado')
+			    )
+			RETURN
+			    DIVIDE(
+			        [AfiliadosEnRiesgo],
+			        COALESCE(TotalAfiliados, 1), 
+			        0
+			    )
+			
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+
+	measure AfiliadosPerdidosPorcentaje = ```
+			
+			VAR TotalAfiliados = 
+			    CALCULATE(
+			        COUNTROWS('dwh Dim_Afiliado'), 
+			        NOT(ISBLANK('dwh Dim_Afiliado'[KeyAfiliado])),
+			        ALL('dwh Dim_Afiliado')
+			    )
+			RETURN
+			    DIVIDE(
+			        [AfiliadosPerdidos],
+			        COALESCE(TotalAfiliados, 1), 
+			        0
+			    )
+			
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
 
 	column KeyAfiliado
 		dataType: int64
@@ -329,6 +377,39 @@
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
+
+	column RangoEdad = ```
+			
+			    SWITCH(
+			        TRUE(),
+			        'dwh Dim_Afiliado'[Edad] <= 18, "1-18",
+			        'dwh Dim_Afiliado'[Edad] >= 19 && 'dwh Dim_Afiliado'[Edad] <= 25, "19-25",
+			        'dwh Dim_Afiliado'[Edad] >= 26 && 'dwh Dim_Afiliado'[Edad] <= 30, "26-30",
+			        'dwh Dim_Afiliado'[Edad] >= 31 && 'dwh Dim_Afiliado'[Edad] <= 35, "31-35",
+			        'dwh Dim_Afiliado'[Edad] >= 36 && 'dwh Dim_Afiliado'[Edad] <= 40, "36-40",
+			        'dwh Dim_Afiliado'[Edad] >= 41 && 'dwh Dim_Afiliado'[Edad] <= 45, "41-45",
+			        'dwh Dim_Afiliado'[Edad] >= 46 && 'dwh Dim_Afiliado'[Edad] <= 50, "46-50",
+			        'dwh Dim_Afiliado'[Edad] >= 51 && 'dwh Dim_Afiliado'[Edad] <= 55, "51-55",
+			        'dwh Dim_Afiliado'[Edad] >= 56 && 'dwh Dim_Afiliado'[Edad] <= 60, "56-60",
+			        'dwh Dim_Afiliado'[Edad] > 60, "> 60"
+			    )
+			
+			```
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column GeneroFiltrado = ```
+			
+			IF(
+			    'dwh Dim_Afiliado'[Genero] = "masculino" || 'dwh Dim_Afiliado'[Genero] = "femenino",
+			    'dwh Dim_Afiliado'[Genero]
+			)
+			
+			```
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
 
 	partition 'dwh Dim_Afiliado' = m
 		mode: import

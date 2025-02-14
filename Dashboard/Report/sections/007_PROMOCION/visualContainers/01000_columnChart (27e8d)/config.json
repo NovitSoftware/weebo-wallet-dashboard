@@ -1,0 +1,204 @@
+{
+  "name": "27e8d39eaf008b9f1787",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 160.06097560975607,
+        "width": 901.85006648936167,
+        "x": 0,
+        "y": 0,
+        "z": 17002,
+        "tabOrder": 1000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "columnChart",
+    "projections": {
+      "Category": [
+        {
+          "queryRef": "dwh Dim_Tiempo.Dia",
+          "active": true
+        },
+        {
+          "queryRef": "dwh Dim_Tiempo.Semana"
+        },
+        {
+          "queryRef": "dwh Dim_Tiempo.Mes"
+        },
+        {
+          "queryRef": "dwh Dim_Tiempo.Año"
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "dwh Fact_Promociones.TotalPromocionesActivas"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d1",
+          "Entity": "dwh Dim_Tiempo",
+          "Type": 0
+        },
+        {
+          "Name": "d",
+          "Entity": "dwh Fact_Promociones",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d1"
+              }
+            },
+            "Property": "Dia"
+          },
+          "Name": "dwh Dim_Tiempo.Dia",
+          "NativeReferenceName": "Dia"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d1"
+              }
+            },
+            "Property": "Año"
+          },
+          "Name": "dwh Dim_Tiempo.Año",
+          "NativeReferenceName": "Sum of Año"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d1"
+              }
+            },
+            "Property": "Mes"
+          },
+          "Name": "dwh Dim_Tiempo.Mes",
+          "NativeReferenceName": "Sum of Mes"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d1"
+              }
+            },
+            "Property": "Semana"
+          },
+          "Name": "dwh Dim_Tiempo.Semana",
+          "NativeReferenceName": "Sum of Semana"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "TotalPromocionesActivas"
+          },
+          "Name": "dwh Fact_Promociones.TotalPromocionesActivas",
+          "NativeReferenceName": "Activas"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "d"
+                }
+              },
+              "Property": "TotalPromocionesActivas"
+            }
+          }
+        }
+      ]
+    },
+    "columnProperties": {
+      "dwh Fact_Promociones.TotalPromocionesActivas": {
+        "displayName": "Activas"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "1ecdaf1b6c08301ec809"
+}

@@ -1,0 +1,137 @@
+{
+  "name": "1752234a07f3257d24ca",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 184.51093487142512,
+        "width": 160.99891107078039,
+        "x": 0.646542507940226,
+        "y": 0.74103038433039137,
+        "z": 13000,
+        "tabOrder": 0
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "card",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "dwh Fact_Planes.PromedioStickersPorTarjeta"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d",
+          "Entity": "dwh Fact_Planes",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "PromedioStickersPorTarjeta"
+          },
+          "Name": "dwh Fact_Planes.PromedioStickersPorTarjeta",
+          "NativeReferenceName": "Promedio x tarjetas"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "d"
+                }
+              },
+              "Property": "PromedioStickersPorTarjeta"
+            }
+          }
+        }
+      ]
+    },
+    "columnProperties": {
+      "dwh Fact_Planes.PromedioStickersPorTarjeta": {
+        "displayName": "Promedio x tarjetas"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Promedio x tarjetas'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "84844a5e5e15c257dcb4"
+}
