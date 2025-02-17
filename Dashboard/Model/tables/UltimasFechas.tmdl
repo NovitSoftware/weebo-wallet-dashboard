@@ -1,17 +1,35 @@
 ﻿table UltimasFechas
 
-	column Rango
+	column Texto
 		summarizeBy: none
 		isNameInferred
-		sourceColumn: [Rango]
+		sourceColumn: [Texto]
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Fecha Calculada'
+	column 'Fecha Inicial'
 		formatString: General Date
 		summarizeBy: none
 		isNameInferred
-		sourceColumn: [Fecha Calculada]
+		sourceColumn: [Fecha Inicial]
+
+		variation Variation
+			isDefault
+			relationship: a28b0dc3-149d-4b48-b11b-0bc1117f3215
+			defaultHierarchy: LocalDateTable_6b94448f-10dd-45e8-88d4-dccd6680ce98.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha Final'
+		formatString: General Date
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Fecha Final]
+
+		variation Variation
+			isDefault
+			relationship: fdb1aa4d-ca98-4d38-812f-6f3c898f668c
+			defaultHierarchy: LocalDateTable_0259c88c-5779-4e95-8c11-d0c032169312.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -20,31 +38,49 @@
 		source = ```
 				
 				VAR UltimoDia = TODAY() - 1
-				VAR UltimaSemana = TODAY() - WEEKDAY(TODAY(), 2)
+				VAR Ayer = TODAY() - 1
+				VAR DiaAyer = WEEKDAY(Ayer, 2)  -- Determina qué día fue ayer (1 = lunes, 7 = domingo)
+				
+				-- Calculamos la última semana con la condición para el domingo/lunes
+				VAR UltimaSemana =
+				    SWITCH(
+				        TRUE(),
+				        DiaAyer = 7, TODAY() - WEEKDAY(TODAY(), 2) - 7,  -- Si ayer fue domingo, la semana empieza el lunes
+				        DiaAyer = 1, TODAY() - WEEKDAY(TODAY(), 2),  -- Si ayer fue lunes, la semana empieza el domingo
+				        TODAY() - WEEKDAY(TODAY(), 2)  -- Caso por defecto (semana normal)
+				    )
+				
+				-- El cálculo de "Fecha Final" será simplemente hoy
+				VAR FechaFinal = TODAY()
+				
 				VAR UltimoMes = EDATE(TODAY(), -1)
 				VAR UltimoAno = DATE(YEAR(TODAY()) - 1, 1, 1)
 				
 				RETURN
 				    UNION(
 				        SELECTCOLUMNS(
-				            { ("Último día", UltimoDia) },
-				            "Rango", [Value1],
-				            "Fecha Calculada", [Value2]
+				            { ("Último día", UltimoDia, TODAY()) },
+				            "Texto", [Value1],
+				            "Fecha Inicial", [Value2],
+				            "Fecha Final", [Value3]
 				        ),
 				        SELECTCOLUMNS(
-				            { ("Última semana", UltimaSemana) },
-				            "Rango", [Value1],
-				            "Fecha Calculada", [Value2]
+				            { ("Última semana", UltimaSemana, FechaFinal) },  -- "Fecha Final" es hoy
+				            "Texto", [Value1],
+				            "Fecha Inicial", [Value2],
+				            "Fecha Final", [Value3]
 				        ),
 				        SELECTCOLUMNS(
-				            { ("Último mes", UltimoMes) },
-				            "Rango", [Value1],
-				            "Fecha Calculada", [Value2]
+				            { ("Último mes", UltimoMes, TODAY()) },
+				            "Texto", [Value1],
+				            "Fecha Inicial", [Value2],
+				            "Fecha Final", [Value3]
 				        ),
 				        SELECTCOLUMNS(
-				            { ("Último año", UltimoAno) },
-				            "Rango", [Value1],
-				            "Fecha Calculada", [Value2]
+				            { ("Último año", UltimoAno, TODAY()) },
+				            "Texto", [Value1],
+				            "Fecha Inicial", [Value2],
+				            "Fecha Final", [Value3]
 				        )
 				    )
 				

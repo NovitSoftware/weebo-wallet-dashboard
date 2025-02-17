@@ -14,11 +14,6 @@
 		summarizeBy: none
 		sourceColumn: Fecha
 
-		variation Variation
-			isDefault
-			relationship: 4bf1c8d9-2baa-4ef6-8f30-e1ffc5bd4d13
-			defaultHierarchy: LocalDateTable_f94d1f0f-749b-483d-9f62-707571ef4651.'Date Hierarchy'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date

@@ -73,11 +73,6 @@ relationship 8d96097c-2685-48b2-b90c-b3b5e9bf1496
 	fromColumn: 'dwh Dim_Tarjeta'.FechaActivo
 	toColumn: LocalDateTable_1ade2857-01bd-49f9-8176-08e476f004c9.Date
 
-relationship 4bf1c8d9-2baa-4ef6-8f30-e1ffc5bd4d13
-	joinOnDateBehavior: datePartOnly
-	fromColumn: 'dwh Dim_Tiempo'.Fecha
-	toColumn: LocalDateTable_f94d1f0f-749b-483d-9f62-707571ef4651.Date
-
 relationship 259d77cc-f57e-4479-af30-b7319154057b
 	joinOnDateBehavior: datePartOnly
 	fromColumn: 'dwh Dim_Tienda'.FechaInicio
@@ -694,13 +689,23 @@ relationship f728e482-647f-e952-833a-a89ed1043cff
 	fromColumn: 'dwh Fact_Cupon'.KeyFechaCorte
 	toColumn: 'dwh Dim_Tiempo'.KeyTiempo
 
-relationship 2ac6aac3-93fc-ae50-d755-08c345b23eca
-	crossFilteringBehavior: bothDirections
-	fromCardinality: one
-	fromColumn: UltimasFechas.'Fecha Calculada'
-	toColumn: 'dwh Dim_Tiempo'.Fecha
-
 relationship 983d8069-931e-9fca-69d3-e699f044702a
 	fromColumn: 'dwh Fact_Promociones'.KeyFechaCorte
 	toColumn: 'dwh Dim_Tiempo'.KeyTiempo
+
+relationship a28b0dc3-149d-4b48-b11b-0bc1117f3215
+	joinOnDateBehavior: datePartOnly
+	fromColumn: UltimasFechas.'Fecha Inicial'
+	toColumn: LocalDateTable_6b94448f-10dd-45e8-88d4-dccd6680ce98.Date
+
+relationship 1c959a24-7a19-0bf3-feee-9c5b8b439472
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'dwh Dim_Tiempo'.Fecha
+	toColumn: UltimasFechas.'Fecha Inicial'
+
+relationship fdb1aa4d-ca98-4d38-812f-6f3c898f668c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: UltimasFechas.'Fecha Final'
+	toColumn: LocalDateTable_0259c88c-5779-4e95-8c11-d0c032169312.Date
 

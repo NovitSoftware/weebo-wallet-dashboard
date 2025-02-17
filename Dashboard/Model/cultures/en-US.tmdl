@@ -31466,45 +31466,6 @@
 			          }
 			        }
 			      ]
-			    },
-			    "ultimas_fecha.rango": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "UltimasFechas",
-			          "ConceptualProperty": "Rango"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "rango": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "ultimas_fecha.fecha_calculada": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "UltimasFechas",
-			          "ConceptualProperty": "Fecha Calculada"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "fecha calculada": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
 			    }
 			  },
 			  "Relationships": {
