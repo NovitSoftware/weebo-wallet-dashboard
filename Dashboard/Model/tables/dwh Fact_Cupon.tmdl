@@ -126,11 +126,12 @@
 
 	measure TasaRedencionCupones = ```
 			
+			COALESCE(
 			    DIVIDE(
 			        SUM('dwh Fact_Cupon'[FlagCuponRedimido]), 
 			        COUNTROWS('dwh Fact_Cupon'),
 			        0
-			    )
+			    ),0)
 			
 			```
 
@@ -138,32 +139,35 @@
 
 	measure TotalCuponesActivos = ```
 			
+			COALESCE(
 			CALCULATE(
 			    COUNT('dwh Fact_Cupon'[KeyCupon]),
 			    'dwh Fact_Cupon'[FlagCuponVigente] = 1,
 			    'dwh Fact_Cupon'[FlagCuponVencido] = 0
-			)
+			),0)
 			
 			```
 		formatString: 0
 
 	measure TotalCuponesEnProceso = ```
 			
+			COALESCE(
 			CALCULATE(
 			    COUNT('dwh Fact_Cupon'[KeyCupon]),
 			    'dwh Fact_Cupon'[FlagCuponVigente] = 0,
 			    'dwh Fact_Cupon'[FlagCuponVencido] = 0
-			)
+			),0)
 			
 			```
 		formatString: 0
 
 	measure TotalCuponesVencidos = ```
 			
+			COALESCE(
 			CALCULATE(
 			    COUNT('dwh Fact_Cupon'[KeyCupon]),
 			    'dwh Fact_Cupon'[FlagCuponVencido] = 1
-			)
+			),0)
 			
 			```
 		formatString: 0
@@ -189,7 +193,51 @@
 			    )
 			
 			RETURN 
-			    DIVIDE(TotalDias, CantidadCupones, 0)
+			    COALESCE(DIVIDE(TotalDias, CantidadCupones, 0),0)
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure ConteoFechaActivacion =
+			
+			COALESCE(
+			    CALCULATE(
+			        COUNT('dwh Fact_Cupon'[FechaActivacion]),
+			        NOT(ISBLANK('dwh Fact_Cupon'[FechaActivacion]))
+			        ),
+			    0)
+		formatString: 0
+
+	measure ConteoFlagCuponRedimido_1 =
+			
+			COALESCE(
+			    CALCULATE(
+			        COUNT('dwh Fact_Cupon'[FlagCuponRedimido]),
+			        'dwh Fact_Cupon'[FlagCuponRedimido] = 1
+			    ),
+			0)
+		formatString: 0
+
+	measure ConteoFlagCuponVencido_1 = ```
+			
+			COALESCE(
+			    CALCULATE(
+			        COUNT('dwh Fact_Cupon'[FlagCuponVencido]),
+			        'dwh Fact_Cupon'[FlagCuponVencido] = 1 
+			    ),
+			0)
+			```
+		formatString: 0
+
+	measure PromedioDiasHastaObtenerCuponFiltrado = ```
+			
+			COALESCE(
+			CALCULATE(
+			    AVERAGE('dwh Fact_Cupon'[DiasHastaObtenerCupon]),
+			    'dwh Fact_Cupon'[DiasHastaObtenerCupon] <> 0,
+			    NOT(ISBLANK('dwh Fact_Cupon'[DiasHastaObtenerCupon]))
+			),0)
 			
 			```
 
@@ -403,6 +451,20 @@
 			
 			```
 		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiasHastaObtenerCuponFiltrado = ```
+			
+			IF(
+			    NOT(ISBLANK('dwh Fact_Cupon'[DiasHastaObtenerCupon])),
+			    'dwh Fact_Cupon'[DiasHastaObtenerCupon],
+			    BLANK()
+			)
+			
+			```
+		formatString: 0
+		summarizeBy: sum
 
 		annotation SummarizationSetBy = Automatic
 

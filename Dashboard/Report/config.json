@@ -12,7 +12,7 @@
       "type": 2
     }
   },
-  "activeSectionIndex": 9,
+  "activeSectionIndex": 1,
   "defaultDrillFilterOtherVisuals": true,
   "linguisticSchemaSyncVersion": 2,
   "settings": {
@@ -22,7 +22,7 @@
     "pagesPosition": 1,
     "useEnhancedTooltips": true,
     "useDefaultAggregateDisplayName": true,
-    "filterPaneHiddenInEditMode": true
+    "filterPaneHiddenInEditMode": false
   },
   "objects": {
     "section": [

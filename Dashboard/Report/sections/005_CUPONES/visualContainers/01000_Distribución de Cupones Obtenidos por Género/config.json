@@ -1,0 +1,217 @@
+{
+  "name": "a7630741116edec60f05",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 200,
+        "width": 410,
+        "x": 0,
+        "y": 0,
+        "z": 11000,
+        "tabOrder": 1000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "pieChart",
+    "projections": {
+      "Category": [
+        {
+          "queryRef": "CuponesPorGenero.Genero",
+          "active": true
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "Sum(CuponesPorGenero.TotalCuponesActivos)"
+        },
+        {
+          "queryRef": "Sum(CuponesPorGenero.TotalCuponesVencidos)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "c",
+          "Entity": "CuponesPorGenero",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "c"
+              }
+            },
+            "Property": "Genero"
+          },
+          "Name": "CuponesPorGenero.Genero",
+          "NativeReferenceName": "Genero"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "c"
+                  }
+                },
+                "Property": "TotalCuponesActivos"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(CuponesPorGenero.TotalCuponesActivos)",
+          "NativeReferenceName": "Sum of TotalCuponesActivos"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "c"
+                  }
+                },
+                "Property": "TotalCuponesVencidos"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(CuponesPorGenero.TotalCuponesVencidos)",
+          "NativeReferenceName": "Sum of TotalCuponesVencidos"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "c"
+                    }
+                  },
+                  "Property": "TotalCuponesActivos"
+                }
+              },
+              "Function": 0
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "labelStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Data'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 9,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "CuponesPorGenero"
+                          }
+                        },
+                        "Property": "Genero"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'MASCULINO'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Distribución de Cupones Obtenidos por Género'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "7d5a10edf43ea9e48264"
+}

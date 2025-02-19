@@ -26376,6 +26376,16 @@
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Variacion": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -26419,6 +26429,16 @@
 			            },
 			            "Weight": 0.591
 			          }
+			        },
+			        {
+			          "Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -26441,6 +26461,16 @@
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Variacion": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -26557,6 +26587,16 @@
 			            },
 			            "Weight": 0.591
 			          }
+			        },
+			        {
+			          "Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -26580,6 +26620,16 @@
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Promedio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -26602,6 +26652,16 @@
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Promedio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -26645,6 +26705,16 @@
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -26719,6 +26789,16 @@
 			            },
 			            "Weight": 0.492
 			          }
+			        },
+			        {
+			          "Variacion": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -26741,6 +26821,16 @@
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Promedio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -26785,6 +26875,16 @@
 			            },
 			            "Weight": 0.591
 			          }
+			        },
+			        {
+			          "Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -26808,6 +26908,16 @@
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Variacion": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -26830,6 +26940,16 @@
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Promedio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -26867,6 +26987,16 @@
 			            },
 			            "Weight": 0.591
 			          }
+			        },
+			        {
+			          "Monto": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -26883,6 +27013,16 @@
 			          "variación monto facturado": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Variación": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -26898,6 +27038,16 @@
 			        {
 			          "promedio facturado": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Promedio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -26942,6 +27092,16 @@
 			            },
 			            "Weight": 0.591
 			          }
+			        },
+			        {
+			          "Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -26965,6 +27125,16 @@
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Promedio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -26987,6 +27157,16 @@
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Variacion": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -32165,6 +32345,121 @@
 			        },
 			        {
 			          "ValorMonetarioPromedio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon.dias_hasta_obtener_cupon_filtrado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Cupon",
+			          "ConceptualProperty": "DiasHastaObtenerCuponFiltrado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dias hasta obtener cupon filtrado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DiasHastaObtenerCuponFiltrado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon.conteo_fecha_activacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Cupon",
+			          "ConceptualProperty": "ConteoFechaActivacion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "conteo fecha activacion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ConteoFechaActivacion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon.conteo_flag_cupon_redimido_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Cupon",
+			          "ConceptualProperty": "ConteoFlagCuponRedimido_1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "conteo flag cupon redimido 1": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ConteoFlagCuponRedimido_1": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon.conteo_flag_cupon_vencido_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Cupon",
+			          "ConceptualProperty": "ConteoFlagCuponVencido_1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "conteo flag cupon vencido 1": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ConteoFlagCuponVencido_1": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon.promedio_dias_hasta_obtener_cupon_filtrado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Cupon",
+			          "ConceptualProperty": "PromedioDiasHastaObtenerCuponFiltrado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "promedio dias hasta obtener cupon filtrado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PromedioDiasHastaObtenerCuponFiltrado": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -49342,6 +49637,171 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_Dim_Afiliados_have_stage_StgCortesAfiliadosWebos"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon_has_promedio_dias_hasta_obtener_cupon_filtrado": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Fact_Cupon.promedio_dias_hasta_obtener_cupon_filtrado": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon.promedio_dias_hasta_obtener_cupon_filtrado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon.promedio_dias_hasta_obtener_cupon_filtrado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_promedio_dias_hasta_obtener_cupon_filtrado"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon_has_conteo_flag_cupon_vencido_1": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Fact_Cupon.conteo_flag_cupon_vencido_1": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon.conteo_flag_cupon_vencido_1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon.conteo_flag_cupon_vencido_1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_conteo_flag_cupon_vencido_1"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon_has_conteo_flag_cupon_redimido_1": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Fact_Cupon.conteo_flag_cupon_redimido_1": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon.conteo_flag_cupon_redimido_1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon.conteo_flag_cupon_redimido_1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_conteo_flag_cupon_redimido_1"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon_has_conteo_fecha_activacion": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Fact_Cupon.conteo_fecha_activacion": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon.conteo_fecha_activacion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon.conteo_fecha_activacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_conteo_fecha_activacion"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon_has_dias_hasta_obtener_cupon_filtrado": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Fact_Cupon.dias_hasta_obtener_cupon_filtrado": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon.dias_hasta_obtener_cupon_filtrado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon.dias_hasta_obtener_cupon_filtrado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_dias_hasta_obtener_cupon_filtrados"
 			        }
 			      ]
 			    },

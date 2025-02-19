@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "name": "749dc35a6c5212fc7590",
+    "expression": {
+      "Column": {
+        "Expression": {
+          "SourceRef": {
+            "Entity": "dwh Fact_AfiliacionEmpresa"
+          }
+        },
+        "Property": "EstadoCliente"
+      }
+    },
+    "type": "Categorical",
+    "howCreated": 0,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "isInvertedSelectionMode": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "isHiddenInViewMode": false
+  }
+]
