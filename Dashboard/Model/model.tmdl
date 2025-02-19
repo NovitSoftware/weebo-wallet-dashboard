@@ -151,6 +151,7 @@ ref table Top3DistritosPromociones
 ref table UltimasFechas
 ref table LocalDateTable_6b94448f-10dd-45e8-88d4-dccd6680ce98
 ref table LocalDateTable_0259c88c-5779-4e95-8c11-d0c032169312
+ref table LocalDateTable_2379fe0a-2395-4b4d-bd24-a3ee06f28d39
 
 ref cultureInfo en-US
 

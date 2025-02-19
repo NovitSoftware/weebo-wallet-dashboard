@@ -23,7 +23,8 @@
       ],
       "Category": [
         {
-          "queryRef": "dwh Dim_Tiempo.Dia"
+          "queryRef": "dwh Dim_Tiempo.Dia",
+          "active": true
         },
         {
           "queryRef": "dwh Dim_Tiempo.Semana"
@@ -32,8 +33,7 @@
           "queryRef": "dwh Dim_Tiempo.Mes"
         },
         {
-          "queryRef": "dwh Dim_Tiempo.Año",
-          "active": true
+          "queryRef": "dwh Dim_Tiempo.Año"
         }
       ]
     },

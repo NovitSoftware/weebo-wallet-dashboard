@@ -10,13 +10,15 @@
 
 	column Fecha
 		dataType: dateTime
-		formatString: Long Date
+		formatString: dd/mm/yyyy
 		summarizeBy: none
 		sourceColumn: Fecha
 
+		changedProperty = DataType
+
 		annotation SummarizationSetBy = Automatic
 
-		annotation UnderlyingDateTimeDataType = Date
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
 	column Año
 		dataType: int64
@@ -45,16 +47,30 @@
 	column Semana
 		dataType: int64
 		formatString: 0
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Semana
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column Periodo
 		dataType: int64
 		formatString: 0
 		summarizeBy: sum
 		sourceColumn: Periodo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha Fixed' = ```
+			DATEVALUE(FORMAT([Fecha], "dd/mm/yyyy"))
+			
+			```
+		formatString: General Date
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: e12d0439-44bf-4e5c-be33-f7dc1e7b26f4
+			defaultHierarchy: LocalDateTable_2379fe0a-2395-4b4d-bd24-a3ee06f28d39.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
 

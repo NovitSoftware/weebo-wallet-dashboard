@@ -1,0 +1,205 @@
+{
+  "name": "3ce98bc9d3593e38cd2c",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 717.83783783783781,
+        "y": 413.40540540540542,
+        "z": 11000,
+        "width": 537.94594594594594,
+        "height": 294.05405405405406,
+        "tabOrder": 12000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "pieChart",
+    "projections": {
+      "Category": [
+        {
+          "queryRef": "dwh Dim_RangoEdad.RangoEdad",
+          "active": true
+        },
+        {
+          "queryRef": "dwh Fact_Cupon.EstadoCupon"
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "dwh Fact_Cupon.TotalCuponesEnProceso"
+        },
+        {
+          "queryRef": "dwh Fact_Cupon.TotalCuponesActivos"
+        },
+        {
+          "queryRef": "dwh Fact_Cupon.TotalCuponesVencidos"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d",
+          "Entity": "dwh Fact_Cupon",
+          "Type": 0
+        },
+        {
+          "Name": "d1",
+          "Entity": "dwh Dim_RangoEdad",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "EstadoCupon"
+          },
+          "Name": "dwh Fact_Cupon.EstadoCupon",
+          "NativeReferenceName": "EstadoCupon1"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "TotalCuponesEnProceso"
+          },
+          "Name": "dwh Fact_Cupon.TotalCuponesEnProceso",
+          "NativeReferenceName": "TotalCuponesEnProceso1"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "TotalCuponesActivos"
+          },
+          "Name": "dwh Fact_Cupon.TotalCuponesActivos",
+          "NativeReferenceName": "TotalCuponesActivos1"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "TotalCuponesVencidos"
+          },
+          "Name": "dwh Fact_Cupon.TotalCuponesVencidos",
+          "NativeReferenceName": "TotalCuponesVencidos1"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d1"
+              }
+            },
+            "Property": "RangoEdad"
+          },
+          "Name": "dwh Dim_RangoEdad.RangoEdad",
+          "NativeReferenceName": "RangoEdad"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "d"
+                }
+              },
+              "Property": "TotalCuponesEnProceso"
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Category, data value, percent of total'"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'outside'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "visualTooltip": [
+        {
+          "properties": {
+            "type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Canvas'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Distribución de Cupones Obtenidos Otorgados por Edades'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

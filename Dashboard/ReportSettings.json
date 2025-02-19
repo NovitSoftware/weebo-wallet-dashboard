@@ -1,6 +1,7 @@
 {
   "Version": 4,
   "ReportSettings": {
+    "ShowHiddenFields": true,
     "IsQnaEnabledForLiveConnect": true
   },
   "QueriesSettings": {

@@ -2,5 +2,8 @@
 -- Gráfica: Bar chart.
 
 
-select count(fp.FlagPromocionActiva) as 'Total de promociones activas' from dwh.Fact_Promociones as fp
-where fp.FlagPromocionActiva = 1;
+select dt.Fecha, count(fp.FlagPromocionActiva) as 'Total de promociones activas' 
+from dwh.Fact_Promociones as fp
+join dwh.Dim_Tiempo as dt on fp.KeyFechaCorte = dt.KeyTiempo
+where fp.FlagPromocionActiva = 1
+group by dt.Fecha
