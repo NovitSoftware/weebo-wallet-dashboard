@@ -29,7 +29,8 @@
       ],
       "Category": [
         {
-          "queryRef": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Year"
+          "queryRef": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Year",
+          "active": true
         },
         {
           "queryRef": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Quarter"
@@ -38,8 +39,7 @@
           "queryRef": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Month"
         },
         {
-          "queryRef": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Day",
-          "active": true
+          "queryRef": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Day"
         }
       ]
     },

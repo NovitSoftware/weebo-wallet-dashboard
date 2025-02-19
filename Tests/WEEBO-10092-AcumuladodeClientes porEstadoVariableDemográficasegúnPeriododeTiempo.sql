@@ -2,13 +2,14 @@
 -- Gráfica: Bar chart. 
 
 
-SELECT 
+SELECT
     CASE 
         WHEN DATEDIFF(DAY, a.FechaUltimoConsumoWebo, GETDATE()) <= 90 THEN 'Activo'
         WHEN DATEDIFF(DAY, a.FechaUltimoConsumoWebo, GETDATE()) BETWEEN 80 AND 90 THEN 'En Riesgo'
         WHEN DATEDIFF(DAY, a.FechaUltimoConsumoWebo, GETDATE()) > 90 THEN 'Perdido'
     END AS EstadoAfiliado,
-    (SELECT COUNT(*) FROM dwh.Dim_Afiliado) AS Total
+    COUNT(*) AS Total,
+	a.FechaUltimoConsumoWebo
 FROM dwh.Dim_Afiliado a
 WHERE a.FechaUltimoConsumoWebo IS NOT NULL
 GROUP BY 
@@ -16,5 +17,6 @@ GROUP BY
         WHEN DATEDIFF(DAY, a.FechaUltimoConsumoWebo, GETDATE()) <= 90 THEN 'Activo'
         WHEN DATEDIFF(DAY, a.FechaUltimoConsumoWebo, GETDATE()) BETWEEN 80 AND 90 THEN 'En Riesgo'
         WHEN DATEDIFF(DAY, a.FechaUltimoConsumoWebo, GETDATE()) > 90 THEN 'Perdido'
-    END
+    END,
+	a.FechaUltimoConsumoWebo
 ORDER BY EstadoAfiliado;

@@ -1,0 +1,158 @@
+{
+  "name": "f288af236a10d62c4b8c",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 64,
+        "y": 413.40540540540542,
+        "z": 10000,
+        "width": 294.05405405405406,
+        "height": 294.05405405405406,
+        "tabOrder": 11000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "pieChart",
+    "projections": {
+      "Category": [
+        {
+          "queryRef": "dwh Fact_Cupon.EstadoCupon",
+          "active": true
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "dwh Fact_Cupon.TotalCuponesEnProceso"
+        },
+        {
+          "queryRef": "dwh Fact_Cupon.TotalCuponesActivos"
+        },
+        {
+          "queryRef": "dwh Fact_Cupon.TotalCuponesVencidos"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d",
+          "Entity": "dwh Fact_Cupon",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "EstadoCupon"
+          },
+          "Name": "dwh Fact_Cupon.EstadoCupon",
+          "NativeReferenceName": "EstadoCupon1"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "TotalCuponesEnProceso"
+          },
+          "Name": "dwh Fact_Cupon.TotalCuponesEnProceso",
+          "NativeReferenceName": "TotalCuponesEnProceso1"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "TotalCuponesActivos"
+          },
+          "Name": "dwh Fact_Cupon.TotalCuponesActivos",
+          "NativeReferenceName": "TotalCuponesActivos1"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "TotalCuponesVencidos"
+          },
+          "Name": "dwh Fact_Cupon.TotalCuponesVencidos",
+          "NativeReferenceName": "TotalCuponesVencidos1"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "d"
+                }
+              },
+              "Property": "TotalCuponesEnProceso"
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BottomCenter'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Distribución de Cupones por Estado'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
