@@ -1,0 +1,319 @@
+{
+  "objects": {
+    "categoryAxis": [
+      {
+        "properties": {
+          "axisType": {
+            "expr": {
+              "Literal": {
+                "Value": "'Categorical'"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "projectionOrdering": {
+    "Y": [
+      0,
+      1,
+      2
+    ],
+    "Category": [
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "projectionActiveItems": {
+    "Category": [
+      {
+        "queryRef": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Year",
+        "suppressConcat": false
+      }
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Activos",
+        "Name": "dwh Dim_Afiliado.AfiliadosActivos",
+        "Type": 3,
+        "Format": "0"
+      },
+      {
+        "Restatement": "EnRiesgo",
+        "Name": "dwh Dim_Afiliado.AfiliadosEnRiesgo",
+        "Type": 3,
+        "Format": "0"
+      },
+      {
+        "Restatement": "Perdidos",
+        "Name": "dwh Dim_Afiliado.AfiliadosPerdidos",
+        "Type": 3,
+        "Format": "0"
+      },
+      {
+        "Restatement": "Year",
+        "Name": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Year",
+        "Type": 3
+      },
+      {
+        "Restatement": "Quarter",
+        "Name": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Quarter",
+        "Type": 2048
+      },
+      {
+        "Restatement": "Month",
+        "Name": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Month",
+        "Type": 2048
+      },
+      {
+        "Restatement": "Day",
+        "Name": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Day",
+        "Type": 3
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Y",
+          "Projection": 0,
+          "isActive": false
+        },
+        {
+          "Name": "Y",
+          "Projection": 1,
+          "isActive": false
+        },
+        {
+          "Name": "Y",
+          "Projection": 2,
+          "isActive": false
+        },
+        {
+          "Name": "Category",
+          "Projection": 3,
+          "isActive": true
+        },
+        {
+          "Name": "Category",
+          "Projection": 4,
+          "isActive": false
+        },
+        {
+          "Name": "Category",
+          "Projection": 5,
+          "isActive": false
+        },
+        {
+          "Name": "Category",
+          "Projection": 6,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Activos",
+      "format": "0",
+      "queryName": "dwh Dim_Afiliado.AfiliadosActivos",
+      "roles": {
+        "Y": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 260
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Dim_Afiliado"
+            }
+          },
+          "Property": "AfiliadosActivos"
+        }
+      }
+    },
+    {
+      "displayName": "EnRiesgo",
+      "format": "0",
+      "queryName": "dwh Dim_Afiliado.AfiliadosEnRiesgo",
+      "roles": {
+        "Y": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 260
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Dim_Afiliado"
+            }
+          },
+          "Property": "AfiliadosEnRiesgo"
+        }
+      }
+    },
+    {
+      "displayName": "Perdidos",
+      "format": "0",
+      "queryName": "dwh Dim_Afiliado.AfiliadosPerdidos",
+      "roles": {
+        "Y": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 260
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Dim_Afiliado"
+            }
+          },
+          "Property": "AfiliadosPerdidos"
+        }
+      }
+    },
+    {
+      "displayName": "Year",
+      "queryName": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Year",
+      "roles": {
+        "Category": true
+      },
+      "sort": 1,
+      "sortOrder": 0,
+      "type": {
+        "category": "Years",
+        "underlyingType": 66308
+      },
+      "expr": {
+        "HierarchyLevel": {
+          "Expression": {
+            "Hierarchy": {
+              "Expression": {
+                "PropertyVariationSource": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dwh Dim_Afiliado"
+                    }
+                  },
+                  "Name": "Variation",
+                  "Property": "FechaRegistroWebo"
+                }
+              },
+              "Hierarchy": "Date Hierarchy"
+            }
+          },
+          "Level": "Year"
+        }
+      }
+    },
+    {
+      "displayName": "Quarter",
+      "queryName": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Quarter",
+      "roles": {
+        "Category": true
+      },
+      "type": {
+        "category": "Quarters",
+        "underlyingType": 262657
+      },
+      "expr": {
+        "HierarchyLevel": {
+          "Expression": {
+            "Hierarchy": {
+              "Expression": {
+                "PropertyVariationSource": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dwh Dim_Afiliado"
+                    }
+                  },
+                  "Name": "Variation",
+                  "Property": "FechaRegistroWebo"
+                }
+              },
+              "Hierarchy": "Date Hierarchy"
+            }
+          },
+          "Level": "Quarter"
+        }
+      }
+    },
+    {
+      "displayName": "Month",
+      "queryName": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Month",
+      "roles": {
+        "Category": true
+      },
+      "type": {
+        "category": "Months",
+        "underlyingType": 131585
+      },
+      "expr": {
+        "HierarchyLevel": {
+          "Expression": {
+            "Hierarchy": {
+              "Expression": {
+                "PropertyVariationSource": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dwh Dim_Afiliado"
+                    }
+                  },
+                  "Name": "Variation",
+                  "Property": "FechaRegistroWebo"
+                }
+              },
+              "Hierarchy": "Date Hierarchy"
+            }
+          },
+          "Level": "Month"
+        }
+      }
+    },
+    {
+      "displayName": "Day",
+      "queryName": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Day",
+      "roles": {
+        "Category": true
+      },
+      "type": {
+        "category": "DayOfMonth",
+        "underlyingType": 328452
+      },
+      "expr": {
+        "HierarchyLevel": {
+          "Expression": {
+            "Hierarchy": {
+              "Expression": {
+                "PropertyVariationSource": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dwh Dim_Afiliado"
+                    }
+                  },
+                  "Name": "Variation",
+                  "Property": "FechaRegistroWebo"
+                }
+              },
+              "Hierarchy": "Date Hierarchy"
+            }
+          },
+          "Level": "Day"
+        }
+      }
+    }
+  ]
+}

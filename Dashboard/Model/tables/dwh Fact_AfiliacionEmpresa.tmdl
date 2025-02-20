@@ -138,6 +138,23 @@
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure RecenciaPromedio = ```
+			
+			AVERAGE('dwh Fact_AfiliacionEmpresa'[DiasDesdeUltimoConsumo])
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure FrecuenciaPromedio =
+			
+			DIVIDE(
+			    CALCULATE( COUNT('dwh Fact_AfiliacionEmpresa'[KeyFactAfiliacionEmpresa]) ),
+			    CALCULATE( DISTINCTCOUNT('dwh Fact_AfiliacionEmpresa'[KeyAfiliado]) )
+			)
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column KeyFactAfiliacionEmpresa
 		dataType: int64
 		formatString: 0
