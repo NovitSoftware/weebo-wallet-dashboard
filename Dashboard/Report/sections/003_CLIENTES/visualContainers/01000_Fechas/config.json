@@ -1,11 +1,11 @@
 {
-  "name": "e2dad3f98e788b2ab78f",
+  "name": "e3eab4fa237706f039df",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "x": 982.85714285714278,
-        "y": 0,
+        "x": 982.9327188940091,
+        "y": 0.057142857142864045,
         "z": 7000,
         "width": 220.34285714285716,
         "height": 71.314285714285717,
@@ -18,7 +18,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "dwh Dim_Tiempo.Fecha",
+          "queryRef": "dwh Dim_Tiempo.Fecha Fixed",
           "active": true
         }
       ]
@@ -40,10 +40,10 @@
                 "Source": "d"
               }
             },
-            "Property": "Fecha"
+            "Property": "Fecha Fixed"
           },
-          "Name": "dwh Dim_Tiempo.Fecha",
-          "NativeReferenceName": "Fecha"
+          "Name": "dwh Dim_Tiempo.Fecha Fixed",
+          "NativeReferenceName": "Fecha Fixed"
         }
       ],
       "OrderBy": [
@@ -56,7 +56,7 @@
                   "Source": "d"
                 }
               },
-              "Property": "Fecha"
+              "Property": "Fecha Fixed"
             }
           }
         }
@@ -194,5 +194,5 @@
       ]
     }
   },
-  "parentGroupName": "2eebca34725039a1bd90"
+  "parentGroupName": "36a0e8593b5b4af57cac"
 }
