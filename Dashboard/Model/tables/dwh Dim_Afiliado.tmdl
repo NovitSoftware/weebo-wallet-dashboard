@@ -208,6 +208,38 @@
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 
+	measure FrecuenciaPromedioRangoEdades = ```
+			
+			    AVERAGEX (
+			        SUMMARIZE (
+			            'dwh Fact_AfiliacionEmpresa', 
+			            'dwh Dim_RangoEdad'[RangoEdad], 
+			            'dwh Fact_AfiliacionEmpresa'[KeyAfiliado],
+			            "Frecuencia", COUNT('dwh Fact_AfiliacionEmpresa'[KeyAfiliado])
+			        ), 
+			        [Frecuencia]
+			    )
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure RecenciaPromedioPorRangoEdad = ```
+			
+			VAR FechaActual = TODAY()
+			RETURN
+			    AVERAGEX(
+			        FILTER(
+			            'dwh Dim_Afiliado',
+			            NOT(ISBLANK('dwh Dim_Afiliado'[FechaUltimoConsumoWebo]))
+			        ),
+			        DATEDIFF('dwh Dim_Afiliado'[FechaUltimoConsumoWebo], FechaActual, DAY)
+			    )
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column KeyAfiliado
 		dataType: int64
 		formatString: 0
@@ -405,6 +437,27 @@
 			    'dwh Dim_Afiliado'[Genero] = "masculino" || 'dwh Dim_Afiliado'[Genero] = "femenino",
 			    'dwh Dim_Afiliado'[Genero]
 			)
+			
+			```
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column RangoEdades = ```
+			
+			    SWITCH(
+			        TRUE(),
+			        'dwh Dim_Afiliado'[Edad] <= 18, "1-18",
+			        'dwh Dim_Afiliado'[Edad] >= 19 && 'dwh Dim_Afiliado'[Edad] <= 25, "19-25",
+			        'dwh Dim_Afiliado'[Edad] >= 26 && 'dwh Dim_Afiliado'[Edad] <= 30, "26-30",
+			        'dwh Dim_Afiliado'[Edad] >= 31 && 'dwh Dim_Afiliado'[Edad] <= 35, "31-35",
+			        'dwh Dim_Afiliado'[Edad] >= 36 && 'dwh Dim_Afiliado'[Edad] <= 40, "36-40",
+			        'dwh Dim_Afiliado'[Edad] >= 41 && 'dwh Dim_Afiliado'[Edad] <= 45, "41-45",
+			        'dwh Dim_Afiliado'[Edad] >= 46 && 'dwh Dim_Afiliado'[Edad] <= 50, "46-50",
+			        'dwh Dim_Afiliado'[Edad] >= 51 && 'dwh Dim_Afiliado'[Edad] <= 55, "51-55",
+			        'dwh Dim_Afiliado'[Edad] >= 56 && 'dwh Dim_Afiliado'[Edad] <= 60, "56-60",
+			        'dwh Dim_Afiliado'[Edad] > 60, "> 60"
+			    )
 			
 			```
 		summarizeBy: none
