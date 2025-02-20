@@ -4,11 +4,11 @@
     {
       "id": 0,
       "position": {
+        "height": 70.069513406156887,
+        "width": 1260,
         "x": 0,
-        "y": 0,
+        "y": 0.10536768933256974,
         "z": 1000,
-        "width": 1202.2857142857142,
-        "height": 146.28571428571428,
         "tabOrder": 2000
       }
     }
@@ -86,6 +86,6 @@
       ]
     }
   },
-  "parentGroupName": "9b8524e11a44c1ecf511",
+  "parentGroupName": "8c857fac83ce9a752258",
   "howCreated": "InsertVisualButton"
 }

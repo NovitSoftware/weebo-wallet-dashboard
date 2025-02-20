@@ -1,0 +1,149 @@
+{
+  "name": "07cd6fcb352ceaa3ac3b",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 1.6842105263157947,
+        "y": 3.368421052631561,
+        "z": 16002,
+        "width": 599.578947368421,
+        "height": 136.42105263157896,
+        "tabOrder": 44
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "eaTachometer6616D82ED23A4C048E1D3CD4604742ED",
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "dwh Fact_Planes.PromedioStickers"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d",
+          "Entity": "dwh Fact_Planes",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "PromedioStickers"
+          },
+          "Name": "dwh Fact_Planes.PromedioStickers",
+          "NativeReferenceName": "Promedio de Stickers"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "d"
+                }
+              },
+              "Property": "PromedioStickers"
+            }
+          }
+        }
+      ]
+    },
+    "columnProperties": {
+      "dwh Fact_Planes.PromedioStickers": {
+        "displayName": "Promedio de Stickers"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "axis": [
+        {
+          "properties": {
+            "startValue": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "endValue": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "range4": [
+        {
+          "properties": {
+            "startValue": {
+              "expr": {
+                "Literal": {
+                  "Value": "7D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "range3": [
+        {
+          "properties": {
+            "startValue": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "calloutPercent": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "544d11178d431eb591d1"
+}

@@ -1,0 +1,91 @@
+{
+  "name": "cd115d7dcc43d95f554a",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 296.2285714285714,
+        "y": 33.298237140787251,
+        "z": 21000,
+        "width": 295.31428571428569,
+        "height": 106.97142857142858,
+        "tabOrder": 27
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "card",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "dwh Fact_AfiliacionEmpresa.PromedioClientesEnRiesgo"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d",
+          "Entity": "dwh Fact_AfiliacionEmpresa",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "PromedioClientesEnRiesgo"
+          },
+          "Name": "dwh Fact_AfiliacionEmpresa.PromedioClientesEnRiesgo",
+          "NativeReferenceName": "Promedio"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "d"
+                }
+              },
+              "Property": "PromedioClientesEnRiesgo"
+            }
+          }
+        }
+      ]
+    },
+    "columnProperties": {
+      "dwh Fact_AfiliacionWebo.PromedioClientesActivos": {
+        "displayName": "Promedio"
+      },
+      "dwh Fact_AfiliacionEmpresa.PromedioClientesEnRiesgo": {
+        "displayName": "Promedio"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "vcObjects": {
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "c8713aef479387af56f8"
+}
