@@ -1,14 +1,14 @@
 {
-  "name": "e306bd9ca58f99eb3d53",
+  "name": "af249472fd829ee84441",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "x": 287.26896412445421,
-        "y": 447.25570753624356,
-        "z": 14000,
-        "width": 152.77181170929839,
-        "height": 91.274684114453692,
+        "x": 92.762959235027679,
+        "y": 594.67682795312385,
+        "z": 12000,
+        "width": 124.23610611834064,
+        "height": 87.793514990294057,
         "tabOrder": 13000
       }
     }
@@ -18,7 +18,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "dwh Fact_Planes.PromedioSaldoTarjetas"
+          "queryRef": "dwh Fact_Cupon.PromedioStickersActivos"
         }
       ]
     },
@@ -27,7 +27,7 @@
       "From": [
         {
           "Name": "d",
-          "Entity": "dwh Fact_Planes",
+          "Entity": "dwh Fact_Cupon",
           "Type": 0
         }
       ],
@@ -39,10 +39,10 @@
                 "Source": "d"
               }
             },
-            "Property": "PromedioSaldoTarjetas"
+            "Property": "PromedioStickersGeneral"
           },
-          "Name": "dwh Fact_Planes.PromedioSaldoTarjetas",
-          "NativeReferenceName": "PromedioSaldoTarjetas"
+          "Name": "dwh Fact_Cupon.PromedioStickersActivos",
+          "NativeReferenceName": "PromedioStickersGeneral1"
         }
       ],
       "OrderBy": [
@@ -55,7 +55,7 @@
                   "Source": "d"
                 }
               },
-              "Property": "PromedioSaldoTarjetas"
+              "Property": "PromedioStickersGeneral"
             }
           }
         }
@@ -100,18 +100,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'center'"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
                 }
               }
             }

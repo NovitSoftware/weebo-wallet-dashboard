@@ -1,0 +1,94 @@
+{
+  "Commands": [
+    {
+      "SemanticQueryDataShapeCommand": {
+        "Query": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d1",
+              "Entity": "dwh Fact_Cupon",
+              "Type": 0
+            },
+            {
+              "Name": "d",
+              "Entity": "dwh Dim_Afiliado",
+              "Type": 0
+            }
+          ],
+          "Select": [
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d1"
+                      }
+                    },
+                    "Property": "KeyTarjeta"
+                  }
+                },
+                "Function": 2
+              },
+              "Name": "CountNonNull(dwh Fact_Cupon.KeyTarjeta)",
+              "NativeReferenceName": "Count of KeyTarjeta"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "GeneroFiltrado"
+              },
+              "Name": "dwh Dim_Afiliado.GeneroFiltrado",
+              "NativeReferenceName": "GeneroFiltrado"
+            }
+          ],
+          "OrderBy": [
+            {
+              "Direction": 2,
+              "Expression": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "d1"
+                        }
+                      },
+                      "Property": "KeyTarjeta"
+                    }
+                  },
+                  "Function": 2
+                }
+              }
+            }
+          ]
+        },
+        "Binding": {
+          "Primary": {
+            "Groupings": [
+              {
+                "Projections": [
+                  0,
+                  1
+                ]
+              }
+            ]
+          },
+          "DataReduction": {
+            "DataVolume": 3,
+            "Primary": {
+              "Top": {}
+            }
+          },
+          "Version": 1
+        },
+        "ExecutionMetricsKind": 1
+      }
+    }
+  ]
+}

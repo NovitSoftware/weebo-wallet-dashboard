@@ -1,0 +1,40 @@
+﻿table Top3TarjetasActivasPorDistrito
+
+	column Distrito
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: dwh Dim_Afiliado[Distrito]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tarjetas Activas'
+		formatString: 0
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Tarjetas Activas]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Top3TarjetasActivasPorDistrito = calculated
+		mode: import
+		source = ```
+				
+				TOPN(
+				    3,
+				    SUMMARIZE(
+				        'dwh Dim_Afiliado',
+				        'dwh Dim_Afiliado'[Distrito],
+				        "Tarjetas Activas", COUNTROWS(
+				            DISTINCT(
+				                'dwh Fact_Cupon'[KeyTarjeta]
+				            )
+				        )
+				    ),
+				    [Tarjetas Activas], 
+				    DESC
+				)
+				
+				```
+
+	annotation PBI_Id = 027f8881326341dc92094aeeba2052fa
+
