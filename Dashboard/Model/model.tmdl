@@ -10,7 +10,7 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBIDesktopVersion = 2.138.1452.0 (24.11)
 
-annotation PBI_QueryOrder = ["dwh Dim_Afiliado","dwh Dim_Cupon","dwh Dim_CuponPromocional","dwh Dim_Empresa","dwh Dim_Programa","dwh Dim_Promocion","dwh Dim_RangoEdad","dwh Dim_Tarjeta","dwh Dim_Tiempo","dwh Dim_Tienda","dwh Fact_AfiliacionEmpresa","dwh Fact_AfiliacionWebo","dwh Fact_Cupon","dwh Fact_Facturacion","dwh Fact_Planes","dwh Fact_Promociones","stage StgAfiliacion","stage StgCortesAfiliadosEmpresa","stage StgCortesAfiliadosWebo","stage StgCortesCupon","stage StgCortesPlanes","stage StgCortesPromociones","stage StgCupon","stage StgCuponPromocional","stage StgEmpresa","stage StgFactAfiliacionEmpresa","stage StgFactAfiliacionWebo","stage StgFactCupon","stage StgFactFacturacion","stage StgFactPlanes","stage StgFactPromociones","stage StgLog","stage StgPrograma","stage StgPromocion","stage StgTarjeta","stage StgTienda","stage StgTrackingStickers","stage StgTransaccion","sysdiagrams"]
+annotation PBI_QueryOrder = ["dwh Dim_Afiliado","dwh Dim_Cupon","dwh Dim_CuponPromocional","dwh Dim_Empresa","dwh Dim_Programa","dwh Dim_Promocion","dwh Dim_RangoEdad","dwh Dim_Tarjeta","dwh Dim_Tiempo","dwh Dim_Tienda","dwh Fact_AfiliacionEmpresa","dwh Fact_AfiliacionWebo","dwh Fact_Cupon","dwh Fact_Facturacion","dwh Fact_Planes","dwh Fact_Promociones","stage StgAfiliacion","stage StgCortesAfiliadosEmpresa","stage StgCortesAfiliadosWebo","stage StgCortesCupon","stage StgCortesPlanes","stage StgCortesPromociones","stage StgCupon","stage StgCuponPromocional","stage StgEmpresa","stage StgFactAfiliacionEmpresa","stage StgFactAfiliacionWebo","stage StgFactCupon","stage StgFactFacturacion","stage StgFactPlanes","stage StgFactPromociones","stage StgLog","stage StgPrograma","stage StgPromocion","stage StgTarjeta","stage StgTienda","stage StgTrackingStickers","stage StgTransaccion"]
 
 annotation PBI_ProTooling = ["WebModelingEdit"]
 
@@ -135,7 +135,6 @@ ref table 'stage StgTrackingStickers'
 ref table LocalDateTable_d84e4e37-b42c-409e-a24d-345433cf5ceb
 ref table 'stage StgTransaccion'
 ref table LocalDateTable_8847a136-b086-45ca-b5b1-51d12c944c0b
-ref table sysdiagrams
 ref table Top3Distritos
 ref table CalendarioGeneral
 ref table LocalDateTable_97f101e4-a3d5-4138-9aed-f35b25f07606
