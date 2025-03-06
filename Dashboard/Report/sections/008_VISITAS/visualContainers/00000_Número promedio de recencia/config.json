@@ -1,0 +1,111 @@
+{
+  "name": "337d1cf4b117ca1a6ef3",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 114.97670831966268,
+        "width": 180.79183231546665,
+        "x": 0,
+        "y": 4.602239048758344,
+        "z": 11000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "card",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "dwh Fact_AfiliacionEmpresa.RecenciaPromedio"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d",
+          "Entity": "dwh Fact_AfiliacionEmpresa",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "RecenciaPromedio"
+          },
+          "Name": "dwh Fact_AfiliacionEmpresa.RecenciaPromedio",
+          "NativeReferenceName": "RecenciaPromedio"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "d"
+                }
+              },
+              "Property": "RecenciaPromedio"
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Número promedio de recencia'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "e82bb7da27ac020dc436"
+}

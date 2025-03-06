@@ -15,7 +15,7 @@ GO
 
 --========================================================================================================
 
-ALTER TABLE [dwh].[Dim_Tiempo] ADD PRIMARY KEY ([KeyTiempo]);
+ALTER TABLE [ApployaltyDWH].[dwh].[Dim_Tiempo] ADD PRIMARY KEY ([KeyTiempo]);
 
 GO
 
@@ -23,8 +23,8 @@ IF (@@ERROR <> 0)
     SET NOEXEC ON;
 GO
 
-ALTER TABLE [dwh].[Fact_Cupon]  WITH CHECK ADD  CONSTRAINT [FK_Fact_Cupon_Dim_Tiempo] FOREIGN KEY([KeyFechaCorte])
-REFERENCES [dwh].[Dim_Tiempo] ([KeyTiempo])
+ALTER TABLE [ApployaltyDWH].[dwh].[Fact_Cupon]  WITH CHECK ADD  CONSTRAINT [FK_Fact_Cupon_Dim_Tiempo] FOREIGN KEY([KeyFechaCorte])
+REFERENCES [ApployaltyDWH].[dwh].[Dim_Tiempo] ([KeyTiempo])
 
 GO
 
@@ -32,8 +32,8 @@ IF (@@ERROR <> 0)
     SET NOEXEC ON;
 GO
 
-ALTER TABLE [dwh].[Fact_Planes]  WITH CHECK ADD  CONSTRAINT [FK_Fact_Planes_Dim_Tiempo] FOREIGN KEY([KeyFechaCorte])
-REFERENCES [dwh].[Dim_Tiempo] ([KeyTiempo])
+ALTER TABLE [ApployaltyDWH].[dwh].[Fact_Planes]  WITH CHECK ADD  CONSTRAINT [FK_Fact_Planes_Dim_Tiempo] FOREIGN KEY([KeyFechaCorte])
+REFERENCES [ApployaltyDWH].[dwh].[Dim_Tiempo] ([KeyTiempo])
 
 GO
 
@@ -41,8 +41,8 @@ IF (@@ERROR <> 0)
     SET NOEXEC ON;
 GO
 
-ALTER TABLE [dwh].[Fact_Facturacion]  WITH CHECK ADD  CONSTRAINT [FK_Fact_Facturacion_Dim_Tiempo] FOREIGN KEY([KeyFechaFacturacion])
-REFERENCES [dwh].[Dim_Tiempo] ([KeyTiempo])
+ALTER TABLE [ApployaltyDWH].[dwh].[Fact_Facturacion]  WITH CHECK ADD  CONSTRAINT [FK_Fact_Facturacion_Dim_Tiempo] FOREIGN KEY([KeyFechaFacturacion])
+REFERENCES [ApployaltyDWH].[dwh].[Dim_Tiempo] ([KeyTiempo])
 
 GO
 
@@ -50,8 +50,8 @@ IF (@@ERROR <> 0)
     SET NOEXEC ON;
 GO
 
-ALTER TABLE [dwh].[Fact_Promociones]  WITH CHECK ADD  CONSTRAINT [FK_Fact_Promociones_Dim_Tiempo] FOREIGN KEY([KeyFechaCorte])
-REFERENCES [dwh].[Dim_Tiempo] ([KeyTiempo])
+ALTER TABLE [ApployaltyDWH].[dwh].[Fact_Promociones]  WITH CHECK ADD  CONSTRAINT [FK_Fact_Promociones_Dim_Tiempo] FOREIGN KEY([KeyFechaCorte])
+REFERENCES [ApployaltyDWH].[dwh].[Dim_Tiempo] ([KeyTiempo])
 
 GO
 
@@ -59,8 +59,8 @@ IF (@@ERROR <> 0)
     SET NOEXEC ON;
 GO
 
-ALTER TABLE [dwh].[Fact_AfiliacionEmpresa]  WITH CHECK ADD  CONSTRAINT [FK_Fact_AfiliacionEmpresa_Dim_Tiempo] FOREIGN KEY([KeyFechaCorte])
-REFERENCES [dwh].[Dim_Tiempo] ([KeyTiempo])
+ALTER TABLE [ApployaltyDWH].[dwh].[Fact_AfiliacionEmpresa]  WITH CHECK ADD  CONSTRAINT [FK_Fact_AfiliacionEmpresa_Dim_Tiempo] FOREIGN KEY([KeyFechaCorte])
+REFERENCES [ApployaltyDWH].[dwh].[Dim_Tiempo] ([KeyTiempo])
 
 GO
 
@@ -68,8 +68,8 @@ IF (@@ERROR <> 0)
     SET NOEXEC ON;
 GO
 
-ALTER TABLE [dwh].[Fact_AfiliacionWebo]  WITH CHECK ADD  CONSTRAINT [FK_Fact_AfiliacionWebo_Dim_Tiempo] FOREIGN KEY([KeyFechaCorte])
-REFERENCES [dwh].[Dim_Tiempo] ([KeyTiempo])
+ALTER TABLE [ApployaltyDWH].[dwh].[Fact_AfiliacionWebo]  WITH CHECK ADD  CONSTRAINT [FK_Fact_AfiliacionWebo_Dim_Tiempo] FOREIGN KEY([KeyFechaCorte])
+REFERENCES [ApployaltyDWH].[dwh].[Dim_Tiempo] ([KeyTiempo])
 
 GO
 
