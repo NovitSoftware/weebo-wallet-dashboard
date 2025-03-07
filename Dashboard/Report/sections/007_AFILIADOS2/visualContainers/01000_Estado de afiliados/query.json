@@ -1,0 +1,86 @@
+{
+  "Commands": [
+    {
+      "SemanticQueryDataShapeCommand": {
+        "Query": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dwh Dim_Afiliado",
+              "Type": 0
+            }
+          ],
+          "Select": [
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "AfiliadosActivosPorcentaje"
+              },
+              "Name": "dwh Dim_Afiliado.AfiliadosActivosPorcentaje",
+              "NativeReferenceName": "Activos"
+            },
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "AfiliadosEnRiesgoPorcentaje"
+              },
+              "Name": "dwh Dim_Afiliado.AfiliadosEnRiesgoPorcentaje",
+              "NativeReferenceName": "En Riesgo"
+            },
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "AfiliadosPerdidosPorcentaje"
+              },
+              "Name": "dwh Dim_Afiliado.AfiliadosPerdidosPorcentaje",
+              "NativeReferenceName": "Perdidos"
+            }
+          ],
+          "OrderBy": [
+            {
+              "Direction": 2,
+              "Expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "d"
+                    }
+                  },
+                  "Property": "AfiliadosActivosPorcentaje"
+                }
+              }
+            }
+          ]
+        },
+        "Binding": {
+          "Primary": {
+            "Groupings": [
+              {
+                "Projections": [
+                  0,
+                  1,
+                  2
+                ]
+              }
+            ]
+          },
+          "Version": 1
+        },
+        "ExecutionMetricsKind": 1
+      }
+    }
+  ]
+}

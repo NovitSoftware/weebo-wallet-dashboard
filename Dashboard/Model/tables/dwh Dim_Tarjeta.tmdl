@@ -1,14 +1,14 @@
 ﻿table 'dwh Dim_Tarjeta'
 
-	measure TotalTarjetasActivadas = ```
+	measure TotalTarjetasActivadas =
 			
+			COALESCE(
 			CALCULATE(
 			    COUNTROWS('dwh Dim_Tarjeta'),
 			    'dwh Dim_Tarjeta'[FechaActivo] >= MIN('dwh Dim_Tarjeta'[FechaActivo]) && 'dwh Dim_Tarjeta'[FechaActivo] <= MAX('dwh Dim_Tarjeta'[FechaActivo]),
 			    NOT ISBLANK('dwh Dim_Tarjeta'[FechaActivo])
 			)
-			
-			```
+			, "NA")
 		formatString: 0
 
 	measure VariacionTarjetasActivas = ```
@@ -31,7 +31,7 @@
 			    )
 			
 			-- Variación entre los dos períodos
-			RETURN TarjetasActivasHastaFin - TarjetasActivasHastaInicio
+			RETURN COALESCE(TarjetasActivasHastaFin - TarjetasActivasHastaInicio, "NA")
 			
 			```
 
@@ -55,7 +55,7 @@
 			    )
 			
 			RETURN
-			    DIVIDE(TotalTarjetasActivadas, DiasEnRango, 0)  -- Calcula el promedio
+			    COALESCE(DIVIDE(TotalTarjetasActivadas, DiasEnRango, 0), "NA")  -- Calcula el promedio
 			
 			```
 

@@ -1,15 +1,17 @@
 ﻿table 'dwh Fact_Planes'
 
-	measure TotalSaldoTarjetas = ```
+	measure TotalSaldoTarjetas =
 			
+			COALESCE(
 			SUM('dwh Fact_Planes'[SaldoTarjetasAdquiridas])
-			
-			```
+			, "NA")
 		formatString: 0
 
 	measure PromedioSaldoTarjetas = ```
 			
+			COALESCE(
 			AVERAGE('dwh Fact_Planes'[SaldoTarjetasAdquiridas])
+			, "NA")
 			
 			
 			```
@@ -36,7 +38,7 @@
 			    )
 			
 			-- Variación entre los dos períodos
-			RETURN SaldoHastaFin - SaldoHastaInicio
+			RETURN COALESCE(SaldoHastaFin - SaldoHastaInicio, "NA")
 			
 			```
 		formatString: 0
@@ -55,22 +57,26 @@
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure PromedioStickersPorTarjeta = ```
+	measure PromedioStickersPorTarjeta =
 			
+			COALESCE(
 			DIVIDE(
 			    SUMX('dwh Fact_Planes', COALESCE('dwh Fact_Planes'[StickersEntregados], 0)),
 			    SUM('dwh Fact_Planes'[TarjetasActivadas]),
 			    0
 			)
-			
-			```
+			,"NA")
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure TarjetasCompradas =
 			
-			COALESCE(SUM('dwh Fact_Planes'[TarjetasAdquiridas]),0)
+			COALESCE(SUM('dwh Fact_Planes'[TarjetasAdquiridas]),"NA")
 		formatString: 0
+
+	measure SumaStickerEntregados = COALESCE(SUM('dwh Fact_Planes'[StickersEntregados]),"NA")
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column KeyFactPlan
 		dataType: int64

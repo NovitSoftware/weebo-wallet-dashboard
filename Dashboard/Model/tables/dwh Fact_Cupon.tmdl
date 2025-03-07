@@ -2,6 +2,7 @@
 
 	measure TotalStickersEntregados = ```
 			
+			COALESCE(
 			SUMX (
 			    SUMMARIZE (
 			        'dwh Fact_Cupon', 
@@ -11,7 +12,7 @@
 			    ), 
 			    [MaxStickers]
 			)
-			
+			,"NA")
 			```
 		formatString: 0
 
@@ -45,13 +46,14 @@
 			
 			-- Retornar la variación
 			RETURN
-			    StickersFin - StickersInicio
+			    COALESCE(StickersFin - StickersInicio,"NA")
 			
 			```
 		formatString: 0
 
-	measure PromedioStickersPorEmpresa = ```
+	measure PromedioStickersPorEmpresa =
 			
+			COALESCE(
 			CALCULATE (
 			    AVERAGEX (
 			        SUMMARIZE (
@@ -64,17 +66,18 @@
 			    ),
 			    REMOVEFILTERS('dwh Fact_Cupon'[KeyEmpresa])
 			)
-			
-			```
+			, "NA")
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure TotalStickerActivos =
 			
+			COALESCE(
 			CALCULATE(
 			    SUM('dwh Fact_Cupon'[StickersEntregados]),
 			    'dwh Fact_Cupon'[FlagCuponVigente] = 1
 			)
+			,"NA")
 		formatString: 0
 
 	measure VariacionStickersActivos = ```
@@ -104,13 +107,14 @@
 			
 			-- Retornar la variación
 			RETURN
-			    StickersFin - StickersInicio
+			    COALESCE(StickersFin - StickersInicio, "NA")
 			
 			```
 		formatString: 0
 
-	measure PromedioStickersGeneral = ```
+	measure PromedioStickersGeneral =
 			
+			COALESCE(
 			AVERAGEX (
 			    SUMMARIZE (
 			        'dwh Fact_Cupon',
@@ -119,8 +123,7 @@
 			    ),
 			    [MaxStickers]
 			)
-			
-			```
+			, "NA")
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
@@ -131,7 +134,7 @@
 			        SUM('dwh Fact_Cupon'[FlagCuponRedimido]), 
 			        COUNTROWS('dwh Fact_Cupon'),
 			        0
-			    ),0)
+			    ),"NA")
 			
 			```
 
@@ -193,7 +196,7 @@
 			    )
 			
 			RETURN 
-			    COALESCE(DIVIDE(TotalDias, CantidadCupones, 0),0)
+			    COALESCE(DIVIDE(TotalDias, CantidadCupones, 0),"NA")
 			
 			```
 
@@ -206,7 +209,7 @@
 			        COUNT('dwh Fact_Cupon'[FechaActivacion]),
 			        NOT(ISBLANK('dwh Fact_Cupon'[FechaActivacion]))
 			        ),
-			    0)
+			    "NA")
 		formatString: 0
 
 	measure ConteoFlagCuponRedimido_1 =
@@ -216,7 +219,7 @@
 			        COUNT('dwh Fact_Cupon'[FlagCuponRedimido]),
 			        'dwh Fact_Cupon'[FlagCuponRedimido] = 1
 			    ),
-			0)
+			"NA")
 		formatString: 0
 
 	measure ConteoFlagCuponVencido_1 = ```
@@ -226,7 +229,7 @@
 			        COUNT('dwh Fact_Cupon'[FlagCuponVencido]),
 			        'dwh Fact_Cupon'[FlagCuponVencido] = 1 
 			    ),
-			0)
+			"NA")
 			```
 		formatString: 0
 
@@ -237,7 +240,7 @@
 			    AVERAGE('dwh Fact_Cupon'[DiasHastaObtenerCupon]),
 			    'dwh Fact_Cupon'[DiasHastaObtenerCupon] <> 0,
 			    NOT(ISBLANK('dwh Fact_Cupon'[DiasHastaObtenerCupon]))
-			),0)
+			),"NA")
 			
 			```
 

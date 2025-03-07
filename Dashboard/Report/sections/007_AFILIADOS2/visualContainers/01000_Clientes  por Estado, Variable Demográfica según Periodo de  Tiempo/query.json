@@ -1,0 +1,198 @@
+{
+  "Commands": [
+    {
+      "SemanticQueryDataShapeCommand": {
+        "Query": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dwh Dim_Afiliado",
+              "Type": 0
+            }
+          ],
+          "Select": [
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "AfiliadosActivos"
+              },
+              "Name": "dwh Dim_Afiliado.AfiliadosActivos",
+              "NativeReferenceName": "Activos"
+            },
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "AfiliadosEnRiesgo"
+              },
+              "Name": "dwh Dim_Afiliado.AfiliadosEnRiesgo",
+              "NativeReferenceName": "EnRiesgo"
+            },
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "AfiliadosPerdidos"
+              },
+              "Name": "dwh Dim_Afiliado.AfiliadosPerdidos",
+              "NativeReferenceName": "Perdidos"
+            },
+            {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "PropertyVariationSource": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Name": "Variation",
+                        "Property": "FechaRegistroWebo"
+                      }
+                    },
+                    "Hierarchy": "Date Hierarchy"
+                  }
+                },
+                "Level": "Year"
+              },
+              "Name": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Year",
+              "NativeReferenceName": "FechaRegistroWebo Year"
+            },
+            {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "PropertyVariationSource": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Name": "Variation",
+                        "Property": "FechaRegistroWebo"
+                      }
+                    },
+                    "Hierarchy": "Date Hierarchy"
+                  }
+                },
+                "Level": "Quarter"
+              },
+              "Name": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Quarter",
+              "NativeReferenceName": "FechaRegistroWebo Quarter"
+            },
+            {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "PropertyVariationSource": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Name": "Variation",
+                        "Property": "FechaRegistroWebo"
+                      }
+                    },
+                    "Hierarchy": "Date Hierarchy"
+                  }
+                },
+                "Level": "Month"
+              },
+              "Name": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Month",
+              "NativeReferenceName": "FechaRegistroWebo Month"
+            },
+            {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "PropertyVariationSource": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Name": "Variation",
+                        "Property": "FechaRegistroWebo"
+                      }
+                    },
+                    "Hierarchy": "Date Hierarchy"
+                  }
+                },
+                "Level": "Day"
+              },
+              "Name": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Day",
+              "NativeReferenceName": "FechaRegistroWebo Day"
+            }
+          ],
+          "OrderBy": [
+            {
+              "Direction": 1,
+              "Expression": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "d"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "FechaRegistroWebo"
+                        }
+                      },
+                      "Hierarchy": "Date Hierarchy"
+                    }
+                  },
+                  "Level": "Year"
+                }
+              }
+            }
+          ]
+        },
+        "Binding": {
+          "Primary": {
+            "Groupings": [
+              {
+                "Projections": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              }
+            ]
+          },
+          "DataReduction": {
+            "DataVolume": 4,
+            "Primary": {
+              "Window": {
+                "Count": 1000
+              }
+            }
+          },
+          "Version": 1
+        },
+        "ExecutionMetricsKind": 1
+      }
+    }
+  ]
+}

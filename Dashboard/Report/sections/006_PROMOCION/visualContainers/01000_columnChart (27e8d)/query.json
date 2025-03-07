@@ -1,0 +1,122 @@
+{
+  "Commands": [
+    {
+      "SemanticQueryDataShapeCommand": {
+        "Query": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d1",
+              "Entity": "dwh Dim_Tiempo",
+              "Type": 0
+            },
+            {
+              "Name": "d",
+              "Entity": "dwh Fact_Promociones",
+              "Type": 0
+            }
+          ],
+          "Select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d1"
+                  }
+                },
+                "Property": "Dia"
+              },
+              "Name": "dwh Dim_Tiempo.Dia",
+              "NativeReferenceName": "Dia"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d1"
+                  }
+                },
+                "Property": "Año"
+              },
+              "Name": "dwh Dim_Tiempo.Año",
+              "NativeReferenceName": "Sum of Año"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d1"
+                  }
+                },
+                "Property": "Mes"
+              },
+              "Name": "dwh Dim_Tiempo.Mes",
+              "NativeReferenceName": "Sum of Mes"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d1"
+                  }
+                },
+                "Property": "Semana"
+              },
+              "Name": "dwh Dim_Tiempo.Semana",
+              "NativeReferenceName": "Sum of Semana"
+            },
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "TotalPromocionesActivas"
+              },
+              "Name": "dwh Fact_Promociones.TotalPromocionesActivas",
+              "NativeReferenceName": "Activas"
+            }
+          ],
+          "OrderBy": [
+            {
+              "Direction": 2,
+              "Expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "d"
+                    }
+                  },
+                  "Property": "TotalPromocionesActivas"
+                }
+              }
+            }
+          ]
+        },
+        "Binding": {
+          "Primary": {
+            "Groupings": [
+              {
+                "Projections": [
+                  0,
+                  4
+                ]
+              }
+            ]
+          },
+          "DataReduction": {
+            "DataVolume": 4,
+            "Primary": {
+              "Window": {
+                "Count": 1000
+              }
+            }
+          },
+          "Version": 1
+        },
+        "ExecutionMetricsKind": 1
+      }
+    }
+  ]
+}

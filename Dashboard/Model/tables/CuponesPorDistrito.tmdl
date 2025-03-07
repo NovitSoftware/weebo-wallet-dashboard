@@ -8,6 +8,7 @@
 		annotation SummarizationSetBy = Automatic
 
 	column TotalStickersActivos
+		formatString: 0
 		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [TotalStickersActivos]
@@ -15,6 +16,7 @@
 		annotation SummarizationSetBy = Automatic
 
 	column TotalStickersVencidos
+		formatString: 0
 		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [TotalStickersVencidos]
@@ -28,8 +30,18 @@
 				SUMMARIZE(
 				    'dwh Dim_Afiliado',
 				    'dwh Dim_Afiliado'[Distrito],
-				    "TotalStickersActivos", [TotalStickerActivos],
-				    "TotalStickersVencidos", [TotalStickerVencidos]
+				    "TotalStickersActivos", 
+				        IF(
+				            ISERROR(VALUE('dwh Fact_Cupon'[TotalStickerActivos])), 
+				            0, 
+				            VALUE('dwh Fact_Cupon'[TotalStickerActivos])
+				        ),
+				    "TotalStickersVencidos", 
+				        IF(
+				            ISERROR(VALUE('dwh Fact_Cupon'[TotalStickerVencidos])), 
+				            0, 
+				            VALUE('dwh Fact_Cupon'[TotalStickerVencidos])
+				        )
 				)
 				
 				```

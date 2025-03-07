@@ -5,11 +5,12 @@
 			VAR FechaRaiz = Min('dwh Dim_Tiempo'[Fecha])
 			VAR FechaSeleccionada = MAX('dwh Dim_Tiempo'[Fecha])
 			RETURN 
+			COALESCE(
 			CALCULATE(
 			    SUM('dwh Fact_Facturacion'[Importe]),
 			    'dwh Dim_Tiempo'[Fecha] <= FechaSeleccionada
 			)
-			
+			,"NA")
 			```
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -29,7 +30,7 @@
 			    'dwh Dim_Tiempo'[Fecha] <= Fin
 			)
 			
-			RETURN MontoFin - MontoInicio
+			RETURN COALESCE(MontoFin - MontoInicio,"NA")
 			
 			```
 
@@ -39,11 +40,12 @@
 			
 			VAR FechaSeleccionada = MAX('dwh Dim_Tiempo'[Fecha])
 			RETURN 
+			COALESCE(
 			CALCULATE(
 			    AVERAGE('dwh Fact_Facturacion'[Importe]),
 			    'dwh Dim_Tiempo'[Fecha] <= FechaSeleccionada
 			)
-			
+			,"NA")
 			```
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -86,12 +88,13 @@
 			VAR FechaInicio = FechaSeleccionada - 6 -- Rango de los últimos 7 días
 			
 			RETURN 
+			COALESCE(
 			    CALCULATE(
 			        AVERAGE('dwh Fact_Facturacion'[Importe]),
 			        'dwh Dim_Tiempo'[Fecha] >= FechaInicio && 'dwh Dim_Tiempo'[Fecha] <= FechaSeleccionada,
 			        'dwh Dim_Tiempo'[Fecha]<> BLANK() -- Asegura que no cuenta valores en blanco
 			    )
-			
+			, "NA")
 			```
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}

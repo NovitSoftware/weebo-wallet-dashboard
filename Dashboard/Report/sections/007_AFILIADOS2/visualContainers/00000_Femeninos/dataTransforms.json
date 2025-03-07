@@ -1,0 +1,67 @@
+{
+  "objects": {
+    "categoryLabels": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "projectionOrdering": {
+    "Values": [
+      0
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "FemeninosAfiliados",
+        "Name": "dwh Dim_Afiliado.FemeninosAfiliados",
+        "Type": 1,
+        "Format": "0"
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "FemeninosAfiliados",
+      "format": "0",
+      "queryName": "dwh Dim_Afiliado.FemeninosAfiliados",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Dim_Afiliado"
+            }
+          },
+          "Property": "FemeninosAfiliados"
+        }
+      }
+    }
+  ]
+}

@@ -2,17 +2,19 @@
 
 	measure PromedioAfiliados = ```
 			
+			COALESCE(
 			AVERAGEX(
 			    VALUES('CalendarioAfiliado'[Date]),
 			    'dwh Dim_Afiliado'[TotalNuevosAfiliados]
-			)
+			), "NA")
 			
 			```
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure TotalNuevosAfiliados = ```
+	measure TotalNuevosAfiliados =
 			
+			COALESCE(
 			CALCULATE(
 			    COUNT('dwh Dim_Afiliado'[KeyAfiliado]),
 			    FILTER(
@@ -21,8 +23,8 @@
 			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= MAX(CalendarioAfiliado[Date])
 			    )
 			)
-			
-			```
+			, "NA")
+		formatString: 0
 
 	measure 'Total Afiliados Sin Filtros' = ```
 			
@@ -62,19 +64,19 @@
 			    )
 			
 			-- Variación entre los dos períodos
-			RETURN AfiliadosHastaFin - AfiliadosHastaInicio
+			RETURN COALESCE(AfiliadosHastaFin - AfiliadosHastaInicio, "NA")
 			
 			```
 		formatString: 0
 
-	measure AfiliadosMasculinos = ```
+	measure AfiliadosMasculinos =
 			
+			COALESCE(
 			CALCULATE(
 			    DISTINCTCOUNT('dwh Dim_Afiliado'[KeyAfiliado]),
 			    'dwh Dim_Afiliado'[Genero] = "MASCULINO"
 			)
-			
-			```
+			, "NA")
 		formatString: 0
 
 	measure AfiliadosActivos = ```
@@ -84,13 +86,14 @@
 			    COUNTROWS('dwh Dim_Afiliado'),
 			    DATEDIFF('dwh Dim_Afiliado'[FechaUltimoConsumoWebo], TODAY(), DAY) <= 90,
 			    NOT(ISBLANK('dwh Dim_Afiliado'[FechaUltimoConsumoWebo]))
-			),0)
+			),"NA")
 			
 			```
 		formatString: 0
 
-	measure AfiliadosNuevos = ```
+	measure AfiliadosNuevos =
 			
+			COALESCE(
 			CALCULATE(
 			    DISTINCTCOUNT('dwh Dim_Afiliado'[KeyAfiliado]),
 			    FILTER(
@@ -98,8 +101,7 @@
 			        ISBLANK('dwh Dim_Afiliado'[FechaActivoWebo])
 			    )
 			)
-			
-			```
+			,"NA")
 		formatString: 0
 
 	measure AfiliadosPerdidos = ```
@@ -109,7 +111,7 @@
 			    COUNTROWS('dwh Dim_Afiliado'),
 			    DATEDIFF('dwh Dim_Afiliado'[FechaUltimoConsumoWebo], TODAY(), DAY) > 90,
 			    NOT(ISBLANK('dwh Dim_Afiliado'[FechaUltimoConsumoWebo]))
-			),0)
+			),"NA")
 			
 			```
 		formatString: 0
@@ -122,7 +124,7 @@
 			    DATEDIFF('dwh Dim_Afiliado'[FechaUltimoConsumoWebo], TODAY(), DAY) > 80 &&
 			    DATEDIFF('dwh Dim_Afiliado'[FechaUltimoConsumoWebo], TODAY(), DAY) <= 90,
 			    NOT(ISBLANK('dwh Dim_Afiliado'[FechaUltimoConsumoWebo]))
-			),0)
+			),"NA")
 			
 			```
 		formatString: 0
@@ -136,8 +138,8 @@
 			    )
 			RETURN
 			IF(
-			    ISBLANK(TotalDesafiliados) || TotalDesafiliados = 0,
-			    "0",
+			    ISBLANK(TotalDesafiliados),
+			    "NA",
 			    FORMAT(TotalDesafiliados, "#,0")
 			)
 			
@@ -149,7 +151,7 @@
 			CALCULATE(
 			    COUNTROWS('dwh Dim_Afiliado'),
 			    'dwh Dim_Afiliado'[Genero] = "femenino"
-			),0)
+			),"NA")
 			
 			```
 		formatString: 0
@@ -164,7 +166,11 @@
 			    )
 			RETURN
 			    DIVIDE(
-			        [AfiliadosActivos],
+			        IF(
+			            ISERROR(VALUE([AfiliadosActivos])), 
+			            0, 
+			            VALUE([AfiliadosActivos])
+			        ),
 			        COALESCE(TotalAfiliados, 1),
 			        0
 			    )
@@ -182,7 +188,11 @@
 			    )
 			RETURN
 			    DIVIDE(
-			        [AfiliadosEnRiesgo],
+			        IF(
+			            ISERROR(VALUE([AfiliadosEnRiesgo])), 
+			            0, 
+			            VALUE([AfiliadosEnRiesgo])
+			        ),
 			        COALESCE(TotalAfiliados, 1), 
 			        0
 			    )
@@ -200,7 +210,11 @@
 			    )
 			RETURN
 			    DIVIDE(
-			        [AfiliadosPerdidos],
+			        IF(
+			            ISERROR(VALUE([AfiliadosPerdidos])), 
+			            0, 
+			            VALUE([AfiliadosPerdidos])
+			        ),
 			        COALESCE(TotalAfiliados, 1), 
 			        0
 			    )
