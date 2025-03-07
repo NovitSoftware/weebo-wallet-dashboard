@@ -1,0 +1,51 @@
+{
+  "Commands": [
+    {
+      "SemanticQueryDataShapeCommand": {
+        "Query": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dwh Fact_Promociones",
+              "Type": 0
+            }
+          ],
+          "Select": [
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "TotalPromocionesActivas"
+              },
+              "Name": "dwh Fact_Promociones.TotalPromocionesActivas",
+              "NativeReferenceName": "TotalPromocionesActivas1"
+            }
+          ]
+        },
+        "Binding": {
+          "Primary": {
+            "Groupings": [
+              {
+                "Projections": [
+                  0
+                ]
+              }
+            ]
+          },
+          "DataReduction": {
+            "DataVolume": 3,
+            "Primary": {
+              "Top": {}
+            }
+          },
+          "Version": 1
+        },
+        "ExecutionMetricsKind": 1
+      }
+    }
+  ]
+}
