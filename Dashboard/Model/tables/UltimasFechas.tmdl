@@ -15,7 +15,7 @@
 
 		variation Variation
 			isDefault
-			relationship: a28b0dc3-149d-4b48-b11b-0bc1117f3215
+			relationship: 4461c8e5-8a0f-479a-b470-d0e9d1643478
 			defaultHierarchy: LocalDateTable_6b94448f-10dd-45e8-88d4-dccd6680ce98.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
@@ -28,7 +28,7 @@
 
 		variation Variation
 			isDefault
-			relationship: fdb1aa4d-ca98-4d38-812f-6f3c898f668c
+			relationship: 5a40737a-53da-4031-9da9-17dd6852469e
 			defaultHierarchy: LocalDateTable_0259c88c-5779-4e95-8c11-d0c032169312.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
@@ -37,47 +37,37 @@
 		mode: import
 		source = ```
 				
-				VAR UltimoDia = TODAY() - 1
-				VAR Ayer = TODAY() - 1
-				VAR DiaAyer = WEEKDAY(Ayer, 2)  -- Determina qué día fue ayer (1 = lunes, 7 = domingo)
+				VAR FechaReferencia = MAX('dwh Dim_Tiempo'[Fecha])  -- Tomamos la última fecha seleccionada en el filtro de Dim_Tiempo
 				
-				-- Calculamos la última semana con la condición para el domingo/lunes
-				VAR UltimaSemana =
-				    SWITCH(
-				        TRUE(),
-				        DiaAyer = 7, TODAY() - WEEKDAY(TODAY(), 2) - 7,  -- Si ayer fue domingo, la semana empieza el lunes
-				        DiaAyer = 1, TODAY() - WEEKDAY(TODAY(), 2),  -- Si ayer fue lunes, la semana empieza el domingo
-				        TODAY() - WEEKDAY(TODAY(), 2)  -- Caso por defecto (semana normal)
-				    )
 				
-				-- El cálculo de "Fecha Final" será simplemente hoy
-				VAR FechaFinal = TODAY()
+				VAR UltimoDia = FechaReferencia - 1
+				VAR UltimaSemana = FechaReferencia - 7
+				VAR UltimoMes = EDATE(FechaReferencia, -1)
+				VAR UltimoAno = DATE(YEAR(FechaReferencia) - 1, 1, 1)
 				
-				VAR UltimoMes = EDATE(TODAY(), -1)
-				VAR UltimoAno = DATE(YEAR(TODAY()) - 1, 1, 1)
 				
 				RETURN
 				    UNION(
 				        SELECTCOLUMNS(
-				            { ("Último día", UltimoDia, TODAY()) },
+				            { ("Último día", UltimoDia, FechaReferencia) },
 				            "Texto", [Value1],
 				            "Fecha Inicial", [Value2],
 				            "Fecha Final", [Value3]
 				        ),
 				        SELECTCOLUMNS(
-				            { ("Última semana", UltimaSemana, FechaFinal) },  -- "Fecha Final" es hoy
+				            { ("Última semana", UltimaSemana, FechaReferencia) },
 				            "Texto", [Value1],
 				            "Fecha Inicial", [Value2],
 				            "Fecha Final", [Value3]
 				        ),
 				        SELECTCOLUMNS(
-				            { ("Último mes", UltimoMes, TODAY()) },
+				            { ("Último mes", UltimoMes, FechaReferencia) },
 				            "Texto", [Value1],
 				            "Fecha Inicial", [Value2],
 				            "Fecha Final", [Value3]
 				        ),
 				        SELECTCOLUMNS(
-				            { ("Último año", UltimoAno, TODAY()) },
+				            { ("Último año", UltimoAno, FechaReferencia) },
 				            "Texto", [Value1],
 				            "Fecha Inicial", [Value2],
 				            "Fecha Final", [Value3]
