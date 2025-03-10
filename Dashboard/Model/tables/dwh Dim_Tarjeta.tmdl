@@ -2,32 +2,48 @@
 
 	measure TotalTarjetasActivadas = ```
 			
-			CALCULATE(
-			    COUNTROWS('dwh Dim_Tarjeta'),
-			    'dwh Dim_Tarjeta'[FechaActivo] >= MIN('dwh Dim_Tarjeta'[FechaActivo]) && 'dwh Dim_Tarjeta'[FechaActivo] <= MAX('dwh Dim_Tarjeta'[FechaActivo]),
-			    NOT ISBLANK('dwh Dim_Tarjeta'[FechaActivo])
-			)
+			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])
+			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])
+			
+			-- Limitar las fechas del rango
+			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del calendario
+			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del calendario
+			
+			RETURN  
+			CALCULATE(  
+			    COUNTROWS('dwh Dim_Tarjeta'),  
+			    'dwh Dim_Tarjeta'[FechaActivo] >= MAX(FechaInicio, FechaMin) &&  
+			    'dwh Dim_Tarjeta'[FechaActivo] <= MIN(FechaFinal, FechaMax) && 
+			    'dwh Dim_Tarjeta'[FechaActivo] <= FechaMax &&  -- Limita a las fechas del calendario general
+			    NOT ISBLANK('dwh Dim_Tarjeta'[FechaActivo])  
+			)  
 			
 			```
 		formatString: 0
 
 	measure VariacionTarjetasActivas = ```
 			
-			VAR FechaRaiz = MIN('CalendarioGeneral'[Date])
-			VAR FechaFin = MAX('CalendarioGeneral'[Date])
+			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])
+			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])
 			
-			-- Tarjetas activas hasta la FechaRaiz
+			-- Limitar las fechas del rango
+			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del calendario
+			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del calendario
+			
+			-- Tarjetas activas hasta la FechaInicio
 			VAR TarjetasActivasHastaInicio = 
 			    CALCULATE(
 			        COUNT('dwh Dim_Tarjeta'[KeyTarjeta]),
-			        'dwh Dim_Tarjeta'[FechaActivo] <= FechaRaiz
+			        'dwh Dim_Tarjeta'[FechaActivo] <= MAX(FechaInicio, FechaMin) &&
+			        'dwh Dim_Tarjeta'[FechaActivo] <= FechaMax  -- Limita a las fechas del calendario general
 			    )
 			
-			-- Tarjetas activas hasta la FechaFin
+			-- Tarjetas activas hasta la FechaFinal
 			VAR TarjetasActivasHastaFin = 
 			    CALCULATE(
 			        COUNT('dwh Dim_Tarjeta'[KeyTarjeta]),
-			        'dwh Dim_Tarjeta'[FechaActivo] <= FechaFin
+			        'dwh Dim_Tarjeta'[FechaActivo] <= MIN(FechaFinal, FechaMax) &&
+			        'dwh Dim_Tarjeta'[FechaActivo] <= FechaMax  -- Limita a las fechas del calendario general
 			    )
 			
 			-- Variación entre los dos períodos
@@ -39,22 +55,34 @@
 
 	measure PromedioTarjetasActivadasPorDia = ```
 			
+			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])
+			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])
+			
+			-- Limitar las fechas del rango
+			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del calendario
+			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del calendario
+			
+			-- Calcular los días únicos en el rango
 			VAR DiasEnRango = 
 			    CALCULATE(
 			        COUNTROWS(VALUES('dwh Dim_Tarjeta'[FechaActivo])),  -- Cuenta los días únicos dentro del rango
-			        'dwh Dim_Tarjeta'[FechaActivo] >= MIN('CalendarioGeneral'[Date]) && 
-			        'dwh Dim_Tarjeta'[FechaActivo] <= MAX('CalendarioGeneral'[Date])
+			        'dwh Dim_Tarjeta'[FechaActivo] >= MAX(FechaInicio, FechaMin) && 
+			        'dwh Dim_Tarjeta'[FechaActivo] <= MIN(FechaFinal, FechaMax) &&  -- Limita a las fechas del calendario general
+			        'dwh Dim_Tarjeta'[FechaActivo] <= FechaMax
 			    )
 			
+			-- Calcular el total de tarjetas activadas en el rango
 			VAR TotalTarjetasActivadas = 
 			    CALCULATE(
 			        COUNTROWS('dwh Dim_Tarjeta'),  -- Cuenta todas las tarjetas activadas
-			        'dwh Dim_Tarjeta'[FechaActivo] >= MIN('CalendarioGeneral'[Date]) && 
-			        'dwh Dim_Tarjeta'[FechaActivo] <= MAX('CalendarioGeneral'[Date]) &&
-			        'dwh Dim_Tarjeta'[FechaActivo] <> BLANK()  -- Asegura que la fecha no sea nula
+			        'dwh Dim_Tarjeta'[FechaActivo] >= MAX(FechaInicio, FechaMin) && 
+			        'dwh Dim_Tarjeta'[FechaActivo] <= MIN(FechaFinal, FechaMax) &&
+			        'dwh Dim_Tarjeta'[FechaActivo] <> BLANK() &&  -- Asegura que la fecha no sea nula
+			        'dwh Dim_Tarjeta'[FechaActivo] <= FechaMax
 			    )
 			
-			RETURN
+			-- Devuelve el promedio de tarjetas activadas por día
+			RETURN 
 			    DIVIDE(TotalTarjetasActivadas, DiasEnRango, 0)  -- Calcula el promedio
 			
 			```
@@ -118,7 +146,7 @@
 		mode: import
 		source =
 				let
-				    Source = Sql.Databases("LocalHost"),
+				    Source = Sql.Databases("40.79.18.177"),
 				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
 				    dwh_Dim_Tarjeta = ApployaltyDWH{[Schema="dwh",Item="Dim_Tarjeta"]}[Data]
 				in

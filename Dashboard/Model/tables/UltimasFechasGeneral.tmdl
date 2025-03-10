@@ -1,0 +1,79 @@
+﻿table UltimasFechasGeneral
+
+	column Texto
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Texto]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha Inicial'
+		formatString: General Date
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Fecha Inicial]
+
+		variation Variation
+			isDefault
+			relationship: c6e9bbcb-078b-4bc3-8f74-f2675b692879
+			defaultHierarchy: LocalDateTable_84d5a327-c2e6-4e23-a404-fa7d1a4a1cc9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha Final'
+		formatString: General Date
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Fecha Final]
+
+		variation Variation
+			isDefault
+			relationship: 06453e3c-ed8a-4e6f-887a-26257dcfb906
+			defaultHierarchy: LocalDateTable_5f0bcdab-8452-43e7-8041-5c083b762aea.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition UltimasFechasGeneral = calculated
+		mode: import
+		source = ```
+				
+				VAR FechaReferencia = TODAY() 
+				-- Obtener las medidas que ya definiste
+				VAR UltimoDia = [UltimoDiaMedida]
+				VAR UltimaSemana = [UltimaSemana]
+				VAR UltimoMes = [UltimoMesMedida]
+				VAR UltimoAno = [UltimoAnoMedida]
+				
+				-- Devolver las fechas correspondientes con las medidas
+				RETURN
+				    UNION(
+				        SELECTCOLUMNS(
+				            { ("Último día", UltimoDia, FechaReferencia) },
+				            "Texto", "Último día",
+				            "Fecha Inicial", UltimoDia,
+				            "Fecha Final", FechaReferencia
+				        ),
+				        SELECTCOLUMNS(
+				            { ("Última semana", UltimaSemana, FechaReferencia) },
+				            "Texto", "Última semana",
+				            "Fecha Inicial", UltimaSemana,
+				            "Fecha Final", FechaReferencia
+				        ),
+				        SELECTCOLUMNS(
+				            { ("Último mes", UltimoMes, FechaReferencia) },
+				            "Texto", "Último mes",
+				            "Fecha Inicial", UltimoMes,
+				            "Fecha Final", FechaReferencia
+				        ),
+				        SELECTCOLUMNS(
+				            { ("Último año", UltimoAno, FechaReferencia) },
+				            "Texto", "Último año",
+				            "Fecha Inicial", UltimoAno,
+				            "Fecha Final", FechaReferencia
+				        )
+				    )
+				
+				```
+
+	annotation PBI_Id = 6fb793f0a9134077885ed3a31cfc6aa0
+

@@ -25780,6 +25780,432 @@
 			        }
 			      ]
 			    },
+			    "sysdiagram": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "sysdiagrams"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sysdiagram": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "sysdiagram.name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "sysdiagrams",
+			          "ConceptualProperty": "name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "sysdiagram.principal_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "sysdiagrams",
+			          "ConceptualProperty": "principal_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "principal id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "principal_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "principal": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "principal identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "principal identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "principal identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "principal credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "main": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "major": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "chief": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "primary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "prime": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "sysdiagram.diagram_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "sysdiagrams",
+			          "ConceptualProperty": "diagram_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "diagram id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "diagram_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "diagram": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "diagram identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "diagram identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "diagram identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "diagram credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "illustration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "schema": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "drawing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "scheme": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "sysdiagram.version": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "sysdiagrams",
+			          "ConceptualProperty": "version"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "version": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "form": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "style": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "description": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "account": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "report": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "story": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "side": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
 			    "dwh_Fact_AfiliacionEmpresa.tarjetas_activadas_clientes_activos": {
 			      "Definition": {
 			        "Binding": {
@@ -25950,6 +26376,16 @@
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Variacion": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -25993,6 +26429,16 @@
 			            },
 			            "Weight": 0.591
 			          }
+			        },
+			        {
+			          "Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -26015,6 +26461,16 @@
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Variacion": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -26131,6 +26587,16 @@
 			            },
 			            "Weight": 0.591
 			          }
+			        },
+			        {
+			          "Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -26154,6 +26620,16 @@
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Promedio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -26176,6 +26652,16 @@
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Promedio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -26219,6 +26705,16 @@
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -26293,6 +26789,16 @@
 			            },
 			            "Weight": 0.492
 			          }
+			        },
+			        {
+			          "Variacion": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -26315,6 +26821,16 @@
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Promedio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -26359,6 +26875,16 @@
 			            },
 			            "Weight": 0.591
 			          }
+			        },
+			        {
+			          "Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -26381,6 +26907,16 @@
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Variacion": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -26405,6 +26941,16 @@
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Promedio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -26412,7 +26958,7 @@
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "dwh Fact_Facturacion",
-			          "ConceptualProperty": "Monto Total Facturado"
+			          "ConceptualProperty": "TotalFacturado"
 			        }
 			      },
 			      "State": "Generated",
@@ -26441,6 +26987,16 @@
 			            },
 			            "Weight": 0.591
 			          }
+			        },
+			        {
+			          "Monto": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -26448,7 +27004,7 @@
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "dwh Fact_Facturacion",
-			          "ConceptualProperty": "Variación Monto Facturado"
+			          "ConceptualProperty": "VariacionMontoFacturado"
 			        }
 			      },
 			      "State": "Generated",
@@ -26457,6 +27013,16 @@
 			          "variación monto facturado": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Variación": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -26464,7 +27030,7 @@
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "dwh Fact_Facturacion",
-			          "ConceptualProperty": "Promedio Facturado"
+			          "ConceptualProperty": "PromedioFacturado"
 			        }
 			      },
 			      "State": "Generated",
@@ -26472,6 +27038,16 @@
 			        {
 			          "promedio facturado": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Promedio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -26516,6 +27092,16 @@
 			            },
 			            "Weight": 0.591
 			          }
+			        },
+			        {
+			          "Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -26539,6 +27125,16 @@
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Promedio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -26561,6 +27157,16 @@
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Variacion": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -27832,1080 +28438,6 @@
 			        {
 			          "quincena": {
 			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "calendario_general.dia_anterior": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CalendarioGeneral",
-			          "ConceptualProperty": "DiaAnterior"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "dia anterior": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "DiaAnterior": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "calendario_general.semana_anterior": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CalendarioGeneral",
-			          "ConceptualProperty": "SemanaAnterior"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "semana anterior": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "SemanaAnterior": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "calendario_general.quincena_anterior": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CalendarioGeneral",
-			          "ConceptualProperty": "QuincenaAnterior"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "quincena anterior": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "QuincenaAnterior": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "calendario_general.mes_anterior": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CalendarioGeneral",
-			          "ConceptualProperty": "MesAnterior"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "mes anterior": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "MesAnterior": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "calendario_afiliado": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CalendarioAfiliado"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "calendario afiliado": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "CalendarioAfiliado": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "calendario_afiliado.date": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CalendarioAfiliado",
-			          "ConceptualProperty": "Date"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "date": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "moment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "period": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "calendario_afiliado.date.variation.date_hierarchy": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CalendarioAfiliado",
-			          "VariationSource": "Date",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Date Hierarchy"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "date hierarchy": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "calendario_afiliado.date.variation.date_hierarchy.year": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CalendarioAfiliado",
-			          "VariationSource": "Date",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Date Hierarchy",
-			          "HierarchyLevel": "Year"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "year": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date year": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date yr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "yr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "moment year": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "period year": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "calendario_afiliado.date.variation.date_hierarchy.quarter": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CalendarioAfiliado",
-			          "VariationSource": "Date",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Date Hierarchy",
-			          "HierarchyLevel": "Quarter"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "quarter": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date quarter": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date qtr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.833
-			          }
-			        },
-			        {
-			          "qtr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.818
-			          }
-			        },
-			        {
-			          "moment quarter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "period quarter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "calendario_afiliado.date.variation.date_hierarchy.month": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CalendarioAfiliado",
-			          "VariationSource": "Date",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Date Hierarchy",
-			          "HierarchyLevel": "Month"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "month": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date month": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date mth": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "mth": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "moment month": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "period month": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "calendario_afiliado.date.variation.date_hierarchy.day": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CalendarioAfiliado",
-			          "VariationSource": "Date",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Date Hierarchy",
-			          "HierarchyLevel": "Day"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "day": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date day": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "moment day": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "period day": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "calendario_afiliado.year": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CalendarioAfiliado",
-			          "ConceptualProperty": "Year"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "year": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "yr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "calendario_afiliado.month": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CalendarioAfiliado",
-			          "ConceptualProperty": "Month"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "month": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "mth": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        }
-			      ]
-			    },
-			    "calendario_afiliado.month_name": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CalendarioAfiliado",
-			          "ConceptualProperty": "MonthName"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "month name": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "MonthName": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "month nickname": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "month title": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "month label": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "month tag": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "mth name": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        }
-			      ]
-			    },
-			    "calendario_afiliado.month_year": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CalendarioAfiliado",
-			          "ConceptualProperty": "MonthYear"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "month year": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "MonthYear": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "month yr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "mth year": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        }
-			      ]
-			    },
-			    "calendario_afiliado.quarter": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CalendarioAfiliado",
-			          "ConceptualProperty": "Quarter"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "quarter": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "qtr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.818
-			          }
-			        }
-			      ]
-			    },
-			    "calendario_afiliado.week_day": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CalendarioAfiliado",
-			          "ConceptualProperty": "WeekDay"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "week day": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "WeekDay": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "ordinary": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "standard": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "basic": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "routine": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        }
-			      ]
-			    },
-			    "calendario_afiliado.week_day_name": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CalendarioAfiliado",
-			          "ConceptualProperty": "WeekDayName"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "week day name": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "WeekDayName": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "day name": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "week day nickname": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.739
-			          }
-			        },
-			        {
-			          "week day title": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.739
-			          }
-			        },
-			        {
-			          "week day label": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.739
-			          }
-			        },
-			        {
-			          "week day tag": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.739
-			          }
-			        },
-			        {
-			          "day nickname": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "day title": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "day label": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "day tag": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        }
-			      ]
-			    },
-			    "calendario_afiliado.is_weekend": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CalendarioAfiliado",
-			          "ConceptualProperty": "IsWeekend"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "is weekend": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "IsWeekend": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "weekend": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
-			    "calendario_afiliado.year_month_number": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CalendarioAfiliado",
-			          "ConceptualProperty": "YearMonthNumber"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "year month number": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "YearMonthNumber": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "month number": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "year month no": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.739
-			          }
-			        },
-			        {
-			          "month no": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "yr month number": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "year mth number": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "mth number": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        }
-			      ]
-			    },
-			    "calendario_afiliado.year_week_number": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CalendarioAfiliado",
-			          "ConceptualProperty": "YearWeekNumber"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "year week number": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "YearWeekNumber": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "week number": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "year week no": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.739
-			          }
-			        },
-			        {
-			          "week no": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "yr week number": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        }
-			      ]
-			    },
-			    "calendario_afiliado.is_holiday": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CalendarioAfiliado",
-			          "ConceptualProperty": "IsHoliday"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "is holiday": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "IsHoliday": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "holiday": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "is break": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "is leave": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "is trip": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "is outing": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "break": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "leave": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "trip": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "outing": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "is vacation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.461
-			          }
-			        },
-			        {
-			          "is sabbatical": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.461
 			          }
 			        }
 			      ]
@@ -31860,343 +31392,9 @@
 			          }
 			        }
 			      ]
-			    },
-			    "dwh_Dim_Afiliado.rango_edade": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "dwh Dim_Afiliado",
-			          "ConceptualProperty": "RangoEdades"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "rango edade": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "RangoEdades": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "dwh_Dim_Afiliado.frecuencia_promedio_rango_edades": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "dwh Dim_Afiliado",
-			          "ConceptualProperty": "FrecuenciaPromedioRangoEdades"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "frecuencia promedio rango edades": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "FrecuenciaPromedioRangoEdades": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "dwh_Dim_Afiliado.recencia_promedio_por_rango_edad": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "dwh Dim_Afiliado",
-			          "ConceptualProperty": "RecenciaPromedioPorRangoEdad"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "recencia promedio por rango edad": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "RecenciaPromedioPorRangoEdad": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "Promedio": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "dwh_Dim_Tiempo.periodo_del_dia": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "dwh Dim_Tiempo",
-			          "ConceptualProperty": "PeriodoDelDia"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "periodo del dia": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "PeriodoDelDia": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "dwh_Dim_Tiempo.dia_semana": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "dwh Dim_Tiempo",
-			          "ConceptualProperty": "DiaSemana"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "dia semana": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "DiaSemana": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "dwh_Fact_AfiliacionEmpresa.recencia_promedio": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "dwh Fact_AfiliacionEmpresa",
-			          "ConceptualProperty": "RecenciaPromedio"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "recencia promedio": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "RecenciaPromedio": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "dwh_Fact_AfiliacionEmpresa.frecuencia_promedio": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "dwh Fact_AfiliacionEmpresa",
-			          "ConceptualProperty": "FrecuenciaPromedio"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "frecuencia promedio": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "FrecuenciaPromedio": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "dwh_Fact_Facturacion.valor_monetario_semanal": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "dwh Fact_Facturacion",
-			          "ConceptualProperty": "Valor Monetario Semanal"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "valor monetario semanal": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "dwh_Fact_Facturacion.visitas_promedio": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "dwh Fact_Facturacion",
-			          "ConceptualProperty": "VisitasPromedio"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "visitas promedio": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "VisitasPromedio": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "dwh_Fact_Plane.tarjetas_compradas": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "dwh Fact_Planes",
-			          "ConceptualProperty": "TarjetasCompradas"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "tarjetas compradas": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "TarjetasCompradas": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "top_3_tarjetas_activas_por_distrito": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Top3TarjetasActivasPorDistrito"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "top 3 tarjetas activas por distrito": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "top 3 tarjeta activa por distrito": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.78
-			          }
-			        },
-			        {
-			          "Top3TarjetasActivasPorDistrito": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "top_3_tarjetas_activas_por_distrito.distrito": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Top3TarjetasActivasPorDistrito",
-			          "ConceptualProperty": "Distrito"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "distrito": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "top_3_tarjetas_activas_por_distrito.tarjetas_activa": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Top3TarjetasActivasPorDistrito",
-			          "ConceptualProperty": "Tarjetas Activas"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "tarjetas activa": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "tarjeta activa": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.78
-			          }
-			        }
-			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "dwh_Dim_Tiempo_fecha_convertida_variation_date_hierarchy_has_day": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Dim_Tiempo"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy"
-			          }
-			        },
-			        "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy.day": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fecha_fixed_date_hierarchies_have_fecha_fixed_days"
-			        }
-			      ]
-			    },
 			    "dwh_Dim_Tiempo_fecha_convertida_variation_date_hierarchy_has_month": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh Dim_Tiempo"
@@ -32656,171 +31854,6 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fecha_inicials_have_fecha_inicial_date_hierarchies"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_date_variation_date_hierarchy_has_day": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_afiliado.date.variation.date_hierarchy.day": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_days"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_date_variation_date_hierarchy_has_month": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_afiliado.date.variation.date_hierarchy.month": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_months"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_date_variation_date_hierarchy_has_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_afiliado.date.variation.date_hierarchy.quarter": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_quarters"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_date_variation_date_hierarchy_has_year": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
-			          }
-			        },
-			        "calendario_afiliado.date.variation.date_hierarchy.year": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_years"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_date_has_variation_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado.date": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date"
-			          }
-			        },
-			        "calendario_afiliado.date.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date.variation.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado.date"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.date.variation.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dates_have_date_hierarchies"
 			        }
 			      ]
 			    },
@@ -49368,435 +48401,6 @@
 			        }
 			      ]
 			    },
-			    "top_3_tarjetas_activas_por_distrito_has_tarjetas_activa": {
-			      "Binding": {
-			        "ConceptualEntity": "Top3TarjetasActivasPorDistrito"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "top_3_tarjetas_activas_por_distrito": {
-			          "Target": {
-			            "Entity": "top_3_tarjetas_activas_por_distrito"
-			          }
-			        },
-			        "top_3_tarjetas_activas_por_distrito.tarjetas_activa": {
-			          "Target": {
-			            "Entity": "top_3_tarjetas_activas_por_distrito.tarjetas_activa"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "top_3_tarjetas_activas_por_distrito"
-			            },
-			            "Object": {
-			              "Role": "top_3_tarjetas_activas_por_distrito.tarjetas_activa"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "top_3_tarjetas_activas_por_distrito_have_tarjetas_activas"
-			        }
-			      ]
-			    },
-			    "top_3_tarjetas_activas_por_distrito_has_distrito": {
-			      "Binding": {
-			        "ConceptualEntity": "Top3TarjetasActivasPorDistrito"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "top_3_tarjetas_activas_por_distrito": {
-			          "Target": {
-			            "Entity": "top_3_tarjetas_activas_por_distrito"
-			          }
-			        },
-			        "top_3_tarjetas_activas_por_distrito.distrito": {
-			          "Target": {
-			            "Entity": "top_3_tarjetas_activas_por_distrito.distrito"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "top_3_tarjetas_activas_por_distrito"
-			            },
-			            "Object": {
-			              "Role": "top_3_tarjetas_activas_por_distrito.distrito"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "top_3_tarjetas_activas_por_distrito_have_distrito"
-			        }
-			      ]
-			    },
-			    "dwh_Fact_Plane_has_tarjetas_compradas": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Fact_Planes"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Fact_Plane": {
-			          "Target": {
-			            "Entity": "dwh_Fact_Plane"
-			          }
-			        },
-			        "dwh_Fact_Plane.tarjetas_compradas": {
-			          "Target": {
-			            "Entity": "dwh_Fact_Plane.tarjetas_compradas"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Fact_Plane"
-			            },
-			            "Object": {
-			              "Role": "dwh_Fact_Plane.tarjetas_compradas"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Fact_Planes_have_tarjetas_compradas"
-			        }
-			      ]
-			    },
-			    "dwh_Fact_Facturacion_has_visitas_promedio": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Fact_Facturacion"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Fact_Facturacion": {
-			          "Target": {
-			            "Entity": "dwh_Fact_Facturacion"
-			          }
-			        },
-			        "dwh_Fact_Facturacion.visitas_promedio": {
-			          "Target": {
-			            "Entity": "dwh_Fact_Facturacion.visitas_promedio"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Fact_Facturacion"
-			            },
-			            "Object": {
-			              "Role": "dwh_Fact_Facturacion.visitas_promedio"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Fact_Facturacions_have_visitas_promedio"
-			        }
-			      ]
-			    },
-			    "dwh_Dim_Tiempo_has_dwh_Fact_Facturacion_visitas_promedio": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Dim_Tiempo"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Dim_Tiempo": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Tiempo"
-			          }
-			        },
-			        "dwh_Fact_Facturacion.visitas_promedio": {
-			          "Target": {
-			            "Entity": "dwh_Fact_Facturacion.visitas_promedio"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Dim_Tiempo"
-			            },
-			            "Object": {
-			              "Role": "dwh_Fact_Facturacion.visitas_promedio"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Dim_Tiempos_have_visitas_promedio"
-			        }
-			      ]
-			    },
-			    "dwh_Fact_Facturacion_has_valor_monetario_semanal": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Fact_Facturacion"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Fact_Facturacion": {
-			          "Target": {
-			            "Entity": "dwh_Fact_Facturacion"
-			          }
-			        },
-			        "dwh_Fact_Facturacion.valor_monetario_semanal": {
-			          "Target": {
-			            "Entity": "dwh_Fact_Facturacion.valor_monetario_semanal"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Fact_Facturacion"
-			            },
-			            "Object": {
-			              "Role": "dwh_Fact_Facturacion.valor_monetario_semanal"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Fact_Facturacions_have_valor_monetario_semanal"
-			        }
-			      ]
-			    },
-			    "dwh_Fact_AfiliacionEmpresa_has_frecuencia_promedio": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Fact_AfiliacionEmpresa": {
-			          "Target": {
-			            "Entity": "dwh_Fact_AfiliacionEmpresa"
-			          }
-			        },
-			        "dwh_Fact_AfiliacionEmpresa.frecuencia_promedio": {
-			          "Target": {
-			            "Entity": "dwh_Fact_AfiliacionEmpresa.frecuencia_promedio"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Fact_AfiliacionEmpresa"
-			            },
-			            "Object": {
-			              "Role": "dwh_Fact_AfiliacionEmpresa.frecuencia_promedio"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Fact_AfiliacionEmpresas_have_frecuencia_promedio"
-			        }
-			      ]
-			    },
-			    "dwh_Fact_AfiliacionEmpresa_has_recencia_promedio": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Fact_AfiliacionEmpresa": {
-			          "Target": {
-			            "Entity": "dwh_Fact_AfiliacionEmpresa"
-			          }
-			        },
-			        "dwh_Fact_AfiliacionEmpresa.recencia_promedio": {
-			          "Target": {
-			            "Entity": "dwh_Fact_AfiliacionEmpresa.recencia_promedio"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Fact_AfiliacionEmpresa"
-			            },
-			            "Object": {
-			              "Role": "dwh_Fact_AfiliacionEmpresa.recencia_promedio"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Fact_AfiliacionEmpresas_have_recencia_promedio"
-			        }
-			      ]
-			    },
-			    "dwh_Dim_Tiempo_has_dia_semana": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Dim_Tiempo"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Dim_Tiempo": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Tiempo"
-			          }
-			        },
-			        "dwh_Dim_Tiempo.dia_semana": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Tiempo.dia_semana"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Dim_Tiempo"
-			            },
-			            "Object": {
-			              "Role": "dwh_Dim_Tiempo.dia_semana"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Dim_Tiempos_have_dia_semanas"
-			        }
-			      ]
-			    },
-			    "dwh_Dim_Tiempo_has_periodo_del_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Dim_Tiempo"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Dim_Tiempo": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Tiempo"
-			          }
-			        },
-			        "dwh_Dim_Tiempo.periodo_del_dia": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Tiempo.periodo_del_dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Dim_Tiempo"
-			            },
-			            "Object": {
-			              "Role": "dwh_Dim_Tiempo.periodo_del_dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Dim_Tiempos_have_periodo_del_dias"
-			        }
-			      ]
-			    },
-			    "dwh_Dim_Afiliado_has_recencia_promedio_por_rango_edad": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Dim_Afiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Dim_Afiliado": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Afiliado"
-			          }
-			        },
-			        "dwh_Dim_Afiliado.recencia_promedio_por_rango_edad": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Afiliado.recencia_promedio_por_rango_edad"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Dim_Afiliado"
-			            },
-			            "Object": {
-			              "Role": "dwh_Dim_Afiliado.recencia_promedio_por_rango_edad"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Dim_Afiliados_have_recencia_promedio_por_rango_edad"
-			        }
-			      ]
-			    },
-			    "dwh_Dim_Afiliado_has_frecuencia_promedio_rango_edades": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Dim_Afiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Dim_Afiliado": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Afiliado"
-			          }
-			        },
-			        "dwh_Dim_Afiliado.frecuencia_promedio_rango_edades": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Afiliado.frecuencia_promedio_rango_edades"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Dim_Afiliado"
-			            },
-			            "Object": {
-			              "Role": "dwh_Dim_Afiliado.frecuencia_promedio_rango_edades"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Dim_Afiliados_have_frecuencia_promedio_rango_edades"
-			        }
-			      ]
-			    },
-			    "dwh_Dim_Afiliado_has_rango_edade": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Dim_Afiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Dim_Afiliado": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Afiliado"
-			          }
-			        },
-			        "dwh_Dim_Afiliado.rango_edade": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Afiliado.rango_edade"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Dim_Afiliado"
-			            },
-			            "Object": {
-			              "Role": "dwh_Dim_Afiliado.rango_edade"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Dim_Afiliados_have_rango_edades"
-			        }
-			      ]
-			    },
 			    "dwh_Fact_Cupon_has_promedio_dias_hasta_obtener_cupon_filtrado": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh Fact_Cupon"
@@ -51645,402 +50249,6 @@
 			        }
 			      ]
 			    },
-			    "calendario_afiliado_has_is_holiday": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado": {
-			          "Target": {
-			            "Entity": "calendario_afiliado"
-			          }
-			        },
-			        "calendario_afiliado.is_holiday": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.is_holiday"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.is_holiday"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "calendario_afiliados_have_is_holidays"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_has_year_week_number": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado": {
-			          "Target": {
-			            "Entity": "calendario_afiliado"
-			          }
-			        },
-			        "calendario_afiliado.year_week_number": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.year_week_number"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.year_week_number"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "calendario_afiliados_have_year_week_numbers"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_has_year_month_number": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado": {
-			          "Target": {
-			            "Entity": "calendario_afiliado"
-			          }
-			        },
-			        "calendario_afiliado.year_month_number": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.year_month_number"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.year_month_number"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "calendario_afiliados_have_year_month_numbers"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_has_is_weekend": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado": {
-			          "Target": {
-			            "Entity": "calendario_afiliado"
-			          }
-			        },
-			        "calendario_afiliado.is_weekend": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.is_weekend"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.is_weekend"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "calendario_afiliados_have_is_weekends"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_has_week_day_name": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado": {
-			          "Target": {
-			            "Entity": "calendario_afiliado"
-			          }
-			        },
-			        "calendario_afiliado.week_day_name": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.week_day_name"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.week_day_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "calendario_afiliados_have_week_day_names"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_has_week_day": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado": {
-			          "Target": {
-			            "Entity": "calendario_afiliado"
-			          }
-			        },
-			        "calendario_afiliado.week_day": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.week_day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.week_day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "calendario_afiliados_have_week_days"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_has_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado": {
-			          "Target": {
-			            "Entity": "calendario_afiliado"
-			          }
-			        },
-			        "calendario_afiliado.quarter": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "calendario_afiliados_have_quarters"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_has_month_year": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado": {
-			          "Target": {
-			            "Entity": "calendario_afiliado"
-			          }
-			        },
-			        "calendario_afiliado.month_year": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.month_year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.month_year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "calendario_afiliados_have_month_years"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_has_month_name": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado": {
-			          "Target": {
-			            "Entity": "calendario_afiliado"
-			          }
-			        },
-			        "calendario_afiliado.month_name": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.month_name"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.month_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "calendario_afiliados_have_month_names"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_has_month": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado": {
-			          "Target": {
-			            "Entity": "calendario_afiliado"
-			          }
-			        },
-			        "calendario_afiliado.month": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "calendario_afiliados_have_months"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_has_year": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado": {
-			          "Target": {
-			            "Entity": "calendario_afiliado"
-			          }
-			        },
-			        "calendario_afiliado.year": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "calendario_afiliados_have_years"
-			        }
-			      ]
-			    },
-			    "calendario_afiliado_has_date": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado": {
-			          "Target": {
-			            "Entity": "calendario_afiliado"
-			          }
-			        },
-			        "calendario_afiliado.date": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.date"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado"
-			            },
-			            "Object": {
-			              "Role": "calendario_afiliado.date"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "calendario_afiliados_have_dates"
-			        }
-			      ]
-			    },
 			    "calendario_general_has_mes_anterior": {
 			      "Binding": {
 			        "ConceptualEntity": "CalendarioGeneral"
@@ -53229,39 +51437,6 @@
 			        }
 			      ]
 			    },
-			    "calendario_afiliado_has_dwh_Dim_Afiliado_promedio_afiliados": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado": {
-			          "Target": {
-			            "Entity": "calendario_afiliado"
-			          }
-			        },
-			        "dwh_Dim_Afiliado.promedio_afiliados": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Afiliado.promedio_afiliados"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_afiliado"
-			            },
-			            "Object": {
-			              "Role": "dwh_Dim_Afiliado.promedio_afiliados"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "calendario_afiliados_have_promedio_afiliados"
-			        }
-			      ]
-			    },
 			    "dwh_Dim_Afiliado_has_total_nuevos_afiliados": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh Dim_Afiliado"
@@ -53556,6 +51731,151 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_Fact_Planes_have_tarjetas_activadas_clientes_activos"
+			        }
+			      ]
+			    },
+			    "sysdiagram_has_version": {
+			      "Binding": {
+			        "ConceptualEntity": "sysdiagrams"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sysdiagram": {
+			          "Target": {
+			            "Entity": "sysdiagram"
+			          }
+			        },
+			        "sysdiagram.version": {
+			          "Target": {
+			            "Entity": "sysdiagram.version"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sysdiagram"
+			            },
+			            "Object": {
+			              "Role": "sysdiagram.version"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sysdiagrams_have_versions"
+			        }
+			      ]
+			    },
+			    "sysdiagram_has_diagram_id": {
+			      "Binding": {
+			        "ConceptualEntity": "sysdiagrams"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sysdiagram": {
+			          "Target": {
+			            "Entity": "sysdiagram"
+			          }
+			        },
+			        "sysdiagram.diagram_id": {
+			          "Target": {
+			            "Entity": "sysdiagram.diagram_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sysdiagram"
+			            },
+			            "Object": {
+			              "Role": "sysdiagram.diagram_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sysdiagrams_have_diagram_ids"
+			        }
+			      ]
+			    },
+			    "sysdiagram_has_principal_id": {
+			      "Binding": {
+			        "ConceptualEntity": "sysdiagrams"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sysdiagram": {
+			          "Target": {
+			            "Entity": "sysdiagram"
+			          }
+			        },
+			        "sysdiagram.principal_id": {
+			          "Target": {
+			            "Entity": "sysdiagram.principal_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sysdiagram"
+			            },
+			            "Object": {
+			              "Role": "sysdiagram.principal_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sysdiagrams_have_principal_ids"
+			        }
+			      ]
+			    },
+			    "sysdiagram_has_name": {
+			      "Binding": {
+			        "ConceptualEntity": "sysdiagrams"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sysdiagram": {
+			          "Target": {
+			            "Entity": "sysdiagram"
+			          }
+			        },
+			        "sysdiagram.name": {
+			          "Target": {
+			            "Entity": "sysdiagram.name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sysdiagram"
+			            },
+			            "Object": {
+			              "Role": "sysdiagram.name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sysdiagrams_have_names"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "sysdiagram"
+			            },
+			            "Name": {
+			              "Role": "sysdiagram.name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "names_are_names_IDs_of_sysdiagrams"
 			        }
 			      ]
 			    },
@@ -65019,56 +63339,6 @@
 			        }
 			      ]
 			    },
-			    "calendario_afiliado_is_weekend": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioAfiliado"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_afiliado": {
-			          "Target": {
-			            "Entity": "calendario_afiliado"
-			          }
-			        },
-			        "calendario_afiliado.is_weekend": {
-			          "Target": {
-			            "Entity": "calendario_afiliado.is_weekend"
-			          }
-			        }
-			      },
-			      "Conditions": [
-			        {
-			          "Target": {
-			            "Role": "calendario_afiliado.is_weekend"
-			          },
-			          "Operator": "Equals",
-			          "Value": {
-			            "Boolean": [
-			              true
-			            ]
-			          }
-			        }
-			      ],
-			      "Phrasings": [
-			        {
-			          "Adjective": {
-			            "Subject": {
-			              "Role": "calendario_afiliado"
-			            },
-			            "Adjectives": [
-			              {
-			                "weekend": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ]
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "some_calendario_afiliados_are_weekend_calendario_afiliados"
-			        }
-			      ]
-			    },
 			    "calendario_general_is_weekend": {
 			      "Binding": {
 			        "ConceptualEntity": "CalendarioGeneral"
@@ -65116,6 +63386,39 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_calendario_generals_are_weekend_calendario_generals"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tiempo_fecha_convertida_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tiempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_fixed_date_hierarchies_have_fecha_fixed_days"
 			        }
 			      ]
 			    }

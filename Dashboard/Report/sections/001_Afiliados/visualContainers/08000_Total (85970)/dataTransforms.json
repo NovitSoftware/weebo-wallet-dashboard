@@ -1,0 +1,67 @@
+{
+  "objects": {
+    "categoryLabels": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "projectionOrdering": {
+    "Values": [
+      0
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "TotalFacturado",
+        "Name": "dwh Fact_Facturacion.Monto Total Facturado",
+        "Type": 1,
+        "Format": "0.00"
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "TotalFacturado",
+      "format": "0.00",
+      "queryName": "dwh Fact_Facturacion.Monto Total Facturado",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Fact_Facturacion"
+            }
+          },
+          "Property": "TotalFacturado"
+        }
+      }
+    }
+  ]
+}

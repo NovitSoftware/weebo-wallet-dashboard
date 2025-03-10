@@ -39,10 +39,10 @@
                 "Source": "d"
               }
             },
-            "Property": "Variación Monto Facturado"
+            "Property": "VariacionMontoFacturado"
           },
           "Name": "dwh Fact_Facturacion.Variación Monto Facturado",
-          "NativeReferenceName": "Variación Monto Facturado1"
+          "NativeReferenceName": "VariacionMontoFacturado"
         }
       ],
       "OrderBy": [
@@ -55,7 +55,7 @@
                   "Source": "d"
                 }
               },
-              "Property": "Variación Monto Facturado"
+              "Property": "VariacionMontoFacturado"
             }
           }
         }

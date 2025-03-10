@@ -1,0 +1,43 @@
+﻿table sysdiagrams
+
+	column name
+		dataType: string
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column principal_id
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: principal_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column diagram_id
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: diagram_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column version
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: version
+
+		annotation SummarizationSetBy = Automatic
+
+	partition sysdiagrams = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("40.79.18.177"),
+				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
+				    dbo_sysdiagrams = ApployaltyDWH{[Schema="dbo",Item="sysdiagrams"]}[Data]
+				in
+				    dbo_sysdiagrams
+

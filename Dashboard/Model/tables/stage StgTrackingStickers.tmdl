@@ -66,7 +66,7 @@
 		mode: import
 		source =
 				let
-				    Source = Sql.Databases("LocalHost"),
+				    Source = Sql.Databases("40.79.18.177"),
 				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
 				    stage_StgTrackingStickers = ApployaltyDWH{[Schema="stage",Item="StgTrackingStickers"]}[Data]
 				in

@@ -39,10 +39,10 @@
                 "Source": "d"
               }
             },
-            "Property": "Promedio Facturado"
+            "Property": "PromedioFacturado"
           },
           "Name": "dwh Fact_Facturacion.Promedio Facturado",
-          "NativeReferenceName": "Promedio Facturado1"
+          "NativeReferenceName": "PromedioFacturado"
         }
       ],
       "OrderBy": [
@@ -55,7 +55,7 @@
                   "Source": "d"
                 }
               },
-              "Property": "Promedio Facturado"
+              "Property": "PromedioFacturado"
             }
           }
         }

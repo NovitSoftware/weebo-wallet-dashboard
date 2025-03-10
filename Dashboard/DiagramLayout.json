@@ -504,22 +504,23 @@
         },
         {
           "location": {
+            "x": 5623.329866089789,
+            "y": 18330.098463312934
+          },
+          "nodeIndex": "sysdiagrams",
+          "nodeLineageTag": "7ce71382-b2d7-4589-911c-7676c0bbc14c",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 38
+        },
+        {
+          "location": {
             "x": 6719.329866089789,
             "y": 18182.818588107253
           },
           "nodeIndex": "CalendarioGeneral",
-          "size": {
-            "height": 200,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 6993.329866089789,
-            "y": 18058.669530558309
-          },
-          "nodeIndex": "CalendarioAfiliado",
           "size": {
             "height": 200,
             "width": 234
@@ -628,6 +629,30 @@
             "y": 10118.642839797387
           },
           "nodeIndex": "Top3TarjetasActivasPorDistrito",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 9459.329866089789,
+            "y": 8142.8560718236113
+          },
+          "nodeIndex": "UltimasFechasGeneral",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 9733.329866089789,
+            "y": 0
+          },
+          "nodeIndex": "TablaFiltro",
           "size": {
             "height": 200,
             "width": 234

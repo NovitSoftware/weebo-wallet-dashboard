@@ -1,0 +1,27 @@
+﻿table TablaFiltro
+
+	column Periodo
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Periodo]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TablaFiltro = calculated
+		mode: import
+		source = ```
+				
+				DATATABLE(
+				    "Periodo", STRING,
+				    { 
+				        {"Último día"}, 
+				        {"Última semana"}, 
+				        {"Último mes"}, 
+				        {"Último año"}
+				    }
+				)
+				
+				```
+
+	annotation PBI_Id = d702a5aafe6a4f669be35bbf6f2c1a9f
+

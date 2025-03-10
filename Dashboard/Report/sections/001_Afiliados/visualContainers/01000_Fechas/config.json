@@ -18,7 +18,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "dwh Dim_Tiempo.Fecha Fixed",
+          "queryRef": "CalendarioGeneral.Date",
           "active": true
         }
       ]
@@ -27,8 +27,8 @@
       "Version": 2,
       "From": [
         {
-          "Name": "d",
-          "Entity": "dwh Dim_Tiempo",
+          "Name": "c",
+          "Entity": "CalendarioGeneral",
           "Type": 0
         }
       ],
@@ -37,13 +37,13 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Source": "d"
+                "Source": "c"
               }
             },
-            "Property": "Fecha Fixed"
+            "Property": "Date"
           },
-          "Name": "dwh Dim_Tiempo.Fecha Fixed",
-          "NativeReferenceName": "Fecha Fixed"
+          "Name": "CalendarioGeneral.Date",
+          "NativeReferenceName": "Date"
         }
       ],
       "OrderBy": [
@@ -53,10 +53,10 @@
             "Column": {
               "Expression": {
                 "SourceRef": {
-                  "Source": "d"
+                  "Source": "c"
                 }
               },
-              "Property": "Fecha Fixed"
+              "Property": "Date"
             }
           }
         }
@@ -68,6 +68,20 @@
       "data": [
         {
           "properties": {
+            "startDate": {
+              "expr": {
+                "Literal": {
+                  "Value": "datetime'2019-01-31T00:00:00'"
+                }
+              }
+            },
+            "endDate": {
+              "expr": {
+                "Literal": {
+                  "Value": "datetime'2023-12-31T00:00:00'"
+                }
+              }
+            },
             "mode": {
               "expr": {
                 "Literal": {
@@ -86,6 +100,66 @@
                 "Literal": {
                   "Value": "false"
                 }
+              }
+            },
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "c",
+                    "Entity": "CalendarioGeneral",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "And": {
+                        "Left": {
+                          "Comparison": {
+                            "ComparisonKind": 2,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "c"
+                                  }
+                                },
+                                "Property": "Date"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "datetime'2019-01-31T00:00:00'"
+                              }
+                            }
+                          }
+                        },
+                        "Right": {
+                          "Comparison": {
+                            "ComparisonKind": 3,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "c"
+                                  }
+                                },
+                                "Property": "Date"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "datetime'2024-01-01T00:00:00'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
               }
             }
           }
