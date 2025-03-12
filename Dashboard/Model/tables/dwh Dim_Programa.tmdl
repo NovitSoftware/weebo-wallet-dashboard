@@ -42,7 +42,7 @@
 		mode: import
 		source =
 				let
-				    Source = Sql.Databases("LocalHost"),
+				    Source = Sql.Databases("40.79.18.177"),
 				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
 				    dwh_Dim_Programa = ApployaltyDWH{[Schema="dwh",Item="Dim_Programa"]}[Data]
 				in

@@ -39,7 +39,7 @@
                 "Source": "d"
               }
             },
-            "Property": "Monto Total Facturado"
+            "Property": "TotalFacturado"
           },
           "Name": "dwh Fact_Facturacion.Monto Total Facturado",
           "NativeReferenceName": "Monto Total Facturado"
@@ -55,7 +55,7 @@
                   "Source": "d"
                 }
               },
-              "Property": "Monto Total Facturado"
+              "Property": "TotalFacturado"
             }
           }
         }

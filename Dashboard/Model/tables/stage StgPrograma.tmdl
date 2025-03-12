@@ -112,7 +112,7 @@
 		mode: import
 		source =
 				let
-				    Source = Sql.Databases("LocalHost"),
+				    Source = Sql.Databases("40.79.18.177"),
 				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
 				    stage_StgPrograma = ApployaltyDWH{[Schema="stage",Item="StgPrograma"]}[Data]
 				in

@@ -1,53 +1,50 @@
 ﻿table CalendarioGeneral
 
-	measure DiaAnterior = ```
+	measure UltimoAnoMedida =
 			
-			VAR FechaActual = MAX('CalendarioAfiliado'[Date])
-			VAR FechaAnterior = FechaActual - 1
-			RETURN 
-			IF(MAX('CalendarioAfiliado'[Date]) = FechaAnterior, 1, 0)
-			
-			```
-		formatString: 0
+			VAR FechaFinal = TODAY()
+			RETURN DATE(YEAR(FechaFinal) - 1, 1, 1)
+		formatString: General Date
 
-	measure SemanaAnterior = ```
+	measure UltimoDiaMedida =
 			
-			VAR FechaActual = MAX('CalendarioAfiliado'[Date])
-			VAR InicioSemanaActual = FechaActual - WEEKDAY(FechaActual, 2) + 1  -- Calcula el inicio de la semana actual
-			VAR FinSemanaActual = InicioSemanaActual + 6  -- Calcula el fin de la semana actual
-			VAR InicioSemanaAnterior = InicioSemanaActual - 7  -- Calcula el inicio de la semana anterior
-			VAR FinSemanaAnterior = FinSemanaActual - 7  -- Calcula el fin de la semana anterior
-			RETURN 
-			IF(MAX('CalendarioAfiliado'[Date]) >= InicioSemanaAnterior && MAX('CalendarioAfiliado'[Date]) <= FinSemanaAnterior, 1, 0)
-			
-			```
-		formatString: 0
+			VAR FechaFinal = TODAY()
+			RETURN FechaFinal - 1
+		formatString: General Date
 
-	measure QuincenaAnterior = ```
+	measure UltimoMesMedida =
 			
-			VAR FechaActual = MAX('CalendarioAfiliado'[Date])
-			VAR DiaActual = DAY(FechaActual)
-			VAR QuincenaActual = IF(DiaActual <= 15, 1, 2)
-			VAR FechaInicioQuincenaAnterior = IF(QuincenaActual = 1, DATE(YEAR(FechaActual), MONTH(FechaActual), 16), DATE(YEAR(FechaActual), MONTH(FechaActual), 1))
-			VAR FechaFinQuincenaAnterior = IF(QuincenaActual = 1, DATE(YEAR(FechaActual), MONTH(FechaActual), 1), DATE(YEAR(FechaActual), MONTH(FechaActual) + 1, 15))
-			RETURN 
-			IF(MAX('CalendarioAfiliado'[Date]) >= FechaInicioQuincenaAnterior && MAX('CalendarioAfiliado'[Date]) <= FechaFinQuincenaAnterior, 1, 0)
-			
-			```
-		formatString: 0
+			VAR FechaFinal = TODAY()
+			RETURN EOMONTH(FechaFinal, -1) + 1
+		formatString: General Date
 
-	measure MesAnterior = ```
+	measure UltimaSemana =
 			
-			VAR FechaActual = MAX('CalendarioAfiliado'[Date])
-			VAR MesActual = MONTH(FechaActual)
-			VAR AnioActual = YEAR(FechaActual)
-			VAR FechaInicioMesAnterior = IF(MesActual = 1, DATE(AnioActual - 1, 12, 1), DATE(AnioActual, MesActual - 1, 1))
-			VAR FechaFinMesAnterior = EOMONTH(FechaInicioMesAnterior, 0)
-			RETURN 
-			IF(MAX('CalendarioAfiliado'[Date]) >= FechaInicioMesAnterior && MAX('CalendarioAfiliado'[Date]) <= FechaFinMesAnterior, 1, 0)
+			VAR FechaFinal = TODAY()
+			RETURN FechaFinal - 7
+		formatString: General Date
+
+	measure FiltroDinamico = ```
+			
+			VAR FechaFinal = MAX('CalendarioGeneral'[Date])  -- Obtener la fecha máxima del contexto
+			VAR UltimoDia = FechaFinal - 1  -- Último día
+			VAR UltimaSemana = FechaFinal - 7  -- Última semana
+			VAR UltimoMes = EOMONTH(FechaFinal, -1) + 1  -- Primer día del mes anterior
+			VAR UltimoAno = DATE(YEAR(FechaFinal) - 1, MONTH(FechaFinal), DAY(FechaFinal))  -- Mismo día pero un año antes
+			
+			VAR Seleccionado = SELECTEDVALUE(TablaFiltro[Periodo], "Ninguno")  -- Obtener el valor seleccionado en el slicer
+			
+			RETURN
+			    SWITCH(
+			        Seleccionado,
+			        "Último día", UltimoDia,
+			        "Última semana", UltimaSemana,
+			        "Último mes", UltimoMes,
+			        "Último año", UltimoAno,
+			        BLANK()  -- Si no hay selección, no retorna ningún valor
+			    )
 			
 			```
-		formatString: 0
 
 	column Date
 		formatString: General Date
@@ -57,7 +54,7 @@
 
 		variation Variation
 			isDefault
-			relationship: e6096dff-c9b0-47f2-937f-577c693ed001
+			relationship: a545dd53-f2d0-4613-8b5e-f58056442009
 			defaultHierarchy: LocalDateTable_97f101e4-a3d5-4138-9aed-f35b25f07606.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
@@ -196,20 +193,35 @@
 
 		annotation SummarizationSetBy = Automatic
 
+	column UltimaSemanaMedida =
+			
+			VAR FechaFinal = MAXX(ALLSELECTED('CalendarioGeneral'), 'CalendarioGeneral'[Date])
+			RETURN FechaFinal - 7
+		formatString: General Date
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: f8acf425-5d7f-42b2-aff2-719c4f662872
+			defaultHierarchy: LocalDateTable_d7f24b45-5c35-4499-9096-14e7bc3e30f1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
 	partition CalendarioGeneral = calculated
 		mode: import
 		source = ```
-				
 				VAR MinFechaAfiliado = CALCULATE(MIN('dwh Dim_Afiliado'[FechaRegistroWebo])) -- Fecha mínima en Afiliados
 				VAR MaxFechaAfiliado = CALCULATE(MAX('dwh Dim_Afiliado'[FechaRegistroWebo])) -- Fecha máxima en Afiliados
 				VAR MinFechaTienda = CALCULATE(MIN('dwh Dim_Tienda'[FechaInicio])) -- Fecha mínima en Tiendas
 				VAR MaxFechaTienda = CALCULATE(MAX('dwh Dim_Tienda'[FechaInicio])) -- Fecha máxima en Tiendas
 				VAR MinFechaTarjeta = CALCULATE(MIN('dwh Dim_Tarjeta'[FechaActivo])) -- Fecha mínima en Tarjetas
 				VAR MaxFechaTarjeta = CALCULATE(MAX('dwh Dim_Tarjeta'[FechaActivo])) -- Fecha máxima en Tarjetas
+				VAR MinFechaTiempo = CALCULATE(MIN('dwh Dim_Tiempo'[Fecha])) -- Fecha mínima en Tiempo
+				VAR MaxFechaTiempo = CALCULATE(MAX('dwh Dim_Tiempo'[Fecha])) -- Fecha máxima en Tiempo
 				
 				-- Fecha mínima y máxima general calculada con la función MINX/MAXX en una tabla de 1 fila
-				VAR MinFechaGeneral = MINX({MinFechaAfiliado, MinFechaTienda, MinFechaTarjeta}, [Value]) 
-				VAR MaxFechaGeneral = MAXX({MaxFechaAfiliado, MaxFechaTienda, MaxFechaTarjeta}, [Value]) 
+				VAR MinFechaGeneral = MINX({MinFechaAfiliado, MinFechaTienda, MinFechaTarjeta, MinFechaTiempo}, [Value]) 
+				VAR MaxFechaGeneral = MAXX({MaxFechaAfiliado, MaxFechaTienda, MaxFechaTarjeta, MaxFechaTiempo}, [Value]) 
 				
 				RETURN
 				ADDCOLUMNS(
