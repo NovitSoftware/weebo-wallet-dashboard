@@ -1,3 +1,6 @@
+USE ApployaltyDWH
+GO
+
 BEGIN TRANSACTION
 SET QUOTED_IDENTIFIER ON
 SET ARITHABORT ON
@@ -13,7 +16,6 @@ GO
 BEGIN TRANSACTION GlobalTransaction; 
 GO
 
-GO
 --========================================================
 --== DIM_Afiliado (100 registros)
 --========================================================
