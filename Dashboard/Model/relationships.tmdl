@@ -622,11 +622,6 @@ relationship AutoDetected_089b8e91-5129-4951-8c03-a0eba174b3c1
 	fromColumn: 'dwh Fact_Facturacion'.KeyTienda
 	toColumn: 'dwh Dim_Tienda'.KeyTienda
 
-relationship AutoDetected_acc7353e-bf6e-405a-b02b-de5c56c8fc82
-	crossFilteringBehavior: bothDirections
-	fromColumn: 'dwh Dim_Tienda'.KeyTienda
-	toColumn: 'stage StgFactFacturacion'.KeyTienda
-
 relationship AutoDetected_fb1c90e8-d957-4abe-b520-0553c7be5b8b
 	fromColumn: 'stage StgAfiliacion'.fkcliente
 	toColumn: 'stage StgPrograma'.fkcliente
@@ -643,38 +638,12 @@ relationship AutoDetected_8a984ab4-a0e7-4c68-bafe-645b42ecb47c
 	fromColumn: 'stage StgPromocion'.fkcliente
 	toColumn: 'stage StgPrograma'.fkcliente
 
-relationship AutoDetected_31b3b76f-f55f-46c9-99be-43c8e6946bc4
-	fromColumn: 'stage StgTarjeta'.fkcliente
-	toColumn: 'stage StgPrograma'.fkcliente
-
-relationship AutoDetected_b929a7ab-fad9-4bad-bc45-c262ab28361c
-	fromColumn: 'stage StgTienda'.fkcliente
-	toColumn: 'stage StgPrograma'.fkcliente
-
-relationship AutoDetected_5e3c4032-a58a-4f44-be9a-5b2e77e6a94f
-	fromColumn: 'stage StgTrackingStickers'.fkcliente
-	toColumn: 'stage StgPrograma'.fkcliente
-
-relationship AutoDetected_877c94db-a7ef-46df-afac-272c40a01e58
-	fromColumn: 'stage StgTransaccion'.fkcliente
-	toColumn: 'stage StgPrograma'.fkcliente
-
 relationship AutoDetected_6652cdf5-dbdc-4eda-a240-1cd12aa17dda
 	isActive: false
 	crossFilteringBehavior: bothDirections
 	fromCardinality: one
 	fromColumn: 'stage StgCupon'.codigo
 	toColumn: 'stage StgTarjeta'.codigo
-
-relationship e6096dff-c9b0-47f2-937f-577c693ed001
-	joinOnDateBehavior: datePartOnly
-	fromColumn: CalendarioGeneral.Date
-	toColumn: LocalDateTable_97f101e4-a3d5-4138-9aed-f35b25f07606.Date
-
-relationship d7b9fadf-56f6-4534-9cbc-fb13055f527e
-	joinOnDateBehavior: datePartOnly
-	fromColumn: CalendarioAfiliado.Date
-	toColumn: LocalDateTable_1e15fe5c-8910-4572-b49e-ef2ec5c8f6c7.Date
 
 relationship 4f052d2c-467b-47ed-b773-f28022bc9138
 	joinOnDateBehavior: datePartOnly
@@ -693,7 +662,21 @@ relationship 983d8069-931e-9fca-69d3-e699f044702a
 	fromColumn: 'dwh Fact_Promociones'.KeyFechaCorte
 	toColumn: 'dwh Dim_Tiempo'.KeyTiempo
 
-relationship a28b0dc3-149d-4b48-b11b-0bc1117f3215
+relationship d0076db9-13bd-89ec-f4d4-573546dc3149
+	fromColumn: 'dwh Fact_Facturacion'.KeyFechaFacturacion
+	toColumn: 'dwh Dim_Tiempo'.KeyTiempo
+
+relationship e12d0439-44bf-4e5c-be33-f7dc1e7b26f4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'dwh Dim_Tiempo'.'Fecha Fixed'
+	toColumn: LocalDateTable_2379fe0a-2395-4b4d-bd24-a3ee06f28d39.Date
+
+relationship a545dd53-f2d0-4613-8b5e-f58056442009
+	joinOnDateBehavior: datePartOnly
+	fromColumn: CalendarioGeneral.Date
+	toColumn: LocalDateTable_97f101e4-a3d5-4138-9aed-f35b25f07606.Date
+
+relationship 4461c8e5-8a0f-479a-b470-d0e9d1643478
 	joinOnDateBehavior: datePartOnly
 	fromColumn: UltimasFechas.'Fecha Inicial'
 	toColumn: LocalDateTable_6b94448f-10dd-45e8-88d4-dccd6680ce98.Date
@@ -704,17 +687,27 @@ relationship 1c959a24-7a19-0bf3-feee-9c5b8b439472
 	fromColumn: 'dwh Dim_Tiempo'.Fecha
 	toColumn: UltimasFechas.'Fecha Inicial'
 
-relationship fdb1aa4d-ca98-4d38-812f-6f3c898f668c
+relationship 5a40737a-53da-4031-9da9-17dd6852469e
 	joinOnDateBehavior: datePartOnly
 	fromColumn: UltimasFechas.'Fecha Final'
 	toColumn: LocalDateTable_0259c88c-5779-4e95-8c11-d0c032169312.Date
 
-relationship d0076db9-13bd-89ec-f4d4-573546dc3149
-	fromColumn: 'dwh Fact_Facturacion'.KeyFechaFacturacion
-	toColumn: 'dwh Dim_Tiempo'.KeyTiempo
-
-relationship e12d0439-44bf-4e5c-be33-f7dc1e7b26f4
+relationship f8acf425-5d7f-42b2-aff2-719c4f662872
 	joinOnDateBehavior: datePartOnly
-	fromColumn: 'dwh Dim_Tiempo'.'Fecha Fixed'
-	toColumn: LocalDateTable_2379fe0a-2395-4b4d-bd24-a3ee06f28d39.Date
+	fromColumn: CalendarioGeneral.UltimaSemanaMedida
+	toColumn: LocalDateTable_d7f24b45-5c35-4499-9096-14e7bc3e30f1.Date
+
+relationship c6e9bbcb-078b-4bc3-8f74-f2675b692879
+	joinOnDateBehavior: datePartOnly
+	fromColumn: UltimasFechasGeneral.'Fecha Inicial'
+	toColumn: LocalDateTable_84d5a327-c2e6-4e23-a404-fa7d1a4a1cc9.Date
+
+relationship 06453e3c-ed8a-4e6f-887a-26257dcfb906
+	joinOnDateBehavior: datePartOnly
+	fromColumn: UltimasFechasGeneral.'Fecha Final'
+	toColumn: LocalDateTable_5f0bcdab-8452-43e7-8041-5c083b762aea.Date
+
+relationship 571fbc68-6f64-2896-e8f2-148bb43836e7
+	fromColumn: 'dwh Fact_AfiliacionEmpresa'.KeyFechaCorte
+	toColumn: 'dwh Dim_Tiempo'.KeyTiempo
 

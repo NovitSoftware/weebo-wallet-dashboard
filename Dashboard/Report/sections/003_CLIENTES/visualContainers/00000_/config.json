@@ -1,15 +1,14 @@
 {
-  "name": "10ddd0e034c5b92ac4f4",
+  "name": "06156c30e21c33120ff6",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "x": 0.79206307683312593,
+        "height": 139.90368077055385,
+        "width": 335.85082143470322,
+        "x": 0.4496343798420146,
         "y": 0,
-        "z": 4000,
-        "width": 591.62521130161792,
-        "height": 140,
-        "tabOrder": 0
+        "z": 4000
       }
     }
   ],
@@ -108,6 +107,6 @@
       ]
     }
   },
-  "parentGroupName": "936592fe5ea598de460e",
+  "parentGroupName": "2733f2ce2324e5508867",
   "howCreated": "InsertVisualButton"
 }

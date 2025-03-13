@@ -49,14 +49,12 @@
       {
         "Restatement": "Sum of TotalStickersActivos",
         "Name": "Sum(CuponesPorDistrito.TotalStickersActivos)",
-        "Type": 1,
-        "Format": "0"
+        "Type": 1
       },
       {
         "Restatement": "Sum of TotalStickersVencidos",
         "Name": "Sum(CuponesPorDistrito.TotalStickersVencidos)",
-        "Type": 1,
-        "Format": "0"
+        "Type": 1
       },
       {
         "Restatement": "Distrito",
@@ -89,7 +87,6 @@
   "selects": [
     {
       "displayName": "Sum of TotalStickersActivos",
-      "format": "0",
       "queryName": "Sum(CuponesPorDistrito.TotalStickersActivos)",
       "roles": {
         "Y": true
@@ -118,7 +115,6 @@
     },
     {
       "displayName": "Sum of TotalStickersVencidos",
-      "format": "0",
       "queryName": "Sum(CuponesPorDistrito.TotalStickersVencidos)",
       "roles": {
         "Y": true

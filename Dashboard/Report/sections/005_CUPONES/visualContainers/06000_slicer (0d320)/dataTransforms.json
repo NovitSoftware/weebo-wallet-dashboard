@@ -12,11 +12,6 @@
           }
         }
       }
-    ],
-    "general": [
-      {
-        "properties": {}
-      }
     ]
   },
   "projectionOrdering": {

@@ -11,7 +11,7 @@
 	column fkcliente
 		dataType: int64
 		formatString: 0
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: fkcliente
 
 		annotation SummarizationSetBy = Automatic
@@ -100,7 +100,7 @@
 		mode: import
 		source =
 				let
-				    Source = Sql.Databases("LocalHost"),
+				    Source = Sql.Databases("40.79.18.177"),
 				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
 				    stage_StgTienda = ApployaltyDWH{[Schema="stage",Item="StgTienda"]}[Data]
 				in

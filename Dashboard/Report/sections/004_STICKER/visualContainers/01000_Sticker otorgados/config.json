@@ -4,10 +4,10 @@
     {
       "id": 0,
       "position": {
-        "height": 185,
-        "width": 139.78947368421052,
-        "x": 0.56136924342115435,
-        "y": 0.742994561252713,
+        "height": 183.57894736842104,
+        "width": 144.84210526315789,
+        "x": 0.58165969800264183,
+        "y": 0.73728734840667509,
         "z": 13000,
         "tabOrder": 1000
       }
@@ -18,7 +18,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "Sum(dwh Fact_Planes.StickersEntregados)"
+          "queryRef": "dwh Fact_Planes.Sticker entregados"
         }
       ]
     },
@@ -33,39 +33,29 @@
       ],
       "Select": [
         {
-          "Aggregation": {
+          "Measure": {
             "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Source": "d"
-                  }
-                },
-                "Property": "StickersEntregados"
+              "SourceRef": {
+                "Source": "d"
               }
             },
-            "Function": 0
+            "Property": "Sticker entregados"
           },
-          "Name": "Sum(dwh Fact_Planes.StickersEntregados)",
-          "NativeReferenceName": "Sticker otorgados"
+          "Name": "dwh Fact_Planes.Sticker entregados",
+          "NativeReferenceName": "Sticker entregados"
         }
       ],
       "OrderBy": [
         {
           "Direction": 2,
           "Expression": {
-            "Aggregation": {
+            "Measure": {
               "Expression": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Source": "d"
-                    }
-                  },
-                  "Property": "StickersEntregados"
+                "SourceRef": {
+                  "Source": "d"
                 }
               },
-              "Function": 0
+              "Property": "Sticker entregados"
             }
           }
         }

@@ -8,20 +8,22 @@
 		annotation SummarizationSetBy = Automatic
 
 	column TotalStickersActivos
-		formatString: 0
 		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [TotalStickersActivos]
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column TotalStickersVencidos
-		formatString: 0
 		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [TotalStickersVencidos]
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition CuponesPorDistrito = calculated
 		mode: import

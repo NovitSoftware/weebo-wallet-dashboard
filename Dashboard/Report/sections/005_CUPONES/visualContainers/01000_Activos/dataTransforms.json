@@ -24,8 +24,7 @@
       {
         "Restatement": "ConteoFechaActivacion",
         "Name": "dwh Fact_Cupon.ConteoFechaActivacion",
-        "Type": 1,
-        "Format": "0"
+        "Type": 1
       }
     ]
   },
@@ -43,7 +42,6 @@
   "selects": [
     {
       "displayName": "ConteoFechaActivacion",
-      "format": "0",
       "queryName": "dwh Fact_Cupon.ConteoFechaActivacion",
       "roles": {
         "Values": true

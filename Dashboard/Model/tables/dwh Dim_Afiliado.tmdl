@@ -2,28 +2,58 @@
 
 	measure PromedioAfiliados = ```
 			
-			COALESCE(
-			AVERAGEX(
-			    VALUES('CalendarioAfiliado'[Date]),
-			    'dwh Dim_Afiliado'[TotalNuevosAfiliados]
-			), "NA")
+			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])  -- Fecha de inicio seleccionada
+			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])    -- Fecha final seleccionada
+			
+			-- Limitar por el rango de fechas del calendario
+			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del filtro
+			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del filtro
+			
+			-- Calcular la cantidad de nuevos afiliados por fecha
+			VAR NuevosAfiliadosPorDia =
+			    SUMMARIZE(
+			        FILTER(
+			            'dwh Dim_Afiliado',
+			            'dwh Dim_Afiliado'[FechaRegistroWebo] >= MAX(FechaInicio, FechaMin) &&  -- Fecha inicio dentro del rango
+			            'dwh Dim_Afiliado'[FechaRegistroWebo] <= MIN(FechaFinal, FechaMax)      -- Fecha fin dentro del rango
+			        ),
+			        'dwh Dim_Afiliado'[FechaRegistroWebo],
+			        "TotalAfiliados", COUNT('dwh Dim_Afiliado'[KeyAfiliado])
+			    )
+			
+			-- Calcular el promedio de nuevos afiliados
+			VAR Promedio =
+			    AVERAGEX(NuevosAfiliadosPorDia, [TotalAfiliados])
+			
+			RETURN
+			    COALESCE(Promedio, "NA")
 			
 			```
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure TotalNuevosAfiliados =
+	measure TotalNuevosAfiliados = ```
 			
+			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])
+			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])
+			
+			-- Limitar las fechas del rango
+			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del calendario
+			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del calendario
+			
+			RETURN 
 			COALESCE(
 			CALCULATE(
 			    COUNT('dwh Dim_Afiliado'[KeyAfiliado]),
 			    FILTER(
 			        'dwh Dim_Afiliado',
-			        'dwh Dim_Afiliado'[FechaRegistroWebo] >= MIN(CalendarioAfiliado[Date]) &&
-			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= MAX(CalendarioAfiliado[Date])
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] >= MAX(FechaInicio, FechaMin) &&  -- Fecha inicio dentro del rango
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= MIN(FechaFinal, FechaMax) &&   -- Fecha fin dentro del rango
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= FechaMax 
 			    )
 			)
-			, "NA")
+			,"NA")
+			```
 		formatString: 0
 
 	measure 'Total Afiliados Sin Filtros' = ```
@@ -46,37 +76,46 @@
 
 	measure VariacionAfiliados = ```
 			
-			VAR FechaRaiz = MIN('CalendarioGeneral'[Date]) -- La fecha más baja seleccionada en el filtro de segmentación
-			VAR FechaFin = MAX('CalendarioGeneral'[Date])  -- La fecha más alta seleccionada en el filtro de segmentación
+			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])  -- Fecha de inicio seleccionada
+			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])    -- Fecha final seleccionada
 			
-			-- Afiliados acumulados hasta la FechaRaiz
+			-- Limitar las fechas del rango
+			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del calendario
+			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del calendario
+			
+			-- Afiliados acumulados hasta la FechaInicio
 			VAR AfiliadosHastaInicio = 
 			    CALCULATE(
 			        COUNT('dwh Dim_Afiliado'[KeyAfiliado]),
-			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= FechaRaiz
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= MAX(FechaInicio, FechaMin) &&  -- Fecha inicio dentro del rango
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= FechaMax  -- Asegura que no exceda el rango máximo del calendario
 			    )
 			
-			-- Afiliados acumulados hasta la FechaFin
+			-- Afiliados acumulados hasta la FechaFinal
 			VAR AfiliadosHastaFin = 
 			    CALCULATE(
 			        COUNT('dwh Dim_Afiliado'[KeyAfiliado]),
-			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= FechaFin
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= MIN(FechaFinal, FechaMax) &&   -- Fecha fin dentro del rango
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= FechaMax  -- Asegura que no exceda el rango máximo del calendario
 			    )
 			
-			-- Variación entre los dos períodos
-			RETURN COALESCE(AfiliadosHastaFin - AfiliadosHastaInicio, "NA")
+			-- Cálculo de la variación entre los dos períodos
+			VAR Resultado = AfiliadosHastaFin - AfiliadosHastaInicio
+			
+			RETURN COALESCE(Resultado,"NA")
 			
 			```
 		formatString: 0
 
-	measure AfiliadosMasculinos =
+	measure AfiliadosMasculinos = ```
 			
 			COALESCE(
 			CALCULATE(
 			    DISTINCTCOUNT('dwh Dim_Afiliado'[KeyAfiliado]),
 			    'dwh Dim_Afiliado'[Genero] = "MASCULINO"
-			)
-			, "NA")
+			),"NA")
+			
+			```
 		formatString: 0
 
 	measure AfiliadosActivos = ```
@@ -91,7 +130,7 @@
 			```
 		formatString: 0
 
-	measure AfiliadosNuevos =
+	measure AfiliadosNuevos = ```
 			
 			COALESCE(
 			CALCULATE(
@@ -100,8 +139,9 @@
 			        'dwh Dim_Afiliado',
 			        ISBLANK('dwh Dim_Afiliado'[FechaActivoWebo])
 			    )
-			)
-			,"NA")
+			), "NA")
+			
+			```
 		formatString: 0
 
 	measure AfiliadosPerdidos = ```
@@ -138,7 +178,7 @@
 			    )
 			RETURN
 			IF(
-			    ISBLANK(TotalDesafiliados),
+			    ISBLANK(TotalDesafiliados) || TotalDesafiliados = 0,
 			    "NA",
 			    FORMAT(TotalDesafiliados, "#,0")
 			)
@@ -165,18 +205,18 @@
 			        ALL('dwh Dim_Afiliado')
 			    )
 			RETURN
+			COALESCE(
 			    DIVIDE(
-			        IF(
-			            ISERROR(VALUE([AfiliadosActivos])), 
-			            0, 
-			            VALUE([AfiliadosActivos])
-			        ),
+			        IF(ISERROR(VALUE([AfiliadosActivos])),
+			        0,
+			        VALUE([AfiliadosActivos])),
 			        COALESCE(TotalAfiliados, 1),
-			        0
+			        BLANK()
 			    )
-			
+			,"NA")
 			```
-		formatString: 0.00\ %;-0.00\ %;0.00\ %
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure AfiliadosEnRiesgoPorcentaje = ```
 			
@@ -209,6 +249,7 @@
 			        ALL('dwh Dim_Afiliado')
 			    )
 			RETURN
+			COALESCE(
 			    DIVIDE(
 			        IF(
 			            ISERROR(VALUE([AfiliadosPerdidos])), 
@@ -216,9 +257,9 @@
 			            VALUE([AfiliadosPerdidos])
 			        ),
 			        COALESCE(TotalAfiliados, 1), 
-			        0
+			        BLANK()
 			    )
-			
+			, "NA")
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 
@@ -482,7 +523,7 @@
 		mode: import
 		source =
 				let
-				    Source = Sql.Databases("LocalHost"),
+				    Source = Sql.Databases("40.79.18.177"),
 				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
 				    dwh_Dim_Afiliado = ApployaltyDWH{[Schema="dwh",Item="Dim_Afiliado"]}[Data]
 				in

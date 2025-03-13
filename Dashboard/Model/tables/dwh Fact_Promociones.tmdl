@@ -10,14 +10,15 @@
 			,"NA")
 		formatString: 0
 
-	measure TotalPromocionesRedimidas =
+	measure TotalPromocionesRedimidas = ```
 			
-			COALESCE(
+			 COALESCE(
 			CALCULATE(
 			    COUNT('dwh Fact_Promociones'[KeyFactPromocion]),
 			    'dwh Fact_Promociones'[FlagPromocionRedimida] = 1
-			)
-			,"NA")
+			),"NA")
+			
+			```
 		formatString: 0
 
 	measure TotalPromocionesVencidas =
@@ -27,14 +28,14 @@
 			    COUNT('dwh Fact_Promociones'[KeyFactPromocion]),
 			    'dwh Fact_Promociones'[FlagCuponVencido] = 1
 			)
-			, "NA")
+			,"NA")
 		formatString: 0
 
 	measure PromedioDiasActivacion =
 			
 			COALESCE(
 			AVERAGE('dwh Fact_Promociones'[DiasHastaActivarPromocion])
-			, "NA")
+			,"NA")
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
@@ -192,7 +193,7 @@
 		mode: import
 		source =
 				let
-				    Source = Sql.Databases("LocalHost"),
+				    Source = Sql.Databases("40.79.18.177"),
 				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
 				    dwh_Fact_Promociones = ApployaltyDWH{[Schema="dwh",Item="Fact_Promociones"]}[Data]
 				in

@@ -10,11 +10,13 @@
 
 	column Fecha
 		dataType: dateTime
-		formatString: General Date
+		formatString: dd/mm/yyyy
 		summarizeBy: none
 		sourceColumn: Fecha
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
 	column Año
 		dataType: int64
@@ -56,10 +58,7 @@
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Fecha Fixed' = ```
-			DATEVALUE(FORMAT([Fecha], "dd/mm/yyyy"))
-			
-			```
+	column 'Fecha Fixed' = DATEVALUE([Fecha])
 		formatString: General Date
 		summarizeBy: none
 
@@ -74,9 +73,9 @@
 			
 			SWITCH(
 			    TRUE(),
-			    HOUR('dwh Dim_Tiempo'[Fecha]) >= 6 && HOUR('dwh Dim_Tiempo'[Fecha]) <= 11, "Mañana (6:00 - 12:00)",
-			    HOUR('dwh Dim_Tiempo'[Fecha]) >= 12 && HOUR('dwh Dim_Tiempo'[Fecha]) <= 17, "Tarde (12:00 - 18:00)",
-			    HOUR('dwh Dim_Tiempo'[Fecha]) >= 18 && HOUR('dwh Dim_Tiempo'[Fecha]) <= 23, "Noche (18:00 - 24:00)",
+			    HOUR('dwh Dim_Tiempo'[Fecha Fixed]) >= 6 && HOUR('dwh Dim_Tiempo'[Fecha Fixed]) <= 11, "Mañana (6:00 - 12:00)",
+			    HOUR('dwh Dim_Tiempo'[Fecha Fixed]) >= 12 && HOUR('dwh Dim_Tiempo'[Fecha Fixed]) <= 17, "Tarde (12:00 - 18:00)",
+			    HOUR('dwh Dim_Tiempo'[Fecha Fixed]) >= 18 && HOUR('dwh Dim_Tiempo'[Fecha Fixed]) <= 23, "Noche (18:00 - 24:00)",
 			    "NA"
 			)
 			
@@ -85,16 +84,11 @@
 
 		annotation SummarizationSetBy = Automatic
 
-	column DiaSemana = FORMAT('dwh Dim_Tiempo'[Fecha], "dddd")
-		summarizeBy: none
-
-		annotation SummarizationSetBy = Automatic
-
 	partition 'dwh Dim_Tiempo' = m
 		mode: import
 		source =
 				let
-				    Source = Sql.Databases("LocalHost"),
+				    Source = Sql.Databases("40.79.18.177"),
 				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
 				    dwh_Dim_Tiempo = ApployaltyDWH{[Schema="dwh",Item="Dim_Tiempo"]}[Data]
 				in

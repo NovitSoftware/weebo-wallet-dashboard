@@ -18,7 +18,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "UltimasFechas.Texto",
+          "queryRef": "UltimasFechasGeneral.Texto",
           "active": true
         }
       ]
@@ -28,7 +28,7 @@
       "From": [
         {
           "Name": "u",
-          "Entity": "UltimasFechas",
+          "Entity": "UltimasFechasGeneral",
           "Type": 0
         }
       ],
@@ -42,7 +42,7 @@
             },
             "Property": "Texto"
           },
-          "Name": "UltimasFechas.Texto",
+          "Name": "UltimasFechasGeneral.Texto",
           "NativeReferenceName": "Texto"
         }
       ]
@@ -63,47 +63,6 @@
                 "Literal": {
                   "Value": "1D"
                 }
-              }
-            },
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "u",
-                    "Entity": "UltimasFechas",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "u"
-                                }
-                              },
-                              "Property": "Texto"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'Último día'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    }
-                  }
-                ]
               }
             }
           }

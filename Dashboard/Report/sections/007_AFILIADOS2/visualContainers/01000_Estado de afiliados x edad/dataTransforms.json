@@ -71,8 +71,7 @@
       {
         "Restatement": "Activos",
         "Name": "dwh Dim_Afiliado.AfiliadosActivosPorcentaje",
-        "Type": 1,
-        "Format": "0.00\\ %;-0.00\\ %;0.00\\ %"
+        "Type": 1
       },
       {
         "Restatement": "En Riesgo",
@@ -122,7 +121,6 @@
   "selects": [
     {
       "displayName": "Activos",
-      "format": "0.00\\ %;-0.00\\ %;0.00\\ %",
       "queryName": "dwh Dim_Afiliado.AfiliadosActivosPorcentaje",
       "roles": {
         "Y": true
