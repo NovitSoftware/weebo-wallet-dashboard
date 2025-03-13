@@ -50,14 +50,10 @@
 			        'dwh Dim_Afiliado'[FechaRegistroWebo] >= MAX(FechaInicio, FechaMin) &&  -- Fecha inicio dentro del rango
 			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= MIN(FechaFinal, FechaMax) &&   -- Fecha fin dentro del rango
 			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= FechaMax 
-			        'dwh Dim_Afiliado'[FechaRegistroWebo] >= MAX(FechaInicio, FechaMin) &&  -- Fecha inicio dentro del rango
-			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= MIN(FechaFinal, FechaMax) &&   -- Fecha fin dentro del rango
-			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= FechaMax 
 			    )
 			)
 			,"NA")
 			```
-		formatString: 0
 		formatString: 0
 
 	measure 'Total Afiliados Sin Filtros' = ```
@@ -86,31 +82,19 @@
 			-- Limitar las fechas del rango
 			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del calendario
 			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del calendario
-			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])  -- Fecha de inicio seleccionada
-			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])    -- Fecha final seleccionada
 			
-			-- Limitar las fechas del rango
-			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del calendario
-			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del calendario
-			
-			-- Afiliados acumulados hasta la FechaInicio
 			-- Afiliados acumulados hasta la FechaInicio
 			VAR AfiliadosHastaInicio = 
 			    CALCULATE(
 			        COUNT('dwh Dim_Afiliado'[KeyAfiliado]),
 			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= MAX(FechaInicio, FechaMin) &&  -- Fecha inicio dentro del rango
 			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= FechaMax  -- Asegura que no exceda el rango máximo del calendario
-			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= MAX(FechaInicio, FechaMin) &&  -- Fecha inicio dentro del rango
-			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= FechaMax  -- Asegura que no exceda el rango máximo del calendario
 			    )
 			
-			-- Afiliados acumulados hasta la FechaFinal
 			-- Afiliados acumulados hasta la FechaFinal
 			VAR AfiliadosHastaFin = 
 			    CALCULATE(
 			        COUNT('dwh Dim_Afiliado'[KeyAfiliado]),
-			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= MIN(FechaFinal, FechaMax) &&   -- Fecha fin dentro del rango
-			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= FechaMax  -- Asegura que no exceda el rango máximo del calendario
 			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= MIN(FechaFinal, FechaMax) &&   -- Fecha fin dentro del rango
 			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= FechaMax  -- Asegura que no exceda el rango máximo del calendario
 			    )
@@ -539,7 +523,6 @@
 		mode: import
 		source =
 				let
-				    Source = Sql.Databases("40.79.18.177"),
 				    Source = Sql.Databases("40.79.18.177"),
 				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
 				    dwh_Dim_Afiliado = ApployaltyDWH{[Schema="dwh",Item="Dim_Afiliado"]}[Data]

@@ -22,9 +22,10 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "RecenciaPromedio",
-        "Name": "dwh Fact_AfiliacionEmpresa.RecenciaPromedio",
-        "Type": 1
+        "Restatement": "Valor Monetario Semanal",
+        "Name": "dwh Fact_Facturacion.PromedioSolesSemanal",
+        "Type": 1,
+        "Format": "0.00"
       }
     ]
   },
@@ -41,8 +42,9 @@
   ],
   "selects": [
     {
-      "displayName": "RecenciaPromedio",
-      "queryName": "dwh Fact_AfiliacionEmpresa.RecenciaPromedio",
+      "displayName": "Valor Monetario Semanal",
+      "format": "0.00",
+      "queryName": "dwh Fact_Facturacion.PromedioSolesSemanal",
       "roles": {
         "Values": true
       },
@@ -54,10 +56,10 @@
         "Measure": {
           "Expression": {
             "SourceRef": {
-              "Entity": "dwh Fact_AfiliacionEmpresa"
+              "Entity": "dwh Fact_Facturacion"
             }
           },
-          "Property": "RecenciaPromedio"
+          "Property": "Valor Monetario Semanal"
         }
       }
     }

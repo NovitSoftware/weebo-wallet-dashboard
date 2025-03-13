@@ -1,7 +1,6 @@
 ﻿table 'dwh Fact_Facturacion'
 
 	measure TotalFacturado = ```
-	measure TotalFacturado = ```
 			
 			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])
 			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])
@@ -27,14 +26,7 @@
 			
 			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])
 			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])
-	measure VariacionMontoFacturado = ```
 			
-			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])
-			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])
-			
-			-- Limitar las fechas del rango
-			VAR FechaMin = MIN('CalendarioGeneral'[Date])
-			VAR FechaMax = MAX('CalendarioGeneral'[Date])
 			-- Limitar las fechas del rango
 			VAR FechaMin = MIN('CalendarioGeneral'[Date])
 			VAR FechaMax = MAX('CalendarioGeneral'[Date])
@@ -46,21 +38,7 @@
 			        'dwh Dim_Tiempo'[Fecha] <= MAX(FechaInicio, FechaMin) &&
 			        'dwh Dim_Tiempo'[Fecha] <= FechaMax
 			    )
-			-- Monto facturado hasta la FechaInicio
-			VAR MontoHastaInicio = 
-			    CALCULATE(
-			        SUM('dwh Fact_Facturacion'[Importe]),
-			        'dwh Dim_Tiempo'[Fecha] <= MAX(FechaInicio, FechaMin) &&
-			        'dwh Dim_Tiempo'[Fecha] <= FechaMax
-			    )
 			
-			-- Monto facturado hasta la FechaFinal
-			VAR MontoHastaFin = 
-			    CALCULATE(
-			        SUM('dwh Fact_Facturacion'[Importe]),
-			        'dwh Dim_Tiempo'[Fecha] <= MIN(FechaFinal, FechaMax) &&
-			        'dwh Dim_Tiempo'[Fecha] <= FechaMax
-			    )
 			-- Monto facturado hasta la FechaFinal
 			VAR MontoHastaFin = 
 			    CALCULATE(
@@ -77,16 +55,7 @@
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure PromedioFacturado = ```
-	measure PromedioFacturado = ```
 			
-			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])  -- Fecha de inicio seleccionada
-			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])    -- Fecha final seleccionada
-			
-			-- Limitar las fechas del rango
-			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del calendario
-			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del calendario
-			
-			-- Calcular la fecha seleccionada
 			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])  -- Fecha de inicio seleccionada
 			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])    -- Fecha final seleccionada
 			
@@ -100,10 +69,6 @@
 			RETURN
 			COALESCE(
 			CALCULATE(
-			    AVERAGE('dwh Fact_Facturacion'[Importe]), 
-			    'dwh Dim_Tiempo'[Fecha] <= FechaSeleccionada,
-			    'dwh Dim_Tiempo'[Fecha] >= FechaInicio,  -- Asegurarse que esté dentro del rango de fechas
-			    'dwh Dim_Tiempo'[Fecha] <= FechaFinal    -- Asegurarse que esté dentro del rango de fechas
 			    AVERAGE('dwh Fact_Facturacion'[Importe]), 
 			    'dwh Dim_Tiempo'[Fecha] <= FechaSeleccionada,
 			    'dwh Dim_Tiempo'[Fecha] >= FechaInicio,  -- Asegurarse que esté dentro del rango de fechas
@@ -267,7 +232,6 @@
 		mode: import
 		source =
 				let
-				    Source = Sql.Databases("40.79.18.177"),
 				    Source = Sql.Databases("40.79.18.177"),
 				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
 				    dwh_Fact_Facturacion = ApployaltyDWH{[Schema="dwh",Item="Fact_Facturacion"]}[Data]

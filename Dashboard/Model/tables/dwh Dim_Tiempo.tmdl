@@ -11,15 +11,10 @@
 	column Fecha
 		dataType: dateTime
 		formatString: dd/mm/yyyy
-		formatString: dd/mm/yyyy
 		summarizeBy: none
 		sourceColumn: Fecha
 
-		changedProperty = DataType
-
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
 		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
@@ -93,7 +88,6 @@
 		mode: import
 		source =
 				let
-				    Source = Sql.Databases("40.79.18.177"),
 				    Source = Sql.Databases("40.79.18.177"),
 				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
 				    dwh_Dim_Tiempo = ApployaltyDWH{[Schema="dwh",Item="Dim_Tiempo"]}[Data]

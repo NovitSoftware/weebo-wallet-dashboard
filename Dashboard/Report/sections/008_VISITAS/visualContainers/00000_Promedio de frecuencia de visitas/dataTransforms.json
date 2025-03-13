@@ -22,9 +22,10 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "RecenciaPromedio",
-        "Name": "dwh Fact_AfiliacionEmpresa.RecenciaPromedio",
-        "Type": 1
+        "Restatement": "FrecuenciaPromedio",
+        "Name": "dwh Fact_AfiliacionEmpresa.FrecuenciaPromedio",
+        "Type": 1,
+        "Format": "0.00"
       }
     ]
   },
@@ -41,8 +42,9 @@
   ],
   "selects": [
     {
-      "displayName": "RecenciaPromedio",
-      "queryName": "dwh Fact_AfiliacionEmpresa.RecenciaPromedio",
+      "displayName": "FrecuenciaPromedio",
+      "format": "0.00",
+      "queryName": "dwh Fact_AfiliacionEmpresa.FrecuenciaPromedio",
       "roles": {
         "Values": true
       },
@@ -57,7 +59,7 @@
               "Entity": "dwh Fact_AfiliacionEmpresa"
             }
           },
-          "Property": "RecenciaPromedio"
+          "Property": "FrecuenciaPromedio"
         }
       }
     }

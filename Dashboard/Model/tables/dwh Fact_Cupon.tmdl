@@ -31,45 +31,31 @@
 			
 			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])  -- Fecha de inicio seleccionada
 			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])    -- Fecha final seleccionada
-			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])  -- Fecha de inicio seleccionada
-			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])    -- Fecha final seleccionada
 			
 			-- Limitar las fechas del rango
 			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del calendario
 			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del calendario
-			-- Limitar las fechas del rango
-			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del calendario
-			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del calendario
 			
-			-- Stickers entregados acumulados hasta FechaInicio
 			-- Stickers entregados acumulados hasta FechaInicio
 			VAR StickersInicio =
 			    CALCULATE (
 			        SUMX (
 			            VALUES('dwh Fact_Cupon'[KeyAfiliado]),  -- Para cada afiliado
 			            MAX('dwh Fact_Cupon'[StickersEntregados])  -- Obtener el máximo de stickers entregados
-			            VALUES('dwh Fact_Cupon'[KeyAfiliado]),  -- Para cada afiliado
-			            MAX('dwh Fact_Cupon'[StickersEntregados])  -- Obtener el máximo de stickers entregados
 			        ),
-			        'dwh Dim_Tiempo'[Fecha] <= MAX(FechaInicio, FechaMin)  -- Filtrar por fecha de inicio
 			        'dwh Dim_Tiempo'[Fecha] <= MAX(FechaInicio, FechaMin)  -- Filtrar por fecha de inicio
 			    )
 			
-			-- Stickers entregados acumulados hasta FechaFinal
 			-- Stickers entregados acumulados hasta FechaFinal
 			VAR StickersFin =
 			    CALCULATE (
 			        SUMX (
 			            VALUES('dwh Fact_Cupon'[KeyAfiliado]),  -- Para cada afiliado
 			            MAX('dwh Fact_Cupon'[StickersEntregados])  -- Obtener el máximo de stickers entregados
-			            VALUES('dwh Fact_Cupon'[KeyAfiliado]),  -- Para cada afiliado
-			            MAX('dwh Fact_Cupon'[StickersEntregados])  -- Obtener el máximo de stickers entregados
 			        ),
-			        'dwh Dim_Tiempo'[Fecha] <= MIN(FechaFinal, FechaMax)  -- Filtrar por fecha final
 			        'dwh Dim_Tiempo'[Fecha] <= MIN(FechaFinal, FechaMax)  -- Filtrar por fecha final
 			    )
 			
-			-- Retornar la variación de stickers entregados
 			-- Retornar la variación de stickers entregados
 			RETURN
 			    COALESCE(StickersFin - StickersInicio,"NA")  -- Variación entre la fecha final e inicio
@@ -136,8 +122,6 @@
 			
 			VAR FechaRaiz = MAX( MIN('dwh Dim_Tiempo'[Fecha]), MIN('CalendarioGeneral'[Date]) )  
 			VAR FechaFin = MIN( MAX('dwh Dim_Tiempo'[Fecha]), MAX('CalendarioGeneral'[Date]) )  
-			VAR FechaRaiz = MAX( MIN('dwh Dim_Tiempo'[Fecha]), MIN('CalendarioGeneral'[Date]) )  
-			VAR FechaFin = MIN( MAX('dwh Dim_Tiempo'[Fecha]), MAX('CalendarioGeneral'[Date]) )  
 			
 			-- Stickers activos acumulados hasta la FechaRaiz
 			VAR StickersInicio =
@@ -160,7 +144,6 @@
 			    )
 			
 			-- Retornar la variación, asegurando que si el resultado es blanco, devuelva 0
-			-- Retornar la variación, asegurando que si el resultado es blanco, devuelva 0
 			RETURN
 			    IF(ISBLANK(StickersFin - StickersInicio), "NA", StickersFin - StickersInicio)
 			
@@ -169,22 +152,6 @@
 
 	measure PromedioStickersGeneral = ```
 			
-			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])  
-			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])    
-			
-			-- Limitar las fechas al rango permitido
-			VAR FechaMin = MIN('CalendarioGeneral'[Date])  
-			VAR FechaMax = MAX('CalendarioGeneral'[Date])  
-			
-			VAR Resultado =
-			    AVERAGEX (
-			        SUMMARIZE (
-			            'dwh Fact_Cupon',
-			            'dwh Fact_Cupon'[KeyAfiliado],
-			            "MaxStickers", MAX('dwh Fact_Cupon'[StickersActivos])
-			        ),
-			        [MaxStickers]
-			    )
 			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])  
 			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])    
 			
@@ -558,7 +525,6 @@
 		mode: import
 		source =
 				let
-				    Source = Sql.Databases("40.79.18.177"),
 				    Source = Sql.Databases("40.79.18.177"),
 				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
 				    dwh_Fact_Cupon = ApployaltyDWH{[Schema="dwh",Item="Fact_Cupon"]}[Data]
