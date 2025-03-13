@@ -1,14 +1,27 @@
 {
+<<<<<<<< HEAD:Dashboard/Report/sections/003_CLIENTES/visualContainers/00000_shape (3d3f5)/config.json
   "name": "3d3f5fb39b57791e930e",
+========
+  "name": "f96f5be6ba3cb006ad04",
+>>>>>>>> origin/main:Dashboard/Report/sections/002_TARJETAS/visualContainers/01000_Saldo de Tarjetas (f96f5)/config.json
   "layouts": [
     {
       "id": 0,
       "position": {
+<<<<<<<< HEAD:Dashboard/Report/sections/003_CLIENTES/visualContainers/00000_shape (3d3f5)/config.json
         "height": 308,
         "width": 602,
         "x": 0,
         "y": 0,
         "z": 2000
+========
+        "height": 244.00033377837107,
+        "width": 292.10379464285717,
+        "x": 0,
+        "y": 0,
+        "z": 7000,
+        "tabOrder": 1000
+>>>>>>>> origin/main:Dashboard/Report/sections/002_TARJETAS/visualContainers/01000_Saldo de Tarjetas (f96f5)/config.json
       }
     }
   ],
@@ -83,8 +96,41 @@
           }
         }
       ]
+    },
+    "vcObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Saldo de Tarjetas'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ]
     }
   },
+<<<<<<<< HEAD:Dashboard/Report/sections/003_CLIENTES/visualContainers/00000_shape (3d3f5)/config.json
   "parentGroupName": "544d11178d431eb591d1",
+========
+  "parentGroupName": "50b45620e559fbf85580",
+>>>>>>>> origin/main:Dashboard/Report/sections/002_TARJETAS/visualContainers/01000_Saldo de Tarjetas (f96f5)/config.json
   "howCreated": "InsertVisualButton"
 }

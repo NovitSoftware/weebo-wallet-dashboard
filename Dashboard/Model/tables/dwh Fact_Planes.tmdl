@@ -53,7 +53,15 @@
 			-- Limitar por el rango de fechas del calendario
 			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del filtro
 			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del filtro
+			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])
+			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])
 			
+			-- Limitar por el rango de fechas del calendario
+			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del filtro
+			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del filtro
+			
+			-- Saldo acumulado hasta la FechaInicio
+			VAR SaldoHastaInicio =
 			-- Saldo acumulado hasta la FechaInicio
 			VAR SaldoHastaInicio =
 			    CALCULATE(
@@ -61,12 +69,20 @@
 			        REMOVEFILTERS('dwh Dim_Tiempo'[Fecha]),
 			        'dwh Dim_Tiempo'[Fecha] <= MAX(FechaInicio, FechaMin),  -- Asegura que FechaInicio esté dentro del rango
 			        'dwh Dim_Tiempo'[Fecha] <= FechaMax  -- Limita las fechas a las seleccionadas en CalendarioGeneral
+			        REMOVEFILTERS('dwh Dim_Tiempo'[Fecha]),
+			        'dwh Dim_Tiempo'[Fecha] <= MAX(FechaInicio, FechaMin),  -- Asegura que FechaInicio esté dentro del rango
+			        'dwh Dim_Tiempo'[Fecha] <= FechaMax  -- Limita las fechas a las seleccionadas en CalendarioGeneral
 			    )
 			
 			-- Saldo acumulado hasta la FechaFinal
 			VAR SaldoHastaFin =
+			-- Saldo acumulado hasta la FechaFinal
+			VAR SaldoHastaFin =
 			    CALCULATE(
 			        SUM('dwh Fact_Planes'[SaldoTarjetasAdquiridas]),
+			        REMOVEFILTERS('dwh Dim_Tiempo'[Fecha]),
+			        'dwh Dim_Tiempo'[Fecha] <= MIN(FechaFinal, FechaMax),  -- Asegura que FechaFinal esté dentro del rango
+			        'dwh Dim_Tiempo'[Fecha] <= FechaMax  -- Limita las fechas a las seleccionadas en CalendarioGeneral
 			        REMOVEFILTERS('dwh Dim_Tiempo'[Fecha]),
 			        'dwh Dim_Tiempo'[Fecha] <= MIN(FechaFinal, FechaMax),  -- Asegura que FechaFinal esté dentro del rango
 			        'dwh Dim_Tiempo'[Fecha] <= FechaMax  -- Limita las fechas a las seleccionadas en CalendarioGeneral
@@ -202,6 +218,7 @@
 		mode: import
 		source =
 				let
+				    Source = Sql.Databases("40.79.18.177"),
 				    Source = Sql.Databases("40.79.18.177"),
 				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
 				    dwh_Fact_Planes = ApployaltyDWH{[Schema="dwh",Item="Fact_Planes"]}[Data]
