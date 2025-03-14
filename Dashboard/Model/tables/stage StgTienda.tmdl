@@ -11,7 +11,7 @@
 	column fkcliente
 		dataType: int64
 		formatString: 0
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: fkcliente
 
 		annotation SummarizationSetBy = Automatic

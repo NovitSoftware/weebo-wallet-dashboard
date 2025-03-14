@@ -1,0 +1,90 @@
+{
+  "name": "c278c3a700b0d137b31b",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 107.13253012048193,
+        "width": 288.91720779220776,
+        "x": 289.81168831168827,
+        "y": 33.348385088288438,
+        "z": 21000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "card",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "dwh Fact_AfiliacionEmpresa.PromedioClientesDesafiliados"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d",
+          "Entity": "dwh Fact_AfiliacionEmpresa",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "PromedioClientesDesafiliados"
+          },
+          "Name": "dwh Fact_AfiliacionEmpresa.PromedioClientesDesafiliados",
+          "NativeReferenceName": "Promedio"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "d"
+                }
+              },
+              "Property": "PromedioClientesDesafiliados"
+            }
+          }
+        }
+      ]
+    },
+    "columnProperties": {
+      "dwh Fact_AfiliacionWebo.PromedioClientesActivos": {
+        "displayName": "Promedio"
+      },
+      "dwh Fact_AfiliacionEmpresa.PromedioClientesDesafiliados": {
+        "displayName": "Promedio"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "vcObjects": {
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "09858e8538b1d0efae7b"
+}

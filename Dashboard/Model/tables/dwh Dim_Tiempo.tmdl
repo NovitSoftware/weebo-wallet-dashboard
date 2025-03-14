@@ -14,8 +14,6 @@
 		summarizeBy: none
 		sourceColumn: Fecha
 
-		changedProperty = DataType
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isDateTimeCustom":true}
@@ -60,10 +58,7 @@
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Fecha Fixed' = ```
-			DATEVALUE(FORMAT([Fecha], "dd/mm/yyyy"))
-			
-			```
+	column 'Fecha Fixed' = DATEVALUE([Fecha])
 		formatString: General Date
 		summarizeBy: none
 
@@ -71,6 +66,21 @@
 			isDefault
 			relationship: e12d0439-44bf-4e5c-be33-f7dc1e7b26f4
 			defaultHierarchy: LocalDateTable_2379fe0a-2395-4b4d-bd24-a3ee06f28d39.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column PeriodoDelDia = ```
+			
+			SWITCH(
+			    TRUE(),
+			    HOUR('dwh Dim_Tiempo'[Fecha Fixed]) >= 6 && HOUR('dwh Dim_Tiempo'[Fecha Fixed]) <= 11, "Mañana (6:00 - 12:00)",
+			    HOUR('dwh Dim_Tiempo'[Fecha Fixed]) >= 12 && HOUR('dwh Dim_Tiempo'[Fecha Fixed]) <= 17, "Tarde (12:00 - 18:00)",
+			    HOUR('dwh Dim_Tiempo'[Fecha Fixed]) >= 18 && HOUR('dwh Dim_Tiempo'[Fecha Fixed]) <= 23, "Noche (18:00 - 24:00)",
+			    "NA"
+			)
+			
+			```
+		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
 

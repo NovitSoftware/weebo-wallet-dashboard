@@ -14,12 +14,16 @@
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column TotalStickersVencidos
 		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [TotalStickersVencidos]
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition CuponesPorDistrito = calculated
 		mode: import
@@ -28,8 +32,18 @@
 				SUMMARIZE(
 				    'dwh Dim_Afiliado',
 				    'dwh Dim_Afiliado'[Distrito],
-				    "TotalStickersActivos", [TotalStickerActivos],
-				    "TotalStickersVencidos", [TotalStickerVencidos]
+				    "TotalStickersActivos", 
+				        IF(
+				            ISERROR(VALUE('dwh Fact_Cupon'[TotalStickerActivos])), 
+				            0, 
+				            VALUE('dwh Fact_Cupon'[TotalStickerActivos])
+				        ),
+				    "TotalStickersVencidos", 
+				        IF(
+				            ISERROR(VALUE('dwh Fact_Cupon'[TotalStickerVencidos])), 
+				            0, 
+				            VALUE('dwh Fact_Cupon'[TotalStickerVencidos])
+				        )
 				)
 				
 				```

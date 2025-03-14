@@ -3,7 +3,7 @@
 	column KeyTienda
 		dataType: int64
 		formatString: 0
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: KeyTienda
 
 		annotation SummarizationSetBy = Automatic

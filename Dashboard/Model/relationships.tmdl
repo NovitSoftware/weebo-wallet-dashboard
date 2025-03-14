@@ -622,11 +622,6 @@ relationship AutoDetected_089b8e91-5129-4951-8c03-a0eba174b3c1
 	fromColumn: 'dwh Fact_Facturacion'.KeyTienda
 	toColumn: 'dwh Dim_Tienda'.KeyTienda
 
-relationship AutoDetected_acc7353e-bf6e-405a-b02b-de5c56c8fc82
-	crossFilteringBehavior: bothDirections
-	fromColumn: 'dwh Dim_Tienda'.KeyTienda
-	toColumn: 'stage StgFactFacturacion'.KeyTienda
-
 relationship AutoDetected_fb1c90e8-d957-4abe-b520-0553c7be5b8b
 	fromColumn: 'stage StgAfiliacion'.fkcliente
 	toColumn: 'stage StgPrograma'.fkcliente
@@ -641,22 +636,6 @@ relationship AutoDetected_4a56698a-1b34-4740-8abc-9217e5f45e70
 
 relationship AutoDetected_8a984ab4-a0e7-4c68-bafe-645b42ecb47c
 	fromColumn: 'stage StgPromocion'.fkcliente
-	toColumn: 'stage StgPrograma'.fkcliente
-
-relationship AutoDetected_31b3b76f-f55f-46c9-99be-43c8e6946bc4
-	fromColumn: 'stage StgTarjeta'.fkcliente
-	toColumn: 'stage StgPrograma'.fkcliente
-
-relationship AutoDetected_b929a7ab-fad9-4bad-bc45-c262ab28361c
-	fromColumn: 'stage StgTienda'.fkcliente
-	toColumn: 'stage StgPrograma'.fkcliente
-
-relationship AutoDetected_5e3c4032-a58a-4f44-be9a-5b2e77e6a94f
-	fromColumn: 'stage StgTrackingStickers'.fkcliente
-	toColumn: 'stage StgPrograma'.fkcliente
-
-relationship AutoDetected_877c94db-a7ef-46df-afac-272c40a01e58
-	fromColumn: 'stage StgTransaccion'.fkcliente
 	toColumn: 'stage StgPrograma'.fkcliente
 
 relationship AutoDetected_6652cdf5-dbdc-4eda-a240-1cd12aa17dda
@@ -727,4 +706,8 @@ relationship 06453e3c-ed8a-4e6f-887a-26257dcfb906
 	joinOnDateBehavior: datePartOnly
 	fromColumn: UltimasFechasGeneral.'Fecha Final'
 	toColumn: LocalDateTable_5f0bcdab-8452-43e7-8041-5c083b762aea.Date
+
+relationship 571fbc68-6f64-2896-e8f2-148bb43836e7
+	fromColumn: 'dwh Fact_AfiliacionEmpresa'.KeyFechaCorte
+	toColumn: 'dwh Dim_Tiempo'.KeyTiempo
 

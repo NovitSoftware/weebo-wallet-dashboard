@@ -17,7 +17,7 @@
 			        'dwh Dim_Tiempo'[Fecha] <= FechaMax  -- Limita las fechas a las seleccionadas en CalendarioGeneral
 			    )
 			
-			RETURN COALESCE(Resultado, 0)
+			RETURN COALESCE(Resultado, "NA")
 			
 			```
 		formatString: 0
@@ -39,7 +39,7 @@
 			        'dwh Dim_Tiempo'[Fecha] <= FechaMax  -- Limita las fechas a las seleccionadas en CalendarioGeneral
 			    )
 			
-			RETURN COALESCE(Resultado, 0)
+			RETURN COALESCE(Resultado, "NA")
 			
 			```
 
@@ -75,7 +75,7 @@
 			-- Cálculo de la variación
 			VAR Resultado = SaldoHastaFin - SaldoHastaInicio
 			
-			RETURN IF(Resultado = 0, 0, COALESCE(Resultado, 0))
+			RETURN COALESCE(Resultado, "NA")
 			
 			```
 		formatString: 0
@@ -96,11 +96,12 @@
 
 	measure PromedioStickersPorTarjeta = ```
 			
+			COALESCE(
 			DIVIDE(
 			    SUMX('dwh Fact_Planes', COALESCE('dwh Fact_Planes'[StickersEntregados], 0)),
 			    SUM('dwh Fact_Planes'[TarjetasActivadas]),
-			    0
-			)
+			    "NA"
+			),"NA")
 			
 			```
 
@@ -108,8 +109,14 @@
 
 	measure TarjetasCompradas =
 			
-			COALESCE(SUM('dwh Fact_Planes'[TarjetasAdquiridas]),0)
+			COALESCE(SUM('dwh Fact_Planes'[TarjetasAdquiridas]),"NA")
 		formatString: 0
+
+	measure 'Sticker entregados' =
+			
+			COALESCE(SUM('dwh Fact_Planes'[StickersEntregados]), "NA")
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column KeyFactPlan
 		dataType: int64

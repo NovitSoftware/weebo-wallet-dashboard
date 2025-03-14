@@ -9,7 +9,8 @@
 			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del calendario
 			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del calendario
 			
-			RETURN  
+			RETURN
+			COALESCE(
 			CALCULATE(  
 			    COUNTROWS('dwh Dim_Tarjeta'),  
 			    'dwh Dim_Tarjeta'[FechaActivo] >= MAX(FechaInicio, FechaMin) &&  
@@ -17,7 +18,7 @@
 			    'dwh Dim_Tarjeta'[FechaActivo] <= FechaMax &&  -- Limita a las fechas del calendario general
 			    NOT ISBLANK('dwh Dim_Tarjeta'[FechaActivo])  
 			)  
-			
+			,"NA")
 			```
 		formatString: 0
 
@@ -47,7 +48,7 @@
 			    )
 			
 			-- Variación entre los dos períodos
-			RETURN TarjetasActivasHastaFin - TarjetasActivasHastaInicio
+			RETURN COALESCE(TarjetasActivasHastaFin - TarjetasActivasHastaInicio,"NA")
 			
 			```
 
@@ -83,7 +84,7 @@
 			
 			-- Devuelve el promedio de tarjetas activadas por día
 			RETURN 
-			    DIVIDE(TotalTarjetasActivadas, DiasEnRango, 0)  -- Calcula el promedio
+			    COALESCE(DIVIDE(TotalTarjetasActivadas, DiasEnRango, "NA"), "NA")  -- Calcula el promedio
 			
 			```
 

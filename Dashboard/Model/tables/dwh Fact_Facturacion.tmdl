@@ -10,12 +10,13 @@
 			VAR FechaMax = MAX('CalendarioGeneral'[Date])
 			
 			RETURN  
+			COALESCE(
 			CALCULATE(  
 			    SUM('dwh Fact_Facturacion'[Importe]),  
 			    'dwh Dim_Tiempo'[Fecha] >= MAX(FechaInicio, FechaMin) &&  
 			    'dwh Dim_Tiempo'[Fecha] <= MIN(FechaFinal, FechaMax) && 
 			    'dwh Dim_Tiempo'[Fecha] <= FechaMax  
-			)  
+			),"NA")  
 			
 			```
 
@@ -47,7 +48,7 @@
 			    )
 			
 			-- Variación entre los dos períodos
-			RETURN MontoHastaFin - MontoHastaInicio
+			RETURN COALESCE(MontoHastaFin - MontoHastaInicio,"NA")
 			
 			```
 
@@ -66,14 +67,14 @@
 			VAR FechaSeleccionada = MAX('dwh Dim_Tiempo'[Fecha])
 			
 			RETURN
+			COALESCE(
 			CALCULATE(
 			    AVERAGE('dwh Fact_Facturacion'[Importe]), 
 			    'dwh Dim_Tiempo'[Fecha] <= FechaSeleccionada,
 			    'dwh Dim_Tiempo'[Fecha] >= FechaInicio,  -- Asegurarse que esté dentro del rango de fechas
 			    'dwh Dim_Tiempo'[Fecha] <= FechaFinal    -- Asegurarse que esté dentro del rango de fechas
 			)
-			
-			
+			, "NA")
 			```
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -116,11 +117,23 @@
 			VAR FechaInicio = FechaSeleccionada - 6 -- Rango de los últimos 7 días
 			
 			RETURN 
+			COALESCE(
 			    CALCULATE(
 			        AVERAGE('dwh Fact_Facturacion'[Importe]),
 			        'dwh Dim_Tiempo'[Fecha] >= FechaInicio && 'dwh Dim_Tiempo'[Fecha] <= FechaSeleccionada,
 			        'dwh Dim_Tiempo'[Fecha]<> BLANK() -- Asegura que no cuenta valores en blanco
 			    )
+			, "NA")
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure VisitasPromedio = ```
+			
+			DIVIDE(
+			    COUNT('dwh Fact_Facturacion'[KeyFactFacturacion]),
+			    DISTINCTCOUNT('dwh Dim_Tiempo'[Fecha])
+			)
 			
 			```
 

@@ -1,0 +1,211 @@
+{
+  "objects": {
+    "labels": [
+      {
+        "properties": {
+          "labelStyle": {
+            "expr": {
+              "Literal": {
+                "Value": "'Data'"
+              }
+            }
+          },
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "legend": [
+      {
+        "properties": {
+          "position": {
+            "expr": {
+              "Literal": {
+                "Value": "'BottomCenter'"
+              }
+            }
+          },
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "showTitle": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "projectionOrdering": {
+    "Y": [
+      0,
+      1,
+      2
+    ],
+    "Category": [
+      3
+    ]
+  },
+  "projectionActiveItems": {
+    "Category": [
+      {
+        "queryRef": "dwh Dim_Afiliado.Distrito",
+        "suppressConcat": false
+      }
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Activos",
+        "Name": "dwh Dim_Afiliado.AfiliadosActivosPorcentaje",
+        "Type": 1
+      },
+      {
+        "Restatement": "En Riesgo",
+        "Name": "dwh Dim_Afiliado.AfiliadosEnRiesgoPorcentaje",
+        "Type": 1,
+        "Format": "0.00\\ %;-0.00\\ %;0.00\\ %"
+      },
+      {
+        "Restatement": "Perdidos",
+        "Name": "dwh Dim_Afiliado.AfiliadosPerdidosPorcentaje",
+        "Type": 1,
+        "Format": "0.00\\ %;-0.00\\ %;0.00\\ %"
+      },
+      {
+        "Restatement": "Distrito",
+        "Name": "dwh Dim_Afiliado.Distrito",
+        "Type": 2048
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Y",
+          "Projection": 0,
+          "isActive": false
+        },
+        {
+          "Name": "Y",
+          "Projection": 1,
+          "isActive": false
+        },
+        {
+          "Name": "Y",
+          "Projection": 2,
+          "isActive": false
+        },
+        {
+          "Name": "Category",
+          "Projection": 3,
+          "isActive": true
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Activos",
+      "queryName": "dwh Dim_Afiliado.AfiliadosActivosPorcentaje",
+      "roles": {
+        "Y": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Dim_Afiliado"
+            }
+          },
+          "Property": "AfiliadosActivosPorcentaje"
+        }
+      }
+    },
+    {
+      "displayName": "En Riesgo",
+      "format": "0.00\\ %;-0.00\\ %;0.00\\ %",
+      "queryName": "dwh Dim_Afiliado.AfiliadosEnRiesgoPorcentaje",
+      "roles": {
+        "Y": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Dim_Afiliado"
+            }
+          },
+          "Property": "AfiliadosEnRiesgoPorcentaje"
+        }
+      }
+    },
+    {
+      "displayName": "Perdidos",
+      "format": "0.00\\ %;-0.00\\ %;0.00\\ %",
+      "queryName": "dwh Dim_Afiliado.AfiliadosPerdidosPorcentaje",
+      "roles": {
+        "Y": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Dim_Afiliado"
+            }
+          },
+          "Property": "AfiliadosPerdidosPorcentaje"
+        }
+      }
+    },
+    {
+      "displayName": "Distrito",
+      "queryName": "dwh Dim_Afiliado.Distrito",
+      "roles": {
+        "Category": true
+      },
+      "sort": 2,
+      "sortOrder": 0,
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Dim_Afiliado"
+            }
+          },
+          "Property": "Distrito"
+        }
+      }
+    }
+  ]
+}

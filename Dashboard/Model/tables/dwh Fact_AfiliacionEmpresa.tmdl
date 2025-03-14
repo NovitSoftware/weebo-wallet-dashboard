@@ -17,12 +17,11 @@
 			
 			COALESCE(
 			    CALCULATE(
-			        DISTINCTCOUNT('dwh Fact_AfiliacionEmpresa'[KeyEmpresa]),
-			        DATEDIFF('dwh Fact_AfiliacionEmpresa'[FechaActivo], TODAY(), DAY) >= 75,
-			        DATEDIFF('dwh Fact_AfiliacionEmpresa'[FechaActivo], TODAY(), DAY) <= 90
+			        COUNT('dwh Fact_AfiliacionEmpresa'[KeyFactAfiliacionEmpresa]),
+			        'dwh Fact_AfiliacionEmpresa'[FlagEnRiesgo] = 1
 			    )
 			    ,
-			    0
+			    "NA"
 			)
 			
 			```
@@ -31,16 +30,13 @@
 	measure PromedioClientesEnRiesgo = ```
 			
 			COALESCE(
-			    CALCULATE(
-			        AVERAGEX(
-			            DISTINCT('dwh Fact_AfiliacionEmpresa'[KeyEmpresa]),
-			            'dwh Fact_AfiliacionEmpresa'[KeyEmpresa]
-			        ),
-			        TODAY() - 'dwh Fact_AfiliacionEmpresa'[FechaActivo] >= 75 &&
-			        TODAY() - 'dwh Fact_AfiliacionEmpresa'[FechaActivo] <= 90
-			    ),
-			    0
-			)
+			DIVIDE(
+			    IF(
+			        ISERROR(VALUE([TotalClientesEnRiesgo])), 
+			        0, 
+			        VALUE([TotalClientesEnRiesgo])
+			    )
+			, COUNTROWS('dwh Fact_AfiliacionEmpresa'), BLANK()),"NA")
 			
 			```
 
@@ -50,30 +46,26 @@
 			
 			COALESCE(
 			    CALCULATE(
-			        DISTINCTCOUNT('dwh Dim_Empresa'[KeyEmpresa]),
-			        FILTER(
-			            'dwh Fact_AfiliacionEmpresa',
-			            'dwh Fact_AfiliacionEmpresa'[FechaActivo] >= TODAY() - 90
-			        )
+			        COUNT('dwh Fact_AfiliacionEmpresa'[KeyFactAfiliacionEmpresa]),
+			        'dwh Fact_AfiliacionEmpresa'[FlagActivo] = 1
 			    ),
-			    0
+			    "NA"
 			)
 			
 			```
-		formatString: 0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure PromedioClientesActivos = ```
 			
 			COALESCE(
-			    CALCULATE(
-			        AVERAGEX(
-			            DISTINCT('dwh Fact_AfiliacionEmpresa'[KeyEmpresa]),
-			            'dwh Fact_AfiliacionEmpresa'[KeyEmpresa]
-			        ),
-			        TODAY() - 'dwh Fact_AfiliacionEmpresa'[FechaActivo] <= 90
-			    ),
-			    0
-			)
+			DIVIDE(
+			    IF(
+			        ISERROR(VALUE([TotalClientesActivos])), 
+			        0, 
+			        VALUE([TotalClientesActivos])
+			    )
+			, COUNTROWS('dwh Fact_AfiliacionEmpresa'), BLANK()),"NA")
 			
 			```
 
@@ -82,15 +74,13 @@
 	measure PromedioClientesPerdidos = ```
 			
 			COALESCE(
-			    CALCULATE(
-			        AVERAGEX(
-			            DISTINCT('dwh Fact_AfiliacionEmpresa'[KeyEmpresa]),
-			            'dwh Fact_AfiliacionEmpresa'[KeyEmpresa]
-			        ),
-			        TODAY() - 'dwh Fact_AfiliacionEmpresa'[FechaActivo] > 90
-			    ),
-			    0
-			)
+			DIVIDE(
+			    IF(
+			        ISERROR(VALUE([TotalClientesPerdidos])), 
+			        0, 
+			        VALUE([TotalClientesPerdidos])
+			    )
+			, COUNTROWS('dwh Fact_AfiliacionEmpresa'), BLANK()),"NA")
 			
 			```
 
@@ -100,11 +90,10 @@
 			
 			COALESCE(
 			    CALCULATE(
-			        DISTINCTCOUNT('dwh Fact_AfiliacionEmpresa'[KeyEmpresa]),
-			        DATEDIFF('dwh Fact_AfiliacionEmpresa'[FechaActivo], TODAY(), DAY) > 90
-			    )
-			    ,
-			    0
+			        COUNT('dwh Fact_AfiliacionEmpresa'[KeyFactAfiliacionEmpresa]),
+			        'dwh Fact_AfiliacionEmpresa'[FlagPerdido] = 1
+			    ),
+			    "NA"
 			)
 			
 			```
@@ -114,9 +103,9 @@
 			
 			COALESCE(
 			CALCULATE(
-			    DISTINCTCOUNT('dwh Fact_AfiliacionEmpresa'[KeyEmpresa]),
+			    COUNT('dwh Fact_AfiliacionEmpresa'[KeyFactAfiliacionEmpresa]),
 			    'dwh Fact_AfiliacionEmpresa'[FlagDesafiliado] = 1
-			),0)
+			),"NA")
 			
 			```
 		formatString: 0
@@ -124,34 +113,33 @@
 	measure PromedioClientesDesafiliados = ```
 			
 			COALESCE(
-			    CALCULATE(
-			        AVERAGEX(
-			            DISTINCT('dwh Fact_AfiliacionEmpresa'[KeyEmpresa]),
-			            'dwh Fact_AfiliacionEmpresa'[KeyEmpresa]
-			        ),
-			        'dwh Fact_AfiliacionEmpresa'[FlagDesafiliado] = 1
-			    ),
-			    0
-			)
+			DIVIDE(
+			    IF(
+			        ISERROR(VALUE([TotalClientesDesafiliados])), 
+			        0, 
+			        VALUE([TotalClientesDesafiliados])
+			    )
+			, COUNTROWS('dwh Fact_AfiliacionEmpresa'), BLANK()),"NA")
 			
 			```
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure RecenciaPromedio = ```
+	measure RecenciaPromedio =
 			
+			COALESCE(
 			AVERAGE('dwh Fact_AfiliacionEmpresa'[DiasDesdeUltimoConsumo])
-			
-			```
+			, "NA")
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure FrecuenciaPromedio =
 			
+			COALESCE(
 			DIVIDE(
 			    CALCULATE( COUNT('dwh Fact_AfiliacionEmpresa'[KeyFactAfiliacionEmpresa]) ),
-			    CALCULATE( DISTINCTCOUNT('dwh Fact_AfiliacionEmpresa'[KeyAfiliado]) )
-			)
+			    CALCULATE( DISTINCTCOUNT('dwh Fact_AfiliacionEmpresa'[KeyAfiliado]) ), BLANK()
+			),"NA")
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
@@ -166,7 +154,7 @@
 	column KeyFechaCorte
 		dataType: int64
 		formatString: 0
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: KeyFechaCorte
 
 		annotation SummarizationSetBy = Automatic

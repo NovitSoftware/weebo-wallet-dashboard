@@ -1,0 +1,323 @@
+{
+  "objects": {
+    "categoryAxis": [
+      {
+        "properties": {
+          "axisType": {
+            "expr": {
+              "Literal": {
+                "Value": "'Categorical'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "valueAxis": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "showAxisTitle": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "legend": [
+      {
+        "properties": {
+          "showGradientLegend": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "projectionOrdering": {
+    "Y": [
+      0
+    ],
+    "Category": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "Series": [
+      5
+    ]
+  },
+  "projectionActiveItems": {
+    "Category": [
+      {
+        "queryRef": "dwh Dim_Tiempo.Fecha Fixed.Variation.Date Hierarchy.Day",
+        "suppressConcat": false
+      }
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Visitas promedio",
+        "Name": "dwh Fact_Facturacion.VisitasPromedio",
+        "Type": 1
+      },
+      {
+        "Restatement": "Year",
+        "Name": "dwh Dim_Tiempo.Fecha Fixed.Variation.Date Hierarchy.Year",
+        "Type": 3
+      },
+      {
+        "Restatement": "Quarter",
+        "Name": "dwh Dim_Tiempo.Fecha Fixed.Variation.Date Hierarchy.Quarter",
+        "Type": 2048
+      },
+      {
+        "Restatement": "Month",
+        "Name": "dwh Dim_Tiempo.Fecha Fixed.Variation.Date Hierarchy.Month",
+        "Type": 2048
+      },
+      {
+        "Restatement": "Day",
+        "Name": "dwh Dim_Tiempo.Fecha Fixed.Variation.Date Hierarchy.Day",
+        "Type": 3
+      },
+      {
+        "Restatement": "Periodo del dia",
+        "Name": "dwh Dim_Tiempo.PeriodoDelDia",
+        "Type": 2048
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Y",
+          "Projection": 0,
+          "isActive": false
+        },
+        {
+          "Name": "Category",
+          "Projection": 1,
+          "isActive": false
+        },
+        {
+          "Name": "Category",
+          "Projection": 2,
+          "isActive": false
+        },
+        {
+          "Name": "Category",
+          "Projection": 3,
+          "isActive": false
+        },
+        {
+          "Name": "Category",
+          "Projection": 4,
+          "isActive": true
+        },
+        {
+          "Name": "Series",
+          "Projection": 5,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Visitas promedio",
+      "queryName": "dwh Fact_Facturacion.VisitasPromedio",
+      "roles": {
+        "Y": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Fact_Facturacion"
+            }
+          },
+          "Property": "VisitasPromedio"
+        }
+      }
+    },
+    {
+      "displayName": "Year",
+      "queryName": "dwh Dim_Tiempo.Fecha Fixed.Variation.Date Hierarchy.Year",
+      "roles": {
+        "Category": true
+      },
+      "type": {
+        "category": "Years",
+        "underlyingType": 66308
+      },
+      "expr": {
+        "HierarchyLevel": {
+          "Expression": {
+            "Hierarchy": {
+              "Expression": {
+                "PropertyVariationSource": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dwh Dim_Tiempo"
+                    }
+                  },
+                  "Name": "Variation",
+                  "Property": "Fecha Fixed"
+                }
+              },
+              "Hierarchy": "Date Hierarchy"
+            }
+          },
+          "Level": "Year"
+        }
+      }
+    },
+    {
+      "displayName": "Quarter",
+      "queryName": "dwh Dim_Tiempo.Fecha Fixed.Variation.Date Hierarchy.Quarter",
+      "roles": {
+        "Category": true
+      },
+      "type": {
+        "category": "Quarters",
+        "underlyingType": 262657
+      },
+      "expr": {
+        "HierarchyLevel": {
+          "Expression": {
+            "Hierarchy": {
+              "Expression": {
+                "PropertyVariationSource": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dwh Dim_Tiempo"
+                    }
+                  },
+                  "Name": "Variation",
+                  "Property": "Fecha Fixed"
+                }
+              },
+              "Hierarchy": "Date Hierarchy"
+            }
+          },
+          "Level": "Quarter"
+        }
+      }
+    },
+    {
+      "displayName": "Month",
+      "queryName": "dwh Dim_Tiempo.Fecha Fixed.Variation.Date Hierarchy.Month",
+      "roles": {
+        "Category": true
+      },
+      "type": {
+        "category": "Months",
+        "underlyingType": 131585
+      },
+      "expr": {
+        "HierarchyLevel": {
+          "Expression": {
+            "Hierarchy": {
+              "Expression": {
+                "PropertyVariationSource": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dwh Dim_Tiempo"
+                    }
+                  },
+                  "Name": "Variation",
+                  "Property": "Fecha Fixed"
+                }
+              },
+              "Hierarchy": "Date Hierarchy"
+            }
+          },
+          "Level": "Month"
+        }
+      }
+    },
+    {
+      "displayName": "Day",
+      "queryName": "dwh Dim_Tiempo.Fecha Fixed.Variation.Date Hierarchy.Day",
+      "roles": {
+        "Category": true
+      },
+      "sort": 1,
+      "sortOrder": 0,
+      "type": {
+        "category": "DayOfMonth",
+        "underlyingType": 328452
+      },
+      "expr": {
+        "HierarchyLevel": {
+          "Expression": {
+            "Hierarchy": {
+              "Expression": {
+                "PropertyVariationSource": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dwh Dim_Tiempo"
+                    }
+                  },
+                  "Name": "Variation",
+                  "Property": "Fecha Fixed"
+                }
+              },
+              "Hierarchy": "Date Hierarchy"
+            }
+          },
+          "Level": "Day"
+        }
+      }
+    },
+    {
+      "displayName": "Periodo del dia",
+      "queryName": "dwh Dim_Tiempo.PeriodoDelDia",
+      "roles": {
+        "Series": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Dim_Tiempo"
+            }
+          },
+          "Property": "PeriodoDelDia"
+        }
+      }
+    }
+  ]
+}

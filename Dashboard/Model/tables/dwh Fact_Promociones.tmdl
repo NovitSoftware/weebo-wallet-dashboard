@@ -1,40 +1,41 @@
 ﻿table 'dwh Fact_Promociones'
 
-	measure TotalPromocionesActivas = ```
+	measure TotalPromocionesActivas =
 			
+			COALESCE(
 			CALCULATE(
 			    COUNT('dwh Fact_Promociones'[KeyFactPromocion]),
 			    'dwh Fact_Promociones'[FlagPromocionActiva] = 1
 			)
-			
-			```
+			,"NA")
 		formatString: 0
 
 	measure TotalPromocionesRedimidas = ```
 			
+			 COALESCE(
 			CALCULATE(
 			    COUNT('dwh Fact_Promociones'[KeyFactPromocion]),
 			    'dwh Fact_Promociones'[FlagPromocionRedimida] = 1
-			)
+			),"NA")
 			
 			```
 		formatString: 0
 
-	measure TotalPromocionesVencidas = ```
+	measure TotalPromocionesVencidas =
 			
+			COALESCE(
 			CALCULATE(
 			    COUNT('dwh Fact_Promociones'[KeyFactPromocion]),
 			    'dwh Fact_Promociones'[FlagCuponVencido] = 1
 			)
-			
-			```
+			,"NA")
 		formatString: 0
 
-	measure PromedioDiasActivacion = ```
+	measure PromedioDiasActivacion =
 			
+			COALESCE(
 			AVERAGE('dwh Fact_Promociones'[DiasHastaActivarPromocion])
-			
-			```
+			,"NA")
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 

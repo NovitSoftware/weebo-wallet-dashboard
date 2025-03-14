@@ -10,6 +10,7 @@
 			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del calendario
 			
 			RETURN 
+			COALESCE(
 			    CALCULATE (
 			        SUMX (
 			            SUMMARIZE (
@@ -21,7 +22,7 @@
 			            [MaxStickers]  -- Sumar los stickers entregados
 			        ),
 			        'dwh Dim_Tiempo'[Fecha] >= MAX(FechaInicio, FechaMin) && 'dwh Dim_Tiempo'[Fecha] <= MIN(FechaFinal, FechaMax)  -- Filtrar por el rango de fechas
-			    )
+			    ),"NA")
 			
 			```
 		formatString: 0
@@ -57,7 +58,7 @@
 			
 			-- Retornar la variación de stickers entregados
 			RETURN
-			    StickersFin - StickersInicio  -- Variación entre la fecha final e inicio
+			    COALESCE(StickersFin - StickersInicio,"NA")  -- Variación entre la fecha final e inicio
 			
 			```
 		formatString: 0
@@ -72,6 +73,7 @@
 			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del calendario
 			
 			RETURN 
+			COALESCE(
 			    CALCULATE (
 			        AVERAGEX (
 			            SUMMARIZE (
@@ -85,7 +87,7 @@
 			        'dwh Dim_Tiempo'[Fecha] >= MAX(FechaInicio, FechaMin) && 'dwh Dim_Tiempo'[Fecha] <= MIN(FechaFinal, FechaMax),  -- Rango de fechas
 			        REMOVEFILTERS('dwh Fact_Cupon'[KeyEmpresa])  -- Eliminar el filtro de la empresa para que no afecte al cálculo
 			    )
-			
+			,"NA")
 			```
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -111,7 +113,7 @@
 			    )
 			
 			RETURN 
-			    IF(ISBLANK(Resultado), 0, Resultado)
+			    IF(ISBLANK(Resultado), "NA", Resultado)
 			
 			```
 		formatString: 0
@@ -143,7 +145,7 @@
 			
 			-- Retornar la variación, asegurando que si el resultado es blanco, devuelva 0
 			RETURN
-			    IF(ISBLANK(StickersFin - StickersInicio), 0, StickersFin - StickersInicio)
+			    IF(ISBLANK(StickersFin - StickersInicio), "NA", StickersFin - StickersInicio)
 			
 			```
 		formatString: 0
@@ -168,7 +170,7 @@
 			    )
 			
 			RETURN 
-			    IF(ISBLANK(Resultado), 0, Resultado)
+			    IF(ISBLANK(Resultado), "NA", Resultado)
 			
 			```
 
@@ -181,7 +183,7 @@
 			        SUM('dwh Fact_Cupon'[FlagCuponRedimido]), 
 			        COUNTROWS('dwh Fact_Cupon'),
 			        0
-			    ),0)
+			    ),"NA")
 			
 			```
 
@@ -243,7 +245,7 @@
 			    )
 			
 			RETURN 
-			    COALESCE(DIVIDE(TotalDias, CantidadCupones, 0),0)
+			    COALESCE(DIVIDE(TotalDias, CantidadCupones, BLANK()),"NA")
 			
 			```
 
@@ -256,8 +258,9 @@
 			        COUNT('dwh Fact_Cupon'[FechaActivacion]),
 			        NOT(ISBLANK('dwh Fact_Cupon'[FechaActivacion]))
 			        ),
-			    0)
-		formatString: 0
+			    "NA")
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure ConteoFlagCuponRedimido_1 =
 			
@@ -266,7 +269,7 @@
 			        COUNT('dwh Fact_Cupon'[FlagCuponRedimido]),
 			        'dwh Fact_Cupon'[FlagCuponRedimido] = 1
 			    ),
-			0)
+			"NA")
 		formatString: 0
 
 	measure ConteoFlagCuponVencido_1 = ```
@@ -276,7 +279,7 @@
 			        COUNT('dwh Fact_Cupon'[FlagCuponVencido]),
 			        'dwh Fact_Cupon'[FlagCuponVencido] = 1 
 			    ),
-			0)
+			"NA")
 			```
 		formatString: 0
 
@@ -287,7 +290,7 @@
 			    AVERAGE('dwh Fact_Cupon'[DiasHastaObtenerCupon]),
 			    'dwh Fact_Cupon'[DiasHastaObtenerCupon] <> 0,
 			    NOT(ISBLANK('dwh Fact_Cupon'[DiasHastaObtenerCupon]))
-			),0)
+			),"NA")
 			
 			```
 
