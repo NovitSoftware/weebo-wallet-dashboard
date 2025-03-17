@@ -48,7 +48,7 @@
 			    )
 			
 			-- Variación entre los dos períodos
-			RETURN COALESCE(MontoHastaFin - MontoHastaInicio,"NA")
+			RETURN COALESCE(MontoHastaFin - MontoHastaInicio, "NA")
 			
 			```
 

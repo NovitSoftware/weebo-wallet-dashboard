@@ -1,0 +1,58 @@
+{
+  "name": "8b9e0829cb4c48486783",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 32.891640866873061,
+        "width": 336.32308815181256,
+        "x": 0,
+        "y": 0.27248635910936964,
+        "z": 22000,
+        "tabOrder": 1000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "textbox",
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Clientes en perdidos (90 días)",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "2733f2ce2324e5508867"
+}

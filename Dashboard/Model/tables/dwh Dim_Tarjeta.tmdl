@@ -28,28 +28,29 @@
 			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])
 			
 			-- Limitar las fechas del rango
-			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del calendario
-			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del calendario
+			VAR FechaMin = MIN('CalendarioGeneral'[Date])
+			VAR FechaMax = MAX('CalendarioGeneral'[Date])
 			
-			-- Tarjetas activas hasta la FechaInicio
+			-- Tarjetas activas acumuladas hasta la FechaInicio
 			VAR TarjetasActivasHastaInicio = 
 			    CALCULATE(
 			        COUNT('dwh Dim_Tarjeta'[KeyTarjeta]),
 			        'dwh Dim_Tarjeta'[FechaActivo] <= MAX(FechaInicio, FechaMin) &&
-			        'dwh Dim_Tarjeta'[FechaActivo] <= FechaMax  -- Limita a las fechas del calendario general
+			        'dwh Dim_Tarjeta'[FechaActivo] <= FechaMax
 			    )
 			
-			-- Tarjetas activas hasta la FechaFinal
+			-- Tarjetas activas acumuladas hasta la FechaFinal
 			VAR TarjetasActivasHastaFin = 
 			    CALCULATE(
 			        COUNT('dwh Dim_Tarjeta'[KeyTarjeta]),
 			        'dwh Dim_Tarjeta'[FechaActivo] <= MIN(FechaFinal, FechaMax) &&
-			        'dwh Dim_Tarjeta'[FechaActivo] <= FechaMax  -- Limita a las fechas del calendario general
+			        'dwh Dim_Tarjeta'[FechaActivo] <= FechaMax
 			    )
 			
-			-- Variación entre los dos períodos
-			RETURN COALESCE(TarjetasActivasHastaFin - TarjetasActivasHastaInicio,"NA")
+			-- Cálculo de la variación entre los dos períodos
+			VAR Resultado = TarjetasActivasHastaFin - TarjetasActivasHastaInicio
 			
+			RETURN COALESCE(Resultado, "NA")
 			```
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}

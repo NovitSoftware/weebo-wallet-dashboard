@@ -1,14 +1,14 @@
 {
-  "name": "8378ec6e93102fcd48f6",
+  "name": "b8d5f3a5d4c4e0c28879",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "x": 926,
+        "x": 516,
         "y": 234,
-        "z": 5000,
-        "width": 340,
-        "height": 140,
+        "z": 3000,
+        "width": 390,
+        "height": 142,
         "tabOrder": 15000
       }
     }

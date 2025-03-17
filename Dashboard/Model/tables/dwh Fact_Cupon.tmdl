@@ -29,36 +29,34 @@
 
 	measure EntregadosVariacionStickers = ```
 			
-			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])  -- Fecha de inicio seleccionada
-			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])    -- Fecha final seleccionada
+			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])
+			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])
 			
 			-- Limitar las fechas del rango
-			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del calendario
-			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del calendario
+			VAR FechaMin = MIN('CalendarioGeneral'[Date])
+			VAR FechaMax = MAX('CalendarioGeneral'[Date])
 			
 			-- Stickers entregados acumulados hasta FechaInicio
 			VAR StickersInicio =
 			    CALCULATE (
 			        SUMX (
-			            VALUES('dwh Fact_Cupon'[KeyAfiliado]),  -- Para cada afiliado
-			            MAX('dwh Fact_Cupon'[StickersEntregados])  -- Obtener el máximo de stickers entregados
+			            VALUES('dwh Fact_Cupon'[KeyAfiliado]),
+			            MAX('dwh Fact_Cupon'[StickersEntregados])
 			        ),
-			        'dwh Dim_Tiempo'[Fecha] <= MAX(FechaInicio, FechaMin)  -- Filtrar por fecha de inicio
+			        'dwh Dim_Tiempo'[Fecha] <= MAX(FechaInicio, FechaMin)
 			    )
 			
 			-- Stickers entregados acumulados hasta FechaFinal
 			VAR StickersFin =
 			    CALCULATE (
 			        SUMX (
-			            VALUES('dwh Fact_Cupon'[KeyAfiliado]),  -- Para cada afiliado
-			            MAX('dwh Fact_Cupon'[StickersEntregados])  -- Obtener el máximo de stickers entregados
+			            VALUES('dwh Fact_Cupon'[KeyAfiliado]),
+			            MAX('dwh Fact_Cupon'[StickersEntregados])
 			        ),
-			        'dwh Dim_Tiempo'[Fecha] <= MIN(FechaFinal, FechaMax)  -- Filtrar por fecha final
+			        'dwh Dim_Tiempo'[Fecha] <= MIN(FechaFinal, FechaMax)
 			    )
 			
-			-- Retornar la variación de stickers entregados
-			RETURN
-			    COALESCE(StickersFin - StickersInicio,"NA")  -- Variación entre la fecha final e inicio
+			RETURN COALESCE(StickersFin - StickersInicio, "NA")
 			
 			```
 		formatString: 0
