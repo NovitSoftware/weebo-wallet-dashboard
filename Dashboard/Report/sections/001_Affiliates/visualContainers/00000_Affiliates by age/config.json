@@ -1,0 +1,252 @@
+{
+  "name": "aac361d32d6170331b1a",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 192.2551287630653,
+        "width": 438.64223631665487,
+        "x": 10.007047216349541,
+        "y": 13.309970452827597,
+        "z": 3000,
+        "tabOrder": 0
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "pieChart",
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "dwh Dim_Afiliado.AfiliadosActivosPorcentaje"
+        },
+        {
+          "queryRef": "dwh Dim_Afiliado.AfiliadosEnRiesgoPorcentaje"
+        },
+        {
+          "queryRef": "dwh Dim_Afiliado.AfiliadosPerdidosPorcentaje"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "dwh Dim_Afiliado.RangoEdad",
+          "active": true
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d",
+          "Entity": "dwh Dim_Afiliado",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "AfiliadosActivosPorcentaje"
+          },
+          "Name": "dwh Dim_Afiliado.AfiliadosActivosPorcentaje",
+          "NativeReferenceName": "AfiliadosActivosPorcentaje"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "AfiliadosEnRiesgoPorcentaje"
+          },
+          "Name": "dwh Dim_Afiliado.AfiliadosEnRiesgoPorcentaje",
+          "NativeReferenceName": "AfiliadosEnRiesgoPorcentaje"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "AfiliadosPerdidosPorcentaje"
+          },
+          "Name": "dwh Dim_Afiliado.AfiliadosPerdidosPorcentaje",
+          "NativeReferenceName": "AfiliadosPerdidosPorcentaje"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "RangoEdad"
+          },
+          "Name": "dwh Dim_Afiliado.RangoEdad",
+          "NativeReferenceName": "age"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "d"
+                }
+              },
+              "Property": "AfiliadosActivosPorcentaje"
+            }
+          }
+        }
+      ]
+    },
+    "columnProperties": {
+      "dwh Dim_Afiliado.AfiliadosActivosPorcentaje": {
+        "displayName": "Activos",
+        "formatString": "0.00 %;-0.00 %;0.00 %"
+      },
+      "dwh Dim_Afiliado.AfiliadosEnRiesgoPorcentaje": {
+        "displayName": "En Riesgo",
+        "formatString": "0.00 %;-0.00 %;0.00 %"
+      },
+      "dwh Dim_Afiliado.AfiliadosPerdidosPorcentaje": {
+        "displayName": "Perdidos",
+        "formatString": "0.00 %;-0.00 %;0.00 %"
+      },
+      "dwh Dim_Afiliado.GeneroFiltrado": {
+        "displayName": "Genero"
+      },
+      "dwh Dim_Afiliado.RangoEdad": {
+        "displayName": "age"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "labelStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Data'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BottomCenter'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Affiliates by age'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "014ef9cce0ee63b47582"
+}

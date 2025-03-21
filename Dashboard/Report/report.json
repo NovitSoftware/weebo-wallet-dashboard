@@ -18,13 +18,6 @@
             "path": "BaseThemes/CY24SU10.json",
             "resourcePackageId": 17050164,
             "type": 202
-          },
-          {
-            "id": 128329155,
-            "name": "AccessibleTidal",
-            "path": "BuiltInThemes/AccessibleTidal.json",
-            "resourcePackageId": 17050164,
-            "type": 201
           }
         ],
         "name": "SharedResources",
@@ -36,73 +29,183 @@
         "disabled": false,
         "items": [
           {
-            "name": "logointro5312883634361378.png",
-            "path": "logointro5312883634361378.png",
+            "name": "Accessible_Tidal0018499089007086855.json",
+            "path": "Accessible_Tidal0018499089007086855.json",
+            "type": 201
+          },
+          {
+            "name": "icons8-document-32-OnPress6886726070834144.png",
+            "path": "icons8-document-32-OnPress6886726070834144.png",
             "type": 100
           },
           {
-            "name": "icons8-casa-326986673263476235.png",
-            "path": "icons8-casa-326986673263476235.png",
+            "name": "icons8-group-32-OnPress4831024115200253.png",
+            "path": "icons8-group-32-OnPress4831024115200253.png",
             "type": 100
           },
           {
-            "name": "icons8-casa-32428379609556478.png",
-            "path": "icons8-casa-32428379609556478.png",
+            "name": "icons8-bank-cards-32-OnPress5452926674195981.png",
+            "path": "icons8-bank-cards-32-OnPress5452926674195981.png",
             "type": 100
           },
           {
-            "name": "icons8-conference-foreground-s293025960681377.png",
-            "path": "icons8-conference-foreground-s293025960681377.png",
+            "name": "icons8-person-32-Default20674906919209302.png",
+            "path": "icons8-person-32-Default20674906919209302.png",
             "type": 100
           },
           {
-            "name": "icons8-cup_n-para-recortar-328358640628828045.png",
-            "path": "icons8-cup_n-para-recortar-328358640628828045.png",
+            "name": "icons8-person-32-OnPress1947730867833215.png",
+            "path": "icons8-person-32-OnPress1947730867833215.png",
             "type": 100
           },
           {
-            "name": "icons8-loyalty-card-327213857117737803.png",
-            "path": "icons8-loyalty-card-327213857117737803.png",
+            "name": "icons8-sticker-32-Default47516572086745135.png",
+            "path": "icons8-sticker-32-Default47516572086745135.png",
             "type": 100
           },
           {
-            "name": "icons8-sticker-329856975147897773.png",
-            "path": "icons8-sticker-329856975147897773.png",
+            "name": "icons8-sticker-32-OnPress376055493066733.png",
+            "path": "icons8-sticker-32-OnPress376055493066733.png",
             "type": 100
           },
           {
-            "name": "icons8-client-management-322513713644700364.png",
-            "path": "icons8-client-management-322513713644700364.png",
+            "name": "icons8-ticket-32-Default21304899266888278.png",
+            "path": "icons8-ticket-32-Default21304899266888278.png",
             "type": 100
           },
           {
-            "name": "icons8-client-management-328076453654897924.png",
-            "path": "icons8-client-management-328076453654897924.png",
+            "name": "icons8-ticket-32-OnPress9080857182205386.png",
+            "path": "icons8-ticket-32-OnPress9080857182205386.png",
             "type": 100
           },
           {
-            "name": "icons8-client-management-329478100902203459.png",
-            "path": "icons8-client-management-329478100902203459.png",
+            "name": "icons8-promotion-32-Default8962073821599261.png",
+            "path": "icons8-promotion-32-Default8962073821599261.png",
             "type": 100
           },
           {
-            "name": "icons8-client-management-329641719383752358.png",
-            "path": "icons8-client-management-329641719383752358.png",
+            "name": "icons8-promotion-32-OnPress8353888865674894.png",
+            "path": "icons8-promotion-32-OnPress8353888865674894.png",
             "type": 100
           },
           {
-            "name": "icons8-group-321297568675877947.png",
-            "path": "icons8-group-321297568675877947.png",
+            "name": "icons8-location-32-Default12521147710755742.png",
+            "path": "icons8-location-32-Default12521147710755742.png",
             "type": 100
           },
           {
-            "name": "icons8-visit-3235502727154140334.png",
-            "path": "icons8-visit-3235502727154140334.png",
+            "name": "icons8-location-32-OnPress79798664965733.png",
+            "path": "icons8-location-32-OnPress79798664965733.png",
             "type": 100
           },
           {
-            "name": "icons8-promotion-326874124636371874.png",
-            "path": "icons8-promotion-326874124636371874.png",
+            "name": "icons8-group-32-default6600516480300638.png",
+            "path": "icons8-group-32-default6600516480300638.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-correct-486558374148681221.png",
+            "path": "icons8-correct-486558374148681221.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-alert-48_(1)45306812026596677.png",
+            "path": "icons8-alert-48_(1)45306812026596677.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-cancel-489077697249232919.png",
+            "path": "icons8-cancel-489077697249232919.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-alert-485587205995646665.png",
+            "path": "icons8-alert-485587205995646665.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-bank-cards-32-Default7988607844255109.png",
+            "path": "icons8-bank-cards-32-Default7988607844255109.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-document-32-OnPress6542488427790132.png",
+            "path": "icons8-document-32-OnPress6542488427790132.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-document-32-default9218424253010054.png",
+            "path": "icons8-document-32-default9218424253010054.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-group-32-OnPress3763963730477964.png",
+            "path": "icons8-group-32-OnPress3763963730477964.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-group-32-default24704948430505258.png",
+            "path": "icons8-group-32-default24704948430505258.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-bank-cards-32-OnPress3115273224702224.png",
+            "path": "icons8-bank-cards-32-OnPress3115273224702224.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-person-32-OnPress37118840441901035.png",
+            "path": "icons8-person-32-OnPress37118840441901035.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-bank-cards-32-Default7307410367556011.png",
+            "path": "icons8-bank-cards-32-Default7307410367556011.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-person-32-Default470113123920499.png",
+            "path": "icons8-person-32-Default470113123920499.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-sticker-32-OnPress3493686527408777.png",
+            "path": "icons8-sticker-32-OnPress3493686527408777.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-sticker-32-OnPress4153418944296583.png",
+            "path": "icons8-sticker-32-OnPress4153418944296583.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-sticker-32-Default555535797597073.png",
+            "path": "icons8-sticker-32-Default555535797597073.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-ticket-32-OnPress2517227129887041.png",
+            "path": "icons8-ticket-32-OnPress2517227129887041.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-ticket-32-Default9309829284803317.png",
+            "path": "icons8-ticket-32-Default9309829284803317.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-promotion-32-OnPress7655165864975197.png",
+            "path": "icons8-promotion-32-OnPress7655165864975197.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-promotion-32-Default8168936965927336.png",
+            "path": "icons8-promotion-32-Default8168936965927336.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-location-32-OnPress8261410278880952.png",
+            "path": "icons8-location-32-OnPress8261410278880952.png",
             "type": 100
           }
         ],
@@ -111,5 +214,5 @@
       }
     }
   ],
-  "theme": "AccessibleTidal"
+  "theme": "Accessible_Tidal0018499089007086855.json"
 }

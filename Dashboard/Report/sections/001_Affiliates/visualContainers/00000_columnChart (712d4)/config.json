@@ -1,0 +1,261 @@
+{
+  "name": "712d40bee42927e0aa04",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 16.666044230546735,
+        "y": 11.523317905239766,
+        "z": 2000,
+        "width": 829.89718887051549,
+        "height": 152.39629017183117,
+        "tabOrder": 0
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "columnChart",
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "dwh Dim_Afiliado.AfiliadosActivos"
+        },
+        {
+          "queryRef": "dwh Dim_Afiliado.AfiliadosEnRiesgo"
+        },
+        {
+          "queryRef": "dwh Dim_Afiliado.AfiliadosPerdidos"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Year",
+          "active": true
+        },
+        {
+          "queryRef": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Quarter"
+        },
+        {
+          "queryRef": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Month"
+        },
+        {
+          "queryRef": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Day"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d",
+          "Entity": "dwh Dim_Afiliado",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "AfiliadosActivos"
+          },
+          "Name": "dwh Dim_Afiliado.AfiliadosActivos",
+          "NativeReferenceName": "active"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "AfiliadosEnRiesgo"
+          },
+          "Name": "dwh Dim_Afiliado.AfiliadosEnRiesgo",
+          "NativeReferenceName": "at risk"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "AfiliadosPerdidos"
+          },
+          "Name": "dwh Dim_Afiliado.AfiliadosPerdidos",
+          "NativeReferenceName": "lost"
+        },
+        {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "FechaRegistroWebo"
+                  }
+                },
+                "Hierarchy": "Date Hierarchy"
+              }
+            },
+            "Level": "Year"
+          },
+          "Name": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Year",
+          "NativeReferenceName": "FechaRegistroWebo Year"
+        },
+        {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "FechaRegistroWebo"
+                  }
+                },
+                "Hierarchy": "Date Hierarchy"
+              }
+            },
+            "Level": "Quarter"
+          },
+          "Name": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Quarter",
+          "NativeReferenceName": "FechaRegistroWebo Quarter"
+        },
+        {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "FechaRegistroWebo"
+                  }
+                },
+                "Hierarchy": "Date Hierarchy"
+              }
+            },
+            "Level": "Month"
+          },
+          "Name": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Month",
+          "NativeReferenceName": "FechaRegistroWebo Month"
+        },
+        {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "FechaRegistroWebo"
+                  }
+                },
+                "Hierarchy": "Date Hierarchy"
+              }
+            },
+            "Level": "Day"
+          },
+          "Name": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Day",
+          "NativeReferenceName": "FechaRegistroWebo Day"
+        }
+      ]
+    },
+    "columnProperties": {
+      "dwh Dim_Afiliado.AfiliadosActivos": {
+        "displayName": "active"
+      },
+      "dwh Dim_Afiliado.AfiliadosEnRiesgo": {
+        "displayName": "at risk"
+      },
+      "dwh Dim_Afiliado.AfiliadosPerdidos": {
+        "displayName": "lost"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {},
+    "vcObjects": {
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "6d2d0eee682e6ebe3495"
+}

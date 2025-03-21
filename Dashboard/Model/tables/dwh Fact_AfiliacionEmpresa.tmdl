@@ -65,7 +65,9 @@
 			        0, 
 			        VALUE([TotalClientesActivos])
 			    )
-			, COUNTROWS('dwh Fact_AfiliacionEmpresa'), BLANK()),"NA")
+			, COUNTROWS('dwh Fact_AfiliacionEmpresa'),
+			 BLANK())
+			,"NA")
 			
 			```
 
