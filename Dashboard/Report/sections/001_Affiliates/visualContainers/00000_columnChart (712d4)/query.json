@@ -1,0 +1,223 @@
+{
+  "Commands": [
+    {
+      "SemanticQueryDataShapeCommand": {
+        "Query": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dwh Dim_Afiliado",
+              "Type": 0
+            },
+            {
+              "Name": "c",
+              "Entity": "CalendarioGeneral",
+              "Type": 0
+            }
+          ],
+          "Select": [
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "AfiliadosActivos"
+              },
+              "Name": "dwh Dim_Afiliado.AfiliadosActivos",
+              "NativeReferenceName": "active"
+            },
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "AfiliadosEnRiesgo"
+              },
+              "Name": "dwh Dim_Afiliado.AfiliadosEnRiesgo",
+              "NativeReferenceName": "at risk"
+            },
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "AfiliadosPerdidos"
+              },
+              "Name": "dwh Dim_Afiliado.AfiliadosPerdidos",
+              "NativeReferenceName": "lost"
+            },
+            {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "PropertyVariationSource": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Name": "Variation",
+                        "Property": "FechaRegistroWebo"
+                      }
+                    },
+                    "Hierarchy": "Date Hierarchy"
+                  }
+                },
+                "Level": "Year"
+              },
+              "Name": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Year",
+              "NativeReferenceName": "FechaRegistroWebo Year"
+            },
+            {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "PropertyVariationSource": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Name": "Variation",
+                        "Property": "FechaRegistroWebo"
+                      }
+                    },
+                    "Hierarchy": "Date Hierarchy"
+                  }
+                },
+                "Level": "Quarter"
+              },
+              "Name": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Quarter",
+              "NativeReferenceName": "FechaRegistroWebo Quarter"
+            },
+            {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "PropertyVariationSource": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Name": "Variation",
+                        "Property": "FechaRegistroWebo"
+                      }
+                    },
+                    "Hierarchy": "Date Hierarchy"
+                  }
+                },
+                "Level": "Month"
+              },
+              "Name": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Month",
+              "NativeReferenceName": "FechaRegistroWebo Month"
+            },
+            {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "PropertyVariationSource": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Name": "Variation",
+                        "Property": "FechaRegistroWebo"
+                      }
+                    },
+                    "Hierarchy": "Date Hierarchy"
+                  }
+                },
+                "Level": "Day"
+              },
+              "Name": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Day",
+              "NativeReferenceName": "FechaRegistroWebo Day"
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "And": {
+                  "Left": {
+                    "Comparison": {
+                      "ComparisonKind": 2,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "c"
+                            }
+                          },
+                          "Property": "Date"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "datetime'2019-01-31T00:00:00'"
+                        }
+                      }
+                    }
+                  },
+                  "Right": {
+                    "Comparison": {
+                      "ComparisonKind": 3,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "c"
+                            }
+                          },
+                          "Property": "Date"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "datetime'2024-01-01T00:00:00'"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "Binding": {
+          "Primary": {
+            "Groupings": [
+              {
+                "Projections": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              }
+            ]
+          },
+          "DataReduction": {
+            "DataVolume": 4,
+            "Primary": {
+              "Sample": {}
+            }
+          },
+          "Version": 1
+        },
+        "ExecutionMetricsKind": 1
+      }
+    }
+  ]
+}

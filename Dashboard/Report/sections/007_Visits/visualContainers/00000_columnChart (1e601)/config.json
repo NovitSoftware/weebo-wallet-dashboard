@@ -1,0 +1,205 @@
+{
+  "name": "1e6011a7c7ab7c0057a1",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 223.35920959774168,
+        "width": 262.59187938628139,
+        "x": 7.3826064079755795,
+        "y": 14.258083065422536,
+        "z": 2000,
+        "tabOrder": 0
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "columnChart",
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "CountNonNull(dwh Dim_Afiliado.KeyAfiliado)"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "dwh Dim_Afiliado.FechaUltimoConsumoWebo.Variation.Date Hierarchy.Year"
+        },
+        {
+          "queryRef": "dwh Dim_Afiliado.FechaUltimoConsumoWebo.Variation.Date Hierarchy.Month"
+        },
+        {
+          "queryRef": "dwh Dim_Afiliado.FechaUltimoConsumoWebo.Variation.Date Hierarchy.Day",
+          "active": true
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d",
+          "Entity": "dwh Dim_Afiliado",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "KeyAfiliado"
+              }
+            },
+            "Function": 1
+          },
+          "Name": "CountNonNull(dwh Dim_Afiliado.KeyAfiliado)",
+          "NativeReferenceName": "Frequency"
+        },
+        {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "FechaUltimoConsumoWebo"
+                  }
+                },
+                "Hierarchy": "Date Hierarchy"
+              }
+            },
+            "Level": "Year"
+          },
+          "Name": "dwh Dim_Afiliado.FechaUltimoConsumoWebo.Variation.Date Hierarchy.Year",
+          "NativeReferenceName": "FechaUltimoConsumoWebo Year"
+        },
+        {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "FechaUltimoConsumoWebo"
+                  }
+                },
+                "Hierarchy": "Date Hierarchy"
+              }
+            },
+            "Level": "Month"
+          },
+          "Name": "dwh Dim_Afiliado.FechaUltimoConsumoWebo.Variation.Date Hierarchy.Month",
+          "NativeReferenceName": "FechaUltimoConsumoWebo Month"
+        },
+        {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "FechaUltimoConsumoWebo"
+                  }
+                },
+                "Hierarchy": "Date Hierarchy"
+              }
+            },
+            "Level": "Day"
+          },
+          "Name": "dwh Dim_Afiliado.FechaUltimoConsumoWebo.Variation.Date Hierarchy.Day",
+          "NativeReferenceName": "FechaUltimoConsumoWebo Day"
+        }
+      ]
+    },
+    "columnProperties": {
+      "CountNonNull(dwh Dim_Afiliado.KeyAfiliado)": {
+        "displayName": "Frequency"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "title": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "c51bf142c1104eb8485c"
+}

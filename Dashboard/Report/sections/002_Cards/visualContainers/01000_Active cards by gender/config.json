@@ -1,0 +1,208 @@
+{
+  "name": "bf0d85be509bbd75859b",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 228.34082572681385,
+        "width": 479.42804240309255,
+        "x": 10.800050736635356,
+        "y": 10.960359634887066,
+        "z": 18004,
+        "tabOrder": 1000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "pieChart",
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "CountNonNull(dwh Fact_Cupon.KeyTarjeta)"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "dwh Dim_Afiliado.GeneroFiltrado",
+          "active": true
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d1",
+          "Entity": "dwh Fact_Cupon",
+          "Type": 0
+        },
+        {
+          "Name": "d",
+          "Entity": "dwh Dim_Afiliado",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d1"
+                  }
+                },
+                "Property": "KeyTarjeta"
+              }
+            },
+            "Function": 2
+          },
+          "Name": "CountNonNull(dwh Fact_Cupon.KeyTarjeta)",
+          "NativeReferenceName": "Count of KeyTarjeta"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "GeneroFiltrado"
+          },
+          "Name": "dwh Dim_Afiliado.GeneroFiltrado",
+          "NativeReferenceName": "Gender"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "d1"
+                    }
+                  },
+                  "Property": "KeyTarjeta"
+                }
+              },
+              "Function": 2
+            }
+          }
+        }
+      ]
+    },
+    "columnProperties": {
+      "dwh Dim_Afiliado.GeneroFiltrado": {
+        "displayName": "Gender"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BottomCenter'"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "labelStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Data'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Active cards by gender'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "72fcaca51160c20cbc47"
+}

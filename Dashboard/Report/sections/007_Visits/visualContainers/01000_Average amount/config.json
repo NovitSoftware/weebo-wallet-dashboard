@@ -1,0 +1,237 @@
+{
+  "name": "aabcb581d47013b72c08",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 229.21853489430688,
+        "width": 259.72222222222223,
+        "x": 9.60039196576691,
+        "y": 9.3054896360689057,
+        "z": 10000,
+        "tabOrder": 1000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "pieChart",
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "Sum(dwh Fact_Facturacion.Importe)"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "dwh Dim_RangoEdad.RangoEdad",
+          "active": true
+        }
+      ],
+      "Series": [
+        {
+          "queryRef": "dwh Dim_Tiempo.Semana"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d1",
+          "Entity": "dwh Dim_RangoEdad",
+          "Type": 0
+        },
+        {
+          "Name": "d2",
+          "Entity": "dwh Dim_Tiempo",
+          "Type": 0
+        },
+        {
+          "Name": "d",
+          "Entity": "dwh Fact_Facturacion",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d1"
+              }
+            },
+            "Property": "RangoEdad"
+          },
+          "Name": "dwh Dim_RangoEdad.RangoEdad",
+          "NativeReferenceName": "RangoEdad"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d2"
+              }
+            },
+            "Property": "Semana"
+          },
+          "Name": "dwh Dim_Tiempo.Semana",
+          "NativeReferenceName": "Week"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "Importe"
+              }
+            },
+            "Function": 1
+          },
+          "Name": "Sum(dwh Fact_Facturacion.Importe)",
+          "NativeReferenceName": "Average of Importe"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "d"
+                    }
+                  },
+                  "Property": "Importe"
+                }
+              },
+              "Function": 1
+            }
+          }
+        }
+      ]
+    },
+    "columnProperties": {
+      "dwh Dim_Tiempo.Semana": {
+        "displayName": "Week"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BottomCenter'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "labelStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Data'"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Average amount'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "b3732bf22b778d48e708"
+}

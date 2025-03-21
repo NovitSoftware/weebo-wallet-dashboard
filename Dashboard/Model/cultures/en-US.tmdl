@@ -466,6 +466,16 @@
 			          "distrito": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "District": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2671,6 +2681,16 @@
 			          "empresa": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Enterprise": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -3682,7 +3702,7 @@
 			          }
 			        },
 			        {
-			          "Edades": {
+			          "Age": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4446,6 +4466,16 @@
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "gender": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4469,6 +4499,16 @@
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "age": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4484,6 +4524,36 @@
 			        {
 			          "año": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Years": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Year": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "age": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -4501,6 +4571,16 @@
 			          "me": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Month": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4517,6 +4597,16 @@
 			          "dia": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Day": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4532,6 +4622,16 @@
 			        {
 			          "semana": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Week": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -4575,9 +4675,6 @@
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
 			          "key tienda": {
@@ -4983,6 +5080,9 @@
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "key fecha corte": {
@@ -23979,9 +24079,6 @@
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
 			          "fkcliente": {
@@ -24493,9 +24590,6 @@
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
 			          "fkcliente": {
@@ -24995,9 +25089,6 @@
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
 			          "fkcliente": {
@@ -25447,9 +25538,6 @@
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
 			          "fkcliente": {
@@ -26376,16 +26464,6 @@
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
-			        },
-			        {
-			          "Variacion": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -26429,16 +26507,6 @@
 			            },
 			            "Weight": 0.591
 			          }
-			        },
-			        {
-			          "Total": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -26461,16 +26529,6 @@
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "Variacion": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -26587,16 +26645,6 @@
 			            },
 			            "Weight": 0.591
 			          }
-			        },
-			        {
-			          "Total": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -26620,16 +26668,6 @@
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
-			        },
-			        {
-			          "Promedio": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -26652,16 +26690,6 @@
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "Promedio": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -26705,16 +26733,6 @@
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "Total": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -26789,16 +26807,6 @@
 			            },
 			            "Weight": 0.492
 			          }
-			        },
-			        {
-			          "Variacion": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -26821,16 +26829,6 @@
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "Promedio": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -26875,16 +26873,6 @@
 			            },
 			            "Weight": 0.591
 			          }
-			        },
-			        {
-			          "Total": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -26907,16 +26895,6 @@
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "Variacion": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -26941,16 +26919,6 @@
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
-			        },
-			        {
-			          "Promedio": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -26964,38 +26932,35 @@
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "monto total facturado": {
+			          "total facturado": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "monto aggregate facturado": {
+			          "TotalFacturado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate facturado": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.591
+			            "Weight": 0.582
 			          }
 			        },
 			        {
-			          "monto overall facturado": {
+			          "overall facturado": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "Monto": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
+			            "Weight": 0.582
 			          }
 			        }
 			      ]
@@ -27010,18 +26975,15 @@
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "variación monto facturado": {
+			          "variacion monto facturado": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Variación": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
+			          "VariacionMontoFacturado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
 			          }
 			        }
 			      ]
@@ -27041,13 +27003,10 @@
 			          }
 			        },
 			        {
-			          "Promedio": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
+			          "PromedioFacturado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
 			          }
 			        }
 			      ]
@@ -27092,16 +27051,6 @@
 			            },
 			            "Weight": 0.591
 			          }
-			        },
-			        {
-			          "Total": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -27125,16 +27074,6 @@
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
-			        },
-			        {
-			          "Promedio": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -27157,16 +27096,6 @@
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "Variacion": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -28638,7 +28567,7 @@
 			          }
 			        },
 			        {
-			          "Clientes": {
+			          "Total active customer": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -29998,7 +29927,7 @@
 			          }
 			        },
 			        {
-			          "Activos": {
+			          "active": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -30054,7 +29983,7 @@
 			          }
 			        },
 			        {
-			          "Perdidos": {
+			          "lost": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -30087,7 +30016,7 @@
 			          }
 			        },
 			        {
-			          "EnRiesgo": {
+			          "at risk": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -30164,6 +30093,26 @@
 			        },
 			        {
 			          "Activas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Active": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Active promotions": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -30260,6 +30209,16 @@
 			        },
 			        {
 			          "Vencidas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Expired": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -31252,6 +31211,16 @@
 			          "frecuencia promedio": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Frequency": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -31274,6 +31243,16 @@
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Average monetary value": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -31392,9 +31371,1547 @@
 			          }
 			        }
 			      ]
+			    },
+			    "dwh_Dim_Afiliado.rango_edade": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Dim_Afiliado",
+			          "ConceptualProperty": "RangoEdades"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rango edade": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "RangoEdades": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado.frecuencia_promedio_rango_edades": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Dim_Afiliado",
+			          "ConceptualProperty": "FrecuenciaPromedioRangoEdades"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "frecuencia promedio rango edades": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "FrecuenciaPromedioRangoEdades": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado.recencia_promedio_por_rango_edad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Dim_Afiliado",
+			          "ConceptualProperty": "RecenciaPromedioPorRangoEdad"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "recencia promedio por rango edad": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "RecenciaPromedioPorRangoEdad": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Promedio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tiempo.periodo_del_dia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Dim_Tiempo",
+			          "ConceptualProperty": "PeriodoDelDia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "periodo del dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeriodoDelDia": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "period of day": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionEmpresa.recencia_promedio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_AfiliacionEmpresa",
+			          "ConceptualProperty": "RecenciaPromedio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "recencia promedio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "RecenciaPromedio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionEmpresa.frecuencia_promedio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_AfiliacionEmpresa",
+			          "ConceptualProperty": "FrecuenciaPromedio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "frecuencia promedio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "FrecuenciaPromedio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Facturacion.valor_monetario_semanal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Facturacion",
+			          "ConceptualProperty": "Valor Monetario Semanal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor monetario semanal": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Facturacion.visitas_promedio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Facturacion",
+			          "ConceptualProperty": "VisitasPromedio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "visitas promedio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "VisitasPromedio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Plane.tarjetas_compradas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Planes",
+			          "ConceptualProperty": "TarjetasCompradas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tarjetas compradas": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TarjetasCompradas": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Plane.sticker_entregados": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Planes",
+			          "ConceptualProperty": "Sticker entregados"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sticker entregados": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "calendario_general.ultima_semana_medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CalendarioGeneral",
+			          "ConceptualProperty": "UltimaSemanaMedida"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ultima semana medida": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "UltimaSemanaMedida": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "calendario_general.ultima_semana_medida.variation.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CalendarioGeneral",
+			          "VariationSource": "UltimaSemanaMedida",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ultima semana medida date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "calendario_general.ultima_semana_medida.variation.date_hierarchy.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CalendarioGeneral",
+			          "VariationSource": "UltimaSemanaMedida",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ultima semana medida year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ultima semana medida yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "calendario_general.ultima_semana_medida.variation.date_hierarchy.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CalendarioGeneral",
+			          "VariationSource": "UltimaSemanaMedida",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ultima semana medida quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ultima semana medida qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.857
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "calendario_general.ultima_semana_medida.variation.date_hierarchy.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CalendarioGeneral",
+			          "VariationSource": "UltimaSemanaMedida",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ultima semana medida month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ultima semana medida mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "calendario_general.ultima_semana_medida.variation.date_hierarchy.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CalendarioGeneral",
+			          "VariationSource": "UltimaSemanaMedida",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ultima semana medida day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "calendario_general.ultimo_ano_medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CalendarioGeneral",
+			          "ConceptualProperty": "UltimoAnoMedida"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ultimo ano medida": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "UltimoAnoMedida": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "calendario_general.ultimo_dia_medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CalendarioGeneral",
+			          "ConceptualProperty": "UltimoDiaMedida"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ultimo dia medida": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "UltimoDiaMedida": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "calendario_general.ultimo_mes_medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CalendarioGeneral",
+			          "ConceptualProperty": "UltimoMesMedida"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ultimo mes medida": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "UltimoMesMedida": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "calendario_general.ultima_semana": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CalendarioGeneral",
+			          "ConceptualProperty": "UltimaSemana"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ultima semana": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "UltimaSemana": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "calendario_general.filtro_dinamico": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CalendarioGeneral",
+			          "ConceptualProperty": "FiltroDinamico"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "filtro dinamico": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "FiltroDinamico": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "top_3_tarjetas_activas_por_distrito": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Top3TarjetasActivasPorDistrito"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top 3 tarjetas activas por distrito": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "top 3 tarjeta activa por distrito": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "Top3TarjetasActivasPorDistrito": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "top_3_tarjetas_activas_por_distrito.distrito": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Top3TarjetasActivasPorDistrito",
+			          "ConceptualProperty": "Distrito"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "distrito": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "top_3_tarjetas_activas_por_distrito.tarjetas_activa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Top3TarjetasActivasPorDistrito",
+			          "ConceptualProperty": "Tarjetas Activas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tarjetas activa": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tarjeta activa": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "ultimas_fechas_general": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UltimasFechasGeneral"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ultimas fechas general": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ultima fecha general": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "UltimasFechasGeneral": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "ultimas_fechas_general.texto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UltimasFechasGeneral",
+			          "ConceptualProperty": "Texto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "texto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "ultimas_fechas_general.fecha_inicial": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UltimasFechasGeneral",
+			          "ConceptualProperty": "Fecha Inicial"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha inicial": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UltimasFechasGeneral",
+			          "VariationSource": "Fecha Inicial",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha inicial date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UltimasFechasGeneral",
+			          "VariationSource": "Fecha Inicial",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha inicial year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha inicial yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UltimasFechasGeneral",
+			          "VariationSource": "Fecha Inicial",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha inicial quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha inicial qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UltimasFechasGeneral",
+			          "VariationSource": "Fecha Inicial",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha inicial month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha inicial mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UltimasFechasGeneral",
+			          "VariationSource": "Fecha Inicial",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha inicial day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "ultimas_fechas_general.fecha_final": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UltimasFechasGeneral",
+			          "ConceptualProperty": "Fecha Final"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha final": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "fecha decider": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "ultimas_fechas_general.fecha_final.variation.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UltimasFechasGeneral",
+			          "VariationSource": "Fecha Final",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha final date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "ultimas_fechas_general.fecha_final.variation.date_hierarchy.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UltimasFechasGeneral",
+			          "VariationSource": "Fecha Final",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha final year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha final yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "ultimas_fechas_general.fecha_final.variation.date_hierarchy.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UltimasFechasGeneral",
+			          "VariationSource": "Fecha Final",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha final quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha final qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "ultimas_fechas_general.fecha_final.variation.date_hierarchy.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UltimasFechasGeneral",
+			          "VariationSource": "Fecha Final",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha final month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha final mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "ultimas_fechas_general.fecha_final.variation.date_hierarchy.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UltimasFechasGeneral",
+			          "VariationSource": "Fecha Final",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha final day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "tabla_filtro": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "TablaFiltro"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tabla filtro": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TablaFiltro": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_filtro.periodo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "TablaFiltro",
+			          "ConceptualProperty": "Periodo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "periodo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "ultimas_fechas_general_fecha_final_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "UltimasFechasGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ultimas_fechas_general.fecha_final": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.fecha_final"
+			          }
+			        },
+			        "ultimas_fechas_general.fecha_final.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.fecha_final.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ultimas_fechas_general.fecha_final"
+			            },
+			            "Object": {
+			              "Role": "ultimas_fechas_general.fecha_final.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_finals_have_fecha_final_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "ultimas_fechas_general_fecha_inicial_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "UltimasFechasGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy"
+			          }
+			        },
+			        "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_inicial_date_hierarchies_have_fecha_inicial_days"
+			        }
+			      ]
+			    },
+			    "ultimas_fechas_general_fecha_inicial_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "UltimasFechasGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy"
+			          }
+			        },
+			        "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_inicial_date_hierarchies_have_fecha_inicial_months"
+			        }
+			      ]
+			    },
+			    "ultimas_fechas_general_fecha_inicial_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "UltimasFechasGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy"
+			          }
+			        },
+			        "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_inicial_date_hierarchies_have_fecha_inicial_quarters"
+			        }
+			      ]
+			    },
+			    "ultimas_fechas_general_fecha_inicial_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "UltimasFechasGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy"
+			          }
+			        },
+			        "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_inicial_date_hierarchies_have_fecha_inicial_years"
+			        }
+			      ]
+			    },
+			    "ultimas_fechas_general_fecha_inicial_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "UltimasFechasGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ultimas_fechas_general.fecha_inicial": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.fecha_inicial"
+			          }
+			        },
+			        "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ultimas_fechas_general.fecha_inicial"
+			            },
+			            "Object": {
+			              "Role": "ultimas_fechas_general.fecha_inicial.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_inicials_have_fecha_inicial_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "calendario_general_ultima_semana_medida_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.ultima_semana_medida.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.ultima_semana_medida.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_general.ultima_semana_medida.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "calendario_general.ultima_semana_medida.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.ultima_semana_medida.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.ultima_semana_medida.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ultima_semana_medida_date_hierarchies_have_ultima_semana_medida_days"
+			        }
+			      ]
+			    },
+			    "calendario_general_ultima_semana_medida_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.ultima_semana_medida.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.ultima_semana_medida.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_general.ultima_semana_medida.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "calendario_general.ultima_semana_medida.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.ultima_semana_medida.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.ultima_semana_medida.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ultima_semana_medida_date_hierarchies_have_ultima_semana_medida_months"
+			        }
+			      ]
+			    },
+			    "calendario_general_ultima_semana_medida_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.ultima_semana_medida.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.ultima_semana_medida.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_general.ultima_semana_medida.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "calendario_general.ultima_semana_medida.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.ultima_semana_medida.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.ultima_semana_medida.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ultima_semana_medida_date_hierarchies_have_ultima_semana_medida_quarters"
+			        }
+			      ]
+			    },
+			    "calendario_general_ultima_semana_medida_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.ultima_semana_medida.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.ultima_semana_medida.variation.date_hierarchy"
+			          }
+			        },
+			        "calendario_general.ultima_semana_medida.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "calendario_general.ultima_semana_medida.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.ultima_semana_medida.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.ultima_semana_medida.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ultima_semana_medida_date_hierarchies_have_ultima_semana_medida_years"
+			        }
+			      ]
+			    },
+			    "calendario_general_ultima_semana_medida_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general.ultima_semana_medida": {
+			          "Target": {
+			            "Entity": "calendario_general.ultima_semana_medida"
+			          }
+			        },
+			        "calendario_general.ultima_semana_medida.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendario_general.ultima_semana_medida.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general.ultima_semana_medida"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.ultima_semana_medida.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ultima_semana_medidas_have_ultima_semana_medida_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tiempo_fecha_convertida_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tiempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy"
+			          }
+			        },
+			        "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_fixed_date_hierarchies_have_fecha_fixed_days"
+			        }
+			      ]
+			    },
 			    "dwh_Dim_Tiempo_fecha_convertida_variation_date_hierarchy_has_month": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh Dim_Tiempo"
@@ -31688,7 +33205,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_finals_have_fecha_final_date_hierarchies"
+			          "ID": "fecha_finals_have_fecha_final_date_hierarchies1"
 			        }
 			      ]
 			    },
@@ -31721,7 +33238,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_inicial_date_hierarchies_have_fecha_inicial_days"
+			          "ID": "fecha_inicial_date_hierarchies_have_fecha_inicial_days1"
 			        }
 			      ]
 			    },
@@ -31754,7 +33271,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_inicial_date_hierarchies_have_fecha_inicial_months"
+			          "ID": "fecha_inicial_date_hierarchies_have_fecha_inicial_months1"
 			        }
 			      ]
 			    },
@@ -31787,7 +33304,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_inicial_date_hierarchies_have_fecha_inicial_quarters"
+			          "ID": "fecha_inicial_date_hierarchies_have_fecha_inicial_quarters1"
 			        }
 			      ]
 			    },
@@ -31820,7 +33337,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_inicial_date_hierarchies_have_fecha_inicial_years"
+			          "ID": "fecha_inicial_date_hierarchies_have_fecha_inicial_years1"
 			        }
 			      ]
 			    },
@@ -31853,7 +33370,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_inicials_have_fecha_inicial_date_hierarchies"
+			          "ID": "fecha_inicials_have_fecha_inicial_date_hierarchies1"
 			        }
 			      ]
 			    },
@@ -32051,7 +33568,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_days1"
+			          "ID": "date_hierarchies_have_days"
 			        }
 			      ]
 			    },
@@ -32084,7 +33601,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_months1"
+			          "ID": "date_hierarchies_have_months"
 			        }
 			      ]
 			    },
@@ -32117,7 +33634,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_quarters1"
+			          "ID": "date_hierarchies_have_quarters"
 			        }
 			      ]
 			    },
@@ -32150,7 +33667,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_years1"
+			          "ID": "date_hierarchies_have_years"
 			        }
 			      ]
 			    },
@@ -32183,7 +33700,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dates_have_date_hierarchies1"
+			          "ID": "dates_have_date_hierarchies"
 			        }
 			      ]
 			    },
@@ -45750,190 +47267,6 @@
 			        }
 			      ]
 			    },
-			    "stage_StgTransaccion_has_stage_StgPrograma": {
-			      "Binding": {
-			        "ConceptualEntity": "stage StgTransaccion"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "stage_StgTransaccion": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion"
-			          }
-			        },
-			        "stage_StgPrograma": {
-			          "Target": {
-			            "Entity": "stage_StgPrograma"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgTransaccion"
-			            },
-			            "Object": {
-			              "Role": "stage_StgPrograma"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "stage_StgTransaccions_have_stage_StgProgramas"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgPrograma"
-			            },
-			            "Object": {
-			              "Role": "stage_StgTransaccion"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "stage_StgProgramas_have_stage_StgTransaccions"
-			        }
-			      ]
-			    },
-			    "stage_StgTrackingSticker_has_stage_StgPrograma": {
-			      "Binding": {
-			        "ConceptualEntity": "stage StgTrackingStickers"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "stage_StgTrackingSticker": {
-			          "Target": {
-			            "Entity": "stage_StgTrackingSticker"
-			          }
-			        },
-			        "stage_StgPrograma": {
-			          "Target": {
-			            "Entity": "stage_StgPrograma"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgTrackingSticker"
-			            },
-			            "Object": {
-			              "Role": "stage_StgPrograma"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "stage_StgTrackingStickers_have_stage_StgProgramas"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgPrograma"
-			            },
-			            "Object": {
-			              "Role": "stage_StgTrackingSticker"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "stage_StgProgramas_have_stage_StgTrackingStickers"
-			        }
-			      ]
-			    },
-			    "stage_StgTienda_has_stage_StgPrograma": {
-			      "Binding": {
-			        "ConceptualEntity": "stage StgTienda"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "stage_StgTienda": {
-			          "Target": {
-			            "Entity": "stage_StgTienda"
-			          }
-			        },
-			        "stage_StgPrograma": {
-			          "Target": {
-			            "Entity": "stage_StgPrograma"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgTienda"
-			            },
-			            "Object": {
-			              "Role": "stage_StgPrograma"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "stage_StgTiendas_have_stage_StgProgramas"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgPrograma"
-			            },
-			            "Object": {
-			              "Role": "stage_StgTienda"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "stage_StgProgramas_have_stage_StgTiendas"
-			        }
-			      ]
-			    },
-			    "stage_StgTarjeta_has_stage_StgPrograma": {
-			      "Binding": {
-			        "ConceptualEntity": "stage StgTarjeta"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "stage_StgTarjeta": {
-			          "Target": {
-			            "Entity": "stage_StgTarjeta"
-			          }
-			        },
-			        "stage_StgPrograma": {
-			          "Target": {
-			            "Entity": "stage_StgPrograma"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgTarjeta"
-			            },
-			            "Object": {
-			              "Role": "stage_StgPrograma"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "stage_StgTarjetas_have_stage_StgProgramas"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgPrograma"
-			            },
-			            "Object": {
-			              "Role": "stage_StgTarjeta"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "stage_StgProgramas_have_stage_StgTarjetas"
-			        }
-			      ]
-			    },
 			    "stage_StgPromocion_has_stage_StgPrograma": {
 			      "Binding": {
 			        "ConceptualEntity": "stage StgPromocion"
@@ -48032,6 +49365,59 @@
 			        }
 			      ]
 			    },
+			    "dwh_Fact_AfiliacionEmpresa_has_dwh_Dim_Tiempo": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_AfiliacionEmpresa": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionEmpresa"
+			          }
+			        },
+			        "dwh_Dim_Tiempo": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo"
+			          },
+			          "Nouns": [
+			            {
+			              "key fecha corte": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tiempo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_AfiliacionEmpresas_have_dwh_Dim_Tiempos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tiempo"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Tiempos_have_dwh_Fact_AfiliacionEmpresas"
+			        }
+			      ]
+			    },
 			    "dwh_Fact_AfiliacionEmpresa_has_dwh_Dim_RangoEdad": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
@@ -48167,52 +49553,6 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_Dim_Afiliados_have_dwh_Fact_AfiliacionEmpresas"
-			        }
-			      ]
-			    },
-			    "dwh_Dim_Tienda_has_stage_StgFactFacturacion": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Dim_Tienda"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Dim_Tienda": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Tienda"
-			          }
-			        },
-			        "stage_StgFactFacturacion": {
-			          "Target": {
-			            "Entity": "stage_StgFactFacturacion"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Dim_Tienda"
-			            },
-			            "Object": {
-			              "Role": "stage_StgFactFacturacion"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Dim_Tiendas_have_stage_StgFactFacturacions"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgFactFacturacion"
-			            },
-			            "Object": {
-			              "Role": "dwh_Dim_Tienda"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "stage_StgFactFacturacions_have_dwh_Dim_Tiendas"
 			        }
 			      ]
 			    },
@@ -48398,6 +49738,765 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_Dim_Afiliados_have_stage_StgCortesAfiliadosWebos"
+			        }
+			      ]
+			    },
+			    "tabla_filtro_has_periodo": {
+			      "Binding": {
+			        "ConceptualEntity": "TablaFiltro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_filtro": {
+			          "Target": {
+			            "Entity": "tabla_filtro"
+			          }
+			        },
+			        "tabla_filtro.periodo": {
+			          "Target": {
+			            "Entity": "tabla_filtro.periodo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_filtro"
+			            },
+			            "Object": {
+			              "Role": "tabla_filtro.periodo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_filtros_have_periodos"
+			        }
+			      ]
+			    },
+			    "ultimas_fechas_general_has_fecha_final": {
+			      "Binding": {
+			        "ConceptualEntity": "UltimasFechasGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ultimas_fechas_general": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general"
+			          }
+			        },
+			        "ultimas_fechas_general.fecha_final": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.fecha_final"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ultimas_fechas_general"
+			            },
+			            "Object": {
+			              "Role": "ultimas_fechas_general.fecha_final"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ultimas_fechas_generals_have_fecha_finals"
+			        }
+			      ]
+			    },
+			    "ultimas_fechas_general_has_fecha_inicial": {
+			      "Binding": {
+			        "ConceptualEntity": "UltimasFechasGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ultimas_fechas_general": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general"
+			          }
+			        },
+			        "ultimas_fechas_general.fecha_inicial": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.fecha_inicial"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ultimas_fechas_general"
+			            },
+			            "Object": {
+			              "Role": "ultimas_fechas_general.fecha_inicial"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ultimas_fechas_generals_have_fecha_inicials"
+			        }
+			      ]
+			    },
+			    "ultimas_fechas_general_has_texto": {
+			      "Binding": {
+			        "ConceptualEntity": "UltimasFechasGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ultimas_fechas_general": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general"
+			          }
+			        },
+			        "ultimas_fechas_general.texto": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.texto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ultimas_fechas_general"
+			            },
+			            "Object": {
+			              "Role": "ultimas_fechas_general.texto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ultimas_fechas_generals_have_textos"
+			        }
+			      ]
+			    },
+			    "top_3_tarjetas_activas_por_distrito_has_tarjetas_activa": {
+			      "Binding": {
+			        "ConceptualEntity": "Top3TarjetasActivasPorDistrito"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "top_3_tarjetas_activas_por_distrito": {
+			          "Target": {
+			            "Entity": "top_3_tarjetas_activas_por_distrito"
+			          }
+			        },
+			        "top_3_tarjetas_activas_por_distrito.tarjetas_activa": {
+			          "Target": {
+			            "Entity": "top_3_tarjetas_activas_por_distrito.tarjetas_activa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "top_3_tarjetas_activas_por_distrito"
+			            },
+			            "Object": {
+			              "Role": "top_3_tarjetas_activas_por_distrito.tarjetas_activa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "top_3_tarjetas_activas_por_distrito_have_tarjetas_activas"
+			        }
+			      ]
+			    },
+			    "top_3_tarjetas_activas_por_distrito_has_distrito": {
+			      "Binding": {
+			        "ConceptualEntity": "Top3TarjetasActivasPorDistrito"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "top_3_tarjetas_activas_por_distrito": {
+			          "Target": {
+			            "Entity": "top_3_tarjetas_activas_por_distrito"
+			          }
+			        },
+			        "top_3_tarjetas_activas_por_distrito.distrito": {
+			          "Target": {
+			            "Entity": "top_3_tarjetas_activas_por_distrito.distrito"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "top_3_tarjetas_activas_por_distrito"
+			            },
+			            "Object": {
+			              "Role": "top_3_tarjetas_activas_por_distrito.distrito"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "top_3_tarjetas_activas_por_distrito_have_distrito"
+			        }
+			      ]
+			    },
+			    "calendario_general_has_filtro_dinamico": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general": {
+			          "Target": {
+			            "Entity": "calendario_general"
+			          }
+			        },
+			        "calendario_general.filtro_dinamico": {
+			          "Target": {
+			            "Entity": "calendario_general.filtro_dinamico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.filtro_dinamico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendario_generals_have_filtro_dinamico"
+			        }
+			      ]
+			    },
+			    "calendario_general_has_ultima_semana": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general": {
+			          "Target": {
+			            "Entity": "calendario_general"
+			          }
+			        },
+			        "calendario_general.ultima_semana": {
+			          "Target": {
+			            "Entity": "calendario_general.ultima_semana"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.ultima_semana"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendario_generals_have_ultima_semana"
+			        }
+			      ]
+			    },
+			    "calendario_general_has_ultimo_mes_medida": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general": {
+			          "Target": {
+			            "Entity": "calendario_general"
+			          }
+			        },
+			        "calendario_general.ultimo_mes_medida": {
+			          "Target": {
+			            "Entity": "calendario_general.ultimo_mes_medida"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.ultimo_mes_medida"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendario_generals_have_ultimo_mes_medida"
+			        }
+			      ]
+			    },
+			    "calendario_general_has_ultimo_dia_medida": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general": {
+			          "Target": {
+			            "Entity": "calendario_general"
+			          }
+			        },
+			        "calendario_general.ultimo_dia_medida": {
+			          "Target": {
+			            "Entity": "calendario_general.ultimo_dia_medida"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.ultimo_dia_medida"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendario_generals_have_ultimo_dia_medida"
+			        }
+			      ]
+			    },
+			    "calendario_general_has_ultimo_ano_medida": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general": {
+			          "Target": {
+			            "Entity": "calendario_general"
+			          }
+			        },
+			        "calendario_general.ultimo_ano_medida": {
+			          "Target": {
+			            "Entity": "calendario_general.ultimo_ano_medida"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.ultimo_ano_medida"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendario_generals_have_ultimo_ano_medida"
+			        }
+			      ]
+			    },
+			    "calendario_general_has_ultima_semana_medida": {
+			      "Binding": {
+			        "ConceptualEntity": "CalendarioGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_general": {
+			          "Target": {
+			            "Entity": "calendario_general"
+			          }
+			        },
+			        "calendario_general.ultima_semana_medida": {
+			          "Target": {
+			            "Entity": "calendario_general.ultima_semana_medida"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_general"
+			            },
+			            "Object": {
+			              "Role": "calendario_general.ultima_semana_medida"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendario_generals_have_ultima_semana_medidas"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Plane_has_sticker_entregados": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Planes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Plane": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Plane"
+			          }
+			        },
+			        "dwh_Fact_Plane.sticker_entregados": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Plane.sticker_entregados"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Plane"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Plane.sticker_entregados"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Planes_have_sticker_entregados"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Plane_has_tarjetas_compradas": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Planes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Plane": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Plane"
+			          }
+			        },
+			        "dwh_Fact_Plane.tarjetas_compradas": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Plane.tarjetas_compradas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Plane"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Plane.tarjetas_compradas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Planes_have_tarjetas_compradas"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Facturacion_has_visitas_promedio": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Facturacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Facturacion": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Facturacion"
+			          }
+			        },
+			        "dwh_Fact_Facturacion.visitas_promedio": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Facturacion.visitas_promedio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Facturacion"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Facturacion.visitas_promedio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Facturacions_have_visitas_promedio"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tiempo_has_dwh_Fact_Facturacion_visitas_promedio": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tiempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tiempo": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo"
+			          }
+			        },
+			        "dwh_Fact_Facturacion.visitas_promedio": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Facturacion.visitas_promedio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tiempo"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Facturacion.visitas_promedio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Tiempos_have_visitas_promedio"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Facturacion_has_valor_monetario_semanal": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Facturacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Facturacion": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Facturacion"
+			          }
+			        },
+			        "dwh_Fact_Facturacion.valor_monetario_semanal": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Facturacion.valor_monetario_semanal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Facturacion"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Facturacion.valor_monetario_semanal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Facturacions_have_valor_monetario_semanal"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionEmpresa_has_frecuencia_promedio": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_AfiliacionEmpresa": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionEmpresa"
+			          }
+			        },
+			        "dwh_Fact_AfiliacionEmpresa.frecuencia_promedio": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionEmpresa.frecuencia_promedio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa.frecuencia_promedio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_AfiliacionEmpresas_have_frecuencia_promedio"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_AfiliacionEmpresa_has_recencia_promedio": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_AfiliacionEmpresa": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionEmpresa"
+			          }
+			        },
+			        "dwh_Fact_AfiliacionEmpresa.recencia_promedio": {
+			          "Target": {
+			            "Entity": "dwh_Fact_AfiliacionEmpresa.recencia_promedio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_AfiliacionEmpresa.recencia_promedio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_AfiliacionEmpresas_have_recencia_promedio"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tiempo_has_periodo_del_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tiempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tiempo": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo"
+			          }
+			        },
+			        "dwh_Dim_Tiempo.periodo_del_dia": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tiempo.periodo_del_dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tiempo"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tiempo.periodo_del_dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Tiempos_have_periodo_del_dias"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_has_recencia_promedio_por_rango_edad": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.recencia_promedio_por_rango_edad": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.recencia_promedio_por_rango_edad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.recencia_promedio_por_rango_edad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_recencia_promedio_por_rango_edad"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_has_frecuencia_promedio_rango_edades": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.frecuencia_promedio_rango_edades": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.frecuencia_promedio_rango_edades"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.frecuencia_promedio_rango_edades"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_frecuencia_promedio_rango_edades"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_has_rango_edade": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.rango_edade": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.rango_edade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.rango_edade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_rango_edades"
 			        }
 			      ]
 			    },
@@ -48959,6 +51058,26 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_Fact_Promociones_have_total_promociones_vencidas"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Promocione"
+			            },
+			            "Adjectives": [
+			              {
+			                "Expired": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "dwh_Fact_Promocione.total_promociones_vencidas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "total_promociones_vencidas_indicates_how_Expired_dwh_Fact_Promociones_are"
 			        }
 			      ]
 			    },
@@ -49124,6 +51243,26 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_Dim_Afiliados_have_afiliados_perdidos"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Adjectives": [
+			              {
+			                "lost": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "dwh_Dim_Afiliado.afiliados_perdidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "afiliados_perdidos_indicates_how_lost_dwh_Dim_Afiliados_are"
 			        }
 			      ]
 			    },
@@ -50084,15 +52223,15 @@
 			        }
 			      ]
 			    },
-			    "dwh_Dim_Empresa_has_dwh_Fact_AfiliacionEmpresa_total_clientes_activos": {
+			    "dwh_Fact_AfiliacionEmpresa_has_total_clientes_activos": {
 			      "Binding": {
-			        "ConceptualEntity": "dwh Dim_Empresa"
+			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "dwh_Dim_Empresa": {
+			        "dwh_Fact_AfiliacionEmpresa": {
 			          "Target": {
-			            "Entity": "dwh_Dim_Empresa"
+			            "Entity": "dwh_Fact_AfiliacionEmpresa"
 			          }
 			        },
 			        "dwh_Fact_AfiliacionEmpresa.total_clientes_activos": {
@@ -50105,7 +52244,7 @@
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dwh_Dim_Empresa"
+			              "Role": "dwh_Fact_AfiliacionEmpresa"
 			            },
 			            "Object": {
 			              "Role": "dwh_Fact_AfiliacionEmpresa.total_clientes_activos"
@@ -50113,7 +52252,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dwh_Dim_Empresas_have_total_clientes_activos"
+			          "ID": "dwh_Fact_AfiliacionEmpresas_have_total_clientes_activos"
 			        }
 			      ]
 			    },
@@ -50246,138 +52385,6 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "filtros_tiempos_have_filtros"
-			        }
-			      ]
-			    },
-			    "calendario_general_has_mes_anterior": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general": {
-			          "Target": {
-			            "Entity": "calendario_general"
-			          }
-			        },
-			        "calendario_general.mes_anterior": {
-			          "Target": {
-			            "Entity": "calendario_general.mes_anterior"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.mes_anterior"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "calendario_generals_have_mes_anterior"
-			        }
-			      ]
-			    },
-			    "calendario_general_has_quincena_anterior": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general": {
-			          "Target": {
-			            "Entity": "calendario_general"
-			          }
-			        },
-			        "calendario_general.quincena_anterior": {
-			          "Target": {
-			            "Entity": "calendario_general.quincena_anterior"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.quincena_anterior"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "calendario_generals_have_quincena_anterior"
-			        }
-			      ]
-			    },
-			    "calendario_general_has_semana_anterior": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general": {
-			          "Target": {
-			            "Entity": "calendario_general"
-			          }
-			        },
-			        "calendario_general.semana_anterior": {
-			          "Target": {
-			            "Entity": "calendario_general.semana_anterior"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.semana_anterior"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "calendario_generals_have_semana_anterior"
-			        }
-			      ]
-			    },
-			    "calendario_general_has_dia_anterior": {
-			      "Binding": {
-			        "ConceptualEntity": "CalendarioGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_general": {
-			          "Target": {
-			            "Entity": "calendario_general"
-			          }
-			        },
-			        "calendario_general.dia_anterior": {
-			          "Target": {
-			            "Entity": "calendario_general.dia_anterior"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_general"
-			            },
-			            "Object": {
-			              "Role": "calendario_general.dia_anterior"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "calendario_generals_have_dia_anterior"
 			        }
 			      ]
 			    },
@@ -51136,7 +53143,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dwh_Fact_Facturacions_have_variación_monto_facturado"
+			          "ID": "dwh_Fact_Facturacions_have_variacion_monto_facturado"
 			        }
 			      ]
 			    },
@@ -51169,7 +53176,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dwh_Fact_Facturacions_have_monto_total_facturado"
+			          "ID": "dwh_Fact_Facturacions_have_total_facturado"
 			        }
 			      ]
 			    },
@@ -52044,6 +54051,39 @@
 			        }
 			      ]
 			    },
+			    "stage_StgTransaccion_has_fkcliente": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTransaccion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTransaccion": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion"
+			          }
+			        },
+			        "stage_StgTransaccion.fkcliente": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion.fkcliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTransaccion"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTransaccion.fkcliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgTransaccions_have_fkclientes"
+			        }
+			      ]
+			    },
 			    "stage_StgTransaccion_has_fkprom": {
 			      "Binding": {
 			        "ConceptualEntity": "stage StgTransaccion"
@@ -52404,6 +54444,39 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "stage_StgTrackingStickers_have_fktiendas"
+			        }
+			      ]
+			    },
+			    "stage_StgTrackingSticker_has_fkcliente": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTrackingStickers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTrackingSticker": {
+			          "Target": {
+			            "Entity": "stage_StgTrackingSticker"
+			          }
+			        },
+			        "stage_StgTrackingSticker.fkcliente": {
+			          "Target": {
+			            "Entity": "stage_StgTrackingSticker.fkcliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTrackingSticker"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTrackingSticker.fkcliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgTrackingStickers_have_fkclientes"
 			        }
 			      ]
 			    },
@@ -52770,6 +54843,39 @@
 			        }
 			      ]
 			    },
+			    "stage_StgTienda_has_fkcliente": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTienda"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTienda": {
+			          "Target": {
+			            "Entity": "stage_StgTienda"
+			          }
+			        },
+			        "stage_StgTienda.fkcliente": {
+			          "Target": {
+			            "Entity": "stage_StgTienda.fkcliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTienda"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTienda.fkcliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgTiendas_have_fkclientes"
+			        }
+			      ]
+			    },
 			    "stage_StgTienda_has_idtienda": {
 			      "Binding": {
 			        "ConceptualEntity": "stage StgTienda"
@@ -52965,6 +55071,39 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "stage_StgTarjetas_have_fkcamps"
+			        }
+			      ]
+			    },
+			    "stage_StgTarjeta_has_fkcliente": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTarjeta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTarjeta": {
+			          "Target": {
+			            "Entity": "stage_StgTarjeta"
+			          }
+			        },
+			        "stage_StgTarjeta.fkcliente": {
+			          "Target": {
+			            "Entity": "stage_StgTarjeta.fkcliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTarjeta"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTarjeta.fkcliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgTarjetas_have_fkclientes"
 			        }
 			      ]
 			    },
@@ -60888,39 +63027,6 @@
 			        }
 			      ]
 			    },
-			    "dwh_Fact_AfiliacionEmpresa_has_key_fecha_corte": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Fact_AfiliacionEmpresa": {
-			          "Target": {
-			            "Entity": "dwh_Fact_AfiliacionEmpresa"
-			          }
-			        },
-			        "dwh_Fact_AfiliacionEmpresa.key_fecha_corte": {
-			          "Target": {
-			            "Entity": "dwh_Fact_AfiliacionEmpresa.key_fecha_corte"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Fact_AfiliacionEmpresa"
-			            },
-			            "Object": {
-			              "Role": "dwh_Fact_AfiliacionEmpresa.key_fecha_corte"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Fact_AfiliacionEmpresas_have_key_fecha_cortes"
-			        }
-			      ]
-			    },
 			    "dwh_Fact_AfiliacionEmpresa_has_key_fact_afiliacion_empresa": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh Fact_AfiliacionEmpresa"
@@ -61185,6 +63291,39 @@
 			        }
 			      ]
 			    },
+			    "dwh_Dim_Tienda_has_key_tienda": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tienda"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tienda": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tienda"
+			          }
+			        },
+			        "dwh_Dim_Tienda.key_tienda": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tienda.key_tienda"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tienda"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tienda.key_tienda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Tiendas_have_key_tiendas"
+			        }
+			      ]
+			    },
 			    "dwh_Dim_Tiempo_has_periodo": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh Dim_Tiempo"
@@ -61347,6 +63486,33 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_Dim_Tiempos_have_años"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tiempo"
+			            },
+			            "Adjectives": [
+			              {
+			                "old": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "young": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "dwh_Dim_Tiempo.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "año_indicates_how_old_dwh_Dim_Tiempos_are"
 			        }
 			      ]
 			    },
@@ -63297,6 +65463,51 @@
 			        }
 			      ]
 			    },
+			    "dwh_Dim_Afiliado_in_distrito": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.distrito": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.distrito"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "dwh_Dim_Afiliado.distrito"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.distrito"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_are_in_distrito"
+			        }
+			      ]
+			    },
 			    "dwh_Dim_Tiempo_is_fixed_on_fecha_convertida": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh Dim_Tiempo"
@@ -63389,20 +65600,20 @@
 			        }
 			      ]
 			    },
-			    "dwh_Dim_Tiempo_fecha_convertida_variation_date_hierarchy_has_day": {
+			    "ultimas_fechas_general_fecha_final_variation_date_hierarchy_has_year": {
 			      "Binding": {
-			        "ConceptualEntity": "dwh Dim_Tiempo"
+			        "ConceptualEntity": "UltimasFechasGeneral"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy": {
+			        "ultimas_fechas_general.fecha_final.variation.date_hierarchy": {
 			          "Target": {
-			            "Entity": "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy"
+			            "Entity": "ultimas_fechas_general.fecha_final.variation.date_hierarchy"
 			          }
 			        },
-			        "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy.day": {
+			        "ultimas_fechas_general.fecha_final.variation.date_hierarchy.year": {
 			          "Target": {
-			            "Entity": "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy.day"
+			            "Entity": "ultimas_fechas_general.fecha_final.variation.date_hierarchy.year"
 			          }
 			        }
 			      },
@@ -63410,15 +65621,114 @@
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy"
+			              "Role": "ultimas_fechas_general.fecha_final.variation.date_hierarchy"
 			            },
 			            "Object": {
-			              "Role": "dwh_Dim_Tiempo.fecha_convertida.variation.date_hierarchy.day"
+			              "Role": "ultimas_fechas_general.fecha_final.variation.date_hierarchy.year"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_fixed_date_hierarchies_have_fecha_fixed_days"
+			          "ID": "fecha_final_date_hierarchies_have_fecha_final_years1"
+			        }
+			      ]
+			    },
+			    "ultimas_fechas_general_fecha_final_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "UltimasFechasGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ultimas_fechas_general.fecha_final.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.fecha_final.variation.date_hierarchy"
+			          }
+			        },
+			        "ultimas_fechas_general.fecha_final.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.fecha_final.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ultimas_fechas_general.fecha_final.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "ultimas_fechas_general.fecha_final.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_final_date_hierarchies_have_fecha_final_quarters1"
+			        }
+			      ]
+			    },
+			    "ultimas_fechas_general_fecha_final_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "UltimasFechasGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ultimas_fechas_general.fecha_final.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.fecha_final.variation.date_hierarchy"
+			          }
+			        },
+			        "ultimas_fechas_general.fecha_final.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.fecha_final.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ultimas_fechas_general.fecha_final.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "ultimas_fechas_general.fecha_final.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_final_date_hierarchies_have_fecha_final_months1"
+			        }
+			      ]
+			    },
+			    "ultimas_fechas_general_fecha_final_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "UltimasFechasGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ultimas_fechas_general.fecha_final.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.fecha_final.variation.date_hierarchy"
+			          }
+			        },
+			        "ultimas_fechas_general.fecha_final.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.fecha_final.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ultimas_fechas_general.fecha_final.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "ultimas_fechas_general.fecha_final.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_final_date_hierarchies_have_fecha_final_days1"
 			        }
 			      ]
 			    }

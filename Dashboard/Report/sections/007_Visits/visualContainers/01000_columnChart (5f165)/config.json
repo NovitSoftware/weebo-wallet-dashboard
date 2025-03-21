@@ -1,0 +1,241 @@
+{
+  "name": "5f1651c092297c322db6",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 230.72655157124302,
+        "width": 257.43055555555566,
+        "x": 8.5445275241450389,
+        "y": 9.8131781033507,
+        "z": 13000,
+        "tabOrder": 1000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "columnChart",
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "dwh Fact_Facturacion.ValorMonetarioPromedio"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "dwh Dim_Tiempo.Dia",
+          "active": true
+        },
+        {
+          "queryRef": "dwh Dim_Tiempo.Semana"
+        },
+        {
+          "queryRef": "dwh Dim_Tiempo.Mes"
+        },
+        {
+          "queryRef": "dwh Dim_Tiempo.Año"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d",
+          "Entity": "dwh Fact_Facturacion",
+          "Type": 0
+        },
+        {
+          "Name": "d1",
+          "Entity": "dwh Dim_Tiempo",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "ValorMonetarioPromedio"
+          },
+          "Name": "dwh Fact_Facturacion.ValorMonetarioPromedio",
+          "NativeReferenceName": "Average monetary value"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d1"
+              }
+            },
+            "Property": "Dia"
+          },
+          "Name": "dwh Dim_Tiempo.Dia",
+          "NativeReferenceName": "day"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d1"
+              }
+            },
+            "Property": "Mes"
+          },
+          "Name": "dwh Dim_Tiempo.Mes",
+          "NativeReferenceName": "month"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d1"
+              }
+            },
+            "Property": "Año"
+          },
+          "Name": "dwh Dim_Tiempo.Año",
+          "NativeReferenceName": "year"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d1"
+              }
+            },
+            "Property": "Semana"
+          },
+          "Name": "dwh Dim_Tiempo.Semana",
+          "NativeReferenceName": "week"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "d"
+                }
+              },
+              "Property": "ValorMonetarioPromedio"
+            }
+          }
+        }
+      ]
+    },
+    "columnProperties": {
+      "dwh Fact_Facturacion.ValorMonetarioPromedio": {
+        "displayName": "Average monetary value"
+      },
+      "dwh Dim_Tiempo.Dia": {
+        "displayName": "day"
+      },
+      "dwh Dim_Tiempo.Semana": {
+        "displayName": "week"
+      },
+      "dwh Dim_Tiempo.Mes": {
+        "displayName": "month"
+      },
+      "dwh Dim_Tiempo.Año": {
+        "displayName": "year"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "64f4918386b7ac9b047d"
+}

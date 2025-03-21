@@ -1,0 +1,250 @@
+{
+  "name": "d88fe36d121ccd0005a0",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 8.2444620189965,
+        "y": 8.9527963508839434,
+        "z": 14500,
+        "width": 255.55555555555554,
+        "height": 234.44444444444443,
+        "tabOrder": 0
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "columnChart",
+    "projections": {
+      "Series": [
+        {
+          "queryRef": "dwh Dim_RangoEdad.RangoEdad"
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "Sum(dwh Fact_Facturacion.Importe)"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "dwh Dim_Tiempo.Dia",
+          "active": true
+        },
+        {
+          "queryRef": "dwh Dim_Tiempo.Semana"
+        },
+        {
+          "queryRef": "dwh Dim_Tiempo.Mes"
+        },
+        {
+          "queryRef": "dwh Dim_Tiempo.Año"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d1",
+          "Entity": "dwh Dim_RangoEdad",
+          "Type": 0
+        },
+        {
+          "Name": "d2",
+          "Entity": "dwh Fact_Facturacion",
+          "Type": 0
+        },
+        {
+          "Name": "d",
+          "Entity": "dwh Dim_Tiempo",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d1"
+              }
+            },
+            "Property": "RangoEdad"
+          },
+          "Name": "dwh Dim_RangoEdad.RangoEdad",
+          "NativeReferenceName": "age"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d2"
+                  }
+                },
+                "Property": "Importe"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(dwh Fact_Facturacion.Importe)",
+          "NativeReferenceName": "Total invoicing"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "Dia"
+          },
+          "Name": "dwh Dim_Tiempo.Dia",
+          "NativeReferenceName": "day"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "Mes"
+          },
+          "Name": "dwh Dim_Tiempo.Mes",
+          "NativeReferenceName": "month"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "Semana"
+          },
+          "Name": "dwh Dim_Tiempo.Semana",
+          "NativeReferenceName": "week"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "Año"
+          },
+          "Name": "dwh Dim_Tiempo.Año",
+          "NativeReferenceName": "year"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "d2"
+                    }
+                  },
+                  "Property": "Importe"
+                }
+              },
+              "Function": 0
+            }
+          }
+        }
+      ]
+    },
+    "columnProperties": {
+      "Sum(dwh Fact_Facturacion.Importe)": {
+        "displayName": "Total invoicing"
+      },
+      "dwh Dim_RangoEdad.RangoEdad": {
+        "displayName": "age"
+      },
+      "dwh Dim_Tiempo.Dia": {
+        "displayName": "day"
+      },
+      "dwh Dim_Tiempo.Semana": {
+        "displayName": "week"
+      },
+      "dwh Dim_Tiempo.Mes": {
+        "displayName": "month"
+      },
+      "dwh Dim_Tiempo.Año": {
+        "displayName": "year"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "title": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "f4670ab882d6a47a00a5"
+}

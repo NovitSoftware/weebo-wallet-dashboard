@@ -1,0 +1,228 @@
+{
+  "name": "536c78ecb0500d18ed71",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 233.66348740523352,
+        "width": 301.6505645099582,
+        "x": 9.6526597566456651,
+        "y": 7.1358065734174092,
+        "z": 17002,
+        "tabOrder": 0
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "columnChart",
+    "projections": {
+      "Category": [
+        {
+          "queryRef": "dwh Dim_Tiempo.Dia",
+          "active": true
+        },
+        {
+          "queryRef": "dwh Dim_Tiempo.Semana"
+        },
+        {
+          "queryRef": "dwh Dim_Tiempo.Mes"
+        },
+        {
+          "queryRef": "dwh Dim_Tiempo.Año"
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "dwh Fact_Promociones.TotalPromocionesActivas"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d1",
+          "Entity": "dwh Dim_Tiempo",
+          "Type": 0
+        },
+        {
+          "Name": "d",
+          "Entity": "dwh Fact_Promociones",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d1"
+              }
+            },
+            "Property": "Dia"
+          },
+          "Name": "dwh Dim_Tiempo.Dia",
+          "NativeReferenceName": "day"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d1"
+              }
+            },
+            "Property": "Año"
+          },
+          "Name": "dwh Dim_Tiempo.Año",
+          "NativeReferenceName": "age"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d1"
+              }
+            },
+            "Property": "Mes"
+          },
+          "Name": "dwh Dim_Tiempo.Mes",
+          "NativeReferenceName": "month"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d1"
+              }
+            },
+            "Property": "Semana"
+          },
+          "Name": "dwh Dim_Tiempo.Semana",
+          "NativeReferenceName": "week"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "TotalPromocionesActivas"
+          },
+          "Name": "dwh Fact_Promociones.TotalPromocionesActivas",
+          "NativeReferenceName": "Active promotions"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "d"
+                }
+              },
+              "Property": "TotalPromocionesActivas"
+            }
+          }
+        }
+      ]
+    },
+    "columnProperties": {
+      "dwh Fact_Promociones.TotalPromocionesActivas": {
+        "displayName": "Active promotions"
+      },
+      "dwh Dim_Tiempo.Dia": {
+        "displayName": "day"
+      },
+      "dwh Dim_Tiempo.Semana": {
+        "displayName": "week"
+      },
+      "dwh Dim_Tiempo.Mes": {
+        "displayName": "month"
+      },
+      "dwh Dim_Tiempo.Año": {
+        "displayName": "age"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Scalar'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "402d7ca55eb0550b1557"
+}

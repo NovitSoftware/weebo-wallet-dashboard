@@ -1,0 +1,78 @@
+{
+  "objects": {
+    "categoryLabels": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "labels": [
+      {
+        "properties": {
+          "fontSize": {
+            "expr": {
+              "Literal": {
+                "Value": "20D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "projectionOrdering": {
+    "Values": [
+      0
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "PromedioDiasHastaObtenerCuponFiltrado",
+        "Name": "dwh Fact_Cupon.PromedioDiasHastaObtenerCuponFiltrado",
+        "Type": 1
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "PromedioDiasHastaObtenerCuponFiltrado",
+      "queryName": "dwh Fact_Cupon.PromedioDiasHastaObtenerCuponFiltrado",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Fact_Cupon"
+            }
+          },
+          "Property": "PromedioDiasHastaObtenerCuponFiltrado"
+        }
+      }
+    }
+  ]
+}

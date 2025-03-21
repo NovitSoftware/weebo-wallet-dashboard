@@ -1,0 +1,133 @@
+{
+  "objects": {
+    "categoryLabels": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "card": [
+      {
+        "properties": {
+          "cardPadding": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          },
+          "outlineStyle": {
+            "expr": {
+              "Literal": {
+                "Value": "4D"
+              }
+            }
+          },
+          "outlineWeight": {
+            "expr": {
+              "Literal": {
+                "Value": "1D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "projectionOrdering": {
+    "Values": [
+      0,
+      1
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Distrito",
+        "Name": "Top3DistritosPromociones.Distrito",
+        "Type": 2048
+      },
+      {
+        "Restatement": "Total",
+        "Name": "Sum(Top3DistritosPromociones.TotalPromociones)",
+        "Type": 3,
+        "Format": "0"
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        },
+        {
+          "Name": "Values",
+          "Projection": 1,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Distrito",
+      "queryName": "Top3DistritosPromociones.Distrito",
+      "roles": {
+        "Values": true
+      },
+      "sort": 2,
+      "sortOrder": 0,
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Top3DistritosPromociones"
+            }
+          },
+          "Property": "Distrito"
+        }
+      }
+    },
+    {
+      "displayName": "Total",
+      "format": "0",
+      "queryName": "Sum(Top3DistritosPromociones.TotalPromociones)",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 260
+      },
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Top3DistritosPromociones"
+                }
+              },
+              "Property": "TotalPromociones"
+            }
+          },
+          "Function": 0
+        }
+      }
+    }
+  ]
+}
