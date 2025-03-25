@@ -4,12 +4,11 @@
     {
       "id": 0,
       "position": {
-        "height": 223.35920959774168,
-        "width": 262.59187938628139,
-        "x": 7.3826064079755795,
-        "y": 14.258083065422536,
-        "z": 2000,
-        "tabOrder": 0
+        "height": 223.24428910669246,
+        "width": 270.54920906465355,
+        "x": 7.6063217536718088,
+        "y": 14.25074714267169,
+        "z": 2000
       }
     }
   ],
@@ -59,7 +58,7 @@
             "Function": 1
           },
           "Name": "CountNonNull(dwh Dim_Afiliado.KeyAfiliado)",
-          "NativeReferenceName": "Frequency"
+          "NativeReferenceName": "Recession"
         },
         {
           "HierarchyLevel": {
@@ -134,7 +133,7 @@
     },
     "columnProperties": {
       "CountNonNull(dwh Dim_Afiliado.KeyAfiliado)": {
-        "displayName": "Frequency"
+        "displayName": "Recession"
       }
     },
     "drillFilterOtherVisuals": true,

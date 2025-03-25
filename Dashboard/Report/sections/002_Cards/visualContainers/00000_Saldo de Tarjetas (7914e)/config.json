@@ -5,11 +5,10 @@
       "id": 0,
       "position": {
         "height": 250.12869365159247,
-        "width": 500.25738730318494,
+        "width": 509.99999999999994,
         "x": 0,
         "y": 0,
-        "z": 8000,
-        "tabOrder": 0
+        "z": 8000
       }
     }
   ],
@@ -30,7 +29,7 @@
             "rectangleRoundedCurve": {
               "expr": {
                 "Literal": {
-                  "Value": "10L"
+                  "Value": "5L"
                 }
               }
             }
