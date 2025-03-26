@@ -29,7 +29,7 @@
                     "Source": "d"
                   }
                 },
-                "Property": "week"
+                "Property": "Week"
               },
               "Name": "dwh Dim_Tiempo.Semana",
               "NativeReferenceName": "Week"
@@ -44,7 +44,7 @@
                 "Property": "TotalClientesActivos"
               },
               "Name": "dwh Fact_AfiliacionEmpresa.TotalClientesActivos",
-              "NativeReferenceName": "Total active customer"
+              "NativeReferenceName": "Total asset customers"
             }
           ],
           "Where": [

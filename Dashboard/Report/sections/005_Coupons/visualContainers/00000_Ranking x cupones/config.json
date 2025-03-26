@@ -5,8 +5,8 @@
       "id": 0,
       "position": {
         "height": 175.1882489106755,
-        "width": 397.63482576137909,
-        "x": 14.43078564257034,
+        "width": 379.19987785342789,
+        "x": 13.76175274012723,
         "y": 13.216741557734277,
         "z": 5000,
         "tabOrder": 0
@@ -45,7 +45,7 @@
             "Property": "Distrito"
           },
           "Name": "Top3DistritosCupon.Distrito",
-          "NativeReferenceName": "Distrito"
+          "NativeReferenceName": "District"
         },
         {
           "Aggregation": {
@@ -62,7 +62,7 @@
             "Function": 0
           },
           "Name": "Sum(Top3DistritosCupon.TotalCupones)",
-          "NativeReferenceName": "Sum of TotalCupones"
+          "NativeReferenceName": "Coupons"
         }
       ],
       "OrderBy": [
@@ -89,6 +89,12 @@
     "columnProperties": {
       "Min(dwh Fact_Cupon.FechaActivacion)": {
         "displayName": "Activos"
+      },
+      "Top3DistritosCupon.Distrito": {
+        "displayName": "District"
+      },
+      "Sum(Top3DistritosCupon.TotalCupones)": {
+        "displayName": "Coupons"
       }
     },
     "drillFilterOtherVisuals": true,

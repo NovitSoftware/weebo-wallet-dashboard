@@ -35,7 +35,7 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Promedio",
+        "Restatement": "Average",
         "Name": "dwh Fact_AfiliacionEmpresa.PromedioClientesActivos",
         "Type": 1
       }
@@ -54,7 +54,7 @@
   ],
   "selects": [
     {
-      "displayName": "Promedio",
+      "displayName": "Average",
       "queryName": "dwh Fact_AfiliacionEmpresa.PromedioClientesActivos",
       "roles": {
         "Values": true

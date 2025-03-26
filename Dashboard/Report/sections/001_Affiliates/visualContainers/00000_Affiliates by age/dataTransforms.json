@@ -69,25 +69,25 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Activos",
+        "Restatement": "Assets",
         "Name": "dwh Dim_Afiliado.AfiliadosActivosPorcentaje",
         "Type": 1,
         "Format": "0.00 %;-0.00 %;0.00 %"
       },
       {
-        "Restatement": "En Riesgo",
+        "Restatement": "At risk",
         "Name": "dwh Dim_Afiliado.AfiliadosEnRiesgoPorcentaje",
         "Type": 1,
         "Format": "0.00 %;-0.00 %;0.00 %"
       },
       {
-        "Restatement": "Perdidos",
+        "Restatement": "Lost",
         "Name": "dwh Dim_Afiliado.AfiliadosPerdidosPorcentaje",
         "Type": 1,
         "Format": "0.00 %;-0.00 %;0.00 %"
       },
       {
-        "Restatement": "age",
+        "Restatement": "Age",
         "Name": "dwh Dim_Afiliado.RangoEdad",
         "Type": 2048
       }
@@ -136,7 +136,7 @@
   ],
   "selects": [
     {
-      "displayName": "Activos",
+      "displayName": "Assets",
       "format": "0.00 %;-0.00 %;0.00 %",
       "queryName": "dwh Dim_Afiliado.AfiliadosActivosPorcentaje",
       "roles": {
@@ -160,7 +160,7 @@
       }
     },
     {
-      "displayName": "En Riesgo",
+      "displayName": "At risk",
       "format": "0.00 %;-0.00 %;0.00 %",
       "queryName": "dwh Dim_Afiliado.AfiliadosEnRiesgoPorcentaje",
       "roles": {
@@ -182,7 +182,7 @@
       }
     },
     {
-      "displayName": "Perdidos",
+      "displayName": "Lost",
       "format": "0.00 %;-0.00 %;0.00 %",
       "queryName": "dwh Dim_Afiliado.AfiliadosPerdidosPorcentaje",
       "roles": {
@@ -204,7 +204,7 @@
       }
     },
     {
-      "displayName": "age",
+      "displayName": "Age",
       "queryName": "dwh Dim_Afiliado.RangoEdad",
       "roles": {
         "Category": true

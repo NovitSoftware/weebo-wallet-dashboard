@@ -36,8 +36,9 @@
     "Select": [
       {
         "Restatement": "Total",
-        "Name": "dwh Fact_AfiliacionEmpresa.TotalClientesActivos",
-        "Type": 1
+        "Name": "dwh Fact_AfiliacionEmpresa.TotalClientesEnRiesgo",
+        "Type": 1,
+        "Format": "0"
       }
     ]
   },
@@ -55,7 +56,8 @@
   "selects": [
     {
       "displayName": "Total",
-      "queryName": "dwh Fact_AfiliacionEmpresa.TotalClientesActivos",
+      "format": "0",
+      "queryName": "dwh Fact_AfiliacionEmpresa.TotalClientesEnRiesgo",
       "roles": {
         "Values": true
       },
@@ -70,7 +72,7 @@
               "Entity": "dwh Fact_AfiliacionEmpresa"
             }
           },
-          "Property": "TotalClientesActivos"
+          "Property": "TotalClientesEnRiesgo"
         }
       }
     }

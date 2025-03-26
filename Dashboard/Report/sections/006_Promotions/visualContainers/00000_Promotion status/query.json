@@ -27,7 +27,7 @@
                 "Property": "TotalPromocionesActivas"
               },
               "Name": "dwh Fact_Promociones.TotalPromocionesActivas",
-              "NativeReferenceName": "Active"
+              "NativeReferenceName": "Assets"
             },
             {
               "Measure": {

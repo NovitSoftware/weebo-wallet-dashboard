@@ -127,6 +127,16 @@
 			          "genero": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Gender": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -3692,16 +3702,6 @@
 			          }
 			        },
 			        {
-			          "Edad": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "Age": {
 			            "State": "Suggested",
 			            "Source": {
@@ -4379,17 +4379,7 @@
 			          }
 			        },
 			        {
-			          "En Riesgo": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "at risk": {
+			          "At risk": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4422,7 +4412,7 @@
 			          }
 			        },
 			        {
-			          "Activos": {
+			          "Assets": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4432,7 +4422,7 @@
 			          }
 			        },
 			        {
-			          "active": {
+			          "Asset": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4488,7 +4478,7 @@
 			          }
 			        },
 			        {
-			          "gender": {
+			          "Gender": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4521,7 +4511,7 @@
 			          }
 			        },
 			        {
-			          "age": {
+			          "Age": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4536,11 +4526,16 @@
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "dwh Dim_Tiempo",
-			          "ConceptualProperty": "year"
+			          "ConceptualProperty": "Year"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
 			        {
 			          "yr": {
 			            "Type": "Noun",
@@ -4550,36 +4545,6 @@
 			            },
 			            "Weight": 0.736
 			          }
-			        },
-			        {
-			          "years": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "Year": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "age": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ],
 			      "SemanticType": "Time"
@@ -4588,7 +4553,7 @@
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "dwh Dim_Tiempo",
-			          "ConceptualProperty": "month"
+			          "ConceptualProperty": "Month"
 			        }
 			      },
 			      "State": "Generated",
@@ -4614,7 +4579,7 @@
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "dwh Dim_Tiempo",
-			          "ConceptualProperty": "day"
+			          "ConceptualProperty": "Day"
 			        }
 			      },
 			      "State": "Generated",
@@ -4630,7 +4595,7 @@
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "dwh Dim_Tiempo",
-			          "ConceptualProperty": "week"
+			          "ConceptualProperty": "Week"
 			        }
 			      },
 			      "State": "Generated",
@@ -26359,6 +26324,16 @@
 			          "distrito": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "District": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -28520,7 +28495,7 @@
 			          }
 			        },
 			        {
-			          "Promedio": {
+			          "Average": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -28583,7 +28558,7 @@
 			          }
 			        },
 			        {
-			          "Total active customer": {
+			          "Total asset customers": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -28616,7 +28591,7 @@
 			          }
 			        },
 			        {
-			          "Promedio": {
+			          "Average": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -28649,7 +28624,7 @@
 			          }
 			        },
 			        {
-			          "Promedio": {
+			          "Average": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -28788,7 +28763,7 @@
 			          }
 			        },
 			        {
-			          "Promedio": {
+			          "Average": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -28871,7 +28846,7 @@
 			          }
 			        },
 			        {
-			          "Promedio de Stickers": {
+			          "Average stamps": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -28904,7 +28879,7 @@
 			          }
 			        },
 			        {
-			          "Promedio x tarjetas": {
+			          "Average by cards": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -29018,6 +28993,16 @@
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Status": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -29060,6 +29045,16 @@
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Assets": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -29104,6 +29099,16 @@
 			            },
 			            "Weight": 0.599
 			          }
+			        },
+			        {
+			          "In process": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -29146,6 +29151,16 @@
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Expired": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -29310,6 +29325,16 @@
 			        {
 			          "distrito": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "District": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -29749,6 +29774,16 @@
 			          "distrito": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "District": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -29814,16 +29849,6 @@
 			        {
 			          "ranking": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "status": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
 			          }
 			        },
 			        {
@@ -29933,7 +29958,7 @@
 			          }
 			        },
 			        {
-			          "active": {
+			          "Active": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -29989,7 +30014,7 @@
 			          }
 			        },
 			        {
-			          "lost": {
+			          "Lost": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -30022,7 +30047,7 @@
 			          }
 			        },
 			        {
-			          "at risk": {
+			          "At risk": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -30098,7 +30123,7 @@
 			          }
 			        },
 			        {
-			          "Activas": {
+			          "Active": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -30108,7 +30133,7 @@
 			          }
 			        },
 			        {
-			          "Active": {
+			          "Assets": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -30211,16 +30236,6 @@
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "Vencidas": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        },
 			        {
@@ -30421,16 +30436,6 @@
 			          }
 			        },
 			        {
-			          "status": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
 			          "classification": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -30543,17 +30548,7 @@
 			          }
 			        },
 			        {
-			          "Perdidos": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "lost": {
+			          "Lost": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -31431,6 +31426,16 @@
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Average": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -31456,7 +31461,7 @@
 			          }
 			        },
 			        {
-			          "Promedio": {
+			          "Average": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -31615,6 +31620,16 @@
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Cards purchased": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -31630,6 +31645,16 @@
 			        {
 			          "sticker entregados": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Stamps delivered": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -32004,6 +32029,16 @@
 			        {
 			          "distrito": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "District": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -32542,39 +32577,6 @@
 			    }
 			  },
 			  "Relationships": {
-			    "ultimas_fechas_general_fecha_final_has_variation_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "UltimasFechasGeneral"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "ultimas_fechas_general.fecha_final": {
-			          "Target": {
-			            "Entity": "ultimas_fechas_general.fecha_final"
-			          }
-			        },
-			        "ultimas_fechas_general.fecha_final.variation.date_hierarchy": {
-			          "Target": {
-			            "Entity": "ultimas_fechas_general.fecha_final.variation.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "ultimas_fechas_general.fecha_final"
-			            },
-			            "Object": {
-			              "Role": "ultimas_fechas_general.fecha_final.variation.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fecha_finals_have_fecha_final_date_hierarchies"
-			        }
-			      ]
-			    },
 			    "ultimas_fechas_general_fecha_inicial_variation_date_hierarchy_has_day": {
 			      "Binding": {
 			        "ConceptualEntity": "UltimasFechasGeneral"
@@ -33231,7 +33233,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_finals_have_fecha_final_date_hierarchies1"
+			          "ID": "fecha_finals_have_fecha_final_date_hierarchies"
 			        }
 			      ]
 			    },
@@ -50927,7 +50929,7 @@
 			            },
 			            "Adjectives": [
 			              {
-			                "lost": {
+			                "Lost": {
 			                  "State": "Generated"
 			                }
 			              }
@@ -50938,7 +50940,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "afiliados_perdidos_porcentaje_indicates_how_lost_dwh_Dim_Afiliados_are"
+			          "ID": "afiliados_perdidos_porcentaje_indicates_how_Lost_dwh_Dim_Afiliados_are"
 			        }
 			      ]
 			    },
@@ -51297,7 +51299,7 @@
 			            },
 			            "Adjectives": [
 			              {
-			                "lost": {
+			                "Lost": {
 			                  "State": "Generated"
 			                }
 			              }
@@ -51308,7 +51310,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "afiliados_perdidos_indicates_how_lost_dwh_Dim_Afiliados_are"
+			          "ID": "afiliados_perdidos_indicates_how_Lost_dwh_Dim_Afiliados_are"
 			        }
 			      ]
 			    },
@@ -51870,6 +51872,26 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_Fact_Cupons_have_total_cupones_vencidos"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Adjectives": [
+			              {
+			                "Expired": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "dwh_Fact_Cupon.total_cupones_vencidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "total_cupones_vencidos_indicates_how_Expired_dwh_Fact_Cupons_are"
 			        }
 			      ]
 			    },
@@ -65482,6 +65504,186 @@
 			        }
 			      ]
 			    },
+			    "top_3_tarjetas_activas_por_distrito_in_distrito": {
+			      "Binding": {
+			        "ConceptualEntity": "Top3TarjetasActivasPorDistrito"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "top_3_tarjetas_activas_por_distrito": {
+			          "Target": {
+			            "Entity": "top_3_tarjetas_activas_por_distrito"
+			          }
+			        },
+			        "top_3_tarjetas_activas_por_distrito.distrito": {
+			          "Target": {
+			            "Entity": "top_3_tarjetas_activas_por_distrito.distrito"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "top_3_tarjetas_activas_por_distrito.distrito"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "top_3_tarjetas_activas_por_distrito"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "top_3_tarjetas_activas_por_distrito.distrito"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "top_3_tarjetas_activas_por_distrito_are_in_distrito"
+			        }
+			      ]
+			    },
+			    "top_3_distritos_otorgado_in_distrito": {
+			      "Binding": {
+			        "ConceptualEntity": "Top3DistritosOtorgados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "top_3_distritos_otorgado": {
+			          "Target": {
+			            "Entity": "top_3_distritos_otorgado"
+			          }
+			        },
+			        "top_3_distritos_otorgado.distrito": {
+			          "Target": {
+			            "Entity": "top_3_distritos_otorgado.distrito"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "top_3_distritos_otorgado.distrito"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "top_3_distritos_otorgado"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "top_3_distritos_otorgado.distrito"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "top_3_distritos_otorgados_are_in_distrito"
+			        }
+			      ]
+			    },
+			    "top_3_distritos_cupon_in_distrito": {
+			      "Binding": {
+			        "ConceptualEntity": "Top3DistritosCupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "top_3_distritos_cupon": {
+			          "Target": {
+			            "Entity": "top_3_distritos_cupon"
+			          }
+			        },
+			        "top_3_distritos_cupon.distrito": {
+			          "Target": {
+			            "Entity": "top_3_distritos_cupon.distrito"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "top_3_distritos_cupon.distrito"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "top_3_distritos_cupon"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "top_3_distritos_cupon.distrito"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "top_3_distritos_cupons_are_in_distrito"
+			        }
+			      ]
+			    },
+			    "ranking_distrito_in_distrito": {
+			      "Binding": {
+			        "ConceptualEntity": "Top3Distritos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ranking_distrito": {
+			          "Target": {
+			            "Entity": "ranking_distrito"
+			          }
+			        },
+			        "ranking_distrito.distrito": {
+			          "Target": {
+			            "Entity": "ranking_distrito.distrito"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "ranking_distrito.distrito"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "ranking_distrito"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "ranking_distrito.distrito"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "top_3_distrito_are_in_distrito"
+			        }
+			      ]
+			    },
 			    "dwh_Dim_Afiliado_in_distrito": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh Dim_Afiliado"
@@ -65616,6 +65818,39 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_calendario_generals_are_weekend_calendario_generals"
+			        }
+			      ]
+			    },
+			    "ultimas_fechas_general_fecha_final_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "UltimasFechasGeneral"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ultimas_fechas_general.fecha_final": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.fecha_final"
+			          }
+			        },
+			        "ultimas_fechas_general.fecha_final.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "ultimas_fechas_general.fecha_final.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ultimas_fechas_general.fecha_final"
+			            },
+			            "Object": {
+			              "Role": "ultimas_fechas_general.fecha_final.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_finals_have_fecha_final_date_hierarchies1"
 			        }
 			      ]
 			    },

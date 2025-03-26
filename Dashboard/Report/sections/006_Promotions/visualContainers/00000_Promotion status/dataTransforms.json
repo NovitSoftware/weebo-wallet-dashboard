@@ -36,7 +36,7 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Active",
+        "Restatement": "Assets",
         "Name": "dwh Fact_Promociones.TotalPromocionesActivas",
         "Type": 1,
         "Format": "0"
@@ -67,7 +67,7 @@
   ],
   "selects": [
     {
-      "displayName": "Active",
+      "displayName": "Assets",
       "format": "0",
       "queryName": "dwh Fact_Promociones.TotalPromocionesActivas",
       "roles": {

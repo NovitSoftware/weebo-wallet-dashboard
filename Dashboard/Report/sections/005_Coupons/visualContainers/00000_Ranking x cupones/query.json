@@ -27,7 +27,7 @@
                 "Property": "Distrito"
               },
               "Name": "Top3DistritosCupon.Distrito",
-              "NativeReferenceName": "Distrito"
+              "NativeReferenceName": "District"
             },
             {
               "Aggregation": {
@@ -44,7 +44,7 @@
                 "Function": 0
               },
               "Name": "Sum(Top3DistritosCupon.TotalCupones)",
-              "NativeReferenceName": "Sum of TotalCupones"
+              "NativeReferenceName": "Coupons"
             }
           ],
           "Where": [

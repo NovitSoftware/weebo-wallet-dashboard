@@ -27,7 +27,7 @@
                 "Property": "PromedioStickers"
               },
               "Name": "dwh Fact_Planes.PromedioStickers",
-              "NativeReferenceName": "Promedio de Stickers"
+              "NativeReferenceName": "Average stamps"
             }
           ],
           "Where": [

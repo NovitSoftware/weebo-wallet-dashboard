@@ -96,13 +96,13 @@
         "Type": 2048
       },
       {
-        "Restatement": "Sum of TotalCuponesActivos",
+        "Restatement": "Assets",
         "Name": "Sum(CuponesPorGenero.TotalCuponesActivos)",
         "Type": 3,
         "Format": "0"
       },
       {
-        "Restatement": "Sum of TotalCuponesVencidos",
+        "Restatement": "Expired",
         "Name": "Sum(CuponesPorGenero.TotalCuponesVencidos)",
         "Type": 3,
         "Format": "0"
@@ -153,7 +153,7 @@
       }
     },
     {
-      "displayName": "Sum of TotalCuponesActivos",
+      "displayName": "Assets",
       "format": "0",
       "queryName": "Sum(CuponesPorGenero.TotalCuponesActivos)",
       "roles": {
@@ -182,7 +182,7 @@
       }
     },
     {
-      "displayName": "Sum of TotalCuponesVencidos",
+      "displayName": "Expired",
       "format": "0",
       "queryName": "Sum(CuponesPorGenero.TotalCuponesVencidos)",
       "roles": {

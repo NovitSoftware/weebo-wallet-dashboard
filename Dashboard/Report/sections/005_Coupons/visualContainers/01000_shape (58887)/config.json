@@ -4,8 +4,8 @@
     {
       "id": 0,
       "position": {
-        "height": 199.99999999999997,
-        "width": 415.77683514271331,
+        "height": 184.99999999999997,
+        "width": 400,
         "x": 0,
         "y": 0,
         "z": 0,
@@ -115,7 +115,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }

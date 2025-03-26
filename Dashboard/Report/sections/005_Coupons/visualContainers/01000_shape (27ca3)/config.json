@@ -5,7 +5,7 @@
       "id": 0,
       "position": {
         "height": 200,
-        "width": 426.00000000000011,
+        "width": 406.25000000000017,
         "x": 0,
         "y": 0,
         "z": 0,
@@ -115,7 +115,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }

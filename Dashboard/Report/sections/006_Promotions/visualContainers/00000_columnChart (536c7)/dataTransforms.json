@@ -36,25 +36,25 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "day",
+        "Restatement": "Day",
         "Name": "dwh Dim_Tiempo.Dia",
         "Type": 3,
         "Format": "0"
       },
       {
-        "Restatement": "age",
+        "Restatement": "Year",
         "Name": "dwh Dim_Tiempo.Año",
         "Type": 3,
         "Format": "0"
       },
       {
-        "Restatement": "month",
+        "Restatement": "Month",
         "Name": "dwh Dim_Tiempo.Mes",
         "Type": 3,
         "Format": "0"
       },
       {
-        "Restatement": "week",
+        "Restatement": "Week",
         "Name": "dwh Dim_Tiempo.Semana",
         "Type": 3,
         "Format": "0"
@@ -100,7 +100,7 @@
   ],
   "selects": [
     {
-      "displayName": "day",
+      "displayName": "Day",
       "format": "0",
       "queryName": "dwh Dim_Tiempo.Dia",
       "roles": {
@@ -117,12 +117,12 @@
               "Entity": "dwh Dim_Tiempo"
             }
           },
-          "Property": "day"
+          "Property": "Day"
         }
       }
     },
     {
-      "displayName": "age",
+      "displayName": "Year",
       "format": "0",
       "queryName": "dwh Dim_Tiempo.Año",
       "roles": {
@@ -139,12 +139,12 @@
               "Entity": "dwh Dim_Tiempo"
             }
           },
-          "Property": "year"
+          "Property": "Year"
         }
       }
     },
     {
-      "displayName": "month",
+      "displayName": "Month",
       "format": "0",
       "queryName": "dwh Dim_Tiempo.Mes",
       "roles": {
@@ -161,12 +161,12 @@
               "Entity": "dwh Dim_Tiempo"
             }
           },
-          "Property": "month"
+          "Property": "Month"
         }
       }
     },
     {
-      "displayName": "week",
+      "displayName": "Week",
       "format": "0",
       "queryName": "dwh Dim_Tiempo.Semana",
       "roles": {
@@ -183,7 +183,7 @@
               "Entity": "dwh Dim_Tiempo"
             }
           },
-          "Property": "week"
+          "Property": "Week"
         }
       }
     },

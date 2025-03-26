@@ -77,30 +77,30 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "EstadoCupon",
+        "Restatement": "Status",
         "Name": "dwh Fact_Cupon.EstadoCupon",
         "Type": 2048
       },
       {
-        "Restatement": "TotalCuponesEnProceso",
+        "Restatement": "In process",
         "Name": "dwh Fact_Cupon.TotalCuponesEnProceso",
         "Type": 3,
         "Format": "0"
       },
       {
-        "Restatement": "TotalCuponesActivos",
+        "Restatement": "Assets",
         "Name": "dwh Fact_Cupon.TotalCuponesActivos",
         "Type": 3,
         "Format": "0"
       },
       {
-        "Restatement": "TotalCuponesVencidos",
+        "Restatement": "Expired",
         "Name": "dwh Fact_Cupon.TotalCuponesVencidos",
         "Type": 3,
         "Format": "0"
       },
       {
-        "Restatement": "RangoEdad",
+        "Restatement": "Age",
         "Name": "dwh Dim_RangoEdad.RangoEdad",
         "Type": 2048
       }
@@ -154,7 +154,7 @@
   ],
   "selects": [
     {
-      "displayName": "EstadoCupon",
+      "displayName": "Status",
       "queryName": "dwh Fact_Cupon.EstadoCupon",
       "roles": {
         "Category": true
@@ -175,7 +175,7 @@
       }
     },
     {
-      "displayName": "TotalCuponesEnProceso",
+      "displayName": "In process",
       "format": "0",
       "queryName": "dwh Fact_Cupon.TotalCuponesEnProceso",
       "roles": {
@@ -199,7 +199,7 @@
       }
     },
     {
-      "displayName": "TotalCuponesActivos",
+      "displayName": "Assets",
       "format": "0",
       "queryName": "dwh Fact_Cupon.TotalCuponesActivos",
       "roles": {
@@ -221,7 +221,7 @@
       }
     },
     {
-      "displayName": "TotalCuponesVencidos",
+      "displayName": "Expired",
       "format": "0",
       "queryName": "dwh Fact_Cupon.TotalCuponesVencidos",
       "roles": {
@@ -243,7 +243,7 @@
       }
     },
     {
-      "displayName": "RangoEdad",
+      "displayName": "Age",
       "queryName": "dwh Dim_RangoEdad.RangoEdad",
       "roles": {
         "Category": true

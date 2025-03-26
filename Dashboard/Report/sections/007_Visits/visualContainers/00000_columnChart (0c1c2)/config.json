@@ -4,10 +4,10 @@
     {
       "id": 0,
       "position": {
-        "height": 235.85380827282626,
-        "width": 259.39060453592305,
-        "x": 7.781718136077691,
-        "y": 8.5376944171159082,
+        "height": 215.82616263520606,
+        "width": 247.33811179991048,
+        "x": 7.4201433539973136,
+        "y": 7.8127117696002433,
         "z": 10000,
         "tabOrder": 0
       }
@@ -23,11 +23,11 @@
       ],
       "Category": [
         {
-          "queryRef": "dwh Dim_Tiempo.Dia",
-          "active": true
+          "queryRef": "dwh Dim_Tiempo.Dia"
         },
         {
-          "queryRef": "dwh Dim_Tiempo.Semana"
+          "queryRef": "dwh Dim_Tiempo.Semana",
+          "active": true
         },
         {
           "queryRef": "dwh Dim_Tiempo.Mes"
@@ -71,10 +71,10 @@
                 "Source": "d1"
               }
             },
-            "Property": "day"
+            "Property": "Day"
           },
           "Name": "dwh Dim_Tiempo.Dia",
-          "NativeReferenceName": "day"
+          "NativeReferenceName": "Day"
         },
         {
           "Column": {
@@ -83,10 +83,10 @@
                 "Source": "d1"
               }
             },
-            "Property": "week"
+            "Property": "Week"
           },
           "Name": "dwh Dim_Tiempo.Semana",
-          "NativeReferenceName": "week"
+          "NativeReferenceName": "Week"
         },
         {
           "Column": {
@@ -95,10 +95,10 @@
                 "Source": "d1"
               }
             },
-            "Property": "month"
+            "Property": "Month"
           },
           "Name": "dwh Dim_Tiempo.Mes",
-          "NativeReferenceName": "month"
+          "NativeReferenceName": "Month"
         },
         {
           "Column": {
@@ -107,10 +107,10 @@
                 "Source": "d1"
               }
             },
-            "Property": "year"
+            "Property": "Year"
           },
           "Name": "dwh Dim_Tiempo.Año",
-          "NativeReferenceName": "year"
+          "NativeReferenceName": "Year"
         }
       ],
       "OrderBy": [
@@ -134,16 +134,16 @@
         "displayName": "Frequency"
       },
       "dwh Dim_Tiempo.Dia": {
-        "displayName": "day"
+        "displayName": "Day"
       },
       "dwh Dim_Tiempo.Semana": {
-        "displayName": "week"
+        "displayName": "Week"
       },
       "dwh Dim_Tiempo.Mes": {
-        "displayName": "month"
+        "displayName": "Month"
       },
       "dwh Dim_Tiempo.Año": {
-        "displayName": "year"
+        "displayName": "Year"
       }
     },
     "queryOptions": {

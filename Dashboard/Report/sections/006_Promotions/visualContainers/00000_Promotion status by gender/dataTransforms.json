@@ -70,6 +70,47 @@
         "Name": "dwh Dim_Afiliado.GeneroFiltrado",
         "Type": 2048
       }
+    ],
+    "Filters": [
+      {
+        "type": 2,
+        "expression": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Fact_Promociones"
+              }
+            },
+            "Property": "TotalPromocionesActivas"
+          }
+        }
+      },
+      {
+        "type": 2,
+        "expression": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Fact_Promociones"
+              }
+            },
+            "Property": "TotalPromocionesVencidas"
+          }
+        }
+      },
+      {
+        "type": 0,
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "GeneroFiltrado"
+          }
+        }
+      }
     ]
   },
   "visualElements": [

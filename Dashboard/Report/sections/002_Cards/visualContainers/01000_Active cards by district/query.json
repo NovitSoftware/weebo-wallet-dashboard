@@ -32,7 +32,7 @@
                 "Property": "Distrito"
               },
               "Name": "dwh Dim_Afiliado.Distrito",
-              "NativeReferenceName": "Distrito"
+              "NativeReferenceName": "District"
             },
             {
               "Aggregation": {

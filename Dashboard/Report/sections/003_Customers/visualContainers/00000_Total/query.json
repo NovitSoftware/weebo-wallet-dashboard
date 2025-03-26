@@ -24,9 +24,9 @@
                     "Source": "d"
                   }
                 },
-                "Property": "TotalClientesActivos"
+                "Property": "TotalClientesEnRiesgo"
               },
-              "Name": "dwh Fact_AfiliacionEmpresa.TotalClientesActivos",
+              "Name": "dwh Fact_AfiliacionEmpresa.TotalClientesEnRiesgo",
               "NativeReferenceName": "Total"
             }
           ],

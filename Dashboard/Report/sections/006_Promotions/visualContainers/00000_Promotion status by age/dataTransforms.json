@@ -156,6 +156,47 @@
         "Type": 1,
         "Format": "0"
       }
+    ],
+    "Filters": [
+      {
+        "type": 0,
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_RangoEdad"
+              }
+            },
+            "Property": "RangoEdad"
+          }
+        }
+      },
+      {
+        "type": 2,
+        "expression": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Fact_Promociones"
+              }
+            },
+            "Property": "TotalPromocionesVencidas"
+          }
+        }
+      },
+      {
+        "type": 2,
+        "expression": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Fact_Promociones"
+              }
+            },
+            "Property": "TotalPromocionesActivas"
+          }
+        }
+      }
     ]
   },
   "visualElements": [

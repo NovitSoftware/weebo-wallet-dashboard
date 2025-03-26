@@ -44,7 +44,7 @@
                 "Function": 0
               },
               "Name": "Sum(CuponesPorGenero.TotalCuponesActivos)",
-              "NativeReferenceName": "Sum of TotalCuponesActivos"
+              "NativeReferenceName": "Assets"
             },
             {
               "Aggregation": {
@@ -61,7 +61,7 @@
                 "Function": 0
               },
               "Name": "Sum(CuponesPorGenero.TotalCuponesVencidos)",
-              "NativeReferenceName": "Sum of TotalCuponesVencidos"
+              "NativeReferenceName": "Expired"
             }
           ],
           "Where": [

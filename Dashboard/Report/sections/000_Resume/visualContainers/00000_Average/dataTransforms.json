@@ -35,8 +35,8 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "PromedioTarjetasActivadasPorDia",
-        "Name": "dwh Dim_Tarjeta.PromedioTarjetasActivadasPorDia",
+        "Restatement": "PromedioSaldoTarjetas",
+        "Name": "dwh Fact_Planes.PromedioSaldoTarjetas",
         "Type": 1
       }
     ]
@@ -54,8 +54,8 @@
   ],
   "selects": [
     {
-      "displayName": "PromedioTarjetasActivadasPorDia",
-      "queryName": "dwh Dim_Tarjeta.PromedioTarjetasActivadasPorDia",
+      "displayName": "PromedioSaldoTarjetas",
+      "queryName": "dwh Fact_Planes.PromedioSaldoTarjetas",
       "roles": {
         "Values": true
       },
@@ -67,10 +67,10 @@
         "Measure": {
           "Expression": {
             "SourceRef": {
-              "Entity": "dwh Dim_Tarjeta"
+              "Entity": "dwh Fact_Planes"
             }
           },
-          "Property": "PromedioTarjetasActivadasPorDia"
+          "Property": "PromedioSaldoTarjetas"
         }
       }
     }

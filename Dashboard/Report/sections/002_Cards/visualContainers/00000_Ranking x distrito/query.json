@@ -27,7 +27,7 @@
                 "Property": "Distrito"
               },
               "Name": "Top3TarjetasActivasPorDistrito.Distrito",
-              "NativeReferenceName": "Distrito"
+              "NativeReferenceName": "District"
             },
             {
               "Aggregation": {

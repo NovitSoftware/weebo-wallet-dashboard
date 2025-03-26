@@ -53,12 +53,12 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "RangoEdad",
+        "Restatement": "Age",
         "Name": "dwh Dim_RangoEdad.RangoEdad",
         "Type": 2048
       },
       {
-        "Restatement": "Count of cards",
+        "Restatement": "Cards",
         "Name": "CountNonNull(dwh Fact_Cupon.KeyTarjeta)",
         "Type": 3
       }
@@ -97,7 +97,7 @@
   ],
   "selects": [
     {
-      "displayName": "RangoEdad",
+      "displayName": "Age",
       "queryName": "dwh Dim_RangoEdad.RangoEdad",
       "roles": {
         "Category": true
@@ -118,7 +118,7 @@
       }
     },
     {
-      "displayName": "Count of cards",
+      "displayName": "Cards",
       "queryName": "CountNonNull(dwh Fact_Cupon.KeyTarjeta)",
       "roles": {
         "Y": true

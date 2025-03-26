@@ -4,12 +4,11 @@
     {
       "id": 0,
       "position": {
-        "height": 233.66348740523352,
-        "width": 301.6505645099582,
-        "x": 9.6526597566456651,
-        "y": 7.1358065734174092,
-        "z": 17002,
-        "tabOrder": 0
+        "height": 214.85980404176453,
+        "width": 293.67679091006494,
+        "x": 9.3975031861239735,
+        "y": 6.561564320853579,
+        "z": 17002
       }
     }
   ],
@@ -59,10 +58,10 @@
                 "Source": "d1"
               }
             },
-            "Property": "day"
+            "Property": "Day"
           },
           "Name": "dwh Dim_Tiempo.Dia",
-          "NativeReferenceName": "day"
+          "NativeReferenceName": "Day"
         },
         {
           "Column": {
@@ -71,10 +70,10 @@
                 "Source": "d1"
               }
             },
-            "Property": "year"
+            "Property": "Year"
           },
           "Name": "dwh Dim_Tiempo.Año",
-          "NativeReferenceName": "age"
+          "NativeReferenceName": "Year"
         },
         {
           "Column": {
@@ -83,10 +82,10 @@
                 "Source": "d1"
               }
             },
-            "Property": "month"
+            "Property": "Month"
           },
           "Name": "dwh Dim_Tiempo.Mes",
-          "NativeReferenceName": "month"
+          "NativeReferenceName": "Month"
         },
         {
           "Column": {
@@ -95,10 +94,10 @@
                 "Source": "d1"
               }
             },
-            "Property": "week"
+            "Property": "Week"
           },
           "Name": "dwh Dim_Tiempo.Semana",
-          "NativeReferenceName": "week"
+          "NativeReferenceName": "Week"
         },
         {
           "Measure": {
@@ -134,16 +133,16 @@
         "displayName": "Active promotions"
       },
       "dwh Dim_Tiempo.Dia": {
-        "displayName": "day"
+        "displayName": "Day"
       },
       "dwh Dim_Tiempo.Semana": {
-        "displayName": "week"
+        "displayName": "Week"
       },
       "dwh Dim_Tiempo.Mes": {
-        "displayName": "month"
+        "displayName": "Month"
       },
       "dwh Dim_Tiempo.Año": {
-        "displayName": "age"
+        "displayName": "Year"
       }
     },
     "drillFilterOtherVisuals": true,

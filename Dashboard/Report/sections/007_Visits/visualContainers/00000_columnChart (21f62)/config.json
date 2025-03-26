@@ -4,10 +4,10 @@
     {
       "id": 0,
       "position": {
-        "height": 231.55216284987276,
-        "width": 254.89788628492454,
-        "x": 8.6406063147431578,
-        "y": 10.178117048346023,
+        "height": 211.9988690981057,
+        "width": 245.75224453164603,
+        "x": 8.330584560394735,
+        "y": 9.3186316087079124,
         "z": 11000,
         "tabOrder": 0
       }
@@ -88,7 +88,7 @@
                 "Source": "d"
               }
             },
-            "Property": "day"
+            "Property": "Day"
           },
           "Name": "dwh Dim_Tiempo.day",
           "NativeReferenceName": "day"
@@ -100,7 +100,7 @@
                 "Source": "d"
               }
             },
-            "Property": "week"
+            "Property": "Week"
           },
           "Name": "dwh Dim_Tiempo.week",
           "NativeReferenceName": "week"
@@ -112,7 +112,7 @@
                 "Source": "d"
               }
             },
-            "Property": "month"
+            "Property": "Month"
           },
           "Name": "dwh Dim_Tiempo.month",
           "NativeReferenceName": "month"
@@ -124,7 +124,7 @@
                 "Source": "d"
               }
             },
-            "Property": "year"
+            "Property": "Year"
           },
           "Name": "dwh Dim_Tiempo.year",
           "NativeReferenceName": "year"
@@ -156,7 +156,21 @@
     },
     "drillFilterOtherVisuals": true,
     "hasDefaultSort": true,
-    "objects": {},
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "vcObjects": {
       "title": [
         {

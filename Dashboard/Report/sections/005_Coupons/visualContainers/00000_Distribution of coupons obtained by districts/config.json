@@ -5,8 +5,8 @@
       "id": 0,
       "position": {
         "height": 173.49724264705893,
-        "width": 385.57228915662654,
-        "x": 15.300487664945454,
+        "width": 370.9415788152611,
+        "x": 14.719903921240478,
         "y": 13.02074822984744,
         "z": 8000,
         "tabOrder": 0
@@ -56,7 +56,7 @@
             "Function": 0
           },
           "Name": "Sum(CuponesPorDistrito.TotalStickersActivos)",
-          "NativeReferenceName": "Sum of TotalStickersActivos"
+          "NativeReferenceName": "Assets"
         },
         {
           "Aggregation": {
@@ -73,7 +73,7 @@
             "Function": 0
           },
           "Name": "Sum(CuponesPorDistrito.TotalStickersVencidos)",
-          "NativeReferenceName": "Sum of TotalStickersVencidos"
+          "NativeReferenceName": "Expired"
         },
         {
           "Column": {
@@ -108,6 +108,14 @@
           }
         }
       ]
+    },
+    "columnProperties": {
+      "Sum(CuponesPorDistrito.TotalStickersActivos)": {
+        "displayName": "Assets"
+      },
+      "Sum(CuponesPorDistrito.TotalStickersVencidos)": {
+        "displayName": "Expired"
+      }
     },
     "drillFilterOtherVisuals": true,
     "hasDefaultSort": true,

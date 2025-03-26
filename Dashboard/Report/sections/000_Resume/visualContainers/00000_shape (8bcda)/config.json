@@ -4,12 +4,11 @@
     {
       "id": 0,
       "position": {
-        "height": 150.9223090277778,
-        "width": 630.82663014570971,
+        "height": 151.66666666666669,
+        "width": 620.33693370860419,
         "x": 0,
         "y": 0,
-        "z": 0,
-        "tabOrder": 0
+        "z": 0
       }
     }
   ],
@@ -115,7 +114,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -153,7 +152,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Sticker delivered'"
+                  "Value": "'Stamps delivered'"
                 }
               }
             },

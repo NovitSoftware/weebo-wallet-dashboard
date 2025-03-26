@@ -32,7 +32,7 @@
                 "Property": "FrecuenciaPromedioRangoEdades"
               },
               "Name": "dwh Dim_Afiliado.FrecuenciaPromediorangoedades",
-              "NativeReferenceName": "FrecuenciaPromedioRangoEdades"
+              "NativeReferenceName": "Average"
             },
             {
               "Column": {
@@ -44,7 +44,7 @@
                 "Property": "RangoEdad"
               },
               "Name": "dwh Dim_RangoEdad.RangoEdad",
-              "NativeReferenceName": "RangoEdad"
+              "NativeReferenceName": "Age"
             }
           ],
           "Where": [

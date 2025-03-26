@@ -5,8 +5,8 @@
       "id": 0,
       "position": {
         "height": 226.93795384283555,
-        "width": 229.86577181208051,
-        "x": 11.74496644295302,
+        "width": 220.84565977994063,
+        "x": 11.28408480627434,
         "y": 11.595369904378515,
         "z": 8000,
         "tabOrder": 0
@@ -45,7 +45,7 @@
             "Property": "Distrito"
           },
           "Name": "Top3TarjetasActivasPorDistrito.Distrito",
-          "NativeReferenceName": "Distrito"
+          "NativeReferenceName": "District"
         },
         {
           "Aggregation": {
@@ -85,6 +85,11 @@
           }
         }
       ]
+    },
+    "columnProperties": {
+      "Top3TarjetasActivasPorDistrito.Distrito": {
+        "displayName": "District"
+      }
     },
     "drillFilterOtherVisuals": true,
     "objects": {

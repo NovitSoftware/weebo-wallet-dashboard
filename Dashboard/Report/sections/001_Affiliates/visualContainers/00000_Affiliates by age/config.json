@@ -4,12 +4,11 @@
     {
       "id": 0,
       "position": {
-        "height": 192.79290534701786,
-        "width": 436.75716224322787,
-        "x": 9.9640417241801025,
-        "y": 13.347201139408929,
-        "z": 3000,
-        "tabOrder": 0
+        "height": 183.73098906771858,
+        "width": 435.96162735217746,
+        "x": 9.9458926392131737,
+        "y": 12.71983770468821,
+        "z": 3000
       }
     }
   ],
@@ -54,7 +53,7 @@
             "Property": "AfiliadosActivosPorcentaje"
           },
           "Name": "dwh Dim_Afiliado.AfiliadosActivosPorcentaje",
-          "NativeReferenceName": "AfiliadosActivosPorcentaje"
+          "NativeReferenceName": "Assets"
         },
         {
           "Measure": {
@@ -66,7 +65,7 @@
             "Property": "AfiliadosEnRiesgoPorcentaje"
           },
           "Name": "dwh Dim_Afiliado.AfiliadosEnRiesgoPorcentaje",
-          "NativeReferenceName": "AfiliadosEnRiesgoPorcentaje"
+          "NativeReferenceName": "At risk"
         },
         {
           "Measure": {
@@ -78,7 +77,7 @@
             "Property": "AfiliadosPerdidosPorcentaje"
           },
           "Name": "dwh Dim_Afiliado.AfiliadosPerdidosPorcentaje",
-          "NativeReferenceName": "AfiliadosPerdidosPorcentaje"
+          "NativeReferenceName": "Lost"
         },
         {
           "Column": {
@@ -90,7 +89,7 @@
             "Property": "RangoEdad"
           },
           "Name": "dwh Dim_Afiliado.RangoEdad",
-          "NativeReferenceName": "age"
+          "NativeReferenceName": "Age"
         }
       ],
       "OrderBy": [
@@ -111,22 +110,22 @@
     },
     "columnProperties": {
       "dwh Dim_Afiliado.AfiliadosActivosPorcentaje": {
-        "displayName": "Activos",
+        "displayName": "Assets",
         "formatString": "0.00 %;-0.00 %;0.00 %"
       },
       "dwh Dim_Afiliado.AfiliadosEnRiesgoPorcentaje": {
-        "displayName": "En Riesgo",
+        "displayName": "At risk",
         "formatString": "0.00 %;-0.00 %;0.00 %"
       },
       "dwh Dim_Afiliado.AfiliadosPerdidosPorcentaje": {
-        "displayName": "Perdidos",
+        "displayName": "Lost",
         "formatString": "0.00 %;-0.00 %;0.00 %"
       },
       "dwh Dim_Afiliado.GeneroFiltrado": {
         "displayName": "Genero"
       },
       "dwh Dim_Afiliado.RangoEdad": {
-        "displayName": "age"
+        "displayName": "Age"
       }
     },
     "drillFilterOtherVisuals": true,

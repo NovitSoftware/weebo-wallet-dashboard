@@ -54,12 +54,12 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Sum of TotalStickersActivos",
+        "Restatement": "Assets",
         "Name": "Sum(CuponesPorDistrito.TotalStickersActivos)",
         "Type": 1
       },
       {
-        "Restatement": "Sum of TotalStickersVencidos",
+        "Restatement": "Expired",
         "Name": "Sum(CuponesPorDistrito.TotalStickersVencidos)",
         "Type": 1
       },
@@ -93,7 +93,7 @@
   ],
   "selects": [
     {
-      "displayName": "Sum of TotalStickersActivos",
+      "displayName": "Assets",
       "queryName": "Sum(CuponesPorDistrito.TotalStickersActivos)",
       "roles": {
         "Y": true
@@ -121,7 +121,7 @@
       }
     },
     {
-      "displayName": "Sum of TotalStickersVencidos",
+      "displayName": "Expired",
       "queryName": "Sum(CuponesPorDistrito.TotalStickersVencidos)",
       "roles": {
         "Y": true

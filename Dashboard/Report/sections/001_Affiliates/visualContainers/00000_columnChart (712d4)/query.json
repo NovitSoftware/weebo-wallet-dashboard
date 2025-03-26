@@ -11,6 +11,11 @@
               "Type": 0
             },
             {
+              "Name": "d1",
+              "Entity": "dwh Dim_Tiempo",
+              "Type": 0
+            },
+            {
               "Name": "c",
               "Entity": "CalendarioGeneral",
               "Type": 0
@@ -27,7 +32,7 @@
                 "Property": "AfiliadosActivos"
               },
               "Name": "dwh Dim_Afiliado.AfiliadosActivos",
-              "NativeReferenceName": "active"
+              "NativeReferenceName": "Active"
             },
             {
               "Measure": {
@@ -39,7 +44,7 @@
                 "Property": "AfiliadosEnRiesgo"
               },
               "Name": "dwh Dim_Afiliado.AfiliadosEnRiesgo",
-              "NativeReferenceName": "at risk"
+              "NativeReferenceName": "At risk"
             },
             {
               "Measure": {
@@ -51,99 +56,55 @@
                 "Property": "AfiliadosPerdidos"
               },
               "Name": "dwh Dim_Afiliado.AfiliadosPerdidos",
-              "NativeReferenceName": "lost"
+              "NativeReferenceName": "Lost"
             },
             {
-              "HierarchyLevel": {
+              "Column": {
                 "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "PropertyVariationSource": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "d"
-                          }
-                        },
-                        "Name": "Variation",
-                        "Property": "FechaRegistroWebo"
-                      }
-                    },
-                    "Hierarchy": "Date Hierarchy"
+                  "SourceRef": {
+                    "Source": "d1"
                   }
                 },
-                "Level": "Year"
+                "Property": "Day"
               },
-              "Name": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Year",
-              "NativeReferenceName": "FechaRegistroWebo Year"
+              "Name": "dwh Dim_Tiempo.Day",
+              "NativeReferenceName": "Day"
             },
             {
-              "HierarchyLevel": {
+              "Column": {
                 "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "PropertyVariationSource": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "d"
-                          }
-                        },
-                        "Name": "Variation",
-                        "Property": "FechaRegistroWebo"
-                      }
-                    },
-                    "Hierarchy": "Date Hierarchy"
+                  "SourceRef": {
+                    "Source": "d1"
                   }
                 },
-                "Level": "Quarter"
+                "Property": "Week"
               },
-              "Name": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Quarter",
-              "NativeReferenceName": "FechaRegistroWebo Quarter"
+              "Name": "dwh Dim_Tiempo.Week",
+              "NativeReferenceName": "Week"
             },
             {
-              "HierarchyLevel": {
+              "Column": {
                 "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "PropertyVariationSource": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "d"
-                          }
-                        },
-                        "Name": "Variation",
-                        "Property": "FechaRegistroWebo"
-                      }
-                    },
-                    "Hierarchy": "Date Hierarchy"
+                  "SourceRef": {
+                    "Source": "d1"
                   }
                 },
-                "Level": "Month"
+                "Property": "Month"
               },
-              "Name": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Month",
-              "NativeReferenceName": "FechaRegistroWebo Month"
+              "Name": "dwh Dim_Tiempo.Month",
+              "NativeReferenceName": "Month"
             },
             {
-              "HierarchyLevel": {
+              "Column": {
                 "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "PropertyVariationSource": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "d"
-                          }
-                        },
-                        "Name": "Variation",
-                        "Property": "FechaRegistroWebo"
-                      }
-                    },
-                    "Hierarchy": "Date Hierarchy"
+                  "SourceRef": {
+                    "Source": "d1"
                   }
                 },
-                "Level": "Day"
+                "Property": "Year"
               },
-              "Name": "dwh Dim_Afiliado.FechaRegistroWebo.Variation.Date Hierarchy.Day",
-              "NativeReferenceName": "FechaRegistroWebo Day"
+              "Name": "dwh Dim_Tiempo.Year",
+              "NativeReferenceName": "Year"
             }
           ],
           "Where": [

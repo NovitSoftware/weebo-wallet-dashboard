@@ -27,7 +27,7 @@
                 "Property": "TarjetasCompradas"
               },
               "Name": "dwh Fact_Planes.TarjetasCompradas",
-              "NativeReferenceName": "TarjetasCompradas"
+              "NativeReferenceName": "Cards purchased"
             }
           ],
           "Where": [

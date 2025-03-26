@@ -4,10 +4,10 @@
     {
       "id": 0,
       "position": {
-        "height": 230.90287487786304,
-        "width": 337.76044815637937,
-        "x": 7.7298411020864632,
-        "y": 9.8066858056236086,
+        "height": 213.58515926202332,
+        "width": 329.69594307399387,
+        "x": 7.5452802892557465,
+        "y": 9.0711843702018378,
         "z": 17004,
         "tabOrder": 0
       }
@@ -45,7 +45,7 @@
             "Property": "TotalPromocionesActivas"
           },
           "Name": "dwh Fact_Promociones.TotalPromocionesActivas",
-          "NativeReferenceName": "Active"
+          "NativeReferenceName": "Assets"
         },
         {
           "Measure": {
@@ -78,7 +78,7 @@
     },
     "columnProperties": {
       "dwh Fact_Promociones.TotalPromocionesActivas": {
-        "displayName": "Active"
+        "displayName": "Assets"
       },
       "dwh Fact_Promociones.TotalPromocionesVencidas": {
         "displayName": "Expired"

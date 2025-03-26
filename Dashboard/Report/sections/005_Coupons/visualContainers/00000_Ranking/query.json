@@ -27,7 +27,7 @@
                 "Property": "Distrito"
               },
               "Name": "Top3DistritosOtorgados.Distrito",
-              "NativeReferenceName": "Distrito"
+              "NativeReferenceName": "District"
             },
             {
               "Column": {

@@ -4,10 +4,10 @@
     {
       "id": 0,
       "position": {
-        "height": 231.25,
-        "width": 471.50728002552427,
-        "x": 17.918693087748345,
-        "y": 8.712973614206625,
+        "height": 208.27814569536423,
+        "width": 448.71688741721852,
+        "x": 17.052589704412643,
+        "y": 7.8474464339874235,
         "z": 18004,
         "tabOrder": 1000
       }
@@ -53,7 +53,7 @@
             "Property": "Distrito"
           },
           "Name": "dwh Dim_Afiliado.Distrito",
-          "NativeReferenceName": "Distrito"
+          "NativeReferenceName": "District"
         },
         {
           "Aggregation": {
@@ -97,6 +97,9 @@
     "columnProperties": {
       "Count(dwh Fact_Cupon.KeyTarjeta)": {
         "displayName": "Cards"
+      },
+      "dwh Dim_Afiliado.Distrito": {
+        "displayName": "District"
       }
     },
     "drillFilterOtherVisuals": true,
