@@ -4,12 +4,11 @@
     {
       "id": 0,
       "position": {
-        "height": 159.47819244604315,
-        "width": 150,
+        "height": 140.34172661870502,
+        "width": 143.0542221921481,
         "x": 0,
         "y": 0,
-        "z": 1000,
-        "tabOrder": 0
+        "z": 1000
       }
     }
   ],
@@ -115,7 +114,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }

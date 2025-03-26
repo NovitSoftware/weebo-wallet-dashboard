@@ -4,10 +4,10 @@
     {
       "id": 0,
       "position": {
-        "height": 227.12790532311388,
-        "width": 483.37422716049446,
-        "x": 12.93292301357144,
-        "y": 10.350704829369828,
+        "height": 226.64647829846427,
+        "width": 475.36652375792261,
+        "x": 12.718672840927068,
+        "y": 10.328765169326996,
         "z": 18004,
         "tabOrder": 1000
       }
@@ -53,7 +53,7 @@
             "Property": "RangoEdad"
           },
           "Name": "dwh Dim_RangoEdad.RangoEdad",
-          "NativeReferenceName": "RangoEdad"
+          "NativeReferenceName": "Age"
         },
         {
           "Aggregation": {
@@ -70,7 +70,7 @@
             "Function": 2
           },
           "Name": "CountNonNull(dwh Fact_Cupon.KeyTarjeta)",
-          "NativeReferenceName": "Count of cards"
+          "NativeReferenceName": "Cards"
         }
       ],
       "OrderBy": [
@@ -96,7 +96,10 @@
     },
     "columnProperties": {
       "CountNonNull(dwh Fact_Cupon.KeyTarjeta)": {
-        "displayName": "Count of cards"
+        "displayName": "Cards"
+      },
+      "dwh Dim_RangoEdad.RangoEdad": {
+        "displayName": "Age"
       }
     },
     "drillFilterOtherVisuals": true,

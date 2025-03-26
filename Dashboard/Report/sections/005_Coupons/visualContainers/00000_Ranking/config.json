@@ -4,10 +4,10 @@
     {
       "id": 0,
       "position": {
-        "height": 173.03605912061803,
-        "width": 393.15110719704757,
-        "x": 15.784760468320277,
-        "y": 14.491792929292904,
+        "height": 162.2213054255794,
+        "width": 374.92403121784173,
+        "x": 15.052955258814817,
+        "y": 13.586055871212098,
         "z": 9000,
         "tabOrder": 0
       }
@@ -45,7 +45,7 @@
             "Property": "Distrito"
           },
           "Name": "Top3DistritosOtorgados.Distrito",
-          "NativeReferenceName": "Distrito"
+          "NativeReferenceName": "District"
         },
         {
           "Column": {
@@ -75,6 +75,11 @@
           }
         }
       ]
+    },
+    "columnProperties": {
+      "Top3DistritosOtorgados.Distrito": {
+        "displayName": "District"
+      }
     },
     "drillFilterOtherVisuals": true,
     "objects": {

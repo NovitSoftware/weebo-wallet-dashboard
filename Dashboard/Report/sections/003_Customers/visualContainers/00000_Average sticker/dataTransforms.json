@@ -68,7 +68,7 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Promedio de Stickers",
+        "Restatement": "Average stamps",
         "Name": "dwh Fact_Planes.PromedioStickers",
         "Type": 1
       }
@@ -87,7 +87,7 @@
   ],
   "selects": [
     {
-      "displayName": "Promedio de Stickers",
+      "displayName": "Average stamps",
       "queryName": "dwh Fact_Planes.PromedioStickers",
       "roles": {
         "Y": true

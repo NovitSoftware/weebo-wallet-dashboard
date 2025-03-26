@@ -4,10 +4,10 @@
     {
       "id": 0,
       "position": {
-        "height": 226.11587079516354,
-        "width": 330.45140629208794,
-        "x": 10.148694874888099,
-        "y": 12.93364941431906,
+        "height": 207.91956941704723,
+        "width": 311.56846878968287,
+        "x": 9.56876945346592,
+        "y": 11.892835331547115,
         "z": 16000,
         "tabOrder": 0
       }
@@ -56,7 +56,7 @@
             "Property": "Distrito"
           },
           "Name": "dwh Dim_Afiliado.Distrito",
-          "NativeReferenceName": "Distrito"
+          "NativeReferenceName": "District"
         },
         {
           "Measure": {
@@ -68,7 +68,7 @@
             "Property": "TotalPromocionesActivas"
           },
           "Name": "dwh Fact_Promociones.TotalPromocionesActivas",
-          "NativeReferenceName": "Activas"
+          "NativeReferenceName": "Active"
         },
         {
           "Measure": {
@@ -80,7 +80,7 @@
             "Property": "TotalPromocionesVencidas"
           },
           "Name": "dwh Fact_Promociones.TotalPromocionesVencidas",
-          "NativeReferenceName": "Vencidas"
+          "NativeReferenceName": "Expired"
         }
       ],
       "OrderBy": [
@@ -101,10 +101,13 @@
     },
     "columnProperties": {
       "dwh Fact_Promociones.TotalPromocionesActivas": {
-        "displayName": "Activas"
+        "displayName": "Active"
       },
       "dwh Fact_Promociones.TotalPromocionesVencidas": {
-        "displayName": "Vencidas"
+        "displayName": "Expired"
+      },
+      "dwh Dim_Afiliado.Distrito": {
+        "displayName": "District"
       }
     },
     "drillFilterOtherVisuals": true,

@@ -29,10 +29,10 @@
                     "Source": "d1"
                   }
                 },
-                "Property": "day"
+                "Property": "Day"
               },
               "Name": "dwh Dim_Tiempo.Dia",
-              "NativeReferenceName": "day"
+              "NativeReferenceName": "Day"
             },
             {
               "Column": {
@@ -41,10 +41,10 @@
                     "Source": "d1"
                   }
                 },
-                "Property": "year"
+                "Property": "Year"
               },
               "Name": "dwh Dim_Tiempo.Año",
-              "NativeReferenceName": "age"
+              "NativeReferenceName": "Year"
             },
             {
               "Column": {
@@ -53,10 +53,10 @@
                     "Source": "d1"
                   }
                 },
-                "Property": "month"
+                "Property": "Month"
               },
               "Name": "dwh Dim_Tiempo.Mes",
-              "NativeReferenceName": "month"
+              "NativeReferenceName": "Month"
             },
             {
               "Column": {
@@ -65,10 +65,10 @@
                     "Source": "d1"
                   }
                 },
-                "Property": "week"
+                "Property": "Week"
               },
               "Name": "dwh Dim_Tiempo.Semana",
-              "NativeReferenceName": "week"
+              "NativeReferenceName": "Week"
             },
             {
               "Measure": {

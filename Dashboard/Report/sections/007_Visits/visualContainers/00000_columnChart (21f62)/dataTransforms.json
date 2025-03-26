@@ -1,5 +1,19 @@
 {
-  "objects": {},
+  "objects": {
+    "legend": [
+      {
+        "properties": {
+          "showTitle": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
   "projectionOrdering": {
     "Y": [
       0
@@ -35,25 +49,25 @@
         "Type": 2048
       },
       {
-        "Restatement": "day",
+        "Restatement": "Day",
         "Name": "dwh Dim_Tiempo.day",
         "Type": 3,
         "Format": "0"
       },
       {
-        "Restatement": "week",
+        "Restatement": "Week",
         "Name": "dwh Dim_Tiempo.week",
         "Type": 3,
         "Format": "0"
       },
       {
-        "Restatement": "month",
+        "Restatement": "Month",
         "Name": "dwh Dim_Tiempo.month",
         "Type": 3,
         "Format": "0"
       },
       {
-        "Restatement": "year",
+        "Restatement": "Year",
         "Name": "dwh Dim_Tiempo.year",
         "Type": 3,
         "Format": "0"
@@ -140,7 +154,7 @@
       }
     },
     {
-      "displayName": "day",
+      "displayName": "Day",
       "format": "0",
       "queryName": "dwh Dim_Tiempo.day",
       "roles": {
@@ -157,12 +171,12 @@
               "Entity": "dwh Dim_Tiempo"
             }
           },
-          "Property": "day"
+          "Property": "Day"
         }
       }
     },
     {
-      "displayName": "week",
+      "displayName": "Week",
       "format": "0",
       "queryName": "dwh Dim_Tiempo.week",
       "roles": {
@@ -179,12 +193,12 @@
               "Entity": "dwh Dim_Tiempo"
             }
           },
-          "Property": "week"
+          "Property": "Week"
         }
       }
     },
     {
-      "displayName": "month",
+      "displayName": "Month",
       "format": "0",
       "queryName": "dwh Dim_Tiempo.month",
       "roles": {
@@ -201,12 +215,12 @@
               "Entity": "dwh Dim_Tiempo"
             }
           },
-          "Property": "month"
+          "Property": "Month"
         }
       }
     },
     {
-      "displayName": "year",
+      "displayName": "Year",
       "format": "0",
       "queryName": "dwh Dim_Tiempo.year",
       "roles": {
@@ -223,7 +237,7 @@
               "Entity": "dwh Dim_Tiempo"
             }
           },
-          "Property": "year"
+          "Property": "Year"
         }
       }
     }

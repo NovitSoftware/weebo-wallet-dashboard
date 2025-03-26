@@ -4,12 +4,11 @@
     {
       "id": 0,
       "position": {
-        "height": 221.04263907286338,
-        "width": 258.10264545377805,
-        "x": 8.622798590610449,
-        "y": 16.873483898691738,
-        "z": 3000,
-        "tabOrder": 0
+        "height": 216.65106346214426,
+        "width": 244.10912853158524,
+        "x": 8.1552974622038565,
+        "y": 16.538249119247535,
+        "z": 3000
       }
     }
   ],
@@ -53,7 +52,7 @@
             "Property": "FrecuenciaPromedioRangoEdades"
           },
           "Name": "dwh Dim_Afiliado.FrecuenciaPromediorangoedades",
-          "NativeReferenceName": "FrecuenciaPromedioRangoEdades"
+          "NativeReferenceName": "Average"
         },
         {
           "Column": {
@@ -65,7 +64,7 @@
             "Property": "RangoEdad"
           },
           "Name": "dwh Dim_RangoEdad.RangoEdad",
-          "NativeReferenceName": "RangoEdad"
+          "NativeReferenceName": "Age"
         }
       ],
       "OrderBy": [
@@ -86,7 +85,11 @@
     },
     "columnProperties": {
       "dwh Dim_Afiliado.FrecuenciaPromediorangoedades": {
-        "formatString": "G"
+        "formatString": "G",
+        "displayName": "Average"
+      },
+      "dwh Dim_RangoEdad.RangoEdad": {
+        "displayName": "Age"
       }
     },
     "drillFilterOtherVisuals": true,

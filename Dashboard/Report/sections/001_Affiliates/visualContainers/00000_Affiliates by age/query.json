@@ -27,7 +27,7 @@
                 "Property": "AfiliadosActivosPorcentaje"
               },
               "Name": "dwh Dim_Afiliado.AfiliadosActivosPorcentaje",
-              "NativeReferenceName": "AfiliadosActivosPorcentaje"
+              "NativeReferenceName": "Assets"
             },
             {
               "Measure": {
@@ -39,7 +39,7 @@
                 "Property": "AfiliadosEnRiesgoPorcentaje"
               },
               "Name": "dwh Dim_Afiliado.AfiliadosEnRiesgoPorcentaje",
-              "NativeReferenceName": "AfiliadosEnRiesgoPorcentaje"
+              "NativeReferenceName": "At risk"
             },
             {
               "Measure": {
@@ -51,7 +51,7 @@
                 "Property": "AfiliadosPerdidosPorcentaje"
               },
               "Name": "dwh Dim_Afiliado.AfiliadosPerdidosPorcentaje",
-              "NativeReferenceName": "AfiliadosPerdidosPorcentaje"
+              "NativeReferenceName": "Lost"
             },
             {
               "Column": {
@@ -63,7 +63,7 @@
                 "Property": "RangoEdad"
               },
               "Name": "dwh Dim_Afiliado.RangoEdad",
-              "NativeReferenceName": "age"
+              "NativeReferenceName": "Age"
             }
           ],
           "Where": [

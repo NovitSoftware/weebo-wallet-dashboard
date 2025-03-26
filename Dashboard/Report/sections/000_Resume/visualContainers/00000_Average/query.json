@@ -7,7 +7,7 @@
           "From": [
             {
               "Name": "d",
-              "Entity": "dwh Dim_Tarjeta",
+              "Entity": "dwh Fact_Planes",
               "Type": 0
             },
             {
@@ -24,10 +24,10 @@
                     "Source": "d"
                   }
                 },
-                "Property": "PromedioTarjetasActivadasPorDia"
+                "Property": "PromedioSaldoTarjetas"
               },
-              "Name": "dwh Dim_Tarjeta.PromedioTarjetasActivadasPorDia",
-              "NativeReferenceName": "PromedioTarjetasActivadasPorDia"
+              "Name": "dwh Fact_Planes.PromedioSaldoTarjetas",
+              "NativeReferenceName": "PromedioSaldoTarjetas"
             }
           ],
           "Where": [

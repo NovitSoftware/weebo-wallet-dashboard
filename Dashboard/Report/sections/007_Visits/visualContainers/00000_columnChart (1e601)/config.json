@@ -4,12 +4,11 @@
     {
       "id": 0,
       "position": {
-        "height": 223.24428910669246,
-        "width": 270.54920906465355,
-        "x": 7.6063217536718088,
-        "y": 14.25074714267169,
-        "z": 2000,
-        "tabOrder": 0
+        "height": 204.39254913768286,
+        "width": 262.06139074105658,
+        "x": 7.3676920515958315,
+        "y": 13.047350717290524,
+        "z": 2000
       }
     }
   ],
@@ -76,7 +75,7 @@
                 "Source": "d1"
               }
             },
-            "Property": "day"
+            "Property": "Day"
           },
           "Name": "dwh Dim_Tiempo.day",
           "NativeReferenceName": "day"
@@ -88,7 +87,7 @@
                 "Source": "d1"
               }
             },
-            "Property": "week"
+            "Property": "Week"
           },
           "Name": "dwh Dim_Tiempo.week",
           "NativeReferenceName": "week"
@@ -100,7 +99,7 @@
                 "Source": "d1"
               }
             },
-            "Property": "month"
+            "Property": "Month"
           },
           "Name": "dwh Dim_Tiempo.month",
           "NativeReferenceName": "month"
@@ -112,7 +111,7 @@
                 "Source": "d1"
               }
             },
-            "Property": "year"
+            "Property": "Year"
           },
           "Name": "dwh Dim_Tiempo.year",
           "NativeReferenceName": "year"

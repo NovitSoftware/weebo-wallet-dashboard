@@ -4,10 +4,10 @@
     {
       "id": 0,
       "position": {
-        "height": 172.82084014161222,
-        "width": 384.31224899598396,
-        "x": 16.568137529628231,
-        "y": 14.533292483660102,
+        "height": 159.8592771309913,
+        "width": 369.72935143351191,
+        "x": 15.939452253458326,
+        "y": 13.443295547385596,
         "z": 3000,
         "tabOrder": 0
       }
@@ -68,7 +68,7 @@
             "Function": 0
           },
           "Name": "Sum(CuponesPorGenero.TotalCuponesActivos)",
-          "NativeReferenceName": "Sum of TotalCuponesActivos"
+          "NativeReferenceName": "Assets"
         },
         {
           "Aggregation": {
@@ -85,7 +85,7 @@
             "Function": 0
           },
           "Name": "Sum(CuponesPorGenero.TotalCuponesVencidos)",
-          "NativeReferenceName": "Sum of TotalCuponesVencidos"
+          "NativeReferenceName": "Expired"
         }
       ],
       "OrderBy": [
@@ -108,6 +108,14 @@
           }
         }
       ]
+    },
+    "columnProperties": {
+      "Sum(CuponesPorGenero.TotalCuponesActivos)": {
+        "displayName": "Assets"
+      },
+      "Sum(CuponesPorGenero.TotalCuponesVencidos)": {
+        "displayName": "Expired"
+      }
     },
     "drillFilterOtherVisuals": true,
     "hasDefaultSort": true,

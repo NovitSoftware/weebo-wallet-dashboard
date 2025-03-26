@@ -4,12 +4,11 @@
     {
       "id": 0,
       "position": {
-        "x": 8.1774053045163662,
-        "y": 8.28246412756296,
-        "z": 3000,
-        "width": 392.58609533395639,
-        "height": 197.12128837443382,
-        "tabOrder": 0
+        "height": 188.94923400377073,
+        "width": 372.71302213005282,
+        "x": 7.76345744399318,
+        "y": 7.9390981332978292,
+        "z": 3000
       }
     }
   ],
@@ -54,7 +53,7 @@
             "Property": "AfiliadosActivosPorcentaje"
           },
           "Name": "dwh Dim_Afiliado.AfiliadosActivosPorcentaje",
-          "NativeReferenceName": "active"
+          "NativeReferenceName": "Asset"
         },
         {
           "Measure": {
@@ -66,7 +65,7 @@
             "Property": "AfiliadosEnRiesgoPorcentaje"
           },
           "Name": "dwh Dim_Afiliado.AfiliadosEnRiesgoPorcentaje",
-          "NativeReferenceName": "at risk"
+          "NativeReferenceName": "At risk"
         },
         {
           "Measure": {
@@ -78,7 +77,7 @@
             "Property": "AfiliadosPerdidosPorcentaje"
           },
           "Name": "dwh Dim_Afiliado.AfiliadosPerdidosPorcentaje",
-          "NativeReferenceName": "lost"
+          "NativeReferenceName": "Lost"
         },
         {
           "Column": {
@@ -90,7 +89,7 @@
             "Property": "GeneroFiltrado"
           },
           "Name": "dwh Dim_Afiliado.GeneroFiltrado",
-          "NativeReferenceName": "gender"
+          "NativeReferenceName": "Gender"
         }
       ],
       "OrderBy": [
@@ -111,19 +110,19 @@
     },
     "columnProperties": {
       "dwh Dim_Afiliado.AfiliadosActivosPorcentaje": {
-        "displayName": "active",
+        "displayName": "Asset",
         "formatString": "0.00 %;-0.00 %;0.00 %"
       },
       "dwh Dim_Afiliado.AfiliadosEnRiesgoPorcentaje": {
-        "displayName": "at risk",
+        "displayName": "At risk",
         "formatString": "0.00 %;-0.00 %;0.00 %"
       },
       "dwh Dim_Afiliado.AfiliadosPerdidosPorcentaje": {
-        "displayName": "lost",
+        "displayName": "Lost",
         "formatString": "0.00 %;-0.00 %;0.00 %"
       },
       "dwh Dim_Afiliado.GeneroFiltrado": {
-        "displayName": "gender"
+        "displayName": "Gender"
       }
     },
     "drillFilterOtherVisuals": true,

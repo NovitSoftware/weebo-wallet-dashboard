@@ -80,13 +80,13 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "FrecuenciaPromedioRangoEdades",
+        "Restatement": "Average",
         "Name": "dwh Dim_Afiliado.FrecuenciaPromediorangoedades",
         "Type": 1,
         "Format": "G"
       },
       {
-        "Restatement": "RangoEdad",
+        "Restatement": "Age",
         "Name": "dwh Dim_RangoEdad.RangoEdad",
         "Type": 2048
       }
@@ -125,7 +125,7 @@
   ],
   "selects": [
     {
-      "displayName": "FrecuenciaPromedioRangoEdades",
+      "displayName": "Average",
       "format": "G",
       "queryName": "dwh Dim_Afiliado.FrecuenciaPromediorangoedades",
       "roles": {
@@ -149,7 +149,7 @@
       }
     },
     {
-      "displayName": "RangoEdad",
+      "displayName": "Age",
       "queryName": "dwh Dim_RangoEdad.RangoEdad",
       "roles": {
         "Category": true

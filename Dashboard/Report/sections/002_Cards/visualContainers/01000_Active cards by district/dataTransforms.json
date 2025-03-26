@@ -53,7 +53,7 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Distrito",
+        "Restatement": "District",
         "Name": "dwh Dim_Afiliado.Distrito",
         "Type": 2048
       },
@@ -97,7 +97,7 @@
   ],
   "selects": [
     {
-      "displayName": "Distrito",
+      "displayName": "District",
       "queryName": "dwh Dim_Afiliado.Distrito",
       "roles": {
         "Category": true

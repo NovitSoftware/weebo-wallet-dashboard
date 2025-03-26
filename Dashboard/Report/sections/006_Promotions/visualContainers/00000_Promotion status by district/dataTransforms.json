@@ -54,18 +54,18 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Distrito",
+        "Restatement": "District",
         "Name": "dwh Dim_Afiliado.Distrito",
         "Type": 2048
       },
       {
-        "Restatement": "Activas",
+        "Restatement": "Active",
         "Name": "dwh Fact_Promociones.TotalPromocionesActivas",
         "Type": 1,
         "Format": "0"
       },
       {
-        "Restatement": "Vencidas",
+        "Restatement": "Expired",
         "Name": "dwh Fact_Promociones.TotalPromocionesVencidas",
         "Type": 1,
         "Format": "0"
@@ -95,7 +95,7 @@
   ],
   "selects": [
     {
-      "displayName": "Distrito",
+      "displayName": "District",
       "queryName": "dwh Dim_Afiliado.Distrito",
       "roles": {
         "Category": true
@@ -116,7 +116,7 @@
       }
     },
     {
-      "displayName": "Activas",
+      "displayName": "Active",
       "format": "0",
       "queryName": "dwh Fact_Promociones.TotalPromocionesActivas",
       "roles": {
@@ -140,7 +140,7 @@
       }
     },
     {
-      "displayName": "Vencidas",
+      "displayName": "Expired",
       "format": "0",
       "queryName": "dwh Fact_Promociones.TotalPromocionesVencidas",
       "roles": {

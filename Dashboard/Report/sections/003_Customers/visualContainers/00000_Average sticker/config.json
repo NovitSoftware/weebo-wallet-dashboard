@@ -4,10 +4,10 @@
     {
       "id": 0,
       "position": {
-        "height": 325.90375473976019,
-        "width": 346.45595501880211,
-        "x": 8.4501452443610283,
-        "y": 11.186627737062702,
+        "height": 316.50268489149784,
+        "width": 332.21803905912532,
+        "x": 8.1028790014420817,
+        "y": 10.863936552339737,
         "z": 7000,
         "tabOrder": 0
       }
@@ -42,7 +42,7 @@
             "Property": "PromedioStickers"
           },
           "Name": "dwh Fact_Planes.PromedioStickers",
-          "NativeReferenceName": "Promedio de Stickers"
+          "NativeReferenceName": "Average stamps"
         }
       ],
       "OrderBy": [
@@ -63,7 +63,7 @@
     },
     "columnProperties": {
       "dwh Fact_Planes.PromedioStickers": {
-        "displayName": "Promedio de Stickers"
+        "displayName": "Average stamps"
       }
     },
     "drillFilterOtherVisuals": true,

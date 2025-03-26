@@ -1,15 +1,14 @@
 {
-  "name": "3c56780d068c6810c37e",
+  "name": "bd1ee309d7449d2a474e",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "height": 78.947368421052644,
-        "width": 177.47401487943353,
-        "x": 36.7933933286631,
-        "y": 52.605141852450011,
-        "z": 38500,
-        "tabOrder": 0
+        "height": 78.464909127373033,
+        "width": 175.04056188494729,
+        "x": 35.990815976397187,
+        "y": 45.889257469234515,
+        "z": 36000
       }
     }
   ],
@@ -18,7 +17,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "dwh Dim_Tarjeta.PromedioTarjetasActivadasPorDia"
+          "queryRef": "dwh Fact_Planes.PromedioSaldoTarjetas"
         }
       ]
     },
@@ -27,7 +26,7 @@
       "From": [
         {
           "Name": "d",
-          "Entity": "dwh Dim_Tarjeta",
+          "Entity": "dwh Fact_Planes",
           "Type": 0
         }
       ],
@@ -39,10 +38,10 @@
                 "Source": "d"
               }
             },
-            "Property": "PromedioTarjetasActivadasPorDia"
+            "Property": "PromedioSaldoTarjetas"
           },
-          "Name": "dwh Dim_Tarjeta.PromedioTarjetasActivadasPorDia",
-          "NativeReferenceName": "PromedioTarjetasActivadasPorDia"
+          "Name": "dwh Fact_Planes.PromedioSaldoTarjetas",
+          "NativeReferenceName": "PromedioSaldoTarjetas"
         }
       ],
       "OrderBy": [
@@ -55,7 +54,7 @@
                   "Source": "d"
                 }
               },
-              "Property": "PromedioTarjetasActivadasPorDia"
+              "Property": "PromedioSaldoTarjetas"
             }
           }
         }
@@ -145,5 +144,5 @@
       ]
     }
   },
-  "parentGroupName": "e783695f07e749b249de"
+  "parentGroupName": "01a8bd1d0c1190663760"
 }

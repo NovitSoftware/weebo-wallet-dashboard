@@ -27,7 +27,7 @@
                 "Property": "PromedioClientesActivos"
               },
               "Name": "dwh Fact_AfiliacionEmpresa.PromedioClientesActivos",
-              "NativeReferenceName": "Promedio"
+              "NativeReferenceName": "Average"
             }
           ],
           "Where": [

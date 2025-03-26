@@ -22,7 +22,7 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "TarjetasCompradas",
+        "Restatement": "Cards purchased",
         "Name": "dwh Fact_Planes.TarjetasCompradas",
         "Type": 1,
         "Format": "0"
@@ -42,7 +42,7 @@
   ],
   "selects": [
     {
-      "displayName": "TarjetasCompradas",
+      "displayName": "Cards purchased",
       "format": "0",
       "queryName": "dwh Fact_Planes.TarjetasCompradas",
       "roles": {

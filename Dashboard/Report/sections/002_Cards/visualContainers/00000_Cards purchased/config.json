@@ -4,10 +4,10 @@
     {
       "id": 0,
       "position": {
-        "height": 226.60173731802684,
-        "width": 182.45808517696867,
-        "x": 7.9983557612220588,
-        "y": 13.215357127964712,
+        "height": 204.09163096193143,
+        "width": 177.93433099902725,
+        "x": 7.8000494200347346,
+        "y": 11.902573307305966,
         "z": 18500,
         "tabOrder": 0
       }
@@ -42,7 +42,7 @@
             "Property": "TarjetasCompradas"
           },
           "Name": "dwh Fact_Planes.TarjetasCompradas",
-          "NativeReferenceName": "TarjetasCompradas"
+          "NativeReferenceName": "Cards purchased"
         }
       ],
       "OrderBy": [
@@ -60,6 +60,11 @@
           }
         }
       ]
+    },
+    "columnProperties": {
+      "dwh Fact_Planes.TarjetasCompradas": {
+        "displayName": "Cards purchased"
+      }
     },
     "drillFilterOtherVisuals": true,
     "hasDefaultSort": true,

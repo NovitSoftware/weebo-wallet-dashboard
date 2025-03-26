@@ -32,7 +32,7 @@
                 "Property": "EstadoCupon"
               },
               "Name": "dwh Fact_Cupon.EstadoCupon",
-              "NativeReferenceName": "EstadoCupon1"
+              "NativeReferenceName": "Status"
             },
             {
               "Measure": {
@@ -44,7 +44,7 @@
                 "Property": "TotalCuponesEnProceso"
               },
               "Name": "dwh Fact_Cupon.TotalCuponesEnProceso",
-              "NativeReferenceName": "TotalCuponesEnProceso1"
+              "NativeReferenceName": "In process"
             },
             {
               "Measure": {
@@ -56,7 +56,7 @@
                 "Property": "TotalCuponesActivos"
               },
               "Name": "dwh Fact_Cupon.TotalCuponesActivos",
-              "NativeReferenceName": "TotalCuponesActivos1"
+              "NativeReferenceName": "Assets"
             },
             {
               "Measure": {
@@ -68,7 +68,7 @@
                 "Property": "TotalCuponesVencidos"
               },
               "Name": "dwh Fact_Cupon.TotalCuponesVencidos",
-              "NativeReferenceName": "TotalCuponesVencidos1"
+              "NativeReferenceName": "Expired"
             },
             {
               "Column": {
@@ -80,7 +80,7 @@
                 "Property": "RangoEdad"
               },
               "Name": "dwh Dim_RangoEdad.RangoEdad",
-              "NativeReferenceName": "RangoEdad"
+              "NativeReferenceName": "Age"
             }
           ],
           "Where": [

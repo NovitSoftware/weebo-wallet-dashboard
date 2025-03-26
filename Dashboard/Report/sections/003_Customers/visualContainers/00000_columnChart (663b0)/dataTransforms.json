@@ -39,7 +39,7 @@
         "Format": "0"
       },
       {
-        "Restatement": "Total active customer",
+        "Restatement": "Total asset customers",
         "Name": "dwh Fact_AfiliacionEmpresa.TotalClientesActivos",
         "Type": 1
       }
@@ -80,12 +80,12 @@
               "Entity": "dwh Dim_Tiempo"
             }
           },
-          "Property": "week"
+          "Property": "Week"
         }
       }
     },
     {
-      "displayName": "Total active customer",
+      "displayName": "Total asset customers",
       "queryName": "dwh Fact_AfiliacionEmpresa.TotalClientesActivos",
       "roles": {
         "Y": true

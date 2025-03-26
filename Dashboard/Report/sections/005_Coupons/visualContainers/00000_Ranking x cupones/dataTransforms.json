@@ -50,12 +50,12 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Distrito",
+        "Restatement": "District",
         "Name": "Top3DistritosCupon.Distrito",
         "Type": 2048
       },
       {
-        "Restatement": "Sum of TotalCupones",
+        "Restatement": "Coupons",
         "Name": "Sum(Top3DistritosCupon.TotalCupones)",
         "Type": 3,
         "Format": "0"
@@ -80,7 +80,7 @@
   ],
   "selects": [
     {
-      "displayName": "Distrito",
+      "displayName": "District",
       "queryName": "Top3DistritosCupon.Distrito",
       "roles": {
         "Values": true
@@ -101,7 +101,7 @@
       }
     },
     {
-      "displayName": "Sum of TotalCupones",
+      "displayName": "Coupons",
       "format": "0",
       "queryName": "Sum(Top3DistritosCupon.TotalCupones)",
       "roles": {

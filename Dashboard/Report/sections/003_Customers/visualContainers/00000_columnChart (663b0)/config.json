@@ -4,10 +4,10 @@
     {
       "id": 0,
       "position": {
-        "height": 321.84308600114821,
-        "width": 871.437583621967,
-        "x": 17.751743706700324,
-        "y": 9.8272698015617763,
+        "height": 312.55915082803813,
+        "width": 853.97708558946863,
+        "x": 17.39606213880651,
+        "y": 9.5437908649782628,
         "z": 1000,
         "tabOrder": 0
       }
@@ -50,7 +50,7 @@
                 "Source": "d"
               }
             },
-            "Property": "week"
+            "Property": "Week"
           },
           "Name": "dwh Dim_Tiempo.Semana",
           "NativeReferenceName": "Week"
@@ -65,7 +65,7 @@
             "Property": "TotalClientesActivos"
           },
           "Name": "dwh Fact_AfiliacionEmpresa.TotalClientesActivos",
-          "NativeReferenceName": "Total active customer"
+          "NativeReferenceName": "Total asset customers"
         }
       ],
       "OrderBy": [
@@ -89,7 +89,7 @@
         "displayName": "Clientes"
       },
       "dwh Fact_AfiliacionEmpresa.TotalClientesActivos": {
-        "displayName": "Total active customer"
+        "displayName": "Total asset customers"
       },
       "dwh Dim_Tiempo.Semana": {
         "displayName": "Week"

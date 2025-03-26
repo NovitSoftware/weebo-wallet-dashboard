@@ -4,8 +4,8 @@
     {
       "id": 0,
       "position": {
-        "height": 105.45454545454542,
-        "width": 781.81818181818187,
+        "height": 93.223306435052379,
+        "width": 755.35552519951091,
         "x": 0,
         "y": 0,
         "z": 1000,
@@ -115,7 +115,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -187,6 +187,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "topMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "5L"
                 }
               }
             }

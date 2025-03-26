@@ -57,7 +57,7 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Distrito",
+        "Restatement": "District",
         "Name": "Top3TarjetasActivasPorDistrito.Distrito",
         "Type": 2048
       },
@@ -87,7 +87,7 @@
   ],
   "selects": [
     {
-      "displayName": "Distrito",
+      "displayName": "District",
       "queryName": "Top3TarjetasActivasPorDistrito.Distrito",
       "roles": {
         "Values": true

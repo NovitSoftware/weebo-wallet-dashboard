@@ -5,8 +5,8 @@
       "id": 0,
       "position": {
         "height": 228.34082572681385,
-        "width": 479.42804240309255,
-        "x": 10.800050736635356,
+        "width": 458.85852243200276,
+        "x": 10.336682223182352,
         "y": 10.960359634887066,
         "z": 18004,
         "tabOrder": 1000
@@ -58,7 +58,7 @@
             "Function": 2
           },
           "Name": "CountNonNull(dwh Fact_Cupon.KeyTarjeta)",
-          "NativeReferenceName": "Count of cards"
+          "NativeReferenceName": "Cards"
         },
         {
           "Column": {
@@ -99,7 +99,7 @@
         "displayName": "Gender"
       },
       "CountNonNull(dwh Fact_Cupon.KeyTarjeta)": {
-        "displayName": "Count of cards"
+        "displayName": "Cards"
       }
     },
     "drillFilterOtherVisuals": true,
