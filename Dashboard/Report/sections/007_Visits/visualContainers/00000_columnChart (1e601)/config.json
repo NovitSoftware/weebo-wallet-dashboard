@@ -8,7 +8,8 @@
         "width": 270.54920906465355,
         "x": 7.6063217536718088,
         "y": 14.25074714267169,
-        "z": 2000
+        "z": 2000,
+        "tabOrder": 0
       }
     }
   ],
@@ -22,14 +23,17 @@
       ],
       "Category": [
         {
-          "queryRef": "dwh Dim_Afiliado.FechaUltimoConsumoWebo.Variation.Date Hierarchy.Year"
-        },
-        {
-          "queryRef": "dwh Dim_Afiliado.FechaUltimoConsumoWebo.Variation.Date Hierarchy.Month"
-        },
-        {
-          "queryRef": "dwh Dim_Afiliado.FechaUltimoConsumoWebo.Variation.Date Hierarchy.Day",
+          "queryRef": "dwh Dim_Tiempo.day",
           "active": true
+        },
+        {
+          "queryRef": "dwh Dim_Tiempo.week"
+        },
+        {
+          "queryRef": "dwh Dim_Tiempo.month"
+        },
+        {
+          "queryRef": "dwh Dim_Tiempo.year"
         }
       ]
     },
@@ -39,6 +43,11 @@
         {
           "Name": "d",
           "Entity": "dwh Dim_Afiliado",
+          "Type": 0
+        },
+        {
+          "Name": "d1",
+          "Entity": "dwh Dim_Tiempo",
           "Type": 0
         }
       ],
@@ -61,73 +70,72 @@
           "NativeReferenceName": "Recession"
         },
         {
-          "HierarchyLevel": {
+          "Column": {
             "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Source": "d"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "FechaUltimoConsumoWebo"
-                  }
-                },
-                "Hierarchy": "Date Hierarchy"
+              "SourceRef": {
+                "Source": "d1"
               }
             },
-            "Level": "Year"
+            "Property": "day"
           },
-          "Name": "dwh Dim_Afiliado.FechaUltimoConsumoWebo.Variation.Date Hierarchy.Year",
-          "NativeReferenceName": "FechaUltimoConsumoWebo Year"
+          "Name": "dwh Dim_Tiempo.day",
+          "NativeReferenceName": "day"
         },
         {
-          "HierarchyLevel": {
+          "Column": {
             "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Source": "d"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "FechaUltimoConsumoWebo"
-                  }
-                },
-                "Hierarchy": "Date Hierarchy"
+              "SourceRef": {
+                "Source": "d1"
               }
             },
-            "Level": "Month"
+            "Property": "week"
           },
-          "Name": "dwh Dim_Afiliado.FechaUltimoConsumoWebo.Variation.Date Hierarchy.Month",
-          "NativeReferenceName": "FechaUltimoConsumoWebo Month"
+          "Name": "dwh Dim_Tiempo.week",
+          "NativeReferenceName": "week"
         },
         {
-          "HierarchyLevel": {
+          "Column": {
             "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Source": "d"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "FechaUltimoConsumoWebo"
-                  }
-                },
-                "Hierarchy": "Date Hierarchy"
+              "SourceRef": {
+                "Source": "d1"
               }
             },
-            "Level": "Day"
+            "Property": "month"
           },
-          "Name": "dwh Dim_Afiliado.FechaUltimoConsumoWebo.Variation.Date Hierarchy.Day",
-          "NativeReferenceName": "FechaUltimoConsumoWebo Day"
+          "Name": "dwh Dim_Tiempo.month",
+          "NativeReferenceName": "month"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d1"
+              }
+            },
+            "Property": "year"
+          },
+          "Name": "dwh Dim_Tiempo.year",
+          "NativeReferenceName": "year"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "d"
+                    }
+                  },
+                  "Property": "KeyAfiliado"
+                }
+              },
+              "Function": 1
+            }
+          }
         }
       ]
     },
@@ -137,6 +145,7 @@
       }
     },
     "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
     "objects": {
       "categoryAxis": [
         {

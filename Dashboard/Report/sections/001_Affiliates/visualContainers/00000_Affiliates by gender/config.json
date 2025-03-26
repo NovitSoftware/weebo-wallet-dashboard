@@ -4,11 +4,11 @@
     {
       "id": 0,
       "position": {
-        "height": 192.1875,
-        "width": 400.61538461538464,
-        "x": 8.191855203619907,
-        "y": 12.968749999999995,
+        "x": 8.1774053045163662,
+        "y": 8.28246412756296,
         "z": 3000,
+        "width": 392.58609533395639,
+        "height": 197.12128837443382,
         "tabOrder": 0
       }
     }
@@ -54,7 +54,7 @@
             "Property": "AfiliadosActivosPorcentaje"
           },
           "Name": "dwh Dim_Afiliado.AfiliadosActivosPorcentaje",
-          "NativeReferenceName": "AfiliadosActivosPorcentaje"
+          "NativeReferenceName": "active"
         },
         {
           "Measure": {
@@ -66,7 +66,7 @@
             "Property": "AfiliadosEnRiesgoPorcentaje"
           },
           "Name": "dwh Dim_Afiliado.AfiliadosEnRiesgoPorcentaje",
-          "NativeReferenceName": "AfiliadosEnRiesgoPorcentaje"
+          "NativeReferenceName": "at risk"
         },
         {
           "Measure": {
@@ -78,7 +78,7 @@
             "Property": "AfiliadosPerdidosPorcentaje"
           },
           "Name": "dwh Dim_Afiliado.AfiliadosPerdidosPorcentaje",
-          "NativeReferenceName": "AfiliadosPerdidosPorcentaje"
+          "NativeReferenceName": "lost"
         },
         {
           "Column": {
@@ -111,15 +111,15 @@
     },
     "columnProperties": {
       "dwh Dim_Afiliado.AfiliadosActivosPorcentaje": {
-        "displayName": "Activos",
+        "displayName": "active",
         "formatString": "0.00 %;-0.00 %;0.00 %"
       },
       "dwh Dim_Afiliado.AfiliadosEnRiesgoPorcentaje": {
-        "displayName": "En Riesgo",
+        "displayName": "at risk",
         "formatString": "0.00 %;-0.00 %;0.00 %"
       },
       "dwh Dim_Afiliado.AfiliadosPerdidosPorcentaje": {
-        "displayName": "Perdidos",
+        "displayName": "lost",
         "formatString": "0.00 %;-0.00 %;0.00 %"
       },
       "dwh Dim_Afiliado.GeneroFiltrado": {

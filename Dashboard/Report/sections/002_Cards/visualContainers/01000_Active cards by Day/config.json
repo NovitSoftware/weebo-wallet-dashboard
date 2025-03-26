@@ -5,8 +5,8 @@
       "id": 0,
       "position": {
         "height": 228.12663263594308,
-        "width": 481.30340370591648,
-        "x": 8.5186443133790544,
+        "width": 538.67731937946951,
+        "x": 9.53411184742424,
         "y": 10.422028902149686,
         "z": 16000,
         "tabOrder": 1000
@@ -76,10 +76,10 @@
                 "Source": "d1"
               }
             },
-            "Property": "Dia"
+            "Property": "day"
           },
           "Name": "dwh Dim_Tiempo.Dia",
-          "NativeReferenceName": "Day"
+          "NativeReferenceName": "day"
         },
         {
           "Column": {
@@ -88,10 +88,10 @@
                 "Source": "d1"
               }
             },
-            "Property": "Semana"
+            "Property": "week"
           },
           "Name": "dwh Dim_Tiempo.Semana",
-          "NativeReferenceName": "Week"
+          "NativeReferenceName": "week"
         },
         {
           "Column": {
@@ -100,10 +100,10 @@
                 "Source": "d1"
               }
             },
-            "Property": "Mes"
+            "Property": "month"
           },
           "Name": "dwh Dim_Tiempo.Mes",
-          "NativeReferenceName": "Month"
+          "NativeReferenceName": "month"
         },
         {
           "Column": {
@@ -112,10 +112,10 @@
                 "Source": "d1"
               }
             },
-            "Property": "Año"
+            "Property": "year"
           },
           "Name": "dwh Dim_Tiempo.Año",
-          "NativeReferenceName": "Years"
+          "NativeReferenceName": "years"
         }
       ],
       "OrderBy": [
@@ -144,16 +144,16 @@
         "displayName": "Cards activated"
       },
       "dwh Dim_Tiempo.Dia": {
-        "displayName": "Day"
+        "displayName": "day"
       },
       "dwh Dim_Tiempo.Semana": {
-        "displayName": "Week"
+        "displayName": "week"
       },
       "dwh Dim_Tiempo.Mes": {
-        "displayName": "Month"
+        "displayName": "month"
       },
       "dwh Dim_Tiempo.Año": {
-        "displayName": "Years"
+        "displayName": "years"
       }
     },
     "drillFilterOtherVisuals": true,

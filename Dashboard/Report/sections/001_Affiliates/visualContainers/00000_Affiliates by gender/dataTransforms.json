@@ -62,19 +62,19 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Activos",
+        "Restatement": "active",
         "Name": "dwh Dim_Afiliado.AfiliadosActivosPorcentaje",
         "Type": 1,
         "Format": "0.00 %;-0.00 %;0.00 %"
       },
       {
-        "Restatement": "En Riesgo",
+        "Restatement": "at risk",
         "Name": "dwh Dim_Afiliado.AfiliadosEnRiesgoPorcentaje",
         "Type": 1,
         "Format": "0.00 %;-0.00 %;0.00 %"
       },
       {
-        "Restatement": "Perdidos",
+        "Restatement": "lost",
         "Name": "dwh Dim_Afiliado.AfiliadosPerdidosPorcentaje",
         "Type": 1,
         "Format": "0.00 %;-0.00 %;0.00 %"
@@ -129,7 +129,7 @@
   ],
   "selects": [
     {
-      "displayName": "Activos",
+      "displayName": "active",
       "format": "0.00 %;-0.00 %;0.00 %",
       "queryName": "dwh Dim_Afiliado.AfiliadosActivosPorcentaje",
       "roles": {
@@ -153,7 +153,7 @@
       }
     },
     {
-      "displayName": "En Riesgo",
+      "displayName": "at risk",
       "format": "0.00 %;-0.00 %;0.00 %",
       "queryName": "dwh Dim_Afiliado.AfiliadosEnRiesgoPorcentaje",
       "roles": {
@@ -175,7 +175,7 @@
       }
     },
     {
-      "displayName": "Perdidos",
+      "displayName": "lost",
       "format": "0.00 %;-0.00 %;0.00 %",
       "queryName": "dwh Dim_Afiliado.AfiliadosPerdidosPorcentaje",
       "roles": {

@@ -152,7 +152,7 @@
               "Entity": "dwh Dim_Tiempo"
             }
           },
-          "Property": "Dia"
+          "Property": "day"
         }
       }
     },
@@ -174,7 +174,7 @@
               "Entity": "dwh Dim_Tiempo"
             }
           },
-          "Property": "Mes"
+          "Property": "month"
         }
       }
     },
@@ -196,7 +196,7 @@
               "Entity": "dwh Dim_Tiempo"
             }
           },
-          "Property": "Año"
+          "Property": "year"
         }
       }
     },
@@ -218,7 +218,7 @@
               "Entity": "dwh Dim_Tiempo"
             }
           },
-          "Property": "Semana"
+          "Property": "week"
         }
       }
     }

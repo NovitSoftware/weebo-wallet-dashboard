@@ -11,6 +11,11 @@
               "Type": 0
             },
             {
+              "Name": "d1",
+              "Entity": "dwh Dim_Tiempo",
+              "Type": 0
+            },
+            {
               "Name": "c",
               "Entity": "CalendarioGeneral",
               "Type": 0
@@ -35,73 +40,52 @@
               "NativeReferenceName": "Recession"
             },
             {
-              "HierarchyLevel": {
+              "Column": {
                 "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "PropertyVariationSource": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "d"
-                          }
-                        },
-                        "Name": "Variation",
-                        "Property": "FechaUltimoConsumoWebo"
-                      }
-                    },
-                    "Hierarchy": "Date Hierarchy"
+                  "SourceRef": {
+                    "Source": "d1"
                   }
                 },
-                "Level": "Year"
+                "Property": "day"
               },
-              "Name": "dwh Dim_Afiliado.FechaUltimoConsumoWebo.Variation.Date Hierarchy.Year",
-              "NativeReferenceName": "FechaUltimoConsumoWebo Year"
+              "Name": "dwh Dim_Tiempo.day",
+              "NativeReferenceName": "day"
             },
             {
-              "HierarchyLevel": {
+              "Column": {
                 "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "PropertyVariationSource": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "d"
-                          }
-                        },
-                        "Name": "Variation",
-                        "Property": "FechaUltimoConsumoWebo"
-                      }
-                    },
-                    "Hierarchy": "Date Hierarchy"
+                  "SourceRef": {
+                    "Source": "d1"
                   }
                 },
-                "Level": "Month"
+                "Property": "week"
               },
-              "Name": "dwh Dim_Afiliado.FechaUltimoConsumoWebo.Variation.Date Hierarchy.Month",
-              "NativeReferenceName": "FechaUltimoConsumoWebo Month"
+              "Name": "dwh Dim_Tiempo.week",
+              "NativeReferenceName": "week"
             },
             {
-              "HierarchyLevel": {
+              "Column": {
                 "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "PropertyVariationSource": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "d"
-                          }
-                        },
-                        "Name": "Variation",
-                        "Property": "FechaUltimoConsumoWebo"
-                      }
-                    },
-                    "Hierarchy": "Date Hierarchy"
+                  "SourceRef": {
+                    "Source": "d1"
                   }
                 },
-                "Level": "Day"
+                "Property": "month"
               },
-              "Name": "dwh Dim_Afiliado.FechaUltimoConsumoWebo.Variation.Date Hierarchy.Day",
-              "NativeReferenceName": "FechaUltimoConsumoWebo Day"
+              "Name": "dwh Dim_Tiempo.month",
+              "NativeReferenceName": "month"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d1"
+                  }
+                },
+                "Property": "year"
+              },
+              "Name": "dwh Dim_Tiempo.year",
+              "NativeReferenceName": "year"
             }
           ],
           "Where": [
@@ -154,26 +138,20 @@
           ],
           "OrderBy": [
             {
-              "Direction": 1,
+              "Direction": 2,
               "Expression": {
-                "HierarchyLevel": {
+                "Aggregation": {
                   "Expression": {
-                    "Hierarchy": {
+                    "Column": {
                       "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "d"
-                            }
-                          },
-                          "Name": "Variation",
-                          "Property": "FechaUltimoConsumoWebo"
+                        "SourceRef": {
+                          "Source": "d"
                         }
                       },
-                      "Hierarchy": "Date Hierarchy"
+                      "Property": "KeyAfiliado"
                     }
                   },
-                  "Level": "Day"
+                  "Function": 1
                 }
               }
             }
@@ -185,7 +163,7 @@
               {
                 "Projections": [
                   0,
-                  3
+                  1
                 ]
               }
             ]

@@ -42,25 +42,25 @@
         "Format": "0"
       },
       {
-        "Restatement": "Day",
+        "Restatement": "day",
         "Name": "dwh Dim_Tiempo.Dia",
         "Type": 3,
         "Format": "0"
       },
       {
-        "Restatement": "Week",
+        "Restatement": "week",
         "Name": "dwh Dim_Tiempo.Semana",
         "Type": 3,
         "Format": "0"
       },
       {
-        "Restatement": "Month",
+        "Restatement": "month",
         "Name": "dwh Dim_Tiempo.Mes",
         "Type": 3,
         "Format": "0"
       },
       {
-        "Restatement": "Years",
+        "Restatement": "years",
         "Name": "dwh Dim_Tiempo.Año",
         "Type": 3,
         "Format": "0"
@@ -127,7 +127,7 @@
       }
     },
     {
-      "displayName": "Day",
+      "displayName": "day",
       "format": "0",
       "queryName": "dwh Dim_Tiempo.Dia",
       "roles": {
@@ -144,12 +144,12 @@
               "Entity": "dwh Dim_Tiempo"
             }
           },
-          "Property": "Dia"
+          "Property": "day"
         }
       }
     },
     {
-      "displayName": "Week",
+      "displayName": "week",
       "format": "0",
       "queryName": "dwh Dim_Tiempo.Semana",
       "roles": {
@@ -166,12 +166,12 @@
               "Entity": "dwh Dim_Tiempo"
             }
           },
-          "Property": "Semana"
+          "Property": "week"
         }
       }
     },
     {
-      "displayName": "Month",
+      "displayName": "month",
       "format": "0",
       "queryName": "dwh Dim_Tiempo.Mes",
       "roles": {
@@ -188,12 +188,12 @@
               "Entity": "dwh Dim_Tiempo"
             }
           },
-          "Property": "Mes"
+          "Property": "month"
         }
       }
     },
     {
-      "displayName": "Years",
+      "displayName": "years",
       "format": "0",
       "queryName": "dwh Dim_Tiempo.Año",
       "roles": {
@@ -210,7 +210,7 @@
               "Entity": "dwh Dim_Tiempo"
             }
           },
-          "Property": "Año"
+          "Property": "year"
         }
       }
     }
