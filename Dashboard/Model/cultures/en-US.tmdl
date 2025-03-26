@@ -28567,7 +28567,7 @@
 			          }
 			        },
 			        {
-			          "Total active customer": {
+			          "Total": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -28577,7 +28577,7 @@
 			          }
 			        },
 			        {
-			          "Total": {
+			          "Total active customer": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",

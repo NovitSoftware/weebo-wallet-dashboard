@@ -35,7 +35,7 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Frequency",
+        "Restatement": "Recession",
         "Name": "CountNonNull(dwh Dim_Afiliado.KeyAfiliado)",
         "Type": 1,
         "Format": "0.00"
@@ -85,7 +85,7 @@
   ],
   "selects": [
     {
-      "displayName": "Frequency",
+      "displayName": "Recession",
       "format": "0.00",
       "queryName": "CountNonNull(dwh Dim_Afiliado.KeyAfiliado)",
       "roles": {

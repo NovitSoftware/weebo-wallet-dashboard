@@ -32,7 +32,7 @@
                 "Function": 1
               },
               "Name": "CountNonNull(dwh Dim_Afiliado.KeyAfiliado)",
-              "NativeReferenceName": "Frequency"
+              "NativeReferenceName": "Recession"
             },
             {
               "HierarchyLevel": {

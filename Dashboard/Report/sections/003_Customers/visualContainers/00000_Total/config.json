@@ -1,15 +1,14 @@
 {
-  "name": "6ac913184e7ed3dd0049",
+  "name": "639467c20c46a6e85e26",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "height": 70,
-        "width": 198.19050870604303,
-        "x": 226.37524815359927,
-        "y": 60.953757481556181,
-        "z": 1000,
-        "tabOrder": 0
+        "height": 69.681818181818173,
+        "width": 179.82775119617224,
+        "x": 227.40500621507078,
+        "y": 59.71422525637422,
+        "z": 4000
       }
     }
   ],
@@ -18,7 +17,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "dwh Fact_AfiliacionEmpresa.TotalClientesEnRiesgo"
+          "queryRef": "dwh Fact_AfiliacionEmpresa.TotalClientesActivos"
         }
       ]
     },
@@ -39,9 +38,9 @@
                 "Source": "d"
               }
             },
-            "Property": "TotalClientesEnRiesgo"
+            "Property": "TotalClientesActivos"
           },
-          "Name": "dwh Fact_AfiliacionEmpresa.TotalClientesEnRiesgo",
+          "Name": "dwh Fact_AfiliacionEmpresa.TotalClientesActivos",
           "NativeReferenceName": "Total"
         }
       ],
@@ -55,14 +54,14 @@
                   "Source": "d"
                 }
               },
-              "Property": "TotalClientesEnRiesgo"
+              "Property": "TotalClientesActivos"
             }
           }
         }
       ]
     },
     "columnProperties": {
-      "dwh Fact_AfiliacionEmpresa.TotalClientesEnRiesgo": {
+      "dwh Fact_AfiliacionEmpresa.TotalClientesActivos": {
         "displayName": "Total"
       }
     },
@@ -127,13 +126,6 @@
                 }
               }
             },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'center'"
-                }
-              }
-            },
             "fontSize": {
               "expr": {
                 "Literal": {
@@ -149,6 +141,13 @@
                       "Value": "'#737373'"
                     }
                   }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
                 }
               }
             }
@@ -170,5 +169,5 @@
       ]
     }
   },
-  "parentGroupName": "a2df13ef966e602b5634"
+  "parentGroupName": "fc8b34b03a64a0ca3209"
 }
