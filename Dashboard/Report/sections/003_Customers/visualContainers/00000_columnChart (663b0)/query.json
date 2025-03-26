@@ -29,7 +29,7 @@
                     "Source": "d"
                   }
                 },
-                "Property": "Semana"
+                "Property": "week"
               },
               "Name": "dwh Dim_Tiempo.Semana",
               "NativeReferenceName": "Week"

@@ -63,7 +63,7 @@
                     "Source": "d"
                   }
                 },
-                "Property": "Dia"
+                "Property": "day"
               },
               "Name": "dwh Dim_Tiempo.Dia",
               "NativeReferenceName": "day"
@@ -75,7 +75,7 @@
                     "Source": "d"
                   }
                 },
-                "Property": "Mes"
+                "Property": "month"
               },
               "Name": "dwh Dim_Tiempo.Mes",
               "NativeReferenceName": "month"
@@ -87,7 +87,7 @@
                     "Source": "d"
                   }
                 },
-                "Property": "Semana"
+                "Property": "week"
               },
               "Name": "dwh Dim_Tiempo.Semana",
               "NativeReferenceName": "week"
@@ -99,7 +99,7 @@
                     "Source": "d"
                   }
                 },
-                "Property": "Año"
+                "Property": "year"
               },
               "Name": "dwh Dim_Tiempo.Año",
               "NativeReferenceName": "year"

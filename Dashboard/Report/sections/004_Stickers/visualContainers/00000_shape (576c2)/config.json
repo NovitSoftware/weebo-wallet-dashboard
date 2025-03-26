@@ -8,7 +8,8 @@
         "width": 195,
         "x": 0,
         "y": 0,
-        "z": 0
+        "z": 0,
+        "tabOrder": 0
       }
     }
   ],
@@ -22,7 +23,7 @@
             "tileShape": {
               "expr": {
                 "Literal": {
-                  "Value": "'rectangleRounded'"
+                  "Value": "'rectangle'"
                 }
               }
             },
@@ -30,6 +31,13 @@
               "expr": {
                 "Literal": {
                   "Value": "5L"
+                }
+              }
+            },
+            "roundEdge": {
+              "expr": {
+                "Literal": {
+                  "Value": "10L"
                 }
               }
             }

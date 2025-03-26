@@ -18,35 +18,35 @@
 
 		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
-	column Año
-		dataType: int64
-		formatString: 0
-		summarizeBy: sum
-		sourceColumn: Año
-
-		annotation SummarizationSetBy = Automatic
-
-	column Mes
-		dataType: int64
-		formatString: 0
-		summarizeBy: sum
-		sourceColumn: Mes
-
-		annotation SummarizationSetBy = Automatic
-
-	column Dia
+	column year
 		dataType: int64
 		formatString: 0
 		summarizeBy: none
-		sourceColumn: Dia
+		sourceColumn: year
 
 		annotation SummarizationSetBy = User
 
-	column Semana
+	column month
 		dataType: int64
 		formatString: 0
 		summarizeBy: none
-		sourceColumn: Semana
+		sourceColumn: month
+
+		annotation SummarizationSetBy = User
+
+	column day
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: day
+
+		annotation SummarizationSetBy = User
+
+	column week
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: week
 
 		annotation SummarizationSetBy = User
 
@@ -90,7 +90,8 @@
 				let
 				    Source = Sql.Databases("40.79.18.177"),
 				    ApployaltyDWH = Source{[Name="ApployaltyDWH"]}[Data],
-				    dwh_Dim_Tiempo = ApployaltyDWH{[Schema="dwh",Item="Dim_Tiempo"]}[Data]
+				    dwh_Dim_Tiempo = ApployaltyDWH{[Schema="dwh",Item="Dim_Tiempo"]}[Data],
+				    #"Renamed Columns" = Table.RenameColumns(dwh_Dim_Tiempo,{{"Dia", "day"}, {"Mes", "month"}, {"Año", "year"}, {"Semana", "week"}})
 				in
-				    dwh_Dim_Tiempo
+				    #"Renamed Columns"
 

@@ -57,7 +57,21 @@
             "placement": {
               "expr": {
                 "Literal": {
-                  "Value": "'left'"
+                  "Value": "'custom'"
+                }
+              }
+            },
+            "leftMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "21L"
+                }
+              }
+            },
+            "iconSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
                 }
               }
             }
@@ -110,6 +124,20 @@
           "selector": {
             "id": "selected"
           }
+        },
+        {
+          "properties": {
+            "bottomMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "16L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "hover"
+          }
         }
       ],
       "text": [
@@ -136,7 +164,7 @@
             "horizontalAlignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'center'"
+                  "Value": "'left'"
                 }
               }
             },
@@ -149,6 +177,13 @@
                       "Percent": 0
                     }
                   }
+                }
+              }
+            },
+            "leftMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "45L"
                 }
               }
             }

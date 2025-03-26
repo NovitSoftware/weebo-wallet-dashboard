@@ -1,0 +1,19 @@
+{
+  "name": "3c8a5084d6100e726d63",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 620.49382716049388,
+        "y": 210,
+        "z": 13000,
+        "width": 325,
+        "height": 150
+      }
+    }
+  ],
+  "singleVisualGroup": {
+    "displayName": "Group 7",
+    "groupMode": 0
+  }
+}

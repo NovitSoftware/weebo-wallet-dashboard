@@ -156,7 +156,7 @@
               "Entity": "dwh Dim_Tiempo"
             }
           },
-          "Property": "Semana"
+          "Property": "week"
         }
       }
     },

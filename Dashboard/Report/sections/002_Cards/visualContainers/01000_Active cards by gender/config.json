@@ -58,7 +58,7 @@
             "Function": 2
           },
           "Name": "CountNonNull(dwh Fact_Cupon.KeyTarjeta)",
-          "NativeReferenceName": "Count of KeyTarjeta"
+          "NativeReferenceName": "Count of cards"
         },
         {
           "Column": {
@@ -97,6 +97,9 @@
     "columnProperties": {
       "dwh Dim_Afiliado.GeneroFiltrado": {
         "displayName": "Gender"
+      },
+      "CountNonNull(dwh Fact_Cupon.KeyTarjeta)": {
+        "displayName": "Count of cards"
       }
     },
     "drillFilterOtherVisuals": true,

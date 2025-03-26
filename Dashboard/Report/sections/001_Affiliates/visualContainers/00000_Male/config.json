@@ -8,7 +8,8 @@
         "width": 152.01885601876472,
         "x": 11.693758155289594,
         "y": 6.4285714285714279,
-        "z": 1000
+        "z": 1000,
+        "tabOrder": 0
       }
     }
   ],
@@ -82,7 +83,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "25D"
                 }
               }
             }
@@ -91,6 +92,19 @@
       ]
     },
     "vcObjects": {
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ],
       "title": [
         {
           "properties": {
@@ -98,6 +112,25 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             },
@@ -114,38 +147,6 @@
                   "Value": "'center'"
                 }
               }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 3,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "16D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "padding": [
-        {
-          "properties": {
-            "top": {
-              "expr": {
-                "Literal": {
-                  "Value": "5D"
-                }
-              }
             }
           }
         }
@@ -153,10 +154,10 @@
       "background": [
         {
           "properties": {
-            "transparency": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "100D"
+                  "Value": "false"
                 }
               }
             }

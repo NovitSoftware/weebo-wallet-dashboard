@@ -4387,6 +4387,16 @@
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "at risk": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4413,6 +4423,16 @@
 			        },
 			        {
 			          "Activos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "active": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4516,18 +4536,23 @@
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "dwh Dim_Tiempo",
-			          "ConceptualProperty": "Año"
+			          "ConceptualProperty": "year"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "año": {
-			            "State": "Generated"
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
 			          }
 			        },
 			        {
-			          "Years": {
+			          "years": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4556,30 +4581,31 @@
 			            "Weight": 0.9
 			          }
 			        }
-			      ]
+			      ],
+			      "SemanticType": "Time"
 			    },
 			    "dwh_Dim_Tiempo.me": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "dwh Dim_Tiempo",
-			          "ConceptualProperty": "Mes"
+			          "ConceptualProperty": "month"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "me": {
+			          "month": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Month": {
+			          "mth": {
+			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
+			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.9
+			            "Weight": 0.736
 			          }
 			        }
 			      ]
@@ -4588,24 +4614,14 @@
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "dwh Dim_Tiempo",
-			          "ConceptualProperty": "Dia"
+			          "ConceptualProperty": "day"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "dia": {
+			          "day": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Day": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -4614,24 +4630,14 @@
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "dwh Dim_Tiempo",
-			          "ConceptualProperty": "Semana"
+			          "ConceptualProperty": "week"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "semana": {
+			          "week": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Week": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -30545,6 +30551,16 @@
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "lost": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -31565,6 +31581,16 @@
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Average visits": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -50893,6 +50919,26 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_Dim_Afiliados_have_afiliados_perdidos_porcentaje"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Adjectives": [
+			              {
+			                "lost": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "dwh_Dim_Afiliado.afiliados_perdidos_porcentaje"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "afiliados_perdidos_porcentaje_indicates_how_lost_dwh_Dim_Afiliados_are"
 			        }
 			      ]
 			    },
@@ -63386,7 +63432,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dwh_Dim_Tiempos_have_semanas"
+			          "ID": "dwh_Dim_Tiempos_have_weeks"
 			        }
 			      ]
 			    },
@@ -63419,7 +63465,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dwh_Dim_Tiempos_have_dias"
+			          "ID": "dwh_Dim_Tiempos_have_days"
 			        }
 			      ]
 			    },
@@ -63452,7 +63498,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dwh_Dim_Tiempos_have_me"
+			          "ID": "dwh_Dim_Tiempos_have_months"
 			        }
 			      ]
 			    },
@@ -63485,34 +63531,7 @@
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dwh_Dim_Tiempos_have_años"
-			        },
-			        {
-			          "Adjective": {
-			            "Subject": {
-			              "Role": "dwh_Dim_Tiempo"
-			            },
-			            "Adjectives": [
-			              {
-			                "old": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Antonyms": [
-			              {
-			                "young": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Measurement": {
-			              "Role": "dwh_Dim_Tiempo.año"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "año_indicates_how_old_dwh_Dim_Tiempos_are"
+			          "ID": "dwh_Dim_Tiempos_have_years"
 			        }
 			      ]
 			    },

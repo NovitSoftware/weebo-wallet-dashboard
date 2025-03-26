@@ -1,0 +1,209 @@
+{
+  "name": "21f6281ebd92866aa935",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 231.55216284987276,
+        "width": 254.89788628492454,
+        "x": 8.6406063147431578,
+        "y": 10.178117048346023,
+        "z": 11000,
+        "tabOrder": 0
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "columnChart",
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "dwh Fact_Facturacion.VisitasPromedio"
+        }
+      ],
+      "Series": [
+        {
+          "queryRef": "dwh Dim_Tiempo.PeriodoDelDia"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "dwh Dim_Tiempo.day",
+          "active": true
+        },
+        {
+          "queryRef": "dwh Dim_Tiempo.week"
+        },
+        {
+          "queryRef": "dwh Dim_Tiempo.month"
+        },
+        {
+          "queryRef": "dwh Dim_Tiempo.year"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d1",
+          "Entity": "dwh Fact_Facturacion",
+          "Type": 0
+        },
+        {
+          "Name": "d",
+          "Entity": "dwh Dim_Tiempo",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d1"
+              }
+            },
+            "Property": "VisitasPromedio"
+          },
+          "Name": "dwh Fact_Facturacion.VisitasPromedio",
+          "NativeReferenceName": "Average visits"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "PeriodoDelDia"
+          },
+          "Name": "dwh Dim_Tiempo.PeriodoDelDia",
+          "NativeReferenceName": "period of day"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "day"
+          },
+          "Name": "dwh Dim_Tiempo.day",
+          "NativeReferenceName": "day"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "week"
+          },
+          "Name": "dwh Dim_Tiempo.week",
+          "NativeReferenceName": "week"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "month"
+          },
+          "Name": "dwh Dim_Tiempo.month",
+          "NativeReferenceName": "month"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "year"
+          },
+          "Name": "dwh Dim_Tiempo.year",
+          "NativeReferenceName": "year"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "d1"
+                }
+              },
+              "Property": "VisitasPromedio"
+            }
+          }
+        }
+      ]
+    },
+    "columnProperties": {
+      "dwh Fact_Facturacion.VisitasPromedio": {
+        "displayName": "Average visits"
+      },
+      "dwh Dim_Tiempo.PeriodoDelDia": {
+        "displayName": "period of day"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {},
+    "vcObjects": {
+      "title": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "37bd3cd473ba5ee80890"
+}

@@ -37,7 +37,7 @@
                 "Function": 2
               },
               "Name": "CountNonNull(dwh Fact_Cupon.KeyTarjeta)",
-              "NativeReferenceName": "Count of KeyTarjeta"
+              "NativeReferenceName": "Count of cards"
             },
             {
               "Column": {

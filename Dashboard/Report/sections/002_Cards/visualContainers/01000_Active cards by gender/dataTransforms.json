@@ -53,7 +53,7 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Count of KeyTarjeta",
+        "Restatement": "Count of cards",
         "Name": "CountNonNull(dwh Fact_Cupon.KeyTarjeta)",
         "Type": 3
       },
@@ -97,7 +97,7 @@
   ],
   "selects": [
     {
-      "displayName": "Count of KeyTarjeta",
+      "displayName": "Count of cards",
       "queryName": "CountNonNull(dwh Fact_Cupon.KeyTarjeta)",
       "roles": {
         "Y": true

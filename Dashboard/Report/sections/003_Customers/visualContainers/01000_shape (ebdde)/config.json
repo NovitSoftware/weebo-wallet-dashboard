@@ -4,8 +4,8 @@
     {
       "id": 0,
       "position": {
-        "height": 323.01387590768559,
-        "width": 450.56294485584863,
+        "height": 344.54813430153126,
+        "width": 909.40829678625323,
         "x": 0,
         "y": 0,
         "z": 0,
@@ -23,7 +23,7 @@
             "tileShape": {
               "expr": {
                 "Literal": {
-                  "Value": "'rectangleRounded'"
+                  "Value": "'rectangle'"
                 }
               }
             },
@@ -31,6 +31,13 @@
               "expr": {
                 "Literal": {
                   "Value": "5L"
+                }
+              }
+            },
+            "roundEdge": {
+              "expr": {
+                "Literal": {
+                  "Value": "10L"
                 }
               }
             }
