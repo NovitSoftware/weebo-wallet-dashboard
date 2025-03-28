@@ -109,23 +109,62 @@
 
 	measure AfiliadosMasculinos = ```
 			
-			COALESCE(
-			CALCULATE(
-			    DISTINCTCOUNT('dwh Dim_Afiliado'[KeyAfiliado]),
-			    'dwh Dim_Afiliado'[Genero] = "MASCULINO"
-			),"NA")
+			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])  -- Fecha de inicio seleccionada
+			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])    -- Fecha final seleccionada
+			
+			-- Limitar por el rango de fechas del calendario
+			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del filtro
+			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del filtro
+			
+			RETURN COALESCE(
+			    CALCULATE(
+			        DISTINCTCOUNT('dwh Dim_Afiliado'[KeyAfiliado]),
+			        'dwh Dim_Afiliado'[Genero] = "MASCULINO",
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] >= MAX(FechaInicio, FechaMin),  -- Filtro por FechaInicio
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= MIN(FechaFinal, FechaMax)    -- Filtro por FechaFinal
+			    ),
+			    "NA"
+			)
 			
 			```
-		formatString: 0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure AfiliadosActivos = ```
 			
+			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])  -- Fecha de inicio seleccionada
+			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])    -- Fecha final seleccionada
+			
+			-- Si no se selecciona una fecha final, se toma 90 días a partir de la fecha seleccionada.
+			VAR FechaInicioAjustada = 
+			    IF(
+			        ISBLANK(FechaInicio), 
+			        TODAY() - 90,  -- Si no hay selección, toma 90 días antes de hoy
+			        FechaInicio   -- Si hay selección, usa la fecha seleccionada
+			    )
+			    
+			VAR FechaFinalAjustada = 
+			    IF(
+			        ISBLANK(FechaFinal), 
+			        TODAY(),   -- Si no hay fecha final seleccionada, toma la fecha de hoy
+			        FechaFinal  -- Si hay selección, usa la fecha final seleccionada
+			    )
+			
+			-- Limitar por el rango de fechas del calendario
+			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del filtro
+			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del filtro
+			
+			RETURN
 			COALESCE(
-			CALCULATE(
-			    COUNTROWS('dwh Dim_Afiliado'),
-			    DATEDIFF('dwh Dim_Afiliado'[FechaUltimoConsumoWebo], TODAY(), DAY) <= 90,
-			    NOT(ISBLANK('dwh Dim_Afiliado'[FechaUltimoConsumoWebo]))
-			),"NA")
+			    CALCULATE(
+			        COUNTROWS('dwh Dim_Afiliado'),
+			        DATEDIFF('dwh Dim_Afiliado'[FechaUltimoConsumoWebo], TODAY(), DAY) <= 90,
+			        NOT(ISBLANK('dwh Dim_Afiliado'[FechaUltimoConsumoWebo])),
+			        'dwh Dim_Afiliado'[FechaUltimoConsumoWebo] >= MAX(FechaInicioAjustada, FechaMin),  -- Filtro por FechaInicioAjustada
+			        'dwh Dim_Afiliado'[FechaUltimoConsumoWebo] <= MIN(FechaFinalAjustada, FechaMax)    -- Filtro por FechaFinalAjustada
+			    ),
+			    "NA"
+			)
 			
 			```
 		formatString: 0
@@ -146,25 +185,50 @@
 
 	measure AfiliadosPerdidos = ```
 			
+			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])  -- Fecha de inicio seleccionada
+			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])    -- Fecha final seleccionada
+			
+			-- Limitar por el rango de fechas del calendario
+			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del filtro
+			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del filtro
+			
+			RETURN
 			COALESCE(
-			CALCULATE(
-			    COUNTROWS('dwh Dim_Afiliado'),
-			    DATEDIFF('dwh Dim_Afiliado'[FechaUltimoConsumoWebo], TODAY(), DAY) > 90,
-			    NOT(ISBLANK('dwh Dim_Afiliado'[FechaUltimoConsumoWebo]))
-			),"NA")
+			    CALCULATE(
+			        COUNTROWS('dwh Dim_Afiliado'),
+			        DATEDIFF('dwh Dim_Afiliado'[FechaUltimoConsumoWebo], TODAY(), DAY) > 90,
+			        NOT(ISBLANK('dwh Dim_Afiliado'[FechaUltimoConsumoWebo])),
+			        'dwh Dim_Afiliado'[FechaUltimoConsumoWebo] >= MAX(FechaInicio, FechaMin),  -- Filtro por FechaInicio
+			        'dwh Dim_Afiliado'[FechaUltimoConsumoWebo] <= MIN(FechaFinal, FechaMax)    -- Filtro por FechaFinal
+			    ),
+			    "NA"
+			)
+			
 			
 			```
 		formatString: 0
 
 	measure AfiliadosEnRiesgo = ```
 			
+			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])  -- Fecha de inicio seleccionada
+			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])    -- Fecha final seleccionada
+			
+			-- Limitar por el rango de fechas del calendario
+			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del filtro
+			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del filtro
+			
+			RETURN
 			COALESCE(
-			CALCULATE(
-			    COUNTROWS('dwh Dim_Afiliado'),
-			    DATEDIFF('dwh Dim_Afiliado'[FechaUltimoConsumoWebo], TODAY(), DAY) > 80 &&
-			    DATEDIFF('dwh Dim_Afiliado'[FechaUltimoConsumoWebo], TODAY(), DAY) <= 90,
-			    NOT(ISBLANK('dwh Dim_Afiliado'[FechaUltimoConsumoWebo]))
-			),"NA")
+			    CALCULATE(
+			        COUNTROWS('dwh Dim_Afiliado'),
+			        DATEDIFF('dwh Dim_Afiliado'[FechaUltimoConsumoWebo], TODAY(), DAY) > 80 &&
+			        DATEDIFF('dwh Dim_Afiliado'[FechaUltimoConsumoWebo], TODAY(), DAY) <= 90,
+			        NOT(ISBLANK('dwh Dim_Afiliado'[FechaUltimoConsumoWebo])),
+			        'dwh Dim_Afiliado'[FechaUltimoConsumoWebo] >= MAX(FechaInicio, FechaMin),  -- Filtro por FechaInicio
+			        'dwh Dim_Afiliado'[FechaUltimoConsumoWebo] <= MIN(FechaFinal, FechaMax)    -- Filtro por FechaFinal
+			    ),
+			    "NA"
+			)
 			
 			```
 		formatString: 0
@@ -187,45 +251,75 @@
 
 	measure FemeninosAfiliados = ```
 			
-			COALESCE(
-			CALCULATE(
-			    COUNTROWS('dwh Dim_Afiliado'),
-			    'dwh Dim_Afiliado'[Genero] = "femenino"
-			),"NA")
+			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])  -- Fecha de inicio seleccionada
+			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])    -- Fecha final seleccionada
+			
+			-- Limitar por el rango de fechas del calendario
+			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del filtro
+			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del filtro
+			
+			RETURN COALESCE(
+			    CALCULATE(
+			        COUNTROWS('dwh Dim_Afiliado'),
+			        'dwh Dim_Afiliado'[Genero] = "femenino",
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] >= MAX(FechaInicio, FechaMin),  -- Filtro por FechaInicio
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= MIN(FechaFinal, FechaMax)    -- Filtro por FechaFinal
+			    ),
+			    "NA"
+			)
 			
 			```
 		formatString: 0
 
 	measure AfiliadosActivosPorcentaje = ```
 			
+			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])  -- Fecha de inicio seleccionada
+			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])    -- Fecha final seleccionada
+			
+			-- Limitar por el rango de fechas del calendario
+			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del filtro
+			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del filtro
+			
 			VAR TotalAfiliados = 
 			    CALCULATE(
 			        COUNTROWS('dwh Dim_Afiliado'), 
 			        NOT(ISBLANK('dwh Dim_Afiliado'[KeyAfiliado])),
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] >= MAX(FechaInicio, FechaMin),  -- Filtro por FechaInicio
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= MIN(FechaFinal, FechaMax),    -- Filtro por FechaFinal
 			        ALL('dwh Dim_Afiliado')
 			    )
+			
 			RETURN
-			COALESCE(
-			    DIVIDE(
-			        IF(ISERROR(VALUE([AfiliadosActivos])),
-			        0,
-			        VALUE([AfiliadosActivos])),
-			        COALESCE(TotalAfiliados, 1),
-			        BLANK()
-			    )
-			,"NA")
+			    COALESCE(
+			        DIVIDE(
+			            IF(ISERROR(VALUE([AfiliadosActivos])), 0, VALUE([AfiliadosActivos])),
+			            COALESCE(TotalAfiliados, 1),
+			            BLANK()
+			        ),
+			    "NA")
+			
 			```
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure AfiliadosEnRiesgoPorcentaje = ```
 			
+			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])  -- Fecha de inicio seleccionada
+			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])    -- Fecha final seleccionada
+			
+			-- Limitar por el rango de fechas del calendario
+			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del filtro
+			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del filtro
+			
 			VAR TotalAfiliados = 
 			    CALCULATE(
 			        COUNTROWS('dwh Dim_Afiliado'), 
 			        NOT(ISBLANK('dwh Dim_Afiliado'[KeyAfiliado])),
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] >= MAX(FechaInicio, FechaMin),  -- Filtro por FechaInicio
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= MIN(FechaFinal, FechaMax),    -- Filtro por FechaFinal
 			        ALL('dwh Dim_Afiliado')
 			    )
+			
 			RETURN
 			    DIVIDE(
 			        IF(
@@ -242,12 +336,22 @@
 
 	measure AfiliadosPerdidosPorcentaje = ```
 			
+			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])  -- Fecha de inicio seleccionada
+			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])    -- Fecha final seleccionada
+			
+			-- Limitar por el rango de fechas del calendario
+			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del filtro
+			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del filtro
+			
 			VAR TotalAfiliados = 
 			    CALCULATE(
 			        COUNTROWS('dwh Dim_Afiliado'), 
 			        NOT(ISBLANK('dwh Dim_Afiliado'[KeyAfiliado])),
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] >= MAX(FechaInicio, FechaMin),  -- Filtro por FechaInicio
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= MIN(FechaFinal, FechaMax),    -- Filtro por FechaFinal
 			        ALL('dwh Dim_Afiliado')
 			    )
+			
 			RETURN
 			COALESCE(
 			    DIVIDE(
@@ -260,6 +364,7 @@
 			        BLANK()
 			    )
 			, "NA")
+			
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 
@@ -488,9 +593,21 @@
 
 	column GeneroFiltrado = ```
 			
+			VAR FechaInicio = SELECTEDVALUE(UltimasFechasGeneral[Fecha Inicial])  -- Fecha de inicio seleccionada
+			VAR FechaFinal = SELECTEDVALUE(UltimasFechasGeneral[Fecha Final])    -- Fecha final seleccionada
+			
+			-- Limitar por el rango de fechas del calendario
+			VAR FechaMin = MIN('CalendarioGeneral'[Date])  -- Fecha mínima del filtro
+			VAR FechaMax = MAX('CalendarioGeneral'[Date])  -- Fecha máxima del filtro
+			
+			RETURN
 			IF(
 			    'dwh Dim_Afiliado'[Genero] = "masculino" || 'dwh Dim_Afiliado'[Genero] = "femenino",
-			    'dwh Dim_Afiliado'[Genero]
+			    IF(
+			        'dwh Dim_Afiliado'[FechaRegistroWebo]>= MAX(FechaInicio, FechaMin) && 
+			        'dwh Dim_Afiliado'[FechaRegistroWebo] <= MIN(FechaFinal, FechaMax),
+			        'dwh Dim_Afiliado'[Genero]
+			    )
 			)
 			
 			```

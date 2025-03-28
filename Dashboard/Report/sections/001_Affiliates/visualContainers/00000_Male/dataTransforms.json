@@ -37,8 +37,7 @@
       {
         "Restatement": "AfiliadosMasculinos",
         "Name": "dwh Dim_Afiliado.AfiliadosMasculinos",
-        "Type": 1,
-        "Format": "0"
+        "Type": 1
       }
     ]
   },
@@ -56,7 +55,6 @@
   "selects": [
     {
       "displayName": "AfiliadosMasculinos",
-      "format": "0",
       "queryName": "dwh Dim_Afiliado.AfiliadosMasculinos",
       "roles": {
         "Values": true

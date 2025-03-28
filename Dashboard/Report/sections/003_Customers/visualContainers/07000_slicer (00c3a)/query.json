@@ -9,11 +9,6 @@
               "Name": "d",
               "Entity": "dwh Dim_Afiliado",
               "Type": 0
-            },
-            {
-              "Name": "c",
-              "Entity": "CalendarioGeneral",
-              "Type": 0
             }
           ],
           "Select": [
@@ -57,52 +52,6 @@
                           }
                         ]
                       ]
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "Condition": {
-                "And": {
-                  "Left": {
-                    "Comparison": {
-                      "ComparisonKind": 2,
-                      "Left": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "c"
-                            }
-                          },
-                          "Property": "Date"
-                        }
-                      },
-                      "Right": {
-                        "Literal": {
-                          "Value": "datetime'2019-01-31T00:00:00'"
-                        }
-                      }
-                    }
-                  },
-                  "Right": {
-                    "Comparison": {
-                      "ComparisonKind": 3,
-                      "Left": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "c"
-                            }
-                          },
-                          "Property": "Date"
-                        }
-                      },
-                      "Right": {
-                        "Literal": {
-                          "Value": "datetime'2024-01-01T00:00:00'"
-                        }
-                      }
                     }
                   }
                 }

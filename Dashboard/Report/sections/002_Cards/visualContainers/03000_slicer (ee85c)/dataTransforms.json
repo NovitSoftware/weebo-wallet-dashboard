@@ -48,7 +48,7 @@
   "projectionActiveItems": {
     "Values": [
       {
-        "queryRef": "UltimasFechasGeneral.Texto",
+        "queryRef": "UltimasFechas.Texto",
         "suppressConcat": false
       }
     ]
@@ -57,7 +57,7 @@
     "Select": [
       {
         "Restatement": "Texto",
-        "Name": "UltimasFechasGeneral.Texto",
+        "Name": "UltimasFechas.Texto",
         "Type": 2048
       }
     ],
@@ -91,7 +91,7 @@
   "selects": [
     {
       "displayName": "Texto",
-      "queryName": "UltimasFechasGeneral.Texto",
+      "queryName": "UltimasFechas.Texto",
       "roles": {
         "Values": true
       },
@@ -103,7 +103,7 @@
         "Column": {
           "Expression": {
             "SourceRef": {
-              "Entity": "UltimasFechasGeneral"
+              "Entity": "UltimasFechas"
             }
           },
           "Property": "Texto"

@@ -36,66 +36,6 @@
                 "Value": "false"
               }
             }
-          },
-          "filter": {
-            "filter": {
-              "Version": 2,
-              "From": [
-                {
-                  "Name": "c",
-                  "Entity": "CalendarioGeneral",
-                  "Type": 0
-                }
-              ],
-              "Where": [
-                {
-                  "Condition": {
-                    "And": {
-                      "Left": {
-                        "Comparison": {
-                          "ComparisonKind": 2,
-                          "Left": {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "c"
-                                }
-                              },
-                              "Property": "Date"
-                            }
-                          },
-                          "Right": {
-                            "Literal": {
-                              "Value": "datetime'2019-01-31T00:00:00'"
-                            }
-                          }
-                        }
-                      },
-                      "Right": {
-                        "Comparison": {
-                          "ComparisonKind": 3,
-                          "Left": {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "c"
-                                }
-                              },
-                              "Property": "Date"
-                            }
-                          },
-                          "Right": {
-                            "Literal": {
-                              "Value": "datetime'2024-01-01T00:00:00'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              ]
-            }
           }
         }
       }
@@ -155,7 +95,7 @@
   "projectionActiveItems": {
     "Values": [
       {
-        "queryRef": "CalendarioGeneral.Date",
+        "queryRef": "dwh Dim_Tiempo.Fecha",
         "suppressConcat": false
       }
     ]
@@ -163,10 +103,10 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Date",
-        "Name": "CalendarioGeneral.Date",
+        "Restatement": "Fecha",
+        "Name": "dwh Dim_Tiempo.Fecha",
         "Type": 4,
-        "Format": "G"
+        "Format": "dd/MM/yyyy"
       }
     ]
   },
@@ -183,9 +123,9 @@
   ],
   "selects": [
     {
-      "displayName": "Date",
-      "format": "G",
-      "queryName": "CalendarioGeneral.Date",
+      "displayName": "Fecha",
+      "format": "dd/MM/yyyy",
+      "queryName": "dwh Dim_Tiempo.Fecha",
       "roles": {
         "Values": true
       },
@@ -197,10 +137,10 @@
         "Column": {
           "Expression": {
             "SourceRef": {
-              "Entity": "CalendarioGeneral"
+              "Entity": "dwh Dim_Tiempo"
             }
           },
-          "Property": "Date"
+          "Property": "Fecha"
         }
       },
       "aggregateSources": {
@@ -214,17 +154,17 @@
     },
     {
       "displayName": "",
-      "queryName": "Min(CalendarioGeneral.Date)",
+      "queryName": "Min(dwh Dim_Tiempo.Fecha)",
       "expr": {
         "Aggregation": {
           "Expression": {
             "Column": {
               "Expression": {
                 "SourceRef": {
-                  "Entity": "CalendarioGeneral"
+                  "Entity": "dwh Dim_Tiempo"
                 }
               },
-              "Property": "Date"
+              "Property": "Fecha"
             }
           },
           "Function": 3
@@ -233,17 +173,17 @@
     },
     {
       "displayName": "",
-      "queryName": "Max(CalendarioGeneral.Date)",
+      "queryName": "Max(dwh Dim_Tiempo.Fecha)",
       "expr": {
         "Aggregation": {
           "Expression": {
             "Column": {
               "Expression": {
                 "SourceRef": {
-                  "Entity": "CalendarioGeneral"
+                  "Entity": "dwh Dim_Tiempo"
                 }
               },
-              "Property": "Date"
+              "Property": "Fecha"
             }
           },
           "Function": 4

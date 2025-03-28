@@ -6,8 +6,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "c",
-              "Entity": "CalendarioGeneral",
+              "Name": "d",
+              "Entity": "dwh Dim_Tiempo",
               "Type": 0
             }
           ],
@@ -16,13 +16,13 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Source": "c"
+                    "Source": "d"
                   }
                 },
-                "Property": "Date"
+                "Property": "Fecha"
               },
-              "Name": "CalendarioGeneral.Date",
-              "NativeReferenceName": "Date"
+              "Name": "dwh Dim_Tiempo.Fecha",
+              "NativeReferenceName": "Fecha"
             },
             {
               "Aggregation": {
@@ -30,15 +30,15 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Source": "c"
+                        "Source": "d"
                       }
                     },
-                    "Property": "Date"
+                    "Property": "Fecha"
                   }
                 },
                 "Function": 3
               },
-              "Name": "Min(CalendarioGeneral.Date)"
+              "Name": "Min(dwh Dim_Tiempo.Fecha)"
             },
             {
               "Aggregation": {
@@ -46,15 +46,15 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Source": "c"
+                        "Source": "d"
                       }
                     },
-                    "Property": "Date"
+                    "Property": "Fecha"
                   }
                 },
                 "Function": 4
               },
-              "Name": "Max(CalendarioGeneral.Date)"
+              "Name": "Max(dwh Dim_Tiempo.Fecha)"
             }
           ]
         },

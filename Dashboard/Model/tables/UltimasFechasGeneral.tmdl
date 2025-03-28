@@ -15,7 +15,7 @@
 
 		variation Variation
 			isDefault
-			relationship: c6e9bbcb-078b-4bc3-8f74-f2675b692879
+			relationship: be05d62d-8d77-4bba-b5c2-10f8699b2500
 			defaultHierarchy: LocalDateTable_84d5a327-c2e6-4e23-a404-fa7d1a4a1cc9.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
@@ -28,7 +28,7 @@
 
 		variation Variation
 			isDefault
-			relationship: 06453e3c-ed8a-4e6f-887a-26257dcfb906
+			relationship: afcaa362-3d7a-484c-9a5e-46ee0c02094c
 			defaultHierarchy: LocalDateTable_5f0bcdab-8452-43e7-8041-5c083b762aea.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
@@ -48,26 +48,26 @@
 				RETURN
 				    UNION(
 				        SELECTCOLUMNS(
-				            { ("Último día", UltimoDia, FechaReferencia) },
-				            "Texto", "Último día",
+				            { ("Last Day", UltimoDia, FechaReferencia) },
+				            "Texto", "Last Day",
 				            "Fecha Inicial", UltimoDia,
 				            "Fecha Final", FechaReferencia
 				        ),
 				        SELECTCOLUMNS(
-				            { ("Última semana", UltimaSemana, FechaReferencia) },
-				            "Texto", "Última semana",
+				            { ("Last Week", UltimaSemana, FechaReferencia) },
+				            "Texto", "Last Week",
 				            "Fecha Inicial", UltimaSemana,
 				            "Fecha Final", FechaReferencia
 				        ),
 				        SELECTCOLUMNS(
-				            { ("Último mes", UltimoMes, FechaReferencia) },
-				            "Texto", "Último mes",
+				            { ("Last Month", UltimoMes, FechaReferencia) },
+				            "Texto", "Last Month",
 				            "Fecha Inicial", UltimoMes,
 				            "Fecha Final", FechaReferencia
 				        ),
 				        SELECTCOLUMNS(
-				            { ("Último año", UltimoAno, FechaReferencia) },
-				            "Texto", "Último año",
+				            { ("Last Year", UltimoAno, FechaReferencia) },
+				            "Texto", "Last Year",
 				            "Fecha Inicial", UltimoAno,
 				            "Fecha Final", FechaReferencia
 				        )

@@ -43,14 +43,9 @@
             "Property": "Empresa"
           },
           "Name": "dwh Dim_Empresa.Empresa",
-          "NativeReferenceName": "Enterprise"
+          "NativeReferenceName": "Empresa"
         }
       ]
-    },
-    "columnProperties": {
-      "dwh Dim_Empresa.Empresa": {
-        "displayName": "Enterprise"
-      }
     },
     "drillFilterOtherVisuals": true,
     "objects": {

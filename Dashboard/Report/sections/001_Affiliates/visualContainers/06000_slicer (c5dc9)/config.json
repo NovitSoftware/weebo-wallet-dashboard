@@ -27,7 +27,7 @@
       "Version": 2,
       "From": [
         {
-          "Name": "d1",
+          "Name": "d",
           "Entity": "dwh Dim_RangoEdad",
           "Type": 0
         }
@@ -37,7 +37,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Source": "d1"
+                "Source": "d"
               }
             },
             "Property": "RangoEdad"
@@ -55,7 +55,7 @@
             "orientation": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "0D"
                 }
               }
             }
