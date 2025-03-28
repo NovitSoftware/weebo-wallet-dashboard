@@ -42,7 +42,7 @@
             "Property": "AfiliadosMasculinos"
           },
           "Name": "dwh Dim_Afiliado.AfiliadosMasculinos",
-          "NativeReferenceName": "AfiliadosMasculinos1"
+          "NativeReferenceName": "AfiliadosMasculinos"
         }
       ],
       "OrderBy": [

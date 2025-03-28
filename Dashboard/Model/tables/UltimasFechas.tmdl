@@ -15,7 +15,7 @@
 
 		variation Variation
 			isDefault
-			relationship: 4461c8e5-8a0f-479a-b470-d0e9d1643478
+			relationship: 21f17496-d8a1-4f12-a32a-a67b160b0002
 			defaultHierarchy: LocalDateTable_6b94448f-10dd-45e8-88d4-dccd6680ce98.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
@@ -28,7 +28,7 @@
 
 		variation Variation
 			isDefault
-			relationship: 5a40737a-53da-4031-9da9-17dd6852469e
+			relationship: d50e7eb7-403b-41ab-977b-b08dba3a96d4
 			defaultHierarchy: LocalDateTable_0259c88c-5779-4e95-8c11-d0c032169312.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
@@ -49,28 +49,28 @@
 				RETURN
 				    UNION(
 				        SELECTCOLUMNS(
-				            { ("Último día", UltimoDia, FechaReferencia) },
-				            "Texto", [Value1],
-				            "Fecha Inicial", [Value2],
-				            "Fecha Final", [Value3]
+				            { ("Last Day", UltimoDia, FechaReferencia) },
+				            "Texto", "Last Day",
+				            "Fecha Inicial", UltimoDia,
+				            "Fecha Final", FechaReferencia
 				        ),
 				        SELECTCOLUMNS(
-				            { ("Última semana", UltimaSemana, FechaReferencia) },
-				            "Texto", [Value1],
-				            "Fecha Inicial", [Value2],
-				            "Fecha Final", [Value3]
+				            { ("Last Week", UltimaSemana, FechaReferencia) },
+				            "Texto", "Last Week",
+				            "Fecha Inicial", UltimaSemana,
+				            "Fecha Final", FechaReferencia
 				        ),
 				        SELECTCOLUMNS(
-				            { ("Último mes", UltimoMes, FechaReferencia) },
-				            "Texto", [Value1],
-				            "Fecha Inicial", [Value2],
-				            "Fecha Final", [Value3]
+				            { ("Last Month", UltimoMes, FechaReferencia) },
+				            "Texto", "Last Month",
+				            "Fecha Inicial", UltimoMes,
+				            "Fecha Final", FechaReferencia
 				        ),
 				        SELECTCOLUMNS(
-				            { ("Último año", UltimoAno, FechaReferencia) },
-				            "Texto", [Value1],
-				            "Fecha Inicial", [Value2],
-				            "Fecha Final", [Value3]
+				            { ("Last Year", UltimoAno, FechaReferencia) },
+				            "Texto", "Last Year",
+				            "Fecha Inicial", UltimoAno,
+				            "Fecha Final", FechaReferencia
 				        )
 				    )
 				

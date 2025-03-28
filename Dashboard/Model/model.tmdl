@@ -8,7 +8,7 @@
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBIDesktopVersion = 2.138.1452.0 (24.11)
+annotation PBIDesktopVersion = 2.139.1678.0 (24.12)+2a034ab280bddf891eb7bb9ebfe6996f9c3a3196
 
 annotation PBI_QueryOrder = ["dwh Dim_Afiliado","dwh Dim_Cupon","dwh Dim_CuponPromocional","dwh Dim_Empresa","dwh Dim_Programa","dwh Dim_Promocion","dwh Dim_RangoEdad","dwh Dim_Tarjeta","dwh Dim_Tiempo","dwh Dim_Tienda","dwh Fact_AfiliacionEmpresa","dwh Fact_AfiliacionWebo","dwh Fact_Cupon","dwh Fact_Facturacion","dwh Fact_Planes","dwh Fact_Promociones","stage StgAfiliacion","stage StgCortesAfiliadosEmpresa","stage StgCortesAfiliadosWebo","stage StgCortesCupon","stage StgCortesPlanes","stage StgCortesPromociones","stage StgCupon","stage StgCuponPromocional","stage StgEmpresa","stage StgFactAfiliacionEmpresa","stage StgFactAfiliacionWebo","stage StgFactCupon","stage StgFactFacturacion","stage StgFactPlanes","stage StgFactPromociones","stage StgLog","stage StgPrograma","stage StgPromocion","stage StgTarjeta","stage StgTienda","stage StgTrackingStickers","stage StgTransaccion","sysdiagrams"]
 
@@ -150,12 +150,12 @@ ref table LocalDateTable_2379fe0a-2395-4b4d-bd24-a3ee06f28d39
 ref table Top3TarjetasActivasPorDistrito
 ref table LocalDateTable_97f101e4-a3d5-4138-9aed-f35b25f07606
 ref table UltimasFechasGeneral
-ref table LocalDateTable_6b94448f-10dd-45e8-88d4-dccd6680ce98
-ref table LocalDateTable_0259c88c-5779-4e95-8c11-d0c032169312
 ref table LocalDateTable_d7f24b45-5c35-4499-9096-14e7bc3e30f1
 ref table TablaFiltro
 ref table LocalDateTable_84d5a327-c2e6-4e23-a404-fa7d1a4a1cc9
 ref table LocalDateTable_5f0bcdab-8452-43e7-8041-5c083b762aea
+ref table LocalDateTable_6b94448f-10dd-45e8-88d4-dccd6680ce98
+ref table LocalDateTable_0259c88c-5779-4e95-8c11-d0c032169312
 
 ref cultureInfo en-US
 

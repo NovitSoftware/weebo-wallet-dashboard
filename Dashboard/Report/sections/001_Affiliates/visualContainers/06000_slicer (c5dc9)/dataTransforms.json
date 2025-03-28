@@ -6,7 +6,7 @@
           "orientation": {
             "expr": {
               "Literal": {
-                "Value": "1D"
+                "Value": "0D"
               }
             }
           }

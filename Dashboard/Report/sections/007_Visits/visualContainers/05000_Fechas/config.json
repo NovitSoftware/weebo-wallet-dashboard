@@ -18,7 +18,7 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "CalendarioGeneral.Date",
+          "queryRef": "dwh Dim_Tiempo.Fecha",
           "active": true
         }
       ]
@@ -27,8 +27,8 @@
       "Version": 2,
       "From": [
         {
-          "Name": "c",
-          "Entity": "CalendarioGeneral",
+          "Name": "d",
+          "Entity": "dwh Dim_Tiempo",
           "Type": 0
         }
       ],
@@ -37,13 +37,13 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Source": "c"
+                "Source": "d"
               }
             },
-            "Property": "Date"
+            "Property": "Fecha"
           },
-          "Name": "CalendarioGeneral.Date",
-          "NativeReferenceName": "Date"
+          "Name": "dwh Dim_Tiempo.Fecha",
+          "NativeReferenceName": "Fecha"
         }
       ],
       "OrderBy": [
@@ -53,10 +53,10 @@
             "Column": {
               "Expression": {
                 "SourceRef": {
-                  "Source": "c"
+                  "Source": "d"
                 }
               },
-              "Property": "Date"
+              "Property": "Fecha"
             }
           }
         }
@@ -100,66 +100,6 @@
                 "Literal": {
                   "Value": "false"
                 }
-              }
-            },
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "c",
-                    "Entity": "CalendarioGeneral",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "And": {
-                        "Left": {
-                          "Comparison": {
-                            "ComparisonKind": 2,
-                            "Left": {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Source": "c"
-                                  }
-                                },
-                                "Property": "Date"
-                              }
-                            },
-                            "Right": {
-                              "Literal": {
-                                "Value": "datetime'2019-01-31T00:00:00'"
-                              }
-                            }
-                          }
-                        },
-                        "Right": {
-                          "Comparison": {
-                            "ComparisonKind": 3,
-                            "Left": {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Source": "c"
-                                  }
-                                },
-                                "Property": "Date"
-                              }
-                            },
-                            "Right": {
-                              "Literal": {
-                                "Value": "datetime'2024-01-01T00:00:00'"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                ]
               }
             }
           }

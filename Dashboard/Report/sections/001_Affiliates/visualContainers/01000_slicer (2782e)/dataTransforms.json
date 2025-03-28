@@ -56,7 +56,7 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Enterprise",
+        "Restatement": "Empresa",
         "Name": "dwh Dim_Empresa.Empresa",
         "Type": 2048
       }
@@ -90,7 +90,7 @@
   ],
   "selects": [
     {
-      "displayName": "Enterprise",
+      "displayName": "Empresa",
       "queryName": "dwh Dim_Empresa.Empresa",
       "roles": {
         "Values": true

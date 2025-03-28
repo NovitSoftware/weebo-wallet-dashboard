@@ -3,7 +3,7 @@
 	column KeyFechaFacturacion
 		dataType: int64
 		formatString: 0
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: KeyFechaFacturacion
 
 		annotation SummarizationSetBy = Automatic
@@ -19,7 +19,7 @@
 	column KeyRangoEdad
 		dataType: int64
 		formatString: 0
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: KeyRangoEdad
 
 		annotation SummarizationSetBy = Automatic
@@ -27,7 +27,7 @@
 	column KeyEmpresa
 		dataType: int64
 		formatString: 0
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: KeyEmpresa
 
 		annotation SummarizationSetBy = Automatic
@@ -35,7 +35,7 @@
 	column KeyTienda
 		dataType: int64
 		formatString: 0
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: KeyTienda
 
 		annotation SummarizationSetBy = Automatic
@@ -43,7 +43,7 @@
 	column KeyPromocion
 		dataType: int64
 		formatString: 0
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: KeyPromocion
 
 		annotation SummarizationSetBy = Automatic
@@ -51,7 +51,7 @@
 	column KeyPrograma
 		dataType: int64
 		formatString: 0
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: KeyPrograma
 
 		annotation SummarizationSetBy = Automatic
@@ -59,14 +59,14 @@
 	column KeyTarjeta
 		dataType: int64
 		formatString: 0
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: KeyTarjeta
 
 		annotation SummarizationSetBy = Automatic
 
 	column Importe
 		dataType: double
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Importe
 
 		annotation SummarizationSetBy = Automatic
@@ -76,7 +76,7 @@
 	column StickersEntregados
 		dataType: int64
 		formatString: 0
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: StickersEntregados
 
 		annotation SummarizationSetBy = Automatic
