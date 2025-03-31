@@ -6,13 +6,13 @@
           "Version": 2,
           "From": [
             {
-              "Name": "d",
-              "Entity": "dwh Dim_Empresa",
+              "Name": "u",
+              "Entity": "UltimasFechas",
               "Type": 0
             },
             {
-              "Name": "c",
-              "Entity": "CalendarioGeneral",
+              "Name": "d",
+              "Entity": "dwh Dim_Tiempo",
               "Type": 0
             }
           ],
@@ -21,13 +21,13 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Source": "d"
+                    "Source": "u"
                   }
                 },
-                "Property": "Empresa"
+                "Property": "Texto"
               },
-              "Name": "dwh Dim_Empresa.Empresa",
-              "NativeReferenceName": "Enterprise"
+              "Name": "UltimasFechas.Texto",
+              "NativeReferenceName": "Texto"
             }
           ],
           "Where": [
@@ -41,10 +41,10 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "d"
+                                "Source": "u"
                               }
                             },
-                            "Property": "Empresa"
+                            "Property": "Texto"
                           }
                         }
                       ],
@@ -64,21 +64,45 @@
             },
             {
               "Condition": {
-                "Comparison": {
-                  "ComparisonKind": 3,
+                "And": {
                   "Left": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Source": "c"
+                    "Comparison": {
+                      "ComparisonKind": 2,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "d"
+                            }
+                          },
+                          "Property": "Fecha"
                         }
                       },
-                      "Property": "Date"
+                      "Right": {
+                        "Literal": {
+                          "Value": "datetime'2019-09-01T00:00:00'"
+                        }
+                      }
                     }
                   },
                   "Right": {
-                    "Literal": {
-                      "Value": "datetime'2025-03-15T00:00:00'"
+                    "Comparison": {
+                      "ComparisonKind": 3,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "d"
+                            }
+                          },
+                          "Property": "Fecha"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "datetime'2024-03-01T00:00:00'"
+                        }
+                      }
                     }
                   }
                 }

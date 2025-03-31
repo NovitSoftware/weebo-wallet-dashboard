@@ -35,7 +35,7 @@
 	column KeyTarjeta
 		dataType: int64
 		formatString: 0
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: KeyTarjeta
 
 		annotation SummarizationSetBy = Automatic

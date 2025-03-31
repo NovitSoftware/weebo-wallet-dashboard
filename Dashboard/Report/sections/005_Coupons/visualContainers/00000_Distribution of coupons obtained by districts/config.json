@@ -18,15 +18,15 @@
     "projections": {
       "Y": [
         {
-          "queryRef": "Sum(CuponesPorDistrito.TotalStickersActivos)"
+          "queryRef": "dwh Fact_Cupon.TotalCuponesActivos"
         },
         {
-          "queryRef": "Sum(CuponesPorDistrito.TotalStickersVencidos)"
+          "queryRef": "dwh Fact_Cupon.TotalCuponesVencidos"
         }
       ],
       "Category": [
         {
-          "queryRef": "CuponesPorDistrito.Distrito",
+          "queryRef": "dwh Dim_Afiliado.Distrito",
           "active": true
         }
       ]
@@ -35,56 +35,51 @@
       "Version": 2,
       "From": [
         {
-          "Name": "c",
-          "Entity": "CuponesPorDistrito",
+          "Name": "d",
+          "Entity": "dwh Fact_Cupon",
+          "Type": 0
+        },
+        {
+          "Name": "d1",
+          "Entity": "dwh Dim_Afiliado",
           "Type": 0
         }
       ],
       "Select": [
         {
-          "Aggregation": {
+          "Measure": {
             "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Source": "c"
-                  }
-                },
-                "Property": "TotalStickersActivos"
+              "SourceRef": {
+                "Source": "d"
               }
             },
-            "Function": 0
+            "Property": "TotalCuponesActivos"
           },
-          "Name": "Sum(CuponesPorDistrito.TotalStickersActivos)",
-          "NativeReferenceName": "Assets"
+          "Name": "dwh Fact_Cupon.TotalCuponesActivos",
+          "NativeReferenceName": "TotalCuponesActivos"
         },
         {
-          "Aggregation": {
+          "Measure": {
             "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Source": "c"
-                  }
-                },
-                "Property": "TotalStickersVencidos"
+              "SourceRef": {
+                "Source": "d"
               }
             },
-            "Function": 0
+            "Property": "TotalCuponesVencidos"
           },
-          "Name": "Sum(CuponesPorDistrito.TotalStickersVencidos)",
-          "NativeReferenceName": "Expired"
+          "Name": "dwh Fact_Cupon.TotalCuponesVencidos",
+          "NativeReferenceName": "TotalCuponesVencidos"
         },
         {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Source": "c"
+                "Source": "d1"
               }
             },
             "Property": "Distrito"
           },
-          "Name": "CuponesPorDistrito.Distrito",
+          "Name": "dwh Dim_Afiliado.Distrito",
           "NativeReferenceName": "Distrito"
         }
       ],
@@ -92,18 +87,13 @@
         {
           "Direction": 2,
           "Expression": {
-            "Aggregation": {
+            "Measure": {
               "Expression": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Source": "c"
-                    }
-                  },
-                  "Property": "TotalStickersActivos"
+                "SourceRef": {
+                  "Source": "d"
                 }
               },
-              "Function": 0
+              "Property": "TotalCuponesActivos"
             }
           }
         }

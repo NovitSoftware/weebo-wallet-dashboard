@@ -1,0 +1,211 @@
+{
+  "Commands": [
+    {
+      "SemanticQueryDataShapeCommand": {
+        "Query": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d1",
+              "Entity": "dwh Dim_RangoEdad",
+              "Type": 0
+            },
+            {
+              "Name": "d2",
+              "Entity": "dwh Fact_Facturacion",
+              "Type": 0
+            },
+            {
+              "Name": "d",
+              "Entity": "dwh Dim_Tiempo",
+              "Type": 0
+            }
+          ],
+          "Select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d1"
+                  }
+                },
+                "Property": "RangoEdad"
+              },
+              "Name": "dwh Dim_RangoEdad.RangoEdad",
+              "NativeReferenceName": "age"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d2"
+                      }
+                    },
+                    "Property": "Importe"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(dwh Fact_Facturacion.Importe)",
+              "NativeReferenceName": "Total invoicing"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "Day"
+              },
+              "Name": "dwh Dim_Tiempo.Dia",
+              "NativeReferenceName": "Day"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "Month"
+              },
+              "Name": "dwh Dim_Tiempo.Mes",
+              "NativeReferenceName": "Month"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "Week"
+              },
+              "Name": "dwh Dim_Tiempo.Semana",
+              "NativeReferenceName": "Week"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "Year"
+              },
+              "Name": "dwh Dim_Tiempo.Año",
+              "NativeReferenceName": "Year"
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "And": {
+                  "Left": {
+                    "Comparison": {
+                      "ComparisonKind": 2,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "d"
+                            }
+                          },
+                          "Property": "Fecha"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "datetime'2019-09-01T00:00:00'"
+                        }
+                      }
+                    }
+                  },
+                  "Right": {
+                    "Comparison": {
+                      "ComparisonKind": 3,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "d"
+                            }
+                          },
+                          "Property": "Fecha"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "datetime'2024-03-01T00:00:00'"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ],
+          "OrderBy": [
+            {
+              "Direction": 2,
+              "Expression": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "d2"
+                        }
+                      },
+                      "Property": "Importe"
+                    }
+                  },
+                  "Function": 0
+                }
+              }
+            }
+          ]
+        },
+        "Binding": {
+          "Primary": {
+            "Groupings": [
+              {
+                "Projections": [
+                  1,
+                  2
+                ]
+              }
+            ]
+          },
+          "Secondary": {
+            "Groupings": [
+              {
+                "Projections": [
+                  0
+                ]
+              }
+            ]
+          },
+          "DataReduction": {
+            "DataVolume": 4,
+            "Primary": {
+              "Window": {
+                "Count": 200
+              }
+            },
+            "Secondary": {
+              "Top": {
+                "Count": 60
+              }
+            }
+          },
+          "Version": 1
+        },
+        "ExecutionMetricsKind": 1
+      }
+    }
+  ]
+}

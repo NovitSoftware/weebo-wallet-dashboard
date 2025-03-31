@@ -6,13 +6,13 @@
           "Version": 2,
           "From": [
             {
-              "Name": "d",
-              "Entity": "dwh Dim_Empresa",
+              "Name": "d1",
+              "Entity": "dwh Dim_RangoEdad",
               "Type": 0
             },
             {
-              "Name": "c",
-              "Entity": "CalendarioGeneral",
+              "Name": "d11",
+              "Entity": "dwh Dim_Tiempo",
               "Type": 0
             }
           ],
@@ -21,13 +21,13 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Source": "d"
+                    "Source": "d1"
                   }
                 },
-                "Property": "Empresa"
+                "Property": "RangoEdad"
               },
-              "Name": "dwh Dim_Empresa.Empresa",
-              "NativeReferenceName": "Enterprise"
+              "Name": "dwh Dim_RangoEdad.RangoEdad",
+              "NativeReferenceName": "RangoEdad"
             }
           ],
           "Where": [
@@ -41,10 +41,10 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "d"
+                                "Source": "d1"
                               }
                             },
-                            "Property": "Empresa"
+                            "Property": "RangoEdad"
                           }
                         }
                       ],
@@ -53,6 +53,13 @@
                           {
                             "Literal": {
                               "Value": "null"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'NO DEFINIDO'"
                             }
                           }
                         ]
@@ -64,21 +71,45 @@
             },
             {
               "Condition": {
-                "Comparison": {
-                  "ComparisonKind": 3,
+                "And": {
                   "Left": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Source": "c"
+                    "Comparison": {
+                      "ComparisonKind": 2,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "d11"
+                            }
+                          },
+                          "Property": "Fecha"
                         }
                       },
-                      "Property": "Date"
+                      "Right": {
+                        "Literal": {
+                          "Value": "datetime'2019-09-01T00:00:00'"
+                        }
+                      }
                     }
                   },
                   "Right": {
-                    "Literal": {
-                      "Value": "datetime'2025-03-15T00:00:00'"
+                    "Comparison": {
+                      "ComparisonKind": 3,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "d11"
+                            }
+                          },
+                          "Property": "Fecha"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "datetime'2024-03-01T00:00:00'"
+                        }
+                      }
                     }
                   }
                 }
