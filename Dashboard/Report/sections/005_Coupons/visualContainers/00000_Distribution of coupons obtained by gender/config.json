@@ -18,16 +18,16 @@
     "projections": {
       "Category": [
         {
-          "queryRef": "CuponesPorGenero.Genero",
+          "queryRef": "dwh Dim_Afiliado.Genero",
           "active": true
         }
       ],
       "Y": [
         {
-          "queryRef": "Sum(CuponesPorGenero.TotalCuponesActivos)"
+          "queryRef": "dwh Fact_Cupon.TotalCuponesActivos"
         },
         {
-          "queryRef": "Sum(CuponesPorGenero.TotalCuponesVencidos)"
+          "queryRef": "dwh Fact_Cupon.TotalCuponesVencidos"
         }
       ]
     },
@@ -35,75 +35,65 @@
       "Version": 2,
       "From": [
         {
-          "Name": "c",
-          "Entity": "CuponesPorGenero",
+          "Name": "d",
+          "Entity": "dwh Fact_Cupon",
+          "Type": 0
+        },
+        {
+          "Name": "d1",
+          "Entity": "dwh Dim_Afiliado",
           "Type": 0
         }
       ],
       "Select": [
         {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "TotalCuponesActivos"
+          },
+          "Name": "dwh Fact_Cupon.TotalCuponesActivos",
+          "NativeReferenceName": "TotalCuponesActivos"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "TotalCuponesVencidos"
+          },
+          "Name": "dwh Fact_Cupon.TotalCuponesVencidos",
+          "NativeReferenceName": "TotalCuponesVencidos"
+        },
+        {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Source": "c"
+                "Source": "d1"
               }
             },
             "Property": "Genero"
           },
-          "Name": "CuponesPorGenero.Genero",
+          "Name": "dwh Dim_Afiliado.Genero",
           "NativeReferenceName": "Genero"
-        },
-        {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Source": "c"
-                  }
-                },
-                "Property": "TotalCuponesActivos"
-              }
-            },
-            "Function": 0
-          },
-          "Name": "Sum(CuponesPorGenero.TotalCuponesActivos)",
-          "NativeReferenceName": "Assets"
-        },
-        {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Source": "c"
-                  }
-                },
-                "Property": "TotalCuponesVencidos"
-              }
-            },
-            "Function": 0
-          },
-          "Name": "Sum(CuponesPorGenero.TotalCuponesVencidos)",
-          "NativeReferenceName": "Expired"
         }
       ],
       "OrderBy": [
         {
           "Direction": 2,
           "Expression": {
-            "Aggregation": {
+            "Measure": {
               "Expression": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Source": "c"
-                    }
-                  },
-                  "Property": "TotalCuponesActivos"
+                "SourceRef": {
+                  "Source": "d"
                 }
               },
-              "Function": 0
+              "Property": "TotalCuponesActivos"
             }
           }
         }

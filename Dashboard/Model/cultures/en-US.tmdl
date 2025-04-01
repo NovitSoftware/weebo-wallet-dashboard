@@ -4412,7 +4412,7 @@
 			          }
 			        },
 			        {
-			          "Assets": {
+			          "Asset": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4422,7 +4422,7 @@
 			          }
 			        },
 			        {
-			          "Asset": {
+			          "Assets": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4646,6 +4646,9 @@
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "key tienda": {
@@ -24050,6 +24053,9 @@
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "fkcliente": {
@@ -24561,6 +24567,9 @@
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "fkcliente": {
@@ -25060,6 +25069,9 @@
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "fkcliente": {
@@ -25509,6 +25521,9 @@
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "fkcliente": {
@@ -47295,6 +47310,190 @@
 			        }
 			      ]
 			    },
+			    "stage_StgTransaccion_has_stage_StgPrograma": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTransaccion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTransaccion": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion"
+			          }
+			        },
+			        "stage_StgPrograma": {
+			          "Target": {
+			            "Entity": "stage_StgPrograma"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTransaccion"
+			            },
+			            "Object": {
+			              "Role": "stage_StgPrograma"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgTransaccions_have_stage_StgProgramas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgPrograma"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTransaccion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgProgramas_have_stage_StgTransaccions"
+			        }
+			      ]
+			    },
+			    "stage_StgTrackingSticker_has_stage_StgPrograma": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTrackingStickers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTrackingSticker": {
+			          "Target": {
+			            "Entity": "stage_StgTrackingSticker"
+			          }
+			        },
+			        "stage_StgPrograma": {
+			          "Target": {
+			            "Entity": "stage_StgPrograma"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTrackingSticker"
+			            },
+			            "Object": {
+			              "Role": "stage_StgPrograma"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgTrackingStickers_have_stage_StgProgramas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgPrograma"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTrackingSticker"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgProgramas_have_stage_StgTrackingStickers"
+			        }
+			      ]
+			    },
+			    "stage_StgTienda_has_stage_StgPrograma": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTienda"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTienda": {
+			          "Target": {
+			            "Entity": "stage_StgTienda"
+			          }
+			        },
+			        "stage_StgPrograma": {
+			          "Target": {
+			            "Entity": "stage_StgPrograma"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTienda"
+			            },
+			            "Object": {
+			              "Role": "stage_StgPrograma"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgTiendas_have_stage_StgProgramas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgPrograma"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTienda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgProgramas_have_stage_StgTiendas"
+			        }
+			      ]
+			    },
+			    "stage_StgTarjeta_has_stage_StgPrograma": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTarjeta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTarjeta": {
+			          "Target": {
+			            "Entity": "stage_StgTarjeta"
+			          }
+			        },
+			        "stage_StgPrograma": {
+			          "Target": {
+			            "Entity": "stage_StgPrograma"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTarjeta"
+			            },
+			            "Object": {
+			              "Role": "stage_StgPrograma"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgTarjetas_have_stage_StgProgramas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgPrograma"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTarjeta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgProgramas_have_stage_StgTarjetas"
+			        }
+			      ]
+			    },
 			    "stage_StgPromocion_has_stage_StgPrograma": {
 			      "Binding": {
 			        "ConceptualEntity": "stage StgPromocion"
@@ -49581,6 +49780,52 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_Dim_Afiliados_have_dwh_Fact_AfiliacionEmpresas"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Tienda_has_stage_StgFactFacturacion": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tienda"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tienda": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tienda"
+			          }
+			        },
+			        "stage_StgFactFacturacion": {
+			          "Target": {
+			            "Entity": "stage_StgFactFacturacion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tienda"
+			            },
+			            "Object": {
+			              "Role": "stage_StgFactFacturacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Tiendas_have_stage_StgFactFacturacions"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgFactFacturacion"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tienda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgFactFacturacions_have_dwh_Dim_Tiendas"
 			        }
 			      ]
 			    },
@@ -54119,39 +54364,6 @@
 			        }
 			      ]
 			    },
-			    "stage_StgTransaccion_has_fkcliente": {
-			      "Binding": {
-			        "ConceptualEntity": "stage StgTransaccion"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "stage_StgTransaccion": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion"
-			          }
-			        },
-			        "stage_StgTransaccion.fkcliente": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion.fkcliente"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgTransaccion"
-			            },
-			            "Object": {
-			              "Role": "stage_StgTransaccion.fkcliente"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "stage_StgTransaccions_have_fkclientes"
-			        }
-			      ]
-			    },
 			    "stage_StgTransaccion_has_fkprom": {
 			      "Binding": {
 			        "ConceptualEntity": "stage StgTransaccion"
@@ -54512,39 +54724,6 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "stage_StgTrackingStickers_have_fktiendas"
-			        }
-			      ]
-			    },
-			    "stage_StgTrackingSticker_has_fkcliente": {
-			      "Binding": {
-			        "ConceptualEntity": "stage StgTrackingStickers"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "stage_StgTrackingSticker": {
-			          "Target": {
-			            "Entity": "stage_StgTrackingSticker"
-			          }
-			        },
-			        "stage_StgTrackingSticker.fkcliente": {
-			          "Target": {
-			            "Entity": "stage_StgTrackingSticker.fkcliente"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgTrackingSticker"
-			            },
-			            "Object": {
-			              "Role": "stage_StgTrackingSticker.fkcliente"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "stage_StgTrackingStickers_have_fkclientes"
 			        }
 			      ]
 			    },
@@ -54911,39 +55090,6 @@
 			        }
 			      ]
 			    },
-			    "stage_StgTienda_has_fkcliente": {
-			      "Binding": {
-			        "ConceptualEntity": "stage StgTienda"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "stage_StgTienda": {
-			          "Target": {
-			            "Entity": "stage_StgTienda"
-			          }
-			        },
-			        "stage_StgTienda.fkcliente": {
-			          "Target": {
-			            "Entity": "stage_StgTienda.fkcliente"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgTienda"
-			            },
-			            "Object": {
-			              "Role": "stage_StgTienda.fkcliente"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "stage_StgTiendas_have_fkclientes"
-			        }
-			      ]
-			    },
 			    "stage_StgTienda_has_idtienda": {
 			      "Binding": {
 			        "ConceptualEntity": "stage StgTienda"
@@ -55139,39 +55285,6 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "stage_StgTarjetas_have_fkcamps"
-			        }
-			      ]
-			    },
-			    "stage_StgTarjeta_has_fkcliente": {
-			      "Binding": {
-			        "ConceptualEntity": "stage StgTarjeta"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "stage_StgTarjeta": {
-			          "Target": {
-			            "Entity": "stage_StgTarjeta"
-			          }
-			        },
-			        "stage_StgTarjeta.fkcliente": {
-			          "Target": {
-			            "Entity": "stage_StgTarjeta.fkcliente"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgTarjeta"
-			            },
-			            "Object": {
-			              "Role": "stage_StgTarjeta.fkcliente"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "stage_StgTarjetas_have_fkclientes"
 			        }
 			      ]
 			    },
@@ -63356,39 +63469,6 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_Dim_Tiendas_have_key_tienda_alts"
-			        }
-			      ]
-			    },
-			    "dwh_Dim_Tienda_has_key_tienda": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Dim_Tienda"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Dim_Tienda": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Tienda"
-			          }
-			        },
-			        "dwh_Dim_Tienda.key_tienda": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Tienda.key_tienda"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Dim_Tienda"
-			            },
-			            "Object": {
-			              "Role": "dwh_Dim_Tienda.key_tienda"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Dim_Tiendas_have_key_tiendas"
 			        }
 			      ]
 			    },

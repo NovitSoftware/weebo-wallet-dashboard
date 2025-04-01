@@ -600,6 +600,8 @@ relationship AutoDetected_1ed83967-b868-4bf1-883d-201959fcaf9b
 	toColumn: 'dwh Dim_RangoEdad'.KeyRangoEdad
 
 relationship AutoDetected_9b29215d-4e30-482e-8b1e-27a1c4add88d
+	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: bothDirections
 	fromColumn: 'dwh Fact_Cupon'.KeyTarjeta
 	toColumn: 'dwh Dim_Tarjeta'.KeyTarjeta
 
@@ -608,6 +610,7 @@ relationship AutoDetected_974afeea-b611-4569-ab4a-bf44a8c1316e
 	toColumn: 'dwh Dim_Tarjeta'.KeyTarjeta
 
 relationship AutoDetected_f9e3cb70-801d-4452-9afb-730a11cd48c6
+	isActive: false
 	fromColumn: 'stage StgFactCupon'.KeyTarjeta
 	toColumn: 'dwh Dim_Tarjeta'.KeyTarjeta
 

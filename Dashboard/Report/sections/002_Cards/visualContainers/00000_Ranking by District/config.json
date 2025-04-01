@@ -1,14 +1,14 @@
 {
-  "name": "c49be7c1c762b7e9bebe",
+  "name": "9043b28196747d35ab2c",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "height": 224.91601369849556,
-        "width": 208.1730584346424,
-        "x": 13.675602378918114,
-        "y": 18.114041371690917,
-        "z": 13000,
+        "height": 226.93795384283555,
+        "width": 220.84565977994063,
+        "x": 11.28408480627434,
+        "y": 11.595369904378515,
+        "z": 8000,
         "tabOrder": 0
       }
     }
@@ -18,10 +18,10 @@
     "projections": {
       "Values": [
         {
-          "queryRef": "Top3Distritos.Distrito"
+          "queryRef": "Top3TarjetasActivasPorDistrito.Distrito"
         },
         {
-          "queryRef": "Sum(Top3Distritos.TotalStickersOtorgados)"
+          "queryRef": "Sum(Top3TarjetasActivasPorDistrito.Tarjetas Activas)"
         }
       ]
     },
@@ -30,7 +30,7 @@
       "From": [
         {
           "Name": "t",
-          "Entity": "Top3Distritos",
+          "Entity": "Top3TarjetasActivasPorDistrito",
           "Type": 0
         }
       ],
@@ -44,7 +44,7 @@
             },
             "Property": "Distrito"
           },
-          "Name": "Top3Distritos.Distrito",
+          "Name": "Top3TarjetasActivasPorDistrito.Distrito",
           "NativeReferenceName": "District"
         },
         {
@@ -56,13 +56,13 @@
                     "Source": "t"
                   }
                 },
-                "Property": "TotalStickersOtorgados"
+                "Property": "Tarjetas Activas"
               }
             },
             "Function": 0
           },
-          "Name": "Sum(Top3Distritos.TotalStickersOtorgados)",
-          "NativeReferenceName": "Stamps delivered"
+          "Name": "Sum(Top3TarjetasActivasPorDistrito.Tarjetas Activas)",
+          "NativeReferenceName": "Sum of Tarjetas Activas"
         }
       ],
       "OrderBy": [
@@ -77,7 +77,7 @@
                       "Source": "t"
                     }
                   },
-                  "Property": "TotalStickersOtorgados"
+                  "Property": "Tarjetas Activas"
                 }
               },
               "Function": 0
@@ -87,11 +87,8 @@
       ]
     },
     "columnProperties": {
-      "Top3Distritos.Distrito": {
+      "Top3TarjetasActivasPorDistrito.Distrito": {
         "displayName": "District"
-      },
-      "Sum(Top3Distritos.TotalStickersOtorgados)": {
-        "displayName": "Stamps delivered"
       }
     },
     "drillFilterOtherVisuals": true,
@@ -112,6 +109,13 @@
       "card": [
         {
           "properties": {
+            "barShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "outlineStyle": {
               "expr": {
                 "Literal": {
@@ -125,6 +129,13 @@
                   "Value": "0D"
                 }
               }
+            },
+            "outlineWeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
             }
           }
         }
@@ -134,10 +145,23 @@
       "background": [
         {
           "properties": {
-            "transparency": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "100D"
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -168,6 +192,13 @@
                 }
               }
             },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
             "fontColor": {
               "solid": {
                 "color": {
@@ -179,11 +210,17 @@
                   }
                 }
               }
-            },
-            "alignment": {
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
               "expr": {
                 "Literal": {
-                  "Value": "'center'"
+                  "Value": "5D"
                 }
               }
             }
@@ -192,5 +229,5 @@
       ]
     }
   },
-  "parentGroupName": "a407143667c00cd50c19"
+  "parentGroupName": "efd423a7966ddbd517e0"
 }
