@@ -1,0 +1,116 @@
+{
+  "objects": {
+    "labels": [
+      {
+        "properties": {
+          "labelStyle": {
+            "expr": {
+              "Literal": {
+                "Value": "'Data'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "legend": [
+      {
+        "properties": {
+          "position": {
+            "expr": {
+              "Literal": {
+                "Value": "'BottomCenter'"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "projectionOrdering": {
+    "Y": [
+      0,
+      1
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Assets",
+        "Name": "dwh Fact_Promociones.TotalPromocionesActivas",
+        "Type": 1,
+        "Format": "0"
+      },
+      {
+        "Restatement": "Expired",
+        "Name": "dwh Fact_Promociones.TotalPromocionesVencidas",
+        "Type": 1,
+        "Format": "0"
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Y",
+          "Projection": 0,
+          "isActive": false
+        },
+        {
+          "Name": "Y",
+          "Projection": 1,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Assets",
+      "format": "0",
+      "queryName": "dwh Fact_Promociones.TotalPromocionesActivas",
+      "roles": {
+        "Y": true
+      },
+      "sort": 2,
+      "sortOrder": 0,
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Fact_Promociones"
+            }
+          },
+          "Property": "TotalPromocionesActivas"
+        }
+      }
+    },
+    {
+      "displayName": "Expired",
+      "format": "0",
+      "queryName": "dwh Fact_Promociones.TotalPromocionesVencidas",
+      "roles": {
+        "Y": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Fact_Promociones"
+            }
+          },
+          "Property": "TotalPromocionesVencidas"
+        }
+      }
+    }
+  ]
+}

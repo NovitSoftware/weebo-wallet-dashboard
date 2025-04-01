@@ -1,11 +1,11 @@
 {
-  "name": "f0cad884de0406b63835",
+  "name": "3610f88937431b689d26",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "height": 229.47072920565554,
-        "width": 274.97877290943893,
+        "height": 154.10869565217394,
+        "width": 142.22222222222223,
         "x": 0,
         "y": 0,
         "z": 0,
@@ -17,5 +17,5 @@
     "displayName": "Group 8",
     "groupMode": 0
   },
-  "parentGroupName": "c51bf142c1104eb8485c"
+  "parentGroupName": "6bdb0399ea26a148672b"
 }

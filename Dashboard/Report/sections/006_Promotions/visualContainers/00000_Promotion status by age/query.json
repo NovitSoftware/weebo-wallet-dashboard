@@ -1,0 +1,162 @@
+{
+  "Commands": [
+    {
+      "SemanticQueryDataShapeCommand": {
+        "Query": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dwh Fact_Promociones",
+              "Type": 0
+            },
+            {
+              "Name": "d1",
+              "Entity": "dwh Dim_RangoEdad",
+              "Type": 0
+            },
+            {
+              "Name": "d11",
+              "Entity": "dwh Dim_Empresa",
+              "Type": 0
+            }
+          ],
+          "Select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d1"
+                  }
+                },
+                "Property": "RangoEdad"
+              },
+              "Name": "dwh Dim_RangoEdad.RangoEdad",
+              "NativeReferenceName": "Age"
+            },
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "TotalPromocionesVencidas"
+              },
+              "Name": "dwh Fact_Promociones.TotalPromocionesVencidas",
+              "NativeReferenceName": "Expired"
+            },
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "TotalPromocionesActivas"
+              },
+              "Name": "dwh Fact_Promociones.TotalPromocionesActivas",
+              "NativeReferenceName": "Active"
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "d1"
+                              }
+                            },
+                            "Property": "RangoEdad"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d11"
+                          }
+                        },
+                        "Property": "Empresa"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'AGILE CODE'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "OrderBy": [
+            {
+              "Direction": 2,
+              "Expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "d"
+                    }
+                  },
+                  "Property": "TotalPromocionesVencidas"
+                }
+              }
+            }
+          ]
+        },
+        "Binding": {
+          "Primary": {
+            "Groupings": [
+              {
+                "Projections": [
+                  0,
+                  1,
+                  2
+                ]
+              }
+            ]
+          },
+          "DataReduction": {
+            "DataVolume": 3,
+            "Primary": {
+              "Top": {}
+            }
+          },
+          "Version": 1
+        },
+        "ExecutionMetricsKind": 1
+      }
+    }
+  ]
+}

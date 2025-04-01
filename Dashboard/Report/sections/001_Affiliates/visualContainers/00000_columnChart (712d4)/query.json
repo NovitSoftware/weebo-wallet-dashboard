@@ -16,6 +16,11 @@
               "Type": 0
             },
             {
+              "Name": "d2",
+              "Entity": "dwh Dim_Empresa",
+              "Type": 0
+            },
+            {
               "Name": "c",
               "Entity": "CalendarioGeneral",
               "Type": 0
@@ -108,6 +113,33 @@
             }
           ],
           "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d2"
+                          }
+                        },
+                        "Property": "Empresa"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'AGILE CODE'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            },
             {
               "Condition": {
                 "Comparison": {

@@ -12,6 +12,11 @@
             },
             {
               "Name": "d11",
+              "Entity": "dwh Dim_Empresa",
+              "Type": 0
+            },
+            {
+              "Name": "d2",
               "Entity": "dwh Dim_Tiempo",
               "Type": 0
             }
@@ -71,13 +76,40 @@
             },
             {
               "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d11"
+                          }
+                        },
+                        "Property": "Empresa"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'AGILE CODE'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            },
+            {
+              "Condition": {
                 "Comparison": {
                   "ComparisonKind": 3,
                   "Left": {
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Source": "d11"
+                          "Source": "d2"
                         }
                       },
                       "Property": "Fecha"

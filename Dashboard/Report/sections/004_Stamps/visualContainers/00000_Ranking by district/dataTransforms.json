@@ -1,0 +1,126 @@
+{
+  "objects": {
+    "categoryLabels": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "card": [
+      {
+        "properties": {
+          "outlineStyle": {
+            "expr": {
+              "Literal": {
+                "Value": "4D"
+              }
+            }
+          },
+          "cardPadding": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "projectionOrdering": {
+    "Values": [
+      0,
+      1
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "District",
+        "Name": "Top3Distritos.Distrito",
+        "Type": 2048
+      },
+      {
+        "Restatement": "Stamps delivered",
+        "Name": "Sum(Top3Distritos.TotalStickersOtorgados)",
+        "Type": 3,
+        "Format": "0"
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        },
+        {
+          "Name": "Values",
+          "Projection": 1,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "District",
+      "queryName": "Top3Distritos.Distrito",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Top3Distritos"
+            }
+          },
+          "Property": "Distrito"
+        }
+      }
+    },
+    {
+      "displayName": "Stamps delivered",
+      "format": "0",
+      "queryName": "Sum(Top3Distritos.TotalStickersOtorgados)",
+      "roles": {
+        "Values": true
+      },
+      "sort": 2,
+      "sortOrder": 0,
+      "type": {
+        "category": null,
+        "underlyingType": 260
+      },
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Top3Distritos"
+                }
+              },
+              "Property": "TotalStickersOtorgados"
+            }
+          },
+          "Function": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "Commands": [
+    {
+      "SemanticQueryDataShapeCommand": {
+        "Query": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dwh Fact_Cupon",
+              "Type": 0
+            },
+            {
+              "Name": "d1",
+              "Entity": "dwh Dim_Empresa",
+              "Type": 0
+            }
+          ],
+          "Select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "EstadoCupon"
+              },
+              "Name": "dwh Fact_Cupon.EstadoCupon",
+              "NativeReferenceName": "Status"
+            },
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "TotalCuponesEnProceso"
+              },
+              "Name": "dwh Fact_Cupon.TotalCuponesEnProceso",
+              "NativeReferenceName": "In process"
+            },
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "TotalCuponesActivos"
+              },
+              "Name": "dwh Fact_Cupon.TotalCuponesActivos",
+              "NativeReferenceName": "Assets"
+            },
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "TotalCuponesVencidos"
+              },
+              "Name": "dwh Fact_Cupon.TotalCuponesVencidos",
+              "NativeReferenceName": "Expired"
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d1"
+                          }
+                        },
+                        "Property": "Empresa"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'AGILE CODE'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "OrderBy": [
+            {
+              "Direction": 2,
+              "Expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "d"
+                    }
+                  },
+                  "Property": "TotalCuponesEnProceso"
+                }
+              }
+            }
+          ]
+        },
+        "Binding": {
+          "Primary": {
+            "Groupings": [
+              {
+                "Projections": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              }
+            ]
+          },
+          "DataReduction": {
+            "DataVolume": 3,
+            "Primary": {
+              "Top": {}
+            }
+          },
+          "Version": 1
+        },
+        "ExecutionMetricsKind": 1
+      }
+    }
+  ]
+}

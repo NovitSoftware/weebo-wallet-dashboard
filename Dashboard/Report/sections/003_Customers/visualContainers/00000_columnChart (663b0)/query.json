@@ -14,6 +14,11 @@
               "Name": "d1",
               "Entity": "dwh Fact_AfiliacionEmpresa",
               "Type": 0
+            },
+            {
+              "Name": "d2",
+              "Entity": "dwh Dim_Empresa",
+              "Type": 0
             }
           ],
           "Select": [
@@ -40,6 +45,35 @@
               },
               "Name": "dwh Fact_AfiliacionEmpresa.TotalClientesActivos",
               "NativeReferenceName": "Total asset customers"
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d2"
+                          }
+                        },
+                        "Property": "Empresa"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'AGILE CODE'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
             }
           ]
         },
