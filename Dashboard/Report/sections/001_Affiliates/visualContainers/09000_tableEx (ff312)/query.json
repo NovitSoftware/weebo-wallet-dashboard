@@ -1,0 +1,191 @@
+{
+  "Commands": [
+    {
+      "SemanticQueryDataShapeCommand": {
+        "Query": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dwh Dim_Afiliado",
+              "Type": 0
+            },
+            {
+              "Name": "d1",
+              "Entity": "dwh Fact_Cupon",
+              "Type": 0
+            },
+            {
+              "Name": "c",
+              "Entity": "CalendarioGeneral",
+              "Type": 0
+            }
+          ],
+          "Select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "FullName"
+              },
+              "Name": "dwh Dim_Afiliado.FullName",
+              "NativeReferenceName": "Name"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "Email"
+              },
+              "Name": "dwh Dim_Afiliado.Email",
+              "NativeReferenceName": "Email"
+            },
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d1"
+                  }
+                },
+                "Property": "PromedioStickersGeneral"
+              },
+              "Name": "dwh Fact_Cupon.PromedioStickersGeneral",
+              "NativeReferenceName": "Average sticker"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d1"
+                      }
+                    },
+                    "Property": "KeyCupon"
+                  }
+                },
+                "Function": 5
+              },
+              "Name": "CountNonNull(dwh Fact_Cupon.KeyCupon)",
+              "NativeReferenceName": "Coupon"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "FechaRegistroWebo"
+              },
+              "Name": "dwh Dim_Afiliado.FechaRegistroWebo",
+              "NativeReferenceName": "Member since"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "Genero"
+              },
+              "Name": "dwh Dim_Afiliado.Genero",
+              "NativeReferenceName": "Genero"
+            },
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "FechaActivoWeboSeleccinado"
+              },
+              "Name": "dwh Dim_Afiliado.FechaActivoWeboSeleccinado",
+              "NativeReferenceName": "Last visit"
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 3,
+                  "Left": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "c"
+                        }
+                      },
+                      "Property": "Date"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "datetime'2025-03-15T00:00:00'"
+                    }
+                  }
+                }
+              }
+            }
+          ],
+          "OrderBy": [
+            {
+              "Direction": 2,
+              "Expression": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "d1"
+                        }
+                      },
+                      "Property": "KeyCupon"
+                    }
+                  },
+                  "Function": 5
+                }
+              }
+            }
+          ]
+        },
+        "Binding": {
+          "Primary": {
+            "Groupings": [
+              {
+                "Projections": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ],
+                "Subtotal": 1
+              }
+            ]
+          },
+          "DataReduction": {
+            "DataVolume": 3,
+            "Primary": {
+              "Window": {
+                "Count": 500
+              }
+            }
+          },
+          "Version": 1
+        },
+        "ExecutionMetricsKind": 1
+      }
+    }
+  ]
+}

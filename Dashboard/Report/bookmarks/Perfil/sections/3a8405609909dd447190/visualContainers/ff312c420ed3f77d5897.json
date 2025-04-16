@@ -1,0 +1,445 @@
+{
+  "filters": {
+    "byExpr": [
+      {
+        "type": "Categorical",
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "FullName"
+          }
+        },
+        "howCreated": 0
+      },
+      {
+        "type": "Categorical",
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "Email"
+          }
+        },
+        "howCreated": 0
+      },
+      {
+        "type": "Advanced",
+        "expression": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Fact_Cupon"
+              }
+            },
+            "Property": "PromedioStickersGeneral"
+          }
+        },
+        "howCreated": 0
+      },
+      {
+        "type": "Advanced",
+        "expression": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dwh Fact_Cupon"
+                  }
+                },
+                "Property": "KeyCupon"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "howCreated": 0
+      },
+      {
+        "type": "Categorical",
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "FechaUltimoConsumoWebo"
+          }
+        },
+        "howCreated": 0
+      },
+      {
+        "type": "Categorical",
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "FechaRegistroWebo"
+          }
+        },
+        "howCreated": 0
+      },
+      {
+        "type": "Categorical",
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "Genero"
+          }
+        },
+        "howCreated": 0
+      }
+    ]
+  },
+  "singleVisual": {
+    "visualType": "tableEx",
+    "objects": {},
+    "orderBy": [
+      {
+        "Direction": 2,
+        "Expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "FullName"
+          }
+        }
+      }
+    ]
+  },
+  "highlight": {
+    "selection": [
+      {
+        "dataMap": {
+          "dwh Dim_Afiliado.FullName": [
+            {
+              "scopeId": {
+                "And": {
+                  "Left": {
+                    "And": {
+                      "Left": {
+                        "And": {
+                          "Left": {
+                            "And": {
+                              "Left": {
+                                "Comparison": {
+                                  "ComparisonKind": 0,
+                                  "Left": {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "dwh Dim_Afiliado"
+                                        }
+                                      },
+                                      "Property": "FullName"
+                                    }
+                                  },
+                                  "Right": {
+                                    "Literal": {
+                                      "Value": "'Ver?nica Ortiz'"
+                                    }
+                                  }
+                                }
+                              },
+                              "Right": {
+                                "Comparison": {
+                                  "ComparisonKind": 0,
+                                  "Left": {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "dwh Dim_Afiliado"
+                                        }
+                                      },
+                                      "Property": "Email"
+                                    }
+                                  },
+                                  "Right": {
+                                    "Literal": {
+                                      "Value": "'veronica.ortiz@example.com'"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "Right": {
+                            "Comparison": {
+                              "ComparisonKind": 0,
+                              "Left": {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "dwh Dim_Afiliado"
+                                    }
+                                  },
+                                  "Property": "FechaUltimoConsumoWebo"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "datetime'2025-02-19T00:00:00'"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "Right": {
+                        "Comparison": {
+                          "ComparisonKind": 0,
+                          "Left": {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "dwh Dim_Afiliado"
+                                }
+                              },
+                              "Property": "FechaRegistroWebo"
+                            }
+                          },
+                          "Right": {
+                            "Literal": {
+                              "Value": "datetime'2025-02-14T00:00:00'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Right": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "dwh Dim_Afiliado"
+                            }
+                          },
+                          "Property": "Genero"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "'F'"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "metadata": [
+          "dwh Fact_Cupon.PromedioStickersGeneral",
+          "CountNonNull(dwh Fact_Cupon.KeyCupon)"
+        ]
+      }
+    ],
+    "filterExpressionMetadata": {
+      "expressions": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "FullName"
+          }
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "Email"
+          }
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "FechaUltimoConsumoWebo"
+          }
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "FechaRegistroWebo"
+          }
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "Genero"
+          }
+        }
+      ],
+      "cachedValueItems": [
+        {
+          "identities": [
+            {
+              "scopeId": {
+                "And": {
+                  "Left": {
+                    "And": {
+                      "Left": {
+                        "And": {
+                          "Left": {
+                            "And": {
+                              "Left": {
+                                "Comparison": {
+                                  "ComparisonKind": 0,
+                                  "Left": {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "dwh Dim_Afiliado"
+                                        }
+                                      },
+                                      "Property": "FullName"
+                                    }
+                                  },
+                                  "Right": {
+                                    "Literal": {
+                                      "Value": "'Ver?nica Ortiz'"
+                                    }
+                                  }
+                                }
+                              },
+                              "Right": {
+                                "Comparison": {
+                                  "ComparisonKind": 0,
+                                  "Left": {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "dwh Dim_Afiliado"
+                                        }
+                                      },
+                                      "Property": "Email"
+                                    }
+                                  },
+                                  "Right": {
+                                    "Literal": {
+                                      "Value": "'veronica.ortiz@example.com'"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "Right": {
+                            "Comparison": {
+                              "ComparisonKind": 0,
+                              "Left": {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "dwh Dim_Afiliado"
+                                    }
+                                  },
+                                  "Property": "FechaUltimoConsumoWebo"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "datetime'2025-02-19T00:00:00'"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "Right": {
+                        "Comparison": {
+                          "ComparisonKind": 0,
+                          "Left": {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "dwh Dim_Afiliado"
+                                }
+                              },
+                              "Property": "FechaRegistroWebo"
+                            }
+                          },
+                          "Right": {
+                            "Literal": {
+                              "Value": "datetime'2025-02-14T00:00:00'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Right": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "dwh Dim_Afiliado"
+                            }
+                          },
+                          "Property": "Genero"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "'F'"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ],
+          "valueMap": {
+            "0": "Ver?nica Ortiz",
+            "1": "veronica.ortiz@example.com",
+            "2": "19/02/2025 12:00:00 a.m.",
+            "3": "14/02/2025",
+            "4": "F"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "filters": {
+    "byExpr": [
+      {
+        "name": "8b8b439c64e2be2c0538",
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dwh Dim_Afiliado",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "d"
+                              }
+                            },
+                            "Property": "GeneroFiltrado"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "GeneroFiltrado"
+          }
+        },
+        "howCreated": 0
+      },
+      {
+        "type": "Advanced",
+        "expression": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "AfiliadosActivosPorcentaje"
+          }
+        },
+        "howCreated": 0
+      },
+      {
+        "type": "Advanced",
+        "expression": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "AfiliadosEnRiesgoPorcentaje"
+          }
+        },
+        "howCreated": 0
+      },
+      {
+        "type": "Advanced",
+        "expression": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "AfiliadosPerdidosPorcentaje"
+          }
+        },
+        "howCreated": 0
+      }
+    ]
+  },
+  "singleVisual": {
+    "visualType": "pieChart",
+    "objects": {},
+    "orderBy": [
+      {
+        "Direction": 2,
+        "Expression": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "AfiliadosActivosPorcentaje"
+          }
+        }
+      }
+    ],
+    "activeProjections": {
+      "Category": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "GeneroFiltrado"
+          }
+        }
+      ]
+    }
+  }
+}

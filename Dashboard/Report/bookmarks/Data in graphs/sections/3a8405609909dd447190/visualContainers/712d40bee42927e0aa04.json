@@ -1,0 +1,137 @@
+{
+  "filters": {
+    "byExpr": [
+      {
+        "type": "Advanced",
+        "expression": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "AfiliadosActivos"
+          }
+        },
+        "howCreated": 0
+      },
+      {
+        "type": "Advanced",
+        "expression": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "AfiliadosEnRiesgo"
+          }
+        },
+        "howCreated": 0
+      },
+      {
+        "type": "Advanced",
+        "expression": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "AfiliadosPerdidos"
+          }
+        },
+        "howCreated": 0
+      },
+      {
+        "type": "Advanced",
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Tiempo"
+              }
+            },
+            "Property": "Day"
+          }
+        },
+        "howCreated": 0
+      },
+      {
+        "type": "Advanced",
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Tiempo"
+              }
+            },
+            "Property": "Week"
+          }
+        },
+        "howCreated": 0
+      },
+      {
+        "type": "Advanced",
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Tiempo"
+              }
+            },
+            "Property": "Month"
+          }
+        },
+        "howCreated": 0
+      },
+      {
+        "type": "Advanced",
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Tiempo"
+              }
+            },
+            "Property": "Year"
+          }
+        },
+        "howCreated": 0
+      }
+    ]
+  },
+  "singleVisual": {
+    "visualType": "columnChart",
+    "objects": {},
+    "orderBy": [
+      {
+        "Direction": 2,
+        "Expression": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "AfiliadosActivos"
+          }
+        }
+      }
+    ],
+    "activeProjections": {
+      "Category": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Tiempo"
+              }
+            },
+            "Property": "Day"
+          }
+        }
+      ]
+    }
+  }
+}

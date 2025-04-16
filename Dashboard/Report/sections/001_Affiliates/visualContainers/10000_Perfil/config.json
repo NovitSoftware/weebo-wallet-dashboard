@@ -1,0 +1,21 @@
+{
+  "name": "5bd1b5bf10d1ea0c343b",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 212.70671378091873,
+        "width": 1254,
+        "x": 10.25,
+        "y": 50,
+        "z": 9000,
+        "tabOrder": 10000
+      }
+    }
+  ],
+  "singleVisualGroup": {
+    "displayName": "Perfil",
+    "groupMode": 0,
+    "isHidden": false
+  }
+}

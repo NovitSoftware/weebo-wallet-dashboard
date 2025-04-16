@@ -1,0 +1,111 @@
+{
+  "filters": {
+    "byExpr": [
+      {
+        "name": "42bd765e60c9d29d74e4",
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dwh Dim_Afiliado",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "d"
+                              }
+                            },
+                            "Property": "GeneroFiltrado"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "GeneroFiltrado"
+          }
+        },
+        "howCreated": 0
+      }
+    ]
+  },
+  "singleVisual": {
+    "visualType": "slicer",
+    "objects": {
+      "merge": {
+        "data": [
+          {
+            "properties": {
+              "mode": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Dropdown'"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "selection": [
+          {
+            "properties": {
+              "strictSingleSelect": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "activeProjections": {
+      "Values": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "GeneroFiltrado"
+          }
+        }
+      ]
+    }
+  }
+}

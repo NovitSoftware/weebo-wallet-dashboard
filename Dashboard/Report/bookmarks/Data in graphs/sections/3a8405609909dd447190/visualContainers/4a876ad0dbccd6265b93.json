@@ -1,0 +1,118 @@
+{
+  "filters": {
+    "byExpr": [
+      {
+        "type": "Categorical",
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "CalendarioGeneral"
+              }
+            },
+            "Property": "Date"
+          }
+        },
+        "howCreated": 0
+      }
+    ]
+  },
+  "singleVisual": {
+    "visualType": "slicer",
+    "objects": {
+      "merge": {
+        "general": [
+          {
+            "properties": {
+              "filter": {
+                "filter": {
+                  "Version": 2,
+                  "From": [
+                    {
+                      "Name": "c",
+                      "Entity": "CalendarioGeneral",
+                      "Type": 0
+                    }
+                  ],
+                  "Where": [
+                    {
+                      "Condition": {
+                        "Comparison": {
+                          "ComparisonKind": 3,
+                          "Left": {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "c"
+                                }
+                              },
+                              "Property": "Date"
+                            }
+                          },
+                          "Right": {
+                            "Literal": {
+                              "Value": "datetime'2025-03-15T00:00:00'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "data": [
+          {
+            "properties": {
+              "endDate": {
+                "expr": {
+                  "Literal": {
+                    "Value": "datetime'2025-03-14T00:00:00'"
+                  }
+                }
+              },
+              "mode": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Between'"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "orderBy": [
+      {
+        "Direction": 1,
+        "Expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "CalendarioGeneral"
+              }
+            },
+            "Property": "Date"
+          }
+        }
+      }
+    ],
+    "activeProjections": {
+      "Values": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "CalendarioGeneral"
+              }
+            },
+            "Property": "Date"
+          }
+        }
+      ]
+    }
+  }
+}

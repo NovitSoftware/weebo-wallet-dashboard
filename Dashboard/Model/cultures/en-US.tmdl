@@ -515,6 +515,16 @@
 			            "State": "Generated",
 			            "Weight": 0.7
 			          }
+			        },
+			        {
+			          "Member since": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ],
 			      "SemanticType": "Time"
@@ -4646,6 +4656,9 @@
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "key tienda": {
@@ -24050,6 +24063,9 @@
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "fkcliente": {
@@ -24561,6 +24577,9 @@
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "fkcliente": {
@@ -25060,6 +25079,9 @@
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "fkcliente": {
@@ -25509,6 +25531,9 @@
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "fkcliente": {
@@ -26899,6 +26924,16 @@
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Average sticker": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -32571,6 +32606,452 @@
 			        {
 			          "periodo": {
 			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado.full_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Dim_Afiliado",
+			          "ConceptualProperty": "FullName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "full name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "FullName": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "full nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "full title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "full label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "full tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "full surname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "complete name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "entire name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "whole name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "full given name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "Name": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado.estado_cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Dim_Afiliado",
+			          "ConceptualProperty": "EstadoCliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estado cliente": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EstadoCliente": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado.mostrar_boton": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Dim_Afiliado",
+			          "ConceptualProperty": "MostrarBoton"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mostrar boton": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MostrarBoton": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado.email_seleccionado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Dim_Afiliado",
+			          "ConceptualProperty": "EmailSeleccionado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "email seleccionado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EmailSeleccionado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado.nombre_seleccionado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Dim_Afiliado",
+			          "ConceptualProperty": "NombreSeleccionado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nombre seleccionado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "NombreSeleccionado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon.cupon_expirado_seleccionado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Cupon",
+			          "ConceptualProperty": "CuponExpiradoSeleccionado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cupon expirado seleccionado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CuponExpiradoSeleccionado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Expired coupons": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon.cupon_redimido_seleccionado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Cupon",
+			          "ConceptualProperty": "CuponRedimidoSeleccionado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cupon redimido seleccionado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CuponRedimidoSeleccionado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Reedemed coupons": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon.cupon_vigente_seleccionado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Cupon",
+			          "ConceptualProperty": "CuponVigenteSeleccionado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cupon vigente seleccionado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CuponVigenteSeleccionado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Current coupons": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon.promedio_sticker_general_seleccionado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Cupon",
+			          "ConceptualProperty": "PromedioStickerGeneralSeleccionado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "promedio sticker general seleccionado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PromedioStickerGeneralSeleccionado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Average stickers": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado.distrito_seleccionado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Dim_Afiliado",
+			          "ConceptualProperty": "DistritoSeleccionado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "distrito seleccionado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DistritoSeleccionado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Región/District": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Facturacion.valor_monetario_promedio_seleccionado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Fact_Facturacion",
+			          "ConceptualProperty": "ValorMonetarioPromedioSeleccionado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor monetario promedio seleccionado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ValorMonetarioPromedioSeleccionado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Average monetary value": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado.fecha_activo_webo_seleccinado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh Dim_Afiliado",
+			          "ConceptualProperty": "FechaActivoWeboSeleccinado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha activo webo seleccinado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "FechaActivoWeboSeleccinado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Last visit": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -47295,6 +47776,190 @@
 			        }
 			      ]
 			    },
+			    "stage_StgTransaccion_has_stage_StgPrograma": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTransaccion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTransaccion": {
+			          "Target": {
+			            "Entity": "stage_StgTransaccion"
+			          }
+			        },
+			        "stage_StgPrograma": {
+			          "Target": {
+			            "Entity": "stage_StgPrograma"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTransaccion"
+			            },
+			            "Object": {
+			              "Role": "stage_StgPrograma"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgTransaccions_have_stage_StgProgramas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgPrograma"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTransaccion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgProgramas_have_stage_StgTransaccions"
+			        }
+			      ]
+			    },
+			    "stage_StgTrackingSticker_has_stage_StgPrograma": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTrackingStickers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTrackingSticker": {
+			          "Target": {
+			            "Entity": "stage_StgTrackingSticker"
+			          }
+			        },
+			        "stage_StgPrograma": {
+			          "Target": {
+			            "Entity": "stage_StgPrograma"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTrackingSticker"
+			            },
+			            "Object": {
+			              "Role": "stage_StgPrograma"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgTrackingStickers_have_stage_StgProgramas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgPrograma"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTrackingSticker"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgProgramas_have_stage_StgTrackingStickers"
+			        }
+			      ]
+			    },
+			    "stage_StgTienda_has_stage_StgPrograma": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTienda"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTienda": {
+			          "Target": {
+			            "Entity": "stage_StgTienda"
+			          }
+			        },
+			        "stage_StgPrograma": {
+			          "Target": {
+			            "Entity": "stage_StgPrograma"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTienda"
+			            },
+			            "Object": {
+			              "Role": "stage_StgPrograma"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgTiendas_have_stage_StgProgramas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgPrograma"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTienda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgProgramas_have_stage_StgTiendas"
+			        }
+			      ]
+			    },
+			    "stage_StgTarjeta_has_stage_StgPrograma": {
+			      "Binding": {
+			        "ConceptualEntity": "stage StgTarjeta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stage_StgTarjeta": {
+			          "Target": {
+			            "Entity": "stage_StgTarjeta"
+			          }
+			        },
+			        "stage_StgPrograma": {
+			          "Target": {
+			            "Entity": "stage_StgPrograma"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgTarjeta"
+			            },
+			            "Object": {
+			              "Role": "stage_StgPrograma"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgTarjetas_have_stage_StgProgramas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgPrograma"
+			            },
+			            "Object": {
+			              "Role": "stage_StgTarjeta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgProgramas_have_stage_StgTarjetas"
+			        }
+			      ]
+			    },
 			    "stage_StgPromocion_has_stage_StgPrograma": {
 			      "Binding": {
 			        "ConceptualEntity": "stage StgPromocion"
@@ -49584,6 +50249,52 @@
 			        }
 			      ]
 			    },
+			    "dwh_Dim_Tienda_has_stage_StgFactFacturacion": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Tienda"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Tienda": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Tienda"
+			          }
+			        },
+			        "stage_StgFactFacturacion": {
+			          "Target": {
+			            "Entity": "stage_StgFactFacturacion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Tienda"
+			            },
+			            "Object": {
+			              "Role": "stage_StgFactFacturacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Tiendas_have_stage_StgFactFacturacions"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stage_StgFactFacturacion"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Tienda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stage_StgFactFacturacions_have_dwh_Dim_Tiendas"
+			        }
+			      ]
+			    },
 			    "dwh_Dim_Tienda_has_dwh_Dim_Empresa": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh Dim_Tienda"
@@ -49766,6 +50477,402 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_Dim_Afiliados_have_stage_StgCortesAfiliadosWebos"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_has_fecha_activo_webo_seleccinado": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.fecha_activo_webo_seleccinado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.fecha_activo_webo_seleccinado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.fecha_activo_webo_seleccinado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_fecha_activo_webo_seleccinado"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Facturacion_has_valor_monetario_promedio_seleccionado": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Facturacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Facturacion": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Facturacion"
+			          }
+			        },
+			        "dwh_Fact_Facturacion.valor_monetario_promedio_seleccionado": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Facturacion.valor_monetario_promedio_seleccionado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Facturacion"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Facturacion.valor_monetario_promedio_seleccionado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Facturacions_have_valor_monetario_promedio_seleccionado"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_has_distrito_seleccionado": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.distrito_seleccionado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.distrito_seleccionado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.distrito_seleccionado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_distrito_seleccionado"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon_has_promedio_sticker_general_seleccionado": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Fact_Cupon.promedio_sticker_general_seleccionado": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon.promedio_sticker_general_seleccionado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon.promedio_sticker_general_seleccionado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_promedio_sticker_general_seleccionado"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon_has_cupon_vigente_seleccionado": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Fact_Cupon.cupon_vigente_seleccionado": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon.cupon_vigente_seleccionado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon.cupon_vigente_seleccionado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_cupon_vigente_seleccionado"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon_has_cupon_redimido_seleccionado": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Fact_Cupon.cupon_redimido_seleccionado": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon.cupon_redimido_seleccionado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon.cupon_redimido_seleccionado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_cupon_redimido_seleccionado"
+			        }
+			      ]
+			    },
+			    "dwh_Fact_Cupon_has_cupon_expirado_seleccionado": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Fact_Cupon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Fact_Cupon": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon"
+			          }
+			        },
+			        "dwh_Fact_Cupon.cupon_expirado_seleccionado": {
+			          "Target": {
+			            "Entity": "dwh_Fact_Cupon.cupon_expirado_seleccionado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Fact_Cupon"
+			            },
+			            "Object": {
+			              "Role": "dwh_Fact_Cupon.cupon_expirado_seleccionado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Fact_Cupons_have_cupon_expirado_seleccionado"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_has_nombre_seleccionado": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.nombre_seleccionado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.nombre_seleccionado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.nombre_seleccionado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_nombre_seleccionado"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_has_email_seleccionado": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.email_seleccionado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.email_seleccionado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.email_seleccionado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_email_seleccionado"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_has_mostrar_boton": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.mostrar_boton": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.mostrar_boton"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.mostrar_boton"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_mostrar_boton"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_has_estado_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.estado_cliente": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.estado_cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.estado_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_estado_clientes"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_has_full_name": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.full_name": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.full_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.full_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_have_full_names"
 			        }
 			      ]
 			    },
@@ -54119,39 +55226,6 @@
 			        }
 			      ]
 			    },
-			    "stage_StgTransaccion_has_fkcliente": {
-			      "Binding": {
-			        "ConceptualEntity": "stage StgTransaccion"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "stage_StgTransaccion": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion"
-			          }
-			        },
-			        "stage_StgTransaccion.fkcliente": {
-			          "Target": {
-			            "Entity": "stage_StgTransaccion.fkcliente"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgTransaccion"
-			            },
-			            "Object": {
-			              "Role": "stage_StgTransaccion.fkcliente"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "stage_StgTransaccions_have_fkclientes"
-			        }
-			      ]
-			    },
 			    "stage_StgTransaccion_has_fkprom": {
 			      "Binding": {
 			        "ConceptualEntity": "stage StgTransaccion"
@@ -54512,39 +55586,6 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "stage_StgTrackingStickers_have_fktiendas"
-			        }
-			      ]
-			    },
-			    "stage_StgTrackingSticker_has_fkcliente": {
-			      "Binding": {
-			        "ConceptualEntity": "stage StgTrackingStickers"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "stage_StgTrackingSticker": {
-			          "Target": {
-			            "Entity": "stage_StgTrackingSticker"
-			          }
-			        },
-			        "stage_StgTrackingSticker.fkcliente": {
-			          "Target": {
-			            "Entity": "stage_StgTrackingSticker.fkcliente"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgTrackingSticker"
-			            },
-			            "Object": {
-			              "Role": "stage_StgTrackingSticker.fkcliente"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "stage_StgTrackingStickers_have_fkclientes"
 			        }
 			      ]
 			    },
@@ -54911,39 +55952,6 @@
 			        }
 			      ]
 			    },
-			    "stage_StgTienda_has_fkcliente": {
-			      "Binding": {
-			        "ConceptualEntity": "stage StgTienda"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "stage_StgTienda": {
-			          "Target": {
-			            "Entity": "stage_StgTienda"
-			          }
-			        },
-			        "stage_StgTienda.fkcliente": {
-			          "Target": {
-			            "Entity": "stage_StgTienda.fkcliente"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgTienda"
-			            },
-			            "Object": {
-			              "Role": "stage_StgTienda.fkcliente"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "stage_StgTiendas_have_fkclientes"
-			        }
-			      ]
-			    },
 			    "stage_StgTienda_has_idtienda": {
 			      "Binding": {
 			        "ConceptualEntity": "stage StgTienda"
@@ -55139,39 +56147,6 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "stage_StgTarjetas_have_fkcamps"
-			        }
-			      ]
-			    },
-			    "stage_StgTarjeta_has_fkcliente": {
-			      "Binding": {
-			        "ConceptualEntity": "stage StgTarjeta"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "stage_StgTarjeta": {
-			          "Target": {
-			            "Entity": "stage_StgTarjeta"
-			          }
-			        },
-			        "stage_StgTarjeta.fkcliente": {
-			          "Target": {
-			            "Entity": "stage_StgTarjeta.fkcliente"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "stage_StgTarjeta"
-			            },
-			            "Object": {
-			              "Role": "stage_StgTarjeta.fkcliente"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "stage_StgTarjetas_have_fkclientes"
 			        }
 			      ]
 			    },
@@ -63359,39 +64334,6 @@
 			        }
 			      ]
 			    },
-			    "dwh_Dim_Tienda_has_key_tienda": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh Dim_Tienda"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_Dim_Tienda": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Tienda"
-			          }
-			        },
-			        "dwh_Dim_Tienda.key_tienda": {
-			          "Target": {
-			            "Entity": "dwh_Dim_Tienda.key_tienda"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_Dim_Tienda"
-			            },
-			            "Object": {
-			              "Role": "dwh_Dim_Tienda.key_tienda"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_Dim_Tiendas_have_key_tiendas"
-			        }
-			      ]
-			    },
 			    "dwh_Dim_Tiempo_has_periodo": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh Dim_Tiempo"
@@ -65501,6 +66443,51 @@
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_Dim_Afiliados_have_key_afiliados"
+			        }
+			      ]
+			    },
+			    "dwh_Dim_Afiliado_in_distrito_seleccionado": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh Dim_Afiliado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_Dim_Afiliado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado"
+			          }
+			        },
+			        "dwh_Dim_Afiliado.distrito_seleccionado": {
+			          "Target": {
+			            "Entity": "dwh_Dim_Afiliado.distrito_seleccionado"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "dwh_Dim_Afiliado.distrito_seleccionado"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dwh_Dim_Afiliado"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dwh_Dim_Afiliado.distrito_seleccionado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_Dim_Afiliados_are_in_distrito_seleccionado"
 			        }
 			      ]
 			    },

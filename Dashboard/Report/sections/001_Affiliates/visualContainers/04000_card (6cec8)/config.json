@@ -1,0 +1,80 @@
+{
+  "name": "6cec808b14b62ac37a20",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 2.3621394580780888,
+        "y": 124.87552363973862,
+        "z": 2000,
+        "width": 250,
+        "height": 25.373134328358208,
+        "tabOrder": 4000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "card",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "dwh Dim_Afiliado.EmailSeleccionado"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d",
+          "Entity": "dwh Dim_Afiliado",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "EmailSeleccionado"
+          },
+          "Name": "dwh Dim_Afiliado.EmailSeleccionado",
+          "NativeReferenceName": "EmailSeleccionado"
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "5bd1b5bf10d1ea0c343b"
+}

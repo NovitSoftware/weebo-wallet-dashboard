@@ -1,0 +1,670 @@
+{
+  "objects": {
+    "columnWidth": [
+      {
+        "properties": {
+          "value": {
+            "expr": {
+              "Literal": {
+                "Value": "260.375722538342D"
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "dwh Dim_Afiliado.FullName"
+        }
+      },
+      {
+        "properties": {
+          "value": {
+            "expr": {
+              "Literal": {
+                "Value": "276.05525771466114D"
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "dwh Dim_Afiliado.Email"
+        }
+      },
+      {
+        "properties": {
+          "value": {
+            "expr": {
+              "Literal": {
+                "Value": "108D"
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "dwh Fact_Cupon.PromedioStickersGeneral"
+        }
+      },
+      {
+        "properties": {
+          "value": {
+            "expr": {
+              "Literal": {
+                "Value": "184.26733041799594D"
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "CountNonNull(dwh Fact_Cupon.KeyCupon)"
+        }
+      },
+      {
+        "properties": {
+          "value": {
+            "expr": {
+              "Literal": {
+                "Value": "183.15244483821525D"
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "dwh Dim_Afiliado.FechaRegistroWebo"
+        }
+      },
+      {
+        "properties": {
+          "value": {
+            "expr": {
+              "Literal": {
+                "Value": "109.20120283433356D"
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "dwh Dim_Afiliado.Genero"
+        }
+      },
+      {
+        "properties": {
+          "value": {
+            "expr": {
+              "Literal": {
+                "Value": "112.00872435746287D"
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "dwh Dim_Afiliado.FechaActivoWeboSeleccinado"
+        }
+      }
+    ],
+    "grid": [
+      {
+        "properties": {
+          "gridHorizontal": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          },
+          "gridVertical": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "outlineStyle": {
+            "expr": {
+              "Literal": {
+                "Value": "4D"
+              }
+            }
+          },
+          "gridHorizontalWeight": {
+            "expr": {
+              "Literal": {
+                "Value": "10D"
+              }
+            }
+          },
+          "gridHorizontalColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 0,
+                    "Percent": 0
+                  }
+                }
+              }
+            }
+          },
+          "rowPadding": {
+            "expr": {
+              "Literal": {
+                "Value": "10D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "columnHeaders": [
+      {
+        "properties": {
+          "outlineStyle": {
+            "expr": {
+              "Literal": {
+                "Value": "4D"
+              }
+            }
+          },
+          "fontColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 1,
+                    "Percent": 0
+                  }
+                }
+              }
+            }
+          },
+          "backColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#F2F2F2'"
+                  }
+                }
+              }
+            }
+          },
+          "alignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Center'"
+              }
+            }
+          },
+          "wordWrap": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "autoSizeColumnWidth": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          },
+          "bold": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "values": [
+      {
+        "properties": {
+          "wordWrap": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "columnFormatting": [
+      {
+        "properties": {
+          "styleHeader": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "alignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Center'"
+              }
+            }
+          },
+          "styleTotal": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "dwh Dim_Afiliado.FullName"
+        }
+      },
+      {
+        "properties": {
+          "alignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Center'"
+              }
+            }
+          },
+          "styleHeader": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "styleTotal": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "dwh Dim_Afiliado.Email"
+        }
+      },
+      {
+        "properties": {
+          "alignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Center'"
+              }
+            }
+          },
+          "styleTotal": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "styleHeader": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "dwh Fact_Cupon.PromedioStickersGeneral"
+        }
+      },
+      {
+        "properties": {
+          "styleHeader": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "alignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Center'"
+              }
+            }
+          },
+          "styleTotal": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "CountNonNull(dwh Fact_Cupon.KeyCupon)"
+        }
+      },
+      {
+        "properties": {
+          "styleTotal": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "styleHeader": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "alignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Center'"
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "dwh Dim_Afiliado.FechaRegistroWebo"
+        }
+      },
+      {
+        "properties": {
+          "styleTotal": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "styleHeader": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "alignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Center'"
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "dwh Dim_Afiliado.FechaActivoWeboSeleccinado"
+        }
+      }
+    ],
+    "total": [
+      {
+        "properties": {
+          "backColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#E5E0DA'"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "projectionOrdering": {
+    "Values": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      4,
+      5
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Name",
+        "Name": "dwh Dim_Afiliado.FullName",
+        "Type": 2048
+      },
+      {
+        "Restatement": "Email",
+        "Name": "dwh Dim_Afiliado.Email",
+        "Type": 2048
+      },
+      {
+        "Restatement": "Average sticker",
+        "Name": "dwh Fact_Cupon.PromedioStickersGeneral",
+        "Type": 1
+      },
+      {
+        "Restatement": "Coupon",
+        "Name": "CountNonNull(dwh Fact_Cupon.KeyCupon)",
+        "Type": 3
+      },
+      {
+        "Restatement": "Member since",
+        "Name": "dwh Dim_Afiliado.FechaRegistroWebo",
+        "Type": 4,
+        "Format": "d"
+      },
+      {
+        "Restatement": "Genero",
+        "Name": "dwh Dim_Afiliado.Genero",
+        "Type": 2048
+      },
+      {
+        "Restatement": "Last visit",
+        "Name": "dwh Dim_Afiliado.FechaActivoWeboSeleccinado",
+        "Type": 1
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        },
+        {
+          "Name": "Values",
+          "Projection": 1,
+          "isActive": false
+        },
+        {
+          "Name": "Values",
+          "Projection": 2,
+          "isActive": false
+        },
+        {
+          "Name": "Values",
+          "Projection": 3,
+          "isActive": false
+        },
+        {
+          "Name": "Values",
+          "Projection": 6,
+          "isActive": false
+        },
+        {
+          "Name": "Values",
+          "Projection": 4,
+          "isActive": false
+        },
+        {
+          "Name": "Values",
+          "Projection": 5,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Name",
+      "queryName": "dwh Dim_Afiliado.FullName",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Dim_Afiliado"
+            }
+          },
+          "Property": "FullName"
+        }
+      }
+    },
+    {
+      "displayName": "Email",
+      "queryName": "dwh Dim_Afiliado.Email",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Dim_Afiliado"
+            }
+          },
+          "Property": "Email"
+        }
+      }
+    },
+    {
+      "displayName": "Average sticker",
+      "queryName": "dwh Fact_Cupon.PromedioStickersGeneral",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Fact_Cupon"
+            }
+          },
+          "Property": "PromedioStickersGeneral"
+        }
+      }
+    },
+    {
+      "displayName": "Coupon",
+      "queryName": "CountNonNull(dwh Fact_Cupon.KeyCupon)",
+      "roles": {
+        "Values": true
+      },
+      "sort": 2,
+      "sortOrder": 0,
+      "type": {
+        "category": null,
+        "underlyingType": 260
+      },
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "dwh Fact_Cupon"
+                }
+              },
+              "Property": "KeyCupon"
+            }
+          },
+          "Function": 5
+        }
+      }
+    },
+    {
+      "displayName": "Member since",
+      "format": "d",
+      "queryName": "dwh Dim_Afiliado.FechaRegistroWebo",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 519
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Dim_Afiliado"
+            }
+          },
+          "Property": "FechaRegistroWebo"
+        }
+      }
+    },
+    {
+      "displayName": "Genero",
+      "queryName": "dwh Dim_Afiliado.Genero",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Dim_Afiliado"
+            }
+          },
+          "Property": "Genero"
+        }
+      }
+    },
+    {
+      "displayName": "Last visit",
+      "queryName": "dwh Dim_Afiliado.FechaActivoWeboSeleccinado",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Dim_Afiliado"
+            }
+          },
+          "Property": "FechaActivoWeboSeleccinado"
+        }
+      }
+    }
+  ]
+}

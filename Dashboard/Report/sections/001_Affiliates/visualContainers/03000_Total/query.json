@@ -11,11 +11,6 @@
               "Type": 0
             },
             {
-              "Name": "d1",
-              "Entity": "dwh Dim_Empresa",
-              "Type": 0
-            },
-            {
               "Name": "c",
               "Entity": "CalendarioGeneral",
               "Type": 0
@@ -68,33 +63,6 @@
                       {
                         "Literal": {
                           "Value": "'MASCULINO'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            },
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "d1"
-                          }
-                        },
-                        "Property": "Empresa"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'AGILE CODE'"
                         }
                       }
                     ]

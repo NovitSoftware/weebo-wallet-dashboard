@@ -1,0 +1,33 @@
+{
+  "displayName": "Detail for client",
+  "name": "d98e9785ff550e749f39",
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "3a8405609909dd447190",
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "options": {
+    "targetVisualNames": [
+      "5bd1b5bf10d1ea0c343b",
+      "f64afe151b3292e34234",
+      "5001a017ad67eb53b42c"
+    ],
+    "suppressData": true
+  }
+}

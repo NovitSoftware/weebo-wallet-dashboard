@@ -1,0 +1,105 @@
+{
+  "filters": {
+    "byExpr": [
+      {
+        "name": "2cb6c260378f210e6db1",
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dwh Dim_Afiliado",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "d"
+                              }
+                            },
+                            "Property": "Distrito"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "''"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "Distrito"
+          }
+        },
+        "howCreated": 0
+      }
+    ]
+  },
+  "singleVisual": {
+    "visualType": "slicer",
+    "objects": {
+      "merge": {
+        "data": [
+          {
+            "properties": {
+              "mode": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Dropdown'"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "activeProjections": {
+      "Values": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "Distrito"
+          }
+        }
+      ]
+    }
+  }
+}

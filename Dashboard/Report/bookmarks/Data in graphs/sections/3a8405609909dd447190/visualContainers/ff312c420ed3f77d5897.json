@@ -1,0 +1,128 @@
+{
+  "filters": {
+    "byExpr": [
+      {
+        "type": "Categorical",
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "FullName"
+          }
+        },
+        "howCreated": 0
+      },
+      {
+        "type": "Categorical",
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "Email"
+          }
+        },
+        "howCreated": 0
+      },
+      {
+        "type": "Advanced",
+        "expression": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Fact_Cupon"
+              }
+            },
+            "Property": "PromedioStickersGeneral"
+          }
+        },
+        "howCreated": 0
+      },
+      {
+        "type": "Advanced",
+        "expression": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dwh Fact_Cupon"
+                  }
+                },
+                "Property": "KeyCupon"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "howCreated": 0
+      },
+      {
+        "type": "Categorical",
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "FechaUltimoConsumoWebo"
+          }
+        },
+        "howCreated": 0
+      },
+      {
+        "type": "Categorical",
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "FechaRegistroWebo"
+          }
+        },
+        "howCreated": 0
+      },
+      {
+        "type": "Categorical",
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "Genero"
+          }
+        },
+        "howCreated": 0
+      }
+    ]
+  },
+  "singleVisual": {
+    "visualType": "tableEx",
+    "objects": {},
+    "orderBy": [
+      {
+        "Direction": 2,
+        "Expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh Dim_Afiliado"
+              }
+            },
+            "Property": "FullName"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,381 @@
+{
+  "objects": {
+    "layout": [
+      {
+        "properties": {
+          "style": {
+            "expr": {
+              "Literal": {
+                "Value": "'Cards'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "image": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          },
+          "position": {
+            "expr": {
+              "Literal": {
+                "Value": "'Left'"
+              }
+            }
+          }
+        },
+        "selector": {
+          "id": "default"
+        }
+      },
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "image": {
+            "image": {
+              "name": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'icons8-cancel-48.png'"
+                  }
+                }
+              },
+              "url": {
+                "expr": {
+                  "ResourcePackageItem": {
+                    "PackageName": "RegisteredResources",
+                    "PackageType": 1,
+                    "ItemName": "icons8-cancel-4818196475256885192.png"
+                  }
+                }
+              },
+              "scaling": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Normal'"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "dwh Fact_Cupon.CuponExpiradoSeleccionado"
+        }
+      },
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "image": {
+            "image": {
+              "name": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'icons8-alert-48.png'"
+                  }
+                }
+              },
+              "url": {
+                "expr": {
+                  "ResourcePackageItem": {
+                    "PackageName": "RegisteredResources",
+                    "PackageType": 1,
+                    "ItemName": "icons8-alert-4836954746490868207.png"
+                  }
+                }
+              },
+              "scaling": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Normal'"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "dwh Fact_Cupon.CuponRedimidoSeleccionado"
+        }
+      },
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "image": {
+            "image": {
+              "name": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'icons8-correct-48.png'"
+                  }
+                }
+              },
+              "url": {
+                "expr": {
+                  "ResourcePackageItem": {
+                    "PackageName": "RegisteredResources",
+                    "PackageType": 1,
+                    "ItemName": "icons8-correct-484582408020282136.png"
+                  }
+                }
+              },
+              "scaling": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Normal'"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "dwh Fact_Cupon.CuponVigenteSeleccionado"
+        }
+      }
+    ],
+    "value": [
+      {
+        "properties": {
+          "showBlankAs": {
+            "expr": {
+              "Literal": {
+                "Value": "'NA'"
+              }
+            }
+          },
+          "fontSize": {
+            "expr": {
+              "Literal": {
+                "Value": "15D"
+              }
+            }
+          }
+        },
+        "selector": {
+          "id": "default"
+        }
+      }
+    ],
+    "shapeCustomRectangle": [
+      {
+        "properties": {
+          "tileShape": {
+            "expr": {
+              "Literal": {
+                "Value": "'rectangleRoundedByPixel'"
+              }
+            }
+          },
+          "rectangleRoundedCurve": {
+            "expr": {
+              "Literal": {
+                "Value": "10L"
+              }
+            }
+          },
+          "rectangleRoundedCurveCustomStyle": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        },
+        "selector": {
+          "id": "default"
+        }
+      }
+    ],
+    "label": [
+      {
+        "properties": {
+          "position": {
+            "expr": {
+              "Literal": {
+                "Value": "'belowValue'"
+              }
+            }
+          },
+          "fontSize": {
+            "expr": {
+              "Literal": {
+                "Value": "10D"
+              }
+            }
+          },
+          "heading": {
+            "expr": {
+              "Literal": {
+                "Value": "'Normal'"
+              }
+            }
+          },
+          "fontFamily": {
+            "expr": {
+              "Literal": {
+                "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+              }
+            }
+          }
+        },
+        "selector": {
+          "id": "default"
+        }
+      }
+    ],
+    "spacing": [
+      {
+        "properties": {
+          "verticalSpacing": {
+            "expr": {
+              "Literal": {
+                "Value": "4L"
+              }
+            }
+          }
+        },
+        "selector": {
+          "id": "default"
+        }
+      }
+    ]
+  },
+  "projectionOrdering": {
+    "Data": [
+      2,
+      1,
+      0
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Expired coupons",
+        "Name": "dwh Fact_Cupon.CuponExpiradoSeleccionado",
+        "Type": 1
+      },
+      {
+        "Restatement": "Reedemed coupons",
+        "Name": "dwh Fact_Cupon.CuponRedimidoSeleccionado",
+        "Type": 1
+      },
+      {
+        "Restatement": "Current coupons",
+        "Name": "dwh Fact_Cupon.CuponVigenteSeleccionado",
+        "Type": 1
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Data",
+          "Projection": 2,
+          "isActive": false
+        },
+        {
+          "Name": "Data",
+          "Projection": 1,
+          "isActive": false
+        },
+        {
+          "Name": "Data",
+          "Projection": 0,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Expired coupons",
+      "queryName": "dwh Fact_Cupon.CuponExpiradoSeleccionado",
+      "roles": {
+        "Data": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Fact_Cupon"
+            }
+          },
+          "Property": "CuponExpiradoSeleccionado"
+        }
+      }
+    },
+    {
+      "displayName": "Reedemed coupons",
+      "queryName": "dwh Fact_Cupon.CuponRedimidoSeleccionado",
+      "roles": {
+        "Data": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Fact_Cupon"
+            }
+          },
+          "Property": "CuponRedimidoSeleccionado"
+        }
+      }
+    },
+    {
+      "displayName": "Current coupons",
+      "queryName": "dwh Fact_Cupon.CuponVigenteSeleccionado",
+      "roles": {
+        "Data": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Fact_Cupon"
+            }
+          },
+          "Property": "CuponVigenteSeleccionado"
+        }
+      }
+    }
+  ]
+}

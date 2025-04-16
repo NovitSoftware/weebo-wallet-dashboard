@@ -1,0 +1,21 @@
+{
+  "name": "49aecae09a19f58dc2eb",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 488.66201739880654,
+        "width": 1254.0483395582164,
+        "x": 9.9388884894672511,
+        "y": 221.96850959810195,
+        "z": 11000,
+        "tabOrder": 12000
+      }
+    }
+  ],
+  "singleVisualGroup": {
+    "displayName": "Data in graphs",
+    "groupMode": 0,
+    "isHidden": true
+  }
+}

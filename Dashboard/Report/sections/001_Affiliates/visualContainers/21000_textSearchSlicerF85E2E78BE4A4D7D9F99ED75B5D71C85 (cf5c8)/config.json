@@ -1,0 +1,139 @@
+{
+  "name": "cf5c81892fa2fb5d73eb",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 955.37058497581313,
+        "y": 0,
+        "z": 3000,
+        "width": 299.36371453138435,
+        "height": 66.036113499570078,
+        "tabOrder": 21000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "textSearchSlicerF85E2E78BE4A4D7D9F99ED75B5D71C85",
+    "projections": {
+      "fields": [
+        {
+          "queryRef": "dwh Dim_Afiliado.FullName"
+        },
+        {
+          "queryRef": "dwh Dim_Afiliado.Email"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "d",
+          "Entity": "dwh Dim_Afiliado",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "FullName"
+          },
+          "Name": "dwh Dim_Afiliado.FullName",
+          "NativeReferenceName": "Name"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "Email"
+          },
+          "Name": "dwh Dim_Afiliado.Email",
+          "NativeReferenceName": "Email"
+        }
+      ]
+    },
+    "columnProperties": {
+      "dwh Dim_Afiliado.FullName": {
+        "displayName": "Name"
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {}
+        }
+      ],
+      "inputFormatting": [
+        {
+          "properties": {
+            "backgroundColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "targetFormatting": [
+        {
+          "properties": {
+            "backgroundColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#EEEEEE'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#5370A7'"
+                    }
+                  }
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "f25258dd4b187555c907"
+}

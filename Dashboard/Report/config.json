@@ -1,5 +1,5 @@
 {
-  "version": "5.59",
+  "version": "5.60",
   "themeCollection": {
     "baseTheme": {
       "name": "CY24SU10",
@@ -12,17 +12,36 @@
       "type": 1
     }
   },
-  "activeSectionIndex": 0,
+  "activeSectionIndex": 1,
   "defaultDrillFilterOtherVisuals": true,
+  "slowDataSourceSettings": {
+    "isCrossHighlightingDisabled": false,
+    "isSlicerSelectionsButtonEnabled": false,
+    "isFilterSelectionsButtonEnabled": false,
+    "isFieldWellButtonEnabled": false,
+    "isApplyAllButtonEnabled": false
+  },
   "linguisticSchemaSyncVersion": 2,
   "settings": {
+    "isPersistentUserStateDisabled": false,
+    "hideVisualContainerHeader": false,
     "useStylableVisualContainerHeader": true,
     "exportDataMode": 1,
+    "useNewFilterPaneExperience": false,
+    "optOutNewFilterPaneExperience": false,
+    "defaultFilterActionIsDataFilter": true,
+    "useCrossReportDrillthrough": false,
     "allowChangeFilterTypes": true,
-    "pagesPosition": 1,
+    "allowInlineExploration": true,
+    "disableFilterPaneSearch": false,
+    "enableDeveloperMode": false,
     "useEnhancedTooltips": true,
+    "useScaledTooltips": false,
     "useDefaultAggregateDisplayName": true,
-    "filterPaneHiddenInEditMode": false
+    "queryLimitOption": 0,
+    "customMemoryLimit": "1048576",
+    "customTimeoutLimit": "225",
+    "filterPaneHiddenInEditMode": true
   },
   "objects": {
     "section": [
@@ -44,7 +63,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "true"
+                "Value": "false"
               }
             }
           }

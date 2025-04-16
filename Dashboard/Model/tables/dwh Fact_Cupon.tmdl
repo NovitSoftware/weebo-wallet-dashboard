@@ -305,6 +305,60 @@
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure CuponExpiradoSeleccionado = ```
+			
+			VAR Selected = SELECTEDVALUE('dwh Fact_Cupon'[FlagCuponVencido])
+			RETURN 
+			    IF(
+			        ISBLANK(Selected),
+			        "NA",
+			        Selected
+			    )
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure CuponRedimidoSeleccionado = ```
+			
+			VAR Selected = SELECTEDVALUE('dwh Fact_Cupon'[FlagCuponRedimido])
+			RETURN 
+			    IF(
+			        ISBLANK(Selected),
+			        "NA",
+			        Selected
+			    )
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure CuponVigenteSeleccionado = ```
+			
+			VAR Selected = SELECTEDVALUE('dwh Fact_Cupon'[FlagCuponVigente])
+			RETURN 
+			    IF(
+			        ISBLANK(Selected),
+			        "NA",
+			        Selected
+			    )
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure PromedioStickerGeneralSeleccionado = ```
+			
+			VAR SelectedUser = SELECTEDVALUE('dwh Dim_Afiliado'[Email])
+			RETURN
+			    IF(
+			        ISBLANK(SelectedUser),
+			        "NA",
+			        FORMAT([PromedioStickersGeneral], "0.00")
+			    )
+			
+			```
+
 	column KeyFactCupon
 		dataType: int64
 		formatString: 0
@@ -356,15 +410,15 @@
 	column KeyCupon
 		dataType: int64
 		formatString: 0
-		summarizeBy: none
+		summarizeBy: count
 		sourceColumn: KeyCupon
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column FechaCreacion
 		dataType: dateTime
-		formatString: Long Date
-		summarizeBy: none
+		formatString: General Date
+		summarizeBy: count
 		sourceColumn: FechaCreacion
 
 		variation Variation
@@ -372,9 +426,9 @@
 			relationship: 6e80a370-a190-4ee7-be5b-8361f320bcd4
 			defaultHierarchy: LocalDateTable_7890a3ce-bcc2-43c1-8a93-bb606cae985d.'Date Hierarchy'
 
-		annotation SummarizationSetBy = Automatic
+		changedProperty = DataType
 
-		annotation UnderlyingDateTimeDataType = Date
+		annotation SummarizationSetBy = User
 
 	column FechaUso
 		dataType: dateTime
@@ -420,15 +474,15 @@
 		summarizeBy: sum
 		sourceColumn: FlagCuponRedimido
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column FlagCuponRedimidoAcumulado
 		dataType: int64
 		formatString: 0
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: FlagCuponRedimidoAcumulado
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column FlagCuponVencido
 		dataType: int64
@@ -436,15 +490,15 @@
 		summarizeBy: sum
 		sourceColumn: FlagCuponVencido
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column FlagCuponVencidoAcumulado
 		dataType: int64
 		formatString: 0
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: FlagCuponVencidoAcumulado
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column FlagCuponVigente
 		dataType: int64
@@ -452,7 +506,7 @@
 		summarizeBy: sum
 		sourceColumn: FlagCuponVigente
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column DiasHastaObtenerCupon
 		dataType: int64

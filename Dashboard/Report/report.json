@@ -3,7 +3,9 @@
   "layoutOptimization": 0,
   "publicCustomVisuals": [
     "simpleImageEBC4593F96F1425FB3D84C5BF02B5075",
-    "eaTachometer6616D82ED23A4C048E1D3CD4604742ED"
+    "eaTachometer6616D82ED23A4C048E1D3CD4604742ED",
+    "textFilter25A4896A83E0487089E2B90C9AE57C8A",
+    "textSearchSlicerF85E2E78BE4A4D7D9F99ED75B5D71C85"
   ],
   "reportId": 6625718,
   "resourcePackages": [
@@ -206,6 +208,21 @@
           {
             "name": "icons8-location-32-OnPress8261410278880952.png",
             "path": "icons8-location-32-OnPress8261410278880952.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-cancel-4818196475256885192.png",
+            "path": "icons8-cancel-4818196475256885192.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-alert-4836954746490868207.png",
+            "path": "icons8-alert-4836954746490868207.png",
+            "type": 100
+          },
+          {
+            "name": "icons8-correct-484582408020282136.png",
+            "path": "icons8-correct-484582408020282136.png",
             "type": 100
           }
         ],

@@ -6,7 +6,7 @@
       "position": {
         "x": 42,
         "y": 12,
-        "z": 6000,
+        "z": 5000,
         "width": 364,
         "height": 70,
         "tabOrder": 1000
@@ -43,9 +43,14 @@
             "Property": "Empresa"
           },
           "Name": "dwh Dim_Empresa.Empresa",
-          "NativeReferenceName": "Empresa"
+          "NativeReferenceName": "Enterprise"
         }
       ]
+    },
+    "columnProperties": {
+      "dwh Dim_Empresa.Empresa": {
+        "displayName": "Enterprise"
+      }
     },
     "drillFilterOtherVisuals": true,
     "objects": {
@@ -71,47 +76,6 @@
                   "Value": "1D"
                 }
               }
-            },
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "d",
-                    "Entity": "dwh Dim_Empresa",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "d"
-                                }
-                              },
-                              "Property": "Empresa"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'AGILE CODE'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
             }
           }
         }
@@ -135,7 +99,7 @@
             "strictSingleSelect": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }

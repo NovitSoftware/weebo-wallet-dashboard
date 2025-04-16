@@ -1,0 +1,112 @@
+{
+  "filters": {
+    "byExpr": [
+      {
+        "name": "fa7faea976c34bb246a4",
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "u",
+              "Entity": "UltimasFechas",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "u"
+                              }
+                            },
+                            "Property": "Texto"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "UltimasFechas"
+              }
+            },
+            "Property": "Texto"
+          }
+        },
+        "howCreated": 1
+      },
+      {
+        "type": "Categorical",
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "UltimasFechasGeneral"
+              }
+            },
+            "Property": "Texto"
+          }
+        },
+        "howCreated": 0
+      }
+    ]
+  },
+  "singleVisual": {
+    "visualType": "slicer",
+    "objects": {
+      "merge": {
+        "data": [
+          {
+            "properties": {
+              "mode": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Dropdown'"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "activeProjections": {
+      "Values": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "UltimasFechasGeneral"
+              }
+            },
+            "Property": "Texto"
+          }
+        }
+      ]
+    }
+  }
+}

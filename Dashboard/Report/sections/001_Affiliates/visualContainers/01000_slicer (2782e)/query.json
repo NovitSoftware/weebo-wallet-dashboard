@@ -27,7 +27,7 @@
                 "Property": "Empresa"
               },
               "Name": "dwh Dim_Empresa.Empresa",
-              "NativeReferenceName": "Empresa"
+              "NativeReferenceName": "Enterprise"
             }
           ],
           "Where": [

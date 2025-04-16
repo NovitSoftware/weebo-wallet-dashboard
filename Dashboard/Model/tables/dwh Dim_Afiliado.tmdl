@@ -400,6 +400,67 @@
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure MostrarBoton = ```
+			
+			IF(
+			    HASONEVALUE('dwh Dim_Afiliado'[Email]),
+			    1,
+			    0
+			)
+			
+			```
+		formatString: 0
+
+	measure EmailSeleccionado = ```
+			
+			VAR SelectedEmail = SELECTEDVALUE('dwh Dim_Afiliado'[Email])
+			RETURN 
+			    IF(
+			        ISBLANK(SelectedEmail),
+			        "NA",
+			        SelectedEmail
+			    )
+			
+			```
+
+	measure NombreSeleccionado = ```
+			
+			VAR Selected = SELECTEDVALUE('dwh Dim_Afiliado'[FullName])
+			RETURN 
+			    IF(
+			        ISBLANK(Selected),
+			        "NA",
+			        Selected
+			    )
+			
+			```
+
+	measure DistritoSeleccionado = ```
+			
+			VAR SelectedUser = SELECTEDVALUE('dwh Dim_Afiliado'[Distrito])
+			RETURN
+			    IF(
+			        ISBLANK(SelectedUser),
+			        "NA",
+			        SelectedUser
+			    )
+			
+			```
+
+	measure FechaActivoWeboSeleccinado = ```
+			
+			VAR SelectedUser = SELECTEDVALUE('dwh Dim_Afiliado'[FechaActivoWebo])
+			RETURN
+			    IF(
+			        ISBLANK(SelectedUser),
+			        "NA",
+			        SelectedUser
+			    )
+			
+			```
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column KeyAfiliado
 		dataType: int64
 		formatString: 0
@@ -497,7 +558,7 @@
 
 	column FechaRegistroWebo
 		dataType: dateTime
-		formatString: Long Date
+		formatString: Short Date
 		summarizeBy: none
 		sourceColumn: FechaRegistroWebo
 
@@ -542,7 +603,7 @@
 
 	column FechaActivoWebo
 		dataType: dateTime
-		formatString: Long Date
+		formatString: Short Date
 		summarizeBy: none
 		sourceColumn: FechaActivoWebo
 
@@ -557,7 +618,7 @@
 
 	column FechaUltimoConsumoWebo
 		dataType: dateTime
-		formatString: Long Date
+		formatString: General Date
 		summarizeBy: none
 		sourceColumn: FechaUltimoConsumoWebo
 
@@ -566,9 +627,9 @@
 			relationship: 4e3367e5-5457-4d50-ac7a-17bd97c895b9
 			defaultHierarchy: LocalDateTable_7e07d987-b4ee-472e-b071-3059a8e15cfd.'Date Hierarchy'
 
-		annotation SummarizationSetBy = Automatic
+		changedProperty = DataType
 
-		annotation UnderlyingDateTimeDataType = Date
+		annotation SummarizationSetBy = Automatic
 
 	column RangoEdad = ```
 			
@@ -630,6 +691,46 @@
 			        'dwh Dim_Afiliado'[Edad] >= 56 && 'dwh Dim_Afiliado'[Edad] <= 60, "56-60",
 			        'dwh Dim_Afiliado'[Edad] > 60, "> 60"
 			    )
+			
+			```
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column FullName = [Nombres] & " " & [Apellidos]
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstadoCliente = ```
+			
+			VAR Hoy = TODAY()
+			VAR FechaUltimoConsumo = [FechaUltimoConsumoWebo]
+			VAR FechaNuevo = [FechaNuevoWebo]
+			VAR FechaBaja = [FechaBajaWebo]
+			VAR DiasDesdeUltimoConsumo = 
+			    IF(
+			        NOT ISBLANK(FechaUltimoConsumo),
+			        DATEDIFF(FechaUltimoConsumo, Hoy, DAY),
+			        BLANK()
+			    )
+			VAR DiasDesdeNuevo = 
+			    IF(
+			        NOT ISBLANK(FechaNuevo),
+			        DATEDIFF(FechaNuevo, Hoy, DAY),
+			        BLANK()
+			    )
+			
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    NOT ISBLANK(FechaBaja), "Desafiliado",
+			    NOT ISBLANK(DiasDesdeUltimoConsumo) && DiasDesdeUltimoConsumo <= 30, "Activo",
+			    NOT ISBLANK(FechaNuevo) && DiasDesdeNuevo <= 30, "Nuevo",
+			    NOT ISBLANK(DiasDesdeUltimoConsumo) && DiasDesdeUltimoConsumo <= 90, "En Riesgo",
+			    NOT ISBLANK(DiasDesdeUltimoConsumo) && DiasDesdeUltimoConsumo > 90, "Perdido",
+			    TRUE(), "Sin Información"
+			)
 			
 			```
 		summarizeBy: none

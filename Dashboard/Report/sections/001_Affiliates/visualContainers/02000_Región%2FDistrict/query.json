@@ -1,0 +1,195 @@
+{
+  "Commands": [
+    {
+      "SemanticQueryDataShapeCommand": {
+        "Query": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dwh Dim_Afiliado",
+              "Type": 0
+            },
+            {
+              "Name": "d1",
+              "Entity": "dwh Fact_Cupon",
+              "Type": 0
+            },
+            {
+              "Name": "d2",
+              "Entity": "dwh Fact_Facturacion",
+              "Type": 0
+            },
+            {
+              "Name": "c",
+              "Entity": "CalendarioGeneral",
+              "Type": 0
+            }
+          ],
+          "Select": [
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d1"
+                  }
+                },
+                "Property": "PromedioStickerGeneralSeleccionado"
+              },
+              "Name": "dwh Fact_Cupon.PromedioStickerGeneralSeleccionado",
+              "NativeReferenceName": "Average stickers"
+            },
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "DistritoSeleccionado"
+              },
+              "Name": "dwh Dim_Afiliado.DistritoSeleccionado",
+              "NativeReferenceName": "Región/District"
+            },
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d2"
+                  }
+                },
+                "Property": "ValorMonetarioPromedioSeleccionado"
+              },
+              "Name": "dwh Fact_Facturacion.ValorMonetarioPromedioSeleccionado",
+              "NativeReferenceName": "Average monetary value"
+            },
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "FechaActivoWeboSeleccinado"
+              },
+              "Name": "dwh Dim_Afiliado.FechaActivoWeboSeleccinado",
+              "NativeReferenceName": "Last visit"
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 3,
+                  "Left": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "c"
+                        }
+                      },
+                      "Property": "Date"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "datetime'2025-03-15T00:00:00'"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "FullName"
+                      }
+                    },
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "Email"
+                      }
+                    },
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "FechaRegistroWebo"
+                      }
+                    },
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "Genero"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Miguel Castro'"
+                        }
+                      },
+                      {
+                        "Literal": {
+                          "Value": "'miguel.castro@example.com'"
+                        }
+                      },
+                      {
+                        "Literal": {
+                          "Value": "datetime'2025-02-03T00:00:00'"
+                        }
+                      },
+                      {
+                        "Literal": {
+                          "Value": "'M'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "Binding": {
+          "Primary": {
+            "Groupings": [
+              {
+                "Projections": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              }
+            ]
+          },
+          "Version": 1
+        },
+        "ExecutionMetricsKind": 1
+      }
+    }
+  ]
+}

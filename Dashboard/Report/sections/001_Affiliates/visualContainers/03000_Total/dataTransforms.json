@@ -19,7 +19,7 @@
           "fontSize": {
             "expr": {
               "Literal": {
-                "Value": "25D"
+                "Value": "20D"
               }
             }
           }

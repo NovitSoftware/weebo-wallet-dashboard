@@ -1,0 +1,123 @@
+{
+  "objects": {
+    "general": [
+      {
+        "properties": {}
+      }
+    ],
+    "inputFormatting": [
+      {
+        "properties": {
+          "backgroundColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#FFFFFF'"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "targetFormatting": [
+      {
+        "properties": {
+          "backgroundColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#EEEEEE'"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "projectionOrdering": {
+    "fields": [
+      0,
+      1
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Name",
+        "Name": "dwh Dim_Afiliado.FullName",
+        "Type": 2048
+      },
+      {
+        "Restatement": "Email",
+        "Name": "dwh Dim_Afiliado.Email",
+        "Type": 2048
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "fields",
+          "Projection": 0,
+          "isActive": false
+        },
+        {
+          "Name": "fields",
+          "Projection": 1,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Name",
+      "queryName": "dwh Dim_Afiliado.FullName",
+      "roles": {
+        "fields": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Dim_Afiliado"
+            }
+          },
+          "Property": "FullName"
+        }
+      }
+    },
+    {
+      "displayName": "Email",
+      "queryName": "dwh Dim_Afiliado.Email",
+      "roles": {
+        "fields": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "dwh Dim_Afiliado"
+            }
+          },
+          "Property": "Email"
+        }
+      }
+    }
+  ]
+}
